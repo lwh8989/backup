@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>STOVE CORE UI</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />	
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- [S] CORE -->
+    <link rel="stylesheet" href="{{ staticUrl }}/static/core/fonts/kr/StoveFont-KR.css">
+    <link rel="stylesheet" href="{{ staticUrl }}/static/core/css/base/reset.css">
+    <!-- [E] CORE -->
+    {% block styles %}{% endblock %}
+</head>
+  <body>
+    <div class="container">
+
+<p class="guide-title">STOVE CORE UI</p>
+<div class="guide-content container">
+  <div class="page-category">
+    <input id="all" type="radio" name="category" checked>
+    <label for="all" data-filter="*">All</label>
+
+    <input id="commoms" type="radio" name="category">
+    <label for="commoms" data-filter="[data-value=commoms]">Commoms</label>
+
+    <input id="typographic" type="radio" name="category">
+    <label for="typographic" data-filter="[data-value=typographic]">Typographic</label>
+
+    <input id="elements" type="radio" name="category">
+    <label for="elements" data-filter="[data-value=elements]">Elements</label>
+
+    <input id="modules" type="radio" name="category">
+    <label for="modules" data-filter="[data-value=modules]">Modules</label>
+
+    <input id="partials" type="radio" name="category">
+    <label for="partials" data-filter="[data-value=partials]">Elements</label>
+
+    <input id="layout" type="radio" name="category">
+    <label for="layout" data-filter="[data-value=layout]">Layout</label>
+  </div>
+  <ul class="page-list grid">
+  </ul>
+</div>
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script id="template-list-item" type="text/template">
+  <li class="page-list-item element-item" data-value="@filter">
+    <a href="@url">
+      <div class="item-left">
+        <em class="tit">@title</em>
+        <span class="path">@url</span>
+      </div>
+      <div class="item-sub">
+        <span>Developer</span>
+        <em class="developer">@developer</em>
+      </div>
+      <div class="item-sub">
+        <span>Designer</span>
+        <em class="designer">@designer</em>
+      </div>
+    </a>
+  </li>
+</script>
+<script>
+(function () {
+    
+  var data = [
+    {
+      name: 'commoms',
+      path: 'commoms/index.html',
+      developer: '이원호',
+      designer: '디자인팀'
+    },
+    {
+      name: 'typographic',
+      path: 'typographic/index.html',
+      developer: '이원호',
+      designer: '디자인팀'
+    },
+    {
+      name: 'elements',
+      path: 'elements/index.html',
+      developer: '이원호',
+      designer: '디자인팀'
+    },
+    {
+      name: 'modules',
+      path: 'modules/index.html',
+      developer: '이원호',
+      designer: '디자인팀'
+    },
+    {
+      name: 'partials',
+      path: 'partials/index.html',
+      developer: '이원호',
+      designer: '디자인팀'
+    },
+    {
+      name: 'layout',
+      path: 'layout/index.html',
+      developer: '이원호',
+      designer: '디자인팀'
+    }
+  ];
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var templateHtml = document.getElementById("template-list-item").innerHTML;
+    var listHtml = "";
+
+    for (var item of data) {
+      filter = item.path.split('/')[1];
+      listHtml += templateHtml.replace(/@filter/g, filter)
+                              .replace(/@url/g, item.path)
+                              .replace(/@title/g, item.name)
+                              .replace(/@developer/g, item.developer)
+                              .replace(/@designer/g, item.designer);
+    }
+    document.querySelector(".page-list").innerHTML = listHtml;
+
+    var iso = new Isotope( '.grid', {
+      itemSelector: '.element-item',
+      layoutMode: 'vertical'
+    });
+
+    var category = document.querySelector(".page-category");
+    category.addEventListener('click', function(event) {
+      if ( !matchesSelector( event.target, 'label' ) ) {
+        return;
+      }
+      var filterValue = event.target.getAttribute('data-filter');
+      iso.arrange({ filter: filterValue });
+    });
+  });
+})();
+</script>
+
+    </div>
+  </body>
+</html>

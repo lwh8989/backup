@@ -1,5 +1,5 @@
 import template from './index.njk'
-import './src/sass/style.scss';
+import './src/sass/_style.scss';
 
 document.body.innerHTML = template({
   username: 'Mike'

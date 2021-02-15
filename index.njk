@@ -1,31 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>STOVE CORE UI</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />	
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- [S] CORE -->
-    <link rel="stylesheet" href="{{ staticUrl }}/static/core/fonts/kr/StoveFont-KR.css">
-    <link rel="stylesheet" href="{{ staticUrl }}/static/core/css/base/reset.css">
-    <!-- [E] CORE -->
-    {% block styles %}{% endblock %}
-</head>
-  <body>
-    <div class="container">
+<link rel="stylesheet" href="{{ staticUrl }}/static/core/css/layouts/guide.css">
 
-<p class="guide-title">STOVE CORE UI</p>
+<p class="guide-title">STOVE Core UI</p>
+<!-- test -->
 <div class="guide-content container">
   <div class="page-category">
     <input id="all" type="radio" name="category" checked>
     <label for="all" data-filter="*">All</label>
-
-    <input id="commoms" type="radio" name="category">
-    <label for="commoms" data-filter="[data-value=commoms]">Commoms</label>
-
-    <input id="typographic" type="radio" name="category">
-    <label for="typographic" data-filter="[data-value=typographic]">Typographic</label>
-
+     
     <input id="elements" type="radio" name="category">
     <label for="elements" data-filter="[data-value=elements]">Elements</label>
 
@@ -33,7 +14,10 @@
     <label for="modules" data-filter="[data-value=modules]">Modules</label>
 
     <input id="partials" type="radio" name="category">
-    <label for="partials" data-filter="[data-value=partials]">Elements</label>
+    <label for="partials" data-filter="[data-value=partials]">Partials</label>
+   
+   <input id="fonts" type="radio" name="category">
+    <label for="fonts" data-filter="[data-value=fonts]">Fonts</label>
 
     <input id="layout" type="radio" name="category">
     <label for="layout" data-filter="[data-value=layout]">Layout</label>
@@ -43,6 +27,7 @@
 </div>
 
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
 <script id="template-list-item" type="text/template">
   <li class="page-list-item element-item" data-value="@filter">
     <a href="@url">
@@ -61,43 +46,74 @@
     </a>
   </li>
 </script>
+
 <script>
 (function () {
     
   var data = [
     {
-      name: 'commoms',
-      path: 'commoms/index.html',
+      name: 'Core Fonts',
+      path: 'core/core-fonts/index.html',
       developer: '이원호',
       designer: '디자인팀'
     },
     {
-      name: 'typographic',
-      path: 'typographic/index.html',
+      name: 'Core Button',
+      path: 'core/views/elements/core-button.html',
       developer: '이원호',
       designer: '디자인팀'
     },
     {
-      name: 'elements',
-      path: 'elements/index.html',
+      name: 'Core [PC] Layout Basic',
+      path: 'core/views/layouts/layout-basic.html',
       developer: '이원호',
       designer: '디자인팀'
     },
     {
-      name: 'modules',
-      path: 'modules/index.html',
+      name: 'Core [PC] Layout Information',
+      path: 'core/views/layouts/layout-information.html',
       developer: '이원호',
       designer: '디자인팀'
     },
     {
-      name: 'partials',
-      path: 'partials/index.html',
+      name: 'Core [PC] Layout S One Rail',
+      path: 'core/views/layouts/layout-s-one-rail.html',
       developer: '이원호',
       designer: '디자인팀'
     },
     {
-      name: 'layout',
-      path: 'layout/index.html',
+      name: 'Core [PC] Layout B One Rail',
+      path: 'core/views/layouts/layout-b-one-rail.html',
+      developer: '이원호',
+      designer: '디자인팀'
+    },
+    {
+      name: 'Core [PC] Layout Two Rail',
+      path: 'core/views/layouts/layout-two-rail.html',
+      developer: '이원호',
+      designer: '디자인팀'
+    },
+    {
+      name: 'Core [PC] Layout Side Rail',
+      path: 'core/views/layouts/layout-side-rail.html',
+      developer: '이원호',
+      designer: '디자인팀'
+    },
+    {
+      name: 'Core [AOS] Layout Basic',
+      path: 'core/views/layouts/layout-aos.html',
+      developer: '이원호',
+      designer: '디자인팀'
+    },
+    {
+      name: 'Core [IOS] Layout Basic',
+      path: 'core/views/layouts/layout-ios.html',
+      developer: '이원호',
+      designer: '디자인팀'
+    },
+    {
+      name: 'Core [Tablet] Layout Basic',
+      path: 'core/views/layouts/layout-tablet.html',
       developer: '이원호',
       designer: '디자인팀'
     }
@@ -133,7 +149,3 @@
   });
 })();
 </script>
-
-    </div>
-  </body>
-</html>

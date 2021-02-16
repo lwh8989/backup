@@ -14,7 +14,7 @@ function getTemplates() {
 }
 
 function toPlugin(fileName) {
-  return new HTMLWebpackPlugin({
+  return new HtmlWebpackPlugin({
     template: fileName,
     filename: fileName.replace(/\.njk$/, '.html')
   });

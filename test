@@ -1,12 +1,15 @@
-{% extends "src/layout/index.njk" %}
-
-<!-- styles -->
-{% block styles %}{% endblock %}
-
-<!-- styles -->
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOVE Core UI</title>
+    {# <link rel="stylesheet" href="{{ staticUrl }}/static/core/css/layouts/guide.css"> #}
+</head>
+<body>
 <p class="guide-title">STOVE Core UI</p>
-
+<!-- test -->
 <div class="guide-content container">
   <div class="page-category">
     <input id="all" type="radio" name="category" checked>
@@ -30,13 +33,7 @@
   <ul class="page-list grid">
   </ul>
 </div>
-{% endblock %}
 
-<!-- dialog -->
-{% block dialog %}{% endblock %}
-
-<!-- scripts -->
-{% block scripts %}
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
 <script id="template-list-item" type="text/template">
@@ -160,4 +157,5 @@
   });
 })();
 </script>    
-{% endblock %}
+</body>
+</html>

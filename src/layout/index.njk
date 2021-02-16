@@ -1,15 +1,20 @@
-{% macro onlyIcon(iconClass,txt,linkType,state,hasQuantity) %}
-  {% if linkType %}
-    <a href="#" class="element-icon{% if hasQuantity %} type-cart{% endif %} {{ iconClass }} {{ state }}" >{{ txt }}
-      {% if hasQuantity %}
-        <span class="cart-badge">{{ hasQuantity }}</span>
-      {% endif %}
-    </a>
-  {% else %}
-    <button type="button" class="element-icon{% if hasQuantity %} type-cart{% endif %} {{ iconClass }}" {{ state }}>{{ txt }}
-      {% if hasQuantity %}
-        <span class="cart-badge">{{ hasQuantity }}</span>
-      {% endif %}
-    </button>
-  {% endif %}
-{% endmacro %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>STOVE CORE UI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- reset.css -->
+    <link rel="stylesheet" href="{{ staticUrl }}/static/css/reset.css">
+    {% block styles %}{% endblock %}
+</head>
+<!-- [D] 브라우저 정책 추가 시 is-gnb-banner 클래스를 추가 해 주세요.  -->
+<body class="layout">
+  {% block content %}{% endblock %}
+
+  {% block dialog %}{% endblock %}
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>

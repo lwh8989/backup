@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>STOVE Guide</title>
+    <title>Guide Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- reset.css -->
     <link rel="stylesheet" href="{{ staticUrl }}/static/css/reset.css">
+    <!-- font.css -->
     {% block styles %}{% endblock %}
 </head>
 <!-- [D] 브라우저 정책 추가 시 is-gnb-banner 클래스를 추가 해 주세요.  -->
 <body class="layout">
-
-  <div class="layout layout-base">
-    {% block content %}{% endblock %}
-  </div>
+  나오나?
+  {% block content %}{% endblock %}
 
   {% block dialog %}{% endblock %}
 

@@ -1,0 +1,29 @@
+/* Font */
+/* otf 확장자 공유 받지 못함 */
+
+/* [S] SC */
+@font-face {
+  font-family: 'Intel SC';
+  font-style: normal;
+  font-weight: normal;
+  src: url(woff2/InterSC-Regular.woff2) format('woff2'), url(woff/InterSC-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Intel SC';
+  font-style: normal;
+  font-weight: bold;
+  src: url(woff2/InterSC-Bold.woff2) format('woff2'), url(woff/InterSC-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-style: normal;
+  font-weight: normal;
+  src: url(woff2/NotoSansSC-Regular.woff2) format('woff2'), url(woff/NotoSansSC-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-style: normal;
+  font-weight: bold;
+  src: url(woff2/NotoSansSC-Bold.woff2) format('woff2'), url(woff/NotoSansSC-Bold.woff) format('woff');
+}
+/* [E] SC */

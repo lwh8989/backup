@@ -1,11 +1,16 @@
 {% extends "src/layout/index.njk" %}
 
+{# {% import "elements/icon.njk" as icon %} #}
+
 <!-- styles -->
-{% block styles %}{% endblock %}
+{% block styles %}
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ staticUrl }}/src/sass/_index.scss" />
+{% endblock %}
 
 <!-- styles -->
 {% block content %}
-<p class="guide-title">STOVE Core UI</p>
+<p class="guide-title">Stove Core UI</p>
 
 <div class="guide-content container">
   <div class="page-category">
@@ -50,114 +55,88 @@
         <span>Developer</span>
         <em class="developer">@developer</em>
       </div>
-      <div class="item-sub">
-        <span>Designer</span>
-        <em class="designer">@designer</em>
-      </div>
     </a>
   </li>
 </script>
 
 <script>
-(function () {
-    
-  var data = [
-    {
-      name: 'Core Fonts',
-      path: './src/elements/index.html',
-      developer: '이원호',
-      designer: '디자인팀'
-    },
-    {
-      name: 'Core Button',
-      path: 'core/views/elements/core-button.html',
-      developer: '이원호',
-      designer: '디자인팀'
-    },
-    {
-      name: 'Core [PC] Layout Basic',
-      path: 'core/views/layouts/layout-basic.html',
-      developer: '이원호',
-      designer: '디자인팀'
-    },
-    {
-      name: 'Core [PC] Layout Information',
-      path: 'core/views/layouts/layout-information.html',
-      developer: '이원호',
-      designer: '디자인팀'
-    },
-    {
-      name: 'Core [PC] Layout S One Rail',
-      path: 'core/views/layouts/layout-s-one-rail.html',
-      developer: '이원호',
-      designer: '디자인팀'
-    },
-    {
-      name: 'Core [PC] Layout B One Rail',
-      path: 'core/views/layouts/layout-b-one-rail.html',
-      developer: '이원호',
-      designer: '디자인팀'
-    },
-    {
-      name: 'Core [PC] Layout Two Rail',
-      path: 'core/views/layouts/layout-two-rail.html',
-      developer: '이원호',
-      designer: '디자인팀'
-    },
-    {
-      name: 'Core [PC] Layout Side Rail',
-      path: 'core/views/layouts/layout-side-rail.html',
-      developer: '이원호',
-      designer: '디자인팀'
-    },
-    {
-      name: 'Core [AOS] Layout Basic',
-      path: 'core/views/layouts/layout-aos.html',
-      developer: '이원호',
-      designer: '디자인팀'
-    },
-    {
-      name: 'Core [IOS] Layout Basic',
-      path: 'core/views/layouts/layout-ios.html',
-      developer: '이원호',
-      designer: '디자인팀'
-    },
-    {
-      name: 'Core [Tablet] Layout Basic',
-      path: 'core/views/layouts/layout-tablet.html',
-      developer: '이원호',
-      designer: '디자인팀'
-    }
-  ];
-
-  window.addEventListener('DOMContentLoaded', function() {
-    var templateHtml = document.getElementById("template-list-item").innerHTML;
-    var listHtml = "";
-
-    for (var item of data) {
-      filter = item.path.split('/')[1];
-      listHtml += templateHtml.replace(/@filter/g, filter)
-                              .replace(/@url/g, item.path)
-                              .replace(/@title/g, item.name)
-                              .replace(/@developer/g, item.developer)
-                              .replace(/@designer/g, item.designer);
-    }
-    document.querySelector(".page-list").innerHTML = listHtml;
-
-    var iso = new Isotope( '.grid', {
-      itemSelector: '.element-item',
-      layoutMode: 'vertical'
-    });
-
-    var category = document.querySelector(".page-category");
-    category.addEventListener('click', function(event) {
-      if ( !matchesSelector( event.target, 'label' ) ) {
-        return;
+  (function () {
+      
+    var data = [
+      {
+        name: 'Typography',
+        path: './src/elements/font/index.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Profile',
+        path: './src/modules/ex-profile.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Layout Basic',
+        path: './src/layout/basic.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Layout Information',
+        path: './src/layout/information.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Layout S One Rail',
+        path: './src/layout/layout-s-one-rail.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Layout B One Rail',
+        path: './src/layout/layout-b-one-rail.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Layout Two Rail',
+        path: './src/layout/layout-two-rail.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Layout Side Rail',
+        path: './src/layout/layout-side-rail.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Example',
+        path: './src/layout/Example.html',
+        developer: '이원호'
       }
-      var filterValue = event.target.getAttribute('data-filter');
-      iso.arrange({ filter: filterValue });
+    ];
+
+    window.addEventListener('DOMContentLoaded', function() {
+      var templateHtml = document.getElementById("template-list-item").innerHTML;
+      var listHtml = "";
+
+      for (var item of data) {
+        filter = item.path.split('/')[1];
+        listHtml += templateHtml.replace(/@filter/g, filter)
+                                .replace(/@url/g, item.path)
+                                .replace(/@title/g, item.name)
+                                .replace(/@developer/g, item.developer);
+      }
+      document.querySelector(".page-list").innerHTML = listHtml;
+
+      var iso = new Isotope( '.grid', {
+        itemSelector: '.element-item',
+        layoutMode: 'vertical'
+      });
+
+      var category = document.querySelector(".page-category");
+      category.addEventListener('click', function(event) {
+        if ( !matchesSelector( event.target, 'label' ) ) {
+          return;
+        }
+        var filterValue = event.target.getAttribute('data-filter');
+        iso.arrange({ filter: filterValue });
+      });
     });
-  });
-})();
+  })();
 </script>    
 {% endblock %}

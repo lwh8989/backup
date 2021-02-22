@@ -100,9 +100,7 @@ module.exports = function() {
         ]
       },
       plugins: [
-        new HtmlWebpackPlugin({
-          template: 'index.njk',
-        }),
+        ...templates
       ],
     }
   });

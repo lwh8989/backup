@@ -40,7 +40,7 @@ module.exports = async function () {
     files[fileName] = file;
 
     return files;
-  }, { core: path.join(__dirname, './src/sass/_index.scss') });
+  }, { core: path.join(__dirname, './src/sass/_core.scss') });
 
   return {
     mode: "development",

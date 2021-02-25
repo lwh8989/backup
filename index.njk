@@ -10,32 +10,29 @@
 
 <!-- styles -->
 {% block content %}
-<div class="layout-guide">
-  <p class="guide-title">Stove Core UI</p>
-
-  <div class="guide-content container">
-    <div class="page-category">
-      <input id="all" type="radio" name="category" checked>
-      <label for="all" data-filter="*">All</label>
-      
-      <input id="elements" type="radio" name="category">
-      <label for="elements" data-filter="[data-value=elements]">Elements</label>
-
-      <input id="modules" type="radio" name="category">
-      <label for="modules" data-filter="[data-value=modules]">Modules</label>
-
-      <input id="partials" type="radio" name="category">
-      <label for="partials" data-filter="[data-value=partials]">Partials</label>
+<p class="guide-title">Stove Core UI</p>
+<div class="guide-content container">
+  <div class="page-category">
+    <input id="all" type="radio" name="category" checked>
+    <label for="all" data-filter="*">All</label>
     
-    <input id="fonts" type="radio" name="category">
-      <label for="fonts" data-filter="[data-value=fonts]">Fonts</label>
+    <input id="elements" type="radio" name="category">
+    <label for="elements" data-filter="[data-value=elements]">Elements</label>
 
-      <input id="layout" type="radio" name="category">
-      <label for="layout" data-filter="[data-value=layout]">Layout</label>
-    </div>
-    <ul class="page-list grid">
-    </ul>
+    <input id="modules" type="radio" name="category">
+    <label for="modules" data-filter="[data-value=modules]">Modules</label>
+
+    <input id="partials" type="radio" name="category">
+    <label for="partials" data-filter="[data-value=partials]">Partials</label>
+  
+  <input id="fonts" type="radio" name="category">
+    <label for="fonts" data-filter="[data-value=fonts]">Fonts</label>
+
+    <input id="layout" type="radio" name="category">
+    <label for="layout" data-filter="[data-value=layout]">Layout</label>
   </div>
+  <ul class="page-list grid">
+  </ul>
 </div>
 {% endblock %}
 
@@ -112,7 +109,7 @@
       },
       {
         name: 'Example',
-        path: './src/layout/Example.html',
+        path: './src/views/example/list.html',
         developer: '이원호'
       }
     ];

@@ -21,6 +21,7 @@ function toPlugin(fileName) {
     template: fileName,
     filename: fileName.replace(/\.njk$/, ".html"),
     chunks: [
+      'core',
       fileName
         .split("/")
         .pop()
@@ -39,7 +40,7 @@ module.exports = async function () {
     files[fileName] = file;
 
     return files;
-  }, {});
+  }, { core: path.join(__dirname, './src/sass/_index.scss') });
 
   return {
     mode: "development",

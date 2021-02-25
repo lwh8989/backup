@@ -1,0 +1,57 @@
+/* Core Layout */
+.layout .tablet,
+.layout .mobile {
+    display: none;
+}
+
+.layout {
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    height: 100%;
+    .layout-s-one-rail {
+        position: relative;
+        max-width: 1280px;
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .container {
+        position: relative;
+        display: flex;
+        flex: 1;
+        overflow: auto;
+        height: 100%;
+        .nav-area {
+            display: flex;
+            flex: none;
+            width: 80px;
+        }
+        .content-area {
+            display: flex;
+            flex: 1;
+            overflow: auto;
+            width: 1104px;
+            margin: 0 48px;
+        }
+    }
+    /* 삭제 예정 */
+    .margin-blue:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: 80px;
+        width: 48px;
+        height: 100%;
+        background: cyan;
+    }
+    .margin-blue:nth-child(2) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 48px;
+        height: 100%;
+        background: cyan;
+    }
+}

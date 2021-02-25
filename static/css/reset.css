@@ -162,6 +162,7 @@ body,
 html {
     height: 100%;
     position: relative;
+    overflow-x: hidden;
 }
 
 /* [D] 브라우저 정책 추가 시 .is-gnb-banner 클래스를 추가 해 주세요. */

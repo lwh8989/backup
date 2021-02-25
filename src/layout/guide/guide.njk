@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>STOVE CORE UI</title>
+    <title>Guide Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -21,10 +21,11 @@
     {% block styles %}{% endblock %}
 </head>
 <!-- [D] 브라우저 정책 추가 시 is-gnb-banner 클래스를 추가 해 주세요.  -->
-<body class="layout layout-guide">
-  <div class="">
-    {% block content %}{% endblock %}
-  </div>  
+<body class="layout">
+  {% block content %}{% endblock %}
+
+  {% block dialog %}{% endblock %}
+
   {% block scripts %}{% endblock %}
 </body>
 </html>

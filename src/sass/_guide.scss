@@ -3,74 +3,92 @@
     width: 800px;
     margin: 0 auto;
     padding: 60px 0;
-}
-.guide .tit {
-    font-size: 28px;
-    color: #333;
-    padding-bottom: 16px;
-    margin-top: 60px;
-}
-.guide .tit:first-of-type {
-    margin-top: 0;
-}
-.guide .desc {
-    font-size: 16px;
-    line-height: 26px;
-    color: #666;
-    padding-bottom: 16px;
-}
+    .tit {
+        font-size: 28px;
+        color: #333;
+        padding-bottom: 16px;
+        margin-top: 60px;
+        :first-of-type {
+            margin-top: 0;
+        }
+    }
+    .desc {
+        font-size: 16px;
+        line-height: 26px;
+        color: #666;
+        padding-bottom: 16px;
+    }
 
-/* Example */
-.guide .example {
-    width: 100%;
-    margin: 48px 0;
-}
-.guide .example h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 16px;
-}
+    /* Guide Style */
+    p {
+        font-size: 1.6rem;
+    }
+    .line-through {
+        text-decoration: line-through;
+    }
+    .underline {
+        text-decoration: underline;
+    }
 
-/* Guide table */
-.guide .table {
-    width: 100%;
-}
-.guide .table caption {
-    display: none;
-}
-.guide .table thead {
-    background-color: #f4f4f4;
-    font-size: 14px;
-    color: #333;
-    font-weight: bold;
-    padding: 16px 0;
-}
-.guide .table thead tr th {
-    padding: 16px 0;
-    vertical-align: middle;
-}
-.guide .table.table-col1 thead tr th {
-    width: 100%;
-}
-.guide .table.table-col2 thead tr th {
-    width: 50%;
-}
-.guide .table.table-col3 thead tr th {
-    width: 33.33%;
-}
-.guide .table.table-col4 thead tr th {
-    width: 25%;
-}
-.guide .table.table-col5 thead tr th {
-    width: 20%;
-}
-.guide .table tbody {}
-.guide .table tbody tr {
-    border-bottom: 1px solid #eff5fc;
-}
-.guide .table tbody tr th {}
-.guide .table tbody tr td {
-    font-size: 1.4rem;
-    color: #333;
-    padding: 20px 0;
-    text-align: center;
-    vertical-align: middle;
+    /* Example */
+    .example {
+        width: 100%;
+        margin: 48px 0;
+    }
+    .example h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 16px;
+    }
+
+    /* Guide table */
+    .table {
+        width: 100%;
+        caption {
+            display: none;
+        }
+        thead {
+            background-color: #f4f4f4;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+            padding: 16px 0;
+            tr th {
+                padding: 16px 0;
+                vertical-align: middle;
+            }
+        }
+        tbody {
+            tr {
+                border-bottom: 1px solid #eff5fc;
+                td {
+                    font-size: 1.4rem;
+                    color: #333;
+                    padding: 20px 0;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+    
+    /* Table Col */
+    .table.table-col1 thead tr th {
+        width: 100%;
+    }
+    .table.table-col2 thead tr th {
+        width: 50%;
+    }
+    .table.table-col3 thead tr th {
+        width: 33.33%;
+    }
+    .table.table-col4 thead tr th {
+        width: 25%;
+    }
+    .table.table-col5 thead tr th {
+        width: 20%;
+    }
+
+    /* Color */
+    .color {
+        
+    }
 }

@@ -1,17 +1,19 @@
-// $fontColor: #2196f3;
-// $fontSize: 52px;
+/* Stove 1rem = 10px */
+$fontHeading1: 5.4rem;
+$fontHeading2: 4.2rem;
+$fontHeading3: 3.2rem;
+$fontHeading4: 2.4rem;
+$fontHeading5: 1.8rem;
+$fontHeading6: 1.4rem;
 
-// .title {
-//     color: $fontColor;
-//     font-size: $fontSize;
-//     text-align: center;
-// }
+/* Stove letter-spacing */
+$letterSpacing: -0.025em;
 
 /* Font reset */
 html {
     font-size: 10px;
     body {
-        letter-spacing: -0.025em;
+        letter-spacing: $letterSpacing;
         word-break: keep-all;
     }
     h1,
@@ -21,24 +23,25 @@ html {
     h5,
     h6 {
         font-weight: bold;
+        letter-spacing: $letterSpacing;
     }
     h1 {
-        font-size: 5.4rem;
+        font-size: $fontHeading1;
     }
     h2 {
-        font-size: 2.625rem;
+        font-size: $fontHeading2;
     }
     h3 {
-        font-size: 2.25rem;
+        font-size: $fontHeading3;
     }
     h4 {
-        font-size: 1.5rem;
+        font-size: $fontHeading4;
     }
     h5 {
-        font-size: 1.125rem;
+        font-size: $fontHeading5;
     }
     h6 {
-        font-size: 0.875rem;
+        font-size: $fontHeading6;
     }
 }
 
@@ -185,7 +188,7 @@ h6 {
         Segoe UI Emoji
 }
 
-/* PORTUGAL */
+/* Portugal */
 :lang(pt) body,
 :lang(pt) a,
 :lang(pt) button,
@@ -254,7 +257,7 @@ h6 {
         Segoe UI Emoji
 }
 
-/* THAILAND */
+/* Thailand */
 :lang(ja) body,
 :lang(ja) a,
 :lang(ja) button,

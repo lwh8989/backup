@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>STOVE CORE UI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Reset.css -->
+    <link rel="stylesheet" href="../../../static/css/reset.css">
+    <!-- Font.css -->
+    <link rel="stylesheet" href="../../../static/css/font.css">
+    <link rel="stylesheet" href="../../../static/fonts/intel/StoveFont-Global.css">
+    <link rel="stylesheet" href="../../../static/fonts/kr/StoveFont-KR.css">
+    <link rel="stylesheet" href="../../../static/fonts/sc/StoveFont-SC.css">
+    <link rel="stylesheet" href="../../../static/fonts/tc/StoveFont-TC.css">
+    <link rel="stylesheet" href="../../../static/fonts/jp/StoveFont-JP.css">
+    <link rel="stylesheet" href="../../../static/fonts/thai/StoveFont-Thai.css">
+    <!-- layout.css -->
+    <link rel="stylesheet" href="../../../static/css/guide.css">
+    <!-- UI.css -->
+    {% block styles %}{% endblock %}
+</head>
+<!-- [D] 브라우저 정책 추가 시 is-gnb-banner 클래스를 추가 해 주세요.  -->
+<body class="layout layout-guide">
+  <div class="">
+  메인
+    {% block content %}{% endblock %}
+  </div>  
+  {% block scripts %}{% endblock %}
+</body>
+</html>

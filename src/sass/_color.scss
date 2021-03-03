@@ -1,13 +1,7 @@
 /* Light Mode */
 html {
     $ui-bg-base-white: red;
-    .test {
-        background: $ui-bg-base-white;
-    }
     &.dark {
-        $ui-bg-base-white: blue;
-        .test {
-            background: $ui-bg-base-white;
-        }
+        $ui-bg-base-white: blue;        
     }
 }

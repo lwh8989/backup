@@ -1,0 +1,61 @@
+@import "./_space.scss";
+
+/* 2XL */
+@media all and (min-width:1920px) and (max-width:9999px) { 
+    .layout {
+        .layout-basic {
+            max-width: 100%;
+            margin: 0 $stds-spacing-1300;
+        }
+    } 
+}
+
+/* Xl */
+@media all and (min-width:1600px) and (max-width:1919px) { 
+    .layout {
+        .layout-basic {
+            max-width: 100%;
+            margin: 0 $stds-spacing-1300;
+        }
+    } 
+}
+
+/* l */
+@media all and (min-width:1440px) and (max-width:1599px) { 
+    .layout {
+        .layout-basic {
+            max-width: 100%;
+            margin: 0 $stds-spacing-1300;
+        }
+    } 
+}
+
+/* M */
+@media all and (min-width:1280px) and (max-width:1439px) { 
+    .layout {
+        .layout-basic {
+            max-width: 100%;
+            margin: 0 $stds-spacing-1200;
+        }
+    } 
+}
+
+/* tablet */
+@media all and (min-width:768px) and (max-width:1279px) { 
+    .layout {
+        .layout-basic {
+            max-width: 100%;
+            margin: 0 $stds-spacing-1200;
+        }
+    } 
+}
+
+/* mobile */
+@media all and (max-width:767px) { 
+    .layout {
+        .layout-basic {
+            max-width: 100%;
+            margin: 0 $stds-spacing-800;
+        }
+    } 
+}

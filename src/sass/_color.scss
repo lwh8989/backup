@@ -1,0 +1,7 @@
+/* Light Mode */
+html {
+    $ui-bg-base-white: red;
+    &.dark {
+        $ui-bg-base-white: blue;        
+    }
+}

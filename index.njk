@@ -1,41 +1,38 @@
-{% extends "src/layout/index/index.njk" %}
+{% extends "src/layout/guide/guide.njk" %}
 
 {# {% import "elements/icon.njk" as icon %} #}
 
 <!-- styles -->
 {% block styles %}
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ staticUrl }}/src/sass/_index.scss" />
+
 {% endblock %}
 
 <!-- styles -->
 {% block content %}
-<div class="layout-guide">
-  <p class="guide-title">Stove Core UI</p>
-
-  <div class="guide-content container">
-    <div class="page-category">
-      <input id="all" type="radio" name="category" checked>
-      <label for="all" data-filter="*">All</label>
-      
-      <input id="elements" type="radio" name="category">
-      <label for="elements" data-filter="[data-value=elements]">Elements</label>
-
-      <input id="modules" type="radio" name="category">
-      <label for="modules" data-filter="[data-value=modules]">Modules</label>
-
-      <input id="partials" type="radio" name="category">
-      <label for="partials" data-filter="[data-value=partials]">Partials</label>
+<p class="guide-title">Stove Core UI</p>
+<div class="guide-content container">
+  <div class="page-category">
+    <input id="all" type="radio" name="category" checked>
+    <label for="all" data-filter="*">All</label>
     
-    <input id="fonts" type="radio" name="category">
-      <label for="fonts" data-filter="[data-value=fonts]">Fonts</label>
+    <input id="elements" type="radio" name="category">
+    <label for="elements" data-filter="[data-value=elements]">Element</label>
 
-      <input id="layout" type="radio" name="category">
-      <label for="layout" data-filter="[data-value=layout]">Layout</label>
-    </div>
-    <ul class="page-list grid">
-    </ul>
+    <input id="modules" type="radio" name="category">
+    <label for="modules" data-filter="[data-value=modules]">Module</label>
+
+    <input id="partials" type="radio" name="category">
+    <label for="partials" data-filter="[data-value=partials]">Partial</label>
+  
+  <input id="fonts" type="radio" name="category">
+    <label for="fonts" data-filter="[data-value=fonts]">Font</label>
+
+    <input id="layout" type="radio" name="category">
+    <label for="layout" data-filter="[data-value=layout]">Layout</label>
   </div>
+  <ul class="page-list grid">
+  </ul>
 </div>
 {% endblock %}
 
@@ -67,52 +64,57 @@
     var data = [
       {
         name: 'Typography',
-        path: './src/elements/font/font.html',
+        path: './src/core/font/font.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Color',
+        path: './src/core/color/color.html',
         developer: '이원호'
       },
       {
         name: 'Profile',
-        path: './src/modules/ex-profile.html',
+        path: './src/module/ex-profile.html',
         developer: '이원호'
       },
       {
         name: 'List',
-        path: './src/views/example/list.html',
+        path: './src/view/example/list.html',
         developer: '이원호'
       },
       {
         name: 'Layout Basic',
-        path: './src/views/layout/basic/basic.html',
+        path: './src/view/layout/basic/basic.html',
         developer: '이원호'
       },
       {
         name: 'Layout Information',
-        path: './src/views/layout/information/information.html',
+        path: './src/view/layout/information/information.html',
         developer: '이원호'
       },
       {
         name: 'Layout S One Rail',
-        path: './src/views/layout/s-one-rail/s-one-rail.html',
+        path: './src/view/layout/s-one-rail/s-one-rail.html',
         developer: '이원호'
       },
       {
         name: 'Layout B One Rail',
-        path: './src/views/layout/b-one-rail/b-one-rail.html',
+        path: './src/view/layout/b-one-rail/b-one-rail.html',
         developer: '이원호'
       },
       {
         name: 'Layout Two Rail',
-        path: './src/views/layout/two-rail/two-rail.html',
+        path: './src/view/layout/two-rail/two-rail.html',
         developer: '이원호'
       },
       {
         name: 'Layout Side Rail',
-        path: './src/views/layout/side-rail/side-rail.html',
+        path: './src/view/layout/side-rail/side-rail.html',
         developer: '이원호'
       },
       {
         name: 'Example',
-        path: './src/layout/Example.html',
+        path: './src/view/example/list.html',
         developer: '이원호'
       }
     ];

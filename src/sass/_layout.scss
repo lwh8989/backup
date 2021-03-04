@@ -1,14 +1,7 @@
 @import "./_space.scss";
 @import "./_mixin.scss";
 
-// :root {
-//     --stoveTitle1: calc(5.4rem + 1.2vw);
-//     --stoveTitle2: calc(4.2rem + 1.2vw);
-//     --stoveTitle3: calc(3.2rem + 1.2vw);
-//     --stoveTitle4: calc(2.4rem + 1.2vw);
-//     --stoveTitle5: calc(1.8rem + 1.2vw);
-//     --stoveTitle6: calc(1.4rem + 1.2vw);
-// }
+
 
 .layout {
     position: relative;
@@ -226,30 +219,7 @@
             max-width: 100%;
             margin: 0 $stds-spacing-1300;
         }
-    }
-    // h1.s-title {
-    //     font-size: var(--stoveTitle1);
-    // }
-
-    // h2.s-title {
-    //     font-size: var(--stoveTitle2);
-    // }
-
-    // h3.s-title {
-    //     font-size: var(--stoveTitle3);
-    // }
-
-    // h4.s-title {
-    //     font-size: var(--stoveTitle4);
-    // }
-
-    // h5.s-title {
-    //     font-size: var(--stoveTitle5);
-    // }
-
-    // h6.s-title {
-    //     font-size: var(--stoveTitle6);
-    // }
+    }    
 }
 /* desktop2XL */
 @include desktop2XL {
@@ -259,23 +229,5 @@
             margin: 0 $stds-spacing-1300;
         }
     }
-    // h1.s-title {
-    //     font-size: var(--stoveTitle1);
-    // }
-    // h2.s-title {
-    //     font-size: var(--stoveTitle2);
-    // }
-    // h3.s-title {
-    //     font-size: var(--stoveTitle3);
-    // }
-    // h4.s-title {
-    //     font-size: var(--stoveTitle4);
-    // }
-    // h5.s-title {
-    //     font-size: var(--stoveTitle5);
-    // }
-    // h6.s-title {
-    //     font-size: var(--stoveTitle6);
-    // }
 }
 

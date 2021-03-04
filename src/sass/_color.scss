@@ -1,6 +1,16 @@
 /* Light Mode */
 html {
+    $ui-bg-base-white: red;
     &.dark {
         $ui-bg-base-white: blue;
     }
 }
+
+// :root {
+//     --stoveTitle1: calc(5.4rem + 1.2vw);
+//     --stoveTitle2: calc(4.2rem + 1.2vw);
+//     --stoveTitle3: calc(3.2rem + 1.2vw);
+//     --stoveTitle4: calc(2.4rem + 1.2vw);
+//     --stoveTitle5: calc(1.8rem + 1.2vw);
+//     --stoveTitle6: calc(1.4rem + 1.2vw);
+// }

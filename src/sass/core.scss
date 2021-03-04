@@ -1,6 +1,12 @@
-/* Layout */
-@import "./_guide.scss";
-@import "./_index.scss";
-
 /* Base */
 @import "./_font.scss";
+@import "./_space.scss";
+
+/* mixin */
+@import "./_mixin.scss";
+
+/* Layout */
+@import "./_layout.scss";
+@import "./_guide.scss";
+@import "./_index.scss";
+@import "./_responsive.scss";

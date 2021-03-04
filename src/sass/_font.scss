@@ -12,46 +12,46 @@ $letterSpacing: -0.025em;
 /* Font reset */
 html {
     font-size: 10px;
-    body {
-        letter-spacing: $letterSpacing;
-        word-break: keep-all;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-weight: bold;
-        letter-spacing: $letterSpacing;
-    }
-    h1.is-hidden,
-    h2.is-hidden,
-    h3.is-hidden,
-    h4.is-hidden,
-    h5.is-hidden,
-    h6.is-hidden {
-        font-size: 0;
-        text-indent: -99999px;
-    }
-    h1.s-title {
-        font-size: $stoveTitle1;
-    }
-    h2.s-title {
-        font-size: $stoveTitle2;
-    }
-    h3.s-title {
-        font-size: $stoveTitle3;
-    }
-    h4.s-title {
-        font-size: $stoveTitle4;
-    }
-    h5.s-title {
-        font-size: $stoveTitle5;
-    }
-    h6.s-title {
-        font-size: $stoveTitle6;
-    }
+}
+body {
+    letter-spacing: $letterSpacing;
+    word-break: keep-all;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    letter-spacing: $letterSpacing;
+}
+h1.is-hidden,
+h2.is-hidden,
+h3.is-hidden,
+h4.is-hidden,
+h5.is-hidden,
+h6.is-hidden {
+    font-size: 0;
+    text-indent: -99999px;
+}
+h1.s-title {
+    font-size: $stoveTitle1;
+}
+h2.s-title {
+    font-size: $stoveTitle2;
+}
+h3.s-title {
+    font-size: $stoveTitle3;
+}
+h4.s-title {
+    font-size: $stoveTitle4;
+}
+h5.s-title {
+    font-size: $stoveTitle5;
+}
+h6.s-title {
+    font-size: $stoveTitle6;
 }
 
 /* fonts by lang */

@@ -1,7 +1,9 @@
 @import "./_space.scss";
+@import "./_font.scss";
 
 /* 2XL */
 @media all and (min-width:1920px) and (max-width:9999px) { 
+    
     .layout {
         .layout-basic {
             max-width: 100%;
@@ -12,6 +14,7 @@
 
 /* Xl */
 @media all and (min-width:1600px) and (max-width:1919px) { 
+    
     .layout {
         .layout-basic {
             max-width: 100%;
@@ -41,7 +44,7 @@
 }
 
 /* tablet */
-@media all and (min-width:768px) and (max-width:1279px) { 
+@media all and (min-width:768px) and (max-width:1279px) {     
     .layout {
         .layout-basic {
             max-width: 100%;

@@ -1,5 +1,10 @@
 @import "./_responsive.scss";
 
+@mixin mobile-end {
+    @media (min-width: #{0px}) and (max-width: #{$stds-breakpoint-xs - 1px}) {
+        @content;
+    }
+}
 @mixin mobile {
     @media (min-width: #{$stds-breakpoint-xs}) and (max-width: #{$stds-breakpoint-s - 1px}) {
         @content;

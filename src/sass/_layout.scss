@@ -51,7 +51,7 @@
     }
     .layout-s-one-rail {
         position: relative;
-        max-width: 1280px;
+        max-width: 100%;
         width: 100%;
         height: 100%;
         flex-direction: row;
@@ -177,11 +177,55 @@
 }
 
 /* mobile */
+@include mobile-end {
+    .layout {
+        .layout-basic {
+            max-width: 100%;
+            margin: 0 $stds-spacing-400;
+        }
+        .layout-information {
+            position: relative;
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            padding: 0 $stds-spacing-400;
+            .container {
+                position: relative;
+                display: flex;
+                flex: 1;
+                overflow: auto;
+                height: 100%;
+                .nav-area {
+                    display: none
+                }
+                .content-area {
+                    display: flex;
+                    flex: 1;
+                    overflow: auto;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+/* mobile */
 @include mobile {
     .layout {
         .layout-basic {
             max-width: 100%;
             margin: 0 $stds-spacing-400;
+        }
+        .layout-information {
+            padding: 0 $stds-spacing-400;
+            .container {
+                .nav-area {
+                    display: none
+                }
+                .content-area {
+                    width: 100%;
+                }
+            }
         }
     } 
 }
@@ -192,6 +236,16 @@
             max-width: 100%;
             margin: 0 $stds-spacing-800;
         }
+        .layout-information {
+            padding: 0 $stds-spacing-800;
+            .container {
+                .nav-area {
+                }
+                .content-area {
+                    width: 100%;
+                }
+            }
+        }
     } 
 }
 /* desktopM */
@@ -200,6 +254,24 @@
         .layout-basic {
             max-width: 100%;
             margin: 0 $stds-spacing-1200;
+        }
+        .layout-information {
+            .container {
+                .nav-area {}
+                .content-area {
+                    width: 100%;
+                }
+            }
+        }
+        .layout-s-one-rail {
+            max-width: 100%;
+            .container {
+                .nav-area {}
+                .content-area {
+                    width: 100%;
+                    margin: 0 $stds-spacing-1200;
+                }
+            }
         }
     } 
 }
@@ -210,6 +282,22 @@
             max-width: 100%;
             margin: 0 $stds-spacing-1300;
         }
+        .layout-information {
+            .container {
+                .nav-area {}
+                .content-area {}
+            }
+        }
+        .layout-s-one-rail {
+            max-width: 100%;
+            .container {
+                .nav-area {}
+                .content-area {
+                    width: 100%;
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
+        }
     }
 }
 /* desktopXL */
@@ -219,6 +307,22 @@
             max-width: 100%;
             margin: 0 $stds-spacing-1300;
         }
+        .layout-information {
+            .container {
+                .nav-area {}
+                .content-area {}
+            }
+        }
+        .layout-s-one-rail {
+            max-width: 100%;
+            .container {
+                .nav-area {}
+                .content-area {
+                    width: 100%;
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
+        }
     }    
 }
 /* desktop2XL */
@@ -227,6 +331,23 @@
         .layout-basic {
             max-width: 100%;
             margin: 0 $stds-spacing-1300;
+        }
+        .layout-information {
+            .container {
+                .nav-area {}
+                .content-area {}
+            }
+        }
+        .layout-s-one-rail {
+            max-width: 100%;
+            .container {
+                .nav-area {
+                }
+                .content-area {
+                    width: 100%;
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
         }
     }
 }

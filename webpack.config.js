@@ -48,6 +48,7 @@ module.exports = async function () {
     devServer: {
       port: 9009,
       hot: true,
+      host:'0.0.0.0'
     },
     module: {
       rules: [

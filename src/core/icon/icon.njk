@@ -1,0 +1,29 @@
+{% extends "src/layout/guide/guide.njk" %}
+
+<!-- styles -->
+{% block styles %}
+{% endblock %}
+
+<!-- styles -->
+{% block content %}
+<div class="guide">
+    <p class="tit"><b>Stove Typography Desktop</b></p>
+    <p class="desc">
+        <span class="line-through"><b>REM Font size</b> : html { font-size:16px; } 기본값으로 지정 요청 <br /></span>
+        <b>REM Font size</b> : html { font-size:10px; } 기본값으로 지정 요청 <br />
+        <b>Font-Size = REM</b> 단위로 관리 (부모html 폰트크기 상속) <br />
+        <b>Letter-Spacing = EM</b> 단위로 관리 (윗뎁스 폰트 크기에 따른 자간 상속) <br />
+        <b>Line-height =</b> 배수 단위로 관리 (1.2 , 1.5 , 1.6 등) <br />
+        <b>Word-Break:Keep All</b> ← .Body 에 적용<br />
+        <b>Letter-Spacing : -0.025em</b> ← .Body에 적용<br />
+        <b>.is-hidden 추가</b> : Tag영역에 폰트를 숨김처리 할 수 있습니다.<br />
+    </p>
+</div>
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %} 
+{% endblock %}

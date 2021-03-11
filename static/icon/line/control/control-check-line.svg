@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>5AA61BCD-2CC3-4B4D-8404-C68990C82EDE</title>
+    <g id="STDS_Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="control" transform="translate(-364.000000, -4985.000000)" fill="#000000">
+            <g id="ic_control_check_line" transform="translate(300.000000, 4945.000000)">
+                <g id="ic/control/check/line" transform="translate(64.000000, 40.000000)">
+                    <g id="ic_control_check_line" transform="translate(5.000000, 8.000000)">
+                        <path d="M21.2928932,0.292893219 C21.6834175,-0.0976310729 22.3165825,-0.0976310729 22.7071068,0.292893219 C23.0675907,0.65337718 23.0953203,1.22060824 22.7902954,1.61289944 L22.7071068,1.70710678 L8.70710678,15.7071068 C8.34662282,16.0675907 7.77939176,16.0953203 7.38710056,15.7902954 L7.29289322,15.7071068 L0.292893219,8.70710678 C-0.0976310729,8.31658249 -0.0976310729,7.68341751 0.292893219,7.29289322 C0.65337718,6.93240926 1.22060824,6.90467972 1.61289944,7.20970461 L1.70710678,7.29289322 L8,13.585 L21.2928932,0.292893219 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>F5CA9386-E312-4748-B2FF-826864DD7938</title>
+    <g id="STDS_Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="control" transform="translate(-784.000000, -3365.000000)" fill="#000000">
+            <g id="ic_control_arrow_right_circle_fill" transform="translate(720.000000, 3325.000000)">
+                <g id="ic/control/arrow_right_circle/fill" transform="translate(64.000000, 40.000000)">
+                    <g id="ic_control_arrow_right_circle_fill" transform="translate(2.000000, 2.000000)">
+                        <path d="M14,28 C21.7319865,28 28,21.7319865 28,14 C28,6.2680135 21.7319865,0 14,0 C6.2680135,0 0,6.2680135 0,14 C0,21.7319865 6.2680135,28 14,28 Z M11.2928932,7.29289322 C11.6533772,6.93240926 12.2206082,6.90467972 12.6128994,7.20970461 L12.7071068,7.29289322 L18.7071068,13.2928932 C19.0675907,13.6533772 19.0953203,14.2206082 18.7902954,14.6128994 L18.7071068,14.7071068 L12.7071068,20.7071068 C12.3165825,21.0976311 11.6834175,21.0976311 11.2928932,20.7071068 C10.9324093,20.3466228 10.9046797,19.7793918 11.2097046,19.3871006 L11.2928932,19.2928932 L16.585,14 L11.2928932,8.70710678 C10.9324093,8.34662282 10.9046797,7.77939176 11.2097046,7.38710056 L11.2928932,7.29289322 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

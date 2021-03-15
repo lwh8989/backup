@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ABDB8536-F1B0-41C8-8736-B0D7CD315BEC</title>
+    <g id="STDS_Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="community" transform="translate(-364.000000, -7505.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="ic_community_thumbnail_music_line" transform="translate(300.000000, 7465.000000)">
+                <g id="ic/community/thumbnail_music/line" transform="translate(64.000000, 40.000000)">
+                    <g id="ic_community_thumbnail_music_line" transform="translate(2.000000, 2.000000)">
+                        <path d="M14,0 C21.7319865,0 28,6.2680135 28,14 C28,21.7319865 21.7319865,28 14,28 C6.2680135,28 0,21.7319865 0,14 C0,6.2680135 6.2680135,0 14,0 Z M14,2 C7.372583,2 2,7.372583 2,14 C2,20.627417 7.372583,26 14,26 C20.627417,26 26,20.627417 26,14 C26,7.372583 20.627417,2 14,2 Z M17,7 C18.1045695,7 19,7.8954305 19,9 C19,10.1045695 18.1045695,11 17,11 L15,11 L15,18 C15,19.5976809 13.75108,20.9036609 12.1762728,20.9949073 L12,21 C10.3431458,21 9,19.6568542 9,18 C9,16.3431458 10.3431458,15 12,15 C12.350972,15 12.6878673,15.0602698 13.0009007,15.1710242 L13,7 L17,7 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

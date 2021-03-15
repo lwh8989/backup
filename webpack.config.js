@@ -1,4 +1,5 @@
 const path = require("path");
+const fs = require('fs');
 const glob = require("glob");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
@@ -37,7 +38,14 @@ module.exports = async function () {
     const dir = path.dirname(filePath);
     const fileName = path.basename(filePath, ".njk");
     const file = path.join(__dirname, dir, `${fileName}.scss`);
-    files[fileName] = file;
+    if (fs.existsSync(file)) {
+      if (files[fileName]) {
+        files[`${dir.replace(/\//g, '-')}-${fileName}` ] = file;
+      } else {
+        files[fileName] = file;
+      }
+
+    }
 
     return files;
   }, { core: path.join(__dirname, './src/sass/core.scss') });

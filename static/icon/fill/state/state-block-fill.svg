@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>E5350E63-C469-4EB9-86CD-BFD159AC187B</title>
+    <g id="STDS_Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="state" transform="translate(-784.000000, -845.000000)" fill="#000000">
+            <g id="ic_state_block_fill" transform="translate(720.000000, 805.000000)">
+                <g id="ic/state/block/fill" transform="translate(64.000000, 40.000000)">
+                    <g id="ic_state_block_fill" transform="translate(2.000000, 2.000000)">
+                        <path d="M14,0 C21.7319865,0 28,6.2680135 28,14 C28,21.7319865 21.7319865,28 14,28 C6.2680135,28 0,21.7319865 0,14 C0,6.2680135 6.2680135,0 14,0 Z M6.25140247,4.83673926 C5.84381822,5.18174588 5.45955977,5.55345644 5.10132789,5.94917018 L4.83757616,6.25041388 L21.7485658,23.1632876 C22.1564318,22.8180449 22.54094,22.4460614 22.899384,22.0500434 L23.1632876,21.7485658 L6.25140247,4.83673926 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

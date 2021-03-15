@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>FDDFDB82-D34F-4596-A24B-EDDEA0203F7B</title>
+    <g id="STDS_Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="community" transform="translate(-784.000000, -7865.000000)">
+            <g id="ic_community_thumbnail_lock_fill" transform="translate(720.000000, 7825.000000)">
+                <g id="ic/community/thumbnail_lock/fill" transform="translate(64.000000, 40.000000)">
+                    <g id="ic_community_thumbnail_lock_fill" transform="translate(2.000000, 2.000000)">
+                        <circle id="Oval" fill="#000000" opacity="0.400000006" cx="14" cy="14" r="13"></circle>
+                        <path d="M14,0 C21.7319865,0 28,6.2680135 28,14 C28,21.7319865 21.7319865,28 14,28 C6.2680135,28 0,21.7319865 0,14 C0,6.2680135 6.2680135,0 14,0 Z M14,2 C7.372583,2 2,7.372583 2,14 C2,20.627417 7.372583,26 14,26 C20.627417,26 26,20.627417 26,14 C26,7.372583 20.627417,2 14,2 Z M14,5 C16.1540818,5 17.8917993,6.7639039 17.9951374,8.95722164 L18,9.1640625 L18,10 L19,10 C20.1045695,10 21,10.8954305 21,12 L21,19 C21,20.1045695 20.1045695,21 19,21 L9,21 C7.8954305,21 7,20.1045695 7,19 L7,12 C7,10.8954305 7.8954305,10 9,10 L10,10 L10,9.1640625 C10,6.87587046 11.7786031,5 14,5 Z M14,14 C13.1715729,14 12.5,14.6715729 12.5,15.5 C12.5,16.3284271 13.1715729,17 14,17 C14.8284271,17 15.5,16.3284271 15.5,15.5 C15.5,14.6715729 14.8284271,14 14,14 Z M14,7 C12.9551802,7 12.0792784,7.87589142 12.0050881,9.00813489 L12,9.1640625 L12,10 L16,10 L16,9.1640625 C16,7.95732761 15.0923116,7 14,7 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

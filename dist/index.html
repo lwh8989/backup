@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Guide Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Reset.css -->
+    <link rel="stylesheet" href="../../../static/css/reset.css">
+    <!-- Font.css -->
+    <link rel="stylesheet" href="../../../static/css/font.css">
+    <link rel="stylesheet" href="../../../static/font/intel/StoveFont-Global.css">
+    <link rel="stylesheet" href="../../../static/font/kr/StoveFont-KR.css">
+    <link rel="stylesheet" href="../../../static/font/sc/StoveFont-SC.css">
+    <link rel="stylesheet" href="../../../static/font/tc/StoveFont-TC.css">
+    <link rel="stylesheet" href="../../../static/font/jp/StoveFont-JP.css">
+    <link rel="stylesheet" href="../../../static/font/thai/StoveFont-Thai.css">
+    <!-- layout.css -->
+    <!-- UI.css -->
+    <link rel="stylesheet" href="../../../static/icon/stove-font-icon.css">
+    
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+
+<script defer src="core.js"></script><script defer src="index.js"></script></head>
+<!-- Guide Layout -->
+<body class="layout-guide">
+  
+<p class="guide-title">Stove Core UI</p>
+<div class="guide-content container">
+  <div class="page-category">
+    <input id="all" type="radio" name="category" checked>
+    <label for="all" data-filter="*">All</label>
+    
+    <input id="elements" type="radio" name="category">
+    <label for="elements" data-filter="[data-value=elements]">Element</label>
+
+    <input id="modules" type="radio" name="category">
+    <label for="modules" data-filter="[data-value=modules]">Module</label>
+
+    <input id="partials" type="radio" name="category">
+    <label for="partials" data-filter="[data-value=partials]">Partial</label>
+  
+  <input id="fonts" type="radio" name="category">
+    <label for="fonts" data-filter="[data-value=fonts]">Font</label>
+
+    <input id="layout" type="radio" name="category">
+    <label for="layout" data-filter="[data-value=layout]">Layout</label>
+  </div>
+  <ul class="page-list grid">
+  </ul>
+</div>
+
+
+  
+
+  
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+<script id="template-list-item" type="text/template">
+  <li class="page-list-item element-item" data-value="@filter">
+    <a href="@url">
+      <div class="item-left">
+        <em class="tit">@title</em>
+        <span class="path">@url</span>
+      </div>
+      <div class="item-sub">
+        <span>Developer</span>
+        <em class="developer">@developer</em>
+      </div>
+    </a>
+  </li>
+</script>
+
+<script>
+  (function () {
+      
+    var data = [
+      {
+        name: 'Typography',
+        path: './src/core/font/font.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Color',
+        path: './src/core/color/color.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Space',
+        path: './src/core/space/space.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Button',
+        path: './src/elements/button/button.html',
+        developer: '이원호'
+      },
+      {
+        name: 'List',
+        path: './src/view/example/list.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Layout Basic',
+        path: './src/view/layout/basic/basic.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Layout Information',
+        path: './src/view/layout/information/information.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Layout S One Rail',
+        path: './src/view/layout/s-one-rail/s-one-rail.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Layout B One Rail',
+        path: './src/view/layout/b-one-rail/b-one-rail.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Layout Two Rail',
+        path: './src/view/layout/two-rail/two-rail.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Layout Side Rail',
+        path: './src/view/layout/side-rail/side-rail.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Example',
+        path: './src/view/example/list.html',
+        developer: '이원호'
+      }
+    ];
+
+    window.addEventListener('DOMContentLoaded', function() {
+      var templateHtml = document.getElementById("template-list-item").innerHTML;
+      var listHtml = "";
+
+      for (var item of data) {
+        filter = item.path.split('/')[1];
+        listHtml += templateHtml.replace(/@filter/g, filter)
+                                .replace(/@url/g, item.path)
+                                .replace(/@title/g, item.name)
+                                .replace(/@developer/g, item.developer);
+      }
+      document.querySelector(".page-list").innerHTML = listHtml;
+
+      var iso = new Isotope( '.grid', {
+        itemSelector: '.element-item',
+        layoutMode: 'vertical'
+      });
+
+      var category = document.querySelector(".page-category");
+      category.addEventListener('click', function(event) {
+        if ( !matchesSelector( event.target, 'label' ) ) {
+          return;
+        }
+        var filterValue = event.target.getAttribute('data-filter');
+        iso.arrange({ filter: filterValue });
+      });
+    });
+  })();
+</script>    
+
+</body>
+</html>

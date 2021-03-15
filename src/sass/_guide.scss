@@ -102,4 +102,33 @@
         opacity: 0.1;
         background-color: #0f6eff;
     }
+
+    /* Icon */
+    .ex-icon {
+        font-size: 0;
+
+        .view {
+            display: inline-block;
+            width: 33%;
+            margin-bottom: 32px;
+
+            .stove-icon {
+                font-size: 32px;
+                display: block;
+                text-align: center;
+                margin-bottom: 8px;
+            }
+
+            .name {
+                font-size: 1.2rem;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .desc {
+            padding: 16px 0;
+            ;
+        }
+    }
 }

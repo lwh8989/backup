@@ -1,0 +1,29 @@
+/* Font */
+/* otf 확장자 공유 받지 못함 */
+
+/* [S] TC */
+@font-face {
+  font-family: 'Intel TC';
+  font-style: normal;
+  font-weight: normal;
+  src: url(woff2/InterTC-Regular.woff2) format('woff2'), url(woff/InterTC-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Intel TC';
+  font-style: normal;
+  font-weight: bold;
+  src: url(woff2/InterTC-Bold.woff2) format('woff2'), url(woff/InterTC-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: normal;
+  src: url(woff2/NotoSansTC-Regular.woff2) format('woff2'), url(woff/NotoSansTC-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: bold;
+  src: url(woff2/NotoSansTC-Bold.woff2) format('woff2'), url(woff/NotoSansTC-Bold.woff) format('woff');
+}
+/* [E] TC */

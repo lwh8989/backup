@@ -1,0 +1,620 @@
+@import "./_space.scss";
+@import "./_mixin.scss";
+
+
+
+.layout {
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    height: 100%;
+    .layout-basic {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        margin: 0 $stds-spacing-400;
+        overflow-x: hidden;
+        .container {
+            position: relative;
+            flex: 1;
+            overflow: auto;
+        }
+    }
+    .layout-information {
+        position: relative;
+        max-width: 1280px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+        .container {
+            position: relative;
+            display: flex;
+            flex: 1;
+            overflow: auto;
+            height: 100%;
+            .nav-area {
+                display: flex;
+                flex: none;
+                width: 224px;
+                margin-right: $stds-spacing-400;
+            }
+            .content-area {
+                display: flex;
+                flex: 1;
+                overflow: auto;
+                width: 100%;
+            }
+        }
+    }
+    .layout-s-one-rail {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        margin: 0 auto;
+        padding: 0;
+        .container {
+            position: relative;
+            display: flex;
+            flex: 1;
+            overflow: auto;
+            height: 100%;
+            .nav-area {
+                display: flex;
+                flex: none;
+                width: 80px;
+            }
+            .content-area {
+                display: flex;
+                flex: 1;
+                overflow: auto;
+                width: 100%;
+                margin: 0 $stds-spacing-400;
+            }
+        }
+    }
+    .layout-b-one-rail {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        margin: 0 auto;
+        padding: 0;
+        .container {
+            position: relative;
+            display: flex;
+            flex: 1;
+            overflow: auto;
+            height: 100%;
+            .nav-area {
+                display: flex;
+                flex: none;
+                width: 240px;
+            }
+            .content-area {
+                display: flex;
+                flex: 1;
+                overflow: auto;
+                width: 100%;
+                margin: 0 $stds-spacing-400;
+            }
+        }
+    }
+    .layout-two-rail {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        margin: 0 auto;
+        padding: 0;
+        .container {
+            position: relative;
+            display: flex;
+            flex: 1;
+            overflow: auto;
+            height: 100%;
+            .aside-area {
+                display: flex;
+                flex: none;
+                width: 80px;
+            }
+            .nav-area {
+                display: flex;
+                flex: none;
+                width: 240px;
+            }
+            .content-area {
+                display: flex;
+                flex: 1;
+                overflow: auto;
+                width: 100%;
+                margin: 0 $stds-spacing-400;
+            }
+        }
+    }
+    .layout-side-rail {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        margin: 0 auto;
+        padding: 0;
+        .container {
+            position: relative;
+            display: flex;
+            flex: 1;
+            overflow: auto;
+            height: 100%;
+            .aside-area {
+                position: relative;
+                display: flex;
+                flex: none;
+                width: 80px;
+            }
+            .nav-area {
+                position: relative;
+                display: flex;
+                flex: none;
+                width: 320px;
+            }
+            .content-area {
+                position: relative;
+                display: flex;
+                flex: 1;
+                overflow: auto;
+                width: 100%;
+                margin: 0 $stds-spacing-400;
+            }
+        }
+    }
+}
+
+/* mobile */
+@include mobile-end {
+    .layout {
+        .layout-basic {
+            max-width: 100%;
+            margin: 0 $stds-spacing-400;
+        }
+        .layout-information {
+            padding: 0 $stds-spacing-400;
+            .container {
+                .nav-area {
+                    display: none
+                }
+                .content-area {
+                    width: 100%;
+                }
+            }
+        }
+        .layout-s-one-rail {
+            .container {
+                .nav-area {
+                    display: none;
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-400;
+                }
+            }
+        }
+        .layout-b-one-rail {
+            .container {
+                .nav-area {
+                    display: none;
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-400;
+                }
+            }
+        }
+        .layout-two-rail {
+            .container {
+                .aside-area {
+                    display: none;
+                }
+                .nav-area {
+                    display: none;
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-400;
+                }
+            }
+        }
+        .layout-side-rail {
+            .container {
+                .aside-area {
+                    display: none;
+                }
+                .nav-area {
+                    display: none;
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-400;
+                }
+            }
+        }
+    }
+}
+/* mobile 360 */
+@include mobile {
+    .layout {
+        .layout-basic {
+            max-width: 100%;
+            margin: 0 $stds-spacing-400;
+        }
+        .layout-information {
+            padding: 0 $stds-spacing-400;
+            .container {
+                .nav-area {
+                    display: none
+                }
+                .content-area {
+                    width: 100%;
+                }
+            }
+        }
+        .layout-s-one-rail {
+            .container {
+                .nav-area {
+                    display: none;
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-400;
+                }
+            }
+        }
+        .layout-b-one-rail {
+            .container {
+                .nav-area {
+                    display: none;
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-400;
+                }
+            }
+        }
+        .layout-two-rail {
+            .container {
+                .aside-area {
+                    display: none;
+                }
+                .nav-area {
+                    display: none;
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-400;
+                }
+            }
+        }
+        .layout-side-rail {
+            .container {
+                .aside-area {
+                    display: none;
+                }
+                .nav-area {
+                    display: none;
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-400;
+                }
+            }
+        }
+    } 
+}
+/* tablet 768 */
+@include tablet {
+    .layout {
+        .layout-basic {
+            max-width: 100%;
+            margin: 0 $stds-spacing-800;
+        }
+        .layout-information {
+            padding: 0 $stds-spacing-800;
+            .container {
+                .nav-area {
+                }
+                .content-area {
+                    width: 100%;
+                }
+            }
+        }
+        .layout-s-one-rail {
+            .container {
+                .nav-area {
+                    display: none;
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-800;
+                }
+            }
+        }
+        .layout-b-one-rail {
+            .container {
+                .nav-area {
+                    display: none;
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-800;
+                }
+            }
+        }
+        .layout-two-rail {
+            .container {
+                .aside-area {
+                    display: none;
+                }
+                .nav-area {
+                    display: none;
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-800;
+                }
+            }
+        }
+        .layout-side-rail {
+            .container {
+                .aside-area {
+                    display: none;
+                }
+                .nav-area {
+                    display: none;
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-800;
+                }
+            }
+        }
+    } 
+}
+/* desktopM 1280 */
+@include desktopM {
+    .layout {
+        .layout-basic {
+            max-width: 100%;
+            margin: 0 $stds-spacing-1200;
+        }
+        .layout-information {
+            .container {
+                .nav-area {}
+                .content-area {
+                    width: 100%;
+                }
+            }
+        }
+        .layout-s-one-rail {
+            max-width: 100%;
+            .container {
+                .nav-area {}
+                .content-area {
+                    width: 100%;
+                    margin: 0 $stds-spacing-1200;
+                }
+            }
+        }
+        .layout-b-one-rail {
+            .container {
+                .nav-area {
+                    width: 240px;
+                }
+                .content-area {
+                    display: flex;
+                    flex: 1;
+                    overflow: auto;
+                    width: 100%;
+                    margin: 0 $stds-spacing-1200;
+                }
+            }
+        }
+        .layout-two-rail {
+            .container {
+                .aside-area {
+                }
+                .nav-area {
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-1200;
+                }
+            }
+        }
+        .layout-side-rail {
+            .container {
+                .aside-area {
+                }
+                .nav-area {
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-1200;
+                }
+            }
+        }
+    } 
+}
+/* desktopL 1440 */
+@include desktopL {
+    .layout {
+        .layout-basic {
+            max-width: 100%;
+            margin: 0 $stds-spacing-1300;
+        }
+        .layout-information {
+            .container {
+                .nav-area {}
+                .content-area {}
+            }
+        }
+        .layout-s-one-rail {
+            max-width: 100%;
+            .container {
+                .nav-area {}
+                .content-area {
+                    width: 100%;
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
+        }
+        .layout-b-one-rail {
+            .container {
+                .nav-area {
+                    width: 240px;
+                }
+                .content-area {
+                    display: flex;
+                    flex: 1;
+                    overflow: auto;
+                    width: 100%;
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
+        }
+        .layout-two-rail {
+            .container {
+                .aside-area {
+                }
+                .nav-area {
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
+        }
+        .layout-side-rail {
+            .container {
+                .aside-area {
+                }
+                .nav-area {
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
+        }
+    }
+}
+/* desktopXL 1600 */
+@include desktopXL {
+    .layout {
+        .layout-basic {
+            max-width: 100%;
+            margin: 0 $stds-spacing-1300;
+        }
+        .layout-information {
+            .container {
+                .nav-area {}
+                .content-area {}
+            }
+        }
+        .layout-s-one-rail {
+            max-width: 100%;
+            .container {
+                .nav-area {}
+                .content-area {
+                    width: 100%;
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
+        }
+        .layout-b-one-rail {
+            .container {
+                .nav-area {
+                    width: 240px;
+                }
+                .content-area {
+                    display: flex;
+                    flex: 1;
+                    overflow: auto;
+                    width: 100%;
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
+        }
+        .layout-two-rail {
+            .container {
+                .aside-area {
+                }
+                .nav-area {
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
+        }
+        .layout-side-rail {
+            .container {
+                .aside-area {
+                }
+                .nav-area {
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
+        }
+    }    
+}
+/* desktop2XL 1920 */
+@include desktop2XL {
+    .layout {
+        .layout-basic {
+            max-width: 100%;
+            margin: 0 $stds-spacing-1300;
+        }
+        .layout-information {
+            .container {
+                .nav-area {}
+                .content-area {}
+            }
+        }
+        .layout-s-one-rail {
+            max-width: 100%;
+            .container {
+                .nav-area {
+                }
+                .content-area {
+                    width: 100%;
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
+        }
+        .layout-b-one-rail {
+            .container {
+                .nav-area {
+                    width: 240px;
+                }
+                .content-area {
+                    display: flex;
+                    flex: 1;
+                    overflow: auto;
+                    width: 100%;
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
+        }
+        .layout-two-rail {
+            .container {
+                .aside-area {
+                }
+                .nav-area {
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
+        }
+        .layout-side-rail {
+            .container {
+                .aside-area {
+                }
+                .nav-area {
+                }
+                .content-area {
+                    margin: 0 $stds-spacing-1300;
+                }
+            }
+        }
+    }
+}
+

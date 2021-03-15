@@ -1,4 +1,4 @@
-@import "./../../sass/_color.scss";
+@import "../../../sass/color";
 
 @mixin flex($x: center, $y: center, $d: row, $wrap: nowrap) {
     display: flex;

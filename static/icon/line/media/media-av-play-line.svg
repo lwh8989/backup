@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>29F1C831-CAB6-474A-B019-67E68167259A</title>
+    <g id="STDS_Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="media" transform="translate(-364.000000, -1205.000000)" fill="#000000">
+            <g id="ic_media_av_play_line" transform="translate(300.000000, 1165.000000)">
+                <g id="ic/media/av/play/line" transform="translate(64.000000, 40.000000)">
+                    <g id="ic_media_av_play_line" transform="translate(9.000000, 6.000000)">
+                        <path d="M0,1 L0,19 C0,19.7911658 0.875245955,20.2690074 1.54075759,19.8411785 L15.5407576,10.8411785 C16.1530808,10.4475421 16.1530808,9.55245787 15.5407576,9.15882152 L1.54075759,0.158821525 C0.875245955,-0.269007384 0,0.208834207 0,1 Z M2,2.832 L13.15,9.999 L2,17.167 L2,2.832 Z" id="Path-2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>39EAC1A7-0A78-49DF-9548-4DABC4CF946C</title>
+    <g id="STDS_Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="control" transform="translate(-364.000000, -2465.000000)" fill="#000000">
+            <g id="ic_control_arrow_up_line" transform="translate(300.000000, 2425.000000)">
+                <g id="ic/control/arrow_up/line" transform="translate(64.000000, 40.000000)">
+                    <g id="ic_control_arrow_up_line" transform="translate(5.000000, 9.000000)">
+                        <path d="M10.2928932,0.292893219 C10.6533772,-0.0675907428 11.2206082,-0.0953202783 11.6128994,0.209704612 L11.7071068,0.292893219 L21.7071068,10.2928932 C22.0976311,10.6834175 22.0976311,11.3165825 21.7071068,11.7071068 C21.3466228,12.0675907 20.7793918,12.0953203 20.3871006,11.7902954 L20.2928932,11.7071068 L11,2.415 L1.70710678,11.7071068 C1.34662282,12.0675907 0.779391764,12.0953203 0.387100557,11.7902954 L0.292893219,11.7071068 C-0.0675907428,11.3466228 -0.0953202783,10.7793918 0.209704612,10.3871006 L0.292893219,10.2928932 L10.2928932,0.292893219 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

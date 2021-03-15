@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>22BD752F-0E87-4914-B482-95CA165A255C</title>
+    <g id="STDS_Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="state" transform="translate(-784.000000, -305.000000)" fill="#000000">
+            <g id="ic_state_warning_circle_fill" transform="translate(720.000000, 265.000000)">
+                <g id="ic/state/warning_circle/fill" transform="translate(64.000000, 40.000000)">
+                    <g id="ic_state_warning_circle_fill" transform="translate(2.000000, 2.000000)">
+                        <path d="M14,0 C21.7319865,0 28,6.2680135 28,14 C28,21.7319865 21.7319865,28 14,28 C6.2680135,28 0,21.7319865 0,14 C0,6.2680135 6.2680135,0 14,0 Z M14,18 C13.1715729,18 12.5,18.6715729 12.5,19.5 C12.5,20.3284271 13.1715729,21 14,21 C14.8284271,21 15.5,20.3284271 15.5,19.5 C15.5,18.6715729 14.8284271,18 14,18 Z M14,7 C13.4871642,7 13.0644928,7.38604019 13.0067277,7.88337887 L13,8 L13,15 L13.0067277,15.1166211 C13.0644928,15.6139598 13.4871642,16 14,16 C14.5128358,16 14.9355072,15.6139598 14.9932723,15.1166211 L15,15 L15,8 L14.9932723,7.88337887 C14.9355072,7.38604019 14.5128358,7 14,7 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

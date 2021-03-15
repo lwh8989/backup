@@ -1,0 +1,797 @@
+{% extends "src/layout/guide/guide.njk" %}
+
+{% macro box(cssType, category, className, color) %}
+    <div class="{{ className }} {{ color }}">
+        <div>
+            <div class="css-type">{{ cssType }}</div>
+            <div class="category">{{ category }}</div>
+            <div class="class-name">{{ className }}</div>
+        </div>
+    </div>
+{% endmacro %}
+
+<!-- styles -->
+{% block styles %}
+{% endblock %}
+
+<!-- styles -->
+{% block content %}
+<div class="guide">
+    <p class="tit"><b>Semantic Color &amp; Theme Color</b></p>
+
+    <p class="tit2"><b>UI Color &gt; Background</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro backgrounds() %}
+                    {{ box(cssType='Background', category='Base', className='ui-bg-base-white') }}
+                    {{ box(cssType='Background', category='Base', className='ui-bg-base-gray') }}
+                    {{ box(cssType='Background', category='Navigation bar', className='ui-bg-navigation') }}
+                    {{ box(cssType='Background', category='Surface', className='ui-bg-surface-white') }}
+                    {{ box(cssType='Background', category='Surface', className='ui-bg-surface-gray') }}
+                    {{ box(cssType='Background', category='Highlight', className='ui-bg-highlight') }}
+                {% endmacro %}
+                {{ backgrounds() }}
+            </div>
+            <div class="demo-dark">
+                {{ backgrounds() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; border</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro borders() %}
+                    {{ box(cssType='Border', category='on Thumbnail border', className='ui-border-thumbnail') }}
+                {% endmacro %}
+                {{ borders() }}
+            </div>
+            <div class="demo-dark">
+                {{ borders() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Icon-Primary</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {{ box(cssType='color(icon)', category='Enabled', className='ui-icon-primary-enabled', color="txt-white")}}
+                {{ box(cssType='color(icon)', category='Hover', className='ui-icon-primary-hover', color="txt-white")}}
+                {{ box(cssType='color(icon)', category='Pressed', className='ui-icon-primary-pressed', color="txt-white")}}
+                {{ box(cssType='color(icon)', category='Focused', className='ui-icon-primary-focused', color="txt-white")}}
+                {{ box(cssType='color(icon)', category='Selected', className='ui-icon-primary-selected', color="txt-white")}}
+                {{ box(cssType='color(icon)', category='Disabled', className='ui-icon-primary-disabled')}}
+            </div>
+            <div class="demo-dark">
+                {{ box(cssType='color(icon)', category='Enabled', className='ui-icon-primary-enabled', color="txt-black")}}
+                {{ box(cssType='color(icon)', category='Hover', className='ui-icon-primary-hover', color="txt-black")}}
+                {{ box(cssType='color(icon)', category='Pressed', className='ui-icon-primary-pressed', color="txt-black")}}
+                {{ box(cssType='color(icon)', category='Focused', className='ui-icon-primary-focused', color="txt-black")}}
+                {{ box(cssType='color(icon)', category='Selected', className='ui-icon-primary-selected')}}
+                {{ box(cssType='color(icon)', category='Disabled', className='ui-icon-primary-disabled')}}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Icon-Secondary</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {{ box(cssType='color(icon)', category='Enabled', className='ui-icon-secondary-enabled', color="txt-white")}}
+                {{ box(cssType='color(icon)', category='Hover', className='ui-icon-secondary-hover', color="txt-white")}}
+                {{ box(cssType='color(icon)', category='Pressed', className='ui-icon-secondary-pressed', color="txt-white")}}
+                {{ box(cssType='color(icon)', category='Focused', className='ui-icon-secondary-focused', color="txt-white")}}
+                {{ box(cssType='color(icon)', category='Selected', className='ui-icon-secondary-selected', color="txt-white")}}
+                {{ box(cssType='color(icon)', category='Disabled', className='ui-icon-secondary-disabled')}}
+            </div>
+            <div class="demo-dark">
+                {{ box(cssType='color(icon)', category='Enabled', className='ui-icon-secondary-enabled', color="txt-black")}}
+                {{ box(cssType='color(icon)', category='Hover', className='ui-icon-secondary-hover', color="txt-black")}}
+                {{ box(cssType='color(icon)', category='Pressed', className='ui-icon-secondary-pressed', color="txt-black")}}
+                {{ box(cssType='color(icon)', category='Focused', className='ui-icon-secondary-focused', color="txt-black")}}
+                {{ box(cssType='color(icon)', category='Selected', className='ui-icon-secondary-selected')}}
+                {{ box(cssType='color(icon)', category='Disabled', className='ui-icon-secondary-disabled')}}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Icon-Tertiary</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro iconTertiary() %}
+                    {{ box(cssType='color(icon)', category='Enabled', className='ui-icon-tertiary-enabled', color="txt-white")}}
+                    {{ box(cssType='color(icon)', category='Hover', className='ui-icon-tertiary-hover', color="txt-white")}}
+                    {{ box(cssType='color(icon)', category='Pressed', className='ui-icon-tertiary-pressed', color="txt-white")}}
+                    {{ box(cssType='color(icon)', category='Focused', className='ui-icon-tertiary-focused', color="txt-white")}}
+                    {{ box(cssType='color(icon)', category='Selected', className='ui-icon-tertiary-selected', color="txt-white")}}
+                    {{ box(cssType='color(icon)', category='Disabled', className='ui-icon-tertiary-disabled', color="txt-white")}}
+                {% endmacro %}
+                {{ iconTertiary() }}
+            </div>
+            <div class="demo-dark">
+                {{ iconTertiary() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Icon-Quaternary</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro iconQuaternary() %}
+                    {{ box(cssType='color(icon)', category='Enabled', className='ui-icon-quaternary-enabled', color="txt-white")}}
+                    {{ box(cssType='color(icon)', category='Hover', className='ui-icon-quaternary-hover', color="txt-white")}}
+                    {{ box(cssType='color(icon)', category='Pressed', className='ui-icon-quaternary-pressed', color="txt-white")}}
+                    {{ box(cssType='color(icon)', category='Focused', className='ui-icon-quaternary-focused', color="txt-white")}}
+                    {{ box(cssType='color(icon)', category='Selected', className='ui-icon-quaternary-selected', color="txt-white")}}
+                    {{ box(cssType='color(icon)', category='Disabled', className='ui-icon-quaternary-disabled', color="txt-white")}}
+                {% endmacro %}
+                {{ iconQuaternary() }}
+            </div>
+            <div class="demo-dark">
+                {{ iconQuaternary() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Button-Primary</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {{ box(cssType='Background(Button)', category='Enabled', className='ui-button-primary-enabled', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Hover', className='ui-button-primary-hover', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Pressed', className='ui-button-primary-pressed', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Focused', className='ui-button-primary-bg-focused', color="txt-white")}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-primary-border1-focused')}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-primary-border2-focused', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Disabled', className='ui-button-primary-disabled')}}
+            </div>
+            <div class="demo-dark">
+                {{ box(cssType='Background(Button)', category='Enabled', className='ui-button-primary-enabled', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Hover', className='ui-button-primary-hover', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Pressed', className='ui-button-primary-pressed', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Focused', className='ui-button-primary-bg-focused', color="txt-white")}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-primary-border1-focused', color="txt-black")}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-primary-border2-focused')}}
+                {{ box(cssType='Background(Button)', category='Disabled', className='ui-button-primary-disabled')}}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Button-Secondary</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {{ box(cssType='Background(Button)', category='Enabled', className='ui-button-secondary-enabled', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Hover', className='ui-button-secondary-hover', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Pressed', className='ui-button-secondary-pressed', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Focused', className='ui-button-secondary-bg-focused', color="txt-white")}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-secondary-border1-focused')}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-secondary-border2-focused', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Disabled', className='ui-button-secondary-disabled')}}
+            </div>
+            <div class="demo-dark">
+                {{ box(cssType='Background(Button)', category='Enabled', className='ui-button-secondary-enabled', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Hover', className='ui-button-secondary-hover', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Pressed', className='ui-button-secondary-pressed', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Focused', className='ui-button-secondary-bg-focused', color="txt-white")}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-secondary-border1-focused', color="txt-black")}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-secondary-border2-focused')}}
+                {{ box(cssType='Background(Button)', category='Disabled', className='ui-button-secondary-disabled')}}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Button-Gray</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {{ box(cssType='Background(Button)', category='Enabled', className='ui-button-gray-enabled')}}
+                {{ box(cssType='Background(Button)', category='Hover', className='ui-button-gray-hover')}}
+                {{ box(cssType='Background(Button)', category='Pressed', className='ui-button-gray-pressed')}}
+                {{ box(cssType='Background(Button)', category='Focused', className='ui-button-gray-bg-focused')}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-gray-border1-focused')}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-gray-border2-focused', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Disabled', className='ui-button-gray-disabled')}}
+            </div>
+            <div class="demo-dark">
+                {{ box(cssType='Background(Button)', category='Enabled', className='ui-button-gray-enabled', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Hover', className='ui-button-gray-hover', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Pressed', className='ui-button-gray-pressed', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Focused', className='ui-button-gray-bg-focused', color="txt-white")}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-gray-border1-focused')}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-gray-border2-focused', color="txt-black")}}
+                {{ box(cssType='Background(Button)', category='Disabled', className='ui-button-gray-disabled')}}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Button-Ghost</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {{ box(cssType='Background(Button)', category='Enabled', className='ui-button-ghost-bg-enabled')}}
+                {{ box(cssType='Border(Button)', category='Enabled', className='ui-button-ghost-border-enabled')}}
+                {{ box(cssType='Background(Button)', category='Hover', className='ui-button-ghost-bg-hover')}}
+                {{ box(cssType='Border(Button)', category='Hover', className='ui-button-ghost-border-hover')}}
+                {{ box(cssType='Background(Button)', category='Pressed', className='ui-button-ghost-bg-pressed')}}
+                {{ box(cssType='Border(Button)', category='Pressed', className='ui-button-ghost-border-pressed')}}
+                {{ box(cssType='Background(Button)', category='Focused', className='ui-button-ghost-bg-focused')}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-ghost-border-focused', color="txt-white")}}
+                {{ box(cssType='Background(Button)', category='Disabled', className='ui-button-ghost-bg-disabled')}}
+                {{ box(cssType='Border(Button)', category='Disabled', className='ui-button-ghost-border-disabled')}}
+            </div>
+            <div class="demo-dark">
+            {{ box(cssType='Background(Button)', category='Enabled', className='ui-button-ghost-bg-enabled')}}
+                {{ box(cssType='Border(Button)', category='Enabled', className='ui-button-ghost-border-enabled')}}
+                {{ box(cssType='Background(Button)', category='Hover', className='ui-button-ghost-bg-hover')}}
+                {{ box(cssType='Border(Button)', category='Hover', className='ui-button-ghost-border-hover')}}
+                {{ box(cssType='Background(Button)', category='Pressed', className='ui-button-ghost-bg-pressed')}}
+                {{ box(cssType='Border(Button)', category='Pressed', className='ui-button-ghost-border-pressed')}}
+                {{ box(cssType='Background(Button)', category='Focused', className='ui-button-ghost-bg-focused')}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-ghost-border-focused', color="txt-black")}}
+                {{ box(cssType='Background(Button)', category='Disabled', className='ui-button-ghost-bg-disabled')}}
+                {{ box(cssType='Border(Button)', category='Disabled', className='ui-button-ghost-border-disabled')}}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Button-Inverse</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {{ box(cssType='Background(Button)', category='Enabled', className='ui-button-inverse-enabled')}}
+                {{ box(cssType='Background(Button)', category='Hover', className='ui-button-inverse-hover')}}
+                {{ box(cssType='Background(Button)', category='Pressed', className='ui-button-inverse-pressed')}}
+                {{ box(cssType='Background(Button)', category='Focused', className='ui-button-inverse-bg-focused')}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-inverse-border-focused')}}
+                {{ box(cssType='Background(Button)', category='Disabled', className='ui-button-inverse-disabled')}}
+            </div>
+            <div class="demo-dark">
+                {{ box(cssType='Background(Button)', category='Enabled', className='ui-button-inverse-enabled', color="txt-black")}}
+                {{ box(cssType='Background(Button)', category='Hover', className='ui-button-inverse-hover', color="txt-black")}}
+                {{ box(cssType='Background(Button)', category='Pressed', className='ui-button-inverse-pressed', color="txt-black")}}
+                {{ box(cssType='Background(Button)', category='Focused', className='ui-button-inverse-bg-focused', color="txt-black")}}
+                {{ box(cssType='Border(Button)', category='Focused', className='ui-button-inverse-border-focused')}}
+                {{ box(cssType='Background(Button)', category='Disabled', className='ui-button-inverse-disabled', color="txt-black")}}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Input field</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro Inputs() %}
+                    {{ box(cssType='Border(Input)', category='Enabled', className='ui-input-border-enabled')}}
+                    {{ box(cssType='Border(Input)', category='Focused / Activated', className='ui-input-border-focused', color="txt-white")}}
+                    {{ box(cssType='Border(Input)', category='Error', className='ui-input-border-error', color="txt-white")}}
+                    {{ box(cssType='Border(Input)', category='Warning', className='ui-input-border-warning', color="txt-white")}}
+                    {{ box(cssType='Border(Input)', category='Success', className='ui-input-border-success', color="txt-white")}}
+                    {{ box(cssType='Border(Input)', category='Informational', className='ui-input-border-informational', color="txt-white")}}
+                    {{ box(cssType='Border(Input)', category='Disabled', className='ui-input-border-disabled')}}
+                {% endmacro %}
+                {{ Inputs() }}
+
+                {# {{ box(cssType='Background(Input)', category='Enabled', className='ui-input-bg-enabled')}} #}
+                {# {{ box(cssType='Background(Input)', category='Focused / Activated', className='ui-input-bg-focused')}} #}
+                {# {{ box(cssType='Background(Input)', category='Error', className='ui-input-bg-error')}} #}
+                {# {{ box(cssType='Background(Input)', category='Warning', className='ui-input-bg-warning')}} #}
+                {# {{ box(cssType='Background(Input)', category='Success', className='ui-input-bg-success')}} #}
+                {# {{ box(cssType='Background(Input)', category='Informational', className='ui-input-bg-informational')}} #}
+                {# {{ box(cssType='Background(Input)', category='Disabled', className='ui-input-bg-disabled')}} #}
+            </div>
+            <div class="demo-dark">
+                {{ Inputs() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Font</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {{ box(cssType='Color', category='Primary', className='ui-text-01', color="txt-white")}}
+                {{ box(cssType='Color', category='Secondary', className='ui-text-02', color="txt-white")}}
+                {{ box(cssType='Color', category='Tertiary', className='ui-text-03', color="txt-white")}}
+                {{ box(cssType='Color', category='Quarternary', className='ui-text-04', color="txt-white")}}
+                {{ box(cssType='Color', category='Brand', className='ui-text-brand', color="txt-white")}}
+                {{ box(cssType='Color', category='Inverse - Primary', className='ui-text-inverse-01', color="txt-black")}}
+                {{ box(cssType='Color', category='Inverse - Secondary', className='ui-text-inverse-02', color="txt-black")}}
+            </div>
+            <div class="demo-dark">
+                {{ box(cssType='Color', category='Primary', className='ui-text-01', color="txt-black")}}
+                {{ box(cssType='Color', category='Secondary', className='ui-text-02', color="txt-black")}}
+                {{ box(cssType='Color', category='Tertiary', className='ui-text-03')}}
+                {{ box(cssType='Color', category='Quarternary', className='ui-text-04')}}
+                {{ box(cssType='Color', category='Brand', className='ui-text-brand', color="txt-white")}}
+                {{ box(cssType='Color', category='Inverse - Primary', className='ui-text-inverse-01', color="txt-black")}}
+                {{ box(cssType='Color', category='Inverse - Secondary', className='ui-text-inverse-02', color="txt-black")}}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Font</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro Colors() %}
+                    {{ box(cssType='Color', category='Error', className='ui-text-error', color="txt-white")}}
+                    {{ box(cssType='Color', category='Warning', className='ui-text-warning', color="txt-white")}}
+                    {{ box(cssType='Color', category='Success', className='ui-text-success', color="txt-white")}}
+                    {{ box(cssType='Color', category='Informational', className='ui-text-informational', color="txt-white")}}
+                    {{ box(cssType='Color', category='Link', className='ui-text-link', color="txt-white")}}
+                    {{ box(cssType='Color', category='Link-visited', className='ui-text-link-visited', color="txt-white")}}
+                    {{ box(cssType='Color', category='Placeholder', className='ui-text-placeholder', color="txt-white")}}
+                    {{ box(cssType='Color', category='Disabled', className='ui-text-disabled', color="txt-white")}}
+                {% endmacro %}
+                {{ Colors() }}
+            </div>
+            <div class="demo-dark">
+                {{ Colors() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Divider</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro Dividers() %}
+                    {{ box(cssType='Background', category='Primary', className='ui-divider-01')}}
+                    {{ box(cssType='Background', category='Secondary', className='ui-divider-02')}}
+                    {{ box(cssType='Background', category='Tertiary', className='ui-divider-03')}}
+                {% endmacro %}
+                {{ Dividers() }}
+            </div>
+            <div class="demo-dark">
+                {{ Dividers() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Shadow</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro Shadows() %}
+                    {{ box(cssType='Shadow', category='shadow 01', className='ui-shadow-01', color="txt-white")}}
+                    {{ box(cssType='Shadow', category='shadow 02', className='ui-shadow-02')}}
+                    {{ box(cssType='Shadow', category='shadow 03', className='ui-shadow-03')}}
+                    {{ box(cssType='Shadow', category='shadow 04', className='ui-shadow-04')}}
+                {% endmacro %}
+                {{ Shadows() }}
+            </div>
+            <div class="demo-dark">
+                {{ Shadows() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Overlays - Black</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro OverlaysBlack() %}
+                    {{ box(cssType='Background', category='Default', className='ui-overlay-b-d01', color="txt-white")}}
+                    {{ box(cssType='Background', category='Default', className='ui-overlay-b-d02')}}
+                    {{ box(cssType='Background', category='Default', className='ui-overlay-b-d03')}}
+                    {{ box(cssType='Background', category='Blur 10', className='ui-overlay-b-b10-01', color="txt-white")}}
+                    {{ box(cssType='Background', category='Blur 10', className='ui-overlay-b-b10-02')}}
+                    {{ box(cssType='Background', category='Blur 10', className='ui-overlay-b-b10-03')}}
+                    {{ box(cssType='Background', category='Blur 20', className='ui-overlay-b-b20-01', color="txt-white")}}
+                    {{ box(cssType='Background', category='Blur 20', className='ui-overlay-b-b20-02')}}
+                    {{ box(cssType='Background', category='Blur 20', className='ui-overlay-b-b20-03')}}
+                    {{ box(cssType='Background', category='Blur 40', className='ui-overlay-b-b40-01', color="txt-white")}}
+                    {{ box(cssType='Background', category='Blur 40', className='ui-overlay-b-b40-02')}}
+                    {{ box(cssType='Background', category='Blur 40', className='ui-overlay-b-b40-03')}}
+                {% endmacro %}
+                {{ OverlaysBlack() }}
+            </div>
+            <div class="demo-dark">
+                {{ OverlaysBlack() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Overlays - White</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro OverlaysWhite() %}
+                    {{ box(cssType='Background', category='Default', className='ui-overlay-w-d01')}}
+                    {{ box(cssType='Background', category='Default', className='ui-overlay-w-d02')}}
+                    {{ box(cssType='Background', category='Default', className='ui-overlay-w-d03')}}
+                    {{ box(cssType='Background', category='Blur 10', className='ui-overlay-w-b10-01')}}
+                    {{ box(cssType='Background', category='Blur 10', className='ui-overlay-w-b10-02')}}
+                    {{ box(cssType='Background', category='Blur 10', className='ui-overlay-w-b10-03')}}
+                    {{ box(cssType='Background', category='Blur 20', className='ui-overlay-w-b20-01')}}
+                    {{ box(cssType='Background', category='Blur 20', className='ui-overlay-w-b20-02')}}
+                    {{ box(cssType='Background', category='Blur 20', className='ui-overlay-w-b20-03')}}
+                    {{ box(cssType='Background', category='Blur 40', className='ui-overlay-w-b40-01')}}
+                    {{ box(cssType='Background', category='Blur 40', className='ui-overlay-w-b40-02')}}
+                    {{ box(cssType='Background', category='Blur 40', className='ui-overlay-w-b40-03')}}
+                {% endmacro %}
+                {{ OverlaysWhite() }}
+            </div>
+            <div class="demo-dark">
+                {{ OverlaysWhite() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>UI Color &gt; Skeleton</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro Skeletons() %}
+                    {{ box(cssType='Background', category='1depth', className='ui-skeleton-01')}}
+                    {{ box(cssType='Background', category='2depth', className='ui-skeleton-02')}}
+                {% endmacro %}
+                {{ Skeletons() }}
+            </div>
+            <div class="demo-dark">
+                {{ Skeletons() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>Interactive Color &gt; Brand Color &gt; Primary Color(Orange)</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro PrimaryColor() %}
+                    {{ box(cssType='Background, color', category='Highlight', className='interactive-primary-highlight')}}
+                    {{ box(cssType='Background, color', category='Enabled', className='interactive-primary-enabled', color="txt-white")}}
+                    {{ box(cssType='Background, color', category='Hover', className='interactive-primary-hover', color="txt-white")}}
+                    {{ box(cssType='Background, color', category='Pressed', className='interactive-primary-pressed', color="txt-white")}}
+                    {{ box(cssType='Background, color', category='Focus', className='interactive-primary-focus', color="txt-white")}}
+                    {{ box(cssType='Background, color', category='Selected', className='interactive-primary-selected', color="txt-white")}}
+                    {{ box(cssType='Background, color', category='Disabled', className='interactive-primary-disabled')}}
+                {% endmacro %}
+                {{ PrimaryColor() }}
+            </div>
+            <div class="demo-dark">
+                {{ PrimaryColor() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>Interactive Color &gt; Brand Color &gt; Secondary Color(Navy)</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro ScondaryColor() %}
+                    {{ box(cssType='Background, color', category='Highlight', className='interactive-secondary-highlight')}}
+                    {{ box(cssType='Background, color', category='Enabled', className='interactive-secondary-enabled', color="txt-white")}}
+                    {{ box(cssType='Background, color', category='Hover', className='interactive-secondary-hover', color="txt-white")}}
+                    {{ box(cssType='Background, color', category='Pressed', className='interactive-secondary-pressed', color="txt-white")}}
+                    {{ box(cssType='Background, color', category='Focus', className='interactive-secondary-focus', color="txt-white")}}
+                    {{ box(cssType='Background, color', category='Selected', className='interactive-secondary-selected', color="txt-white")}}
+                    {{ box(cssType='Background, color', category='Disabled', className='interactive-secondary-disabled', color="txt-white")}}
+                {% endmacro %}
+                {{ ScondaryColor() }}
+            </div>
+            <div class="demo-dark">
+                {{ ScondaryColor() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>Interactive Color &gt; Gray Color</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro GrayColor() %}
+                    {{ box(cssType='Background, color', category='Hover', className='interactive-gray-hover')}}
+                    {{ box(cssType='Background, color', category='Pressed', className='interactive-gray-pressed')}}
+                    {{ box(cssType='Background, color', category='Focused', className='interactive-gray-focused')}}
+                    {{ box(cssType='Background, color', category='Selected', className='interactive-gray-selected')}}
+                {% endmacro %}
+                {{ GrayColor() }}
+            </div>
+            <div class="demo-dark">
+                {{ GrayColor() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit"><b>Color palette</b></p>
+
+    <p class="tit2"><b>Color palette &gt; Primary Color</b></p>
+    <div class="demo-color-wrap">
+        <div class="demo-color-bx">
+            <div>
+                {% macro palettePrimary() %}
+                    {{ box(cssType='Background', category='palette primary', className='orange-50', color="txt-black")}}
+                    {{ box(cssType='Background', category='palette primary', className='orange-100', color="txt-black")}}
+                    {{ box(cssType='Background', category='palette primary', className='orange-200', color="txt-black")}}
+                    {{ box(cssType='Background', category='palette primary', className='orange-300', color="txt-black")}}
+                    {{ box(cssType='Background', category='palette primary', className='orange-400')}}
+                    {{ box(cssType='Background', category='palette primary', className='orange-500')}}
+                    {{ box(cssType='Background', category='palette primary', className='orange-600', color="txt-white")}}
+                    {{ box(cssType='Background', category='palette primary', className='orange-700', color="txt-white")}}
+                    {{ box(cssType='Background', category='palette primary', className='orange-800', color="txt-white")}}
+                    {{ box(cssType='Background', category='palette primary', className='orange-900', color="txt-white")}}
+                {% endmacro %}
+                {{ palettePrimary() }}
+            </div>
+            <div class="demo-dark">
+                {{ palettePrimary() }}
+            </div>
+        </div>
+    </div>
+
+    <p class="tit2"><b>Color palette</b></p>
+    {% set items = [
+        'navy-50',
+        'navy-100',
+        'navy-200',
+        'navy-300',
+        'navy-400',
+        'navy-500',
+        'navy-600',
+        'navy-700',
+        'navy-800',
+        'navy-900',
+        'white-alpha5',
+        'white-alpha8',
+        'white-alpha10',
+        'white-alpha15',
+        'white-alpha20',
+        'white-alpha25',
+        'white-alpha30',
+        'white-alpha40',
+        'white-alpha50',
+        'white-alpha60',
+        'white-alpha70',
+        'white-alpha75',
+        'white-alpha80',
+        'white-alpha90',
+        'white',
+        'gray-25',
+        'gray-50',
+        'gray-75',
+        'gray-100',
+        'gray-150',
+        'gray-200',
+        'gray-300',
+        'gray-400',
+        'gray-500',
+        'gray-600',
+        'gray-700',
+        'gray-800',
+        'gray-900',
+        'bluegray-50',
+        'bluegray-100',
+        'bluegray-200',
+        'bluegray-300',
+        'bluegray-400',
+        'bluegray-500',
+        'bluegray-600',
+        'bluegray-650',
+        'bluegray-700',
+        'bluegray-750',
+        'bluegray-800',
+        'bluegray-850',
+        'bluegray-900',
+        'black-alpha5',
+        'black-alpha8',
+        'black-alpha10',
+        'black-alpha15',
+        'black-alpha20',
+        'black-alpha25',
+        'black-alpha30',
+        'black-alpha40',
+        'black-alpha50',
+        'black-alpha60',
+        'black-alpha70',
+        'black-alpha75',
+        'black-alpha80',
+        'black-alpha90',
+        'black',
+        'system-error',
+        'system-warning',
+        'system-success',
+        'system-info',
+        'system-link',
+        'system-link-visited',
+        'tint-red-50',
+        'tint-red-100',
+        'tint-red-200',
+        'tint-red-300',
+        'tint-red-400',
+        'tint-red-500',
+        'tint-red-600',
+        'tint-red-700',
+        'tint-red-800',
+        'tint-red-900',
+        'tint-red-a50',
+        'tint-red-a100',
+        'tint-red-a200',
+        'tint-red-a400',
+        'tint-red-a700',
+        'tint-orange-50',
+        'tint-orange-100',
+        'tint-orange-200',
+        'tint-orange-300',
+        'tint-orange-400',
+        'tint-orange-500',
+        'tint-orange-600',
+        'tint-orange-700',
+        'tint-orange-800',
+        'tint-orange-900',
+        'tint-orange-a50',
+        'tint-orange-a100',
+        'tint-orange-a200',
+        'tint-orange-a400',
+        'tint-orange-a700',
+        'tint-yellow-50',
+        'tint-yellow-100',
+        'tint-yellow-200',
+        'tint-yellow-300',
+        'tint-yellow-400',
+        'tint-yellow-500',
+        'tint-yellow-600',
+        'tint-yellow-700',
+        'tint-yellow-800',
+        'tint-yellow-900',
+        'tint-yellow-a50',
+        'tint-yellow-a100',
+        'tint-yellow-a200',
+        'tint-yellow-a400',
+        'tint-yellow-a700',
+        'tint-lime-50',
+        'tint-lime-100',
+        'tint-lime-200',
+        'tint-lime-300',
+        'tint-lime-400',
+        'tint-lime-500',
+        'tint-lime-600',
+        'tint-lime-700',
+        'tint-lime-800',
+        'tint-lime-900',
+        'tint-lime-a50',
+        'tint-lime-a100',
+        'tint-lime-a200',
+        'tint-lime-a400',
+        'tint-lime-a700',
+        'tint-green-50',
+        'tint-green-100',
+        'tint-green-200',
+        'tint-green-300',
+        'tint-green-400',
+        'tint-green-500',
+        'tint-green-600',
+        'tint-green-700',
+        'tint-green-800',
+        'tint-green-900',
+        'tint-green-a50',
+        'tint-green-a100',
+        'tint-green-a200',
+        'tint-green-a400',
+        'tint-green-a700',
+        'tint-teal-50',
+        'tint-teal-100',
+        'tint-teal-200',
+        'tint-teal-300',
+        'tint-teal-400',
+        'tint-teal-500',
+        'tint-teal-600',
+        'tint-teal-700',
+        'tint-teal-800',
+        'tint-teal-900',
+        'tint-teal-a50',
+        'tint-teal-a100',
+        'tint-teal-a200',
+        'tint-teal-a400',
+        'tint-teal-a700',
+        'tint-blue-50',
+        'tint-blue-100',
+        'tint-blue-200',
+        'tint-blue-300',
+        'tint-blue-400',
+        'tint-blue-500',
+        'tint-blue-600',
+        'tint-blue-700',
+        'tint-blue-800',
+        'tint-blue-900',
+        'tint-blue-a50',
+        'tint-blue-a100',
+        'tint-blue-a200',
+        'tint-blue-a400',
+        'tint-blue-a700',
+        'tint-indigo-50',
+        'tint-indigo-100',
+        'tint-indigo-200',
+        'tint-indigo-300',
+        'tint-indigo-400',
+        'tint-indigo-500',
+        'tint-indigo-600',
+        'tint-indigo-700',
+        'tint-indigo-800',
+        'tint-indigo-900',
+        'tint-indigo-a50',
+        'tint-indigo-a100',
+        'tint-indigo-a200',
+        'tint-indigo-a400',
+        'tint-indigo-a700',
+        'tint-dazzlingblue-50',
+        'tint-dazzlingblue-100',
+        'tint-dazzlingblue-200',
+        'tint-dazzlingblue-300',
+        'tint-dazzlingblue-400',
+        'tint-dazzlingblue-500',
+        'tint-dazzlingblue-600',
+        'tint-dazzlingblue-700',
+        'tint-dazzlingblue-800',
+        'tint-dazzlingblue-900',
+        'tint-dazzlingblue-a50',
+        'tint-dazzlingblue-a100',
+        'tint-dazzlingblue-a200',
+        'tint-dazzlingblue-a400',
+        'tint-dazzlingblue-a700',
+        'tint-purple-50',
+        'tint-purple-100',
+        'tint-purple-200',
+        'tint-purple-300',
+        'tint-purple-400',
+        'tint-purple-500',
+        'tint-purple-600',
+        'tint-purple-700',
+        'tint-purple-800',
+        'tint-purple-900',
+        'tint-purple-a50',
+        'tint-purple-a100',
+        'tint-purple-a200',
+        'tint-purple-a400',
+        'tint-purple-a700',
+        'tint-magenta-50',
+        'tint-magenta-100',
+        'tint-magenta-200',
+        'tint-magenta-300',
+        'tint-magenta-400',
+        'tint-magenta-500',
+        'tint-magenta-600',
+        'tint-magenta-700',
+        'tint-magenta-800',
+        'tint-magenta-900',
+        'tint-magenta-a50',
+        'tint-magenta-a100',
+        'tint-magenta-a200',
+        'tint-magenta-a400',
+        'tint-magenta-a700',
+        'tint-pink-50',
+        'tint-pink-100',
+        'tint-pink-200',
+        'tint-pink-300',
+        'tint-pink-400',
+        'tint-pink-500',
+        'tint-pink-600',
+        'tint-pink-700',
+        'tint-pink-800',
+        'tint-pink-900',
+        'tint-pink-a50',
+        'tint-pink-a100',
+        'tint-pink-a200',
+        'tint-pink-a400',
+        'tint-pink-a700'
+    ] %}
+    <ul class="palette-list">
+    {% for item in items %}
+        <li class="{{ items[loop.index -1] }}">{{ item }}</li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %}
+{% endblock %}

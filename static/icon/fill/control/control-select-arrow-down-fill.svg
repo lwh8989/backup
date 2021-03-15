@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>2CE451D6-69A7-459B-B4CA-2F98D0F348BA</title>
+    <g id="STDS_Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="control" transform="translate(-784.000000, -5525.000000)" fill="#000000">
+            <g id="ic_control_select_arrow_down_fill" transform="translate(720.000000, 5485.000000)">
+                <g id="ic/control/select_arrow_down/fill" transform="translate(64.000000, 40.000000)">
+                    <g id="ic_control_select_arrow_down_fill" transform="translate(6.000000, 9.000000)">
+                        <path d="M10.8159164,14.5731221 L19.8256747,1.54236935 C20.1354922,1.09428234 20.0213301,0.481304218 19.5706864,0.173244398 C19.4056224,0.0604067423 19.2100223,0 19.0097121,0 L0.990195464,0 C0.44332561,0 0,0.440810452 0,0.984577703 C0,1.18375143 0.0607514085,1.37824185 0.174232889,1.54236935 L9.18399123,14.5731221 C9.49380876,15.0212091 10.1102844,15.1347235 10.5609281,14.8266637 C10.660815,14.758381 10.7472441,14.6724423 10.8159164,14.5731221 Z" id="Triangle"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

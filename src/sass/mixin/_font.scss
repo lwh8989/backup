@@ -1,0 +1,114 @@
+/* Title */
+@mixin stdsTitle1 {
+    font-size: $stdsTitle1;
+    font-weight: $stdsWeightBold;
+    line-height: $stdsLineHeightS;
+}
+
+@mixin stdsTitle2 {
+    font-size: $stdsTitle2;
+    font-weight: $stdsWeightBold;
+    line-height: $stdsLineHeightM;
+}
+
+@mixin stdsTitle3 {
+    font-size: $stdsTitle3;
+    font-weight: $stdsWeightBold;
+    line-height: $stdsLineHeightM;
+}
+
+@mixin stdsTitle4 {
+    font-size: $stdsTitle4;
+    font-weight: $stdsWeightBold;
+    line-height: $stdsLineHeightM;
+}
+
+@mixin stdsTitle5 {
+    font-size: $stdsTitle5;
+    font-weight: $stdsWeightBold;
+    line-height: $stdsLineHeightL;
+}
+
+@mixin stdsTitle6 {
+    font-size: $stdsTitle6;
+    font-weight: $stdsWeightBold;
+    line-height: $stdsLineHeightL;
+}
+
+@mixin stdsTitle7 {
+    font-size: $stdsTitle7;
+    font-weight: $stdsWeightBold;
+    line-height: $stdsLineHeightL;
+}
+
+/* Body */
+@mixin stdsBody1($weight: normal) {
+    font-size: $stdsBody1;
+    font-weight: $weight;
+    line-height: $stdsLineHeightL;
+}
+@mixin stdsBody2($weight: normal) {
+    font-size: $stdsBody2;
+    font-weight: $weight;
+    line-height: $stdsLineHeightL;
+}
+@mixin stdsBody3($weight: normal) {
+    font-size: $stdsBody3;
+    font-weight: $weight;
+    line-height: $stdsLineHeightL;
+}
+
+/* Button */
+@mixin stdsButton1($weight: normal) {
+    font-size: $stdsButton1;
+    font-weight: $weight;
+    line-height: $stdsLineHeightL;
+}
+
+@mixin stdsButton2($weight: normal) {
+    font-size: $stdsButton2;
+    font-weight: $weight;
+    line-height: $stdsLineHeightM;
+}
+
+/* Caption */
+@mixin caption1 {
+    font-size: $stdsCaption1;
+    font-weight: $fontWeightNormal;
+    line-height: $stdsLineHeightM;
+}
+@mixin caption2 {
+    font-size: $stdsCaption2;
+    font-weight: $fontWeightNormal;
+    line-height: $stdsLineHeightM;
+}
+@mixin caption3 {
+    font-size: $stdsCaption3;
+    font-weight: $fontWeightNormal;
+    line-height: $stdsLineHeightM;
+}
+
+/* Chips */
+@mixin chips1 {
+    font-size: $stdsChips1;
+    font-weight: $stdsWeightBold;
+    line-height: $stdsLineHeightM;
+}
+@mixin chips2 {
+    font-size: $stdsChips2;
+    font-weight: $stdsWeightBold;
+    line-height: $stdsLineHeightM;
+}
+
+/* Mixin */
+@mixin sdtxFamily($inter, $noto) {
+    font-family: $inter,
+        $noto,
+        -apple-system,
+        Segoe UI,
+        Helvetica,
+        Arial,
+        sans-serif,
+        Apple Color Emoji,
+        Segoe UI Emoji
+}

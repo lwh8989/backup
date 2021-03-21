@@ -1,1 +1,15 @@
-/* hidden 차장님 작업 부탁드립니다. */
+/* hidden mixin에 사용 */
+@mixin visual-hidden() {
+    display: hidden;
+}
+@mixin text-hidden() {
+    overflow: hidden;
+    font-size: 0;
+    text-indent: -999999px;
+    white-space: nowrap;
+}
+/* 샘플용 element*/
+.hidden-content {
+    @include visual-hidden;
+}
+

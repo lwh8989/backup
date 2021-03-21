@@ -1,8 +1,13 @@
+@import "./_color.scss";
 
 /* button */
+/* 확인 후 삭제 예정 
+secondary 컬러값 틀림 확인 필요 
+
 $bg-primary-btn : #fc6020;
 $bg-primary-btn-hover : #fe763c;
 $bg-primary-btn-active : #e14b12;
+
 $bg-secondary-btn: #353f54;
 $bg-secondary-btn-hover: #455169;
 $bg-secondary-btn-active: #222b3c;
@@ -11,15 +16,17 @@ $bg-gray-btn: #eaeaea;
 $bg-gray-btn-hover: #fafafa;
 $bg-gray-btn-active: #d5d5d5;
 $bg-gray-btn-focus: #6e6e6e;
-$bg-white-btn: #fff;
-$bg-white-btn-hover: #f5f5f5;
-$bg-white-btn-active: #e0e0e0;
-$bg-white-btn-focus: #fff;
+
+$bg-inverse-btn: #fff;
+$bg-inverse-btn-hover: #f5f5f5;
+$bg-inverse-btn-active: #e0e0e0;
+$bg-inverse-btn-focus: #fff;
+
 $bg-ghost-btn: transparent;
 $bg-ghost-btn-hover: transparent;
 $bg-ghost-btn-active: transparent;
 $bg-ghost-btn-focus: #d5d5d5;
-
+*/
 $bg-trans-btn: transparent;
 $bg-trans-btn-hover: transparent;
 $bg-trans-btn-active: transparent;
@@ -58,7 +65,42 @@ $bg-trans-btn-focus: transparent;
     box-shadow: none!important;  
   }
 }
-.element-btn .element-icon {
+.element-btn.size-xlarge.only-icon .stove-icon,
+.element-btn.size-large.only-icon .stove-icon,
+.element-btn.size-xlarge.with-icon .stove-icon,
+.element-btn.size-large.with-icon .stove-icon{
+    width: 18px;
+    height: 18px;
+}
+.element-btn.size-xlarge.only-icon .stove-icon::before,
+.element-btn.size-large.only-icon .stove-icon::before,
+.element-btn.size-xlarge.with-icon .stove-icon::before,
+.element-btn.size-large.with-icon .stove-icon::before{
+    font-size: 20px;
+}
+.element-btn.size-medium.only-icon .stove-icon,
+.element-btn.size-small.only-icon .stove-icon,
+.element-btn.size-medium.with-icon .stove-icon,
+.element-btn.size-small.with-icon .stove-icon{
+    width: 14px;
+    height: 14px;
+}
+.element-btn.size-medium.only-icon .stove-icon::before,
+.element-btn.size-small.only-icon .stove-icon::before,
+.element-btn.size-medium.with-icon .stove-icon::before,
+.element-btn.size-small.with-icon .stove-icon::before{
+    font-size: 15px;
+}
+.element-btn.size-xsmall.only-icon .stove-icon,
+.element-btn.size-xsmall.with-icon .stove-icon{
+    width: 10px;
+    height: 10px;
+}
+.element-btn.size-xsmall.only-icon .stove-icon::before,
+.element-btn.size-xsmall.with-icon .stove-icon::before{
+    font-size: 10px;
+}
+.element-btn .stove-icon {
     display: inline-block;
     overflow: hidden;
     font-size: 0;
@@ -162,7 +204,7 @@ $bg-trans-btn-focus: transparent;
     padding: 0;
     min-width: 32px;
 }
-.element-btn.only-icon .element-icon{
+.element-btn.only-icon .stove-icon{
     padding-left: 0;
 }
 
@@ -182,102 +224,103 @@ $bg-trans-btn-focus: transparent;
 .element-btn.size-xsmall.with-icon{
    padding: 0 12px; 
 }
-.element-btn.size-xlarge .element-icon ~ .btn-txt,
-.element-btn.size-large .element-icon  ~ .btn-txt{
+.element-btn.size-xlarge .stove-icon ~ .btn-txt,
+.element-btn.size-large .stove-icon  ~ .btn-txt{
     padding-left: 11px;
 }
-.element-btn.size-medium .element-icon ~ .btn-txt,
-.element-btn.size-small .element-icon  ~ .btn-txt,
-.element-btn.size-xsmall .element-icon ~ .btn-txt{
+.element-btn.size-medium .stove-icon ~ .btn-txt,
+.element-btn.size-small .stove-icon  ~ .btn-txt,
+.element-btn.size-xsmall .stove-icon ~ .btn-txt{
     padding-left: 7px;
 }
 
 /* color */
 .element-btn.bg-primary{
-    background-color: $bg-primary-btn;
-    border: 2px solid $bg-primary-btn;
+    background-color: $ui-button-primary-enabled;
+    border: 2px solid $ui-button-primary-enabled;
     &:hover{
-        background-color: $bg-primary-btn-hover;    
-        border: 2px solid $bg-primary-btn-hover;
+        background-color: $ui-button-primary-hover;    
+        border: 2px solid $ui-button-primary-hover;
     }
     &:active{
-        background-color: $bg-primary-btn-active;    
-        border: 2px solid $bg-primary-btn-active;
+        background-color: $ui-button-primary-pressed;    
+        border: 2px solid $ui-button-primary-pressed;
     }
     &:focus{
         outline: none;
-        border: 2px solid $bg-primary-btn-active;
+        border: 2px solid $ui-button-primary-pressed;
         box-shadow: inset 0 0 0 2px #fff;
     }
 }
 .element-btn.bg-secondary{
-    background-color: $bg-secondary-btn;
-    border: 2px solid $bg-secondary-btn;
+    background-color: $ui-button-secondary-enabled;
+    border: 2px solid $ui-button-secondary-enabled;
     &:hover{
-        background-color: $bg-secondary-btn-hover;    
-        border: 2px solid $bg-secondary-btn-hover;
+        background-color: $ui-button-secondary-hover;    
+        border: 2px solid $ui-button-secondary-hover;
     }
     &:active{
-        background-color: $bg-secondary-btn-active;    
-        border: 2px solid $bg-secondary-btn-active;
+        background-color: $ui-button-secondary-pressed;    
+        border: 2px solid $ui-button-secondary-pressed;
     }
     &:focus{
         outline: none;
-        border: 2px solid $bg-secondary-btn-active;
+        border: 2px solid $ui-button-secondary-pressed;
         box-shadow: inset 0 0 0 2px #fff;
     }    
 }
 .element-btn.bg-gray{
-    background-color: $bg-gray-btn;
-    border: 2px solid $bg-gray-btn;
+    background-color: $ui-button-gray-enabled;
+    border: 2px solid $ui-button-gray-enabled;
     &:hover{
-        background-color: $bg-gray-btn-hover;    
-        border: 2px solid $bg-gray-btn-hover;
+        background-color: $ui-button-gray-hover;    
+        border: 2px solid $ui-button-gray-hover;
     }
     &:active{
-        background-color: $bg-gray-btn-active;    
-        border: 2px solid $bg-gray-btn-active;
+        background-color: $ui-button-gray-pressed;    
+        border: 2px solid $ui-button-gray-pressed;
     }
     &:focus{
         outline: none;
-        background-color: $bg-gray-btn-active;    
-        border: 2px solid $bg-gray-btn-focus;
+        background-color: $ui-button-gray-hover;    
+        border: 2px solid $ui-button-gray-pressed;
         box-shadow: inset 0 0 0 2px #fff;
     }    
 }
-.element-btn.bg-white{
-    background-color: $bg-white-btn;
-    border: 2px solid $bg-white-btn;
+.element-btn.bg-inverse{
+    background-color: $ui-button-inverse-enabled;
+    border: 2px solid $ui-button-inverse-enabled;
+    color:#3a3a3a;
     &:hover{
-        background-color: $bg-white-btn-hover;    
-        border: 2px solid $bg-white-btn-hover;
+        background-color: $ui-button-inverse-hover;    
+        border: 2px solid $ui-button-inverse-hover;
     }
     &:active{
-        background-color: $bg-white-btn-active;    
-        border: 2px solid $bg-white-btn-active;
+        background-color: $ui-button-inverse-pressed;    
+        border: 2px solid $ui-button-inverse-pressed;
     }
     &:focus{
         outline: none;
-        background-color: $bg-white-btn-active;    
-        border: 2px solid $bg-white-btn-focus;
+        background-color: $ui-button-inverse-bg-focused;    
+        border: 2px solid $ui-button-inverse-border-focused;
         box-shadow: inset 0 0 0 1px #000;
     }    
 }
 .element-btn.bg-ghost{
-    background-color: $bg-ghost-btn;
-    border: 1px solid #cacaca;
+    background-color: $ui-button-ghost-bg-enabled;
+    border: 1px solid $ui-button-ghost-border-enabled;
     &:hover{
-        background-color: $bg-ghost-btn-hover;    
-        border: 1px solid $bg-ghost-btn-hover;
+        background-color: $ui-button-ghost-bg-hover;    
+        border: 1px solid $ui-button-ghost-border-hover;
     }
     &:active{
-        background-color: $bg-ghost-btn-active;    
-        border: 1px solid $bg-ghost-btn-active;
+        background-color: $ui-button-ghost-bg-pressed;    
+        border: 1px solid $ui-button-ghost-border-pressed;
     }
     &:focus{
         outline: none;
-        background-color: $bg-ghost-btn-active;    
-        border: 1px solid $bg-ghost-btn-focus;
+        background-color: $ui-button-ghost-bg-focused;    
+        border: 1px solid $ui-button-ghost-border-focused;
         box-shadow: inset 0 0 0 1px #000;
     }    
 }

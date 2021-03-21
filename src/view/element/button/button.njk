@@ -1,0 +1,124 @@
+{% extends "src/layout/guide/guide.njk" %}
+
+{% import "src/element/button/button.njk" as btn %}
+
+<!-- styles -->
+{% block styles %}
+{% endblock %}
+
+<!-- styles -->
+{% block content %}
+<!-- [D]   -->
+<div class="guide guide-button">
+    <p class="tit"><b>Stove Button Guide</b></p>
+    <p class="desc">- 버튼의 기본 height은 <strong>48px</strong></p>
+    <p class="desc">- 버튼의 사이즈(height) 변경 시 <strong>.size-N</strong> 클래스를 추가하여 적용</p>
+    <p class="desc">- 모든 버튼은 <strong>&lt button &gt</strong> 태그와 <strong>&lt a &gt</strong>태그 모두 적용 가능.</p>
+    <p class="desc">- <strong>&lt a &gt</strong>태그 disabled은 .disabled로 사용.</p>
+    <p class="desc"></p>
+
+    <div class="ex-button">
+        <ul>
+            <li>
+                {{ btn.base(colorClass='bg-primary', txt='button 태그') }}
+            </li>
+            <li>
+                <p class="list-tit">버튼 라운드 </p>
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-large', txt='기본') }}
+                {{ btn.aLink(colorClass='bg-primary', sizeClass='size-large',shapeClass='btn-round', txt='btn-round') }}
+            </li>
+            <li>
+                <p class="list-tit">버튼 컬러</p>
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-large', txt='bg-primary') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-large', txt='bg-primary', state='disabled' ) }}
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-large', txt='bg-secondary') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-large', txt='bg-secondary', state='disabled' ) }}
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-gray', sizeClass='size-large', txt='bg-gray') }}
+                {{ btn.base(colorClass='bg-gray', sizeClass='size-large', txt='bg-gray', state='disabled' ) }}
+            </li>
+            <li>
+                <div style="background-color:#dfdfdf;padding:10px;display:inline-block">
+                    {{ btn.base(colorClass='bg-inverse', sizeClass='size-large', txt='bg-inverse') }}
+                    {{ btn.base(colorClass='bg-inverse', sizeClass='size-large', txt='bg-inverse', state='disabled' ) }}
+                </div>
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-ghost', sizeClass='size-large', txt='bg-ghost') }}
+                {{ btn.base(colorClass='bg-ghost', sizeClass='size-large', txt='bg-ghost', state='disabled' ) }}
+                <div style="background-color:#dfdfdf;padding:10px;display:inline-block">
+                    <button class="element-btn  bg-ghost size-large">
+                        <span class="btn-txt">bg-ghost</span>
+                    </button>
+                </div>
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-trans', sizeClass='size-large', txt='bg-trans text Button') }}
+            </li>
+            <li>
+                <p class="list-tit">버튼 크기별 (56px 48px 40px 36px 32px)</p>
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-xlarge', txt='X-large Button') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-large', txt='large Button') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-medium', txt='Medium Button') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-small', txt='Small Button') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-xsmall', txt='X-small Button') }}
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-xlarge', txt='X-large Button') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-large', txt='large Button') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-medium', txt='Medium Button') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-small', txt='Small Button') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-xsmall', txt='X-small Button') }}
+            </li>
+            <li>
+                <p class="list-tit">버튼 아이콘 (아이콘 + 텍스트 : .with-icon ,아이콘 하나일 때: .only-icon 클래스)</p>
+            </li>
+            <li>
+                {{ btn.withIcon(colorClass='bg-secondary', sizeClass='size-xlarge', txt='X-large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-secondary', sizeClass='size-large', txt='large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-secondary', sizeClass='size-medium', txt='Medium Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-secondary', sizeClass='size-small', txt='Small Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-secondary', sizeClass='size-xsmall', txt='X-small Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+            </li>
+            <li>
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-xlarge', txt='X-large Button', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-large', txt='large Button', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-medium', txt='Medium Button', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-small', txt='Small Button', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-xsmall', txt='X-small Button', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-xlarge', txt='X-large Button', state='disabled') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-large', txt='large Button', state='disabled') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-medium', txt='Medium Button', state='disabled') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-small', txt='Small Button', state='disabled') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-xsmall', txt='X-small Button', state='disabled') }}
+            </li>
+            <li>
+                {{ btn.aLink(colorClass='bg-secondary', sizeClass='size-xlarge', txt='X-large Button', state='disabled') }}
+                {{ btn.aLink(colorClass='bg-secondary', sizeClass='size-large', txt='large Button', state='disabled') }}
+                {{ btn.aLink(colorClass='bg-secondary', sizeClass='size-medium', txt='Medium Button', state='disabled') }}
+                {{ btn.aLink(colorClass='bg-secondary', sizeClass='size-small', txt='Small Button', state='disabled') }}
+                {{ btn.aLink(colorClass='bg-secondary', sizeClass='size-xsmall', txt='X-small Button', state='disabled') }}
+            </li>
+        </ul>
+    </div>
+    
+</div>
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %} 
+{% endblock %}

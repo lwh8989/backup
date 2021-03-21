@@ -1,0 +1,10 @@
+/*@import "../../sass/_pagenation.scss";*/
+@import "../../sass/pagenation";
+
+/* guide pagenation */
+.pagination-sample tr > *:first-child{
+    width: 150px!important;
+}
+.pagination-sample tr > *:last-child{
+    width: calc(100% - 150px) !important;
+}

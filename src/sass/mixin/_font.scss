@@ -74,17 +74,17 @@
 /* Caption */
 @mixin caption1 {
     font-size: $stdsCaption1;
-    font-weight: $fontWeightNormal;
+    font-weight: $stdsWeightNormal;
     line-height: $stdsLineHeightM;
 }
 @mixin caption2 {
     font-size: $stdsCaption2;
-    font-weight: $fontWeightNormal;
+    font-weight: $stdsWeightNormal;
     line-height: $stdsLineHeightM;
 }
 @mixin caption3 {
     font-size: $stdsCaption3;
-    font-weight: $fontWeightNormal;
+    font-weight: $stdsWeightNormal;
     line-height: $stdsLineHeightM;
 }
 

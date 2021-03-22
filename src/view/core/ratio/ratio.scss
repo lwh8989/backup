@@ -1,0 +1,177 @@
+@import "~/src/sass/mixin";
+@import "~/src/sass/color";
+
+.guide {
+    width: 1200px;
+    font-size: 14px;
+
+    hr {
+        margin: 20px 0;
+        opacity: 0.3;
+    }
+
+    .tit {
+        .desc {
+            font-size: 14px;
+            opacity: 0.8;
+            line-height: 1.4em;
+            padding-left: 20px;
+        }
+    }
+    .tit2 {
+        &:first-of-type {
+            margin-top: 10px;
+        }
+
+        .desc {
+            font-size: 12px;
+            opacity: 0.8;
+            line-height: 1.3em;
+            padding-left: 20px;
+        }
+    }
+
+    a.desc {
+        font-size: 13px;
+        color: $ui-text-link;
+        padding-left: 20px;
+
+        &:hover {
+            color: $ui-text-warning;
+        }
+    }
+    .dl-list {
+        margin: 10px 0;
+
+        &.indent {
+            margin-left: 20px;
+        }
+
+        dt {
+            font-size: 16px;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        dd {
+            position: relative;
+            padding: 0 12px 4px 12px;
+
+            &::before {
+                content: "-";
+                position: absolute;
+                left: 0;
+                top: 2px;
+            }
+
+            span.txt-white {
+                display: inline-block;
+                padding: 5px;
+            }
+        }
+        .txt-white {
+            color: $ui-text-inverse-01;
+        }
+    }
+
+    .demo-wrap {
+        @include flex($y: flex-start);
+        position: relative;
+    }
+
+    .resizable {
+        position: relative;
+        margin-bottom: 40px;
+        margin: 2px;
+        flex: 1;
+
+        .dl-list {
+            height: 90px;
+
+            dd {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .resizable .resizers {
+        @include flex($y: flex-start);
+        width: 400px;
+        height: 400px;
+        max-width: 100% !important;
+        min-width: 200px !important;
+        padding: 10%;
+        border: 1px solid #a0a0a0;
+        resize: horizontal;
+        overflow: auto;
+
+        &.full-w {
+            width: 100%;
+        }
+        &.half-w {
+            width: 50%;
+        }
+
+        & > div {
+            padding: 2%;
+        }
+        .col-1 {
+            flex: 0 0 100%;
+        }
+        .col-2 {
+            flex: 0 0 50%;
+        }
+
+        .thumb {
+            position: relative;
+
+            &::before {
+                transform: translate(-50%, -50%);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                color: #fff;
+            }
+
+            &.thumb-1-1 {
+                @include aspectRatio;
+                background-color: $ui-text-success;
+
+                &::before {
+                    content: "1:1";
+                }
+            }
+            &.thumb-3-4 {
+                @include aspectRatio(3, 4);
+                background-color: $ui-text-informational;
+
+                &::before {
+                    content: "3:4";
+                }
+            }
+            &.thumb-4-3 {
+                @include aspectRatio(4, 3);
+                background-color: $ui-text-warning;
+
+                &::before {
+                    content: "4:3";
+                }
+            }
+            &.thumb-16-9 {
+                @include aspectRatio(16, 9);
+                background-color: $ui-text-brand;
+
+                &::before {
+                    content: "16:9";
+                }
+            }
+            &.thumb-9-16 {
+                @include aspectRatio(9, 16);
+                background-color: $ui-text-link-visited;
+
+                &::before {
+                    content: "9:16";
+                }
+            }
+        }
+    }
+}

@@ -15,6 +15,9 @@
   <div class="page-category">
     <input id="all" type="radio" name="category" checked>
     <label for="all" data-filter="*">All</label>
+
+    <input id="core" type="radio" name="category">
+    <label for="core" data-filter="[data-value=core]">Core</label>
     
     <input id="elements" type="radio" name="category">
     <label for="elements" data-filter="[data-value=elements]">Element</label>
@@ -24,9 +27,6 @@
 
     <input id="partials" type="radio" name="category">
     <label for="partials" data-filter="[data-value=partials]">Partial</label>
-  
-  <input id="fonts" type="radio" name="category">
-    <label for="fonts" data-filter="[data-value=fonts]">Font</label>
 
     <input id="layout" type="radio" name="category">
     <label for="layout" data-filter="[data-value=layout]">Layout</label>
@@ -139,7 +139,7 @@
       var listHtml = "";
 
       for (var item of data) {
-        filter = item.path.split('/')[1];
+        filter = item.path.split('/')[3];
         listHtml += templateHtml.replace(/@filter/g, filter)
                                 .replace(/@url/g, item.path)
                                 .replace(/@title/g, item.name)

@@ -12,7 +12,6 @@
   font-family: 'Intel KR';
   font-style: normal;
   font-weight: bold;
-  color: pink;
   src: url(woff2/InterKR-Bold.woff2) format('woff2'), url(woff/InterKR-Bold.woff) format('woff');
 }
 @font-face {
@@ -25,7 +24,6 @@
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: bold;
-  color: red;
   src: url(woff2/NotoSansKR-Bold.woff2) format('woff2'), url(woff/NotoSansKR-Bold.woff) format('woff');
 }
 /* [E] KR */

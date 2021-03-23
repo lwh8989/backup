@@ -1,0 +1,118 @@
+{% import "src/view/lagarcy/elements/icon.njk" as icon %}
+{% import "src/view/lagarcy/elements/btn.njk" as btn %}
+{% import "src/view/lagarcy/elements/input-select.njk" as inputSelect %}
+{% import "src/view/lagarcy/elements/input-text.njk" as inputText %}
+
+{% macro submit(placeholder, value) %}
+  <div class="lagarcy-module-inputset submit">
+    <div class="input-wrap">
+      {{ inputText.baseSquare() }}
+    </div>
+    {{ btn.base(shapeClass='btn-square', colorClass='btn-black', txt='미리 보기') }}
+  </div>
+{% endmacro %}
+<!-- -->
+{% macro submitReaction(placeholder, value) %}
+  <div class="lagarcy-module-inputset submit-reaction">
+    <div class="input-wrap">
+      {{ inputText.baseSquareSm(placeholder = placeholder, stateClass="active") }}
+      <button class="lagarcy-element-icon ic-close-round" type="button">삭제</button>
+    </div>
+    <div class="input-btn-wrap">
+      {{ btn.base(shapeClass='btn-square', colorClass='', txt='찾기') }}
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro submitClose(placeholder, value) %}
+  <div class="lagarcy-module-inputset submit-close">
+    <div class="input-wrap">
+      {{ inputText.base(placeholder = placeholder, stateClass="active") }}
+      <button class="lagarcy-element-icon ic-close-round" type="button">삭제</button>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro submitVoteReaction(placeholder, value) %}
+  <div class="lagarcy-module-inputset submit-vote-reaction">
+    <div class="input-wrap">
+      {{ inputText.baseSquareLg(placeholder = placeholder, stateClass="active") }}
+      <!--<button class="lagarcy-element-icon ic-close-round" type="button">삭제</button> -->
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro submitVoteCell(placeholder, value, disabled) %}
+  <div class="lagarcy-module-inputset submit-reaction submit-vote-cell">
+    <!-- [D] disable 추가 해주시면 비활성화 나옵니다. -->
+    <div class="submit-input-wrap">
+      <div class="input-number-wrap">1</div>
+      <div class="input-thumb-wrap">
+        <div class="thumb-wrap">
+          <img src="https://dummyimage.com/24x24/61d2ff/fff" alt="vote-images">
+          <button>
+            <span class="lagarcy-element-icon ic-thumb-close" style="">ic-thumb-close</span></button>
+        </div>
+      </div>
+      <div class="input-wrap">
+        {{ inputText.baseSquareLg(placeholder = placeholder, stateClass="active" ) }}
+      </div>
+      <div class="input-tool">
+        <button class="lagarcy-element-icon ic-image" type="button">이미지</button>
+        <button class="lagarcy-element-icon ic-file" style="">파일</button>
+      </div>
+    </div>
+    <div class="input-btn-wrap">
+      <button class="lagarcy-element-icon ic-write-sortable-handle" type="button"></button>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro submitVoteCellLink(placeholder, value) %}
+  <div class="lagarcy-module-inputset submit-reaction submit-vote-cell-link">
+    <!-- [D] disable 추가 해주시면 비활성화 나옵니다. -->
+    <div class="submit-input-wrap">
+      <div class="input-wrap">
+        {{ inputText.baseSquareLg(placeholder = placeholder, stateClass="active" ) }}
+      </div>
+    </div>
+    <div class="input-btn-wrap">
+      <button>
+        <span class="lagarcy-element-icon ic-close-round" style="">삭제</span>
+      </button>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro search(txt, placeholder, value) %}
+  <div class="lagarcy-module-inputset search">
+    <div class="input-wrap">
+      {{ inputText.baseSquareSm(placeholder = placeholder, stateClass="active") }}
+      <button class="lagarcy-element-icon ic-close-round" type="button">삭제</button>
+      <button class="lagarcy-element-icon ic-search" type="submit">검색</button>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro searchSelect(selectTxt, placeholder, value) %}
+  <div class="lagarcy-module-inputset search">
+    {{ inputSelect.baseSm(txt= selectTxt) }}
+    <div class="input-wrap">
+      {{ inputText.baseSquareSm(placeholder = placeholder, stateClass="active") }}
+      <button class="lagarcy-element-icon ic-close-round" type="button">삭제</button>
+      <button class="lagarcy-element-icon ic-search" type="submit">검색</button>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro selectBtn(selectTxt, placeholder, value) %}
+  <div class="lagarcy-module-inputset selectbtn">
+    {{ inputSelect.baseSm(txt= selectTxt) }}
+    <button class="lagarcy-element-btn btn-small no-icon btn-gray-bg size-28 ">
+      <span class="btn-txt">적용<span class="lagarcy-element-icon "></span></span>
+    </button>
+    <button class="lagarcy-element-btn btn-small-round no-icon btn-gray-bg size-28 ">
+      <span class="btn-txt">삭제<span class="lagarcy-element-icon "></span></span>
+    </button>
+  </div>
+{% endmacro %}

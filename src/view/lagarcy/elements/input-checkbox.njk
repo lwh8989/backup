@@ -1,0 +1,46 @@
+{% import "src/view/lagarcy/elements/icon.njk" as icon %}
+
+{% macro base(id, txt, state, sizeClass, statusClass) %}
+  <span class="lagarcy-element-checkbox {{ sizeClass }} {{ statusClass }}">
+    <input type="checkbox" name="" id="{{ id }}" class="checkbox-input" {{state}}>
+    <label class="blind" for="{{ id }}">{{ txt }}</label>
+  </span>
+{% endmacro %}
+
+{% macro baseRound(id, txt, state, sizeClass) %}
+  <span class="lagarcy-element-checkbox-round {{ sizeClass }}">
+    <input type="checkbox" name="" id="{{ id }}" class="checkbox-input-round" {{state}}>
+    <label class="blind" for="{{ id }}">{{ txt }}</label>
+  </span>
+{% endmacro %}
+
+{% macro baseWithTxt(id, txt, state, sizeClass) %}
+  <span class="lagarcy-element-checkbox {{ sizeClass }}">
+    <input type="checkbox" name="" id="{{ id }}" class="checkbox-input" {{state}}>
+    <label for="{{ id }}">{{ txt }}</label>
+  </span>
+{% endmacro %}
+
+{% macro baseRoundWithTxt(id, txt, state, sizeClass) %}
+  <span class="lagarcy-element-checkbox-round {{ sizeClass }}">
+    <input type="checkbox" name="" id="{{ id }}" class="checkbox-input-round" {{state}}>
+    <label for="{{ id }}">{{ txt }}</label>
+  </span>
+{% endmacro %}
+
+{% macro custom(id, txt, name, state, sizeClass, noTxt, shapeClass, etcClass) %}
+  <label class="lagarcy-element-check check-custom {% if noTxt %}blind{% endif %} {{ shapeClass }} {{ etcClass }}">{{ txt }}
+    <input type="checkbox" {{ state }}>
+    <span class="checkmark"></span>
+  </label>
+{% endmacro %}
+
+{% macro toggle(state, txt) %}
+  <span class="lagarcy-element-toggle">
+    <p class="txt">{{ txt }}</p>
+    <label class="switch">
+      <input type="checkbox" {{ state }}>
+      <span class="slider"></span>
+    </label>
+  </span>
+{% endmacro %}

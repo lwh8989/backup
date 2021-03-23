@@ -1,0 +1,656 @@
+{% import "src/view/lagarcy/elements/btn.njk" as btn %}
+{% import "src/view/lagarcy/elements/icon.njk" as icon %}
+{% import "src/view/lagarcy/elements/input-select.njk" as inputSelect %}
+{% import "src/view/lagarcy/elements/input-text.njk" as inputText %}
+{% import "src/view/lagarcy/elements/input-checkbox.njk" as inputCheckbox %}
+{% import "src/view/lagarcy/elements/input-radio.njk" as inputRadio %}
+{% import "src/view/lagarcy/modules/input-set.njk" as inputSet %}
+{% import "src/view/lagarcy/elements/profile.njk" as profile %}
+
+{% macro sectionIntroduce() %}
+    <section class="section-contents">
+        <div class="section-header">
+            <p>소개</p>
+        </div>
+        <div class="section-body">
+            <p>안녕하세요. 저는 에픽세븐과 로스트아크에서 팬아트를 담당하고 있습니다.</p>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionMyArticle() %}
+    <section class="section-contents">
+        <div class="section-header">
+            <ul class="tab">
+                <!-- [D] active -->
+                <li class="active">
+                    <a href="#">내글</a>
+                </li>
+                <li>
+                    <a href="#">내 댓글</a>
+                </li>
+            </ul>
+        </div>
+        <div class="section-body">
+            <!-- list-text -->
+            <ul class="list-text">
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요. 영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요. 영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요. 영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요. 영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요. 영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionMyArticleEmpty() %}
+    <section class="section-contents">
+        <div class="section-header">
+            <ul class="tab">
+                <!-- [D] active -->
+                <li class="active">
+                    <a href="#">내글</a>
+                </li>
+                <li>
+                    <a href="#">내 댓글</a>
+                </li>
+            </ul>
+        </div>
+        <div class="section-body">
+            <!-- list-text -->
+            <ul class="list-text">
+                <li>
+                    <span class="subject-text empty">내글이 없습니다.</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionReply() %}
+    <!-- [D] hidden 클래스를 추가 하면 section-body가 숨김처리됩니다. -->
+    <section class="section-contents">
+        <div class="section-header">
+            <p>댓글 많은 글</p>
+            <button class="btn-tab">
+                <span class="lagarcy-element-icon ic-direction-up-s16-c999" style="">ic-direction-up-s16-c999</span></button>
+        </div>
+        <div class="section-body">
+            <!-- list-text -->
+            <ul class="list-text">
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요. 영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요. 영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요. 영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요. 영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요. 영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionReplyFold() %}
+    <!-- [D] hidden 클래스를 추가 하면 section-body가 숨김처리됩니다. -->
+    <section class="section-contents hidden">
+        <div class="section-header">
+            <p>댓글 많은 글</p>
+            <button class="btn-tab">
+                <span class="lagarcy-element-icon ic-direction-up-s16-c999" style="">ic-direction-up-s16-c999</span></button>
+        </div>
+        <div class="section-body">
+            <!-- list-text -->
+            <ul class="list-text">
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                        <span class="subject-info-count">[999+]</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                        <span class="subject-info-count">[999]</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                        <span class="subject-info-count">[99]</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                        <span class="subject-info-count">[9]</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                        <span class="subject-info-count">[0]</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionReplyEmpty() %}
+    <section class="section-contents">
+        <div class="section-header">
+            <p>댓글 많은 글</p>
+        </div>
+        <div class="section-body">
+            <!-- list-text -->
+            <ul class="list-text">
+                <li>
+                    <span class="subject-text empty">내글이 없습니다.</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionLike() %}
+    <section class="section-contents">
+        <div class="section-header">
+            <p>좋아요 많은 글</p>
+            <button class="btn-tab">
+                <span class="lagarcy-element-icon ic-direction-up-s16-c999" style="">ic-direction-up-s16-c999</span></button>
+        </div>
+        <div class="section-body">
+            <!-- list-text -->
+            <ul class="list-text">
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요. 영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요. 영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요. 영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionLikeEmpty() %}
+    <section class="section-contents">
+        <div class="section-header">
+            <p>좋아요 많은 글</p>
+            <button class="btn-tab">
+                <span class="lagarcy-element-icon ic-direction-up-s16-c999" style="">ic-direction-up-s16-c999</span></button>
+        </div>
+        <div class="section-body">
+            <!-- list-text -->
+            <ul class="list-text">
+                <li>
+                    <span class="subject-text empty">내글이 없습니다.</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionActivity() %}
+    <section class="section-contents">
+        <div class="section-header">
+            <p>내 활동</p>
+        </div>
+        <div class="section-body">
+            <!-- list-card -->
+            <ul class="list-card">
+                <li>
+                    <a href="#">
+                        <span class="lagarcy-element-icon ic-board-write-s32" style="width:32px;height:32px">ic-board-write-s32</span>
+                        <span class="count">999+</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="lagarcy-element-icon ic-board-reply-s32" style="width:32px;height:32px">ic-board-reply-s32</span>
+                        <span class="count">999+</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="lagarcy-element-icon ic-board-like-s32" style="width:32px;height:32px">ic-board-like-s32</span>
+                        <span class="count">999+</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionSympathy() %}
+    <section class="section-contents">
+        <div class="section-header">
+            <p>받은 공감</p>
+        </div>
+        <div class="section-body">
+            <!-- list-reaction -->
+            <ul class="list-reaction">
+                <li>
+                    <a href="#">
+                        <span class="lagarcy-element-icon ic-fill-heart-s24" style="width:24px;height:24px">ic-fill-heart-s24
+                    <span class="lagarcy-module-tooltip">
+                                <span class="tooltip-txt arrow-bc">게시물의 좋아요 수</span>
+                            </span>
+                        </span>
+                        <span class="count">999+</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="lagarcy-element-icon ic-fill-reply-s24" style="width:24px;height:24px">ic-fill-reply-s24
+                    <!-- [D] inline 속성은 제거 해 주세요. -->
+                            <span class="lagarcy-module-tooltip" style="display:block;">
+                                <span class="tooltip-txt arrow-bc">게시물의 댓글 수</span>
+                            </span>
+                        </span>
+                        <span class="count">999+</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionVisit() %}
+    <section class="section-contents">
+        <div class="section-header">
+            <p>방문 수</p>
+        </div>
+        <div class="section-body">
+            <!-- list-reaction -->
+            <ul class="list-reaction">
+                <li>
+                    <a href="#">
+                        <span class="article">오늘</span>
+                        <span class="count">999+</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="article">누적</span>
+                        <span class="count">999+</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionRecentVisitor() %}
+    <section class="section-contents">
+        <div class="section-header">
+            <p>최근 방문자</p>
+            <button class="btn-more">더보기</button>
+        </div>
+        <div class="section-body">
+            <!-- list-profile -->
+            <ul class="list-profile">
+                <li>
+                    {{ profile.basic44() }}
+                </li>
+                <li>
+                    {{ profile.basic44() }}
+                </li>
+                <li>
+                    {{ profile.basic44() }}
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionCommunication() %}
+    <section class="section-contents">
+        <div class="section-header">
+            <p>내 커뮤니티</p>
+            <button class="btn-more">더보기</button>
+        </div>
+        <div class="section-body">
+            <!-- list-profile -->
+            <ul class="list-profile">
+                <li>
+                    {{ profile.game() }}
+                </li>
+                <li>
+                    {{ profile.game() }}
+                </li>
+                <li>
+                    {{ profile.game() }}
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionBoard() %}
+    <section class="section-contents">
+        <div class="section-header border-bottom">
+            <p>게시판 새글 알림</p>
+        </div>
+        <div class="section-body">
+            <!-- list-text -->
+            <ul class="list-text border-bottom">
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                        <span class="subject-board">에픽세븐 자유게시판</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                        <span class="subject-board">에픽세븐 자유게시판</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="subject-text">영광의 증표 몆주간 전혀 받은적이 없어요.</span>
+                        <span class="subject-board">에픽세븐 자유게시판</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionBoardEmpty() %}
+    <section class="section-contents">
+        <div class="section-header border-bottom">
+            <p>게시판 새글 알림</p>
+        </div>
+        <div class="section-body">
+            <!-- list-text -->
+            <ul class="list-text border-bottom">
+                <li>
+                    <span class="subject-text empty">내글이 없습니다.</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionWidget() %}
+    <section class="section-contents">
+        <div class="section-popup">
+            <p class="title">위젯을 추가하고 관리하실 수 있습니다.</p>
+            <a href="#" class="lagarcy-element-btn text-btn16">
+                <span class="btn-txt">위젯 설정하기<span class="lagarcy-element-icon ic-direction-right-s16-active" style="width:16px;height:16px">ic-direction-right-s16-active</span></span>
+            </a>
+            <button>
+                <span class="lagarcy-element-icon ic-close-s12-c999" style="width:12px;height:12px">ic-close-s12-c999</span></button>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionOption() %}
+    <section class="section-contents">
+        <div class="section-header option">
+            <p>타임라인</p>
+            <button class="btn-option">
+                <span class="lagarcy-element-icon ic-help-circle-s20-cfff">ic-help-circle-s20-cfff</span></button>
+        </div>
+        <div class="section-body option">
+            <div class="list-option">
+                <div class="ani-iconunderline">
+                    {{ btn.withIconText(shapeClass='btn-round-48 radius-4', sizeClass='size-48', colorClass='btn-orange-line', txt='글쓰기', iconClass='ic-fill-pencil-s20-cff5000') }}
+                </div>
+                <ul class="option-tab" style="border-top: 1px solid #eee;">
+                    <li class="active">
+                        <a href="#">작성한 글</a>
+                    </li>
+                    <li class="">
+                        <a href="#">댓글 단 글</a>
+                    </li>
+                    <li class="">
+                        <a href="#">좋아요 한 글</a>
+                    </li>
+                    <li class="">
+                        <a href="#">편집 중인 글</a>
+                    </li>
+                </ul>
+                <ul class="option-radio" style="border-top: 1px solid #eee;">
+                    <p class="title">출처</p>
+                    <li class="active">
+                        {{ inputRadio.baseWithTxt(id="radio1", txt="전체", state="checked", name="radio1") }}
+                    </li>
+                    <li>
+                        {{ inputRadio.baseWithTxt(id="radio2", txt="인디 타임라인", state="", name="radio1") }}
+                    </li>
+                    <li>
+                        {{ inputRadio.baseWithTxt(id="radio3", txt="인디 커뮤니티", state="", name="radio1") }}
+                    </li>
+                </ul>
+                <div class="option-select" style="border-top: 1px solid #eee;">
+                    <p  class="title">정렬</p>
+                    {{ inputSelect.base(txt="최신순") }}
+                    {{ inputSelect.base(txt="최신순", disabled="disabled") }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endmacro %}
+
+<!--
+{% macro sectionFeedExposure() %}
+<section class="section-contents">
+    <div class="section-header">
+        <p>피드 노출 설정</p>
+    </div>
+    <div class="section-body">
+        <ul class="lagarcy-module-list">
+            <li class="item-set">
+                <p>게시글</p>
+                {{ inputCheckbox.toggle() }}
+            </li>
+            <li class="item-set">
+                <p>OFFICIAL / GM 게시글</p>
+                {{ inputCheckbox.toggle(state="checked") }}
+            </li>
+            <li class="item-set">
+                <p>다른 유저 게시글</p>
+                {{ inputCheckbox.toggle() }}
+            </li>
+        </ul>
+    </div>
+</section>
+{% endmacro %}
+-->
+
+{% macro sectionFeedSubscribe(headerTxt, addClass) %}
+    <style>
+        .scroll {
+            position: relative;
+            max-height: 624px;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            const container = document.querySelectorAll('.scroll')
+            Array
+                .from(container)
+                .map(function (item) {
+                    const ps = new PerfectScrollbar(item, {
+                        wheelSpeed: 0.4,
+                        wheelPropagation: false,
+                        minScrollbarLength: 20
+                    })
+                })
+        }
+    </script>
+
+    <section class="section-contents">
+        <div class="section-header">
+            {% if headerTxt %}
+                <p>{{ headerTxt }}</p>
+            {% else %}
+                <p>내가 피드 받는 대상<span class="emphs">5</span></p>
+                <button class="btn-option">
+                    <span class="lagarcy-element-icon ic-set-s20-c999" style="width:20px;height:20px">ic-set-s20-c999</span></button>
+            {% endif %}
+        </div>
+        <!-- [D] 예제로 보여드리기 위한 scroll class명입니다. 위에 style값을 인라은으로 추가 해 주세요.-->
+        <div class="section-body scroll">
+            <ul class="lagarcy-module-subscribe">
+                <li>
+                    {% if isStoreMain %}
+                        {{ profile.game(imgPath="profile-game-01.png",titTxt="아라하 : 이은도의 저주",sizeClass="size-60") }}
+                    {% else %}
+                        {{ profile.game(imgPath="thumbnail-indie.png",titTxt="%게임명 노출% 최대 두줄까지만 노출하며, 이상이면 말줄임 게임명 노출% 최대 두줄까지만 노출하며, 이상이면 말줄임") }}
+                    {% endif %}
+                </li>
+                <li>
+                    {% if isStoreMain %}
+                        {{ profile.game(imgPath="profile-game-02.png",titTxt="프리 : 원",sizeClass="size-60") }}
+                    {% else %}
+                        {{ profile.game(imgPath="profile-game-02.png",titTxt="프리 : 원") }}
+                    {% endif %}
+                </li>
+                <li>
+                    {% if isStoreMain %}
+                        {{ profile.game(imgPath="profile-game-03.png",titTxt="모나드의 겨울",sizeClass="size-60") }}
+                    {% else %}
+                        {{ profile.game(imgPath="profile-game-03.png",titTxt="모나드의 겨울") }}
+                    {% endif %}
+                </li>
+                <li>
+                    {% if isStoreMain %}
+                        {{ profile.game(imgPath="profile-game-01.png",titTxt="아라하 : 이은도의 저주",sizeClass="size-60") }}
+                    {% else %}
+                        {{ profile.game(imgPath="thumbnail-indie.png",titTxt="%게임명 노출% 최대 두줄까지만 노출하며, 이상이면 말줄임 게임명 노출% 최대 두줄까지만 노출하며, 이상이면 말줄임") }}
+                    {% endif %}
+                </li>
+                <li>
+                    {% if isStoreMain %}
+                        {{ profile.game(imgPath="profile-game-02.png",titTxt="프리 : 원",sizeClass="size-60") }}
+                    {% else %}
+                        {{ profile.game(imgPath="profile-game-02.png",titTxt="프리 : 원") }}
+                    {% endif %}
+                </li>
+                <li>
+                    {% if isStoreMain %}
+                        {{ profile.game(imgPath="profile-game-03.png",titTxt="모나드의 겨울",sizeClass="size-60") }}
+                    {% else %}
+                        {{ profile.game(imgPath="profile-game-03.png",titTxt="모나드의 겨울") }}
+                    {% endif %}
+                </li>
+                <li>
+                    {% if isStoreMain %}
+                        {{ profile.game(imgPath="profile-game-01.png",titTxt="아라하 : 이은도의 저주",sizeClass="size-60") }}
+                    {% else %}
+                        {{ profile.game(imgPath="thumbnail-indie.png",titTxt="%게임명 노출% 최대 두줄까지만 노출하며, 이상이면 말줄임 게임명 노출% 최대 두줄까지만 노출하며, 이상이면 말줄임") }}
+                    {% endif %}
+                </li>
+                <li>
+                    {% if isStoreMain %}
+                        {{ profile.game(imgPath="profile-game-02.png",titTxt="프리 : 원",sizeClass="size-60") }}
+                    {% else %}
+                        {{ profile.game(imgPath="profile-game-02.png",titTxt="프리 : 원") }}
+                    {% endif %}
+                </li>
+                <li>
+                    {% if isStoreMain %}
+                        {{ profile.game(imgPath="profile-game-03.png",titTxt="모나드의 겨울",sizeClass="size-60") }}
+                    {% else %}
+                        {{ profile.game(imgPath="profile-game-03.png",titTxt="모나드의 겨울") }}
+                    {% endif %}
+                </li>
+                <li>
+                    {% if isStoreMain %}
+                        {{ profile.game(imgPath="profile-game-01.png",titTxt="아라하 : 이은도의 저주",sizeClass="size-60") }}
+                    {% else %}
+                        {{ profile.game(imgPath="thumbnail-indie.png",titTxt="%게임명 노출% 최대 두줄까지만 노출하며, 이상이면 말줄임 게임명 노출% 최대 두줄까지만 노출하며, 이상이면 말줄임") }}
+                    {% endif %}
+                </li>
+                <li>
+                    {% if isStoreMain %}
+                        {{ profile.game(imgPath="profile-game-02.png",titTxt="프리 : 원",sizeClass="size-60") }}
+                    {% else %}
+                        {{ profile.game(imgPath="profile-game-02.png",titTxt="프리 : 원") }}
+                    {% endif %}
+                </li>
+                <li>
+                    {% if isStoreMain %}
+                        {{ profile.game(imgPath="profile-game-03.png",titTxt="모나드의 겨울",sizeClass="size-60") }}
+                    {% else %}
+                        {{ profile.game(imgPath="profile-game-03.png",titTxt="모나드의 겨울") }}
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}
+
+{% macro sectionFeedSubscribeEmpty(headerTxt) %}
+    <section class="section-contents">
+        <div class="section-header">
+            {% if headerTxt %}
+                <p>{{ headerTxt }}</p>
+            {% else %}
+                <p>내가 피드 받는 대상</p>
+                <button class="btn-option">
+                    <span class="lagarcy-element-icon ic-set-s20-c999" style="width:20px;height:20px">ic-set-s20-c999</span></button>
+            {% endif %}
+        </div>
+        <div class="section-body">
+            <ul class="lagarcy-module-subscribe">
+                <li class="empty">
+                    <p>관심있는 게임의 새소식이나<br/>할인 뉴스를 받아보세요.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endmacro %}

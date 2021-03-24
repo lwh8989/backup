@@ -113,6 +113,10 @@
 }
 
 /* lagarcy dialog - vote */
+.lagarcy-module-vote .vote-content{
+    padding: 0 24px;
+    overflow-y: auto;
+}
 .lagarcy-module-vote .create-vote-item .submit-vote-cell-link{
     width: auto;
 }

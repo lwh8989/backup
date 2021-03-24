@@ -203,3 +203,18 @@
 .layout-lagarcy.layout-lagarcy-guide .guide-row > div {
     flex: 1;
 }
+
+.layout-lagarcy-lnb {
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    background-color: #fff;
+    z-index: 1000;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgb(170, 170, 170);
+    border-radius: 5px;
+}
+.layout-lagarcy-lnb a {
+    font-size: 14px;
+    color: inherit;
+}

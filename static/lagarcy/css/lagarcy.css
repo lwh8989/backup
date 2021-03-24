@@ -1,1 +1,338 @@
 /* [D] lagarcy */
+
+/* lagarcy dialog */
+/* lagarcy dialog - md */
+.lagarcy-module-dialog.lagarcy-dialog-size-md,
+.lagarcy-module-dialog-flex.lagarcy-dialog-size-md{
+    width: 380px;
+}
+
+/* lagarcy dialog - space */
+.lagarcy-dialog-body .lagarcy-dialog-content,
+.lagarcy-module-dialog.lagarcy-dialog-basic .lagarcy-dialog-header .header-tit,
+.lagarcy-module-dialog .lagarcy-module-myindie-form,
+.lagarcy-module-tab.tab-underline.video-attach .tab-content,
+.lagarcy-module-dialog-flex.type-comm,
+.lagarcy-module-dialog-flex > [class*='dialog-']{
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+/* lagarcy dialog - title */
+.lagarcy-dialog-body .lagarcy-dialog-confim-text.lagarcy-dialog-title-text{
+    font-size: 13px;
+}
+.lagarcy-dialog-body .lagarcy-dialog-content.header-tit{
+    padding-top: 40px;
+}
+/* lagarcy dialog - title none */
+.lagarcy-dialog-body .lagarcy-dialog-content.none-header-tit{
+    padding-top: 50px;
+}
+
+/* lagarcy dialog - list */
+.lagarcy-dialog-body .lagarcy-dialog-list-desc li{
+    letter-spacing: -1.2px;
+    word-spacing: -1px;
+}
+
+/* lagarcy dialog - form */
+.lagarcy-dialog-body .lagarcy-dialog-list-form .textarea-form-item textarea{
+    width: 100%;
+    box-sizing: border-box;
+}
+.lagarcy-dialog-body .lagarcy-dialog-list-form .image-upload-item-img{
+    margin-right: 12px;
+}
+.lagarcy-dialog-body .lagarcy-dialog-list-form .image-upload-desc{
+    letter-spacing: -0.5px;
+}
+
+/* lagarcy dialog - survery */
+.editor-survey .survey-body .tit{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.editor-survey .survey-body ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.lagarcy-module-dialog .lagarcy-module-myindie-form .myindie-item .editor-survey .survey-body ul li .lagarcy-element-radio .radio-input ~ label{
+    width: 174px;
+}
+.editor-survey .survey-body ul li .lagarcy-element-radio.image-img ~ .progress-status{
+    top: 24px;
+}
+.editor-survey .survey-body ul li .progress-bar{
+    margin-top: 12px;
+}
+.editor-survey .survey-body ul li .progress-status .status-percent::before{
+    margin: 0;
+}
+
+/* lagarcy dialog - tab */
+.lagarcy-element-icon.ic-character{
+    width: 100%;
+    background-position: 50% 50%;
+}
+.lagarcy-dialog-body .tab-content .profile-list{
+    margin-top: 0;
+}
+
+/* lagarcy dialog - img */
+.lagarcy-module-dialog .img-container,
+.lagarcy-dialog-body .cover-image{
+    width: 100%;
+    height: auto;
+}
+.lagarcy-module-dialog .img-container img,
+.lagarcy-dialog-body .cover-image img{
+    width: 100%;
+    max-width: 100%;
+}
+.lagarcy-dialog-body .cover-image{
+    margin: 0;
+    padding: 24px 24px 0;
+}
+
+/* lagarcy dialog - img list */
+.lagarcy-dialog-body .img-list li,
+.lagarcy-dialog-body .img-list li:nth-child(5n),
+.lagarcy-dialog-body .profile-list li,
+.lagarcy-dialog-body .profile-list li:nth-child(6n){
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+.lagarcy-dialog-body .img-list li::after{
+    width: 100%;
+    height: 100%;
+}
+.lagarcy-dialog-body .profile-list{
+    margin: 24px 12px 0;
+    padding: 0;
+}
+
+/* lagarcy dialog - vote */
+.lagarcy-module-vote .create-vote-item .submit-vote-cell-link{
+    width: auto;
+}
+.lagarcy-module-vote .create-vote-item .submit-vote-cell-link .input-wrap{
+    width: 100%;
+    padding-right: 2px;
+}
+.lagarcy-module-vote .create-vote-item .lagarcy-element-icon.ic-close-round{
+    margin-right: 2px;
+}
+.lagarcy-module-vote .vote-option-input .input-base{
+    width: 150px;
+}
+
+.lagarcy-dialog-body .lagarcy-dialog-list .list-item .ic-close-round{
+    right: 0;
+}
+
+/* lagarcy dialog - file */
+.lagarcy-dialog-body .lagarcy-dialog-list .list-item .group .group-subject.group-load-state{
+    width: 240px;
+}
+
+.lagarcy-dialog-body .lagarcy-dialog-inspect-text.lagarcy-dialog-title-text{
+    font-size: 18px;
+}
+.lagarcy-dialog-confim-text,
+.lagarcy-dialog-body .toast-header-tit .lagarcy-dialog-confirm-text{
+    font-size: 16px;
+}
+
+/* lagarcy dialog - table  */
+.lagarcy-module-table.table-list tbody tr td .lagarcy-element-radio{
+    margin: 0;
+    display: block;
+    padding-left: 10px;
+    text-align: left;
+}
+
+/* lagarcy dialog - profile */
+.lagarcy-dialog-body .profile-upload .load-wrap{
+    width: 100%;
+    padding: 0 14px;
+}
+
+/* lagarcy dialog - slide range */
+.lagarcy-dialog-body .cover-sizing{
+    width: auto;
+    margin: 32px 14px 0;
+}
+.slide-range-container .range-custom{
+    padding-top: 4px;
+}
+.slide-range-container:before,
+.slide-range-container:after{
+    display: none;
+}
+
+/* lagarcy dialog - checkbox */
+.list-checkbox{
+    width: calc(50% - 4px);
+}
+.list-checkbox,
+.lagarcy-module-dialog-flex .article-feed .feed-contents .list-checkbox:nth-of-type(3n){
+    margin: 2px;
+}
+
+/* lagarcy dialog - list */
+.lagarcy-dialog-body .lagarcy-dialog-list-desc li{
+    position: relative;
+    padding-left: 8px;
+}
+.lagarcy-dialog-body .lagarcy-dialog-list-desc li:before{
+    content: "∙";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.lagarcy-dialog-body .lagarcy-dialog-list .list-item .group .group-col{
+    padding: 0 30px 0 10px;
+}
+.lagarcy-dialog-body .lagarcy-dialog-list .list-item .group .group-col.align-right{
+    padding: 0 10px;
+}
+
+/* lagarcy dialog - pagination */
+.lagarcy-pagination .lagarcy-pagination-num{
+    padding: 0 5px;
+}
+
+/* lagarcy dialog - table */
+.lagarcy-module-ranking.ranking-list tbody tr td img{
+    margin-right: 2px;
+}
+
+/* lagarcy dialog - text */
+.lagarcy-dialog-body .lagarcy-dialog-content.visible .lagarcy-dialog-text{
+    letter-spacing: -1.2px;
+}
+
+/* lagarcy dialog - btn */
+.lagarcy-module-dialog-flex .article-feed .lagarcy-element-page-btn{
+    z-index: 0;
+}
+
+.lagarcy-dialog-game-box .lagarcy-element-radio-item .lagarcy-element-radio{
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+.lagarcy-dialog-game-box .lagarcy-element-radio-item .lagarcy-element-radio .radio-input ~ label{
+    overflow: visible;
+    height: auto;
+    padding: 0 20px 0 30px;
+    font-size: 13px;
+}
+
+.lagarcy-module-dialog-flex .article-direction .tit{
+    position: relative;
+    padding-left: 20px;
+}
+.lagarcy-module-dialog-flex .article-direction .tit .list-item{
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+.lagarcy-module-dialog-flex .article-direction .desc{
+    padding: 8px 24px 0;
+}
+
+
+/* lagarcy dialog - sm */
+.lagarcy-module-dialog.lagarcy-dialog-size-sm,
+.lagarcy-module-dialog-flex.lagarcy-dialog-size-sm{
+    width: 310px;
+}
+
+.lagarcy-dialog-size-sm .lagarcy-module-profile .profile-name {
+    font-size: 11px;
+}
+.lagarcy-dialog-size-sm .lagarcy-dialog-list .list-item .group .group-subject .profile-thumb{
+    margin-right: 2px;
+}
+
+.lagarcy-dialog-size-sm .lagarcy-dialog-body .lagarcy-dialog-confim-text.lagarcy-dialog-title-text{
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+
+/* lagarcy dialog - sm - survey */
+.lagarcy-dialog-size-sm .editor-survey .survey-body ul li .progress-status{
+    right: 10px;
+    font-size: 11px;
+    text-align: right;
+    line-height: 1.2;
+}
+.lagarcy-dialog-size-sm .editor-survey .survey-body ul li .progress-status .status-percent{
+    display: block;
+}
+.lagarcy-dialog-size-sm .editor-survey .survey-header p{
+    padding-left: 48px;
+}
+.lagarcy-dialog-size-sm .editor-survey .survey-header .lagarcy-element-icon.ic-survey{
+    left: 8px;
+}
+.lagarcy-dialog-size-sm .editor-survey .survey-header{
+    padding: 15px 5px
+}
+.lagarcy-dialog-size-sm .lagarcy-element-icon.ic-survey{
+    width: 38px;
+    height: 38px;
+}
+
+/* lagarcy dialog - sm - size  */
+.lagarcy-dialog-size-sm .lagarcy-dialog-body .lagarcy-dialog-content,
+.lagarcy-dialog-size-sm.lagarcy-dialog-basic .lagarcy-dialog-footer .footer-contents .desc,
+.lagarcy-dialog-size-sm.lagarcy-dialog-basic .link-info p{
+    font-size: 12px;
+}
+
+.lagarcy-dialog-size-sm .lagarcy-dialog-body .lagarcy-dialog-list .list-item .group .group-subject.group-load-state{
+    width: 190px;
+    font-size: 11px;
+}
+.lagarcy-dialog-size-sm .group-load-state .lagarcy-element-icon{
+    margin-left: 28px !important;
+}
+
+/* lagarcy dialog - sm - img list */
+.lagarcy-dialog-size-sm .lagarcy-dialog-body .img-list li,
+.lagarcy-dialog-size-sm .lagarcy-dialog-body .img-list li:nth-child(5n),
+.lagarcy-dialog-size-sm .lagarcy-dialog-body .profile-list li,
+.lagarcy-dialog-size-sm .lagarcy-dialog-body .profile-list li:nth-child(6n){
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+.lagarcy-dialog-size-sm .lagarcy-dialog-body .img-list li{
+    width: 92px;
+    height: 92px;
+}
+
+/* lagarcy dialog - sm - btn */
+.lagarcy-dialog-size-sm .lagarcy-element-btn.btn-select.size-32 .btn-txt{
+    font-size: 12px;
+}
+
+/* lagarcy dialog - sm - table */
+.lagarcy-dialog-size-sm .lagarcy-module-table.table-list thead tr th{
+    font-size: 12px;
+    letter-spacing: -0.5px;
+}
+.lagarcy-dialog-size-sm .lagarcy-module-ranking.ranking-list tbody tr td{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.lagarcy-dialog-size-sm .lagarcy-module-ranking.ranking-list tbody tr td:first-of-type{
+    padding-left: 24px;
+}
+
+.lagarcy-dialog-size-sm .lagarcy-dialog-body .profile-list li{
+    width: 70px;
+    height: 70px;
+}

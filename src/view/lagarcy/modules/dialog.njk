@@ -9,9 +9,9 @@
 {% import "src/view/lagarcy/modules/table.njk" as table %}
 <!-- DIALOG -->
 
-{% macro common(isDimmed, isCentered, titTxt, dialogTxt, gameTit, dialogSize, btnTxt1, btnTxt2, oneBtn, isRestriction, unAuthenticated, hasRecomm) %}
+{% macro common(isDimmed, isCentered, titTxt, dialogTxt, gameTit, dialogSize, dialogSizeClass, btnTxt1, btnTxt2, oneBtn, isRestriction, unAuthenticated, hasRecomm) %}
     {% if isDimmed %}
-        <div class="lagarcy-module-dialog-flex type-comm"{% if dialogSize %} style="{{ dialogSize }}"{% endif %}>
+        <div class="lagarcy-module-dialog-flex type-comm {{ dialogSizeClass }}"{% if dialogSize %} style="{{ dialogSize }}"{% endif %}>
             <div class="lagarcy-dialog-contents">
                 {% if titTxt %}
                     {{ title.base(h4=titTxt,alignCenter=true) }}
@@ -492,8 +492,8 @@
                     </dl>
                 {% elif declaration %}
                     <p class="item-notice">
-                신고하기는 하루에 20회만 가능합니다.
-            </p>
+                        신고하기는 하루에 20회만 가능합니다.
+                    </p>
                     <div class="declaration-box">
                         <dl class="lagarcy-dialog-game-head">
                             <dt>신고 대상자</dt>
@@ -513,12 +513,14 @@
         </div>
         {% if selectType%}
             <div class="article-direction">
-                <p class="tit">1. 인디 게임에 대한 나만의 자유로운 생각을 타임라인에 남겨보세요!</p>
+                <p class="tit">
+                    <span class="list-item">1.</span> 인디 게임에 대한 나만의 자유로운 생각을 타임라인에 남겨보세요!</p>
                 <p class="desc">인디 타임라인에 쓴 글도 타임라인에 자동 게시됩니다.</p>
                 {# {{ btn.withIconText(shapeClass='btn-small-round no-icon', sizeClass='size-28', colorClass='btn-gray-line', txt='STOVE 타임라인 바로가기') }} #}
             </div>
             <div class="article-direction">
-                <p class="tit">2. 내가 쓴 글은 내 타임라인을 방문한 유저들이 볼 수 있어요.</p>
+                <p class="tit">
+                    <span class="list-item">2.</span> 내가 쓴 글은 내 타임라인을 방문한 유저들이 볼 수 있어요.</p>
                 <p class="desc">작성한 글은 ‘전체 공개’로 기본 설정되며, ‘나만 보기’로 설정을 변경하여 다른 유저에게 노출되지 않게 할 수 있습니다.</p>
                 {# {{ btn.withIconText(shapeClass='btn-small-round no-icon', sizeClass='size-28', colorClass='btn-gray-line', txt='공개범위 설정 바로가기') }} #}
             </div>

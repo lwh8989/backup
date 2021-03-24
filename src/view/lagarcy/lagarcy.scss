@@ -7,6 +7,7 @@
 .layout-lagarcy.layout-lagarcy-guide h1 {
     position: relative;
     padding-bottom: 16px;
+    margin-top: 40px;
     margin-bottom: 16px;
     font-size: 24px;
     font-weight: 700;
@@ -17,26 +18,29 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 600px;
+    width: 100%;
     height: 1px;
     background: #ccc;
 }
 .layout-lagarcy.layout-lagarcy-guide h2 {
     float: left;
-    width: 160px;
+    width: 300px;
     padding: 16px;
+    padding-right: 30px;
     font-size: 18px;
+    letter-spacing: -1px;
     font-weight: 700;
     color: #222;
     line-height: 24px;
+    text-align: right;
 }
-/* .layout-lagarcy.layout-lagarcy-guide h3 {
+.layout-lagarcy.layout-lagarcy-guide h3 {
     padding: 24px 0 8px;
     font-size: 14px;
     font-weight: 700;
     color: #666;
     line-height: 18px;
-  } */
+}
 .layout-lagarcy.layout-lagarcy-guide .guide-content {
     padding-top: 40px;
 }
@@ -165,8 +169,6 @@
     height: 800px;
 }
 
-.layout-lagarcy.layout-lagarcy-guide.gnb {
-}
 .layout-lagarcy.layout-lagarcy-guide.gnb h1 {
     position: relative;
     padding-bottom: 0;
@@ -193,4 +195,11 @@
     font-weight: inherit;
     color: inherit;
     line-height: inherit;
+}
+
+.layout-lagarcy.layout-lagarcy-guide .guide-row {
+    display: flex;
+}
+.layout-lagarcy.layout-lagarcy-guide .guide-row > div {
+    flex: 1;
 }

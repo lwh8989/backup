@@ -1,5 +1,5 @@
-/*pagination*/
-.pagination {
+/*lagarcy-pagination*/
+.lagarcy-pagination {
   display: table;
   padding: 14px 0;
   width: 100%;
@@ -7,44 +7,51 @@
   font-size: 14px;
   text-align: center;
 }
-.pagination .lagarcy-element-icon {
+.lagarcy-pagination .lagarcy-element-icon {
   vertical-align: middle;
   margin: 0 2px;
 }
-.pagination .pagination-num {
+.lagarcy-pagination .lagarcy-pagination-num {
   display: inline-block;
   padding: 0 14px;
   margin-top: -2px;
   vertical-align: middle;
 }
-.pagination .pagination-num .num-first span {
+.lagarcy-pagination .lagarcy-pagination-num .num-first span {
   padding-left: 4px;
 }
-.pagination .pagination-num .num-last span {
+.lagarcy-pagination .lagarcy-pagination-num .num-last span {
   padding-right: 4px;
 }
-/*
-  .pagination a,
-  .pagination i.active {
-    display: inline-block;
-    padding: 3px 4px 4px;
-  }
-*/
-.pagination .lagarcy-element-icon::after {
+
+.lagarcy-pagination a,
+.lagarcy-pagination i {
+  display: inline-block;
+  padding: 3px 4px 4px;
+}
+.lagarcy-pagination a.active,
+.lagarcy-pagination i.active {
+  min-width: 24px;
+  color: #ff5000;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.lagarcy-pagination .lagarcy-element-icon::after {
   content: none !important;
 }
-.pagination a {
+.lagarcy-pagination a {
   display: inline-block;
   min-width: 24px;
   color: #333;
   border-radius: 18px;
   position: relative;
 }
-.pagination a span {
+.lagarcy-pagination a span {
   position: inherit;
   z-index: 1;
 }
-.pagination a:hover::after {
+.lagarcy-pagination a:hover::after {
   content: '';
   width: 24px;
   height: 24px;
@@ -57,7 +64,7 @@
   transform: translate(-50%, -50%);
   z-index: 0;
 }
-.pagination a.num-first:hover::after {
+.lagarcy-pagination a.num-first:hover::after {
   content: '';
   width: 24px;
   height: 24px;
@@ -70,7 +77,7 @@
   transform: translate(0, -50%);
   z-index: 0;
 }
-.pagination a.num-last:hover::after {
+.lagarcy-pagination a.num-last:hover::after {
   content: '';
   width: 24px;
   height: 24px;
@@ -84,15 +91,9 @@
   transform: translate(0, -50%);
   z-index: 0;
 }
-.pagination a.active {
-  min-width: 24px;
-  color: #ff5000;
-  font-weight: 700;
-  pointer-events: none;
-}
 
-/* btnMore-pagination */
-.btn-more-pagination {
+/* btnMore-lagarcy-pagination */
+.btn-more-lagarcy-pagination {
   display: table;
   padding: 16px 0;
   width: 100%;
@@ -100,13 +101,13 @@
   font-size: 14px;
   text-align: center;
 }
-.btn-more-pagination .lagarcy-element-icon.ic-arrow-down-16 {
+.btn-more-lagarcy-pagination .lagarcy-element-icon.ic-arrow-down-16 {
   margin-right: 0;
   margin-left: 4px;
 }
 
-/* loading-pagination  */
-.loaging-pagination {
+/* loading-lagarcy-pagination  */
+.loaging-lagarcy-pagination {
   display: table;
   padding: 14px 0;
   width: 100%;
@@ -130,22 +131,22 @@
   }
 }
 
-/* calendar-pagination */
-.calendar-pagination {
+/* calendar-lagarcy-pagination */
+.calendar-lagarcy-pagination {
   display: table;
   width: 100%;
   line-height: normal;
   font-size: 14px;
   text-align: center;
 }
-.calendar-pagination .dissable {
+.calendar-lagarcy-pagination .dissable {
   background-color: #efefef;
   border-radius: 50%;
   cursor: pointer;
   pointer-events: none;
   opacity: 0.4;
 }
-.calendar-pagination .calendar {
+.calendar-lagarcy-pagination .calendar {
   display: inline-block;
   height: 20px;
   line-height: 20px;
@@ -153,7 +154,7 @@
   vertical-align: top;
   outline: none;
 }
-.calendar-pagination .calendar input {
+.calendar-lagarcy-pagination .calendar input {
   width: 80px;
   height: 20px;
   font-size: 15px;
@@ -163,15 +164,15 @@
   text-align: center;
   cursor: pointer;
 }
-.calendar-pagination .calendar input::placeholder {
+.calendar-lagarcy-pagination .calendar input::placeholder {
   color: #333;
 }
-.calendar-pagination .calendar .lagarcy-element-icon {
+.calendar-lagarcy-pagination .calendar .lagarcy-element-icon {
   margin: 2px 0 0 0;
 }
-.calendar-pagination .lagarcy-element-icon.ic-direction-left-s20-c666:hover {
+.calendar-lagarcy-pagination .lagarcy-element-icon.ic-direction-left-s20-c666:hover {
   background: url(../../images/svgnew/ic-direction-left-s20-cddd.svg) no-repeat;
 }
-.calendar-pagination .lagarcy-element-icon.ic-direction-right-s20-c666:hover {
+.calendar-lagarcy-pagination .lagarcy-element-icon.ic-direction-right-s20-c666:hover {
   background: url(../../images/svgnew/ic-direction-right-s20-cddd.svg) no-repeat;
 }

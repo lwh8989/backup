@@ -32,6 +32,18 @@ $bg-trans-btn-hover: transparent;
 $bg-trans-btn-active: transparent;
 $bg-trans-btn-focus: transparent;
 
+// _color.scss 에 컬러 추가되면 button-ghost-white 변수 삭제예정  
+$ui-button-ghost-white-bg-enabled: transparent;
+$ui-button-ghost-white-border-enabled: #fff;
+$ui-button-ghost-white-bg-hover: rgba(#000000, $alpha: 0.05);
+$ui-button-ghost-white-border-hover: #fff;
+$ui-button-ghost-white-bg-pressed: rgba(#000000, $alpha: 0.1);
+$ui-button-ghost-white-border-pressed: #fff;
+$ui-button-ghost-white-bg-focused: rgba(#000000, $alpha: 0.08);
+$ui-button-ghost-white-border-focused: #fff;
+$ui-button-ghost-white-bg-disabled: transparent;
+$ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
+
 .element-btn {
   position: relative;
   display: inline-flex;
@@ -57,48 +69,47 @@ $bg-trans-btn-focus: transparent;
   }*/
   &.disabled,
   &:disabled {
-    background: #eaeaea!important;
-    border-color: #eaeaea!important;
     color: #cacaca!important;
   }
-  &.disabled:focus{
+  &.disabled:focus,
+  &:disabled:focus{
     box-shadow: none!important;  
   }
 }
 .element-btn.size-xlarge.only-icon .stove-icon,
-.element-btn.size-large.only-icon .stove-icon,
-.element-btn.size-xlarge.with-icon .stove-icon,
-.element-btn.size-large.with-icon .stove-icon{
-    width: 18px;
-    height: 18px;
+.element-btn.size-xlarge.with-icon .stove-icon{
+    width: 24px;
+    height: 24px;
 }
 .element-btn.size-xlarge.only-icon .stove-icon::before,
-.element-btn.size-large.only-icon .stove-icon::before,
-.element-btn.size-xlarge.with-icon .stove-icon::before,
-.element-btn.size-large.with-icon .stove-icon::before{
-    font-size: 20px;
+.element-btn.size-xlarge.with-icon .stove-icon::before{
+    font-size: 24px;
 }
+.element-btn.size-large.only-icon .stove-icon,
+.element-btn.size-large.with-icon .stove-icon,
 .element-btn.size-medium.only-icon .stove-icon,
-.element-btn.size-small.only-icon .stove-icon,
 .element-btn.size-medium.with-icon .stove-icon,
+.element-btn.size-small.only-icon .stove-icon,
 .element-btn.size-small.with-icon .stove-icon{
-    width: 14px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
 }
+.element-btn.size-large.only-icon .stove-icon::before,
+.element-btn.size-large.with-icon .stove-icon::before,
 .element-btn.size-medium.only-icon .stove-icon::before,
-.element-btn.size-small.only-icon .stove-icon::before,
 .element-btn.size-medium.with-icon .stove-icon::before,
+.element-btn.size-small.only-icon .stove-icon::before,
 .element-btn.size-small.with-icon .stove-icon::before{
-    font-size: 15px;
+    font-size: 20px;
 }
 .element-btn.size-xsmall.only-icon .stove-icon,
 .element-btn.size-xsmall.with-icon .stove-icon{
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
 }
 .element-btn.size-xsmall.only-icon .stove-icon::before,
 .element-btn.size-xsmall.with-icon .stove-icon::before{
-    font-size: 10px;
+    font-size: 16px;
 }
 .element-btn .stove-icon {
     display: inline-block;
@@ -120,9 +131,6 @@ $bg-trans-btn-focus: transparent;
 .element-btn.bg-gray .btn-txt {
     color: #3a3a3a;
 }
-.element-btn.bg-white .btn-txt {
-    color: #3a3a3a;
-}
 .element-btn.bg-ghost .btn-txt {
     color: #3a3a3a;
 }
@@ -131,10 +139,6 @@ $bg-trans-btn-focus: transparent;
 }
 .element-btn.bg-gray.disabled .btn-txt,
 .element-btn.bg-gray:disabled .btn-txt {
-    color: #cacaca;
-}
-.element-btn.bg-white.disabled .btn-txt,
-.element-btn.bg-white:disabled .btn-txt {
     color: #cacaca;
 }
 
@@ -163,24 +167,34 @@ $bg-trans-btn-focus: transparent;
     height: 48px;
 }
 .element-btn.size-medium {
-    height: 40px;
+    height: 44px;
 }
 .element-btn.size-small {
-    height: 36px;
+    height: 40px;
 }
 .element-btn.size-xsmall {
+    height: 36px;
+}
+.element-btn.size-chips32 {
     height: 32px;
 }
-.element-btn.size-xlarge .btn-txt,
-.element-btn.size-large .btn-txt {
-    font-size: 15px;
-    line-height: 24px;
+.element-btn.size-chips28 {
+    height: 28px;
 }
+.element-btn.size-xlarge .btn-txt,
+.element-btn.size-large .btn-txt,
 .element-btn.size-medium .btn-txt,
-.element-btn.size-small .btn-txt,
-.element-btn.size-xsmall .btn-txt {
+.element-btn.size-small .btn-txt {
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.38px;
+}
+.element-btn.size-xsmall .btn-txt,
+.element-btn.size-chips32 .btn-txt,
+.element-btn.size-chips28 .btn-txt {
     font-size: 13px;
-    line-height: 20px;
+    line-height: 19px;
+    letter-spacing: -0.33px;
 }
 
 /* only icon */
@@ -194,15 +208,15 @@ $bg-trans-btn-focus: transparent;
 }
 .element-btn.size-medium.only-icon{
     padding: 0;
-    min-width: 40px;
+    min-width: 44px;
 }
 .element-btn.size-small.only-icon{
     padding: 0;
-    min-width: 36px;
+    min-width: 40px;
 }
 .element-btn.size-xsmall.only-icon{
     padding: 0;
-    min-width: 32px;
+    min-width: 36px;
 }
 .element-btn.only-icon .stove-icon{
     padding-left: 0;
@@ -210,28 +224,44 @@ $bg-trans-btn-focus: transparent;
 
 /* with icon */
 .element-btn.size-xlarge.with-icon{
-    padding: 0 23px; 
+    padding: 0 36px; 
 }
 .element-btn.size-large.with-icon{
-    padding: 0 23px; 
+    padding: 0 32px; 
 }
 .element-btn.size-medium.with-icon{
-    padding: 0 21px; 
+    padding: 0 28px; 
 }
 .element-btn.size-small.with-icon{
-    padding: 0 17px; 
+    padding: 0 24px; 
 }
 .element-btn.size-xsmall.with-icon{
-   padding: 0 12px; 
+   padding: 0 20px; 
 }
-.element-btn.size-xlarge .stove-icon ~ .btn-txt,
-.element-btn.size-large .stove-icon  ~ .btn-txt{
-    padding-left: 11px;
+.element-btn.size-xsmall.with-icon{
+    padding: 0 16px; 
+ }
+ .element-btn.size-xsmall.with-icon{
+    padding: 0 10px; 
+ }
+ .element-btn.size-xlarge .stove-icon ~ .btn-txt,
+.element-btn.size-large .stove-icon  ~ .btn-txt,
+.element-btn.size-medium .stove-icon ~ .btn-txt{
+    padding-left: 8px;
 }
-.element-btn.size-medium .stove-icon ~ .btn-txt,
+.element-btn.size-xlarge .btn-txt ~ .stove-icon,
+.element-btn.size-large .btn-txt ~ .stove-icon,
+.element-btn.size-medium .btn-txt ~ .stove-icon{
+    margin-left: 8px;
+}
 .element-btn.size-small .stove-icon  ~ .btn-txt,
 .element-btn.size-xsmall .stove-icon ~ .btn-txt{
-    padding-left: 7px;
+    padding-left: 4px;
+}
+.element-btn.size-medium .btn-txt ~ .stove-icon,
+.element-btn.size-small .btn-txt ~ .stove-icon,
+.element-btn.size-xsmall .btn-txt ~ .stove-icon{
+    margin-left: 7px;
 }
 
 /* color */
@@ -248,8 +278,13 @@ $bg-trans-btn-focus: transparent;
     }
     &:focus{
         outline: none;
-        border: 2px solid $ui-button-primary-pressed;
+        border: 2px solid $ui-button-primary-enabled;
         box-shadow: inset 0 0 0 2px #fff;
+    }
+    &:disabled,
+    &.disabled{
+        background: $ui-button-primary-disabled;
+        border-color: $ui-button-primary-disabled;
     }
 }
 .element-btn.bg-secondary{
@@ -265,13 +300,19 @@ $bg-trans-btn-focus: transparent;
     }
     &:focus{
         outline: none;
-        border: 2px solid $ui-button-secondary-pressed;
+        border: 2px solid $ui-button-secondary-enabled;
         box-shadow: inset 0 0 0 2px #fff;
+    }
+    &:disabled,
+    &.disabled{
+        background: $ui-button-secondary-disabled;
+        border-color: $ui-button-secondary-disabled;
     }    
 }
 .element-btn.bg-gray{
     background-color: $ui-button-gray-enabled;
     border: 2px solid $ui-button-gray-enabled;
+    color:#3a3a3a;
     &:hover{
         background-color: $ui-button-gray-hover;    
         border: 2px solid $ui-button-gray-hover;
@@ -285,6 +326,11 @@ $bg-trans-btn-focus: transparent;
         background-color: $ui-button-gray-hover;    
         border: 2px solid $ui-button-gray-pressed;
         box-shadow: inset 0 0 0 2px #fff;
+    }
+    &:disabled,
+    &.disabled{
+        background: $ui-button-gray-disabled;
+        border-color: $ui-button-gray-disabled;
     }    
 }
 .element-btn.bg-inverse{
@@ -303,12 +349,18 @@ $bg-trans-btn-focus: transparent;
         outline: none;
         background-color: $ui-button-inverse-bg-focused;    
         border: 2px solid $ui-button-inverse-border-focused;
-        box-shadow: inset 0 0 0 1px #000;
+        box-shadow: inset 0 0 0 1px #bfbfbf;
+    }
+    &:disabled,
+    &.disabled{
+        background: $ui-button-inverse-disabled;
+        border-color: $ui-button-inverse-disabled;
     }    
 }
 .element-btn.bg-ghost{
     background-color: $ui-button-ghost-bg-enabled;
     border: 1px solid $ui-button-ghost-border-enabled;
+    color: #3a3a3a;
     &:hover{
         background-color: $ui-button-ghost-bg-hover;    
         border: 1px solid $ui-button-ghost-border-hover;
@@ -322,8 +374,48 @@ $bg-trans-btn-focus: transparent;
         background-color: $ui-button-ghost-bg-focused;    
         border: 1px solid $ui-button-ghost-border-focused;
         box-shadow: inset 0 0 0 1px #000;
-    }    
+    }
+    &:disabled,
+    &.disabled{
+        /* transparent #e0e0e0 tortkd 색상 확인
+        background: $ui-button-ghost-bg-disabled;
+        border-color: $ui-button-ghost-border-disabled;
+        */
+        background: #eaeaea;
+        border-color: #eaeaea;
+        & .btn-txt{
+            color: #cacaca;
+        }
+    }
 }
-
-
-    
+.element-btn.bg-ghost-white{
+    background-color: $ui-button-ghost-white-bg-enabled;
+    border: 1px solid $ui-button-ghost-white-border-enabled;
+    color: #fff;
+    & .btn-txt{
+        color: #fff;
+    }
+    &:hover{
+        background-color: $ui-button-ghost-white-bg-hover;    
+        border: 1px solid $ui-button-ghost-white-border-hover;
+    }
+    &:active{
+        background-color: $ui-button-ghost-white-bg-pressed;    
+        border: 1px solid $ui-button-ghost-white-border-pressed;
+    }
+    &:focus{
+        outline: none;
+        background-color: $ui-button-ghost-white-bg-focused;    
+        border: 1px solid $ui-button-ghost-white-border-focused;
+        box-shadow: inset 0 0 0 1px #fff;
+    }
+    &:disabled,
+    &.disabled{
+        background-color: $ui-button-ghost-white-bg-disabled;    
+        border: 1px solid $ui-button-ghost-white-border-disabled;
+        & .btn-txt{
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+        
+}

@@ -1,0 +1,125 @@
+/* TITLEs */
+.lagarcy-element-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.lagarcy-element-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  line-height: 30px;
+  padding: 0;
+  margin: 0;
+}
+.lagarcy-element-title h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  line-height: 24px;
+  padding: 0;
+  margin: 0;
+}
+.lagarcy-element-title h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+}
+.lagarcy-element-title p {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+.lagarcy-element-title > h2,
+.lagarcy-element-title > h3,
+.lagarcy-element-title > h4,
+.lagarcy-element-title > h5,
+.lagarcy-element-title > h6,
+.lagarcy-element-title > p {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+}
+.lagarcy-element-title.align-center > h2,
+.lagarcy-element-title.align-center > h3,
+.lagarcy-element-title.align-center > h4,
+.lagarcy-element-title.align-center > h5,
+.lagarcy-element-title.align-center > h6,
+.lagarcy-element-title.align-center > p {
+  justify-content: center;
+}
+.lagarcy-element-title > h2 > .lagarcy-element-icon[class*='-right'],
+.lagarcy-element-title > h3 > .lagarcy-element-icon[class*='-right'],
+.lagarcy-element-title > h4 > .lagarcy-element-icon[class*='-right'],
+.lagarcy-element-title > h5 > .lagarcy-element-icon[class*='-right'],
+.lagarcy-element-title > h6 > .lagarcy-element-icon[class*='-right'],
+.lagarcy-element-title > p > .lagarcy-element-icon[class*='-right'] {
+  margin-left: 8px;
+}
+.lagarcy-element-title > h2 > .lagarcy-element-icon[class*='-back'],
+.lagarcy-element-title > h3 > .lagarcy-element-icon[class*='-back'] {
+  margin-right: 12px;
+}
+.lagarcy-element-title .num {
+  color: #5076e6;
+  font-weight: 700;
+}
+.lagarcy-element-title .item-inner {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+}
+.lagarcy-element-title .item-inner .item-txt {
+  font-size: 14px;
+  color: #666;
+  line-height: 20px;
+  font-weight: 300;
+}
+.lagarcy-element-title .item-inner .lagarcy-element-btn + .item-txt {
+  margin-left: 12px;
+}
+.lagarcy-element-title .item-inner .item-txt span {
+  position: relative;
+  padding: 0 12px;
+}
+.lagarcy-element-title .item-inner .item-txt span + span:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* QA TYPE */
+.lagarcy-element-title.type-qa {
+  display: flex;
+  align-items: center;
+  padding-left: 52px;
+  height: 40px;
+}
+.lagarcy-element-title.type-qa:before {
+  content: 'Q';
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #5d89e0;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.lagarcy-element-title .item-right .lagarcy-element-btn.size-24 {
+  padding: 0 12px;
+  font-weight: 300;
+}

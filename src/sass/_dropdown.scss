@@ -1,1 +1,25 @@
-/* dropdown 공민수 님 작업 부탁드립니다. */
+@import "~/src/sass/mixin";
+@import "~/src/sass/space";
+
+.module-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    overflow-y: auto;
+    background-color: #fff;
+    padding: $stds-spacing-200 $stds-spacing-400;
+    border-radius: 4px;
+
+    &-button {
+        @include flex($y: center);
+        width: 100%;
+        height: 40px;
+
+        &:hover {
+            background-color: $black-alpha5;
+            color: $ui-text-02;
+        }
+    }
+}

@@ -1,0 +1,4 @@
+{% macro base(class, txt, width, height) %}
+<span class="lagarcy-element-icon {{ class }}"
+      style="{% if width %}width:{{ width }};{% endif %}{% if height %}height:{{ height }}{% endif %}">{{ txt }}</span>
+{% endmacro %}

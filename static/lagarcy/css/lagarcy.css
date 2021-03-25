@@ -247,6 +247,10 @@
     padding: 8px 24px 0;
 }
 
+.lagarcy-module-dialog.lagarcy-dialog-basic .file-upload-caution .empty{
+    width: 90%;
+}
+
 
 /* lagarcy dialog - sm */
 .lagarcy-module-dialog.lagarcy-dialog-size-sm,

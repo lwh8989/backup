@@ -25,9 +25,6 @@
     <input id="partials" type="radio" name="category">
     <label for="partials" data-filter="[data-value=partials]">Partial</label>
 
-  <input id="fonts" type="radio" name="category">
-    <label for="fonts" data-filter="[data-value=fonts]">Font</label>
-
     <input id="layout" type="radio" name="category">
     <label for="layout" data-filter="[data-value=layout]">Layout</label>
   </div>
@@ -149,7 +146,7 @@
       var listHtml = "";
 
       for (var item of data) {
-        filter = item.path.split('/')[1];
+        filter = item.path.split('/')[3];
         listHtml += templateHtml.replace(/@filter/g, filter)
                                 .replace(/@url/g, item.path)
                                 .replace(/@title/g, item.name)

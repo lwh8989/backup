@@ -16,17 +16,20 @@
     <input id="all" type="radio" name="category" checked>
     <label for="all" data-filter="*">All</label>
 
-    <input id="elements" type="radio" name="category">
-    <label for="elements" data-filter="[data-value=elements]">Element</label>
-
-    <input id="modules" type="radio" name="category">
-    <label for="modules" data-filter="[data-value=modules]">Module</label>
-
-    <input id="partials" type="radio" name="category">
-    <label for="partials" data-filter="[data-value=partials]">Partial</label>
+    <input id="core" type="radio" name="category">
+    <label for="core" data-filter="[data-value=core]">Core</label>
 
     <input id="layout" type="radio" name="category">
     <label for="layout" data-filter="[data-value=layout]">Layout</label>
+
+    <input id="element" type="radio" name="category">
+    <label for="element" data-filter="[data-value=element]">Element</label>
+
+    <input id="module" type="radio" name="category">
+    <label for="module" data-filter="[data-value=module]">Module</label>
+
+    <input id="partial" type="radio" name="category">
+    <label for="partial" data-filter="[data-value=partial]">Partial</label>
   </div>
   <ul class="page-list grid">
   </ul>
@@ -60,53 +63,43 @@
 
     var data = [
       {
-        name: 'Typography',
+        name: 'Core Typography',
         path: './src/view/core/font/font.html',
         developer: '이원호'
       },
       {
-        name: 'Color',
+        name: 'Core Color',
         path: './src/view/core/color/color.html',
         developer: '이원호'
       },
       {
-        name: 'Space',
+        name: 'Core Space',
         path: './src/view/core/space/space.html',
         developer: '이원호'
       },
       {
-        name: 'Font Icon',
+        name: 'Core Font Icon',
         path: './src/view/core/icon/icon.html',
         developer: '이원호'
       },
       {
-        name: 'Motion',
+        name: 'Core Motion',
         path: './src/view/core/motion/motion.html',
         developer: '이원호'
       },
       {
-        name: 'Radius',
+        name: 'Core Radius',
         path: './src/view/core/radius/radius.html',
         developer: '이원호'
       },
       {
-        name: 'Shadow',
+        name: 'Core Shadow',
         path: './src/view/core/shadow/shadow.html',
         developer: '이원호'
       },
       {
-        name: 'Button',
-        path: './src/element/button/button.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Ratio',
+        name: 'Core Ratio',
         path: './src/view/core/ratio/ratio.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Lagarcy',
-        path: './src/view/lagarcy/lagarcy.html',
         developer: '이원호'
       },
       {
@@ -137,6 +130,31 @@
       {
         name: 'Layout Side Rail',
         path: './src/view/layout/side-rail/side-rail.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Element Button',
+        path: './src/view/element/button/button.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Module Footer',
+        path: './src/view/module/footer/footer.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Module Pagination',
+        path: './src/view/module/pagination/pagination.html',
+        developer: '이원호'
+      },
+      {
+        name: 'Lagarcy',
+        path: './src/view/lagarcy/lagarcy.html',
+        developer: '이원호'
+      }
+      {
+        name: 'Lagarcy',
+        path: './src/view/lagarcy/lagarcy.html',
         developer: '이원호'
       }
     ];

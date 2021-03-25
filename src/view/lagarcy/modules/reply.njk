@@ -1,0 +1,1503 @@
+{% import "src/view/lagarcy/elements/profile.njk" as profile %}
+{% import "src/view/lagarcy/elements/icon.njk" as icon %}
+{% import "src/view/lagarcy/elements/btn.njk" as btn %}
+
+{% macro basic() %}
+    <div class="wrapper-reply reply-basic">
+        <div class="reply-head">
+            <p class="head-tit">댓글 123</p>
+            <!-- [D] 상태값은 다음과 같습니다. is-active is-disable -->
+            <button class="reply-bell">{{ icon.base(class="ic-bell-s22-caaa", txt="ic-bell-s22-caaa", width="22px", height="22px") }}</button>
+            <button class="reply-bell is-active">{{ icon.base(class="ic-bell-s22-caaa", txt="ic-bell-s22-caaa", width="22px", height="22px") }}</button>
+            <button class="reply-bell is-disable">{{ icon.base(class="ic-bell-s22-caaa", txt="ic-bell-s22-caaa", width="22px", height="22px") }}</button>
+            <div class="dropdown">
+                <button class="dropdown-toggle" type="button">등록 순<span class="lagarcy-element-icon ic-arrow-down-white" style="">접기</span></button>
+                <ul class="lagarcy-module-dropdown">
+                    <li>
+                        <button type="button" class="lagarcy-element-btn btn-square">
+                            <span class="btn-txt">신고</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="lagarcy-element-btn btn-square">
+                            <span class="btn-txt">신고</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="reply-list">
+            <!-- .lagarcy-module-reply.best = 베스트 개시물 -->
+            <li class="lagarcy-module-reply best">
+                <div class="reply-area">
+                    <div class="reply-info">
+                        <!-- lagarcy-module-profile -->
+                        {{ profile.basic() }}
+                        <span class="writer">작성자</span>
+                        <span class="time-date">
+                        2019.05.25 12:01
+                        <span class="lagarcy-module-tooltip">
+                                <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="reply-txt">
+                        <div class="fr-view">
+                            <p class=" "><span class="txt-best">BEST!</span> RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+                        <p class=" "><a href="#" class="user-tag">또카니</a> RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+                    <p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                        <p>에디터에서 보여지는 모듈 가이드 입니다. Start!</p>
+                        <!-- PC Mobile 동일합니다. S -->
+                        <p>
+                            <span class="img-wrap">
+                        <img src="https://dummyimage.com/250x375/0099ff/fff" alt="image">
+                    </span>
+                    <span class="img-wrap">
+                        <img src="https://dummyimage.com/250x600/0099ff/fff" alt="image">
+                    </span>
+                    <span class="img-wrap">
+                        <img src="https://dummyimage.com/600x250/0099ff/fff" alt="image">
+                    </span>
+                </p>
+                <p>
+                    <span class="img-wrap">
+                        <img src="https://dummyimage.com/250x600/0099ff/fff" alt="image">
+                    </span>
+                </p>
+                <p>
+                    <span class="img-wrap">
+                        <img src="https://dummyimage.com/600x250/0099ff/fff" alt="image">
+                    </span>
+                </p>
+                <p class="video-wrap">
+                    <span class="fr-video fr-dvi">
+                        <iframe src="https://www.youtube.com/embed/qMZtvvONN6s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </span>
+                </p>
+                <p class="video-wrap">
+                    <span class="fr-video fr-dvi">
+                        <iframe src="https://www.youtube.com/embed/qMZtvvONN6s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </span>
+                </p>
+                <p>
+                    <span class="img-wrap">
+                        <img src="https://dummyimage.com/250x375/0099ff/fff" alt="image">
+                    </span>
+                            요놈 이상해
+                            <span class="img-wrap">
+                        <img src="https://dummyimage.com/250x375/0099ff/fff" alt="image">
+                    </span>
+                    <span class="img-wrap">
+                        <img src="https://dummyimage.com/250x375/0099ff/fff" alt="image">
+                    </span>
+                </p>
+                <p>
+                    <img class="emoji-wrap" src="https://dummyimage.com/100x100/0099ff/fff" alt="emoji">
+                    <img class="emoji-wrap" src="https://dummyimage.com/100x100/0099ff/fff" alt="emoji">
+                            요놈 이상해
+                            <img class="emoji-wrap" src="https://dummyimage.com/100x100/0099ff/fff" alt="emoji">
+                            요놈 이상해
+                        </p>
+            </div>
+        </div>
+        <div class="reply-tool">
+            <div class="tool-btn">
+                {{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}
+                <button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+                    <span class="btn-txt">
+                        <span class="lagarcy-element-icon ic-reply"></span>999</span>
+                </button>
+                <button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+                    <span class="btn-txt">취소</span></button>
+            </div>
+            <div class="tool-more">
+                <button class="more-action">
+                    {{ icon.base(class="ic-fill-option-vertical-s20-caaa", txt="ic-fill-option-vertical-s20-caaa", width="20px", height="20px") }}
+                </button>
+                <ul class="lagarcy-module-dropdown">
+                    <li>
+                        <button type="button" class="lagarcy-element-btn btn-square size-40">
+                            <span class="btn-txt">수정</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="lagarcy-element-btn btn-square size-40">
+                            <span class="btn-txt">삭제</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="reply-write">
+            <!-- 글쓰기 입력 영역 -->
+            <div class="lagarcy-module-write">
+                <div class="write-textarea" contenteditable="true" data-text="댓글을 입력해 주세요"></div>
+                <div class="lagarcy-module-editor">
+                    <div class="write-setting-area">
+                        <div class="write-setting-section">
+                            <div class="setting-section-header">
+                                <p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p>
+                                <p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
+                                <span class="byte">
+                                    <span class="byte-count">119KB</span>
+                                    <span class="byte-total">/ 1024MB</span>
+                                </span>
+                            </div>
+                            <div class="setting-section-body">
+                                <div class="attach-image">
+                                    <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                    <button class="image-area">
+                                        <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                    </button>
+                                    <button class="image-close">
+                                        <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                    </button>
+                                </div>
+                                <div class="attach-image">
+                                    <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                    <button class="image-area">
+                                        <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                    </button>
+                                    <button class="image-close">
+                                        <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                    </button>
+                                </div>
+                                <div class="attach-image">
+                                    <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                    <button class="image-area">
+                                        <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                    </button>
+                                    <button class="image-close">
+                                        <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                    </button>
+                                </div>
+                                <div class="attach-image">
+                                    <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                    <button class="image-area">
+                                        <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                    </button>
+                                    <button class="image-close">
+                                        <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                    </button>
+                                </div>
+                                <div class="attach-image">
+                                    <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                    <button class="image-area">
+                                        <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                    </button>
+                                    <button class="image-close">
+                                        <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="write-tool">
+                    <div class="tool-action">
+                        <div class="btn-contents">
+                            <button class="btn-write btn-emoji">
+                                <span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span>
+                            </button>
+                            <button class="btn-write btn-image">
+                                <span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span>
+                            </button>
+                            <button class="btn-write btn-video">
+                                <span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tool-btn">
+                        <div class="byte">
+                            <span class="byte-count">1000&#09;</span>
+                            <span class="byte-total">/&#09;1000</span>
+                        </div>
+                        <button class="lagarcy-element-btn btn-square btn-white size-44" style="display: none;">
+                            <span class="btn-txt">취소</span>
+                        </button>
+                        <button class="lagarcy-element-btn btn-square btn-black size-44">
+                            <span class="btn-txt">등록</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- 글쓰기 로그인 안했을 시 -->
+            <div class="lagarcy-module-write empty">
+                <div class="write-empty">
+                    <p class="empty-txt">
+                        <a href="#">댓글을 입력하려면 <em>로그인</em> 해주세요.</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+<li class="lagarcy-module-reply best">
+    <div class="reply-area">
+        <div class="reply-info">
+            <!-- lagarcy-module-profile -->
+            {{ profile.basic() }}
+            <span class="writer">작성자</span>
+            <span class="time-date">
+                        2019.05.25 12:01
+                        <span class="lagarcy-module-tooltip">
+                    <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+                </span>
+            </span>
+        </div>
+        <div class="reply-txt">
+            <div class="  fr-view">
+                <p class=" "><span class="txt-best">BEST!</span> RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+        </div>
+    </div>
+    <div class="reply-tool">
+        <div class="tool-btn">
+            {{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}
+            <button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+                <span class="btn-txt">
+                    <span class="lagarcy-element-icon ic-reply"></span>999</span>
+            </button>
+            <button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+                <span class="btn-txt">댓글달기</span>
+            </button>
+        </div>
+        <div class="tool-more">
+            <button class="more-action">
+                {{ icon.base(class="ic-fill-option-vertical-s20-caaa", txt="ic-fill-option-vertical-s20-caaa", width="20px", height="20px") }}
+            </button>
+            <ul class="lagarcy-module-dropdown">
+                <li>
+                    <button type="button" class="lagarcy-element-btn btn-square size-40">
+                        <span class="btn-txt">수정</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="lagarcy-element-btn btn-square size-40">
+                        <span class="btn-txt">삭제</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</li>
+<!-- [D] 배스트 작성자 글 수정 화면 -->
+<li class="lagarcy-module-reply best reply-edit">
+<div class="reply-area">
+    <div class="reply-write">
+        <div class="reply-info">
+            <!-- lagarcy-module-profile -->
+            {{ profile.detail() }}
+            <span class="writer">작성자</span>
+            <span class="time-date">
+                            2019.05.25 12:01
+                            <span class="lagarcy-module-tooltip">
+                    <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+                </span>
+            </span>
+        </div>
+        <div class="lagarcy-module-write">
+            <div class="write-textarea reply-edit" contenteditable="true" data-text="게시물 수정 시 이렇게 노출됩니다. .reply-edit을 추가 해 주세요."></div>
+            <div class="lagarcy-module-editor">
+                <div class="write-setting-area">
+                    <div class="write-setting-section">
+                        <div class="setting-section-header">
+                            <p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p>
+                            <p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
+                            <span class="byte">
+                                <span class="byte-count">119KB</span>
+                                <span class="byte-total">/ 1024MB</span>
+                            </span>
+                        </div>
+                        <div class="setting-section-body">
+                            <div class="attach-image">
+                                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                <button class="image-area">
+                                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                </button>
+                                <button class="image-close">
+                                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                </button>
+                            </div>
+                            <div class="attach-image">
+                                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                <button class="image-area">
+                                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                </button>
+                                <button class="image-close">
+                                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                </button>
+                            </div>
+                            <div class="attach-image">
+                                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                <button class="image-area">
+                                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                </button>
+                                <button class="image-close">
+                                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                </button>
+                            </div>
+                            <div class="attach-image">
+                                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                <button class="image-area">
+                                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                </button>
+                                <button class="image-close">
+                                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                </button>
+                            </div>
+                            <div class="attach-image">
+                                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                <button class="image-area">
+                                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                </button>
+                                <button class="image-close">
+                                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="write-tool">
+                <div class="tool-action">
+                    <div class="btn-contents">
+                        <button class="btn-write btn-emoji">
+                            <span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span>
+                        </button>
+                        <button class="btn-write btn-image">
+                            <span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span>
+                        </button>
+                        <button class="btn-write btn-video">
+                            <span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="tool-btn">
+                    <div class="byte">
+                        <span class="byte-count">1000&#09;</span>
+                        <span class="byte-total">/&#09;1000</span>
+                    </div>
+                    <button class="lagarcy-element-btn btn-square btn-white size-44">
+                        <span class="btn-txt">취소</span>
+                    </button>
+                    <button class="lagarcy-element-btn btn-square btn-black size-44">
+                        <span class="btn-txt">등록</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</li>
+<!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 -->
+<li class="lagarcy-module-reply empty best">
+<div class="reply-area">
+    <div class="reply-empty">
+        <span class="lagarcy-element-icon ic-caution" style="">ic-caution</span>
+        <p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p>
+    </div>
+    <!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. -->
+    <div class="reply-tool empty">
+        <div class="tool-btn empty">
+            <button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+                <span class="btn-txt">
+                    <span class="lagarcy-element-icon ic-reply"></span>999</span>
+            </button>
+        </div>
+    </div>
+</div>
+</li>
+<li class="lagarcy-module-reply best">
+<div class="reply-area">
+    <div class="reply-info">
+        <!-- lagarcy-module-profile -->
+        {{ profile.basic() }}
+        <span class="writer">작성자</span>
+        <span class="time-date">
+                        2019.05.25 12:01
+                        <span class="lagarcy-module-tooltip">
+                <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+            </span>
+        </span>
+    </div>
+    <div class="reply-txt">
+        <div class="  fr-view">
+            <p class=" "><span class="txt-best">BEST!</span> RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+    </div>
+</div>
+<div class="reply-tool">
+    <div class="tool-btn">
+        {{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}
+        <button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+            <span class="btn-txt">
+                <span class="lagarcy-element-icon ic-reply"></span>999</span>
+        </button>
+        <button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+            <span class="btn-txt">댓글달기</span>
+        </button>
+    </div>
+    <div class="tool-more">
+        <button class="more-action">
+            {{ icon.base(class="ic-fill-option-vertical-s20-caaa", txt="ic-fill-option-vertical-s20-caaa", width="20px", height="20px") }}
+        </button>
+        <ul class="lagarcy-module-dropdown">
+            <li>
+                <button type="button" class="lagarcy-element-btn btn-square size-40">
+                    <span class="btn-txt">수정</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="lagarcy-element-btn btn-square size-40">
+                    <span class="btn-txt">삭제</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</li>
+<!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 -->
+<li class="lagarcy-module-reply empty">
+<div class="reply-area">
+<div class="reply-empty">
+    <span class="lagarcy-element-icon ic-caution" style="">ic-caution</span>
+    <p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p>
+</div>
+<!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. -->
+<div class="reply-tool empty">
+    <div class="tool-btn empty">
+        <button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+            <span class="btn-txt">
+                <span class="lagarcy-element-icon ic-reply"></span>999</span>
+        </button>
+    </div>
+</div>
+</div>
+<div class="reply-area reply">
+<button class="reply-more">이전 댓글 보기<span class="lagarcy-element-icon ic-arrow-down" style="">아래</span></button>
+<ul class="reply-list">
+    <li class="lagarcy-module-reply">
+        <div class="reply-area">
+            <div class="reply-info">
+                <!-- lagarcy-module-profile -->
+                {{ profile.basic() }}
+                <span class="writer">작성자</span>
+                <span class="time-date">
+                                    2019.05.25 12:01
+                                    <span class="lagarcy-module-tooltip">
+                        <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+                    </span>
+                </span>
+            </div>
+            <div class="reply-txt">
+                <div class="  fr-view">
+                    <p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+                <p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+            <p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                                    <p class=" "><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"></p>
+        </div>
+    </div>
+    <div class="reply-tool">
+        <div class="tool-btn">
+            {{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}
+            <button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+                <span class="btn-txt">
+                    <span class="lagarcy-element-icon ic-reply"></span>999</span>
+            </button>
+            <button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+                <span class="btn-txt">취소</span>
+            </button>
+        </div>
+        <div class="tool-more">
+            <button class="more-action">
+                {{ icon.base(class="ic-fill-option-vertical-s20-caaa", txt="ic-fill-option-vertical-s20-caaa", width="20px", height="20px") }}
+            </button>
+            <ul class="lagarcy-module-dropdown">
+                <li>
+                    <button type="button" class="lagarcy-element-btn btn-square size-40">
+                        <span class="btn-txt">수정</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="lagarcy-element-btn btn-square size-40">
+                        <span class="btn-txt">삭제</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="reply-write">
+        <!-- 글쓰기 입력 영역 -->
+        <div class="lagarcy-module-write">
+            <div class="write-textarea" contenteditable="true" data-text="댓글을 입력해 주세요"></div>
+            <div class="lagarcy-module-editor">
+                <div class="write-setting-area">
+                    <div class="write-setting-section">
+                        <div class="setting-section-header">
+                            <p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p>
+                            <p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
+                            <span class="byte">
+                                <span class="byte-count">119KB</span>
+                                <span class="byte-total">/ 1024MB</span>
+                            </span>
+                        </div>
+                        <div class="setting-section-body">
+                            <div class="attach-image">
+                                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                <button class="image-area">
+                                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                </button>
+                                <button class="image-close">
+                                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                </button>
+                            </div>
+                            <div class="attach-image">
+                                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                <button class="image-area">
+                                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                </button>
+                                <button class="image-close">
+                                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                </button>
+                            </div>
+                            <div class="attach-image">
+                                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                <button class="image-area">
+                                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                </button>
+                                <button class="image-close">
+                                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                </button>
+                            </div>
+                            <div class="attach-image">
+                                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                <button class="image-area">
+                                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                </button>
+                                <button class="image-close">
+                                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                </button>
+                            </div>
+                            <div class="attach-image">
+                                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                                <button class="image-area">
+                                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                                </button>
+                                <button class="image-close">
+                                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="write-tool">
+                <div class="tool-action">
+                    <div class="btn-contents">
+                        <button class="btn-write btn-emoji">
+                            <span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span>
+                        </button>
+                        <button class="btn-write btn-image">
+                            <span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span>
+                        </button>
+                        <button class="btn-write btn-video">
+                            <span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="tool-btn">
+                    <div class="byte">
+                        <span class="byte-count">1000&#09;</span>
+                        <span class="byte-total">/&#09;1000</span>
+                    </div>
+                    <button class="lagarcy-element-btn btn-square btn-white size-44" style="display: none;">
+                        <span class="btn-txt">취소</span>
+                    </button>
+                    <button class="lagarcy-element-btn btn-square btn-black size-44">
+                        <span class="btn-txt">등록</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 글쓰기 로그인 안했을 시 -->
+        <div class="lagarcy-module-write empty">
+            <div class="write-empty">
+                <p class="empty-txt">
+                    <a href="#">댓글을 입력하려면 <em>로그인</em> 해주세요.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</li>
+<!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 -->
+<li class="lagarcy-module-reply empty">
+<div class="reply-area">
+    <div class="reply-empty">
+        <span class="lagarcy-element-icon ic-caution" style="">ic-caution</span>
+        <p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p>
+    </div>
+    <!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. -->
+    <div class="reply-tool empty">
+        <div class="tool-btn empty">
+            <button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+                <span class="btn-txt">
+                    <span class="lagarcy-element-icon ic-reply"></span>999</span>
+            </button>
+        </div>
+    </div>
+</div>
+</li>
+<li class="lagarcy-module-reply">
+<div class="reply-area">
+    <div class="reply-info">
+        <!-- lagarcy-module-profile -->
+        {{ profile.basic() }}
+        <span class="writer">작성자</span>
+        <span class="time-date">
+                                    2019.05.25 12:01
+                                    <span class="lagarcy-module-tooltip">
+                <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+            </span>
+        </span>
+    </div>
+    <div class="reply-txt">
+        <div class="  fr-view">
+            <p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+        <p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+    <p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                                    <p class=" "><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"></p>
+</div>
+</div>
+<div class="reply-tool">
+<div class="tool-btn">
+    {{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}
+    <button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+        <span class="btn-txt">
+            <span class="lagarcy-element-icon ic-reply"></span>999</span>
+    </button>
+    <button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+        <span class="btn-txt">댓글달기</span>
+    </button>
+</div>
+<div class="tool-more">
+    <button class="more-action">
+        <span class="lagarcy-element-icon ic-fill-option-vertical-s20-caaa" style="width:20px;height:20px">ic-fill-option-vertical-s20-caaa</span>
+    </button>
+</div>
+</div>
+</div>
+</li>
+<!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 -->
+<li class="lagarcy-module-reply empty">
+<div class="reply-area">
+<div class="reply-empty">
+<span class="lagarcy-element-icon ic-caution" style="">ic-caution</span>
+<p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p>
+</div>
+<!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. -->
+<div class="reply-tool empty">
+<div class="tool-btn empty">
+    <button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+        <span class="btn-txt">
+            <span class="lagarcy-element-icon ic-reply"></span>999</span>
+    </button>
+</div>
+</div>
+</div>
+</li>
+<!-- [D] 글 수정 화면 -->
+<li class="lagarcy-module-reply reply-edit">
+<div class="reply-area">
+<div class="reply-write">
+<div class="lagarcy-module-write">
+    <div class="write-textarea reply-edit" contenteditable="true" data-text="게시물 수정 시 이렇게 노출됩니다. .reply-edit을 추가 해 주세요."></div>
+    <div class="lagarcy-module-editor">
+        <div class="write-setting-area">
+            <div class="write-setting-section">
+                <div class="setting-section-header">
+                    <p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p>
+                    <p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
+                    <span class="byte">
+                        <span class="byte-count">119KB</span>
+                        <span class="byte-total">/ 1024MB</span>
+                    </span>
+                </div>
+                <div class="setting-section-body">
+                    <div class="attach-image">
+                        <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                        <button class="image-area">
+                            <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                        </button>
+                        <button class="image-close">
+                            <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                        </button>
+                    </div>
+                    <div class="attach-image">
+                        <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                        <button class="image-area">
+                            <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                        </button>
+                        <button class="image-close">
+                            <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                        </button>
+                    </div>
+                    <div class="attach-image">
+                        <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                        <button class="image-area">
+                            <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                        </button>
+                        <button class="image-close">
+                            <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                        </button>
+                    </div>
+                    <div class="attach-image">
+                        <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                        <button class="image-area">
+                            <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                        </button>
+                        <button class="image-close">
+                            <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                        </button>
+                    </div>
+                    <div class="attach-image">
+                        <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                        <button class="image-area">
+                            <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                        </button>
+                        <button class="image-close">
+                            <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="write-tool">
+        <div class="tool-action">
+            <div class="btn-contents">
+                <button class="btn-write btn-emoji">
+                    <span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span>
+                </button>
+                <button class="btn-write btn-image">
+                    <span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span>
+                </button>
+                <button class="btn-write btn-video">
+                    <span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span>
+                </button>
+            </div>
+        </div>
+        <div class="tool-btn">
+            <div class="byte">
+                <span class="byte-count">1000&#09;</span>
+                <span class="byte-total">/&#09;1000</span>
+            </div>
+            <button class="lagarcy-element-btn btn-square btn-white size-44">
+                <span class="btn-txt">취소</span>
+            </button>
+            <button class="lagarcy-element-btn btn-square btn-black size-44">
+                <span class="btn-txt">등록</span>
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="lagarcy-module-reply empty">
+<div class="reply-area">
+<div class="reply-empty">
+<span class="lagarcy-element-icon ic-caution" style="">ic-caution</span>
+<p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p>
+</div>
+<!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. -->
+<div class="reply-tool empty">
+<div class="tool-btn empty">
+<button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+<span class="btn-txt">
+<span class="lagarcy-element-icon ic-reply"></span>999</span>
+</button>
+</div>
+</div>
+</div>
+<div class="reply-area reply">
+<button class="reply-more">이전 댓글 보기<span class="lagarcy-element-icon ic-arrow-down" style="">아래</span></button>
+<ul class="reply-list">
+<li class="lagarcy-module-reply">
+<div class="reply-area">
+<div class="reply-info">
+<!-- lagarcy-module-profile -->
+{{ profile.basic() }}
+<span class="writer">작성자</span>
+<span class="time-date">
+                                    2019.05.25 12:01
+                                    <span class="lagarcy-module-tooltip">
+        <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+    </span>
+</span>
+</div>
+<div class="reply-txt">
+<div class="  fr-view">
+    <p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+<p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+<p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                                    <p class=" "><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"></p>
+</div>
+</div>
+<div class="reply-tool">
+<div class="tool-btn">
+{{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}
+<button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+<span class="btn-txt">
+    <span class="lagarcy-element-icon ic-reply"></span>999</span>
+</button>
+<button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+<span class="btn-txt">취소</span>
+</button>
+</div>
+<div class="tool-more">
+<button class="more-action">
+{{ icon.base(class="ic-fill-option-vertical-s20-caaa", txt="ic-fill-option-vertical-s20-caaa", width="20px", height="20px") }}
+</button>
+<ul class="lagarcy-module-dropdown">
+<li>
+    <button type="button" class="lagarcy-element-btn btn-square size-40">
+        <span class="btn-txt">수정</span>
+    </button>
+</li>
+<li>
+    <button type="button" class="lagarcy-element-btn btn-square size-40">
+        <span class="btn-txt">삭제</span>
+    </button>
+</li>
+</ul>
+</div>
+</div>
+<div class="reply-write">
+<!-- 글쓰기 입력 영역 -->
+<div class="lagarcy-module-write">
+<div class="write-textarea" contenteditable="true" data-text="댓글을 입력해 주세요"></div>
+<div class="lagarcy-module-editor">
+<div class="write-setting-area">
+    <div class="write-setting-section">
+        <div class="setting-section-header">
+            <p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p>
+            <p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
+            <span class="byte">
+                <span class="byte-count">119KB</span>
+                <span class="byte-total">/ 1024MB</span>
+            </span>
+        </div>
+        <div class="setting-section-body">
+            <div class="attach-image">
+                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                <button class="image-area">
+                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                </button>
+                <button class="image-close">
+                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                </button>
+            </div>
+            <div class="attach-image">
+                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                <button class="image-area">
+                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                </button>
+                <button class="image-close">
+                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                </button>
+            </div>
+            <div class="attach-image">
+                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                <button class="image-area">
+                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                </button>
+                <button class="image-close">
+                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                </button>
+            </div>
+            <div class="attach-image">
+                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                <button class="image-area">
+                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                </button>
+                <button class="image-close">
+                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                </button>
+            </div>
+            <div class="attach-image">
+                <span class="lagarcy-element-icon ic-select" style="">pick</span>
+                <button class="image-area">
+                    <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+                </button>
+                <button class="image-close">
+                    <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="write-tool">
+<div class="tool-action">
+    <div class="btn-contents">
+        <button class="btn-write btn-emoji">
+            <span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span>
+        </button>
+        <button class="btn-write btn-image">
+            <span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span>
+        </button>
+        <button class="btn-write btn-video">
+            <span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span>
+        </button>
+    </div>
+</div>
+<div class="tool-btn">
+    <div class="byte">
+        <span class="byte-count">1000&#09;</span>
+        <span class="byte-total">/&#09;1000</span>
+    </div>
+    <button class="lagarcy-element-btn btn-square btn-white size-44" style="display: none;">
+        <span class="btn-txt">취소</span>
+    </button>
+    <button class="lagarcy-element-btn btn-square btn-black size-44">
+        <span class="btn-txt">등록</span>
+    </button>
+</div>
+</div>
+</div>
+<!-- 글쓰기 로그인 안했을 시 -->
+<div class="lagarcy-module-write empty">
+<div class="write-empty">
+<p class="empty-txt">
+    <a href="#">댓글을 입력하려면 <em>로그인</em> 해주세요.</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 -->
+<li class="lagarcy-module-reply empty">
+<div class="reply-area">
+<div class="reply-empty">
+<span class="lagarcy-element-icon ic-caution" style="">ic-caution</span>
+<p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p>
+</div>
+<!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. -->
+<div class="reply-tool empty">
+<div class="tool-btn empty">
+<button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+<span class="btn-txt">
+    <span class="lagarcy-element-icon ic-reply"></span>999</span>
+</button>
+</div>
+</div>
+</div>
+</li>
+<li class="lagarcy-module-reply">
+<div class="reply-area">
+<div class="reply-info">
+<!-- lagarcy-module-profile -->
+{{ profile.basic() }}
+<span class="writer">작성자</span>
+<span class="time-date">
+                                    2019.05.25 12:01
+                                    <span class="lagarcy-module-tooltip">
+<span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+</span>
+</span>
+</div>
+<div class="reply-txt">
+<div class="  fr-view">
+<p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+<p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+<p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                                    <p class=" "><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"></p>
+</div>
+</div>
+<div class="reply-tool">
+<div class="tool-btn">
+{{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}
+<button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+<span class="btn-txt">
+<span class="lagarcy-element-icon ic-reply"></span>999</span>
+</button>
+<button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+<span class="btn-txt">댓글달기</span>
+</button>
+</div>
+<div class="tool-more">
+<button class="more-action">
+<span class="lagarcy-element-icon ic-fill-option-vertical-s20-caaa" style="width:20px;height:20px">ic-fill-option-vertical-s20-caaa</span>
+</button>
+</div>
+</div>
+</div>
+</li>
+<!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 -->
+<li class="lagarcy-module-reply empty">
+<div class="reply-area">
+<div class="reply-empty">
+<span class="lagarcy-element-icon ic-caution" style="">ic-caution</span>
+<p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p>
+</div>
+<!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. -->
+<div class="reply-tool empty">
+<div class="tool-btn empty">
+<button class="lagarcy-element-btn btn-square btn-gray-line size-24 ">
+<span class="btn-txt">
+<span class="lagarcy-element-icon ic-reply"></span>999</span>
+</button>
+</div>
+</div>
+</div>
+</li>
+<!-- [D] 글 수정 화면 -->
+<li class="lagarcy-module-reply reply-edit">
+<div class="reply-area">
+<div class="reply-write">
+<div class="lagarcy-module-write">
+<div class="write-textarea reply-edit" contenteditable="true" data-text="게시물 수정 시 이렇게 노출됩니다. .reply-edit을 추가 해 주세요."></div>
+<div class="lagarcy-module-editor">
+<div class="write-setting-area">
+<div class="write-setting-section">
+<div class="setting-section-header">
+    <p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p>
+    <p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
+    <span class="byte">
+        <span class="byte-count">119KB</span>
+        <span class="byte-total">/ 1024MB</span>
+    </span>
+</div>
+<div class="setting-section-body">
+    <div class="attach-image">
+        <span class="lagarcy-element-icon ic-select" style="">pick</span>
+        <button class="image-area">
+            <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+        </button>
+        <button class="image-close">
+            <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+        </button>
+    </div>
+    <div class="attach-image">
+        <span class="lagarcy-element-icon ic-select" style="">pick</span>
+        <button class="image-area">
+            <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+        </button>
+        <button class="image-close">
+            <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+        </button>
+    </div>
+    <div class="attach-image">
+        <span class="lagarcy-element-icon ic-select" style="">pick</span>
+        <button class="image-area">
+            <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+        </button>
+        <button class="image-close">
+            <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+        </button>
+    </div>
+    <div class="attach-image">
+        <span class="lagarcy-element-icon ic-select" style="">pick</span>
+        <button class="image-area">
+            <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+        </button>
+        <button class="image-close">
+            <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+        </button>
+    </div>
+    <div class="attach-image">
+        <span class="lagarcy-element-icon ic-select" style="">pick</span>
+        <button class="image-area">
+            <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+        </button>
+        <button class="image-close">
+            <span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+        </button>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div class="write-tool">
+<div class="tool-action">
+<div class="btn-contents">
+<button class="btn-write btn-emoji">
+    <span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span>
+</button>
+<button class="btn-write btn-image">
+    <span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span>
+</button>
+<button class="btn-write btn-video">
+    <span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span>
+</button>
+</div>
+</div>
+<div class="tool-btn">
+<div class="byte">
+<span class="byte-count">1000&#09;</span>
+<span class="byte-total">/&#09;1000</span>
+</div>
+<button class="lagarcy-element-btn btn-square btn-white size-44">
+<span class="btn-txt">취소</span>
+</button>
+<button class="lagarcy-element-btn btn-square btn-black size-44">
+<span class="btn-txt">등록</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul></div> </li> <li class="lagarcy-module-reply"><div class="reply-area">
+<div class="reply-info">
+<!-- lagarcy-module-profile -->
+{{ profile.basic() }}
+<span class="writer">작성자</span>
+<span class="time-date">
+                        2019.05.25 12:01
+                        <span class="lagarcy-module-tooltip">
+<span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+</span>
+</span>
+</div>
+<div class="reply-txt">
+<div class="  fr-view">
+<p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+<p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+<p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                        <p class=" ">
+<span class="txt-best">BEST!</span> RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p>
+<p class=" "><a href="#" class="user-tag">또카니</a> RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                        <p>에디터에서 보여지는 모듈 가이드 입니다. Start!</p>
+                        <!-- PC Mobile 동일합니다. S -->
+                        <p>
+                            <span class="img-wrap">
+<img src="https://dummyimage.com/250x375/0099ff/fff" alt="image"></span><span class="img-wrap">
+<img src="https://dummyimage.com/250x600/0099ff/fff" alt="image"></span><span class="img-wrap">
+<img src="https://dummyimage.com/600x250/0099ff/fff" alt="image"></span> </p> <p><span class="img-wrap">
+<img src="https://dummyimage.com/250x600/0099ff/fff" alt="image"></span> </p> <p><span class="img-wrap">
+<img src="https://dummyimage.com/600x250/0099ff/fff" alt="image"></span> </p> <p class="video-wrap"><span class="fr-video fr-dvi">
+<iframe src="https://www.youtube.com/embed/qMZtvvONN6s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></span> </p> <p class="video-wrap"><span class="fr-video fr-dvi">
+<iframe src="https://www.youtube.com/embed/qMZtvvONN6s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></span> </p> <p><span class="img-wrap">
+<img src="https://dummyimage.com/250x375/0099ff/fff" alt="image"></span>
+                            요놈 이상해
+                            <span class="img-wrap">
+<img src="https://dummyimage.com/250x375/0099ff/fff" alt="image"></span><span class="img-wrap">
+<img src="https://dummyimage.com/250x375/0099ff/fff" alt="image"></span> </p> <p><img class="emoji-wrap" src="https://dummyimage.com/100x100/0099ff/fff" alt="emoji"><img class="emoji-wrap" src="https://dummyimage.com/100x100/0099ff/fff" alt="emoji">
+                            요놈 이상해
+                            <img class="emoji-wrap" src="https://dummyimage.com/100x100/0099ff/fff" alt="emoji">
+                            요놈 이상해
+                        </p></div></div><div class="reply-tool"><div class="tool-btn"> {{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }} <button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt">
+<span class="lagarcy-element-icon ic-reply"></span>999</span> </button> <button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt">취소</span> </button></div><div class="tool-more"> <button class="more-action">{{ icon.base(class="ic-fill-option-vertical-s20-caaa", txt="ic-fill-option-vertical-s20-caaa", width="20px", height="20px") }} </button> <ul class="lagarcy-module-dropdown"><li>
+<button type="button" class="lagarcy-element-btn btn-square size-40">
+<span class="btn-txt">수정</span>
+</button></li><li>
+<button type="button" class="lagarcy-element-btn btn-square size-40">
+<span class="btn-txt">삭제</span>
+</button></li> </ul></div></div><div class="reply-write"><!-- 글쓰기 입력 영역 --><div class="lagarcy-module-write"> <div class="write-textarea" contenteditable="true" data-text="댓글을 입력해 주세요"></div> <div class="lagarcy-module-editor"><div class="write-setting-area">
+<div class="write-setting-section">
+<div class="setting-section-header">
+<p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p>
+<p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
+<span class="byte">
+<span class="byte-count">119KB</span>
+<span class="byte-total">/ 1024MB</span>
+</span>
+</div>
+<div class="setting-section-body">
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+</div>
+</div></div> </div> <div class="write-tool"><div class="tool-action">
+<div class="btn-contents">
+<button class="btn-write btn-emoji">
+<span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span>
+</button>
+<button class="btn-write btn-image">
+<span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span>
+</button>
+<button class="btn-write btn-video">
+<span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span>
+</button>
+</div></div><div class="tool-btn">
+<div class="byte">
+<span class="byte-count">1000&#09;</span>
+<span class="byte-total">/&#09;1000</span>
+</div>
+<button class="lagarcy-element-btn btn-square btn-white size-44" style="display: none;">
+<span class="btn-txt">취소</span>
+</button>
+<button class="lagarcy-element-btn btn-square btn-black size-44">
+<span class="btn-txt">등록</span>
+</button></div> </div></div><!-- 글쓰기 로그인 안했을 시 --><div class="lagarcy-module-write empty"> <div class="write-empty"><p class="empty-txt">
+<a href="#">댓글을 입력하려면 <em>로그인</em> 해주세요.</a></p> </div></div></div></div></li><li class="lagarcy-module-reply"><div class="reply-area"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.basic() }}<span class="writer">작성자</span><span class="time-date">
+                        2019.05.25 12:01
+                        <span class="lagarcy-module-tooltip"><span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span> </span></span></div><div class="reply-txt"><div class="  fr-view"> <p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p></div></div><div class="reply-tool"><div class="tool-btn">{{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}<button class="lagarcy-element-btn btn-square btn-gray-line size-24 "> <span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "> <span class="btn-txt">댓글달기</span></button></div><div class="tool-more"><button class="more-action"> {{ icon.base(class="ic-fill-option-vertical-s20-caaa", txt="ic-fill-option-vertical-s20-caaa", width="20px", height="20px") }}</button><ul class="lagarcy-module-dropdown"> <li><button type="button" class="lagarcy-element-btn btn-square size-40">
+<span class="btn-txt">수정</span></button> </li> <li><button type="button" class="lagarcy-element-btn btn-square size-40">
+<span class="btn-txt">삭제</span></button> </li></ul></div></div></div></li><!-- [D] 작성자 글 수정 화면 --><li class="lagarcy-module-reply reply-edit"><div class="reply-area"><div class="reply-write"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.detail() }}<span class="writer">작성자</span><span class="time-date">
+                            2019.05.25 12:01
+                            <span class="lagarcy-module-tooltip"><span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span> </span></span></div><div class="lagarcy-module-write"><div class="write-textarea reply-edit" contenteditable="true" data-text="게시물 수정 시 이렇게 노출됩니다. .reply-edit을 추가 해 주세요."></div><div class="lagarcy-module-editor"> <div class="write-setting-area"><div class="write-setting-section">
+<div class="setting-section-header">
+<p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p>
+<p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
+<span class="byte">
+<span class="byte-count">119KB</span>
+<span class="byte-total">/ 1024MB</span>
+</span>
+</div>
+<div class="setting-section-body">
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+</div></div> </div></div><div class="write-tool"> <div class="tool-action"><div class="btn-contents">
+<button class="btn-write btn-emoji">
+<span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span>
+</button>
+<button class="btn-write btn-image">
+<span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span>
+</button>
+<button class="btn-write btn-video">
+<span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span>
+</button></div> </div> <div class="tool-btn"><div class="byte">
+<span class="byte-count">1000&#09;</span>
+<span class="byte-total">/&#09;1000</span></div><button class="lagarcy-element-btn btn-square btn-white size-44">
+<span class="btn-txt">취소</span></button><button class="lagarcy-element-btn btn-square btn-black size-44">
+<span class="btn-txt">등록</span></button> </div></div></div></div></div></li><!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 --><li class="lagarcy-module-reply empty"><div class="reply-area"><div class="reply-empty"><span class="lagarcy-element-icon ic-caution" style="">ic-caution</span><p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p></div><!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. --><div class="reply-tool empty"><div class="tool-btn empty"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "> <span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button></div></div></div></li><li class="lagarcy-module-reply"><div class="reply-area"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.basic() }}<span class="writer">작성자</span><span class="time-date">
+                        2019.05.25 12:01
+                        <span class="lagarcy-module-tooltip"> <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span></span></div><div class="reply-txt"><div class="  fr-view"><p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p></div></div><div class="reply-tool"><div class="tool-btn">{{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}<button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"> <span class="lagarcy-element-icon ic-reply"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt">댓글달기</span></button></div><div class="tool-more"><button class="more-action"><span class="lagarcy-element-icon ic-fill-option-vertical-s20-caaa" style="width:20px;height:20px">ic-fill-option-vertical-s20-caaa</span></button></div></div></div><div class="reply-area reply"><button class="reply-more">이전 댓글 보기<span class="lagarcy-element-icon ic-arrow-down" style="">아래</span></button><ul class="reply-list"><li class="lagarcy-module-reply"><div class="reply-area"><div class="reply-info"> <!-- lagarcy-module-profile --> {{ profile.basic() }} <span class="writer">작성자</span> <span class="time-date">
+                                    2019.05.25 12:01
+                                    <span class="lagarcy-module-tooltip">
+<span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span> </span></div><div class="reply-txt"> <div class="  fr-view"><p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p> <p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                                    <p class=" "><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"></p></div></div><div class="reply-tool"><div class="tool-btn">{{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}<button class="lagarcy-element-btn btn-square btn-gray-line size-24 "> <span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "> <span class="btn-txt">취소</span></button></div><div class="tool-more"><button class="more-action"> {{ icon.base(class="ic-fill-option-vertical-s20-caaa", txt="ic-fill-option-vertical-s20-caaa", width="20px", height="20px") }}</button><ul class="lagarcy-module-dropdown"> <li><button type="button" class="lagarcy-element-btn btn-square size-40">
+<span class="btn-txt">수정</span></button> </li> <li><button type="button" class="lagarcy-element-btn btn-square size-40">
+<span class="btn-txt">삭제</span></button> </li></ul></div></div><div class="reply-write"><!-- 글쓰기 입력 영역 --><div class="lagarcy-module-write"><div class="write-textarea" contenteditable="true" data-text="댓글을 입력해 주세요"></div><div class="lagarcy-module-editor"> <div class="write-setting-area"><div class="write-setting-section">
+<div class="setting-section-header">
+<p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p>
+<p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
+<span class="byte">
+<span class="byte-count">119KB</span>
+<span class="byte-total">/ 1024MB</span>
+</span>
+</div>
+<div class="setting-section-body">
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+<div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button>
+</div>
+</div></div> </div></div><div class="write-tool"> <div class="tool-action"><div class="btn-contents">
+<button class="btn-write btn-emoji">
+<span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span>
+</button>
+<button class="btn-write btn-image">
+<span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span>
+</button>
+<button class="btn-write btn-video">
+<span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span>
+</button></div> </div> <div class="tool-btn"><div class="byte">
+<span class="byte-count">1000&#09;</span>
+<span class="byte-total">/&#09;1000</span></div><button class="lagarcy-element-btn btn-square btn-white size-44" style="display: none;">
+<span class="btn-txt">취소</span></button><button class="lagarcy-element-btn btn-square btn-black size-44">
+<span class="btn-txt">등록</span></button> </div></div></div><!-- 글쓰기 로그인 안했을 시 --><div class="lagarcy-module-write empty"><div class="write-empty"> <p class="empty-txt"><a href="#">댓글을 입력하려면 <em>로그인</em> 해주세요.</a> </p></div></div></div></div></li><!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 --><li class="lagarcy-module-reply empty"><div class="reply-area"><div class="reply-empty"><span class="lagarcy-element-icon ic-caution" style="">ic-caution</span><p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p></div><!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. --><div class="reply-tool empty"><div class="tool-btn empty"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "> <span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button></div></div></div></li><li class="lagarcy-module-reply"><div class="reply-area"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.basic() }}<span class="writer">작성자</span><span class="time-date">
+                                    2019.05.25 12:01
+                                    <span class="lagarcy-module-tooltip"> <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span></span></div><div class="reply-txt"><div class="  fr-view"><p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                                    <p class=" "><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"></p></div></div><div class="reply-tool"><div class="tool-btn">{{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}<button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt">댓글달기</span></button></div><div class="tool-more"><button class="more-action"><span class="lagarcy-element-icon ic-fill-option-vertical-s20-caaa" style="width:20px;height:20px">ic-fill-option-vertical-s20-caaa</span></button></div></div></div></li><!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 --><li class="lagarcy-module-reply empty"><div class="reply-area"><div class="reply-empty"><span class="lagarcy-element-icon ic-caution" style="">ic-caution</span><p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p></div><!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. --><div class="reply-tool empty"><div class="tool-btn empty"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button></div></div></div></li><!-- [D] 글 수정 화면 --><li class="lagarcy-module-reply reply-edit"><div class="reply-area"><div class="reply-write"><div class="lagarcy-module-write"><div class="write-textarea reply-edit" contenteditable="true" data-text="게시물 수정 시 이렇게 노출됩니다. .reply-edit을 추가 해 주세요."></div><div class="lagarcy-module-editor"><div class="write-setting-area"><div class="write-setting-section"> <div class="setting-section-header"><p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p><p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p><span class="byte">
+<span class="byte-count">119KB</span>
+<span class="byte-total">/ 1024MB</span></span> </div> <div class="setting-section-body"><div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button></div><div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button></div><div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button></div><div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button></div><div class="attach-image">
+<span class="lagarcy-element-icon ic-select" style="">pick</span>
+<button class="image-area">
+<img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
+</button>
+<button class="image-close">
+<span class="lagarcy-element-icon ic-close-square" style="">pick</span>
+</button></div> </div></div></div></div><div class="write-tool"><div class="tool-action"><div class="btn-contents"> <button class="btn-write btn-emoji"><span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span> </button> <button class="btn-write btn-image"><span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span> </button> <button class="btn-write btn-video"><span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span> </button></div></div><div class="tool-btn"><div class="byte"> <span class="byte-count">1000&#09;</span> <span class="byte-total">/&#09;1000</span></div><button class="lagarcy-element-btn btn-square btn-white size-44"> <span class="btn-txt">취소</span></button><button class="lagarcy-element-btn btn-square btn-black size-44"> <span class="btn-txt">등록</span></button></div></div></div></div></div></li></ul></div></li></ul><div class="pagination"><span class="lagarcy-element-icon ic-prev-circle-s24-c999" style="">처음</span><span class="lagarcy-element-icon ic-direction-left-circle-s24-c999" style="">이전</span><span class="pagination-num"><a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><i class="active">5</i><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a></span><span class="lagarcy-element-icon ic-direction-right-circle-s24-c999" style="">다음</span><span class="lagarcy-element-icon ic-next-circle-s24-c999" style="">마지막</span></div><!-- 글쓰기 입력 영역 --><div class="lagarcy-module-write"><div class="write-textarea" contenteditable="true" data-text="댓글을 입력해 주세요"></div><div class="lagarcy-module-editor"><div class="write-setting-area"><div class="write-setting-section"><div class="setting-section-header"><p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p><p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p><span class="byte"><span class="byte-count">119KB</span><span class="byte-total">/ 1024MB</span></span></div><div class="setting-section-body"><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div></div></div></div></div><div class="write-tool"><div class="tool-action"><div class="btn-contents"><button class="btn-write btn-emoji"><span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span></button><button class="btn-write btn-image"><span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span></button><button class="btn-write btn-video"><span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span></button></div></div><div class="tool-btn"><div class="byte"><span class="byte-count">1000&#09;</span><span class="byte-total">/&#09;1000</span></div><button class="lagarcy-element-btn btn-square btn-white size-44" style="display: none;"><span class="btn-txt">취소</span></button><button class="lagarcy-element-btn btn-square btn-black size-44"><span class="btn-txt">등록</span></button></div></div></div><div class="lagarcy-module-write empty"><div class="write-empty"><p class="empty-txt"><a href="#">댓글을 입력하려면 <em>로그인</em> 해주세요.</a></p></div></div></div>{% endmacro %}{% macro thread() %}<div class="wrapper-reply reply-basic reply-thread"><div class="reply-head"><p class="head-tit">포스트 123</p><div class="dropdown"><button class="dropdown-toggle" type="button">등록순<span class="lagarcy-element-icon ic-arrow-down-white" style="">접기</span></button><ul class="lagarcy-module-dropdown"><li><button type="button" class="lagarcy-element-btn btn-square"><span class="btn-txt">신고</span></button></li><li><button type="button" class="lagarcy-element-btn btn-square"><span class="btn-txt">신고</span></button></li></ul></div></div><ul class="reply-list"><li class="lagarcy-module-reply"><!-- [D] 1 Deps --><div class="reply-area"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.basic() }}<span class="writer">작성자</span><span class="time-date">
+                        2019.05.25 12:01
+                        <span class="lagarcy-module-tooltip"><span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span></span></div><div class="reply-txt"><div class="  fr-view"><p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                        <p class=" "><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"></p></div></div><div class="reply-tool"><div class="tool-btn">{{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}<button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt">취소</span></button></div><div class="tool-more"><button class="more-action">{{ icon.base(class="ic-fill-option-vertical-s20-caaa", txt="ic-fill-option-vertical-s20-caaa", width="20px", height="20px") }}</button><ul class="lagarcy-module-dropdown"><li><button type="button" class="lagarcy-element-btn btn-square size-40"><span class="btn-txt">수정</span></button></li><li><button type="button" class="lagarcy-element-btn btn-square size-40"><span class="btn-txt">삭제</span></button></li></ul></div></div><div class="reply-write"><!-- 글쓰기 입력 영역 --><div class="lagarcy-module-write"><div class="write-textarea" contenteditable="true" data-text="댓글을 입력해 주세요"></div><div class="lagarcy-module-editor"><div class="write-setting-area"><div class="write-setting-section"><div class="setting-section-header"><p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p><p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p><span class="byte"><span class="byte-count">119KB</span><span class="byte-total">/ 1024MB</span></span></div><div class="setting-section-body"><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div></div></div></div></div><div class="write-tool"><div class="tool-action"><div class="btn-contents"><button class="btn-write btn-emoji"><span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span></button><button class="btn-write btn-image"><span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span></button><button class="btn-write btn-video"><span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span></button></div></div><div class="tool-btn"><div class="byte"><span class="byte-count">1000&#09;</span><span class="byte-total">/&#09;1000</span></div><button class="lagarcy-element-btn btn-square btn-white size-44" style="display: none;"><span class="btn-txt">취소</span></button><button class="lagarcy-element-btn btn-square btn-black size-44"><span class="btn-txt">등록</span></button></div></div></div><!-- 글쓰기 로그인 안했을 시 --><div class="lagarcy-module-write empty"><div class="write-empty"><p class="empty-txt"><a href="#">댓글을 입력하려면 <em>로그인</em> 해주세요.</a></p></div></div></div></div><div class="reply-area reply"><!-- [D] 2 Deps --><button class="reply-more">이전 댓글 보기<span class="lagarcy-element-icon ic-arrow-down" style="">아래</span></button><ul class="reply-list"><li class="lagarcy-module-reply"><div class="reply-area"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.basic() }}<span class="writer">작성자</span><span class="time-date">
+                                    2019.05.25 12:01
+                                    <span class="lagarcy-module-tooltip"><span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span></span></div><div class="reply-txt"><div class="  fr-view"><p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                                    <p class=" "><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"></p></div></div><div class="reply-tool"><div class="tool-btn">{{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}<button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt">댓글달기</span></button></div><div class="tool-more"><button class="more-action">{{ icon.base(class="ic-fill-option-vertical-s20-caaa", txt="ic-fill-option-vertical-s20-caaa", width="20px", height="20px") }}</button><ul class="lagarcy-module-dropdown"><li><button type="button" class="lagarcy-element-btn btn-square size-40"><span class="btn-txt">수정</span></button></li><li><button type="button" class="lagarcy-element-btn btn-square size-40"><span class="btn-txt">삭제</span></button></li></ul></div></div><div class="reply-write"><!-- 글쓰기 입력 영역 --><div class="lagarcy-module-write"><div class="write-textarea" contenteditable="true" data-text="댓글을 입력해 주세요"></div><div class="lagarcy-module-editor"><div class="write-setting-area"><div class="write-setting-section"><div class="setting-section-header"><p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p><p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p><span class="byte"><span class="byte-count">119KB</span><span class="byte-total">/ 1024MB</span></span></div><div class="setting-section-body"><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div></div></div></div></div><div class="write-tool"><div class="tool-action"><div class="btn-contents"><button class="btn-write btn-emoji"><span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span></button><button class="btn-write btn-image"><span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span></button><button class="btn-write btn-video"><span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span></button></div></div><div class="tool-btn"><div class="byte"><span class="byte-count">1000&#09;</span><span class="byte-total">/&#09;1000</span></div><button class="lagarcy-element-btn btn-square btn-white size-44"><span class="btn-txt">취소</span></button><button class="lagarcy-element-btn btn-square btn-black size-44"><span class="btn-txt">등록등록등록등록등록</span></button></div></div></div><!-- 글쓰기 로그인 안했을 시 --><div class="lagarcy-module-write empty"><div class="write-empty"><p class="empty-txt"><a href="#">댓글을 입력하려면 <em>로그인</em> 해주세요.</a></p></div></div></div></div></li><!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 --><li class="lagarcy-module-reply empty"><div class="reply-area"><div class="reply-empty"><span class="lagarcy-element-icon ic-caution" style="">ic-caution</span><p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p></div><!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. --><div class="reply-tool empty"><div class="tool-btn empty"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button></div></div></div></li><!-- [D] 글 수정 화면 --><li class="lagarcy-module-reply reply-edit"><div class="reply-area"><div class="reply-write"><div class="lagarcy-module-write"><div class="write-textarea reply-edit" contenteditable="true" data-text="게시물 수정 시 이렇게 노출됩니다. .reply-edit을 추가 해 주세요."></div><div class="lagarcy-module-editor"><div class="write-setting-area"><div class="write-setting-section"><div class="setting-section-header"><p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p><p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p><span class="byte"><span class="byte-count">119KB</span><span class="byte-total">/ 1024MB</span></span></div><div class="setting-section-body"><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div></div></div></div></div><div class="write-tool"><div class="tool-action"><div class="btn-contents"><button class="btn-write btn-emoji"><span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span></button><button class="btn-write btn-image"><span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span></button><button class="btn-write btn-video"><span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span></button></div></div><div class="tool-btn"><div class="byte"><span class="byte-count">1000&#09;</span><span class="byte-total">/&#09;1000</span></div><button class="lagarcy-element-btn btn-square btn-white size-44"><span class="btn-txt">취소</span></button><button class="lagarcy-element-btn btn-square btn-black size-44"><span class="btn-txt">등록</span></button></div></div></div></div></div></li><div class="pagination"><span class="lagarcy-element-icon ic-prev-circle-s24-c999" style="">처음</span><span class="lagarcy-element-icon ic-direction-left-circle-s24-c999" style="">이전</span><span class="pagination-num"><a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><i class="active">5</i><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a></span><span class="lagarcy-element-icon ic-direction-right-circle-s24-c999" style="">다음</span><span class="lagarcy-element-icon ic-next-circle-s24-c999" style="">마지막</span></div></ul></div></li><!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 --><li class="lagarcy-module-reply empty"><div class="reply-area"><div class="reply-empty"><span class="lagarcy-element-icon ic-caution" style="">ic-caution</span><p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p></div><!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. --><div class="reply-tool empty"><div class="tool-btn empty"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button></div></div></div></li><li class="lagarcy-module-reply"><div class="reply-area"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.basic() }}<span class="writer">작성자</span><span class="time-date">
+                        2019.05.25 12:01
+                        <span class="lagarcy-module-tooltip"><span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span></span></div><div class="reply-txt"><div class="  fr-view"><p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                        <p class=" "><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"></p></div></div><div class="reply-tool"><div class="tool-btn">{{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}<button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt">댓글달기</span></button></div><div class="tool-more"><button class="more-action"><span class="lagarcy-element-icon ic-fill-option-vertical-s20-caaa" style="width:20px;height:20px">ic-fill-option-vertical-s20-caaa</span></button></div></div></div><div class="reply-area reply"><button class="reply-more">이전 댓글 보기<span class="lagarcy-element-icon ic-arrow-down" style="">아래</span></button><ul class="reply-list"><li class="lagarcy-module-reply"><div class="reply-area"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.basic() }}<span class="writer">작성자</span><span class="time-date">
+                                    2019.05.25 12:01
+                                    <span class="lagarcy-module-tooltip"><span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span></span></div><div class="reply-txt"><div class="  fr-view"><p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                                    <p class=" "><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"></p></div></div><div class="reply-tool"><div class="tool-btn">{{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}<button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt">댓글달기</span></button></div><div class="tool-more"><button class="more-action">{{ icon.base(class="ic-fill-option-vertical-s20-caaa", txt="ic-fill-option-vertical-s20-caaa", width="20px", height="20px") }}</button><ul class="lagarcy-module-dropdown"><li><button type="button" class="lagarcy-element-btn btn-square size-40"><span class="btn-txt">수정</span></button></li><li><button type="button" class="lagarcy-element-btn btn-square size-40"><span class="btn-txt">삭제</span></button></li></ul></div></div><div class="reply-write"><!-- 글쓰기 입력 영역 --><div class="lagarcy-module-write"><div class="write-textarea" contenteditable="true" data-text="댓글을 입력해 주세요"></div><div class="lagarcy-module-editor"><div class="write-setting-area"><div class="write-setting-section"><div class="setting-section-header"><p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p><p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p><span class="byte"><span class="byte-count">119KB</span><span class="byte-total">/ 1024MB</span></span></div><div class="setting-section-body"><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div></div></div></div></div><div class="write-tool"><div class="tool-action"><div class="btn-contents"><button class="btn-write btn-emoji"><span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span></button><button class="btn-write btn-image"><span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span></button><button class="btn-write btn-video"><span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span></button></div></div><div class="tool-btn"><div class="byte"><span class="byte-count">1000&#09;</span><span class="byte-total">/&#09;1000</span></div><button class="lagarcy-element-btn btn-square btn-white size-44"><span class="btn-txt">취소</span></button><button class="lagarcy-element-btn btn-square btn-black size-44"><span class="btn-txt">등록등록등록등록등록</span></button></div></div></div><!-- 글쓰기 로그인 안했을 시 --><div class="lagarcy-module-write empty"><div class="write-empty"><p class="empty-txt"><a href="#">댓글을 입력하려면 <em>로그인</em> 해주세요.</a></p></div></div></div></div></li><!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 --><li class="lagarcy-module-reply empty"><div class="reply-area"><div class="reply-empty"><span class="lagarcy-element-icon ic-caution" style="">ic-caution</span><p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p></div><!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. --><div class="reply-tool empty"><div class="tool-btn empty"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button></div></div></div></li><li class="lagarcy-module-reply"><div class="reply-area"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.basic() }}<span class="writer">작성자</span><span class="time-date">
+                                    2019.05.25 12:01
+                                    <span class="lagarcy-module-tooltip"><span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span></span></div><div class="reply-txt"><div class="  fr-view"><p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                                    <p class=" "><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"></p></div></div><div class="reply-tool"><div class="tool-btn">{{ btn.withIcon(shapeClass='btn-square btn-gray-line size-24 ani-iconmove bounce is-ani', sizeClass='size-24', colorClass='btn-gray-line', txt='999', iconClass='lagarcy-element-icon ic-heart') }}<button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt">댓글달기</span></button></div><div class="tool-more"><button class="more-action"><span class="lagarcy-element-icon ic-fill-option-vertical-s20-caaa" style="width:20px;height:20px">ic-fill-option-vertical-s20-caaa</span></button></div></div></div></li><!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 --><li class="lagarcy-module-reply empty"><div class="reply-area"><div class="reply-empty"><span class="lagarcy-element-icon ic-caution" style="">ic-caution</span><p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p></div><!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. --><div class="reply-tool empty"><div class="tool-btn empty"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button></div></div></div></li></ul></div></li></ul><div class="pagination"><span class="lagarcy-element-icon ic-prev-circle-s24-c999" style="">처음</span><span class="lagarcy-element-icon ic-direction-left-circle-s24-c999" style="">이전</span><span class="pagination-num"><a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><i class="active">5</i><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a></span><span class="lagarcy-element-icon ic-direction-right-circle-s24-c999" style="">다음</span><span class="lagarcy-element-icon ic-next-circle-s24-c999" style="">마지막</span></div><!-- 글쓰기 입력 영역 --><div class="lagarcy-module-write"><div class="write-textarea" contenteditable="true" data-text="스레드에 의견을 남겨주세요"></div><div class="lagarcy-module-editor"><div class="write-setting-area"><div class="write-setting-section"><div class="setting-section-header"><p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p><p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p><span class="byte"><span class="byte-count">119KB</span><span class="byte-total">/ 1024MB</span></span></div><div class="setting-section-body"><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div></div></div></div></div><div class="write-tool"><div class="tool-action"><div class="btn-contents"><button class="btn-write btn-emoji"><span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span></button><button class="btn-write btn-image"><span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span></button><button class="btn-write btn-video"><span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span></button></div></div><div class="tool-btn"><div class="byte"><span class="byte-count">1000&#09;</span><span class="byte-total">/&#09;1000</span></div><button class="lagarcy-element-btn btn-square btn-black size-44"><span class="btn-txt">등록</span></button></div></div></div><div class="lagarcy-module-write empty"><div class="write-empty"><p class="empty-txt">스레드를 입력하려면 <a href="#">로그인</a> 해주세요.</p></div></div></div>{% endmacro %}{% macro talk() %}<div class="wrapper-reply reply-basic reply-talk"><div class="reply-head"><p class="head-tit">댓글 123</p><div class="dropdown"><button class="dropdown-toggle" type="button">등록순<span class="lagarcy-element-icon ic-arrow-down-white" style="">접기</span></button><ul class="lagarcy-module-dropdown"><li><button type="button" class="lagarcy-element-btn btn-square"><span class="btn-txt">신고</span></button></li><li><button type="button" class="lagarcy-element-btn btn-square"><span class="btn-txt">신고</span></button></li></ul></div></div><ul class="reply-list"><li class="lagarcy-module-reply"><div class="reply-area"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.basic() }}<span class="writer">작성자</span><span class="time-date">
+                        2019.05.25 12:01
+                        <span class="lagarcy-module-tooltip"><span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span></span></div><div class="reply-txt"><div class="  fr-view"><p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                        <p class=" "><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"></p></div></div><div class="reply-tool"><div class="tool-btn"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-like-line-sm"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt">취소</span></button></div><div class="tool-more"><button class="more-action">{{ icon.base(class="ic-fill-option-vertical-s20-caaa", txt="ic-fill-option-vertical-s20-caaa", width="20px", height="20px") }}</button><ul class="lagarcy-module-dropdown"><li><button type="button" class="lagarcy-element-btn btn-square size-40"><span class="btn-txt">수정</span></button></li><li><button type="button" class="lagarcy-element-btn btn-square size-40"><span class="btn-txt">삭제</span></button></li></ul></div></div><div class="reply-write"><!-- 글쓰기 입력 영역 --><div class="lagarcy-module-write"><div class="write-textarea" contenteditable="true" data-text="댓글을 입력해 주세요"></div><div class="lagarcy-module-editor"><div class="write-setting-area"><div class="write-setting-section"><div class="setting-section-header"><p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p><p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p><span class="byte"><span class="byte-count">119KB</span><span class="byte-total">/ 1024MB</span></span></div><div class="setting-section-body"><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div></div></div></div></div><div class="write-tool"><div class="tool-action"><div class="btn-contents"><button class="btn-write btn-emoji"><span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span></button><button class="btn-write btn-image"><span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span></button><button class="btn-write btn-video"><span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span></button></div></div><div class="tool-btn"><div class="byte"><span class="byte-count">1000&#09;</span><span class="byte-total">/&#09;1000</span></div><button class="lagarcy-element-btn btn-square btn-white size-44" style="display: none;"><span class="btn-txt">취소</span></button><button class="lagarcy-element-btn btn-square btn-black size-44"><span class="btn-txt">등록</span></button></div></div></div><!-- 글쓰기 로그인 안했을 시 --><div class="lagarcy-module-write empty"><div class="write-empty"><p class="empty-txt"><a href="#">댓글을 입력하려면 <em>로그인</em> 해주세요.</a></p></div></div></div></div></li><li class="lagarcy-module-reply"><div class="reply-area"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.basic() }}<span class="writer">작성자</span><span class="time-date">
+                        2019.05.25 12:01
+                        <span class="lagarcy-module-tooltip"><span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span></span></div><div class="reply-txt"><div class="  fr-view"><p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p></div></div><div class="reply-tool"><div class="tool-btn"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-like-line-sm"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt">댓글달기</span></button></div><div class="tool-more"><button class="more-action">{{ icon.base(class="ic-fill-option-vertical-s20-caaa", txt="ic-fill-option-vertical-s20-caaa", width="20px", height="20px") }}</button><ul class="lagarcy-module-dropdown"><li><button type="button" class="lagarcy-element-btn btn-square size-40"><span class="btn-txt">수정</span></button></li><li><button type="button" class="lagarcy-element-btn btn-square size-40"><span class="btn-txt">삭제</span></button></li></ul></div></div></div></li><!-- [D] 작성자 글 수정 화면 --><li class="lagarcy-module-reply reply-edit"><div class="reply-area"><div class="reply-write"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.detail() }}<span class="writer">작성자</span><span class="time-date">
+                            2019.05.25 12:01
+                            <span class="lagarcy-module-tooltip"><span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span></span></div><div class="lagarcy-module-write"><div class="write-textarea reply-edit" contenteditable="true" data-text="게시물 수정 시 이렇게 노출됩니다. .reply-edit을 추가 해 주세요."></div><div class="lagarcy-module-editor"><div class="write-setting-area"><div class="write-setting-section"><div class="setting-section-header"><p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p><p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p><span class="byte"><span class="byte-count">119KB</span><span class="byte-total">/ 1024MB</span></span></div><div class="setting-section-body"><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div></div></div></div></div><div class="write-tool"><div class="tool-action"><div class="btn-contents"><button class="btn-write btn-emoji"><span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span></button><button class="btn-write btn-image"><span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span></button><button class="btn-write btn-video"><span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span></button></div></div><div class="tool-btn"><div class="byte"><span class="byte-count">1000&#09;</span><span class="byte-total">/&#09;1000</span></div><button class="lagarcy-element-btn btn-square btn-white size-44"><span class="btn-txt">취소</span></button><button class="lagarcy-element-btn btn-square btn-black size-44"><span class="btn-txt">등록</span></button></div></div></div></div></div></li><!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 --><li class="lagarcy-module-reply empty"><div class="reply-area"><div class="reply-empty"><span class="lagarcy-element-icon ic-caution" style="">ic-caution</span><p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p></div><!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. --><div class="reply-tool empty"><div class="tool-btn empty"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button></div></div></div></li><li class="lagarcy-module-reply"><div class="reply-area"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.basic() }}<span class="writer">작성자</span><span class="time-date">
+                        2019.05.25 12:01
+                        <span class="lagarcy-module-tooltip"><span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span></span></div><div class="reply-txt"><div class="fr-view"><p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p></div></div><div class="reply-tool"><div class="tool-btn"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-like-line-sm"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt">댓글달기</span></button></div><div class="tool-more"><button class="more-action"><span class="lagarcy-element-icon ic-fill-option-vertical-s20-caaa" style="width:20px;height:20px">ic-fill-option-vertical-s20-caaa</span></button></div></div></div><!-- reply-indent 클래스 추가 해 주세요. --><div class="reply-area reply reply-indent"><button class="reply-more">이전 댓글 보기<span class="lagarcy-element-icon ic-arrow-down" style="">아래</span></button><ul class="reply-list"><li class="lagarcy-module-reply"><div class="reply-area"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.basic() }}<span class="writer">작성자</span><span class="time-date">
+                                    2019.05.25 12:01
+                                    <span class="lagarcy-module-tooltip"><span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span></span></div><div class="reply-txt"><div class="fr-view"><p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                                    <p class=" "><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"></p></div></div><div class="reply-tool"><div class="tool-btn"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-like-line-sm"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt">취소</span></button></div><div class="tool-more"><button class="more-action">{{ icon.base(class="ic-fill-option-vertical-s20-caaa", txt="ic-fill-option-vertical-s20-caaa", width="20px", height="20px") }}</button><ul class="lagarcy-module-dropdown"><li><button type="button" class="lagarcy-element-btn btn-square size-40"><span class="btn-txt">수정</span></button></li><li><button type="button" class="lagarcy-element-btn btn-square size-40"><span class="btn-txt">삭제</span></button></li></ul></div></div><div class="reply-write"><!-- 글쓰기 입력 영역 --><div class="lagarcy-module-write"><div class="write-textarea" contenteditable="true" data-text="댓글을 입력해 주세요"></div><div class="lagarcy-module-editor"><div class="write-setting-area"><div class="write-setting-section"><div class="setting-section-header"><p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p><p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p><span class="byte"><span class="byte-count">119KB</span><span class="byte-total">/ 1024MB</span></span></div><div class="setting-section-body"><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div></div></div></div></div><div class="write-tool"><div class="tool-action"><div class="btn-contents"><button class="btn-write btn-emoji"><span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span></button><button class="btn-write btn-image"><span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span></button><button class="btn-write btn-video"><span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span></button></div></div><div class="tool-btn"><div class="byte"><span class="byte-count">1000&#09;</span><span class="byte-total">/&#09;1000</span></div><button class="lagarcy-element-btn btn-square btn-white size-44" style="display: none;"><span class="btn-txt">취소</span></button><button class="lagarcy-element-btn btn-square btn-black size-44"><span class="btn-txt">등록</span></button></div></div></div><!-- 글쓰기 로그인 안했을 시 --><div class="lagarcy-module-write empty"><div class="write-empty"><p class="empty-txt"><a href="#">댓글을 입력하려면 <em>로그인</em> 해주세요.</a></p></div></div></div></div></li><!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 --><li class="lagarcy-module-reply empty"><div class="reply-area"><div class="reply-empty"><span class="lagarcy-element-icon ic-caution" style="">ic-caution</span><p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p></div><!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. --><div class="reply-tool empty"><div class="tool-btn empty"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button></div></div></div></li><li class="lagarcy-module-reply"><div class="reply-area"><div class="reply-info"><!-- lagarcy-module-profile -->{{ profile.basic() }}<span class="writer">작성자</span><span class="time-date">
+                                    2019.05.25 12:01
+                                    <span class="lagarcy-module-tooltip"><span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span></span></div><div class="reply-txt"><div class="fr-view"><p class=" "><span class="txt-best">BEST!</span>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" "><a href="#" class="user-tag">또카니</a>RPG게임들이 부캐제화 거의다 공유인데 그쪽이 말한 에포나 택배로 실링수급하는게 그렇게 사기라고 생각함 ? 다른게임들은 더욱 쉽고 더 방대하게 부캐로 제화수급할수있음 말이 쉬워서 하루지 라이트유저들은 50찍는데 몇일씩 걸립니다 ㅋㅋ</p><p class=" ">!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78!@$@%@#%#$@#$@#$%&^%@$#@$asdfqweuygfee.knvm,c.znjksdfhiu!#@$LNRFfibn4hqr78</p>
+                                    <p class=" "><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"><img src="https://dummyimage.com/100x88/0099ff/fff" alt="image-emoji"></p></div></div><div class="reply-tool"><div class="tool-btn"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-like-line-sm"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt">댓글달기</span></button></div><div class="tool-more"><button class="more-action"><span class="lagarcy-element-icon ic-fill-option-vertical-s20-caaa" style="width:20px;height:20px">ic-fill-option-vertical-s20-caaa</span></button></div></div></div></li><!-- .lagarcy-module-reply.empty = 삭제, 숨김 개시물 --><li class="lagarcy-module-reply empty"><div class="reply-area"><div class="reply-empty"><span class="lagarcy-element-icon ic-caution" style="">ic-caution</span><p class="empty-txt">작성자(신고)에 의해 삭제된(숨겨진) 댓글입니다.</p></div><!-- [D] 해당영역에만 empty 클래스를 추가 해 주세요. --><div class="reply-tool empty"><div class="tool-btn empty"><button class="lagarcy-element-btn btn-square btn-gray-line size-24 "><span class="btn-txt"><span class="lagarcy-element-icon ic-reply"></span>999</span></button></div></div></div></li><!-- [D] 글 수정 화면 --><li class="lagarcy-module-reply reply-edit"><div class="reply-area"><div class="reply-write"><div class="lagarcy-module-write"><div class="write-textarea reply-edit" contenteditable="true" data-text="게시물 수정 시 이렇게 노출됩니다. .reply-edit을 추가 해 주세요."></div><div class="lagarcy-module-editor"><div class="write-setting-area"><div class="write-setting-section"><div class="setting-section-header"><p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p><p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p><span class="byte"><span class="byte-count">119KB</span><span class="byte-total">/ 1024MB</span></span></div><div class="setting-section-body"><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div></div></div></div></div><div class="write-tool"><div class="tool-action"><div class="btn-contents"><button class="btn-write btn-emoji"><span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span></button><button class="btn-write btn-image"><span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span></button><button class="btn-write btn-video"><span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span></button></div></div><div class="tool-btn"><div class="byte"><span class="byte-count">1000&#09;</span><span class="byte-total">/&#09;1000</span></div><button class="lagarcy-element-btn btn-square btn-white size-44"><span class="btn-txt">취소</span></button><button class="lagarcy-element-btn btn-square btn-black size-44"><span class="btn-txt">등록</span></button></div></div></div></div></div></li></ul></div></li></ul><div class="pagination"><span class="lagarcy-element-icon ic-prev-circle-s24-c999" style="">처음</span><span class="lagarcy-element-icon ic-direction-left-circle-s24-c999" style="">이전</span><span class="pagination-num"><a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><i class="active">5</i><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a></span><span class="lagarcy-element-icon ic-direction-right-circle-s24-c999" style="">다음</span><span class="lagarcy-element-icon ic-next-circle-s24-c999" style="">마지막</span></div><!-- 글쓰기 입력 영역 --><!-- write-input 클래스 추가해주세요. --><div class="lagarcy-module-write write-input"><div class="write-textarea" contenteditable="true" data-text="댓글을 입력해 주세요"></div><div class="lagarcy-module-editor"><div class="write-setting-area"><div class="write-setting-section"><div class="setting-section-header"><p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p><p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p><span class="byte"><span class="byte-count">119KB</span><span class="byte-total">/ 1024MB</span></span></div><div class="setting-section-body"><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div><div class="attach-image"><span class="lagarcy-element-icon ic-select" style="">pick</span><button class="image-area"><img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image"></button><button class="image-close"><span class="lagarcy-element-icon ic-close-square" style="">pick</span></button></div></div></div></div></div><div class="write-tool "><div class="tool-action"><div class="btn-contents"><button class="btn-write btn-emoji"><span class="lagarcy-element-icon ic-write-emoji" style="">ic-write-emoji</span></button><button class="btn-write btn-image"><span class="lagarcy-element-icon ic-write-image" style="">ic-write-image</span></button><button class="btn-write btn-video"><span class="lagarcy-element-icon ic-write-video" style="">ic-write-video</span></button></div></div><div class="tool-btn"><div class="byte"><span class="byte-count">1000&#09;</span><span class="byte-total">/&#09;1000</span></div><button class="lagarcy-element-btn btn-square btn-white size-44" style="display: none;"><span class="btn-txt">취소</span></button><button class="lagarcy-element-btn btn-square btn-black size-44"><span class="btn-txt">등록</span></button></div></div></div><div class="lagarcy-module-empty empty-list"><div class="empty-contents"><p class="empty-txt"><a href="#">게시물을 작성하려면 <em>로그인</em> 해주세요.</a></p></div></div></div>{% endmacro %}

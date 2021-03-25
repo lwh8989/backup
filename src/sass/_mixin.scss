@@ -35,3 +35,55 @@
         @content;
     }
 }
+
+/* flex mixin */
+@mixin flex(
+    $x: flex-start,
+    $y: flex-start,
+    $d: row,
+    $wrap: nowrap,
+    $type: flex
+) {
+    display: $type;
+    justify-content: $x;
+    align-items: $y;
+    flex-direction: $d;
+    flex-wrap: $wrap;
+    @content;
+}
+@mixin flexCenter() {
+    @include flex($x: center, $y: center);
+    @content;
+}
+@mixin flexBetween() {
+    @include flex($x: space-between);
+    @content;
+}
+
+/* ratio */
+@mixin aspectRatio($width: 1, $height: 1) {
+    padding-bottom: percentage($height / $width);
+}
+
+/* box-type */
+@mixin boxType(
+    $width: 200px,
+    $height: 44px,
+    $bgc: $ui-input-bg-enabled,
+    $borderSize: 1px,
+    $borderType: solid,
+    $borderColor: $ui-input-border-enabled,
+    $radius: 4px,
+    $size: 13px,
+    $color: $ui-text-03
+) {
+    position: relative;
+    width: $width;
+    height: $height;
+    background-color: $bgc;
+    border: $borderSize $borderType $borderColor;
+    border-radius: $radius;
+    font-size: $size;
+    color: $color;
+    @content;
+}

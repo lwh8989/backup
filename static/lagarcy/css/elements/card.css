@@ -1,0 +1,1288 @@
+/* card */
+.lagarcy-module-card {
+  display: inline-block;
+  position: relative;
+  width: 216px;
+  height: 292px;
+}
+.lagarcy-module-card:before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.lagarcy-module-card .card-inner {
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.19), 0 0 0 1px rgba(0, 0, 0, 0.03);
+  transition: 0.2s;
+}
+.lagarcy-module-card:hover .card-inner {
+  margin-top: -2px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.18), 0 6px 20px 0 rgba(85, 92, 107, 0.3);
+}
+.lagarcy-module-card .card-img {
+  position: relative;
+  overflow: hidden;
+  width: 216px;
+  height: 162px;
+  border-radius: 4px 4px 0 0;
+  /* background: #333; */
+}
+.lagarcy-module-card .card-img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* border-bottom: 1px solid #ddd; */
+  border-radius: 6px 6px 0 0;
+  background: #111;
+}
+.lagarcy-module-card .card-img.no-img {
+  height: 26px;
+}
+.lagarcy-module-card .card-img .lagarcy-element-icon {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+}
+.lagarcy-module-card .card-img .lagarcy-element-icon.ic-pick-round {
+  left: inherit;
+  bottom: inherit;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+.lagarcy-module-card .card-img .lagarcy-element-checkbox {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: #fff;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+}
+.lagarcy-module-card .card-img .lagarcy-element-checkbox .checkbox-input {
+  top: 0;
+  left: 0;
+}
+.lagarcy-module-card .card-img .lagarcy-element-checkbox .checkbox-input ~ label:before {
+  top: 0;
+  left: 0;
+}
+.lagarcy-module-card .card-img img {
+  width: 100% !important;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.lagarcy-module-card .subject-inner {
+  overflow: hidden;
+  height: 62px;
+  /* margin-bottom: 12px; */
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: normal;
+}
+.lagarcy-module-card .subject-inner .subject-info {
+  display: inline;
+}
+.lagarcy-module-card .subject-inner .subject-info .lagarcy-element-icon.ic-new {
+  margin-top: 2px;
+}
+.lagarcy-module-card .subject-inner .subject-txt {
+  display: inline;
+  font-weight: 700;
+  color: #333;
+  word-break: break-all;
+  /*
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    overflow: hidden;
+    width:100%;
+    height:50px;
+    text-overflow: ellipsis;*/
+}
+.lagarcy-module-card .subject-inner .subject-icon {
+  display: inline;
+}
+.lagarcy-module-card .subject-inner .subject-info-count {
+  color: #ff5000;
+  font-weight: 700;
+  margin-left: 2px;
+}
+.lagarcy-module-card .subject-desc {
+  margin-bottom: 24px;
+  padding: 0 12px;
+  font-size: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  overflow: hidden;
+  width: 100%;
+  height: 111px;
+  line-height: 16px;
+  text-overflow: ellipsis;
+}
+.lagarcy-module-card .user-link {
+  position: relative;
+  display: table;
+  width: 100%;
+  padding-left: 12px;
+}
+.lagarcy-module-card .user-link a.active .profile-content {
+  text-decoration: underline;
+}
+.lagarcy-module-card .user-link .lagarcy-module-profile {
+  line-height: 20px;
+}
+.lagarcy-module-card .user-link .lagarcy-module-profile .profile-thumb {
+  width: 20px;
+  height: 20px;
+}
+.lagarcy-module-card .user-link .lagarcy-module-profile .profile-content {
+  line-height: 20px;
+}
+.lagarcy-module-card .user-link .lagarcy-module-profile .profile-content .profile-name {
+  line-height: 20px;
+}
+
+.lagarcy-module-card .user-link .lagarcy-module-profile:before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.lagarcy-module-card .user-link .lagarcy-module-dropdown {
+  max-width: 172px;
+  position: absolute;
+  top: 24px;
+  left: 27px;
+  z-index: 10;
+}
+
+.lagarcy-module-card .card-info {
+  display: table;
+  padding: 2px 12px 16px 12px;
+  font-size: 12px;
+  color: #999;
+  line-height: 20px;
+}
+.lagarcy-module-card .card-info .time-date {
+  display: table-cell;
+  position: relative;
+  display: inline-block;
+  padding-right: 8px;
+  margin: 0 8px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  line-height: 20px;
+  font-size: 12px;
+}
+.lagarcy-module-card .card-info .time-date:after {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  content: '';
+  display: block;
+  width: 1px;
+  height: 10px;
+  background-color: #d8d8d8;
+}
+.lagarcy-module-card .card-info .count {
+  display: table-cell;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 20px;
+}
+.lagarcy-module-card .card-info .count .lagarcy-element-icon.ic-view {
+  margin-top: 5px;
+  margin-right: 4px;
+  width: 12px;
+  height: 12px;
+}
+
+.lagarcy-module-card .time-date .write-time-tooltip {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  min-width: 100px;
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  background-color: #111;
+  color: #fff;
+  white-space: nowrap;
+  transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  z-index: 1;
+}
+.lagarcy-module-card .time-date .write-time-tooltip:after {
+  display: none;
+}
+.lagarcy-module-card .time-date .write-time-tooltip:before {
+  position: absolute;
+  top: -4px;
+  left: 10px;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: -2px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid #111;
+}
+.lagarcy-module-card .time-date:hover .write-time-tooltip {
+  display: block;
+}
+
+.search-group .lagarcy-module-search {
+  width: 400px;
+  margin: 0 auto;
+}
+.search-group .lagarcy-module-search .input-wrap {
+  width: 250px;
+}
+
+/* banner-view */
+.lagarcy-module-card.banner-view {
+  display: inline-block;
+  position: relative;
+  width: 444px;
+  height: 333px;
+  border: solid 1px #e5e5e5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  vertical-align: top;
+  transition: 0.2s;
+}
+.lagarcy-module-card.banner-view:hover .subject-inner {
+  text-decoration: underline;
+}
+.lagarcy-module-card.banner-view::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.lagarcy-module-card.banner-view::after {
+  content: '';
+  width: 444px;
+  height: 164px;
+  display: block;
+  background: url(../../images/bg-gradation-1x164.png) bottom repeat-x;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  z-index: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.lagarcy-module-card.banner-view .card-inner {
+  width: 444px;
+  height: 333px;
+  position: relative;
+  box-shadow: none;
+  transition: none;
+  background: inherit;
+}
+.lagarcy-module-card.banner-view:hover .card-inner {
+  margin-top: 0;
+  box-shadow: none;
+}
+.lagarcy-module-card.banner-view .card-img {
+  position: relative;
+  overflow: hidden;
+  width: 444px;
+  height: 333px;
+}
+.lagarcy-module-card.banner-view .card-position {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.lagarcy-module-card.banner-view .card-img img {
+  width: 100% !important;
+  height: auto;
+  border-radius: 4px;
+}
+.lagarcy-module-card.banner-view .subject-inner {
+  position: absolute;
+  bottom: 52px;
+  left: 24px;
+  right: 24px;
+  z-index: 1;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  height: auto;
+  max-height: 48px;
+
+  padding: 0;
+
+  margin-top: 8px;
+  margin-bottom: 4px;
+
+  /* 멀티라인 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  /* 말줄임 */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+.lagarcy-module-card.banner-view .subject-inner .subject-txt {
+  display: block;
+  font-weight: 700;
+  color: #fff;
+  line-height: normal;
+  font-size: 16px;
+}
+.lagarcy-module-card.banner-view .user-link {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 1;
+
+  display: inherit;
+  width: inherit;
+  padding-left: 0;
+}
+.lagarcy-module-card.banner-view .profile-content {
+  position: relative;
+  display: table-cell;
+  font-size: 14px;
+  color: #999;
+}
+.lagarcy-module-card.banner-view .profile-content .profile-name {
+  width: auto;
+  color: #999;
+  font-size: 14px;
+}
+.lagarcy-module-card.banner-view .user-link .lagarcy-module-dropdown {
+  max-width: 172px;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  z-index: 10;
+}
+.lagarcy-module-card.banner-view .card-info {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1;
+  padding: 0;
+  font-size: 14px;
+}
+.lagarcy-module-card.banner-view .card-info .count {
+  font-size: 14px;
+}
+.lagarcy-module-card.banner-view .card-info .lagarcy-element-icon.ic-view {
+  margin-top: 3px;
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+}
+
+/* banner-view mini */
+.lagarcy-module-card.banner-view.mini {
+  display: inline-block;
+  position: relative;
+  width: 284px;
+  height: 174px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  vertical-align: top;
+  transition: 0.2s;
+}
+.lagarcy-module-card.banner-view.mini::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.lagarcy-module-card.banner-view.mini::after {
+  content: '';
+  width: 100%;
+  height: 98px;
+  display: block;
+  background: url(../../images/bg-gradation-1x98.png) bottom repeat-x;
+  position: absolute;
+  /*  bottom: 0;*/
+  left: 0;
+  z-index: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.lagarcy-module-card.banner-view.mini .card-inner {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  box-shadow: none;
+  transition: none;
+  background: inherit;
+}
+.lagarcy-module-card.banner-view.mini:hover .card-inner {
+  margin-top: 0;
+  box-shadow: none;
+}
+.lagarcy-module-card.banner-view.mini .card-img {
+  position: relative;
+  overflow: hidden;
+  width: 284px;
+  height: 174px;
+  border-radius: 4px;
+}
+.lagarcy-module-card.banner-view.mini .card-img img {
+  width: 100% !important;
+  height: auto;
+}
+.lagarcy-module-card.banner-view.mini .subject-inner {
+  position: absolute;
+  bottom: 30px;
+  left: 16px;
+  right: 16px;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  height: auto;
+  padding: 0;
+  margin: 4px 0;
+}
+.lagarcy-module-card.banner-view.mini:hover .subject-inner {
+  text-decoration: none;
+}
+.lagarcy-module-card.banner-view.mini:hover .subject-inner .subject-txt {
+  text-decoration: underline;
+}
+.lagarcy-module-card.banner-view.mini .subject-inner .subject-txt {
+  display: inline-block;
+  max-width: 200px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  line-height: normal;
+  vertical-align: top;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.lagarcy-module-card.banner-view.mini .subject-info .subject-info-count {
+  display: inline-block;
+}
+.lagarcy-module-card.banner-view.mini .user-link {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  z-index: 1;
+  display: inherit;
+  width: inherit;
+  padding-left: 0;
+}
+.lagarcy-module-card.banner-view.mini .profile-content {
+  position: relative;
+  display: table-cell;
+  font-size: 12px;
+}
+.lagarcy-module-card.banner-view.mini .profile-content .profile-name {
+  font-size: 12px;
+  display: inline-block;
+  line-height: unset;
+  text-overflow: unset;
+  white-space: unset;
+  word-wrap: unset;
+  width: inherit;
+  overflow: unset;
+  vertical-align: top;
+}
+.lagarcy-module-card.banner-view.mini .profile-content .profile-name,
+.lagarcy-module-card.banner-view.mini .profile-content time {
+  color: #aaa;
+}
+.lagarcy-module-card.banner-view.mini .profile-content time {
+  position: relative;
+  padding-left: 14px;
+}
+.lagarcy-module-card.banner-view.mini .profile-content time::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #999;
+}
+
+/* card-view */
+.lagarcy-module-card-wrapper {
+}
+.lagarcy-module-card-wrapper .lagarcy-module-card.card-view {
+  font-size: 0;
+}
+.lagarcy-module-card-wrapper .lagarcy-module-card.card-view:first-of-type {
+  margin-left: 0;
+}
+.lagarcy-module-card.card-view {
+  display: inline-block;
+  position: relative;
+  width: 288px;
+  height: auto;
+  border-radius: 4px;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 12px;
+  margin-left: 21px;
+  vertical-align: top;
+  transition: 0.2s;
+}
+.lagarcy-module-card.card-view:nth-child(1) {
+  padding-left: 0;
+}
+.lagarcy-module-card.card-view:hover .subject-txt {
+  text-decoration: underline;
+}
+.lagarcy-module-card.card-view:before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.lagarcy-module-card.card-view .card-inner {
+  box-shadow: none;
+  transition: none;
+  background: inherit;
+}
+.lagarcy-module-card.card-view:hover .card-inner {
+  margin-top: 0;
+  box-shadow: none;
+}
+.lagarcy-module-card.card-view .card-img {
+  position: relative;
+  overflow: hidden;
+  width: 288px;
+  height: 216px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.lagarcy-module-card.card-view .card-img img {
+  width: 100% !important;
+  height: auto;
+}
+.lagarcy-module-card.card-view .card-img .lagarcy-element-count {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  z-index: 1;
+}
+.lagarcy-module-card.card-view .card-img .lagarcy-element-count::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  display: block;
+  background: #000;
+  opacity: 0.6;
+  z-index: -1;
+}
+.lagarcy-module-card.card-view .subject-inner {
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+  /* height: 38px; */
+  max-height: 48px;
+  height: auto;
+
+  padding: 0;
+
+  margin-top: 8px;
+  margin-bottom: 8px;
+
+  /* 멀티라인 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  /* 말줄임 */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+.lagarcy-module-card.card-view .subject-inner .subject-txt {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  line-height: normal;
+}
+.lagarcy-module-card.card-view .user-link {
+  position: relative;
+  display: table;
+  width: 100%;
+  padding-left: 0;
+}
+.lagarcy-module-card.card-view .user-link .lagarcy-module-profile {
+  margin-left: 0;
+}
+.lagarcy-module-card.card-view .profile-content {
+  position: relative;
+  display: table-cell;
+  font-size: 12px;
+  color: #999;
+}
+.lagarcy-module-card.card-view .profile-content .profile-name {
+  width: auto;
+  font-size: 13px;
+  color: #999;
+}
+.lagarcy-module-card.card-view .user-link .lagarcy-module-dropdown {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 130px;
+  z-index: 10;
+}
+
+.lagarcy-module-card.webzine-view {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 104px;
+  /* margin: 4px 0; */
+  vertical-align: top;
+  margin-bottom: 12px;
+}
+.lagarcy-module-card.webzine-view:hover .subject-txt {
+  text-decoration: underline;
+}
+.lagarcy-module-card.webzine-view:before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.lagarcy-module-card.webzine-view:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #d8d8d8;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  z-index: 0;
+}
+.lagarcy-module-card.webzine-view:last-of-type:after {
+  content: none;
+}
+.lagarcy-module-card.webzine-view .card-inner {
+  height: 104px;
+  box-shadow: none;
+  transition: none;
+  position: relative;
+}
+
+.lagarcy-module-card.webzine-view .card-inner .card-contents {
+  height: 100%;
+  text-align: left;
+}
+.lagarcy-module-card.webzine-view .card-inner .card-contents::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  margin-right: 0;
+  vertical-align: middle;
+}
+.lagarcy-module-card.webzine-view .card-inner .card-contents .card-position {
+  display: inline-block;
+  vertical-align: middle;
+  width: 288px;
+  margin-top: -2px;
+  margin-left: 10px;
+}
+
+.lagarcy-module-card.webzine-view:hover .card-inner {
+  margin-top: 0;
+  box-shadow: none;
+}
+.lagarcy-module-card.webzine-view .card-img {
+  position: relative;
+  overflow: hidden;
+  width: 138px;
+  height: 104px;
+  border-radius: 4px;
+  border: solid 1px #e5e5e5;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+}
+.lagarcy-module-card.webzine-view .card-img .lagarcy-element-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  width: 24px;
+  height: 24px;
+}
+.lagarcy-module-card.webzine-view .card-img .lagarcy-element-icon.ic-pick-round {
+  left: inherit;
+  bottom: inherit;
+  top: 12px;
+  right: 12px;
+}
+.lagarcy-module-card.webzine-view .card-img img {
+  width: 100% !important;
+  height: auto;
+}
+.lagarcy-module-card.webzine-view .card-img .lagarcy-element-count {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  z-index: 1;
+}
+.lagarcy-module-card.webzine-view .card-img .lagarcy-element-count::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  display: block;
+  background: #000;
+  opacity: 0.6;
+  z-index: -1;
+}
+.lagarcy-module-card.webzine-view .subject-inner {
+  /* 
+  position: absolute;
+  top: 8px;
+  left: 154px;
+  right: 16px; 
+  */
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+  height: auto;
+  max-height: 40px;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 8px;
+  display: -webkit-box; /* 멀티라인 */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-wrap: break-word; /* 말줄임 */
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+.lagarcy-module-card.webzine-view .subject-inner .subject-txt {
+  display: block;
+  font-weight: 700;
+  color: #333;
+  line-height: normal;
+  font-size: 14px;
+  text-align: left;
+}
+.lagarcy-module-card.webzine-view .card-tool {
+  position: relative;
+}
+.lagarcy-module-card.webzine-view .card-tool::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.lagarcy-module-card.webzine-view .user-link {
+  display: table;
+  padding-left: 0;
+  width: auto;
+  float: left;
+}
+.lagarcy-module-card.webzine-view .user-link .time-date {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  font-size: 12px;
+  line-height: normal;
+  color: #aaa;
+  margin-left: 16px;
+  position: relative;
+}
+.lagarcy-module-card.webzine-view .user-link .time-date::after {
+  content: '';
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: #999;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  transform: translateX(-50%);
+}
+.lagarcy-module-card.webzine-view .user-link .lagarcy-module-profile {
+  line-height: normal;
+  margin-left: 0;
+}
+.lagarcy-module-card.webzine-view .profile-content {
+  position: relative;
+  display: table-cell;
+  color: #aaa;
+  line-height: normal;
+}
+.lagarcy-module-card.webzine-view .profile-content .profile-name {
+  width: auto;
+  font-size: 13px;
+  color: #aaa;
+  vertical-align: top;
+  line-height: normal;
+}
+.lagarcy-module-card.webzine-view .card-info {
+  display: table;
+  font-size: 13px;
+  color: #999;
+  float: right;
+  padding: 0;
+}
+.lagarcy-module-card.webzine-view .card-info .time-date {
+  display: table-cell;
+  position: relative;
+  display: inline-block;
+  padding-right: 9px;
+  margin-right: 9px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.lagarcy-module-card.webzine-view .card-info .time-date:after {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  content: '';
+  display: block;
+  width: 1px;
+  height: 10px;
+  background-color: #d8d8d8;
+}
+.lagarcy-module-card.webzine-view .card-info .count {
+  display: table-cell;
+  display: inline-block;
+  vertical-align: top;
+}
+.lagarcy-module-card.webzine-view .card-info .count .lagarcy-element-icon.ic-view {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+}
+.lagarcy-module-card.webzine-view .user-link .lagarcy-module-dropdown {
+  max-width: 172px;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  z-index: 10;
+}
+
+.lagarcy-module-card.webzine-view.content-half {
+  height: 92px;
+}
+.lagarcy-module-card.webzine-view.content-half .card-inner {
+  height: 92px;
+}
+.lagarcy-module-card.webzine-view.content-half .card-img {
+  width: 122px;
+  height: 92px;
+}
+
+/* card-list */
+.lagarcy-module-card-list {
+  width: 100%;
+}
+.lagarcy-module-card-list.line-bottom {
+  padding-top: 16px;
+  border-bottom: 1px solid #ededed;
+}
+.lagarcy-module-card-list:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.lagarcy-module-card-list .lagarcy-module-card {
+  height: 284px;
+  float: left;
+  margin: 0 16px 16px 0;
+}
+.lagarcy-module-card-list.group-col2 .lagarcy-module-card {
+  width: 214px;
+  height: 284px;
+}
+.lagarcy-module-card-list.group-col2 > .lagarcy-module-card:nth-child(2n) {
+  margin-right: 0;
+}
+.lagarcy-module-card-list.group-col4 > .lagarcy-module-card:nth-child(4n) {
+  margin-right: 0;
+}
+.lagarcy-module-card-list.group-col2 .card-img {
+  width: 214px;
+}
+
+/* basic skeleton S */
+.skeleton .skeleton-content {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background: #f4f4f7;
+}
+/* 
+.skeleton .skeleton-content::after {
+  content: '';
+  width: 16px;
+  height: 8px;
+  display: block;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+ */
+.lagarcy-module-card.skeleton {
+  height: 254px;
+}
+.lagarcy-module-card.skeleton .card-inner {
+  min-height: 254px;
+  box-shadow: none;
+  border: 1px solid #f4f4f7;
+}
+.lagarcy-module-card.skeleton:hover .card-inner {
+  margin-top: 0;
+  box-shadow: none;
+}
+.lagarcy-module-card.skeleton .card-img .skeleton-content {
+  /* width: 216px; */
+  height: 162px;
+}
+.lagarcy-module-card.skeleton .card-img .skeleton-content::after {
+  content: none;
+}
+.lagarcy-module-card.skeleton .subject-inner {
+}
+.lagarcy-module-card.skeleton .subject-inner .skeleton-line:first-of-type {
+}
+.lagarcy-module-card.skeleton .subject-inner .skeleton-line:last-of-type {
+  margin-top: 8px;
+}
+.lagarcy-module-card.skeleton .subject-inner .skeleton-line .skeleton-content::after {
+  content: none;
+}
+.lagarcy-module-card.skeleton .user-link {
+  padding: 0 12px;
+}
+.lagarcy-module-card.skeleton .user-link .skeleton-content {
+  margin-top: -14px;
+}
+.lagarcy-module-card.skeleton .user-link .skeleton-content::after {
+  content: none;
+}
+.lagarcy-module-card.skeleton .card-info {
+  display: block;
+}
+.lagarcy-module-card.skeleton .card-info .skeleton-content::after {
+  content: none;
+}
+.lagarcy-module-card.skeleton .card-img {
+  position: relative;
+  padding: 0;
+  -webkit-animation-name: skeletonAnimate;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(deg), color-stop(0, red), color-stop(0.15, orange), color-stop(0.3, yellow), color-stop(0.45, green), color-stop(0.6, blue), color-stop(0.75, indigo), color-stop(0.8, violet), to(red));
+  background-image: -webkit-linear-gradient(135deg, red 0%, orange 15%, yellow 30%, green 45%, blue 60%, indigo 75%, violet 80%, red 100%);
+  background-repeat: repeat;
+  background-size: 50% auto;
+}
+.lagarcy-module-card.skeleton .card-img div {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderSkeleton;
+  -webkit-animation-timing-function: linear;
+  background: #f6f7f8;
+  background-image: -webkit-gradient(linear, left center, right center, from(#f6f7f8), color-stop(0.2, #edeef1), color-stop(0.4, #f6f7f8), to(#f6f7f8));
+  background-image: -webkit-linear-gradient(left, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 162px;
+  height: 8px;
+  position: relative;
+}
+.lagarcy-module-card.skeleton .subject-inner .skeleton-line {
+  position: relative;
+  padding: 0;
+  -webkit-animation-name: skeletonAnimate;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(deg), color-stop(0, red), color-stop(0.15, orange), color-stop(0.3, yellow), color-stop(0.45, green), color-stop(0.6, blue), color-stop(0.75, indigo), color-stop(0.8, violet), to(red));
+  background-image: -webkit-linear-gradient(135deg, red 0%, orange 15%, yellow 30%, green 45%, blue 60%, indigo 75%, violet 80%, red 100%);
+  background-repeat: repeat;
+  background-size: 50% auto;
+}
+.lagarcy-module-card.skeleton .subject-inner .skeleton-line div {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderSkeleton;
+  -webkit-animation-timing-function: linear;
+  background: #f6f7f8;
+  background-image: -webkit-gradient(linear, left center, right center, from(#f6f7f8), color-stop(0.2, #edeef1), color-stop(0.4, #f6f7f8), to(#f6f7f8));
+  background-image: -webkit-linear-gradient(left, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 162px;
+  height: 8px;
+  position: relative;
+}
+.lagarcy-module-card.skeleton .user-link .skeleton-line {
+  position: relative;
+  padding: 0;
+  -webkit-animation-name: skeletonAnimate;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(deg), color-stop(0, red), color-stop(0.15, orange), color-stop(0.3, yellow), color-stop(0.45, green), color-stop(0.6, blue), color-stop(0.75, indigo), color-stop(0.8, violet), to(red));
+  background-image: -webkit-linear-gradient(135deg, red 0%, orange 15%, yellow 30%, green 45%, blue 60%, indigo 75%, violet 80%, red 100%);
+  background-repeat: repeat;
+  background-size: 50% auto;
+}
+.lagarcy-module-card.skeleton .user-link .skeleton-line div {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderSkeleton;
+  -webkit-animation-timing-function: linear;
+  background: #f6f7f8;
+  background-image: -webkit-gradient(linear, left center, right center, from(#f6f7f8), color-stop(0.2, #edeef1), color-stop(0.4, #f6f7f8), to(#f6f7f8));
+  background-image: -webkit-linear-gradient(left, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 162px;
+  height: 8px;
+  position: relative;
+}
+.lagarcy-module-card.skeleton .card-info .skeleton-line {
+  position: relative;
+  padding: 0;
+  -webkit-animation-name: skeletonAnimate;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(deg), color-stop(0, red), color-stop(0.15, orange), color-stop(0.3, yellow), color-stop(0.45, green), color-stop(0.6, blue), color-stop(0.75, indigo), color-stop(0.8, violet), to(red));
+  background-image: -webkit-linear-gradient(135deg, red 0%, orange 15%, yellow 30%, green 45%, blue 60%, indigo 75%, violet 80%, red 100%);
+  background-repeat: repeat;
+  background-size: 50% auto;
+}
+.lagarcy-module-card.skeleton .card-info .skeleton-line div {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderSkeleton;
+  -webkit-animation-timing-function: linear;
+  background: #f6f7f8;
+  background-image: -webkit-gradient(linear, left center, right center, from(#f6f7f8), color-stop(0.2, #edeef1), color-stop(0.4, #f6f7f8), to(#f6f7f8));
+  background-image: -webkit-linear-gradient(left, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 162px;
+  height: 8px;
+  position: relative;
+}
+@-webkit-keyframes placeholderSkeleton {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+@-webkit-keyframes skeletonAnimate {
+  from {
+    background-position: top left;
+  }
+  to {
+    background-position: top right;
+  }
+}
+/* basic skeleton E */
+
+/* Card best banner view skeleton S */
+.lagarcy-module-card.banner-view.skeleton {
+  border: 0;
+}
+.lagarcy-module-card.banner-view.skeleton::after {
+  content: none;
+}
+.lagarcy-module-card.banner-view.skeleton .card-inner .skeleton-line .skeleton-content {
+  width: 444px;
+  height: 334px;
+}
+.lagarcy-module-card.banner-view.skeleton .card-inner .skeleton-line .skeleton-content::after {
+  content: none;
+}
+.lagarcy-module-card.banner-view.skeleton .card-inner .skeleton-line {
+  position: relative;
+  padding: 0;
+  -webkit-animation-name: skeletonAnimate;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(deg), color-stop(0, red), color-stop(0.15, orange), color-stop(0.3, yellow), color-stop(0.45, green), color-stop(0.6, blue), color-stop(0.75, indigo), color-stop(0.8, violet), to(red));
+  background-image: -webkit-linear-gradient(135deg, red 0%, orange 15%, yellow 30%, green 45%, blue 60%, indigo 75%, violet 80%, red 100%);
+  background-repeat: repeat;
+  background-size: 50% auto;
+}
+.lagarcy-module-card.banner-view.skeleton .card-inner .skeleton-line div {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderSkeleton;
+  -webkit-animation-timing-function: linear;
+  background: #f6f7f8;
+  background-image: -webkit-gradient(linear, left center, right center, from(#f6f7f8), color-stop(0.2, #edeef1), color-stop(0.4, #f6f7f8), to(#f6f7f8));
+  background-image: -webkit-linear-gradient(left, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 334px;
+  height: 8px;
+  position: relative;
+}
+@-webkit-keyframes placeholderSkeleton {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+@-webkit-keyframes skeletonAnimate {
+  from {
+    background-position: top left;
+  }
+  to {
+    background-position: top right;
+  }
+}
+/* Card best banner view skeleton E */
+
+/* Card best card view skeleton S */
+.lagarcy-module-card.card-view.skeleton {
+  min-height: 298px;
+}
+.lagarcy-module-card.card-view.skeleton:hover {
+  background: #fff;
+}
+.lagarcy-module-card.card-view.skeleton .card-inner {
+  border: 0;
+}
+.lagarcy-module-card.card-view.skeleton .card-img {
+  width: 228px;
+  height: 216px;
+}
+.lagarcy-module-card.card-view.skeleton .card-img .skeleton-line {
+  widows: 228px;
+  height: 216px;
+}
+.lagarcy-module-card.card-view.skeleton .card-img .skeleton-line .skeleton-content {
+  widows: 228px;
+  height: 216px;
+}
+.lagarcy-module-card.card-view.skeleton .subject-inner {
+  padding: 0 12px;
+}
+.lagarcy-module-card.card-view.skeleton .subject-inner .skeleton-line {
+}
+.lagarcy-module-card.card-view.skeleton .subject-inner .skeleton-line .skeleton-content {
+}
+.lagarcy-module-card.card-view.skeleton .user-link {
+  margin-top: 32px;
+}
+.lagarcy-module-card.card-view.skeleton .user-link .skeleton-line {
+}
+.lagarcy-module-card.card-view.skeleton .user-link .skeleton-line .skeleton-content {
+}
+
+.lagarcy-module-card.card-view.skeleton .card-img .skeleton-line {
+  position: relative;
+  padding: 0;
+  -webkit-animation-name: skeletonAnimate;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(deg), color-stop(0, red), color-stop(0.15, orange), color-stop(0.3, yellow), color-stop(0.45, green), color-stop(0.6, blue), color-stop(0.75, indigo), color-stop(0.8, violet), to(red));
+  background-image: -webkit-linear-gradient(135deg, red 0%, orange 15%, yellow 30%, green 45%, blue 60%, indigo 75%, violet 80%, red 100%);
+  background-repeat: repeat;
+  background-size: 50% auto;
+}
+.lagarcy-module-card.card-view.skeleton .card-img .skeleton-line div {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderSkeleton;
+  -webkit-animation-timing-function: linear;
+  background: #f6f7f8;
+  background-image: -webkit-gradient(linear, left center, right center, from(#f6f7f8), color-stop(0.2, #edeef1), color-stop(0.4, #f6f7f8), to(#f6f7f8));
+  background-image: -webkit-linear-gradient(left, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 216px;
+  height: 8px;
+  position: relative;
+}
+@-webkit-keyframes placeholderSkeleton {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+@-webkit-keyframes skeletonAnimate {
+  from {
+    background-position: top left;
+  }
+  to {
+    background-position: top right;
+  }
+}
+/* Card best card view skeleton E */
+
+/* Card best Webzine view skeleton S */
+.lagarcy-module-card.webzine-view.skeleton {
+  height: auto;
+}
+.lagarcy-module-card.webzine-view.skeleton:after {
+  background: #f4f4f7;
+}
+.lagarcy-module-card.webzine-view.skeleton .card-inner {
+  border: 0;
+  min-height: unset;
+}
+.lagarcy-module-card.webzine-view.skeleton .card-img {
+  border: 0;
+  border-radius: 0;
+}
+.lagarcy-module-card.webzine-view.skeleton .subject-inner {
+  /* margin-top: 16px; */
+}
+.lagarcy-module-card.webzine-view.skeleton .user-link {
+  position: absolute;
+  left: -12px;
+  width: 180px;
+  margin-top: 16px;
+}
+.lagarcy-module-card.webzine-view.skeleton .card-info {
+  position: absolute;
+  width: 60px;
+  bottom: inherit;
+  right: 0;
+}
+/* Card best Webzine view skeleton E */

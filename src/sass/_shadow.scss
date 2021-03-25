@@ -1,1 +1,28 @@
-/* shadow 차장님 작업 주탁드립니다. */
+
+/* shadow */
+$black5:rgba(0,0,0,0.05);
+$black10:rgba(0,0,0,0.1);
+$black15:rgba(0,0,0,0.15);
+$black20:rgba(0,0,0,0.20);
+
+$base : none;
+$shadow-02 :  0px 2px 4px $black5;
+$shadow-04 :  0px 4px 10px $black10;
+$shadow-08 :  0px 8px 24px $black15;
+$shadow-12 :  0px 12px 28px $black20;
+
+.shadow-box-0{
+    box-shadow: $base;
+}
+.shadow-box-2{
+    box-shadow: $shadow-02;
+}
+.shadow-box-4{
+    box-shadow: $shadow-04;
+}
+.shadow-box-8{
+    box-shadow: $shadow-08;
+}
+.shadow-box-12{
+    box-shadow: $shadow-12;
+}

@@ -1,0 +1,112 @@
+/* datepicker custom S */
+#stoveCalendar {
+  width: 296px;
+  border-radius: 4px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  border: solid 1px #999999;
+  overflow: hidden;
+}
+#stoveCalendar .cell:not(.blank):not(.disabled).day:hover,
+#stoveCalendar .cell:not(.blank):not(.disabled).month:hover,
+#stoveCalendar .cell:not(.blank):not(.disabled).year:hover {
+  border: 1px solid #ff5000;
+}
+#stoveCalendar .cell.selected {
+  background: #ff5000;
+  color: #fff;
+}
+#stoveCalendar .cell.selected.highlighted {
+  background: #ff5000;
+  color: #fff;
+}
+/* header S */
+#stoveCalendar .cell.day-header {
+  font-size: 12px;
+  margin-right: -3px;
+}
+#stoveCalendar header span {
+  font-size: 16px;
+  font-weight: 700;
+}
+#stoveCalendar header span {
+  position: relative;
+}
+#stoveCalendar header .prev:after {
+  width: 24px;
+  height: 24px;
+  background: url(../../images/svgnew/ic-direction-left-circle-s24-c999.svg) no-repeat;
+  border: 0;
+  margin: 0;
+}
+#stoveCalendar header .prev:hover::after {
+  content: '';
+  background-color: #e7e7e7;
+  border-radius: 50%;
+}
+#stoveCalendar header .next:after {
+  width: 24px;
+  height: 24px;
+  background: url(../../images/svgnew/ic-direction-right-circle-s24-c999.svg) no-repeat;
+  border: 0;
+  margin: 0;
+}
+#stoveCalendar header .next:hover::after {
+  content: '';
+  background-color: #e7e7e7;
+  border-radius: 50%;
+}
+#stoveCalendar header .prev:not(.disabled):hover,
+#stoveCalendar header .next:not(.disabled):hover,
+#stoveCalendar header .up:not(.disabled):hover {
+  background: rgba(0, 0, 0, 0);
+}
+#stoveCalendar header .prev:after {
+  border-right: 0;
+  margin: 0;
+}
+#stoveCalendar header .next:after {
+  border-left: 0;
+  margin: 0;
+}
+#stoveCalendar header .prev.disabled:after {
+  border-right: 0;
+  margin: 0;
+  opacity: 0.6;
+}
+#stoveCalendar header .next.disabled:after {
+  border-left: 0;
+  margin: 0;
+  opacity: 0.6;
+}
+#stoveCalendar .disabled {
+  cursor: default;
+  pointer-events: none;
+}
+/* header E */
+
+/* cell S */
+#stoveCalendar .cell {
+  width: 42px;
+  height: 40px;
+  line-height: 38px;
+  font-size: 12px;
+  margin-right: -3px;
+}
+/* cell E */
+
+/* cell month S */
+#stoveCalendar .cell.month {
+  width: 33.33%;
+  line-height: 60px;
+  height: 60px;
+}
+/* cell month E */
+
+#stoveCalendar.calendar-pos {
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* datepicker custom E */

@@ -1,0 +1,953 @@
+.lagarcy-module-editor {
+}
+.lagarcy-module-editor ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.lagarcy-module-editor.editor-linkarea::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: block;
+  cursor: pointer;
+}
+
+.lagarcy-module-editor .orange {
+  color: #ff5000;
+}
+.lagarcy-module-editor .write-form {
+  margin-top: 16px;
+}
+.lagarcy-module-editor .write-form::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.lagarcy-module-editor .write-form .write-form-left {
+  float: left;
+}
+.lagarcy-module-editor .write-form .write-form-left .lagarcy-element-btn {
+  margin-right: 12px;
+}
+.lagarcy-module-editor .write-form .write-form-right {
+  float: right;
+}
+.lagarcy-module-editor .write-form .write-form-right .lagarcy-element-btn {
+  margin-left: 12px;
+}
+.lagarcy-module-editor .write-form .lagarcy-element-select.select-base {
+  min-width: 216px;
+  margin-left: 10px;
+}
+.lagarcy-module-editor .write-form .lagarcy-element-select.select-base:first-of-type {
+  margin-left: 0;
+}
+/* 
+.lagarcy-module-editor .write-form .lagarcy-module-editor {
+  margin: 0px !important;
+} 
+*/
+
+/* 글쓰기 입력 영역 */
+.lagarcy-module-editor .write-edit-area {
+  min-height: 420px;
+  padding: 24px;
+}
+.lagarcy-module-editor .write-select-area {
+  padding: 12px;
+  border: 1px solid #dbdbdb;
+  border-top: 0;
+  box-sizing: border-box;
+  text-align: right;
+}
+.lagarcy-module-editor .write-select-area p {
+  font-size: 12px;
+  color: #999;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px 12px 6px 0;
+}
+.lagarcy-module-editor .write-select-area .lagarcy-element-btn {
+  vertical-align: top;
+}
+.lagarcy-module-editor .write-setting-area {
+  position: relative;
+  padding: 12px 16px;
+  border: 1px solid #dbdbdb;
+  border-top: 0;
+  box-sizing: border-box;
+  background: #fafafa;
+}
+.lagarcy-module-editor .write-setting-area .write-setting-section {
+  padding-top: 12px;
+}
+.lagarcy-module-editor .write-setting-area .write-setting-section:first-of-type {
+  padding-top: 0;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-header {
+  position: relative;
+  padding-bottom: 12px;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-header .tit {
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-header .tit-desc {
+  font-size: 11px;
+  color: #999;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.lagarcy-module-editor .write-setting-area .byte {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #999;
+}
+.lagarcy-module-editor .write-setting-area .byte .byte-count {
+  color: #ff5000;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-header .desc {
+  font-size: 12px;
+  color: #666;
+  padding-top: 8px;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-body {
+  position: relative;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-body::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-body .attach-image {
+  margin-bottom: 1px;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-body .attach-image:hover .image-area::after {
+  display: block;
+}
+
+.lagarcy-module-editor .write-setting-area .setting-section-body .lagarcy-element-checkbox .checkbox-input ~ label {
+  font-size: 12px;
+  color: #666;
+  padding-left: 26px;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-body .lagarcy-element-checkbox {
+  margin-left: 26px;
+  vertical-align: middle;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-body .lagarcy-element-checkbox:first-of-type {
+  margin-left: 0;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-body .lagarcy-element-select:first-of-type {
+  margin: 0 0 0 8px;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-body .lagarcy-element-select {
+  min-width: initial;
+  margin: 0 0 0 4px;
+  vertical-align: middle;
+  font-size: 0;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-body .lagarcy-element-input.input-datepicker {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-body .desc {
+  font-size: 11px;
+  color: #999;
+  padding: 12px 0 0 24px;
+}
+.lagarcy-module-editor .write-setting-area .editor-myindie {
+  margin: 12px 8px;
+  background: #fff;
+}
+.lagarcy-module-editor .write-setting-area .info-txt {
+  font-size: 13px;
+  font-weight: normal;
+  color: #666;
+  text-align: center;
+  padding: 10px 0;
+}
+.lagarcy-module-editor .write-setting-area .info-txt a {
+  color: #ff5000;
+}
+.lagarcy-module-editor .write-setting-area .info-txt a:hover {
+  text-decoration: underline;
+}
+/*
+.lagarcy-module-editor .write-setting-area .setting-section-body .lagarcy-element-input.input-base.base-square {
+  width: 140px;
+  height: 32px;
+  padding: 0 36px 0 16px;
+  margin-left: 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-body div .lagarcy-element-icon.ic-calendar {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+}
+*/
+.lagarcy-module-editor .write-setting-area .setting-section-body .lagarcy-element-radio {
+  margin-left: 20px;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-body .lagarcy-element-radio .radio-input ~ label {
+  padding-left: 26px;
+}
+.lagarcy-module-editor .write-setting-area .setting-section-body .lagarcy-element-radio:first-of-type {
+  margin-left: 0;
+}
+
+.lagarcy-module-editor .write-tag-area {
+  padding: 12px;
+  line-height: 30px;
+  border: 1px solid #dbdbdb;
+  border-top: 0;
+  box-sizing: border-box;
+}
+.lagarcy-module-editor .write-tag-area .lagarcy-element-tag {
+  margin-left: 4px;
+  vertical-align: middle;
+}
+.lagarcy-module-editor .write-tag-area .lagarcy-element-btn {
+  vertical-align: middle;
+  margin: 4px;
+}
+
+/* 파일첨부 */
+.lagarcy-module-attached {
+  position: relative;
+  border: 1px solid #ddd;
+}
+/* 글쓰기 */
+/* header */
+.lagarcy-module-attached.write .attached-list-header {
+  position: relative;
+  padding: 12px 24px;
+  background-color: #f7f7f7;
+}
+.lagarcy-module-attached.write .attached-list-header .file-number {
+  font-size: 12px;
+  color: #333;
+}
+.lagarcy-module-attached.write .attached-list-header .file-number .lagarcy-element-icon.ic-attach {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.lagarcy-module-attached.write .attached-list-header .file-number strong {
+  font-weight: normal;
+  color: #ff5000;
+  margin-left: 4px;
+}
+.lagarcy-module-attached.write .attached-list-header .attach-file-size {
+  position: absolute;
+  right: 23px;
+  top: 19px;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  font-size: 12px;
+}
+.lagarcy-module-attached.write .attached-list-header .attach-file-size .file-size-counter {
+  color: #ff5000;
+}
+.lagarcy-module-attached.write .attached-list-header .attach-file-size .file-size-total {
+  position: relative;
+  padding-left: 8px;
+  color: #999;
+}
+.lagarcy-module-attached.write .attached-list-header .attach-file-size .file-size-total:before {
+  content: '/';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  color: #a3a3a3;
+}
+/* body */
+.lagarcy-module-attached.write .attached-list-contents {
+  position: relative;
+  border-top: 1px solid #ddd;
+}
+.lagarcy-module-attached.write .attached-list-contents::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.lagarcy-module-attached.write .attached-list-contents ul .file {
+  position: relative;
+  float: left;
+  width: 100%;
+  font-size: 14px;
+  color: #000;
+  line-height: 42px;
+  font-weight: normal;
+  margin-top: inherit;
+  border-top: 1px solid #d9d9d9;
+}
+.lagarcy-module-attached.write .attached-list-contents ul .file:first-of-type {
+  border-top: 0;
+}
+.lagarcy-module-attached.write .attached-list-contents ul .file:hover {
+  background-color: rgba(0, 20, 61, 0.08);
+}
+.lagarcy-module-attached.write .attached-list-contents ul .file .file-name {
+  display: inline-block;
+  width: calc(100% - 170px);
+  padding-left: 24px;
+  padding-right: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+  font-size: 12px;
+  color: #333;
+}
+.lagarcy-module-attached.write .attached-list-contents ul .file .file-size {
+  float: right;
+  margin-right: 50px;
+  font-size: 13px;
+  color: #333;
+}
+.lagarcy-module-attached.write .attached-list-contents ul .file .file-delete {
+  position: absolute;
+  top: 12px;
+  right: 24px;
+}
+.lagarcy-module-attached.write .attached-list-contents ul .file:hover .file-delete .lagarcy-element-icon.ic-close-round {
+  display: block;
+}
+.lagarcy-module-attached.write .attached-list-contents .file-delete {
+  display: none;
+}
+.lagarcy-module-attached.write .attached-list-contents ul .file:hover .file-delete {
+  display: block;
+}
+/* footer */
+.lagarcy-module-attached.write .attached-list-footer {
+  position: relative;
+  padding: 12px 24px;
+  border-top: 1px solid #e7e7e7;
+}
+.lagarcy-module-attached.write .attached-list-footer .size {
+  padding-right: 70px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #a3a3a3;
+}
+.lagarcy-module-attached.write .attached-list-footer .delete {
+  position: absolute;
+  right: 24px;
+  top: 12px;
+  padding: 0;
+  text-decoration: underline;
+  font-size: 12px;
+  color: #a3a3a3;
+  line-height: 18px;
+  font-weight: 700;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* 상세보기 */
+.lagarcy-module-attached.detail .attached-list-header {
+  position: relative;
+  padding: 12px 24px;
+  background-color: #f7f7f7;
+}
+.lagarcy-module-attached.detail .attached-list-header .file-number {
+  font-size: 12px;
+  color: #333;
+}
+.lagarcy-module-attached.detail .attached-list-header .file-number .lagarcy-element-icon.ic-attach {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.lagarcy-module-attached.detail .attached-list-header .file-number strong {
+  font-weight: normal;
+  color: #ff5000;
+  margin-left: 4px;
+}
+.lagarcy-module-attached.detail .attached-list-header .attach-file-size {
+  position: absolute;
+  right: 23px;
+  top: 19px;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  font-size: 12px;
+}
+.lagarcy-module-attached.detail .attached-list-header .attach-file-size .file-size-counter {
+  color: #ff5000;
+}
+.lagarcy-module-attached.detail .attached-list-header .attach-file-size .file-size-total {
+  position: relative;
+  padding-left: 8px;
+  color: #999;
+}
+.lagarcy-module-attached.detail .attached-list-header .attach-file-size .file-size-total:before {
+  content: '/';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  color: #a3a3a3;
+}
+.lagarcy-module-attached.detail .attached-list-header .file-action {
+  position: absolute;
+  top: 24px;
+  right: 22px;
+}
+.lagarcy-module-attached.detail .attached-list-header .file-action.active .lagarcy-element-icon {
+  transform: rotate(180deg);
+}
+/* body */
+.lagarcy-module-attached.detail .attached-list-contents {
+  position: relative;
+  border-top: 1px solid #ddd;
+}
+.lagarcy-module-attached.detail .attached-list-contents::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.lagarcy-module-attached.detail .attached-list-contents ul .file {
+  position: relative;
+  float: left;
+  width: 100%;
+  font-size: 14px;
+  color: #000;
+  line-height: 42px;
+  font-weight: normal;
+  margin-top: inherit;
+  border-top: 1px solid #d9d9d9;
+}
+.lagarcy-module-attached.detail .attached-list-contents ul .file:first-of-type {
+  border-top: 0;
+}
+.lagarcy-module-attached.detail .attached-list-contents ul .file:hover {
+  background-color: rgba(0, 20, 61, 0.08);
+}
+.lagarcy-module-attached.detail .attached-list-contents ul .file .file-name {
+  display: inline-block;
+  width: calc(100% - 170px);
+  padding-left: 24px;
+  padding-right: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+  font-size: 12px;
+  color: #333;
+}
+.lagarcy-module-attached.detail .attached-list-contents ul .file .file-size {
+  float: right;
+  margin-right: 50px;
+  font-size: 13px;
+  color: #333;
+}
+.lagarcy-module-attached.detail .attached-list-contents ul .file .file-delete {
+  position: absolute;
+  top: 14px;
+  right: 24px;
+}
+.lagarcy-module-attached.detail .attached-list-contents ul .file:hover .file-delete .lagarcy-element-icon.ic-close-round {
+  display: block;
+}
+.lagarcy-module-attached.detail .attached-list-contents .file-delete {
+  display: none;
+}
+.lagarcy-module-attached.detail .attached-list-contents ul .file:hover .file-delete {
+  display: block;
+}
+.lagarcy-module-attached.detail .attached-list-contents ul .file .file-download {
+  position: absolute;
+  top: 15px;
+  right: 24px;
+}
+/* footer */
+.lagarcy-module-attached.detail .attached-list-footer {
+  position: relative;
+  padding: 12px 24px;
+  border-top: 1px solid #e7e7e7;
+}
+.lagarcy-module-attached.detail .attached-list-footer .size {
+  padding-right: 70px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #a3a3a3;
+}
+.lagarcy-module-attached.detail .attached-list-footer .delete {
+  position: absolute;
+  right: 24px;
+  top: 12px;
+  padding: 0;
+  text-decoration: underline;
+  font-size: 12px;
+  color: #a3a3a3;
+  line-height: 18px;
+  font-weight: 700;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+}
+/* 파일첨부 */
+
+/* 글쓰기 기능 공통 */
+.lagarcy-module-editor {
+  position: relative;
+}
+
+/* 기사단가입조건 */
+.lagarcy-module-editor.editor-join {
+  margin: 0px 0 -1px !important;
+  padding: 16px 16px 0;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+}
+.editor-join {
+  position: relative;
+}
+.editor-join .lagarcy-module-editor-container {
+  position: relative;
+  width: 480px;
+  box-sizing: initial;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+.join-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  line-height: 20px;
+  font-weight: 700;
+  border: 1px solid #deebf8;
+  border-radius: 4px;
+  background-color: #f7fbff;
+}
+.join-btn:hover {
+  border: solid 1px #d8e6f4;
+  background-color: #f2f7fb;
+}
+.join-btn span {
+  vertical-align: middle;
+}
+.editor-join .join-header {
+  position: relative;
+  padding: 14px 16px;
+  background: #6a5df8;
+}
+.editor-join .join-header .tit {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+.editor-join .join-header .lagarcy-element-icon.ic-close-wh {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+}
+.editor-join .join-body {
+  padding: 24px 24px 16px;
+  background: #fafafa;
+}
+.editor-join .join-body::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.editor-join .join-body ul {
+  width: 306px;
+  float: left;
+  margin-right: 24px;
+}
+.editor-join .join-body ul li {
+  font-size: 13px;
+  padding: 10px 0 8px;
+  border-top: 1px solid #eee;
+}
+.editor-join .join-body ul li:first-of-type {
+  border-top: 0;
+}
+.editor-join .join-body ul li .tit {
+  color: #999;
+}
+.editor-join .join-body ul li .desc {
+  color: #333;
+}
+.editor-join .join-body .join-image {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  float: right;
+}
+.editor-join .join-body .join-image img {
+  width: 100%;
+}
+.editor-join .join-footer {
+  padding: 24px;
+  background: #fafafa;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+.editor-join .join-footer button {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* 설문조사 */
+.editor-survey {
+  position: relative;
+  margin: 8px 0;
+}
+.editor-survey a {
+  display: block;
+}
+.editor-survey .lagarcy-module-editor-container {
+  position: relative;
+  /* width: 480px; */
+  overflow: hidden;
+}
+.editor-survey .survey-header {
+  position: relative;
+  padding: 22px 16px;
+  border: solid 1px #dddddd;
+  background-color: #fafafa;
+}
+.editor-survey .survey-header .lagarcy-element-icon.ic-survey {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+}
+.editor-survey .survey-header p {
+  font-size: 14px;
+  color: #333;
+  padding-left: 60px;
+  line-height: 18px;
+  text-align: left !important;
+}
+.editor-survey .survey-header p strong {
+  font-weight: 700;
+  color: #6a5df8;
+}
+.editor-survey .survey-header p span {
+  font-size: 12px;
+  color: #999;
+}
+.editor-survey .survey-header p:first-of-type {
+  padding-top: 0;
+}
+.editor-survey .survey-body {
+  background: #fff;
+  border: solid 1px #dddddd;
+  border-top: 0;
+  border-bottom: 0;
+}
+.editor-survey .survey-body .tit {
+  font-size: 12px;
+  color: #333;
+  padding: 20px 20px 8px 0;
+  margin: 0 24px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.editor-survey .survey-body ul {
+}
+.editor-survey .survey-body ul li {
+  position: relative;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.editor-survey .survey-body ul li.active .progress-status .status-percent::before {
+  display: inline-block;
+}
+.editor-survey .survey-body ul li .lagarcy-element-radio .radio-input ~ label {
+  display: inline-block;
+  width: 310px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+  font-size: 12px;
+  color: #333;
+}
+.editor-survey .survey-body ul li .lagarcy-element-checkbox-round .checkbox-input-round ~ label {
+  display: inline-block;
+  width: 310px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+  font-size: 12px;
+  color: #333;
+}
+.editor-survey .survey-body ul li .progress-status {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-size: 12px;
+  color: #333;
+}
+.editor-survey .survey-body ul li .lagarcy-element-radio.image-img ~ .progress-status {
+  top: 26px;
+}
+
+.editor-survey .survey-body ul li .progress-status .status-percent {
+  color: #999;
+}
+.editor-survey .survey-body ul li .progress-status .status-percent::before {
+  content: '';
+  display: none;
+  width: 16px;
+  height: 16px;
+  background: url(../../images/svg/ic-check.svg);
+  vertical-align: sub;
+  margin-right: 4px;
+}
+.editor-survey .survey-body ul li .progress-status .status-counter {
+  color: #6a5df8;
+}
+.editor-survey .survey-body ul li .progress-status.disabled .status-counter {
+  color: #999;
+}
+
+.editor-survey .survey-body ul li .progress-status .status-counter::before {
+  content: '/';
+  color: #999;
+  padding: 0 4px 0 2px;
+}
+.editor-survey .survey-body ul li .progress-bar {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background: #ddd;
+  margin-top: 8px;
+}
+.editor-survey .survey-body ul li .progress-bar .progress-charge {
+  height: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ff5000;
+}
+
+.editor-survey .survey-body ul li .link {
+}
+.editor-survey .survey-body ul li .link a {
+  display: block;
+  font-size: 12px;
+  color: #999999;
+}
+
+.editor-survey .survey-footer {
+  padding: 16px 0;
+  background: #fff;
+  border: solid 1px #dddddd;
+  border-top: 0;
+  text-align: center;
+  line-height: 32px;
+}
+.editor-survey .survey-footer .lagarcy-element-btn.btn-gray-line {
+  vertical-align: top;
+}
+.editor-survey .survey-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* 음악공유 */
+.editor-music {
+  position: relative;
+  margin: 8px 0;
+}
+.editor-music:hover .music-close {
+  display: block;
+}
+.editor-music .lagarcy-module-editor-container {
+  position: relative;
+  border: solid 1px #dddddd;
+  background-color: #ffffff;
+  overflow: hidden;
+  padding: 24px 24px 16px;
+}
+.editor-music .music-header {
+}
+.editor-music .music-body {
+  position: relative;
+  vertical-align: top;
+}
+.editor-music .music-body .music-info {
+  position: relative;
+  overflow: hidden;
+  /* display: table; */
+  width: 100%;
+  border-collapse: separate;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+.editor-music .music-body .music-info:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.editor-music .music-body .music-info .info-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.editor-music .music-body .music-info .info-image-wrapper .info-image {
+  position: relative;
+  width: 192px;
+  height: 108px;
+  overflow: hidden;
+}
+.editor-music .music-body .music-info .info-image-wrapper .info-image img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+.editor-music .music-body .music-info .info-image-wrapper .info-image .thumb-area {
+  height: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 0;
+}
+.editor-music .music-body .music-info .info-image-wrapper .info-image .thumb-area .thumb-icon {
+  display: inline-block;
+  margin-top: 26px;
+  vertical-align: top;
+  width: 56px;
+  height: 56px;
+}
+.editor-music .music-body .music-info .info-image-wrapper .info-image .thumb-area .thumb-profile {
+  vertical-align: top;
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  margin-top: 26px;
+  border-radius: 56px;
+  overflow: hidden;
+}
+.editor-music .music-body .music-info .info-image-wrapper .info-image .thumb-area .thumb-icon + .thumb-profile {
+  margin-left: 20px;
+}
+
+.editor-music .music-body .music-info .info-contents {
+  height: 108px;
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 212px;
+}
+.editor-music .music-body .music-info .info-contents .contents-tit {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+.editor-music .music-body .music-info .info-contents .contents-tit .lagarcy-element-icon {
+  margin-right: 4px;
+}
+.editor-music .music-body .music-info .info-contents .contents-desc {
+  font-size: 14px;
+  font-weight: 700;
+  color: #999;
+}
+.editor-music .music-body .music-info .info-contents .contents-tag {
+  padding: 8px 0;
+}
+.editor-music .music-body .music-info .info-contents .contents-tag .lagarcy-element-tag.tag-gray {
+  background: #666;
+  margin-right: 4px;
+  line-height: 20px;
+  padding: 0 8px;
+}
+.editor-music .music-body .music-info .info-contents .contents-tag .lagarcy-element-tag.tag-gray .tag-txt {
+  font-size: 12px;
+  color: #fff;
+}
+.editor-music .music-body .music-info .info-contents .lagarcy-element-tag.tag-gray:first-of-type {
+  margin-left: 0;
+}
+.editor-music .music-body .music-info .info-contents .contents-note {
+  font-size: 12px;
+  font-weight: normal;
+  color: #999;
+}
+.editor-music .music-body .music-info .info-contents .contents-note .lagarcy-element-icon.ic-note {
+  margin-right: 4px;
+}
+.editor-music .music-footer {
+}
+.editor-music .music-ui {
+  width: 100%;
+  height: 52px;
+  border-radius: 52px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 52px;
+  text-align: center;
+}
+.editor-music .music-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+/* loading */
+.editor-loading {
+  text-align: center;
+  margin: 8px 0;
+}
+
+/* 이미지 */
+.editor-image {
+  position: relative;
+  margin-top: 8px;
+}
+.editor-image .image-item {
+  display: inline-block;
+  max-width: 864px;
+  min-width: 320px;
+}
+.editor-image .image-item img {
+  width: 100%;
+}
+
+/* 태그 */
+.editor-tag {
+  margin: 8px 0;
+}
+.editor-tag .lagarcy-element-btn {
+  margin-right: 8px;
+  margin-bottom: 0;
+}

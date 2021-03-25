@@ -1,0 +1,31 @@
+{% extends "src/layout/guide/guide.njk" %}
+
+{% import "src/module/footer/footer.njk" as footer %}
+
+<!-- styles -->
+{% block styles %}
+{% endblock %}
+
+<!-- styles -->
+{% block content %}
+<!-- [D]   -->
+<div class="guide">
+    <p class="tit"><b>Stove footer Guide</b></p>
+    <p class="desc">
+        게임이용등급 footer 디자인 확인 
+    </p>
+</div>
+<div class="guide-footer">
+    {{ footer.base() }}
+    <br>
+    {{ footer.rating() }}
+</div>
+
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %} 
+{% endblock %}

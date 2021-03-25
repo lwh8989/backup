@@ -549,20 +549,20 @@ $bluegray-750: #33363d;
 $bluegray-800: #2a2c33;
 $bluegray-850: #1f2128;
 $bluegray-900: #14151a;
-$black-alpha5: rgba(#ffffff, $alpha: 0.05);
-$black-alpha8: rgba(#ffffff, $alpha: 0.08);
-$black-alpha10: rgba(#ffffff, $alpha: 0.1);
-$black-alpha15: rgba(#ffffff, $alpha: 0.15);
-$black-alpha20: rgba(#ffffff, $alpha: 0.2);
-$black-alpha25: rgba(#ffffff, $alpha: 0.25);
-$black-alpha30: rgba(#ffffff, $alpha: 0.3);
-$black-alpha40: rgba(#ffffff, $alpha: 0.4);
-$black-alpha50: rgba(#ffffff, $alpha: 0.5);
-$black-alpha60: rgba(#ffffff, $alpha: 0.6);
-$black-alpha70: rgba(#ffffff, $alpha: 0.7);
-$black-alpha75: rgba(#ffffff, $alpha: 0.75);
-$black-alpha80: rgba(#ffffff, $alpha: 0.8);
-$black-alpha90: rgba(#ffffff, $alpha: 0.9);
+$black-alpha5: rgba(#000000, $alpha: 0.05);
+$black-alpha8: rgba(#000000, $alpha: 0.08);
+$black-alpha10: rgba(#000000, $alpha: 0.1);
+$black-alpha15: rgba(#000000, $alpha: 0.15);
+$black-alpha20: rgba(#000000, $alpha: 0.2);
+$black-alpha25: rgba(#000000, $alpha: 0.25);
+$black-alpha30: rgba(#000000, $alpha: 0.3);
+$black-alpha40: rgba(#000000, $alpha: 0.4);
+$black-alpha50: rgba(#000000, $alpha: 0.5);
+$black-alpha60: rgba(#000000, $alpha: 0.6);
+$black-alpha70: rgba(#000000, $alpha: 0.7);
+$black-alpha75: rgba(#000000, $alpha: 0.75);
+$black-alpha80: rgba(#000000, $alpha: 0.8);
+$black-alpha90: rgba(#000000, $alpha: 0.9);
 $black: #000000;
 $system-error: #e53935;
 $system-warning: #ef9500;
@@ -1515,10 +1515,11 @@ $colorDatabasePalette: (
     -------------------------------------------------------
     -------------------------------------------------------
 */
+
 /* mixin */
 @mixin cssGnerator($data, $css) {
     @each $name, $color in $data {
-        .#{$name} {
+        .#{"" + $name + ""} {
             #{$css}: $color;
             @content;
         }
@@ -1527,46 +1528,10 @@ $colorDatabasePalette: (
 @mixin dataCssGnerator($data, $css) {
     @each $type in $data {
         @each $name, $color in $type {
-            .#{$name} {
+            .#{"" + $name + ""} {
                 #{$css}: $color;
                 @content;
             }
         }
-    }
-}
-
-html {
-    // UI > Background
-    // @include cssGnerator($colorDatabaseBackground, background-color);
-    // // UI > Border
-    // @include cssGnerator($colorDatabaseBorder, border-color){
-    //     border-width: 1px;
-    //     border-style: solid;
-    // };
-    // // UI > Color
-    // @include cssGnerator($colorDatabaseIconPrimary, color);
-
-    @include dataCssGnerator($colorList, background-color);
-    @include cssGnerator($colorDatabasePalette, background-color);
-    @include cssGnerator($colorDatabasePalettePrimary, background-color);
-
-    // dark mode
-    &.dark,
-    .demo-dark {
-        // UI > Background
-        // @include cssGnerator($colorDatabaseDarkBackground, background-color);
-        // // UI > Border
-        // @include cssGnerator($colorDatabaseDarkBorder, border-color){
-        //     border-width: 1px;
-        //     border-style: solid;
-        // };
-        // // UI > Color
-        // @include cssGnerator($colorDatabaseIconPrimary, color);
-
-        @include dataCssGnerator($colorListDark, background-color);
-        @include cssGnerator(
-            $colorDatabasePalettePrimaryDark,
-            background-color
-        );
     }
 }

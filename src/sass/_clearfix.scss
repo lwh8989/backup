@@ -1,1 +1,29 @@
-/* clear-fix 차장님 작업 부탁드립니다. */
+/* clear-fix mixin에 사용 */
+@mixin clear-fix() {
+    &::after{
+        display: block;
+        clear: both;
+        content: '';
+    }
+}
+@mixin clear-fix-img($top: 0, $left:0, $width:0, $height:0){
+    @include clear-fix;
+    &::after{
+        position: absolute;
+        top: $top;
+        left: $left;
+        width: $width;
+        height: $height;
+    }
+}
+/* 샘플용 element*/
+.element {
+    position: relative;
+    @include clear-fix;
+}
+.element {
+    @include clear-fix-img(0, 0 ,5px ,5px );
+    &::after{
+        background-color: blueviolet;
+    }    
+}

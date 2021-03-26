@@ -6,14 +6,16 @@ $stdsTitle1: 5.4rem;
 $stdsTitle2: 4.2rem;
 $stdsTitle3: 3.2rem;
 $stdsTitle4: 2.4rem;
-$stdsTitle5: 1.8rem;
-$stdsTitle6: 1.6rem;
-$stdsTitle7: 1.4rem;
+$stdsTitle5: 2.0rem;
+$stdsTitle6: 1.8rem;
+$stdsTitle7: 1.6rem;
+$stdsTitle8: 1.4rem;
 
 /* Body */
 $stdsBody1: 1.6rem;
 $stdsBody2: 1.5rem;
 $stdsBody3: 1.4rem;
+$stdsBody4: 1.3rem;
 
 /* Button */
 $stdsButton1: 1.5rem;
@@ -62,6 +64,9 @@ $stdsLineHeightS: 1.4;
 .stds-title7 {
     @include stdsTitle7;
 }
+.stds-title8 {
+    @include stdsTitle8;
+}
 
 /* Body */
 .stds-body1 {
@@ -72,6 +77,9 @@ $stdsLineHeightS: 1.4;
 }
 .stds-body3 {
     @include stdsBody3($weight: normal);
+}
+.stds-body4 {
+    @include stdsBody4($weight: normal);
 }
 
 /* Button */

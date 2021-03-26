@@ -10,8 +10,7 @@ const isProd = process.env.NODE_ENV === "production";
 function getTemplates() {
   return new Promise(function (resolve, reject) {
     glob(
-      // "src/view/**/*.njk",
-      "src/view/index.njk",
+      "src/view/**/*.njk",
       { ignore: "**/_include/**" },
       function (error, files) {
         if (error) {
@@ -33,6 +32,7 @@ function toPlugin(fileName) {
 module.exports = async function () {
   const entryFiles = await getTemplates();
   const templates = entryFiles.map(toPlugin);
+
   const plugins = [...templates];
 
   if (isProd) {
@@ -42,7 +42,8 @@ module.exports = async function () {
   return {
     mode: isProd ? "production" : "development",
     entry: {
-      index: "./src/view/index.njk",
+      html: entryFiles,
+      // index: "./src/view/index.njk",
       core: "./src/sass/core.scss",
     },
     devServer: {
@@ -61,7 +62,7 @@ module.exports = async function () {
             {
               loader: "simple-nunjucks-loader",
               options: {
-                searchPaths: ["./src/view"],
+                // searchPaths: ["./src/view/"],
               },
             },
           ],

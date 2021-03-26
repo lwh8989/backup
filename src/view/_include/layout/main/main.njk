@@ -18,14 +18,14 @@
     <!-- layout.css -->
     <!-- UI.css -->
     <link rel="stylesheet" href="../../../static/icon/stove-font-icon.css">
-    
-<script defer src="../../../core.js"></script><script defer src="../../../main.js"></script></head>
+    {% block styles %}{% endblock %}
+</head>
 <!-- Guide Layout -->
 <body class="layout-guide">
-  
+  {% block content %}{% endblock %}
 
-  
+  {% block dialog %}{% endblock %}
 
-  
+  {% block scripts %}{% endblock %}
 </body>
 </html>

@@ -1,6 +1,6 @@
-{% import "src/view/lagarcy/elements/icon.njk" as icon %}
-{% import "src/view/lagarcy/elements/btn.njk" as btn %}
-{% import "src/view/lagarcy/elements/dropdown.njk" as dropdown %}
+{% import "lagarcy/elements/icon.njk" as icon %}
+{% import "lagarcy/elements/btn.njk" as btn %}
+{% import "lagarcy/elements/dropdown.njk" as dropdown %}
 {% macro checkbox(hasFrame, isShowTooltip, id, txt, name, state, sizeClass, statusClass, noTxt, shapeClass, etcClass, slot, typeTag) %}
   {% if hasFrame %}
     <div class="list-checkbox{% if isShowTooltip %} show-tooltip{% endif %} {{ etcClass }}">

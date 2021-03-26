@@ -1,62 +1,58 @@
 const path = require("path");
-const fs = require('fs');
+const fs = require("fs");
 const glob = require("glob");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const devMode = process.env.NODE_ENV !== "production";
+const isProd = process.env.NODE_ENV === "production";
 
 function getTemplates() {
   return new Promise(function (resolve, reject) {
-    glob("**/!(_*).njk", function (error, files) {
-      if (error) {
-        return reject(error);
+    glob(
+      "src/view/**/*.njk",
+      { ignore: "**/_include/**" },
+      function (error, files) {
+        if (error) {
+          return reject(error);
+        }
+        resolve(files);
       }
-      resolve(files);
-    });
+    );
   });
 }
 
 function toPlugin(fileName) {
   return new HtmlWebpackPlugin({
     template: fileName,
-    filename: fileName.replace(/\.njk$/, ".html"),
-    chunks: [
-      'core',
-      fileName
-        .split("/")
-        .pop()
-        .replace(/\.njk$/, ""),
-    ],
+    filename: fileName.replace(/\.njk$/, ".html").replace("src/view/", ""),
   });
 }
 
 module.exports = async function () {
   const entryFiles = await getTemplates();
   const templates = entryFiles.map(toPlugin);
-  const entry = entryFiles.reduce((files, filePath) => {
-    const dir = path.dirname(filePath);
-    const fileName = path.basename(filePath, ".njk");
-    const file = path.join(__dirname, dir, `${fileName}.scss`);
-    if (fs.existsSync(file)) {
-      if (files[fileName]) {
-        files[`${dir.replace(/\//g, '-')}-${fileName}` ] = file;
-      } else {
-        files[fileName] = file;
-      }
 
-    }
+  const plugins = [...templates];
 
-    return files;
-  }, { core: path.join(__dirname, './src/sass/core.scss') });
+  if (isProd) {
+    plugins.push(new MiniCssExtractPlugin());
+  }
 
   return {
-    mode: "development",
-    entry,
+    mode: isProd ? "production" : "development",
+    entry: {
+      html: entryFiles.map((entry) => path.resolve(__dirname, entry)),
+      // index: "./src/view/index.njk",
+      core: "./src/sass/core.scss",
+    },
     devServer: {
       port: 9009,
       hot: true,
-      host:'0.0.0.0'
+      host: "0.0.0.0",
+    },
+    optimization: {
+      removeEmptyChunks: true,
     },
     module: {
       rules: [
@@ -65,7 +61,9 @@ module.exports = async function () {
           use: [
             {
               loader: "simple-nunjucks-loader",
-              options: {},
+              options: {
+                searchPaths: ["./src/view"],
+              },
             },
           ],
         },
@@ -73,7 +71,7 @@ module.exports = async function () {
           test: /\.s[ac]ss$/i,
           use: [
             // Creates `style` nodes from JS strings
-            "style-loader",
+            isProd ? MiniCssExtractPlugin.loader : "style-loader",
             // Translates CSS into CommonJS
             "css-loader",
             // Compiles Sass to CSS
@@ -95,34 +93,8 @@ module.exports = async function () {
             },
           ],
         },
-        {
-          test: /\.css$/i,
-          use: [
-            "style-loader",
-            "css-loader",
-            {
-              loader: "postcss-loader",
-              options: {
-                postcssOptions: {
-                  plugins: [
-                    [
-                      "postcss-preset-env",
-                      {
-                        // Options
-                      },
-                    ],
-                  ],
-                },
-              },
-            },
-          ],
-        },
-        {
-          test: /\.css$/,
-          use: ["style-loader", "postcss-loader"],
-        },
       ],
     },
-    plugins: [...templates],
+    plugins,
   };
 };

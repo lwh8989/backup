@@ -62,7 +62,7 @@ module.exports = async function () {
             {
               loader: "simple-nunjucks-loader",
               options: {
-                // searchPaths: ["./src/view/"],
+                searchPaths: ["./src/view"],
               },
             },
           ],

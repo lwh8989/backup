@@ -7,10 +7,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const isProd = process.env.NODE_ENV === "production";
 
+const ROOT_VIEW_DIR = "src/view";
+
 function getTemplates() {
   return new Promise(function (resolve, reject) {
     glob(
-      "src/view/**/*.njk",
+      `${ROOT_VIEW_DIR}/**/*.njk`,
       { ignore: "**/_include/**" },
       function (error, files) {
         if (error) {
@@ -22,16 +24,38 @@ function getTemplates() {
   });
 }
 
+function getFilePath(fileName, ext = ".njk") {
+  const dir = path.dirname(fileName).replace(`${ROOT_VIEW_DIR}/`, "");
+  const file = path.basename(fileName, ext);
+  return `${dir}/${file}`;
+}
+
 function toPlugin(fileName) {
   return new HtmlWebpackPlugin({
     template: fileName,
-    filename: fileName.replace(/\.njk$/, ".html").replace("src/view/", ""),
+    filename: `${getFilePath(fileName)}.html`.replace(`${ROOT_VIEW_DIR}/`, ""),
+    chunks: [fileName, "core", getFilePath(fileName)],
   });
 }
 
 module.exports = async function () {
   const entryFiles = await getTemplates();
   const templates = entryFiles.map(toPlugin);
+  const guides = entryFiles
+    .map((fileName) => {
+      const scssFile = `${getFilePath(fileName)}.scss`;
+      if (fs.existsSync(path.resolve(__dirname, ROOT_VIEW_DIR, scssFile))) {
+        return scssFile;
+      }
+    })
+    .filter(Boolean)
+    .reduce((files, file) => {
+      const key = getFilePath(file, ".scss");
+      files[key] = path.resolve(__dirname, ROOT_VIEW_DIR, file);
+
+      return files;
+    }, {});
+  // console.log("🚀 ~ file: webpack.config.js ~ line 58 ~ guides", guides);
 
   const plugins = [...templates];
 
@@ -42,9 +66,9 @@ module.exports = async function () {
   return {
     mode: isProd ? "production" : "development",
     entry: {
-      html: entryFiles.map((entry) => path.resolve(__dirname, entry)),
-      // index: "./src/view/index.njk",
       core: "./src/sass/core.scss",
+      view: entryFiles.map((entry) => path.resolve(__dirname, entry)),
+      ...guides,
     },
     devServer: {
       port: 9009,
@@ -62,7 +86,7 @@ module.exports = async function () {
             {
               loader: "simple-nunjucks-loader",
               options: {
-                searchPaths: ["./src/view"],
+                searchPaths: [ROOT_VIEW_DIR],
               },
             },
           ],

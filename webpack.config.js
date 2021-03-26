@@ -42,7 +42,7 @@ module.exports = async function () {
   return {
     mode: isProd ? "production" : "development",
     entry: {
-      html: entryFiles,
+      html: entryFiles.map((entry) => path.resolve(__dirname, entry)),
       // index: "./src/view/index.njk",
       core: "./src/sass/core.scss",
     },

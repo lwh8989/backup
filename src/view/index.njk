@@ -1,4 +1,4 @@
-{% extends "src/layout/main/main.njk" %}
+{% extends "src/view/_include/layout/main/main.njk" %}
 
 {# {% import "elements/icon.njk" as icon %} #}
 
@@ -64,97 +64,97 @@
     var data = [
       {
         name: 'Core Typography',
-        path: './src/view/core/font/font.html',
+        path: 'core/font/font.html',
         developer: '이원호'
       },
       {
         name: 'Core Color',
-        path: './src/view/core/color/color.html',
+        path: 'core/color/color.html',
         developer: '이원호'
       },
       {
         name: 'Core Space',
-        path: './src/view/core/space/space.html',
+        path: 'core/space/space.html',
         developer: '이원호'
       },
       {
         name: 'Core Font Icon',
-        path: './src/view/core/icon/icon.html',
+        path: 'core/icon/icon.html',
         developer: '이원호'
       },
       {
         name: 'Core Motion',
-        path: './src/view/core/motion/motion.html',
+        path: 'core/motion/motion.html',
         developer: '이원호'
       },
       {
         name: 'Core Radius',
-        path: './src/view/core/radius/radius.html',
+        path: 'core/radius/radius.html',
         developer: '이원호'
       },
       {
         name: 'Core Shadow',
-        path: './src/view/core/shadow/shadow.html',
+        path: 'core/shadow/shadow.html',
         developer: '이원호'
       },
       {
         name: 'Core Ratio',
-        path: './src/view/core/ratio/ratio.html',
+        path: 'core/ratio/ratio.html',
         developer: '이원호'
       },
       {
         name: 'Layout Basic',
-        path: './src/view/layout/basic/basic.html',
+        path: 'layout/basic/basic.html',
         developer: '이원호'
       },
       {
         name: 'Layout Information',
-        path: './src/view/layout/information/information.html',
+        path: 'layout/information/information.html',
         developer: '이원호'
       },
       {
         name: 'Layout S One Rail',
-        path: './src/view/layout/s-one-rail/s-one-rail.html',
+        path: 'layout/s-one-rail/s-one-rail.html',
         developer: '이원호'
       },
       {
         name: 'Layout B One Rail',
-        path: './src/view/layout/b-one-rail/b-one-rail.html',
+        path: 'layout/b-one-rail/b-one-rail.html',
         developer: '이원호'
       },
       {
         name: 'Layout Two Rail',
-        path: './src/view/layout/two-rail/two-rail.html',
+        path: 'layout/two-rail/two-rail.html',
         developer: '이원호'
       },
       {
         name: 'Layout Side Rail',
-        path: './src/view/layout/side-rail/side-rail.html',
+        path: 'layout/side-rail/side-rail.html',
         developer: '이원호'
       },
       {
         name: 'Element Button',
-        path: './src/view/element/button/button.html',
+        path: 'element/button/button.html',
         developer: '이원호'
       },
       {
         name: 'Module Footer',
-        path: './src/view/module/footer/footer.html',
+        path: 'module/footer/footer.html',
         developer: '이원호'
       },
       {
         name: 'Module Pagination',
-        path: './src/view/module/pagination/pagination.html',
+        path: 'module/pagination/pagination.html',
         developer: '이원호'
       },
       {
         name: 'Lagarcy',
-        path: './src/view/lagarcy/lagarcy.html',
+        path: 'lagarcy/lagarcy.html',
         developer: '이원호'
       },
       {
         name: 'Lagarcy',
-        path: './src/view/lagarcy/lagarcy.html',
+        path: 'lagarcy/lagarcy.html',
         developer: '이원호'
       }
     ];
@@ -164,7 +164,7 @@
       var listHtml = "";
 
       for (var item of data) {
-        filter = item.path.split('/')[3];
+        filter = item.path.split('/')[0];
         listHtml += templateHtml.replace(/@filter/g, filter)
                                 .replace(/@url/g, item.path)
                                 .replace(/@title/g, item.name)

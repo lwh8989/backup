@@ -1,65 +1,29 @@
-/* Base */
-@import "./_font.scss";
-@import "./_space.scss";
-@import "./_color.scss";
-@import "./floara/_fr-view.scss";
+/* core */
+@import "~/src/sass/font";
+@import "~/src/sass/color";
+@import "~/src/sass/space";
+@import "~/src/sass/motion";
+@import "~/src/sass/radius";
+@import "~/src/sass/shadow";
+@import "~/src/sass/ratio";
+
+/* element */
+@import "~/src/sass/button";
+
+/* module */
+@import "~/src/sass/button";
+
+/* partial */
 
 /* mixin */
-@import "./_mixin.scss";
+@import "~/src/sass/mixin/font";
+@import "~/src/sass/mixin/mixin";
 
 /* Layout */
-@import "./_layout.scss";
-@import "./_guide.scss";
-@import "./_index.scss";
-@import "./_responsive.scss";
+@import "~/src/sass/layout";
+@import "~/src/sass/guide";
+@import "~/src/sass/index";
+@import "~/src/sass/responsive";
 
-/* sass - core.scss 혹은  */
-/* sass - _guide.scss 에 아래의 class를 넣어야 가이드페이지에 나옵니다.  */
-.ex-sp-100 {
-    height: $stds-spacing-100;
-}
-.ex-sp-200 {
-    height: $stds-spacing-200;
-}
-.ex-sp-300 {
-    height: $stds-spacing-300;
-}
-.ex-sp-400 {
-    height: $stds-spacing-400;
-}
-.ex-sp-500 {
-    height: $stds-spacing-500;
-}
-.ex-sp-600 {
-    height: $stds-spacing-600;
-}
-.ex-sp-700 {
-    height: $stds-spacing-700;
-}
-.ex-sp-800 {
-    height: $stds-spacing-800;
-}
-.ex-sp-900 {
-    height: $stds-spacing-900;
-}
-.ex-sp-1000 {
-    height: $stds-spacing-1000;
-}
-.ex-sp-1100 {
-    height: $stds-spacing-1100;
-}
-.ex-sp-1200 {
-    height: $stds-spacing-1200;
-}
-.ex-sp-1300 {
-    height: $stds-spacing-1300;
-}
-.ex-sp-1400 {
-    height: $stds-spacing-1400;
-}
-.ex-sp-1500 {
-    height: $stds-spacing-1500;
-}
-.ex-sp-1600 {
-    height: $stds-spacing-1600;
-}
+/* legarcy */
+@import "~/src/sass/floara/fr-view";

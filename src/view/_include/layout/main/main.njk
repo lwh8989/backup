@@ -1,24 +1,10 @@
+{% import "_include/layout/head/head.njk" as headLink %}
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>Guide Page</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Reset.css -->
-    <link rel="stylesheet" href="../../../static/css/reset.css">
-    <!-- Font.css -->
-    <link rel="stylesheet" href="../../../static/css/font.css">
-    <link rel="stylesheet" href="../../../static/font/intel/StoveFont-Global.css">
-    <link rel="stylesheet" href="../../../static/font/kr/StoveFont-KR.css">
-    <link rel="stylesheet" href="../../../static/font/sc/StoveFont-SC.css">
-    <link rel="stylesheet" href="../../../static/font/tc/StoveFont-TC.css">
-    <link rel="stylesheet" href="../../../static/font/jp/StoveFont-JP.css">
-    <link rel="stylesheet" href="../../../static/font/thai/StoveFont-Thai.css">
-    <!-- layout.css -->
-    <!-- UI.css -->
-    <link rel="stylesheet" href="../../../static/icon/stove-font-icon.css">
-    {% block styles %}{% endblock %}
+  {{ headLink.base(tit="Stove Core UI") }}
+  {% block styles %}{% endblock %}
 </head>
 <!-- Guide Layout -->
 <body class="layout-guide">

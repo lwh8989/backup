@@ -1,4 +1,4 @@
-@import "./mixin/_font.scss";
+@import "~/src/sass/mixin/font";
 
 /* stds Title 1rem = 10px */
 /* Title */
@@ -41,73 +41,6 @@ $letterSpacing: -0.025em;
 $stdsLineHeightL: 1.6;
 $stdsLineHeightM: 1.5;
 $stdsLineHeightS: 1.4;
-
-/* title */
-.stds-title1 {
-    @include stdsTitle1;
-}
-.stds-title2 {
-    @include stdsTitle2;
-}
-.stds-title3 {
-    @include stdsTitle3;
-}
-.stds-title4 {
-    @include stdsTitle4;
-}
-.stds-title5 {
-    @include stdsTitle5;
-}
-.stds-title6 {
-    @include stdsTitle6;
-}
-.stds-title7 {
-    @include stdsTitle7;
-}
-.stds-title8 {
-    @include stdsTitle8;
-}
-
-/* Body */
-.stds-body1 {
-    @include stdsBody1($weight: normal);
-}
-.stds-body2 {
-    @include stdsBody2($weight: normal);
-}
-.stds-body3 {
-    @include stdsBody3($weight: normal);
-}
-.stds-body4 {
-    @include stdsBody4($weight: normal);
-}
-
-/* Button */
-.stds-button1 {
-    @include stdsButton1($weight: normal);
-}
-.stds-button2 {
-    @include stdsButton2($weight: normal);
-}
-
-/* Caption */
-.stds-caption1 {
-    @include caption1;
-}
-.stds-caption2 {
-    @include caption2;
-}
-.stds-caption3 {
-    @include caption3;
-}
-
-/* Chips */
-.stds-chips1 {
-    @include chips1;
-}
-.stds-chips2 {
-    @include chips2;
-}
 
 /* Font reset */
 html {

@@ -1,14 +1,29 @@
-/* Base */
-@import "./_font.scss";
-@import "./_space.scss";
-@import "./_color.scss";
-@import "./floara/_fr-view.scss";
+/* core */
+@import "~/src/sass/font";
+@import "~/src/sass/color";
+@import "~/src/sass/space";
+@import "~/src/sass/motion";
+@import "~/src/sass/radius";
+@import "~/src/sass/shadow";
+@import "~/src/sass/ratio";
+
+/* element */
+@import "~/src/sass/button";
+
+/* module */
+@import "~/src/sass/button";
+
+/* partial */
 
 /* mixin */
-@import "./_mixin.scss";
+@import "~/src/sass/mixin/font";
+@import "~/src/sass/mixin/mixin";
 
 /* Layout */
-@import "./_layout.scss";
-@import "./_guide.scss";
-@import "./_index.scss";
-@import "./_responsive.scss";
+@import "~/src/sass/layout";
+@import "~/src/sass/guide";
+@import "~/src/sass/index";
+@import "~/src/sass/responsive";
+
+/* legarcy */
+@import "~/src/sass/floara/fr-view";

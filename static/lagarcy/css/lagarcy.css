@@ -103,9 +103,32 @@
     margin-right: 2px;
     margin-bottom: 2px;
 }
+.lagarcy-dialog-body .img-list ul,
+.lagarcy-dialog-body .profile-list ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.lagarcy-dialog-body .img-list ul li,
+.lagarcy-dialog-body .profile-list ul li {
+    width: calc(33.3% - 2px) !important;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.lagarcy-dialog-body .profile-list ul li {
+    width: calc(25% - 2px) !important;
+}
+.lagarcy-dialog-body .img-list li img,
+.lagarcy-dialog-body .profile-list li img{
+    position: relative;
+    left: inherit;
+    top: inherit;
+    transform: translateY(0);
+}
 .lagarcy-dialog-body .img-list li::after{
-    width: 100%;
-    height: 100%;
+    display: none;
 }
 .lagarcy-dialog-body .profile-list{
     margin: 24px 12px 0;
@@ -309,19 +332,6 @@
     margin-left: 28px !important;
 }
 
-/* lagarcy dialog - sm - img list */
-.lagarcy-dialog-size-sm .lagarcy-dialog-body .img-list li,
-.lagarcy-dialog-size-sm .lagarcy-dialog-body .img-list li:nth-child(5n),
-.lagarcy-dialog-size-sm .lagarcy-dialog-body .profile-list li,
-.lagarcy-dialog-size-sm .lagarcy-dialog-body .profile-list li:nth-child(6n){
-    margin-right: 1px;
-    margin-bottom: 1px;
-}
-.lagarcy-dialog-size-sm .lagarcy-dialog-body .img-list li{
-    width: 92px;
-    height: 92px;
-}
-
 /* lagarcy dialog - sm - btn */
 .lagarcy-dialog-size-sm .lagarcy-element-btn.btn-select.size-32 .btn-txt{
     font-size: 12px;
@@ -338,9 +348,4 @@
 }
 .lagarcy-dialog-size-sm .lagarcy-module-ranking.ranking-list tbody tr td:first-of-type{
     padding-left: 24px;
-}
-
-.lagarcy-dialog-size-sm .lagarcy-dialog-body .profile-list li{
-    width: 70px;
-    height: 70px;
 }

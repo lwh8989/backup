@@ -22,7 +22,7 @@
     @include clear-fix;
 }
 .element {
-    @include clear-fix-img(0, 0 ,5px ,5px );
+    @include clear-fix-img($top:0, $left:0 , $width:5px ,$height:5px );
     &::after{
         background-color: blueviolet;
     }    

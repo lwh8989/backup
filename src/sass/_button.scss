@@ -1,8 +1,9 @@
+@import "~/src/sass/mixin/mixin";
 @import "~/src/sass/color";
 
 /* button */
-/* 확인 후 삭제 예정
-secondary 컬러값 틀림 확인 필요
+/* 확인 후 삭제 예정 
+secondary 컬러값 틀림 확인 필요 
 
 $bg-primary-btn : #fc6020;
 $bg-primary-btn-hover : #fe763c;
@@ -32,7 +33,7 @@ $bg-trans-btn-hover: transparent;
 $bg-trans-btn-active: transparent;
 $bg-trans-btn-focus: transparent;
 
-// _color.scss 에 컬러 추가되면 button-ghost-white 변수 삭제예정
+// _color.scss 에 컬러 추가되면 button-ghost-white 변수 삭제예정  
 $ui-button-ghost-white-bg-enabled: transparent;
 $ui-button-ghost-white-border-enabled: #fff;
 $ui-button-ghost-white-bg-hover: rgba(#000000, $alpha: 0.05);
@@ -45,70 +46,88 @@ $ui-button-ghost-white-bg-disabled: transparent;
 $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
 
 .element-btn {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    color: #fff;
-    text-align: center;
-    overflow: hidden;
-    font-size: 0;
-    font-weight: 700;
-    padding: 1px 23px 1px 22px;
-    box-sizing: border-box;
-    white-space: nowrap;
-    -webkit-transition-duration: 0.15s;
-    transition-duration: 0.15s;
-    /*&:before {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  font-size: 0;
+  font-weight: 700;
+  padding: 1px 23px 1px 22px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  /*&:before {
     content: '';
     display: inline-block;
     width: 1px;
     height: 100%;
     vertical-align: middle;
   }*/
-    &.disabled,
-    &:disabled {
-        color: #cacaca !important;
-    }
-    &.disabled:focus,
-    &:disabled:focus {
-        box-shadow: none !important;
-    }
+  &.disabled,
+  &:disabled {
+    color: #cacaca!important;
+  }
+  &.disabled:focus,
+  &:disabled:focus{
+    box-shadow: none!important;  
+  }
 }
-.element-btn.size-xlarge.only-icon .stove-icon,
-.element-btn.size-xlarge.with-icon .stove-icon {
-    width: 24px;
-    height: 24px;
+.element-btn.size-xlarge.only-icon .stove-icon{
+    width: 32px;
+    height: 32px;
 }
-.element-btn.size-xlarge.only-icon .stove-icon::before,
-.element-btn.size-xlarge.with-icon .stove-icon::before {
-    font-size: 24px;
+.element-btn.size-xlarge.only-icon .stove-icon::before{
+    font-size: 32px;
+}
+.element-btn.size-xlarge.with-icon .stove-icon{
+    width: 32px;
+    height: 32px;
+}
+.element-btn.size-xlarge.with-icon .stove-icon::before{
+    font-size: 32px;
 }
 .element-btn.size-large.only-icon .stove-icon,
 .element-btn.size-large.with-icon .stove-icon,
 .element-btn.size-medium.only-icon .stove-icon,
 .element-btn.size-medium.with-icon .stove-icon,
 .element-btn.size-small.only-icon .stove-icon,
-.element-btn.size-small.with-icon .stove-icon {
-    width: 20px;
-    height: 20px;
+.element-btn.size-small.with-icon .stove-icon{
+    width: 24px;
+    height: 24px;
 }
 .element-btn.size-large.only-icon .stove-icon::before,
 .element-btn.size-large.with-icon .stove-icon::before,
 .element-btn.size-medium.only-icon .stove-icon::before,
 .element-btn.size-medium.with-icon .stove-icon::before,
 .element-btn.size-small.only-icon .stove-icon::before,
-.element-btn.size-small.with-icon .stove-icon::before {
-    font-size: 20px;
+.element-btn.size-small.with-icon .stove-icon::before{
+    font-size: 24px;
 }
 .element-btn.size-xsmall.only-icon .stove-icon,
-.element-btn.size-xsmall.with-icon .stove-icon {
+.element-btn.size-xsmall.with-icon .stove-icon{
+    width: 20px;
+    height: 20px;
+}
+.element-btn.size-xsmall.only-icon .stove-icon::before,
+.element-btn.size-xsmall.with-icon .stove-icon::before{
+    font-size: 20px;
+}
+.element-btn.size-chips32.only-icon .stove-icon,
+.element-btn.size-chips32.with-icon .stove-icon,
+.element-btn.size-chips28.only-icon .stove-icon,
+.element-btn.size-chips28.with-icon .stove-icon{
     width: 16px;
     height: 16px;
 }
-.element-btn.size-xsmall.only-icon .stove-icon::before,
-.element-btn.size-xsmall.with-icon .stove-icon::before {
+.element-btn.size-chips32.only-icon .stove-icon::before,
+.element-btn.size-chips32.with-icon .stove-icon::before,
+.element-btn.size-chips28.only-icon .stove-icon::before,
+.element-btn.size-chips28.with-icon .stove-icon::before{
     font-size: 16px;
 }
 .element-btn .stove-icon {
@@ -120,13 +139,21 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
     background-size: cover;
 }
 .element-btn .btn-txt {
-    display: inline-block;
-    color: inherit;
-    /* width: 100%;
+  display: inline-block;
+  color: inherit;
+  /* width: 100%;
   width: calc(100% - 1px); */
-    font-size: 15px;
-    line-height: 24px;
-    vertical-align: middle;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.element-btn .btn-txt:hover{
+    text-decoration: underline;
+}
+.element-btn.disabled .btn-txt:hover,
+.element-btn:disabled .btn-txt:hover{
+    text-decoration: none;
 }
 .element-btn.bg-gray .btn-txt {
     color: #3a3a3a;
@@ -144,27 +171,39 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
 
 /* shape */
 .element-btn.size-xlarge.btn-round {
-    border-radius: 27px;
+    border-radius: 28px;
 }
 .element-btn.size-large.btn-round {
     border-radius: 24px;
 }
 .element-btn.size-medium.btn-round {
-    border-radius: 20px;
+    border-radius: 22px;
 }
 .element-btn.size-small.btn-round {
-    border-radius: 18px;
+    border-radius: 20px;
 }
 .element-btn.size-xsmall.btn-round {
+    border-radius: 18px;
+}
+.element-btn.size-chips32.btn-round {
     border-radius: 16px;
+}
+.element-btn.size-chips28.btn-round {
+    border-radius: 14px;
 }
 
 /* size */
 .element-btn.size-xlarge {
     height: 56px;
+    padding: 0 32px; 
 }
 .element-btn.size-large {
     height: 48px;
+    padding: 0 28px; 
+}
+.element-btn.size-medium,
+.element-btn.size-small{
+    padding: 0 24px; 
 }
 .element-btn.size-medium {
     height: 44px;
@@ -174,12 +213,15 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
 }
 .element-btn.size-xsmall {
     height: 36px;
+    padding: 0 20px; 
 }
 .element-btn.size-chips32 {
     height: 32px;
+    padding: 0 16px; 
 }
 .element-btn.size-chips28 {
     height: 28px;
+    padding: 0 12px; 
 }
 .element-btn.size-xlarge .btn-txt,
 .element-btn.size-large .btn-txt,
@@ -198,225 +240,237 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
 }
 
 /* only icon */
-.element-btn.size-xlarge.only-icon {
-    padding: 0;
+.element-btn.only-icon{
+    padding: 0!important;
+}
+.element-btn.size-xlarge.only-icon{
     min-width: 56px;
 }
-.element-btn.size-large.only-icon {
-    padding: 0;
+.element-btn.size-large.only-icon{
     min-width: 48px;
 }
-.element-btn.size-medium.only-icon {
-    padding: 0;
+.element-btn.size-medium.only-icon{
     min-width: 44px;
 }
-.element-btn.size-small.only-icon {
-    padding: 0;
+.element-btn.size-small.only-icon{
     min-width: 40px;
 }
-.element-btn.size-xsmall.only-icon {
-    padding: 0;
+.element-btn.size-xsmall.only-icon{
     min-width: 36px;
 }
-.element-btn.only-icon .stove-icon {
-    padding-left: 0;
+.element-btn.size-chips32.only-icon{
+    min-width: 32px;
+}
+.element-btn.size-chips28.only-icon{
+    min-width: 28px;
 }
 
 /* with icon */
-.element-btn.size-xlarge.with-icon {
-    padding: 0 36px;
-}
-.element-btn.size-large.with-icon {
-    padding: 0 32px;
-}
-.element-btn.size-medium.with-icon {
-    padding: 0 28px;
-}
-.element-btn.size-small.with-icon {
-    padding: 0 24px;
-}
-.element-btn.size-xsmall.with-icon {
-    padding: 0 20px;
-}
-.element-btn.size-xsmall.with-icon {
-    padding: 0 16px;
-}
-.element-btn.size-xsmall.with-icon {
-    padding: 0 10px;
-}
 .element-btn.size-xlarge .stove-icon ~ .btn-txt,
-.element-btn.size-large .stove-icon ~ .btn-txt,
-.element-btn.size-medium .stove-icon ~ .btn-txt {
+.element-btn.size-large .stove-icon  ~ .btn-txt,
+.element-btn.size-medium .stove-icon ~ .btn-txt{
     padding-left: 8px;
 }
 .element-btn.size-xlarge .btn-txt ~ .stove-icon,
 .element-btn.size-large .btn-txt ~ .stove-icon,
-.element-btn.size-medium .btn-txt ~ .stove-icon {
+.element-btn.size-medium .btn-txt ~ .stove-icon{
     margin-left: 8px;
 }
-.element-btn.size-small .stove-icon ~ .btn-txt,
-.element-btn.size-xsmall .stove-icon ~ .btn-txt {
+.element-btn.size-small .stove-icon  ~ .btn-txt,
+.element-btn.size-xsmall .stove-icon ~ .btn-txt,
+.element-btn.size-chips32 .stove-icon  ~ .btn-txt{
     padding-left: 4px;
 }
-.element-btn.size-medium .btn-txt ~ .stove-icon,
 .element-btn.size-small .btn-txt ~ .stove-icon,
-.element-btn.size-xsmall .btn-txt ~ .stove-icon {
-    margin-left: 7px;
+.element-btn.size-xsmall .btn-txt ~ .stove-icon,
+.element-btn.size-chips32 .btn-txt ~ .stove-icon{
+    margin-left: 4px;
+}
+.element-btn.size-chips28 .stove-icon ~ .btn-txt{
+    padding-left: 2px;
+}
+.element-btn.size-chips28 .btn-txt ~ .stove-icon{
+    margin-left: 2px;
 }
 
 /* color */
-.element-btn.bg-primary {
+.element-btn.bg-primary{
     background-color: $ui-button-primary-enabled;
     border: 2px solid $ui-button-primary-enabled;
-    &:hover {
-        background-color: $ui-button-primary-hover;
+    &:hover{
+        background-color: $ui-button-primary-hover;    
         border: 2px solid $ui-button-primary-hover;
     }
-    &:active {
-        background-color: $ui-button-primary-pressed;
+    &:active{
+        background-color: $ui-button-primary-pressed;    
         border: 2px solid $ui-button-primary-pressed;
     }
-    &:focus {
+    &:focus{
         outline: none;
         border: 2px solid $ui-button-primary-enabled;
         box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,
-    &.disabled {
+    &.disabled{
         background: $ui-button-primary-disabled;
         border-color: $ui-button-primary-disabled;
     }
 }
-.element-btn.bg-secondary {
+.element-btn.bg-secondary{
     background-color: $ui-button-secondary-enabled;
     border: 2px solid $ui-button-secondary-enabled;
-    &:hover {
-        background-color: $ui-button-secondary-hover;
+    &:hover{
+        background-color: $ui-button-secondary-hover;    
         border: 2px solid $ui-button-secondary-hover;
     }
-    &:active {
-        background-color: $ui-button-secondary-pressed;
+    &:active{
+        background-color: $ui-button-secondary-pressed;    
         border: 2px solid $ui-button-secondary-pressed;
     }
-    &:focus {
+    &:focus{
         outline: none;
         border: 2px solid $ui-button-secondary-enabled;
         box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,
-    &.disabled {
+    &.disabled{
         background: $ui-button-secondary-disabled;
         border-color: $ui-button-secondary-disabled;
-    }
+    }    
 }
-.element-btn.bg-gray {
+.element-btn.bg-gray{
     background-color: $ui-button-gray-enabled;
     border: 2px solid $ui-button-gray-enabled;
-    color: #3a3a3a;
-    &:hover {
-        background-color: $ui-button-gray-hover;
+    color:#3a3a3a;
+    &:hover{
+        background-color: $ui-button-gray-hover;    
         border: 2px solid $ui-button-gray-hover;
     }
-    &:active {
-        background-color: $ui-button-gray-pressed;
+    &:active{
+        background-color: $ui-button-gray-pressed;    
         border: 2px solid $ui-button-gray-pressed;
     }
-    &:focus {
+    &:focus{
         outline: none;
-        background-color: $ui-button-gray-hover;
+        background-color: $ui-button-gray-hover;    
         border: 2px solid $ui-button-gray-pressed;
         box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,
-    &.disabled {
+    &.disabled{
         background: $ui-button-gray-disabled;
         border-color: $ui-button-gray-disabled;
-    }
+    }    
 }
-.element-btn.bg-inverse {
+.element-btn.bg-inverse{
     background-color: $ui-button-inverse-enabled;
     border: 2px solid $ui-button-inverse-enabled;
-    color: #3a3a3a;
-    &:hover {
-        background-color: $ui-button-inverse-hover;
+    color:#3a3a3a;
+    &:hover{
+        background-color: $ui-button-inverse-hover;    
         border: 2px solid $ui-button-inverse-hover;
     }
-    &:active {
-        background-color: $ui-button-inverse-pressed;
+    &:active{
+        background-color: $ui-button-inverse-pressed;    
         border: 2px solid $ui-button-inverse-pressed;
     }
-    &:focus {
+    &:focus{
         outline: none;
-        background-color: $ui-button-inverse-bg-focused;
+        background-color: $ui-button-inverse-bg-focused;    
         border: 2px solid $ui-button-inverse-border-focused;
         box-shadow: inset 0 0 0 1px #bfbfbf;
     }
     &:disabled,
-    &.disabled {
+    &.disabled{
         background: $ui-button-inverse-disabled;
         border-color: $ui-button-inverse-disabled;
+    }    
+}
+/*
+
+.element-btn.bg-ghost{
+    background-color: $ui-button-ghost-bg-enabled;
+    border: 1px solid $ui-button-ghost-border-enabled;
+    color: #3a3a3a;
+    &:hover{
+        background-color: $ui-button-ghost-bg-hover;    
+        border: 1px solid $ui-button-ghost-border-hover;
+    }
+    &:active{
+        background-color: $ui-button-ghost-bg-pressed;    
+        border: 1px solid $ui-button-ghost-border-pressed;
+    }
+    &:focus{
+        outline: none;
+        background-color: $ui-button-ghost-bg-focused;    
+        border: 1px solid $ui-button-ghost-border-focused;
+        box-shadow: inset 0 0 0 1px #000;
+    }
+    &:disabled,
+    &.disabled{
+        background: #eaeaea;
+        border-color: #eaeaea;
+        & .btn-txt{
+            color: #cacaca;
+        }
     }
 }
-// ghost 버튼 삭제
-// .element-btn.bg-ghost{
-//     background-color: $ui-button-ghost-bg-enabled;
-//     border: 1px solid $ui-button-ghost-border-enabled;
-//     color: #3a3a3a;
-//     &:hover{
-//         background-color: $ui-button-ghost-bg-hover;
-//         border: 1px solid $ui-button-ghost-border-hover;
-//     }
-//     &:active{
-//         background-color: $ui-button-ghost-bg-pressed;
-//         border: 1px solid $ui-button-ghost-border-pressed;
-//     }
-//     &:focus{
-//         outline: none;
-//         background-color: $ui-button-ghost-bg-focused;
-//         border: 1px solid $ui-button-ghost-border-focused;
-//         box-shadow: inset 0 0 0 1px #000;
-//     }
-//     &:disabled,
-//     &.disabled{
-//         /* transparent #e0e0e0 tortkd 색상 확인
-//         background: $ui-button-ghost-bg-disabled;
-//         border-color: $ui-button-ghost-border-disabled;
-//         */
-//         background: #eaeaea;
-//         border-color: #eaeaea;
-//         & .btn-txt{
-//             color: #cacaca;
-//         }
-//     }
-// }
-// .element-btn.bg-ghost-white{
-//     background-color: $ui-button-ghost-white-bg-enabled;
-//     border: 1px solid $ui-button-ghost-white-border-enabled;
-//     color: #fff;
-//     & .btn-txt{
-//         color: #fff;
-//     }
-//     &:hover{
-//         background-color: $ui-button-ghost-white-bg-hover;
-//         border: 1px solid $ui-button-ghost-white-border-hover;
-//     }
-//     &:active{
-//         background-color: $ui-button-ghost-white-bg-pressed;
-//         border: 1px solid $ui-button-ghost-white-border-pressed;
-//     }
-//     &:focus{
-//         outline: none;
-//         background-color: $ui-button-ghost-white-bg-focused;
-//         border: 1px solid $ui-button-ghost-white-border-focused;
-//         box-shadow: inset 0 0 0 1px #fff;
-//     }
-//     &:disabled,
-//     &.disabled{
-//         background-color: $ui-button-ghost-white-bg-disabled;
-//         border: 1px solid $ui-button-ghost-white-border-disabled;
-//         & .btn-txt{
-//             color: rgba(255, 255, 255, 0.6);
-//         }
-//     }
+.element-btn.bg-ghost-white{
+    background-color: $ui-button-ghost-bg-enabled;
+    border: 1px solid $ui-button-ghost-border-enabled;
+    color: #fff;
+    & .btn-txt{
+        color: #fff;
+    }
+    &:hover{
+        background-color: $ui-button-ghost-bg-hover;    
+        border: 1px solid $ui-button-ghost-border-hover;
+    }
+    &:active{
+        background-color: $ui-button-ghost-bg-pressed;    
+        border: 1px solid $ui-button-ghost-border-pressed;
+    }
+    &:focus{
+        outline: none;
+        background-color: $ui-button-ghost-bg-focused;    
+        border: 1px solid $ui-button-ghost-border-focused;
+        box-shadow: inset 0 0 0 1px #fff;
+    }
+    &:disabled,
+    &.disabled{
+        background-color: $ui-button-ghost-bg-disabled;    
+        border: 1px solid $ui-button-ghost-border-disabled;
+        & .btn-txt{
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+        
+}*/
 
-// }
+/* mobile */
+@include mobile-end {
+}
+/* mobile 360 */
+@include mobile {
+
+}
+/* tablet 768 */
+@include tablet {
+
+}
+/* desktopM 1280 */
+@include desktopM {
+
+}
+/* desktopL 1440 */
+@include desktopL {
+
+}
+/* desktopXL 1600 */
+@include desktopXL {
+}
+/* desktop2XL 1920 */
+@include desktop2XL {
+
+}
+

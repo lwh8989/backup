@@ -1,4 +1,7 @@
-@import "./_hidden.scss";
+@import "~/src/sass/mixin/mixin";
+@import "~/src/sass/hidden";
+
+/*@import "./_hidden.scss";*/
 $ui-button-pagination-enabled: #6e6e6e;
 $ui-button-pagination-hover : #fc6020;
 
@@ -18,9 +21,6 @@ $ui-button-pagination-hover : #fc6020;
     font-size: 13px;
     color: rgba(255, 255, 255, 0.6);
 }
-.footer .footer-notice{
-
-}
 .footer .footer-notice-link{
     display: inline-block;
     font-size: 16px;
@@ -28,13 +28,15 @@ $ui-button-pagination-hover : #fc6020;
 }
 .footer .footer-nav {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
     margin: 16px 0 17px 0;
     padding: 16px 0;
     border-top:1px solid rgba(255, 255, 255, 0.1);
     border-bottom:1px solid rgba(255, 255, 255, 0.1);
 }
 .footer .footer-nav a{
-    margin: 0 12px;
+    margin-right: 24px;
     font-size: 15px;
     color: rgba(255, 255, 255, 0.6);
 }
@@ -43,10 +45,11 @@ $ui-button-pagination-hover : #fc6020;
 }
 
 .footer-nav .footer-nav-rating {
-    /*position: relative;*/
-    display: inline-block;
+    /*position: relative;
     padding-left: 12px;
-    margin-left: 12px;
+    margin-left: 12px;*/
+    display: inline-block;
+    
 }
 .footer-nav .footer-nav-rating:hover .rating-game {
     visibility: visible;
@@ -190,3 +193,68 @@ $ui-button-pagination-hover : #fc6020;
     /*background: #ccc; /*스타일 따라 변경 가능*/
 }
 
+/* 게임이용등급 - 디자인 확인 필요*/
+/* mobile */
+@include mobile-end {
+    .footer-container{
+        width: 100%;
+        padding: 0 32px;
+    }
+    .footer-nav .rating-game .module-tab.tab-vertical {
+        flex-direction: column;
+    }
+    .module-tab.tab-vertical .tab-nav {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .module-tab.tab-vertical .tab-nav > * {
+        flex: 1;
+    }
+    .module-tab.tab-vertical .tab-content{
+        height: auto;
+    }
+    .footer-nav .rating-game .module-tab.tab-vertical{
+        justify-content: end;
+    }
+    .footer-nav .footer-nav-rating {
+        position: relative;
+        width: 100%;
+    }
+}
+/* mobile 360 */
+@include mobile {
+    .footer-container {
+        width: 100%;
+        padding: 0 32px;
+    }
+    .module-tab.tab-vertical .tab-content{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .rating-img > img {
+        width: 26px;
+    }
+}
+/* tablet 768 */
+@include tablet {
+    .footer-container{
+        padding: 0 32px;
+    }
+}
+/* desktopM 1280 */
+@include desktopM {
+
+}
+/* desktopL 1440 */
+@include desktopL {
+
+}
+/* desktopXL 1600 */
+@include desktopXL {
+}
+/* desktop2XL 1920 */
+@include desktop2XL {
+
+}

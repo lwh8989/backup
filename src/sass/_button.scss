@@ -1,3 +1,4 @@
+@import "~/src/sass/mixin/mixin";
 @import "~/src/sass/color";
 
 /* button */
@@ -76,14 +77,19 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
     box-shadow: none!important;  
   }
 }
-.element-btn.size-xlarge.only-icon .stove-icon,
-.element-btn.size-xlarge.with-icon .stove-icon{
-    width: 24px;
-    height: 24px;
+.element-btn.size-xlarge.only-icon .stove-icon{
+    width: 32px;
+    height: 32px;
 }
-.element-btn.size-xlarge.only-icon .stove-icon::before,
+.element-btn.size-xlarge.only-icon .stove-icon::before{
+    font-size: 32px;
+}
+.element-btn.size-xlarge.with-icon .stove-icon{
+    width: 32px;
+    height: 32px;
+}
 .element-btn.size-xlarge.with-icon .stove-icon::before{
-    font-size: 24px;
+    font-size: 32px;
 }
 .element-btn.size-large.only-icon .stove-icon,
 .element-btn.size-large.with-icon .stove-icon,
@@ -91,8 +97,8 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
 .element-btn.size-medium.with-icon .stove-icon,
 .element-btn.size-small.only-icon .stove-icon,
 .element-btn.size-small.with-icon .stove-icon{
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
 }
 .element-btn.size-large.only-icon .stove-icon::before,
 .element-btn.size-large.with-icon .stove-icon::before,
@@ -100,17 +106,31 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
 .element-btn.size-medium.with-icon .stove-icon::before,
 .element-btn.size-small.only-icon .stove-icon::before,
 .element-btn.size-small.with-icon .stove-icon::before{
-    font-size: 20px;
+    font-size: 24px;
 }
 .element-btn.size-xsmall.only-icon .stove-icon,
 .element-btn.size-xsmall.with-icon .stove-icon{
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 }
 .element-btn.size-xsmall.only-icon .stove-icon::before,
 .element-btn.size-xsmall.with-icon .stove-icon::before{
+    font-size: 20px;
+}
+.element-btn.size-chips32.only-icon .stove-icon,
+.element-btn.size-chips32.with-icon .stove-icon,
+.element-btn.size-chips28.only-icon .stove-icon,
+.element-btn.size-chips28.with-icon .stove-icon{
+    width: 16px;
+    height: 16px;
+}
+.element-btn.size-chips32.only-icon .stove-icon::before,
+.element-btn.size-chips32.with-icon .stove-icon::before,
+.element-btn.size-chips28.only-icon .stove-icon::before,
+.element-btn.size-chips28.with-icon .stove-icon::before{
     font-size: 16px;
 }
+
 .element-btn .stove-icon {
     display: inline-block;
     overflow: hidden;
@@ -126,7 +146,18 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
   width: calc(100% - 1px); */
   font-size: 15px;
   line-height: 24px;
+  font-weight: normal;
   vertical-align: middle;
+}
+.element-btn .btn-txt {
+
+}
+.element-btn .btn-txt:hover{
+    text-decoration: underline;
+}
+.element-btn.disabled .btn-txt:hover,
+.element-btn:disabled .btn-txt:hover{
+    text-decoration: none;
 }
 .element-btn.bg-gray .btn-txt {
     color: #3a3a3a;
@@ -144,27 +175,39 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
 
 /* shape */
 .element-btn.size-xlarge.btn-round {
-    border-radius: 27px;
+    border-radius: 28px;
 }
 .element-btn.size-large.btn-round {
     border-radius: 24px;
 }
 .element-btn.size-medium.btn-round {
-    border-radius: 20px;
+    border-radius: 22px;
 }
 .element-btn.size-small.btn-round {
-    border-radius: 18px;
+    border-radius: 20px;
 }
 .element-btn.size-xsmall.btn-round {
+    border-radius: 18px;
+}
+.element-btn.size-chips32.btn-round {
     border-radius: 16px;
+}
+.element-btn.size-chips28.btn-round {
+    border-radius: 14px;
 }
 
 /* size */
 .element-btn.size-xlarge {
     height: 56px;
+    padding: 0 32px; 
 }
 .element-btn.size-large {
     height: 48px;
+    padding: 0 28px; 
+}
+.element-btn.size-medium,
+.element-btn.size-small{
+    padding: 0 24px; 
 }
 .element-btn.size-medium {
     height: 44px;
@@ -174,12 +217,15 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
 }
 .element-btn.size-xsmall {
     height: 36px;
+    padding: 0 20px; 
 }
 .element-btn.size-chips32 {
     height: 32px;
+    padding: 0 16px; 
 }
 .element-btn.size-chips28 {
     height: 28px;
+    padding: 0 12px; 
 }
 .element-btn.size-xlarge .btn-txt,
 .element-btn.size-large .btn-txt,
@@ -198,53 +244,33 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
 }
 
 /* only icon */
+.element-btn.only-icon{
+    padding: 0!important;
+}
 .element-btn.size-xlarge.only-icon{
-    padding: 0;
     min-width: 56px;
 }
 .element-btn.size-large.only-icon{
-    padding: 0;
     min-width: 48px;
 }
 .element-btn.size-medium.only-icon{
-    padding: 0;
     min-width: 44px;
 }
 .element-btn.size-small.only-icon{
-    padding: 0;
     min-width: 40px;
 }
 .element-btn.size-xsmall.only-icon{
-    padding: 0;
     min-width: 36px;
 }
-.element-btn.only-icon .stove-icon{
-    padding-left: 0;
+.element-btn.size-chips32.only-icon{
+    min-width: 32px;
+}
+.element-btn.size-chips28.only-icon{
+    min-width: 28px;
 }
 
 /* with icon */
-.element-btn.size-xlarge.with-icon{
-    padding: 0 36px; 
-}
-.element-btn.size-large.with-icon{
-    padding: 0 32px; 
-}
-.element-btn.size-medium.with-icon{
-    padding: 0 28px; 
-}
-.element-btn.size-small.with-icon{
-    padding: 0 24px; 
-}
-.element-btn.size-xsmall.with-icon{
-   padding: 0 20px; 
-}
-.element-btn.size-xsmall.with-icon{
-    padding: 0 16px; 
- }
- .element-btn.size-xsmall.with-icon{
-    padding: 0 10px; 
- }
- .element-btn.size-xlarge .stove-icon ~ .btn-txt,
+.element-btn.size-xlarge .stove-icon ~ .btn-txt,
 .element-btn.size-large .stove-icon  ~ .btn-txt,
 .element-btn.size-medium .stove-icon ~ .btn-txt{
     padding-left: 8px;
@@ -255,13 +281,20 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
     margin-left: 8px;
 }
 .element-btn.size-small .stove-icon  ~ .btn-txt,
-.element-btn.size-xsmall .stove-icon ~ .btn-txt{
+.element-btn.size-xsmall .stove-icon ~ .btn-txt,
+.element-btn.size-chips32 .stove-icon  ~ .btn-txt{
     padding-left: 4px;
 }
-.element-btn.size-medium .btn-txt ~ .stove-icon,
 .element-btn.size-small .btn-txt ~ .stove-icon,
-.element-btn.size-xsmall .btn-txt ~ .stove-icon{
-    margin-left: 7px;
+.element-btn.size-xsmall .btn-txt ~ .stove-icon,
+.element-btn.size-chips32 .btn-txt ~ .stove-icon{
+    margin-left: 4px;
+}
+.element-btn.size-chips28 .stove-icon ~ .btn-txt{
+    padding-left: 2px;
+}
+.element-btn.size-chips28 .btn-txt ~ .stove-icon{
+    margin-left: 2px;
 }
 
 /* color */
@@ -389,33 +422,60 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
     }
 }
 .element-btn.bg-ghost-white{
-    background-color: $ui-button-ghost-white-bg-enabled;
-    border: 1px solid $ui-button-ghost-white-border-enabled;
+    background-color: $ui-button-ghost-bg-enabled;
+    border: 1px solid $ui-button-ghost-border-enabled;
     color: #fff;
     & .btn-txt{
         color: #fff;
     }
     &:hover{
-        background-color: $ui-button-ghost-white-bg-hover;    
-        border: 1px solid $ui-button-ghost-white-border-hover;
+        background-color: $ui-button-ghost-bg-hover;    
+        border: 1px solid $ui-button-ghost-border-hover;
     }
     &:active{
-        background-color: $ui-button-ghost-white-bg-pressed;    
-        border: 1px solid $ui-button-ghost-white-border-pressed;
+        background-color: $ui-button-ghost-bg-pressed;    
+        border: 1px solid $ui-button-ghost-border-pressed;
     }
     &:focus{
         outline: none;
-        background-color: $ui-button-ghost-white-bg-focused;    
-        border: 1px solid $ui-button-ghost-white-border-focused;
+        background-color: $ui-button-ghost-bg-focused;    
+        border: 1px solid $ui-button-ghost-border-focused;
         box-shadow: inset 0 0 0 1px #fff;
     }
     &:disabled,
     &.disabled{
-        background-color: $ui-button-ghost-white-bg-disabled;    
-        border: 1px solid $ui-button-ghost-white-border-disabled;
+        background-color: $ui-button-ghost-bg-disabled;    
+        border: 1px solid $ui-button-ghost-border-disabled;
         & .btn-txt{
             color: rgba(255, 255, 255, 0.6);
         }
     }
         
 }
+/* mobile */
+@include mobile-end {
+}
+/* mobile 360 */
+@include mobile {
+
+}
+/* tablet 768 */
+@include tablet {
+
+}
+/* desktopM 1280 */
+@include desktopM {
+
+}
+/* desktopL 1440 */
+@include desktopL {
+
+}
+/* desktopXL 1600 */
+@include desktopXL {
+}
+/* desktop2XL 1920 */
+@include desktop2XL {
+
+}
+

@@ -130,7 +130,6 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
 .element-btn.size-chips28.with-icon .stove-icon::before{
     font-size: 16px;
 }
-
 .element-btn .stove-icon {
     display: inline-block;
     overflow: hidden;
@@ -148,9 +147,6 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
   line-height: 24px;
   font-weight: normal;
   vertical-align: middle;
-}
-.element-btn .btn-txt {
-
 }
 .element-btn .btn-txt:hover{
     text-decoration: underline;
@@ -390,6 +386,8 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
         border-color: $ui-button-inverse-disabled;
     }    
 }
+/*
+
 .element-btn.bg-ghost{
     background-color: $ui-button-ghost-bg-enabled;
     border: 1px solid $ui-button-ghost-border-enabled;
@@ -410,10 +408,6 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
     }
     &:disabled,
     &.disabled{
-        /* transparent #e0e0e0 tortkd 색상 확인
-        background: $ui-button-ghost-bg-disabled;
-        border-color: $ui-button-ghost-border-disabled;
-        */
         background: #eaeaea;
         border-color: #eaeaea;
         & .btn-txt{
@@ -451,7 +445,8 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
         }
     }
         
-}
+}*/
+
 /* mobile */
 @include mobile-end {
 }

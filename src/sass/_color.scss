@@ -12,7 +12,7 @@
             ┃    ┣━━━ Button-Primary
             ┃    ┣━━━ Button-Secondary
             ┃    ┣━━━ Button-Gray
-            ┃    ┣━━━ Button-Ghost
+            ┃    ┣━━━ Button-Outline
             ┃    ┣━━━ Button-Inverse
             ┃    ┣━━━ Input field
             ┃    ┣━━━ Font
@@ -46,7 +46,7 @@
             ┃    ┗━━━ Disabled
             ┣━━━ Icon-Inverse
             ┃    ┗━━━ Enabled
-            ┣━━━ Button-Primary, Button-Secondary, Button-Gray, Button-Ghost, Button-Inverse
+            ┣━━━ Button-Primary, Button-Secondary, Button-Gray, Button-Outline, Button-Inverse
             ┃    ┣━━━ Enabled
             ┃    ┣━━━ Hover
             ┃    ┣━━━ Pressed
@@ -131,24 +131,16 @@
 
 /* ColorVariable > UI */
 // Background
+$ui-bg-base: #fafafa;
 $ui-bg-base-white: #ffffff;
 $ui-bg-base-gray: #f5f5f5;
 $ui-bg-navigation: #ffffff;
 $ui-bg-surface-white: #ffffff;
 $ui-bg-surface-gray: #f5f5f5;
 $ui-bg-highlight: #fff9f0;
-// Background(dark)
-$dark-ui-bg-base-white: #14151a;
-$dark-ui-bg-base-gray: #1f2128;
-$dark-ui-bg-navigation: #1f2128;
-$dark-ui-bg-surface-white: #2a2c33;
-$dark-ui-bg-surface-gray: #1f2128;
-$dark-ui-bg-highlight: rgba(#ffffff, $alpha: 0.1);
 
 // Border
-$ui-border-thumbnail: rgba(#000000, $alpha: 0.15);
-// Border(dark)
-$dark-ui-border-thumbnail: rgba(#000000, $alpha: 0.15);
+$ui-border-thumbnail: rgba(#000000, $alpha: 0.05);
 
 // Icon-Primary
 $ui-icon-primary-enabled: #1a1a1a;
@@ -157,28 +149,16 @@ $ui-icon-primary-pressed: #000000;
 $ui-icon-primary-focused: #1a1a1a;
 $ui-icon-primary-selected: #fc6020;
 $ui-icon-primary-disabled: #cacaca;
-// Icon-Primary(dark)
-$dark-ui-icon-primary-enabled: #e4e6ec;
-$dark-ui-icon-primary-hover: #ffffff;
-$dark-ui-icon-primary-pressed: #a0a4b1;
-$dark-ui-icon-primary-focused: #e4e6ec;
-$dark-ui-icon-primary-selected: #f86126;
-$dark-ui-icon-primary-disabled: #3c3f48;
 
 // Icon-Secondary
-$ui-icon-secondary-enabled: #3a3a3a;
+$ui-icon-secondary-enabled: #4c4c4c;
 $ui-icon-secondary-hover: #6e6e6e;
-$ui-icon-secondary-pressed: #1a1a1a;
-$ui-icon-secondary-focused: #3a3a3a;
+$ui-icon-secondary-pressed: #3a3a3a;
+$ui-icon-secondary-focused: #4c4c4c;
+$ui-icon-secondary-border1-focused: #4c4c4c;
+$ui-icon-secondary-border2-focused: #ffffff;
 $ui-icon-secondary-selected: #fc6020;
-$ui-icon-secondary-disabled: #cacaca;
-// Icon-Secondary(dark)
-$dark-ui-icon-secondary-enabled: #a0a4b1;
-$dark-ui-icon-secondary-hover: #e4e6ec;
-$dark-ui-icon-secondary-pressed: #777b89;
-$dark-ui-icon-secondary-focused: #a0a4b1;
-$dark-ui-icon-secondary-selected: #f86126;
-$dark-ui-icon-secondary-disabled: #3c3f48;
+$ui-icon-secondary-disabled: #b3b3b3;
 
 // Icon-Tertiary
 $ui-icon-tertiary-enabled: #6e6e6e;
@@ -186,34 +166,19 @@ $ui-icon-tertiary-hover: #b3b3b3;
 $ui-icon-tertiary-pressed: #3a3a3a;
 $ui-icon-tertiary-focused: #6e6e6e;
 $ui-icon-tertiary-selected: #fc6020;
-$ui-icon-tertiary-disabled: #cacaca;
-// Icon-Tertiary(dark)
-$dark-ui-icon-tertiary-enabled: #777b89;
-$dark-ui-icon-tertiary-hover: #a0a4b1;
-$dark-ui-icon-tertiary-pressed: #545763;
-$dark-ui-icon-tertiary-focused: #777b89;
-$dark-ui-icon-tertiary-selected: #f86126;
-$dark-ui-icon-tertiary-disabled: #3c3f48;
+$ui-icon-tertiary-disabled: #b3b3b3;
 
 // Icon-Quaternary
 $ui-icon-quaternary-enabled: #999999;
-$ui-icon-quaternary-hover: #cacaca;
+$ui-icon-quaternary-hover: #b3b3b3;
 $ui-icon-quaternary-pressed: #4c4c4c;
 $ui-icon-quaternary-focused: #999999;
 $ui-icon-quaternary-selected: #fc6020;
 $ui-icon-quaternary-disabled: #e0e0e0;
-// Icon-Quaternary(dark)
-$dark-ui-icon-quaternary-enabled: #545763;
-$dark-ui-icon-quaternary-hover: #777b89;
-$dark-ui-icon-quaternary-pressed: #464953;
-$dark-ui-icon-quaternary-focused: #545763;
-$dark-ui-icon-quaternary-selected: #f86126;
-$dark-ui-icon-quaternary-disabled: #3c3f48;
 
 // Icon-Inverse
 $ui-icon-inverse-enabled: #ffffff;
-// Icon-Inverse(dark)
-$dark-ui-icon-inverse-enabled: #ffffff;
+$ui-icon-inverse-disabled: rgba(#ffffff, $alpha: 0.25);
 
 // Button-Primary
 $ui-button-primary-enabled: #fc6020;
@@ -223,14 +188,6 @@ $ui-button-primary-bg-focused: #fc6020;
 $ui-button-primary-border1-focused: #ffffff;
 $ui-button-primary-border2-focused: #fc6020;
 $ui-button-primary-disabled: #eaeaea;
-// Button-Primary(dark)
-$dark-ui-button-primary-enabled: #f86126;
-$dark-ui-button-primary-hover: #f76d37;
-$dark-ui-button-primary-pressed: #de511b;
-$dark-ui-button-primary-bg-focused: #f86126;
-$dark-ui-button-primary-border1-focused: #ffffff;
-$dark-ui-button-primary-border2-focused: #f86126;
-$dark-ui-button-primary-disabled: #3c3f48;
 
 // Button-Secondary
 $ui-button-secondary-enabled: #314058;
@@ -240,54 +197,35 @@ $ui-button-secondary-bg-focused: #314058;
 $ui-button-secondary-border1-focused: #ffffff;
 $ui-button-secondary-border2-focused: #314058;
 $ui-button-secondary-disabled: #eaeaea;
-// Button-Secondary(dark)
-$dark-ui-button-secondary-enabled: #506585;
-$dark-ui-button-secondary-hover: #40526e;
-$dark-ui-button-secondary-pressed: #314058;
-$dark-ui-button-secondary-bg-focused: #506585;
-$dark-ui-button-secondary-border1-focused: #ffffff;
-$dark-ui-button-secondary-border2-focused: #506585;
-$dark-ui-button-secondary-disabled: #3c3f48;
 
 // Button-Gray
-$ui-button-gray-enabled: #eaeaea;
-$ui-button-gray-hover: #fafafa;
+$ui-button-gray-enabled: #f5f5f5;
+$ui-button-gray-hover: #eaeaea;
 $ui-button-gray-pressed: #d5d5d5;
-$ui-button-gray-bg-focused: #eaeaea;
-$ui-button-gray-border1-focused: #ffffff;
-$ui-button-gray-border2-focused: #6e6e6e;
+$ui-button-gray-bg-focused: #f5f5f5;
+$ui-button-gray-border1-focused: #6e6e6e;
+$ui-button-gray-border2-focused: #ffffff;
 $ui-button-gray-disabled: #eaeaea;
-// Button-Gray(dark)
-$dark-ui-button-gray-enabled: #33363d;
-$dark-ui-button-gray-hover: #3c3f48;
-$dark-ui-button-gray-pressed: #2a2c33;
-$dark-ui-button-gray-bg-focused: #33363d;
-$dark-ui-button-gray-border1-focused: #1f2128;
-$dark-ui-button-gray-border2-focused: #c7cad1;
-$dark-ui-button-gray-disabled: #3c3f48;
 
-// Button-Ghost
-$ui-button-ghost-bg-enabled: transparent;
-$ui-button-ghost-border-enabled: #cacaca;
-$ui-button-ghost-bg-hover: rgba(#000000, $alpha: 0.05);
-$ui-button-ghost-border-hover: #cacaca;
-$ui-button-ghost-bg-pressed: rgba(#000000, $alpha: 0.1);
-$ui-button-ghost-border-pressed: #cacaca;
-$ui-button-ghost-bg-focused: rgba(#000000, $alpha: 0.08);
-$ui-button-ghost-border-focused: #6e6e6e;
-$ui-button-ghost-bg-disabled: transparent;
-$ui-button-ghost-border-disabled: #e0e0e0;
-// Button-Ghost(dark)
-$dark-ui-button-ghost-bg-enabled: transparent;
-$dark-ui-button-ghost-border-enabled: #545763;
-$dark-ui-button-ghost-bg-hover: rgba(#ffffff, $alpha: 0.05);
-$dark-ui-button-ghost-border-hover: #545763;
-$dark-ui-button-ghost-bg-pressed: rgba(#ffffff, $alpha: 0.1);
-$dark-ui-button-ghost-border-pressed: #545763;
-$dark-ui-button-ghost-bg-focused: rgba(#ffffff, $alpha: 0.08);
-$dark-ui-button-ghost-border-focused: #c7cad1;
-$dark-ui-button-ghost-bg-disabled: transparent;
-$dark-ui-button-ghost-border-disabled: #3c3f48;
+// Button-Outline
+$ui-button-outline-enabled: #ffffff;
+$ui-button-outline-hover: #f5f5f5;
+$ui-button-outline-pressed: #e0e0e0;
+$ui-button-outline-bg-focused: #ffffff;
+$ui-button-outline-border1-focused: #d5d5d5;
+$ui-button-outline-border2-focused: #cacaca;
+$ui-button-outline-border3-focused: #6e6e6e;
+$ui-button-outline-border4-focused: #d5d5d5;
+$ui-button-outline-disabled: #eaeaea;
+
+// Button-Inverse-ghost
+$ui-button-inverse-ghost-enabled: transparent;
+$ui-button-inverse-ghost-hover: rgba(#ffffff, $alpha: 0.2);
+$ui-button-inverse-ghost-pressed: rgba(#ffffff, $alpha: 0.1);
+$ui-button-inverse-ghost-bg-focused: rgba(#ffffff, $alpha: 0.2);
+$ui-button-inverse-ghost-border1-focused: #ffffff;
+$ui-button-inverse-ghost-border2-disabled: rgba(#ffffff, $alpha: 0.2);
+$ui-button-inverse-ghost-disabled: transparent;
 
 // Button-Inverse
 $ui-button-inverse-enabled: #ffffff;
@@ -296,13 +234,6 @@ $ui-button-inverse-pressed: #e0e0e0;
 $ui-button-inverse-bg-focused: #ffffff;
 $ui-button-inverse-border-focused: rgba(#ffffff, $alpha: 0.25);
 $ui-button-inverse-disabled: #eaeaea;
-// Button-Inverse(dark)
-$dark-ui-button-inverse-enabled: #ffffff;
-$dark-ui-button-inverse-hover: #fafafa;
-$dark-ui-button-inverse-pressed: #e0e0e0;
-$dark-ui-button-inverse-bg-focused: #ffffff;
-$dark-ui-button-inverse-border-focused: rgba(#ffffff, $alpha: 0.25);
-$dark-ui-button-inverse-disabled: #eaeaea;
 
 // Input-Field
 $ui-input-bg-enabled: #ffffff;
@@ -321,23 +252,6 @@ $ui-input-bg-informational: #ffffff;
 $ui-input-border-informational: #1e88e5;
 $ui-input-bg-disabled: #f5f5f5;
 $ui-input-border-disabled: #cacaca;
-// Input-Field(dark)
-$dark-ui-input-bg-enabled: transparent;
-$dark-ui-input-border-enabled: #545763;
-$dark-ui-input-bg-focused: transparent;
-$dark-ui-input-border-focused: #c7cad1;
-$dark-ui-input-bg-activated: transparent;
-$dark-ui-input-border-activated: #c7cad1;
-$dark-ui-input-bg-error: transparent;
-$dark-ui-input-border-error: #e53935;
-$dark-ui-input-bg-warning: transparent;
-$dark-ui-input-border-warning: #ef9500;
-$dark-ui-input-bg-success: transparent;
-$dark-ui-input-border-success: #43a047;
-$dark-ui-input-bg-informational: transparent;
-$dark-ui-input-border-informational: #1e88e5;
-$dark-ui-input-bg-disabled: transparent;
-$dark-ui-input-border-disabled: #3c3f48;
 
 // Font
 $ui-text-01: #1a1a1a;
@@ -355,31 +269,11 @@ $ui-text-link: #457bef;
 $ui-text-link-visited: #9b54f6;
 $ui-text-placeholder: #cacaca;
 $ui-text-disabled: #cacaca;
-// Font(dark)
-$dark-ui-text-01: #f1f2f4;
-$dark-ui-text-02: #e3e5e8;
-$dark-ui-text-03: #a9afba;
-$dark-ui-text-04: #8b8f9c;
-$dark-ui-text-brand: #f86126;
-$dark-ui-text-inverse-01: #ffffff;
-$dark-ui-text-inverse-02: rgba(#ffffff, $alpha: 0.6);
-$dark-ui-text-error: #e53935;
-$dark-ui-text-warning: #ef9500;
-$dark-ui-text-success: #43a047;
-$dark-ui-text-informational: #1e88e5;
-$dark-ui-text-link: #457bef;
-$dark-ui-text-link-visited: #9b54f6;
-$dark-ui-text-placeholder: #545763;
-$dark-ui-text-disabled: #3c3f48;
 
 // Divider
 $ui-divider-01: rgba(#000000, $alpha: 0.2);
 $ui-divider-02: rgba(#000000, $alpha: 0.1);
 $ui-divider-03: rgba(#000000, $alpha: 0.05);
-// Divider(dark)
-$dark-ui-divider-01: rgba(#ffffff, $alpha: 0.2);
-$dark-ui-divider-02: rgba(#ffffff, $alpha: 0.1);
-$dark-ui-divider-03: rgba(#ffffff, $alpha: 0.05);
 
 // Shadow
 $ui-shadow-01: rgba(#000000, $alpha: 0.5);
@@ -437,14 +331,6 @@ $interactive-primary-pressed: #e14b12;
 $interactive-primary-focus: #fc6020;
 $interactive-primary-selected: #f05417;
 $interactive-primary-disabled: #cacaca;
-// Primary Color(dark)
-$dark-interactive-primary-highlight: rgba(#ffffff, $alpha: 0.05);
-$dark-interactive-primary-enabled: #f86126;
-$dark-interactive-primary-hover: #f76d37;
-$dark-interactive-primary-pressed: #de511b;
-$dark-interactive-primary-focus: #f86126;
-$dark-interactive-primary-selected: #ee5a20;
-$dark-interactive-primary-disabled: #3c3f48;
 
 // Secondary Color
 $interactive-secondary-highlight: #e8f0ff;
@@ -454,25 +340,12 @@ $interactive-secondary-pressed: #1e2c40;
 $interactive-secondary-focus: #314058;
 $interactive-secondary-selected: #1e2c40;
 $interactive-secondary-disabled: #cacaca;
-// Secondary Color(dark)
-$dark-interactive-secondary-highlight: rgba(#ffffff, $alpha: 0.05);
-$dark-interactive-secondary-enabled: #506585;
-$dark-interactive-secondary-hover: #40526e;
-$dark-interactive-secondary-pressed: #314058;
-$dark-interactive-secondary-focus: #506585;
-$dark-interactive-secondary-selected: #40526e;
-$dark-interactive-secondary-disabled: #3c3f48;
 
 // Gray
 $interactive-gray-hover: rgba(#000000, $alpha: 0.05);
 $interactive-gray-pressed: rgba(#000000, $alpha: 0.1);
 $interactive-gray-focused: rgba(#000000, $alpha: 0.08);
 $interactive-gray-selected: rgba(#000000, $alpha: 0.1);
-// Gray(dark)
-$dark-interactive-gray-hover: rgba(#000000, $alpha: 0.05);
-$dark-interactive-gray-pressed: rgba(#000000, $alpha: 0.1);
-$dark-interactive-gray-focused: rgba(#000000, $alpha: 0.08);
-$dark-interactive-gray-selected: rgba(#000000, $alpha: 0.1);
 
 /* color palette */
 // primary
@@ -486,17 +359,6 @@ $orange-600: #f05417;
 $orange-700: #e14b12;
 $orange-800: #d2450f;
 $orange-900: #b63a0a;
-// primary dark
-$orange-50-dark: #fde5ce;
-$orange-100-dark: #fcc69a;
-$orange-200-dark: #faa06f;
-$orange-300-dark: #f78955;
-$orange-400-dark: #f76d37;
-$orange-500-dark: #f86126;
-$orange-600-dark: #ee5a20;
-$orange-700-dark: #de511b;
-$orange-800-dark: #cf4b17;
-$orange-900-dark: #b53e11;
 
 $navy-50: #e8f0ff;
 $navy-100: #ccd8ee;
@@ -762,23 +624,10 @@ $colorDatabaseBackground: (
     ui-bg-surface-gray: $ui-bg-surface-gray,
     ui-bg-highlight: $ui-bg-highlight,
 );
-// Background(dark)
-$colorDatabaseDarkBackground: (
-    ui-bg-base-white: $dark-ui-bg-base-white,
-    ui-bg-base-gray: $dark-ui-bg-base-gray,
-    ui-bg-navigation: $dark-ui-bg-navigation,
-    ui-bg-surface-white: $dark-ui-bg-surface-white,
-    ui-bg-surface-gray: $dark-ui-bg-surface-gray,
-    ui-bg-highlight: $dark-ui-bg-highlight,
-);
 
 // Border
 $colorDatabaseBorder: (
     ui-border-thumbnail: $ui-border-thumbnail,
-);
-// Border(dark)
-$colorDatabaseDarkBorder: (
-    ui-border-thumbnail: $dark-ui-border-thumbnail,
 );
 
 // Icon-Primary
@@ -790,15 +639,6 @@ $colorDatabaseIconPrimary: (
     ui-icon-primary-selected: $ui-icon-primary-selected,
     ui-icon-primary-disabled: $ui-icon-primary-disabled,
 );
-// Icon-Primary(dark)
-$colorDatabaseDarkIconPrimary: (
-    ui-icon-primary-enabled: $dark-ui-icon-primary-enabled,
-    ui-icon-primary-hover: $dark-ui-icon-primary-hover,
-    ui-icon-primary-pressed: $dark-ui-icon-primary-pressed,
-    ui-icon-primary-focused: $dark-ui-icon-primary-focused,
-    ui-icon-primary-selected: $dark-ui-icon-primary-selected,
-    ui-icon-primary-disabled: $dark-ui-icon-primary-disabled,
-);
 
 // Icon-Secondary
 $colorDatabaseIconSecondary: (
@@ -808,15 +648,6 @@ $colorDatabaseIconSecondary: (
     ui-icon-secondary-focused: $ui-icon-secondary-focused,
     ui-icon-secondary-selected: $ui-icon-secondary-selected,
     ui-icon-secondary-disabled: $ui-icon-secondary-disabled,
-);
-// Icon-Secondary(dark)
-$colorDatabaseDarkIconSecondary: (
-    ui-icon-secondary-enabled: $dark-ui-icon-secondary-enabled,
-    ui-icon-secondary-hover: $dark-ui-icon-secondary-hover,
-    ui-icon-secondary-pressed: $dark-ui-icon-secondary-pressed,
-    ui-icon-secondary-focused: $dark-ui-icon-secondary-focused,
-    ui-icon-secondary-selected: $dark-ui-icon-secondary-selected,
-    ui-icon-secondary-disabled: $dark-ui-icon-secondary-disabled,
 );
 
 // Icon-Tertiary
@@ -828,15 +659,6 @@ $colorDatabaseIconTertiary: (
     ui-icon-tertiary-selected: $ui-icon-tertiary-selected,
     ui-icon-tertiary-disabled: $ui-icon-tertiary-disabled,
 );
-// Icon-Tertiary(dark)
-$colorDatabaseDarkIconTertiary: (
-    ui-icon-tertiary-enabled: $dark-ui-icon-tertiary-enabled,
-    ui-icon-tertiary-hover: $dark-ui-icon-tertiary-hover,
-    ui-icon-tertiary-pressed: $dark-ui-icon-tertiary-pressed,
-    ui-icon-tertiary-focused: $dark-ui-icon-tertiary-focused,
-    ui-icon-tertiary-selected: $dark-ui-icon-tertiary-selected,
-    ui-icon-tertiary-disabled: $dark-ui-icon-tertiary-disabled,
-);
 
 // Icon-Quaternary
 $colorDatabaseIconQuaternary: (
@@ -847,23 +669,10 @@ $colorDatabaseIconQuaternary: (
     ui-icon-quaternary-selected: $ui-icon-quaternary-selected,
     ui-icon-quaternary-disabled: $ui-icon-quaternary-disabled,
 );
-// Icon-Quaternary(dark)
-$colorDatabaseDarkIconQuaternary: (
-    ui-icon-quaternary-enabled: $dark-ui-icon-quaternary-enabled,
-    ui-icon-quaternary-hover: $dark-ui-icon-quaternary-hover,
-    ui-icon-quaternary-pressed: $dark-ui-icon-quaternary-pressed,
-    ui-icon-quaternary-focused: $dark-ui-icon-quaternary-focused,
-    ui-icon-quaternary-selected: $dark-ui-icon-quaternary-selected,
-    ui-icon-quaternary-disabled: $dark-ui-icon-quaternary-disabled,
-);
 
 // Icon-Inverse
 $colorDatabaseIconInverse: (
     ui-icon-inverse-enabled: $ui-icon-inverse-enabled,
-);
-// Icon-Inverse(dark)
-$colorDatabaseDarkIconInverse: (
-    ui-icon-inverse-enabled: $dark-ui-icon-inverse-enabled,
 );
 
 // Button-Primary
@@ -876,16 +685,6 @@ $colorDatabaseButtonPrimary: (
     ui-button-primary-border2-focused: $ui-button-primary-border2-focused,
     ui-button-primary-disabled: $ui-button-primary-disabled,
 );
-// Button-Primary(dark)
-$colorDatabaseDarkButtonPrimary: (
-    ui-button-primary-enabled: $dark-ui-button-primary-enabled,
-    ui-button-primary-hover: $dark-ui-button-primary-hover,
-    ui-button-primary-pressed: $dark-ui-button-primary-pressed,
-    ui-button-primary-bg-focused: $dark-ui-button-primary-bg-focused,
-    ui-button-primary-border1-focused: $dark-ui-button-primary-border1-focused,
-    ui-button-primary-border2-focused: $dark-ui-button-primary-border2-focused,
-    ui-button-primary-disabled: $dark-ui-button-primary-disabled,
-);
 
 // Button-Secondary
 $colorDatabaseButtonSecondary: (
@@ -896,18 +695,6 @@ $colorDatabaseButtonSecondary: (
     ui-button-secondary-border1-focused: $ui-button-secondary-border1-focused,
     ui-button-secondary-border2-focused: $ui-button-secondary-border2-focused,
     ui-button-secondary-disabled: $ui-button-secondary-disabled,
-);
-// Button-Secondary(dark)
-$colorDatabaseDarkButtonSecondary: (
-    ui-button-secondary-enabled: $dark-ui-button-primary-enabled,
-    ui-button-secondary-hover: $dark-ui-button-secondary-hover,
-    ui-button-secondary-pressed: $dark-ui-button-secondary-pressed,
-    ui-button-secondary-bg-focused: $dark-ui-button-secondary-bg-focused,
-    ui-button-secondary-border1-focused:
-        $dark-ui-button-secondary-border1-focused,
-    ui-button-secondary-border2-focused:
-        $dark-ui-button-secondary-border2-focused,
-    ui-button-secondary-disabled: $dark-ui-button-secondary-disabled,
 );
 
 // Button-Gray
@@ -920,43 +707,6 @@ $colorDatabaseButtonGray: (
     ui-button-gray-border2-focused: $ui-button-gray-border2-focused,
     ui-button-gray-disabled: $ui-button-gray-disabled,
 );
-// Button-Gray(dark)
-$colorDatabaseDarkButtonGray: (
-    ui-button-gray-enabled: $dark-ui-button-gray-enabled,
-    ui-button-gray-hover: $dark-ui-button-gray-hover,
-    ui-button-gray-pressed: $dark-ui-button-gray-pressed,
-    ui-button-gray-bg-focused: $dark-ui-button-gray-bg-focused,
-    ui-button-gray-border1-focused: $dark-ui-button-gray-border1-focused,
-    ui-button-gray-border2-focused: $dark-ui-button-gray-border2-focused,
-    ui-button-gray-disabled: $dark-ui-button-gray-disabled,
-);
-
-// Button-Ghost
-$colorDatabaseButtonGhost: (
-    ui-button-ghost-bg-enabled: $ui-button-ghost-bg-enabled,
-    ui-button-ghost-border-enabled: $ui-button-ghost-border-enabled,
-    ui-button-ghost-bg-hover: $ui-button-ghost-bg-hover,
-    ui-button-ghost-border-hover: $ui-button-ghost-border-hover,
-    ui-button-ghost-bg-pressed: $ui-button-ghost-bg-pressed,
-    ui-button-ghost-border-pressed: $ui-button-ghost-border-pressed,
-    ui-button-ghost-bg-focused: $ui-button-ghost-bg-focused,
-    ui-button-ghost-border-focused: $ui-button-ghost-border-focused,
-    ui-button-ghost-bg-disabled: $ui-button-ghost-bg-disabled,
-    ui-button-ghost-border-disabled: $ui-button-ghost-border-disabled,
-);
-// Button-Ghost(dark)
-$colorDatabaseDarkButtonGhost: (
-    ui-button-ghost-bg-enabled: $dark-ui-button-ghost-bg-enabled,
-    ui-button-ghost-border-enabled: $dark-ui-button-ghost-border-enabled,
-    ui-button-ghost-bg-hover: $dark-ui-button-ghost-bg-hover,
-    ui-button-ghost-border-hover: $dark-ui-button-ghost-border-hover,
-    ui-button-ghost-bg-pressed: $dark-ui-button-ghost-bg-pressed,
-    ui-button-ghost-border-pressed: $dark-ui-button-ghost-border-pressed,
-    ui-button-ghost-bg-focused: $dark-ui-button-ghost-bg-focused,
-    ui-button-ghost-border-focused: $dark-ui-button-ghost-border-focused,
-    ui-button-ghost-bg-disabled: $dark-ui-button-ghost-bg-disabled,
-    ui-button-ghost-border-disabled: $dark-ui-button-ghost-border-disabled,
-);
 
 // Button-Inverse
 $colorDatabaseButtonInverse: (
@@ -966,15 +716,6 @@ $colorDatabaseButtonInverse: (
     ui-button-inverse-bg-focused: $ui-button-inverse-bg-focused,
     ui-button-inverse-border-focused: $ui-button-inverse-border-focused,
     ui-button-inverse-disabled: $ui-button-inverse-disabled,
-);
-// Button-Inverse(dark)
-$colorDatabaseDarkButtonInverse: (
-    ui-button-inverse-enabled: $dark-ui-button-inverse-enabled,
-    ui-button-inverse-hover: $dark-ui-button-inverse-hover,
-    ui-button-inverse-pressed: $dark-ui-button-inverse-pressed,
-    ui-button-inverse-bg-focused: $dark-ui-button-inverse-bg-focused,
-    ui-button-inverse-border-focused: $dark-ui-button-inverse-border-focused,
-    ui-button-inverse-disabled: $dark-ui-button-inverse-disabled,
 );
 
 // Input-Field
@@ -996,25 +737,6 @@ $colorDatabaseInputField: (
     ui-input-bg-disabled: $ui-input-bg-disabled,
     ui-input-border-disabled: $ui-input-border-disabled,
 );
-// Input-Field(dark)
-$colorDatabaseDarkInputField: (
-    ui-input-bg-enabled: $dark-ui-input-bg-enabled,
-    ui-input-border-enabled: $dark-ui-input-border-enabled,
-    ui-input-bg-focused: $dark-ui-input-bg-focused,
-    ui-input-border-focused: $dark-ui-input-border-focused,
-    ui-input-bg-activated: $dark-ui-input-bg-activated,
-    ui-input-border-activated: $dark-ui-input-border-activated,
-    ui-input-bg-error: $dark-ui-input-bg-error,
-    ui-input-border-error: $dark-ui-input-border-error,
-    ui-input-bg-warning: $dark-ui-input-bg-warning,
-    ui-input-border-warning: $dark-ui-input-border-warning,
-    ui-input-bg-success: $dark-ui-input-bg-success,
-    ui-input-border-success: $dark-ui-input-border-success,
-    ui-input-bg-informational: $dark-ui-input-bg-informational,
-    ui-input-border-informational: $dark-ui-input-border-informational,
-    ui-input-bg-disabled: $dark-ui-input-bg-disabled,
-    ui-input-border-disabled: $dark-ui-input-border-disabled,
-);
 
 // Font
 $colorDatabaseFont: (
@@ -1034,24 +756,6 @@ $colorDatabaseFont: (
     ui-text-placeholder: $ui-text-placeholder,
     ui-text-disabled: $ui-text-disabled,
 );
-// Font(dark)
-$colorDatabaseDarkFont: (
-    ui-text-01: $dark-ui-text-01,
-    ui-text-02: $dark-ui-text-02,
-    ui-text-03: $dark-ui-text-03,
-    ui-text-04: $dark-ui-text-04,
-    ui-text-brand: $dark-ui-text-brand,
-    ui-text-inverse-01: $dark-ui-text-inverse-01,
-    ui-text-inverse-02: $dark-ui-text-inverse-02,
-    ui-text-error: $dark-ui-text-error,
-    ui-text-warning: $dark-ui-text-warning,
-    ui-text-success: $dark-ui-text-success,
-    ui-text-informational: $dark-ui-text-informational,
-    ui-text-link: $dark-ui-text-link,
-    ui-text-link-visited: $dark-ui-text-link-visited,
-    ui-text-placeholder: $dark-ui-text-placeholder,
-    ui-text-disabled: $dark-ui-text-disabled,
-);
 
 // Divider
 $colorDatabaseDivider: (
@@ -1059,13 +763,6 @@ $colorDatabaseDivider: (
     ui-divider-02: $ui-divider-02,
     ui-divider-03: $ui-divider-03,
 );
-// Divider(dark)
-$colorDatabaseDarkDivider: (
-    ui-divider-01: $dark-ui-divider-01,
-    ui-divider-02: $dark-ui-divider-02,
-    ui-divider-03: $dark-ui-divider-03,
-);
-
 // Shadow
 $colorDatabaseShadow: (
     ui-shadow-01: $ui-shadow-01,
@@ -1110,11 +807,6 @@ $colorDatabaseSkeleton: (
     ui-skeleton-01: $ui-skeleton-01,
     ui-skeleton-02: $ui-skeleton-02,
 );
-// Skeleton(dark)
-$colorDatabaseDarkSkeleton: (
-    ui-skeleton-01: $dark-ui-skeleton-01,
-    ui-skeleton-02: $dark-ui-skeleton-02,
-);
 
 /* colorDatabase >  InteractiveColor */
 // Primary Color
@@ -1127,16 +819,6 @@ $colorDatabasePrimaryColor: (
     interactive-primary-selected: $interactive-primary-selected,
     interactive-primary-disabled: $interactive-primary-disabled,
 );
-// Primary Color(dark)
-$colorDatabaseDarkPrimaryColor: (
-    interactive-primary-highlight: $dark-interactive-primary-highlight,
-    interactive-primary-enabled: $dark-interactive-primary-enabled,
-    interactive-primary-hover: $dark-interactive-primary-hover,
-    interactive-primary-pressed: $dark-interactive-primary-pressed,
-    interactive-primary-focus: $dark-interactive-primary-focus,
-    interactive-primary-selected: $dark-interactive-primary-selected,
-    interactive-primary-disabled: $dark-interactive-primary-disabled,
-);
 
 // Secondary Color
 $colorDatabaseSecondaryColor: (
@@ -1148,16 +830,6 @@ $colorDatabaseSecondaryColor: (
     interactive-secondary-selected: $interactive-secondary-selected,
     interactive-secondary-disabled: $interactive-secondary-disabled,
 );
-// Secondary Color(dark)
-$colorDatabaseDarkSecondaryColor: (
-    interactive-secondary-highlight: $dark-interactive-secondary-highlight,
-    interactive-secondary-enabled: $dark-interactive-secondary-enabled,
-    interactive-secondary-hover: $dark-interactive-secondary-hover,
-    interactive-secondary-pressed: $dark-interactive-secondary-pressed,
-    interactive-secondary-focus: $dark-interactive-secondary-focus,
-    interactive-secondary-selected: $dark-interactive-secondary-selected,
-    interactive-secondary-disabled: $dark-interactive-secondary-disabled,
-);
 
 // Gray Color
 $colorDatabaseGrayColor: (
@@ -1165,13 +837,6 @@ $colorDatabaseGrayColor: (
     interactive-gray-pressed: $interactive-gray-pressed,
     interactive-gray-focused: $interactive-gray-focused,
     interactive-gray-selected: $interactive-gray-selected,
-);
-// Gray Color(dark)
-$colorDatabaseDarkGrayColor: (
-    interactive-gray-hover: $dark-interactive-gray-hover,
-    interactive-gray-pressed: $dark-interactive-gray-pressed,
-    interactive-gray-focused: $dark-interactive-gray-focused,
-    interactive-gray-selected: $dark-interactive-gray-selected,
 );
 
 $colorList: (
@@ -1185,7 +850,6 @@ $colorList: (
     $colorDatabaseButtonPrimary,
     $colorDatabaseButtonSecondary,
     $colorDatabaseButtonGray,
-    $colorDatabaseButtonGhost,
     $colorDatabaseButtonInverse,
     $colorDatabaseInputField,
     $colorDatabaseFont,
@@ -1197,28 +861,6 @@ $colorList: (
     $colorDatabasePrimaryColor,
     $colorDatabaseSecondaryColor,
     $colorDatabaseGrayColor
-);
-
-$colorListDark: (
-    $colorDatabaseDarkBackground,
-    $colorDatabaseDarkBorder,
-    $colorDatabaseDarkIconPrimary,
-    $colorDatabaseDarkIconSecondary,
-    $colorDatabaseDarkIconTertiary,
-    $colorDatabaseDarkIconQuaternary,
-    $colorDatabaseDarkIconInverse,
-    $colorDatabaseDarkButtonPrimary,
-    $colorDatabaseDarkButtonSecondary,
-    $colorDatabaseDarkButtonGray,
-    $colorDatabaseDarkButtonGhost,
-    $colorDatabaseDarkButtonInverse,
-    $colorDatabaseDarkInputField,
-    $colorDatabaseDarkFont,
-    $colorDatabaseDarkDivider,
-    $colorDatabaseDarkSkeleton,
-    $colorDatabaseDarkPrimaryColor,
-    $colorDatabaseDarkSecondaryColor,
-    $colorDatabaseDarkGrayColor
 );
 
 /* Color palette Database */
@@ -1233,18 +875,6 @@ $colorDatabasePalettePrimary: (
     orange-700: $orange-700,
     orange-800: $orange-800,
     orange-900: $orange-900,
-);
-$colorDatabasePalettePrimaryDark: (
-    orange-50-dark: $orange-50-dark,
-    orange-100-dark: $orange-100-dark,
-    orange-200-dark: $orange-200-dark,
-    orange-300-dark: $orange-300-dark,
-    orange-400-dark: $orange-400-dark,
-    orange-500-dark: $orange-500-dark,
-    orange-600-dark: $orange-600-dark,
-    orange-700-dark: $orange-700-dark,
-    orange-800-dark: $orange-800-dark,
-    orange-900-dark: $orange-900-dark,
 );
 
 $colorDatabasePalette: (

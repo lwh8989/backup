@@ -1,5 +1,6 @@
-@import "~/src/sass/mixin/mixin";
-@import "~/src/sass/space";
+@import "./../space";
+@import "./../responsive";
+@import "./responsive";
 
 /* layout */
 @mixin layout (
@@ -10,14 +11,123 @@
 ) {
     position: $position;
     display: $display;
+        -webkit-display: $display;
+        -moz-display: $display;
+        -ms-display: $display;
     width: $width;
     height: $height;
 }
 
-
-@mixin layoutBasic
+/* layout Style */
+@mixin layoutStyle
 (
-
+    $position: relative,
+    $display: flex,
+    $max-width: 100%,
+    $min-width: 100%,
+    $width: 100%,
+    $height: 100%,
+    $margin: 0 $stds-spacing-400
 ) {
-
+    position: $position;
+    max-width: $max-width;
+    width: $width;
+    height: $height;
+    margin: $margin;
 }
+
+.layout {
+    @include layout($width: null);
+    .layout-basic {
+        @include layoutStyle($max-width: null, $min-width: null, $margin: 0 $stds-spacing-400);
+    }
+}
+
+/* layout container XL */
+.lc-xl {
+    justify-content: center;
+    align-items: center;
+    .layout-basic {
+        width: $stds-breakpoint-xl;
+    }
+}
+/* layout container L */
+.lc-l {
+    justify-content: center;
+    align-items: center;
+    .layout-basic {
+        width: $stds-breakpoint-l;
+    }
+}
+/* layout container M */
+.lc-m {
+    justify-content: center;
+    align-items: center;
+    .layout-basic {
+        width: $stds-breakpoint-m;
+    }
+}
+
+
+/* mobile 360 */
+@include mobile {
+  .layout {
+      @include layout($width: null);
+      .layout-basic {
+          @include layoutStyle($max-width: null, $min-width: null, $width: null, $margin: 0 $stds-spacing-400);
+      }
+  }
+}
+
+/* tablet 768 */
+@include tablet {
+   .layout {
+       @include layout($width: null);
+       .layout-basic {
+           @include layoutStyle($max-width: null, $min-width: null, $width: null, $margin: 0 $stds-spacing-800);
+       }
+   }
+}
+
+/* desktopM 1280 */
+@include desktopM {
+   .layout {
+       @include layout($width: null);
+       .layout-basic {
+           @include layoutStyle($max-width: null, $min-width: null, $width: null, $margin: 0 $stds-spacing-1200);
+       }
+   }
+}
+
+/* desktopL 1440 */
+@include desktopL {
+  .layout {
+      @include layout($width: null);
+      .layout-basic {
+          @include layoutStyle($max-width: null, $min-width: null, $width: null, $margin: 0 $stds-spacing-1300);
+      }
+  }
+}
+
+/* desktopXL 1600 */
+@include desktopXL {
+  .layout {
+      @include layout($width: null);
+      .layout-basic {
+          @include layoutStyle($max-width: null, $min-width: null, $width: null, $margin: 0 $stds-spacing-1300);
+      }
+  }
+}
+
+/* desktop2XL 1920 */
+@include desktop2XL {
+  .layout {
+      @include layout($width: null);
+      .layout-basic {
+          @include layoutStyle($max-width: null, $min-width: null, $width: null, $margin: 0 $stds-spacing-1300);
+      }
+  }
+}
+
+
+

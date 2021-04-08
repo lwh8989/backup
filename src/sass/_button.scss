@@ -1,4 +1,4 @@
-@import "~/src/sass/mixin/mixin";
+@import "~/src/sass/mixin/responsive";
 @import "~/src/sass/color";
 
 /* button */
@@ -448,8 +448,7 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
 }*/
 
 /* mobile */
-@include mobile-end {
-}
+
 /* mobile 360 */
 @include mobile {
 

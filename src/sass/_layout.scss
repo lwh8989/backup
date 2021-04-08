@@ -1,4 +1,4 @@
-@import "~/src/sass/mixin/mixin";
+@import "~/src/sass/mixin/responsive";
 @import "~/src/sass/space";
 
 
@@ -174,71 +174,7 @@
 }
 
 /* mobile */
-@include mobile-end {
-    .layout {
-        .layout-basic {
-            max-width: 100%;
-            margin: 0 $stds-spacing-400;
-        }
-        .layout-information {
-            padding: 0 $stds-spacing-400;
-            .container {
-                .nav-area {
-                    display: none
-                }
-                .content-area {
-                    width: 100%;
-                }
-            }
-        }
-        .layout-s-one-rail {
-            .container {
-                .nav-area {
-                    display: none;
-                }
-                .content-area {
-                    margin: 0 $stds-spacing-400;
-                }
-            }
-        }
-        .layout-b-one-rail {
-            .container {
-                .nav-area {
-                    display: none;
-                }
-                .content-area {
-                    margin: 0 $stds-spacing-400;
-                }
-            }
-        }
-        .layout-two-rail {
-            .container {
-                .aside-area {
-                    display: none;
-                }
-                .nav-area {
-                    display: none;
-                }
-                .content-area {
-                    margin: 0 $stds-spacing-400;
-                }
-            }
-        }
-        .layout-side-rail {
-            .container {
-                .aside-area {
-                    display: none;
-                }
-                .nav-area {
-                    display: none;
-                }
-                .content-area {
-                    margin: 0 $stds-spacing-400;
-                }
-            }
-        }
-    }
-}
+
 /* mobile 360 */
 @include mobile {
     .layout {

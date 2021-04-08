@@ -12,16 +12,16 @@
 @import "~/src/sass/button";
 
 /* module */
-@import "~/src/sass/button";
 
 /* partial */
 
 /* mixin */
 @import "~/src/sass/mixin/font";
 @import "~/src/sass/mixin/mixin";
+@import "~/src/sass/mixin/responsive";
 
 /* Layout */
-@import "~/src/sass/layout";
+@import "~/src/sass/mixin/layout";
 @import "~/src/sass/guide";
 @import "~/src/sass/index";
 @import "~/src/sass/responsive";

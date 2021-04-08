@@ -15,8 +15,6 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
         height: $h + px;
     }
 
-    // dropdown button height
-
     @if $h < 40 {
         .#{"h" + $h + ""} {
             .element-select-txt {
@@ -26,6 +24,7 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
                 font-size: 13px;
                 height: 36px;
             }
+
             &.box-type {
                 button {
                     font-size: 16px;
@@ -45,6 +44,30 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
                 button {
                     font-size: 20px;
                 }
+            }
+        }
+    }
+
+    @if $h >= 28 {
+        .#{"h" + $h + ""} {
+            &.element-badge {
+                padding: 0 8px;
+                font-size: 13px;
+            }
+        }
+    }
+    @if $h <= 20 {
+        .#{"h" + $h + ""} {
+            &.element-badge {
+                padding: 0 6px;
+                font-size: 11px;
+            }
+        }
+    }
+    @if $h <= 16 {
+        .#{"h" + $h + ""} {
+            &.element-badge {
+                padding: 0 4px;
             }
         }
     }

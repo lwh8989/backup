@@ -1,25 +1,88 @@
-@import "~/src/sass/mixin/mixin";
-@import "~/src/sass/space";
+@use "~/src/sass/mixin/mixin";
+@use "~/src/sass/color";
+@use "~/src/sass/space";
+@use "~/src/sass/z-index";
 
-.module-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    overflow-y: auto;
-    background-color: #fff;
-    padding: $stds-spacing-200 $stds-spacing-400;
-    border-radius: 4px;
+$dropdown-default-space: 0 space.$stds-spacing-400;
 
-    &-button {
-        @include flex($y: center);
-        width: 100%;
-        height: 40px;
+.element-dropdown {
+    position: relative;
+    display: inline-block;
 
-        &:hover {
-            background-color: $black-alpha5;
-            color: $ui-text-02;
+    &.active .element-select-button,
+    .element-select-button:hover,
+    .element-select-button:focus {
+        color: color.$ui-text-02;
+    }
+
+    &.active {
+        .element-select-icon {
+            transform: rotate(-180deg);
         }
+        .element-dropdown-layer {
+            display: block;
+        }
+    }
+}
+
+/* select */
+.element-select-icon {
+    font-size: 12px;
+}
+
+.element-select-button {
+    @include mixin.flex($y: center);
+    width: 100%;
+    height: 100%;
+    color: color.$ui-text-03;
+    line-height: 0;
+
+    &.box-type {
+        @include mixin.flexBetweenCenter;
+        padding: $dropdown-default-space;
+    }
+}
+
+.element-dropdown-layer {
+    display: none;
+    padding: 8px 0;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: $white;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px color.$black-alpha10;
+
+    &.absolute {
+        position: absolute;
+        z-index: z-index.$zindex-dropdown;
+
+        &.top {
+            top: calc(100% + 1px);
+        }
+        &.bottom {
+            top: initial;
+            bottom: calc(100% + 1px);
+        }
+        &.right {
+            right: 0;
+        }
+    }
+
+    @at-root .box-type + & {
+        width: 100%;
+    }
+}
+
+.element-dropdown-button {
+    @include mixin.flex($y: center);
+    width: 100%;
+    padding: $dropdown-default-space;
+    color: color.$ui-text-03;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+        background-color: color.$black-alpha5;
+        color: color.$ui-text-02;
     }
 }

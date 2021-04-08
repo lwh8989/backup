@@ -1,0 +1,15 @@
+{% macro base(width, height, type, boxType, active, txt, place, state) %}
+    <input type="{{ type }}" class="element-input {{ width }} {{ height }} {{ boxType }} {{ active }}" placeholder="{{ place }}"  value="{{ txt }}" {{ state }}/>
+{% endmacro %}
+
+{% macro icon(width, height, type, boxType, active, txt, place, state, icon, round) %}
+    <div class="element-input-icon {{ width }} {{ height }} {{ boxType }} {{ active }} {{ round }} {{ state }}">
+        <div class="element-input-wrap">
+            <input type="{{ type }}" class="element-input" placeholder="{{ place }}"  value="{{ txt }}" {{ state }}/>
+        </div>
+        {% if icon %}
+            <button class="{{ icon.first }}"></button>
+            <button class="{{ icon.second }}"></button>
+        {% endif %}
+    </div>
+{% endmacro %}

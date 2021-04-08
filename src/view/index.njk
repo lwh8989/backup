@@ -4,39 +4,38 @@
 
 <!-- styles -->
 {% block styles %}
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 {% endblock %}
 
 <!-- styles -->
 {% block content %}
-<p class="guide-title">Stove Core UI</p>
-<div class="guide-content container">
-  <div class="page-category">
-    <input id="all" type="radio" name="category" checked>
-    <label for="all" data-filter="*">All</label>
+  <p class="guide-title">Stove Core UI</p>
+  <div class="guide-content container">
+    <div class="page-category">
+      <input id="all" type="radio" name="category" checked>
+      <label for="all" data-filter="*">All</label>
 
-    <input id="core" type="radio" name="category">
-    <label for="core" data-filter="[data-value=core]">Core</label>
+      <input id="core" type="radio" name="category">
+      <label for="core" data-filter="[data-value=core]">Core</label>
 
-    <input id="layout" type="radio" name="category">
-    <label for="layout" data-filter="[data-value=layout]">Layout</label>
+      <input id="layout" type="radio" name="category">
+      <label for="layout" data-filter="[data-value=layout]">Layout</label>
 
-    <input id="element" type="radio" name="category">
-    <label for="element" data-filter="[data-value=element]">Element</label>
+      <input id="element" type="radio" name="category">
+      <label for="element" data-filter="[data-value=element]">Element</label>
 
-    <input id="module" type="radio" name="category">
-    <label for="module" data-filter="[data-value=module]">Module</label>
+      <input id="module" type="radio" name="category">
+      <label for="module" data-filter="[data-value=module]">Module</label>
 
-    <input id="partial" type="radio" name="category">
-    <label for="partial" data-filter="[data-value=partial]">Partial</label>
+      <input id="partial" type="radio" name="category">
+      <label for="partial" data-filter="[data-value=partial]">Partial</label>
 
-    <input id="lagarcy" type="radio" name="category">
-    <label for="lagarcy" data-filter="[data-value=lagarcy]">Lagarcy</label>
+      <input id="lagarcy" type="radio" name="category">
+      <label for="lagarcy" data-filter="[data-value=lagarcy]">Lagarcy</label>
+    </div>
+    <ul class="page-list grid"></ul>
   </div>
-  <ul class="page-list grid">
-  </ul>
-</div>
 {% endblock %}
 
 <!-- dialog -->
@@ -44,146 +43,143 @@
 
 <!-- scripts -->
 {% block scripts %}
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
-<script id="template-list-item" type="text/template">
-  <li class="page-list-item element-item" data-value="@filter">
-    <a href="@url">
-      <div class="item-left">
-        <em class="tit">@title</em>
-        <span class="path">@url</span>
-      </div>
-      <div class="item-sub">
-        <span>Developer</span>
-        <em class="developer">@developer</em>
-      </div>
-    </a>
-  </li>
-</script>
+  <script id="template-list-item" type="text/template">
+    <li class="page-list-item element-item" data-value="@filter">
+      <a href="@url">
+        <div class="item-left">
+          <em class="tit">@title</em>
+          <span class="path">@url</span>
+        </div>
+        <div class="item-sub">
+          <span>Developer</span>
+          <em class="developer">@developer</em>
+        </div>
+      </a>
+    </li>
+  </script>
 
-<script>
-  (function () {
+  <script>
+    (function () {
 
-    var data = [
-      {
-        name: 'Core Typography',
-        path: 'core/font/font.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Core Color',
-        path: 'core/color/color.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Core Space',
-        path: 'core/space/space.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Core Font Icon',
-        path: 'core/icon/icon.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Core Motion',
-        path: 'core/motion/motion.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Core Radius',
-        path: 'core/radius/radius.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Core Shadow',
-        path: 'core/shadow/shadow.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Core Ratio',
-        path: 'core/ratio/ratio.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Layout Basic',
-        path: 'layout/basic/basic.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Layout Information',
-        path: 'layout/information/information.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Layout S One Rail',
-        path: 'layout/s-one-rail/s-one-rail.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Layout B One Rail',
-        path: 'layout/b-one-rail/b-one-rail.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Layout Two Rail',
-        path: 'layout/two-rail/two-rail.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Layout Side Rail',
-        path: 'layout/side-rail/side-rail.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Element Button',
-        path: 'element/button/button.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Module Footer',
-        path: 'module/footer/footer.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Module Pagination',
-        path: 'module/pagination/pagination.html',
-        developer: '이원호'
-      },
-      {
-        name: 'Lagarcy',
-        path: 'lagarcy/lagarcy.html',
-        developer: '이원호'
-      }
-    ];
-
-    window.addEventListener('DOMContentLoaded', function() {
-      var templateHtml = document.getElementById("template-list-item").innerHTML;
-      var listHtml = "";
-
-      for (var item of data) {
-        filter = item.path.split('/')[0];
-        listHtml += templateHtml.replace(/@filter/g, filter)
-                                .replace(/@url/g, item.path)
-                                .replace(/@title/g, item.name)
-                                .replace(/@developer/g, item.developer);
-      }
-      document.querySelector(".page-list").innerHTML = listHtml;
-
-      var iso = new Isotope( '.grid', {
-        itemSelector: '.element-item',
-        layoutMode: 'vertical'
-      });
-
-      var category = document.querySelector(".page-category");
-      category.addEventListener('click', function(event) {
-        if ( !matchesSelector( event.target, 'label' ) ) {
-          return;
+      var data = [
+        {
+          name: 'Core Typography',
+          path: 'core/font/font.html',
+          developer: '이원호'
+        }, {
+          name: 'Core Color',
+          path: 'core/color/color.html',
+          developer: '이원호'
+        }, {
+          name: 'Core Space',
+          path: 'core/space/space.html',
+          developer: '이원호'
+        }, {
+          name: 'Core Font Icon',
+          path: 'core/icon/icon.html',
+          developer: '이원호'
+        }, {
+          name: 'Core Motion',
+          path: 'core/motion/motion.html',
+          developer: '이원호'
+        }, {
+          name: 'Core Radius',
+          path: 'core/radius/radius.html',
+          developer: '이원호'
+        }, {
+          name: 'Core Shadow',
+          path: 'core/shadow/shadow.html',
+          developer: '이원호'
+        }, {
+          name: 'Core Ratio',
+          path: 'core/ratio/ratio.html',
+          developer: '이원호'
+        }, {
+          name: 'Layout Basic',
+          path: 'layout/basic/basic.html',
+          developer: '이원호'
+        }, {
+          name: 'Layout Information',
+          path: 'layout/information/information.html',
+          developer: '이원호'
+        }, {
+          name: 'Layout S One Rail',
+          path: 'layout/s-one-rail/s-one-rail.html',
+          developer: '이원호'
+        }, {
+          name: 'Layout B One Rail',
+          path: 'layout/b-one-rail/b-one-rail.html',
+          developer: '이원호'
+        }, {
+          name: 'Layout Two Rail',
+          path: 'layout/two-rail/two-rail.html',
+          developer: '이원호'
+        }, {
+          name: 'Layout Side Rail',
+          path: 'layout/side-rail/side-rail.html',
+          developer: '이원호'
+        }, {
+          name: 'Element Button',
+          path: 'element/button/button.html',
+          developer: '이원호'
+        }, {
+          name: 'Element form',
+          path: 'element/form/form.html',
+          developer: '이원호'
+        }, {
+          name: 'Module Footer',
+          path: 'module/footer/footer.html',
+          developer: '이원호'
+        }, {
+          name: 'Module Pagination',
+          path: 'module/pagination/pagination.html',
+          developer: '이원호'
+        }, {
+          name: 'Lagarcy',
+          path: 'lagarcy/lagarcy.html',
+          developer: '이원호'
         }
-        var filterValue = event.target.getAttribute('data-filter');
-        iso.arrange({ filter: filterValue });
+      ];
+
+      window.addEventListener('DOMContentLoaded', function () {
+        var templateHtml = document
+          .getElementById("template-list-item")
+          .innerHTML;
+        var listHtml = "";
+
+        for (var item of data) {
+          filter = item
+            .path
+            .split('/')[0];
+          listHtml += templateHtml
+            .replace(/@filter/g, filter)
+            .replace(/@url/g, item.path)
+            .replace(/@title/g, item.name)
+            .replace(/@developer/g, item.developer);
+        }
+        document
+          .querySelector(".page-list")
+          .innerHTML = listHtml;
+
+        var iso = new Isotope('.grid', {
+          itemSelector: '.element-item',
+          layoutMode: 'vertical'
+        });
+
+        var category = document.querySelector(".page-category");
+
+        category.addEventListener('click', function (event) {
+          if (!matchesSelector(event.target, 'label')) {
+            return;
+          }
+          var filterValue = event
+            .target
+            .getAttribute('data-filter');
+          iso.arrange({filter: filterValue});
+        });
       });
-    });
-  })();
-</script>
+    })();
+  </script>
 {% endblock %}

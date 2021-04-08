@@ -7,11 +7,12 @@ $dropdown-default-space: 0 space.$stds-spacing-400;
 .element-input {
     padding: $dropdown-default-space;
     color: color.$gray-500;
+}
 
-    &.active,
-    &:focus {
-        color: color.$gray-700;
-    }
+.element-input.active,
+.element-input-icon.active .element-input,
+.element-input:focus {
+    color: color.$gray-700;
 }
 
 .element-input-icon {

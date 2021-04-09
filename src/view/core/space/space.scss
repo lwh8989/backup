@@ -1,51 +1,63 @@
 @import "~/src/sass/space";
 
 /* 동일한 폴더에서 있는 scss가 나오지 않습니다. */
-.ex-sp-100 {
-    height: $stds-spacing-100;
+.ex-sp-2 {
+    height: $stds-spacing-2;
+}
+.ex-sp-4 {
+    height: $stds-spacing-4;
+}
+.ex-sp-8 {
+    height: $stds-spacing-8;
+}
+.ex-sp-12 {
+    height: $stds-spacing-12;
+}
+.ex-sp-16 {
+    height: $stds-spacing-16;
+}
+.ex-sp-20 {
+    height: $stds-spacing-20;
+}
+.ex-sp-24 {
+    height: $stds-spacing-24;
+}
+.ex-sp-28 {
+    height: $stds-spacing-28;
+}
+.ex-sp-32 {
+    height: $stds-spacing-32;
+}
+.ex-sp-36 {
+    height: $stds-spacing-36;
+}
+.ex-sp-40 {
+    height: $stds-spacing-40;
+}
+.ex-sp-44 {
+    height: $stds-spacing-44;
+}
+.ex-sp-48 {
+    height: $stds-spacing-48;
+}
+.ex-sp-52 {
+    height: $stds-spacing-52;
+}
+.ex-sp-56 {
+    height: $stds-spacing-56;
+}
+.ex-sp-60 {
+    height: $stds-spacing-60;
+}
+.ex-sp-64 {
+    height: $stds-spacing-64;
+}
+.ex-sp-80 {
+    height: $stds-spacing-80;
+}
+.ex-sp-120 {
+    height: $stds-spacing-120;
 }
 .ex-sp-200 {
     height: $stds-spacing-200;
-}
-.ex-sp-300 {
-    height: $stds-spacing-300;
-}
-.ex-sp-400 {
-    height: $stds-spacing-400;
-}
-.ex-sp-500 {
-    height: $stds-spacing-500;
-}
-.ex-sp-600 {
-    height: $stds-spacing-600;
-}
-.ex-sp-700 {
-    height: $stds-spacing-700;
-}
-.ex-sp-800 {
-    height: $stds-spacing-800;
-}
-.ex-sp-900 {
-    height: $stds-spacing-900;
-}
-.ex-sp-1000 {
-    height: $stds-spacing-1000;
-}
-.ex-sp-1100 {
-    height: $stds-spacing-1100;
-}
-.ex-sp-1200 {
-    height: $stds-spacing-1200;
-}
-.ex-sp-1300 {
-    height: $stds-spacing-1300;
-}
-.ex-sp-1400 {
-    height: $stds-spacing-1400;
-}
-.ex-sp-1500 {
-    height: $stds-spacing-1500;
-}
-.ex-sp-1600 {
-    height: $stds-spacing-1600;
 }

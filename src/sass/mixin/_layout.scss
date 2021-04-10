@@ -6,6 +6,7 @@
 @mixin layout (
     $position: relative,
     $display: flex,
+    $flex-flow: row wrap,
     $width: 100%,
     $height: 100%
 ) {
@@ -14,132 +15,193 @@
         -webkit-display: $display;
         -moz-display: $display;
         -ms-display: $display;
+    flex-flow: $flex-flow;
     width: $width;
     height: $height;
+    align-items: center;
+    justify-content: center;
 }
 
-/* layout Style */
+/* layout Header order 1 */
+@mixin layoutHeader(
+    $order: 1,
+    $height: 48px,
+    $flex: 0 1 100%
+) {
+    order: $order;
+    height: $height;
+    flex: $flex;
+}
+.layout-header {
+    @include layoutHeader();
+    &.depth2 {
+        height: 96px;
+    }
+}
+/* header 배경영역에 bg 색상 넣을지 고민하기 */
+
+/* layout Style order 2 */
 @mixin layoutStyle
 (
     $position: relative,
     $display: flex,
-    $max-width: 100%,
-    $min-width: 100%,
-    $width: 100%,
-    $height: 100%,
-    $margin: 0 $stds-spacing-16
+    $max-width: auto,
+    $min-width: auto,
+    $width: auto,
+    $max-height: auto,
+    $height: auto,
+    $min-height: auto,
+    $margin: 0 $stds-spacing-16,
+    $flex: 1,
+    $order: 3
 ) {
     position: $position;
     max-width: $max-width;
     width: $width;
     height: $height;
+    min-height: $min-height;
     margin: $margin;
+    flex: $flex;
+    order: $order;
 }
-
-.layout-header {
-    display: flex;
-    width: 100%;
-    height: 50px;
-    background: red;
-    flex-direction: column;
-    position: absolute;
-}
-
-.layout-footer {
-    
-}
-
 .layout {
     @include layout($width: null);
     .layout-basic {
-        @include layoutStyle($max-width: null, $min-width: null, $margin: 0 $stds-spacing-16);
+        @include layoutStyle($max-width: null, $min-width: null, $min-height: 100%, $margin: 0 $stds-spacing-16);
     }
 }
 
+/* layout Footer order 5 */
+@mixin layoutFooter(
+    $height: auto,
+    $flex: 0 1 100%,
+    $order: 5
+) {
+    height: $height;
+    flex: $flex;
+    order: $order;
+}
+.layout-footer {
+    @include layoutFooter();
+}
+
+// nav {
+//   order:2;
+//   flex: 0 1 200px;
+// }
+// aside {
+//   order:4;
+//   flex:0 1 200px;
+// }
+
 /* layout container XL */
 .lc-xl {
-    justify-content: center;
-    align-items: center;
     .layout-basic {
-        width: $stds-breakpoint-xl;
+        max-width: $stds-breakpoint-xl;
     }
 }
 /* layout container L */
 .lc-l {
-    justify-content: center;
-    align-items: center;
     .layout-basic {
-        width: $stds-breakpoint-l;
+        max-width: $stds-breakpoint-l;
     }
 }
 /* layout container M */
 .lc-m {
-    justify-content: center;
-    align-items: center;
     .layout-basic {
-        width: $stds-breakpoint-m;
+        max-width: $stds-breakpoint-m;
     }
 }
 
 
 /* mobile 360 */
 @include mobile {
-  .layout {
-      @include layout($width: null);
-      .layout-basic {
-          @include layoutStyle($max-width: null, $min-width: null, $width: null, $margin: 0 $stds-spacing-16);
-      }
-  }
+    .layout {
+        @include layout($width: null);
+        .layout-basic {
+            @include layoutStyle($max-width: null, $min-width: null, $width: null, $min-height: 100%, $margin: 0 $stds-spacing-16);
+        }
+        .layout-footer {
+            @include layoutFooter();
+        }
+    }
 }
 
 /* tablet 768 */
 @include tablet {
-   .layout {
-       @include layout($width: null);
-       .layout-basic {
-           @include layoutStyle($max-width: null, $min-width: null, $width: null, $margin: 0 $stds-spacing-32);
-       }
-   }
+    .layout {
+        @include layout($width: null);
+        .layout-basic {
+            @include layoutStyle($max-width: null, $min-width: null, $width: null, $min-height: 100%, $margin: 0 $stds-spacing-32);
+        }
+        .layout-footer {
+            @include layoutFooter();
+        }
+    }
 }
 
 /* desktopM 1280 */
 @include desktopM {
-   .layout {
-       @include layout($width: null);
-       .layout-basic {
-           @include layoutStyle($max-width: null, $min-width: null, $width: null, $margin: 0 $stds-spacing-48);
-       }
-   }
+    .layout {
+        @include layout($width: null);
+        .layout-header {
+            @include layoutHeader($height: 68px);
+            &.depth2 {
+                height: 136px;
+            }
+        }
+        .layout-basic {
+            @include layoutStyle($max-width: null, $min-width: null, $width: null, $min-height: 100%, $margin: 0 $stds-spacing-48);
+        }
+    }
 }
 
 /* desktopL 1440 */
 @include desktopL {
-  .layout {
-      @include layout($width: null);
-      .layout-basic {
-          @include layoutStyle($max-width: null, $min-width: null, $width: null, $margin: 0 $stds-spacing-52);
-      }
-  }
+    .layout {
+        @include layout($width: null);
+        .layout-header {
+            @include layoutHeader($height: 68px);
+            &.depth2 {
+                height: 136px;
+            }
+        }
+        .layout-basic {
+            @include layoutStyle($max-width: null, $min-width: null, $width: null, $min-height: 100%, $margin: 0 $stds-spacing-52);
+        }
+    }
 }
 
 /* desktopXL 1600 */
 @include desktopXL {
-  .layout {
-      @include layout($width: null);
-      .layout-basic {
-          @include layoutStyle($max-width: null, $min-width: null, $width: null, $margin: 0 $stds-spacing-52);
-      }
-  }
+    .layout {
+        @include layout($width: null);
+        .layout-header {
+            @include layoutHeader($height: 68px);
+            &.depth2 {
+                height: 136px;
+            }
+        }
+        .layout-basic {
+            @include layoutStyle($max-width: null, $min-width: null, $width: null, $min-height: 100%, $margin: 0 $stds-spacing-52);
+        }
+    }
 }
 
 /* desktop2XL 1920 */
 @include desktop2XL {
-  .layout {
-      @include layout($width: null);
-      .layout-basic {
-          @include layoutStyle($max-width: null, $min-width: null, $width: null, $margin: 0 $stds-spacing-52);
-      }
-  }
+    .layout {
+        @include layout($width: null);
+        .layout-header {
+            @include layoutHeader($height: 68px);
+            &.depth2 {
+                height: 136px;
+            }
+        }
+        .layout-basic {
+            @include layoutStyle($max-width: null, $min-width: null, $width: null, $min-height: 100%, $margin: 0 $stds-spacing-52);
+        }
+    }
 }
 
 

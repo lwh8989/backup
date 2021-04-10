@@ -1,11 +1,13 @@
 {% extends "_include/layout/index/index.njk" %}
+{% import "_include/module/footer/footer.njk" as footer %}
 
 <!-- styles -->
 {% block styles %}
 {% endblock %}
 
 {% block gnb %}
-<div class="layout-header">gnb</div>
+<!-- [D] GNB가 두줄로 나올 경우 depth2 를 추가 해 주세요.   -->
+<header class="layout-header"></header>
 {% endblock %}
 
 <!-- content -->
@@ -18,7 +20,9 @@
 {% endblock %}
 
 {% block footer %}
-<div class="layout-footer">footer</div>
+<footer class="layout-footer">
+    {{ footer.base() }}
+</footer>
 {% endblock %}
 
 <!-- dialog -->

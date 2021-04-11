@@ -94,25 +94,22 @@
 //   flex:0 1 200px;
 // }
 
-/* layout container XL */
+/* layout Max Size XL / L . M */
 .lc-xl {
     .layout-basic {
         max-width: $stds-breakpoint-xl;
     }
 }
-/* layout container L */
 .lc-l {
     .layout-basic {
         max-width: $stds-breakpoint-l;
     }
 }
-/* layout container M */
 .lc-m {
     .layout-basic {
         max-width: $stds-breakpoint-m;
     }
 }
-
 
 /* mobile 360 */
 @include mobile {

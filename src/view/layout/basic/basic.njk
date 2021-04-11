@@ -1,5 +1,6 @@
 {% extends "_include/layout/index/index.njk" %}
 {% import "_include/module/footer/footer.njk" as footer %}
+{% import "_include/layout/dialog/dialog.njk" as dialog %}
 
 <!-- styles -->
 {% block styles %}
@@ -26,8 +27,10 @@
 {% endblock %}
 
 <!-- dialog -->
-{% block dialog %}{% endblock %}
+{% block dialog %}
+    {{ dialog.base(stateClass="is-hidden") }}
+{% endblock %}
 
 <!-- scripts -->
-{% block scripts %} 
+{% block scripts %}
 {% endblock %}

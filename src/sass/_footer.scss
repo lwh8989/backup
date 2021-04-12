@@ -10,9 +10,33 @@ $ui-button-pagination-hover : #fc6020;
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 28px 0 45px;
+    padding: 28px 0 40px;
     background-color: #28282c;
     color: #fff;
+}
+.footer .footer-top.element-btn{
+    position: fixed;
+    bottom:64px;
+    right:41px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+    color: #3a3a3a;
+    &:hover{
+        background-color: #f5f5f5;
+    }
+    &:active{
+        background-color: #e0e0e0;
+    }
+    &:focus{
+        outline: none;
+        border: 1px solid #fff;
+        box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.25);
+    }
+    &:disabled,
+    &.disabled{
+        background-color: #eaeaea;
+        color: #b3b3b3;
+    }
 }
 .footer .footer-container{
     width: 1140px;
@@ -22,23 +46,45 @@ $ui-button-pagination-hover : #fc6020;
     color: rgba(255, 255, 255, 0.6);
 }
 .footer .footer-notice-link{
-    display: inline-block;
+    display: flex;
+    align-items: center;
     font-size: 16px;
     color: #fff;
+}
+.footer .footer-notice-link span {
+    display: inline-block;
+}
+.footer .footer-notice-link span:first-child {
+    flex-shrink: 0;
+    width: 82px;
+}
+.footer .footer-notice-link span:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: nowrap;
+}
+.footer .footer-notice {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom:1px solid rgba(255, 255, 255, 0.1);
 }
 .footer .footer-nav {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin: 16px 0 17px 0;
-    padding: 16px 0;
-    border-top:1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 16px;
+    padding-bottom: 16px;
     border-bottom:1px solid rgba(255, 255, 255, 0.1);
 }
 .footer .footer-nav a{
     margin-right: 24px;
     font-size: 15px;
     color: rgba(255, 255, 255, 0.6);
+}
+.footer .footer-nav a strong {
+    font-weight: bold;
 }
 .footer .footer-nav a:first-child{
     margin-left: 0;
@@ -57,7 +103,7 @@ $ui-button-pagination-hover : #fc6020;
 .footer-nav .rating-game {
     visibility: hidden;
     position: absolute;
-    top: 40px;
+    top: 35px;
     left: 50%;
     width: 100%;
     height: 0;
@@ -65,6 +111,9 @@ $ui-button-pagination-hover : #fc6020;
     z-index: 1;
     transform: translate(-50%, 0%);
     /*  white-space: nowrap;*/
+}
+.footer-nav .rating-game img {
+    margin-right: 2px;
 }
 .footer-nav .rating-game .module-tab.tab-vertical {
     height: 0;
@@ -78,12 +127,11 @@ $ui-button-pagination-hover : #fc6020;
 }
 .footer-nav .rating-img {
     float: left;
-    padding: 18px 16px;
-    margin-right: -28px;
+    padding: 18px 20px;
 }
 .footer-nav .rating-info {
     float: left;
-    padding: 5px 28px 0 28px;
+    padding: 5px 20px 0 0;
 }
 .footer-nav .rating-info table {
     border-collapse: collapse;
@@ -97,6 +145,9 @@ $ui-button-pagination-hover : #fc6020;
 .footer-nav .rating-info tbody {
     float: left;
 }
+.footer-nav .rating-info tbody:last-child tr > th{
+    padding-left: 30px;
+}
 .footer-nav .rating-info tr {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -105,7 +156,7 @@ $ui-button-pagination-hover : #fc6020;
 }
 .footer-nav .rating-info th,
 .footer-nav .rating-info td {
-    padding: 8px;
+    padding: 8px 10px;
     text-align: left;
     color: #fff;
     font-size: 12px;
@@ -114,19 +165,29 @@ $ui-button-pagination-hover : #fc6020;
 .footer-nav .rating-info th {
     opacity: 0.6;
 }
-.footer .footer-address{
+.footer .footer-address > p > span {
+    margin-right: 10px;
 }
 .footer .footer-address a {
     color: rgba(255, 255, 255, 0.6);
 }
+.footer .footer-address .bizinfo {
+    text-decoration: underline;
+}
 .footer .copy{
-    margin-top: 16px;
+    margin-top: 20px;
 }
 .footer .channing-info{
+    margin-top:20px;
     color: rgba(255, 255, 255, 0.6);
 }
 .footer .footer-logo{
-    margin-top: 25px;
+    margin-top: 24px;
+}
+.footer .footer-logo img{
+    height: 44px;
+    margin-right: 32px;
+
 }
 
 /* tab 세로형 확인 */
@@ -193,22 +254,48 @@ $ui-button-pagination-hover : #fc6020;
     /*background: #ccc; /*스타일 따라 변경 가능*/
 }
 
-/* 게임이용등급 - 디자인 확인 필요*/
-/* mobile */
-
 /* mobile 360 */
 @include mobile {
-    .footer-container {
+    .footer {
+        padding-bottom: 24px;
+    }
+    .footer .footer-top.element-btn{
+        bottom:24px;
+        right:20px;
+        min-width :32px;
+        width: 32px;
+        height: 32px;
+        border-radius : 50%;
+    }
+    .footer .footer-top.element-btn.only-icon .stove-icon::before{
+        font-size: 20px;
+    }
+    .footer .footer-container {
         width: 100%;
         padding: 0 32px;
     }
-    .module-tab.tab-vertical .tab-content{
-        display: flex;
-        flex-direction: column;
+    .footer-address{
+        display: none;
     }
-    
-    .rating-img > img {
-        width: 26px;
+    .footer .footer-nav {
+        padding-bottom: 8px;
+    }
+    .footer .footer-nav > a{
+        margin-bottom: 8px;
+    }
+    .footer .channing-info {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+    .footer-nav .rating-game {
+        display: none;
+    }
+    .footer .copy{
+        margin-top: 0;
+    }
+    .footer .footer-logo img {
+        height: 36px;
+        margin-bottom: 16px;
     }
 }
 /* tablet 768 */

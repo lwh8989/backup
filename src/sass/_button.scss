@@ -45,6 +45,16 @@ $ui-button-ghost-white-border-focused: #fff;
 $ui-button-ghost-white-bg-disabled: transparent;
 $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
 
+// Button-Inverse-ghost
+$ui-button-ghost-enabled: transparent;
+$ui-button-ghost-hover: rgba(#ffffff, $alpha: 0.2);
+$ui-button-ghost-pressed: rgba(#ffffff, $alpha: 0.1);
+$ui-button-ghost-bg-focused: rgba(#ffffff, $alpha: 0.2);
+$ui-button-ghost-border1-focused: #ffffff;
+$ui-button-ghost-border2-disabled: rgba(#ffffff, $alpha: 0.2);
+$ui-button-ghost-disabled: transparent;
+
+
 .element-btn {
   position: relative;
   display: inline-flex;
@@ -77,6 +87,14 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
     box-shadow: none!important;  
   }
 }
+.element-btn.btn-txt-b .btn-txt {
+    font-weight: bold;
+
+}
+.element-btn.bg-trans .btn-txt {
+    color: #3a3a3a;
+}
+
 .element-btn.size-xlarge.only-icon .stove-icon{
     width: 32px;
     height: 32px;
@@ -154,19 +172,6 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
 .element-btn.disabled .btn-txt:hover,
 .element-btn:disabled .btn-txt:hover{
     text-decoration: none;
-}
-.element-btn.bg-gray .btn-txt {
-    color: #3a3a3a;
-}
-.element-btn.bg-ghost .btn-txt {
-    color: #3a3a3a;
-}
-.element-btn.bg-trans .btn-txt {
-    color: #3a3a3a;
-}
-.element-btn.bg-gray.disabled .btn-txt,
-.element-btn.bg-gray:disabled .btn-txt {
-    color: #cacaca;
 }
 
 /* shape */
@@ -358,6 +363,7 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
     }
     &:disabled,
     &.disabled{
+        color: #cacaca;
         background: $ui-button-gray-disabled;
         border-color: $ui-button-gray-disabled;
     }    
@@ -386,35 +392,59 @@ $ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
         border-color: $ui-button-inverse-disabled;
     }    
 }
-/*
-
-.element-btn.bg-ghost{
-    background-color: $ui-button-ghost-bg-enabled;
-    border: 1px solid $ui-button-ghost-border-enabled;
-    color: #3a3a3a;
+.element-btn.bg-outline{
+    background-color: $ui-button-outline-enabled;
+    border: 1px solid $ui-button-outline-border1-focused;
+    color:#3a3a3a;
     &:hover{
-        background-color: $ui-button-ghost-bg-hover;    
-        border: 1px solid $ui-button-ghost-border-hover;
+        background-color: $ui-button-outline-hover;    
+        border: 1px solid #999;
     }
     &:active{
-        background-color: $ui-button-ghost-bg-pressed;    
-        border: 1px solid $ui-button-ghost-border-pressed;
+        background-color: $ui-button-outline-pressed;    
+        border: 1px solid $ui-button-outline-border2-focused;
     }
     &:focus{
         outline: none;
-        background-color: $ui-button-ghost-bg-focused;    
-        border: 1px solid $ui-button-ghost-border-focused;
-        box-shadow: inset 0 0 0 1px #000;
+        background-color: $ui-button-outline-bg-focused;    
+        border: 1px solid $ui-button-outline-border3-focused;
+        box-shadow: inset 0 0 0 2px $ui-button-outline-border3-focused;
     }
     &:disabled,
     &.disabled{
-        background: #eaeaea;
-        border-color: #eaeaea;
+        background: $ui-button-outline-disabled;
+        border-color: $ui-button-outline-border4-focused;
+    }
+}
+.element-btn.bg-ghost{
+    background-color: $ui-button-inverse-ghost-enabled;
+    border: 1px solid $ui-button-inverse-ghost-border1-focused;
+    color: #fff;
+    &:hover{
+        background-color: $ui-button-inverse-ghost-hover;    
+        border: 1px solid $ui-button-inverse-ghost-border1-focused;
+    }
+    &:active{
+        background-color: $ui-button-inverse-ghost-pressed;    
+        border: 1px solid $ui-button-inverse-ghost-border1-focused;
+    }
+    &:focus{
+        outline: none;
+        background-color: $ui-button-inverse-ghost-bg-focused;    
+        border: 1px solid $ui-button-inverse-ghost-border1-focused;
+        box-shadow: inset 0 0 0 2px $ui-button-inverse-ghost-border1-focused;
+    }
+    &:disabled,
+    &.disabled{
+        background: $ui-button-outline-disabled;
+        border-color: $ui-button-outline-disabled;
         & .btn-txt{
             color: #cacaca;
         }
     }
+
 }
+/*
 .element-btn.bg-ghost-white{
     background-color: $ui-button-ghost-bg-enabled;
     border: 1px solid $ui-button-ghost-border-enabled;

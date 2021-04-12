@@ -150,7 +150,7 @@ $ui-button-pagination-hover : #fc6020;
     padding-left: 30px;
 }
 .footer-nav .rating-info tr {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 .footer-nav .rating-info tr:first-child {
     border-top: none;
@@ -159,7 +159,7 @@ $ui-button-pagination-hover : #fc6020;
 .footer-nav .rating-info td {
     padding: 8px 10px;
     text-align: left;
-    color: #fff;
+    color: #3a3a3a;
     font-size: 12px;
     line-height: 1;
 }
@@ -198,6 +198,9 @@ $ui-button-pagination-hover : #fc6020;
   content: '';
   display: block;
   clear: both;
+}
+.module-tab.tab-vertical .color-gray {
+    background-color: #f5f5f5;
 }
 .module-tab.tab-vertical .color-apple {
   background-color: #44a342;

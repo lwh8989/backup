@@ -39,7 +39,8 @@ $ui-button-pagination-hover : #fc6020;
     }
 }
 .footer .footer-container{
-    width: 1140px;
+    width: 100%;
+    padding: 0 32px;
 }
 .footer > *{
     font-size: 13px;
@@ -305,17 +306,10 @@ $ui-button-pagination-hover : #fc6020;
     }
 }
 /* desktopM 1280 */
-@include desktopM {
-
-}
+@include desktopM {}
 /* desktopL 1440 */
-@include desktopL {
-
-}
+@include desktopL {}
 /* desktopXL 1600 */
-@include desktopXL {
-}
+@include desktopXL {}
 /* desktop2XL 1920 */
-@include desktop2XL {
-
-}
+@include desktop2XL {}

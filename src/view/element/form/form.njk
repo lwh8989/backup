@@ -1,0 +1,808 @@
+{% extends "_include/layout/guide/guide.njk" %}
+
+{% import "_include/element/dropdown.njk" as dropdown %}
+{% import "_include/element/input.njk" as input %}
+
+<!-- styles -->
+{% block styles %}{% endblock %}
+
+<!-- styles -->
+{% block content %}
+    <!-- [D]   -->
+    <div class="guide full">
+        <h1 class="guide-tit">Form</h1>
+
+        <!-- dropdown -->
+        <div class="guide-layer">
+            <div class="guide-section">
+                <h2 class="guide-section-tit">dropdown - select</h2>
+
+                <div>
+                    <div class="guide-flex ratio gap">
+                        <div>
+                            <h3 class="guide-section-stit">unbox</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 32</div>
+                                <div class="guide-desc">H 40</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ dropdown.select(height="h32", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h40", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Focus ( active )</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ dropdown.select(height="h32", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h40", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap" style="padding-top: 170px">
+                                <div class="guide-state">Disabled</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ dropdown.select(height="h32", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h40", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="guide-section-stit">box</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 32</div>
+                                <div class="guide-desc">H 36</div>
+                                <div class="guide-desc">H 40</div>
+                                <div class="guide-desc">H 44</div>
+                                <div class="guide-desc">H 48</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ dropdown.select(height="h32", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h36", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h40", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h44", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h48", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Focus ( active )</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ dropdown.select(height="h32", boxType="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h36", boxType="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h40", boxType="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h44", boxType="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h48", boxType="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active") }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap" style="padding-top: 170px">
+                                <div class="guide-state">Disabled</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ dropdown.select(height="h32", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h36", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h40", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h44", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h48", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="guide-section-stit">box ( display:block, width 100% )</h3>
+
+                        <div class="guide-desc-wrap">
+                            <div class="guide-desc">H 32</div>
+                            <div class="guide-desc">H 36</div>
+                            <div class="guide-desc">H 40</div>
+                            <div class="guide-desc">H 44</div>
+                            <div class="guide-desc">H 48</div>
+                        </div>
+
+                        <div class="guide-state-wrap">
+                            <div class="guide-state">Enabled / Hover</div>
+                            <div class="guide-flex ratio gap">
+                                <div>
+                                    {{ dropdown.select(width="full", height="h32", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h36", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h40", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h44", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h48", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guide-state-wrap">
+                            <div class="guide-state">Focus ( active )</div>
+                            <div class="guide-flex ratio gap">
+                                <div>
+                                    {{ dropdown.select(width="full", height="h32", boxType="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h36", boxType="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h40", boxType="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h44", boxType="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h48", boxType="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active") }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guide-state-wrap" style="padding-top: 170px">
+                            <div class="guide-state">Disabled</div>
+                            <div class="guide-flex ratio gap">
+                                <div>
+                                    {{ dropdown.select(width="full", height="h32", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h36", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h40", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h44", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h48", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guide-state-wrap">
+                            <div class="guide-state">Enabled / Hover</div>
+                            <div class="guide-flex ratio">
+                                <div>
+                                    {{ dropdown.select(width="full", height="h32", boxType="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- input -->
+        <div class="guide-layer">
+            <div class="guide-section">
+                <h2 class="guide-section-tit">Textfiled</h2>
+
+                <div>
+                    <div class="guide-flex ratio">
+                        <div>
+                            <h3 class="guide-section-stit">type=text</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 32</div>
+                                <div class="guide-desc">H 36</div>
+                                <div class="guide-desc">H 40</div>
+                                <div class="guide-desc">H 44</div>
+                                <div class="guide-desc">H 48</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.base(height="h32", type="text", boxType="box-type", place="input placeholder") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h36", type="text", boxType="box-type", place="input placeholder") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h40", type="text", boxType="box-type", place="input placeholder") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h44", type="text", boxType="box-type", place="input placeholder") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h48", type="text", boxType="box-type", place="input placeholder") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Focus ( active )</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.base(height="h32", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h36", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h40", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h44", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h48", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Filled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.base(height="h32", type="text", boxType="box-type", txt="input filled", place="input placeholder") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h36", type="text", boxType="box-type", txt="input filled", place="input placeholder") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h40", type="text", boxType="box-type", txt="input filled", place="input placeholder") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h44", type="text", boxType="box-type", txt="input filled", place="input placeholder") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h48", type="text", boxType="box-type", txt="input filled", place="input placeholder") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.base(height="h32", type="text", boxType="box-type", txt="input disabled", place="input placeholder", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h36", type="text", boxType="box-type", txt="input disabled", place="input placeholder", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h40", type="text", boxType="box-type", txt="input disabled", place="input placeholder", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h44", type="text", boxType="box-type", txt="input disabled", place="input placeholder", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ input.base(height="h48", type="text", boxType="box-type", txt="input disabled", place="input placeholder", state="disabled") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-flex ratio">
+                        <div>
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">width full</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ input.base(width="full", height="h32", type="text", boxType="box-type", place="input placeholder") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- search -->
+        <div class="guide-layer">
+            <div class="guide-section">
+                <h2 class="guide-section-tit">search</h2>
+
+                <div>
+                    <div class="guide-flex ratio">
+                        <div>
+                            <h3 class="guide-section-stit">line</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 32</div>
+                                <div class="guide-desc">H 36</div>
+                                <div class="guide-desc">H 40</div>
+                                <div class="guide-desc">H 44</div>
+                                <div class="guide-desc">H 48</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Focus ( active )</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Filled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, state="disabled") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-flex ratio">
+                        <div>
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">width full</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ input.icon(width="full", height="h32", type="text", boxType="box-type", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-flex ratio">
+                        <div>
+                            <h3 class="guide-section-stit">line_round</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 32</div>
+                                <div class="guide-desc">H 36</div>
+                                <div class="guide-desc">H 40</div>
+                                <div class="guide-desc">H 44</div>
+                                <div class="guide-desc">H 48</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Focus ( active )</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Filled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round", state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round", state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round", state="disabled") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-flex ratio">
+                        <div>
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">width full</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ input.icon(width="full", height="h32", type="text", boxType="box-type", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-flex ratio">
+                        <div>
+                            <h3 class="guide-section-stit">filled</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 32</div>
+                                <div class="guide-desc">H 36</div>
+                                <div class="guide-desc">H 40</div>
+                                <div class="guide-desc">H 44</div>
+                                <div class="guide-desc">H 48</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Focus ( active )</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type filled", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type filled", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type filled", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type filled", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type filled", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Filled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type filled", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type filled", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type filled", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type filled", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type filled", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type filled", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type filled", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type filled", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type filled", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type filled", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, state="disabled") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-flex ratio">
+                        <div>
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">width full</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ input.icon(width="full", height="h32", type="text", boxType="box-type filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-flex ratio">
+                        <div>
+                            <h3 class="guide-section-stit">filled_round</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 32</div>
+                                <div class="guide-desc">H 36</div>
+                                <div class="guide-desc">H 40</div>
+                                <div class="guide-desc">H 44</div>
+                                <div class="guide-desc">H 48</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Focus ( active )</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type filled", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type filled", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type filled", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type filled", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type filled", active="active", txt="input focus", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Filled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type filled", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type filled", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type filled", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type filled", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type filled", txt="input filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ input.icon(height="h32", type="text", boxType="box-type filled", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round", state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h36", type="text", boxType="box-type filled", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round", state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h40", type="text", boxType="box-type filled", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h44", type="text", boxType="box-type filled", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ input.icon(height="h48", type="text", boxType="box-type filled", txt="input disabled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round", state="disabled") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-flex ratio">
+                        <div>
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">width full</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ input.icon(width="full", height="h32", type="text", boxType="box-type filled", place="input placeholder", icon={first: "ic-control-close-circle-fill", second: "ic-navigation-search-line" }, round="round") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %}{% endblock %}

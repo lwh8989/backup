@@ -1,8 +1,12 @@
 /* [D] 개발에 반영되면 안되는 Scss입니다. */
+:root {
+    font-size: small;
+}
 .guide {
     width: 800px;
     margin: 0 auto;
     padding: 60px 0;
+
     .tit {
         font-size: 28px;
         color: #333;
@@ -70,7 +74,7 @@
             }
         }
         &.table-col1 thead tr th {
-        width: 100%;
+            width: 100%;
         }
         &.table-col2 thead tr th {
             width: 50%;
@@ -85,7 +89,6 @@
             width: 20%;
         }
     }
-    
 
     /* Space */
     .ex-space {
@@ -119,7 +122,92 @@
 
         .desc {
             padding: 16px 0;
-            ;
+        }
+    }
+
+    /* style */
+    &.full {
+        width: 90%;
+    }
+    .guide-tit {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 4px solid #eaeaea;
+        font-size: 30px;
+
+        &::before {
+            content: "📒";
+            margin-right: 8px;
+        }
+    }
+    .guide-layer {
+        padding: 20px;
+    }
+    .guide-section {
+        margin-bottom: 50px;
+
+        .guide-section-tit {
+            margin-bottom: 20px;
+            font-size: 18px;
+
+            &::before {
+                content: "🌼";
+                margin-right: 5px;
+            }
+
+            & + div {
+                padding: 0 20px;
+            }
+        }
+
+        .guide-section-stit {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eaeaea;
+            font-size: 14px;
+
+            &::before {
+                content: "📌";
+                margin-right: 5px;
+            }
+        }
+    }
+    .guide-flex {
+        @include flex;
+        flex: 1;
+        margin-bottom: 10px;
+
+        &.gap {
+            gap: 40px;
+        }
+
+        &.ratio {
+            & > * {
+                flex: 1;
+            }
+        }
+    }
+
+    .guide-desc-wrap {
+        @include flex;
+        margin-bottom: 8px;
+        padding-left: 20%;
+        color: #666;
+        gap: 40px;
+
+        & > div {
+            flex: 1;
+        }
+    }
+
+    .guide-state-wrap {
+        @include flex;
+        padding: 10px 0;
+
+        .guide-state {
+            width: 20%;
+            padding: 8px 0;
+            color: #1e88e5;
         }
     }
 }

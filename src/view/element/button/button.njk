@@ -23,6 +23,13 @@
                 {{ btn.base(colorClass='bg-primary', txt='button 태그') }}
             </li>
             <li>
+                <p class="list-tit">버튼 텍스트 타입 볼드/레귤러  볼드일떄 클래스 추가 - btn-txt-b </p>
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-large',fontClass='btn-txt-b', txt='볼드') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-large', txt='레귤러') }}
+            </li>
+            <li>
                 <p class="list-tit">버튼 라운드 </p>
             </li>
             <li>
@@ -51,19 +58,15 @@
                 </div>
             </li>
             <li>
-                {{ btn.base(colorClass='bg-ghost', sizeClass='size-large', txt='bg-ghost') }}
                 <div style="background-color:#dfdfdf;padding:10px;display:inline-block">
-                    {{ btn.base(colorClass='bg-ghost', sizeClass='size-large', txt='bg-ghost', state='disabled' ) }}
-                    {{ btn.base(colorClass='bg-ghost', sizeClass='size-large', txt='bg-ghost') }}
+                    {{ btn.base(colorClass='bg-outline', sizeClass='size-large', txt='bg-outline') }}
+                    {{ btn.base(colorClass='bg-outline', sizeClass='size-large', txt='bg-outline', state='disabled' ) }}
                 </div>
             </li>
             <li>
-                <div style="background-color:rgba(0,0,0,0.05);padding:10px;display:inline-block">
-                    {{ btn.base(colorClass='bg-ghost-white', sizeClass='size-large', txt='bg-white') }}
-                </div>
                 <div style="background-color:#373e8a;padding:10px;display:inline-block">
-                    {{ btn.base(colorClass='bg-ghost-white', sizeClass='size-large', txt='bg-ghost-white', state='disabled' ) }}
-                    {{ btn.base(colorClass='bg-ghost-white', sizeClass='size-large', txt='bg-ghost-white') }}
+                    {{ btn.base(colorClass='bg-ghost', sizeClass='size-large', txt='bg-ghost') }}
+                    {{ btn.base(colorClass='bg-ghost', sizeClass='size-large', txt='bg-ghost', state='disabled' ) }}
                 </div>
             </li>
             <li>
@@ -151,6 +154,7 @@
                 {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-chips28', txt='chips28', withIcon='with-icon', iconClass='ic-community-write-fill') }}
             </li>
             <li>
+                <div style="background-color:#373e8a;padding:10px;display:inline-block">
                 {{ btn.withIcon(colorClass='bg-ghost', sizeClass='size-xlarge', txt='X-large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
                 {{ btn.withIcon(colorClass='bg-ghost', sizeClass='size-large', txt='large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
                 {{ btn.withIcon(colorClass='bg-ghost', sizeClass='size-medium', txt='Medium Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
@@ -158,6 +162,7 @@
                 {{ btn.withIcon(colorClass='bg-ghost', sizeClass='size-xsmall', txt='X-small Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
                 {{ btn.withIcon(colorClass='bg-ghost', sizeClass='size-chips32', txt='chips32', withIcon='with-icon', iconClass='ic-community-write-fill') }}
                 {{ btn.withIcon(colorClass='bg-ghost', sizeClass='size-chips28', txt='chips28', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                </div>
             </li>
             <li>
                 {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-xlarge', txt='X-large', onlyIcon='only-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}

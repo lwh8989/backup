@@ -1,30 +1,38 @@
 /* core */
-@import "~/src/sass/font";
-@import "~/src/sass/color";
-@import "~/src/sass/space";
-@import "~/src/sass/motion";
-@import "~/src/sass/radius";
-@import "~/src/sass/shadow";
-@import "~/src/sass/ratio";
-@import "~/src/sass/base";
+@import "./src/sass/font";
+@import "./src/sass/color";
+@import "./src/sass/space";
+@import "./src/sass/motion";
+@import "./src/sass/radius";
+@import "./src/sass/shadow";
+@import "./src/sass/common";
+
+/* helpers */
+@import "./src/sass/helpers/clearfix";
+@import "./src/sass/helpers/guide";
+@import "./src/sass/helpers/hidden";
+@import "./src/sass/helpers/ratio";
+@import "./src/sass/helpers/z-index";
 
 /* element */
-@import "~/src/sass/button";
+@import "./src/sass/button";
+@import "./src/sass/dropdown";
+@import "./src/sass/input";
+@import "./src/sass/badge";
 
 /* module */
-@import "~/src/sass/button";
 
 /* partial */
 
 /* mixin */
-@import "~/src/sass/mixin/font";
-@import "~/src/sass/mixin/mixin";
+@import "./src/sass/mixin/font";
+@import "./src/sass/mixin/mixin";
+@import "./src/sass/mixin/responsive";
 
 /* Layout */
-@import "~/src/sass/layout";
-@import "~/src/sass/guide";
-@import "~/src/sass/index";
-@import "~/src/sass/responsive";
+@import "./src/sass/mixin/layout";
+@import "./src/sass/index";
+@import "./src/sass/responsive";
 
 /* legarcy */
-@import "~/src/sass/floara/fr-view";
+@import "./src/sass/floara/fr-view";

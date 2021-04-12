@@ -1,0 +1,16 @@
+{% macro scrollBase() %}
+<script>
+    window.onload = function() {
+        const container = document.querySelectorAll('.is-scroll')
+            Array.from(container).map(function(item) {
+            const ps = new PerfectScrollbar(item, {
+                wheelSpeed: 0.4,
+                wheelPropagation: false,
+                minScrollbarLength: 20
+            })
+        })
+    }
+</script>
+{% endmacro %}
+
+

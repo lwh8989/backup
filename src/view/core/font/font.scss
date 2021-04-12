@@ -1,5 +1,5 @@
 /* view 에서 Guide 하기 위한 Css */
-@import "~/src/sass/font";
+@import "./src/sass/font";
 
 /* [D] 가이드용 SCSS입니다. */
 /* 영향도 : 가이드 페이지의 font-style */
@@ -57,9 +57,6 @@
 }
 .stds-caption2 {
     @include caption2;
-}
-.stds-caption3 {
-    @include caption3;
 }
 
 /* Chips */

@@ -1,1 +1,92 @@
-/* input 공민수 님 작업 부탁드립니다. */
+@use "./src/sass/mixin/mixin";
+@use "./src/sass/color";
+@use "./src/sass/space";
+
+$dropdown-default-space: 0 space.$stds-spacing-16;
+
+.element-input {
+    padding: $dropdown-default-space;
+    color: color.$gray-500;
+}
+
+.element-input.active,
+.element-input-icon.active .element-input,
+.element-input:focus {
+    color: color.$gray-700;
+}
+
+.element-input-icon {
+    @include mixin.flex($type: inline-flex, $y: center);
+    padding-right: space.$stds-spacing-16;
+
+    .element-input-wrap {
+        @include mixin.flex($y: center);
+        position: relative;
+        flex: 1 100%;
+        height: 100%;
+
+        input[type="text"] {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    button {
+        margin-right: 8px;
+
+        &.ic-control-close-circle-fill {
+            color: color.$ui-text-04;
+            display: none;
+        }
+        &.ic-navigation-search-line {
+            color: color.$ui-text-03;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &:hover {
+            color: color.$gray-200;
+        }
+    }
+
+    &.disabled,
+    &:hover {
+        button {
+            &.ic-navigation-search-line {
+                color: color.$gray-300;
+            }
+        }
+    }
+
+    &.active,
+    &:focus-within {
+        button {
+            &.ic-navigation-search-line {
+                color: color.$ui-text-02;
+            }
+        }
+    }
+    &.active {
+        button {
+            &.ic-control-close-circle-fill {
+                display: block;
+            }
+        }
+    }
+
+    &.round {
+        border-radius: 999px;
+    }
+
+    &.filled {
+        border: 0;
+        background-color: color.$gray-50;
+
+        &.active,
+        &:focus-within,
+        &:hover {
+            background-color: color.$gray-75;
+        }
+    }
+}

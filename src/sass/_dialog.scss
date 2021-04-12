@@ -1,0 +1,35 @@
+@import "./mixin/dialog";
+@import "./helpers/z-index";
+
+.module-dimmed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: hidden;
+    z-index: $zindex-modal-backdrop;
+    background: rgba(30, 30, 30, 0.6);
+    .dimmed-pos {
+        position: absolute;
+        z-index: $zindex-modal;
+        &.pos-center {
+            @include dialogPos(
+                $top: 50%,
+                $left: 50%,
+                $bottom: null,
+                $right: null
+            );
+        }
+        &.pos-top {
+            @include dialogPos(
+                $top: 80px,
+                $left: 50%,
+                $bottom: null,
+                $right: null,
+                $y: 0
+            );
+        }
+    }
+}
+

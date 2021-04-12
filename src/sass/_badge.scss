@@ -1,0 +1,28 @@
+@use "./src/sass/mixin/mixin";
+@use "./src/sass/color";
+@use "./src/sass/space";
+
+$elementBgcolor: (
+    orange: color.$orange-500,
+    red: color.$tint-red-a400,
+    purple: color.$tint-purple-a400,
+    blue: color.$tint-blue-a400,
+    gray: color.$gray-700,
+);
+
+@each $name, $color in $elementBgcolor {
+    .element-badge {
+        &.#{"" + $name + ""} {
+            background-color: $color;
+        }
+    }
+}
+
+.element-badge {
+    @include flex($type: inline-flex, $x: center, $y: center);
+    color: $white;
+
+    &.round {
+        border-radius: 999px;
+    }
+}

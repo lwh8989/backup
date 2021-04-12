@@ -1,4 +1,4 @@
-@import "~/src/sass/mixin/font";
+@import "./src/sass/mixin/font";
 
 /* stds Title 1rem = 10px */
 /* Title */
@@ -23,8 +23,7 @@ $stdsButton2: 1.3rem;
 
 /* Caption */
 $stdsCaption1: 1.3rem;
-$stdsCaption2: 1.2rem;
-$stdsCaption3: 1.1rem;
+$stdsCaption2: 1.1rem;
 
 /* Chips */
 $stdsChips1: 1.3rem;

@@ -1,0 +1,124 @@
+@import "./mixin/mixin";
+
+/* width = wNN */
+.w100 {
+    width: 100%;
+}
+.w50 {
+    width: 50%;
+}
+
+/* height = hNN */
+$elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
+
+@each $h in $elementHeight {
+    // element height
+    .#{"h" + $h + ""} {
+        height: $h + px;
+    }
+
+    @if $h < 40 {
+        .#{"h" + $h + ""} {
+            .element-select-txt {
+                margin-right: 8px;
+            }
+            .element-dropdown-button {
+                font-size: 13px;
+                height: 36px;
+            }
+
+            &.box-type {
+                button {
+                    font-size: 16px;
+                }
+            }
+        }
+    } @else {
+        .#{"h" + $h + ""} {
+            .element-select-txt {
+                margin-right: 12px;
+            }
+            .element-dropdown-button {
+                font-size: 15px;
+                height: 40px;
+            }
+            &.box-type {
+                button {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @if $h >= 28 {
+        .#{"h" + $h + ""} {
+            &.element-badge {
+                padding: 0 8px;
+                font-size: 13px;
+            }
+        }
+    }
+    @if $h <= 20 {
+        .#{"h" + $h + ""} {
+            &.element-badge {
+                padding: 0 6px;
+                font-size: 11px;
+            }
+        }
+    }
+    @if $h <= 16 {
+        .#{"h" + $h + ""} {
+            &.element-badge {
+                padding: 0 4px;
+            }
+        }
+    }
+}
+
+/* common */
+/* font-size */
+.common-bx-size {
+    font-size: 15px;
+}
+.common-bx-size-s {
+    font-size: 13px;
+}
+
+/* element */
+[class^="element-"] {
+    &.full {
+        display: flex;
+        width: 100%;
+        flex: 1 100%;
+    }
+}
+
+.box-type {
+    @include boxType {
+        &::placeholder {
+            color: $gray-300;
+        }
+    }
+    &.disabled,
+    &:disabled {
+        background-color: $ui-input-bg-disabled;
+    }
+}
+.element-input:disabled,
+.element-dropdown button:disabled,
+.element-input-icon.disabled {
+    &,
+    * {
+        color: $gray-300;
+        cursor: default;
+        pointer-events: none;
+    }
+}
+.h56 {
+    height: 56px;
+}
+
+/* option Class */
+.is-hidden {
+    display: none;
+}

@@ -1,6 +1,6 @@
-@use "~/src/sass/mixin/mixin";
-@use "~/src/sass/color";
-@use "~/src/sass/space";
+@use "./src/sass/mixin/mixin";
+@use "./src/sass/color";
+@use "./src/sass/space";
 
 $elementBgcolor: (
     orange: color.$orange-500,

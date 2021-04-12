@@ -1,6 +1,6 @@
-@use "~/src/sass/mixin/mixin";
-@use "~/src/sass/color";
-@use "~/src/sass/space";
+@use "./src/sass/mixin/mixin";
+@use "./src/sass/color";
+@use "./src/sass/space";
 
 $dropdown-default-space: 0 space.$stds-spacing-16;
 

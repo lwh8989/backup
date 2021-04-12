@@ -1,5 +1,5 @@
-@import "~/src/sass/mixin/responsive";
-@import "~/src/sass/space";
+@import "./src/sass/mixin/responsive";
+@import "./src/sass/space";
 
 .element-select {
     @include boxType($width: 100%, $height: 48px, $size: 16px);

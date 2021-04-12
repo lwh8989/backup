@@ -2,7 +2,7 @@
 @use "~/src/sass/color";
 @use "~/src/sass/space";
 
-$dropdown-default-space: 0 space.$stds-spacing-400;
+$dropdown-default-space: 0 space.$stds-spacing-16;
 
 .element-input {
     padding: $dropdown-default-space;
@@ -17,7 +17,7 @@ $dropdown-default-space: 0 space.$stds-spacing-400;
 
 .element-input-icon {
     @include mixin.flex($type: inline-flex, $y: center);
-    padding-right: space.$stds-spacing-400;
+    padding-right: space.$stds-spacing-16;
 
     .element-input-wrap {
         @include mixin.flex($y: center);

@@ -1,41 +1,36 @@
 {% extends "_include/layout/index/index.njk" %}
+{% import "_include/module/footer/footer.njk" as footer %}
+{% import "_include/layout/dialog/dialog.njk" as dialog %}
 
 <!-- styles -->
 {% block styles %}
 {% endblock %}
 
+{% block gnb %}
+<!-- [D] GNB가 두줄로 나올 경우 depth2 를 추가 해 주세요.   -->
+<header class="layout-header"></header>
+{% endblock %}
+
 <!-- content -->
 {% block content %}
 <div class="layout-basic" style="background: rgba(255, 130, 0, 0.2);">
-    <div class="">
-        <h1 class="s-title">Stove Typography Heading 1</h1>
-        <p style="margin-bottom: 32px;"> &lt;h1&gt;Stove Typography Heading 1&lt;/h1&gt;</p>
-
-        <h2 class="s-title">Stove Typography Heading 2</h2>
-        <p style="margin-bottom: 32px;"> &lt;h2&gt;Stove Typography Heading 2&lt;/h2&gt;</p>
-
-        <h3 class="s-title">Stove Typography Heading 3</h3>
-        <p style="margin-bottom: 32px;"> &lt;h3&gt;Stove Typography Heading 3&lt;/h3&gt;</p>
-
-        <h4 class="s-title">Stove Typography Heading 4</h4>
-        <p style="margin-bottom: 32px;"> &lt;h4&gt;Stove Typography Heading 4&lt;/h4&gt;</p>
-
-        <h5 class="s-title">Stove Typography Heading 5</h5>
-        <p style="margin-bottom: 32px;"> &lt;h5&gt;Stove Typography Heading 5&lt;/h5&gt;</p>
-
-        <h6 class="s-title">Stove Typography Heading 6</h6>
-        <p style="margin-bottom: 32px;"> &lt;h6&gt;Stove Typography Heading 6&lt;/h6&gt;</p>
-    </div>
-
     <p class="pc" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
         <b style=" font-size: 24px;">Layout Basic</b> <br>
     </p>
 </div>
 {% endblock %}
 
+{% block footer %}
+<footer class="layout-footer">
+    {{ footer.base() }}
+</footer>
+{% endblock %}
+
 <!-- dialog -->
-{% block dialog %}{% endblock %}
+{% block dialog %}
+    {{ dialog.base(stateClass="is-hidden") }}
+{% endblock %}
 
 <!-- scripts -->
-{% block scripts %} 
+{% block scripts %}
 {% endblock %}

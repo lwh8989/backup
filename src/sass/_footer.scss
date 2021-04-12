@@ -1,4 +1,4 @@
-@import "~/src/sass/mixin/mixin";
+@import "~/src/sass/mixin/responsive";
 @import "~/src/sass/hidden";
 
 /*@import "./_hidden.scss";*/
@@ -195,33 +195,7 @@ $ui-button-pagination-hover : #fc6020;
 
 /* 게임이용등급 - 디자인 확인 필요*/
 /* mobile */
-@include mobile-end {
-    .footer-container{
-        width: 100%;
-        padding: 0 32px;
-    }
-    .footer-nav .rating-game .module-tab.tab-vertical {
-        flex-direction: column;
-    }
-    .module-tab.tab-vertical .tab-nav {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
-    .module-tab.tab-vertical .tab-nav > * {
-        flex: 1;
-    }
-    .module-tab.tab-vertical .tab-content{
-        height: auto;
-    }
-    .footer-nav .rating-game .module-tab.tab-vertical{
-        justify-content: end;
-    }
-    .footer-nav .footer-nav-rating {
-        position: relative;
-        width: 100%;
-    }
-}
+
 /* mobile 360 */
 @include mobile {
     .footer-container {

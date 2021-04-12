@@ -93,11 +93,6 @@
     font-weight: $stdsWeightNormal;
     line-height: $stdsLineHeightS;
 }
-@mixin caption3 {
-    font-size: $stdsCaption3;
-    font-weight: $stdsWeightNormal;
-    line-height: $stdsLineHeightS;
-}
 
 /* Chips */
 @mixin chips1 {

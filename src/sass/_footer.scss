@@ -40,7 +40,7 @@ $ui-button-pagination-hover : #fc6020;
 }
 .footer .footer-container{
     width: 100%;
-    padding: 0 32px;
+    padding: 0 16px;
 }
 .footer > *{
     font-size: 13px;
@@ -304,15 +304,31 @@ $ui-button-pagination-hover : #fc6020;
 }
 /* tablet 768 */
 @include tablet {
-    .footer-container{
+    .footer .footer-container {
         padding: 0 32px;
     }
 }
 /* desktopM 1280 */
-@include desktopM {}
+@include desktopM {
+    .footer .footer-container {
+        padding: 0 48px;
+    }
+}
 /* desktopL 1440 */
-@include desktopL {}
+@include desktopL {
+    .footer .footer-container {
+        padding: 0 52px;
+    }
+}
 /* desktopXL 1600 */
-@include desktopXL {}
+@include desktopXL {
+    .footer .footer-container {
+        padding: 0 52px;
+    }
+}
 /* desktop2XL 1920 */
-@include desktop2XL {}
+@include desktop2XL {
+    .footer .footer-container {
+        padding: 0 52px;
+    }
+}

@@ -105,7 +105,7 @@
             display: inline-block;
             width: 33%;
             margin-bottom: 32px;
-
+            vertical-align: top;
             .stove-icon {
                 font-size: 32px;
                 display: block;
@@ -117,6 +117,7 @@
                 font-size: 1.2rem;
                 display: block;
                 text-align: center;
+                height: 40px;
             }
         }
 

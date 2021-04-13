@@ -1,0 +1,10 @@
+<!doctype html><html lang="ko"><head><title>Stove Core UI</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="/static/css/reset.css"><link rel="stylesheet" href="/static/font/intel/StoveFont-Global.css"><link rel="stylesheet" href="/static/font/kr/StoveFont-KR.css"><link rel="stylesheet" href="/static/font/sc/StoveFont-SC.css"><link rel="stylesheet" href="/static/font/tc/StoveFont-TC.css"><link rel="stylesheet" href="/static/font/jp/StoveFont-JP.css"><link rel="stylesheet" href="/static/font/thai/StoveFont-Thai.css"><link rel="stylesheet" href="/static/icon/stove-font-icon.css"><link rel="stylesheet" href="/static/scroll/perfect-scrollbar.css"><script src="/static/scroll/perfect-scrollbar.js"></script><script defer="defer" src="../../core.js"></script><script defer="defer" src="../../layout/s-one-rail/s-one-rail.js"></script><link href="../../core.css" rel="stylesheet"><link href="../../layout/s-one-rail/s-one-rail.css" rel="stylesheet"></head><body class="layout is-scroll"><div class="layout-s-one-rail"><div class="container"><nav class="nav-area" style="background: rgba(0, 160, 40, 0.3);"></nav><div class="content-area" style="background: rgba(255, 130, 0, 0.2);"></div></div><p class="pc" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;"><b style="font-size: 24px;">Layout S One Rail</b><br></p></div></body><script>window.onload = function() {
+        const container = document.querySelectorAll('.is-scroll')
+            Array.from(container).map(function(item) {
+            const ps = new PerfectScrollbar(item, {
+                wheelSpeed: 0.4,
+                wheelPropagation: false,
+                minScrollbarLength: 20
+            })
+        })
+    }</script></html>

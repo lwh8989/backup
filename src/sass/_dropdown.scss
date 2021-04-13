@@ -57,11 +57,11 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         z-index: z-index.$zindex-dropdown;
 
         &.top {
-            top: calc(100% + 1px);
+            top: 100%;
         }
         &.bottom {
             top: initial;
-            bottom: calc(100% + 1px);
+            bottom: 100%;
         }
         &.right {
             right: 0;

@@ -22,8 +22,14 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
             .element-select-txt {
                 margin-right: 8px;
             }
-            .element-dropdown-button {
+            .element-select-button,
+            .element-dropdown-button,
+            &.element-input,
+            .element-input {
                 font-size: 13px;
+            }
+
+            .element-dropdown-button {
                 height: 36px;
             }
 
@@ -38,10 +44,17 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
             .element-select-txt {
                 margin-right: 12px;
             }
-            .element-dropdown-button {
+            .element-select-button,
+            .element-dropdown-button,
+            &.element-input,
+            .element-input {
                 font-size: 15px;
+            }
+
+            .element-dropdown-button {
                 height: 40px;
             }
+
             &.box-type {
                 button {
                     font-size: 20px;

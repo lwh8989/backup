@@ -73,18 +73,6 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* mobile 360 */
 @include mobile {}
 /* tablet 768 */
@@ -101,14 +89,12 @@
         display: none;
     }
 }
-
 /* desktopXL 1600 */
 @include desktopXL {
     .layout-navigation {
         display: none;
     }
 }
-
 /* desktop2XL 1920 */
 @include desktop2XL {
     .layout-navigation {

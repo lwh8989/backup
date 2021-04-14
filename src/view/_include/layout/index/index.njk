@@ -14,14 +14,21 @@
 <!-- .lc-l = $stds-breakpoint-l = 1440px; -->
 <!-- .lc-m = $stds-breakpoint-m = 1280px; -->
 <!-- [D] 브라우저 정책 추가 시 is-gnb-banner 클래스를 추가 해 주세요. [미적용]  -->
-<body class="layout is-scroll">
+<!-- scrll =  is-scroll -->
+<body class="layout">
   {% block gnb %}{% endblock %}
+
+  {% block navigation %}{% endblock %}
 
   {% block content %}{% endblock %}
 
   {% block footer %}{% endblock %}
 
   {% block dialog %}{% endblock %}
+
+  {% block lnbSide %}{% endblock %}
+
+  {% block gnbSide %}{% endblock %}
 
   {% block scripts %}{% endblock %}
 </body>

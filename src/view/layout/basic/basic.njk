@@ -1,14 +1,25 @@
 {% extends "_include/layout/index/index.njk" %}
-{% import "_include/module/footer/footer.njk" as footer %}
+{% import "_include/partial/footer/footer.njk" as footer %}
 {% import "_include/layout/dialog/dialog.njk" as dialog %}
+{% import "_include/layout/lnb-side/lnb-side.njk" as lnbSide %}
+{% import "_include/layout/gnb-side/gnb-side.njk" as gnbSide %}
+{% import "_include/layout/navigation/navigation.njk" as navigation %}
 
 <!-- styles -->
 {% block styles %}
 {% endblock %}
 
+<!-- gnb -->
 {% block gnb %}
 <!-- [D] GNB가 두줄로 나올 경우 depth2 를 추가 해 주세요.   -->
-<header class="layout-header"></header>
+<header class="layout-header">
+
+</header>
+{% endblock %}
+
+<!-- navigation -->
+{% block navigation %}
+    {{ navigation.base() }}
 {% endblock %}
 
 <!-- content -->
@@ -20,6 +31,7 @@
 </div>
 {% endblock %}
 
+<!-- footer -->
 {% block footer %}
 <footer class="layout-footer">
     {{ footer.base() }}
@@ -28,7 +40,20 @@
 
 <!-- dialog -->
 {% block dialog %}
-    {{ dialog.base(stateClass="is-hidden") }}
+    <!-- [D] .is-opened 누르면 활성화됩니다.  -->
+    {{ dialog.base(stateClass="") }}
+{% endblock %}
+
+<!-- lnb side -->
+{% block lnbSide %}
+    <!-- [D] .is-opened 누르면 활성화됩니다.  -->
+    {{ lnbSide.base(stateClass="") }}
+{% endblock %}
+
+<!-- gnb side -->
+{% block gnbSide %}
+    <!-- [D] .is-opened 누르면 활성화됩니다.  -->
+    {{ gnbSide.base(stateClass="") }}
 {% endblock %}
 
 <!-- scripts -->

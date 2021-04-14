@@ -1,0 +1,117 @@
+@import "./helpers/z-index";
+@import "./mixin/responsive";
+@import "./responsive";
+@import "./font";
+@import "./color";
+@import "./space";
+
+.layout-navigation {
+    order: 2;
+    height: 48px;
+    flex: 0 1 100%;
+    padding: $stds-spacing-12 $stds-spacing-16;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: $white;
+    .container {
+        display: flex;
+        max-width: 100%;
+        height: 24px;
+        // flex-direction: row;
+        .nav-btn {
+            width: 24px;
+            height: 24px;
+            i {
+                font-size: 24px;
+                color: $ui-icon-primary-enabled;
+            }
+            &.align-left {
+                margin-right: 20px;
+            }
+            &.align-right {
+                margin-left: 20px;
+            }
+        }
+        .nav-text-btn {
+            font-size: 15px;
+            color: $ui-text-03;
+            flex: none;
+            &.align-left {
+                margin-right: 20px;
+            }
+            &.align-right {
+                margin-left: 20px;
+            }
+            &.is-active {
+                color: $ui-text-brand;
+                font-weight: $stdsWeightBold;
+            }
+        }
+        .contents {
+            width: 100%;
+            line-height: 24px;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            flex-basis: auto;
+            .item {
+                font-size: 15px;
+                color: $ui-text-03;
+                margin-left: $stds-spacing-8;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &.is-active {
+                    color: $ui-text-02;
+                    font-weight: $stdsWeightBold;
+                }
+                .ic-control-arrow-right-line {
+                    color: #cacaca;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile 360 */
+@include mobile {}
+/* tablet 768 */
+@include tablet {}
+/* desktopM 1280 */
+@include desktopM {
+    .layout-navigation {
+        display: none;
+    }
+}
+/* desktopL 1440 */
+@include desktopL {
+    .layout-navigation {
+        display: none;
+    }
+}
+
+/* desktopXL 1600 */
+@include desktopXL {
+    .layout-navigation {
+        display: none;
+    }
+}
+
+/* desktop2XL 1920 */
+@include desktop2XL {
+    .layout-navigation {
+        display: none;
+    }
+}  

@@ -1,15 +1,11 @@
 @import "./mixin/dialog";
+@import "./mixin/dimmed";
 @import "./helpers/z-index";
+@import "./responsive";
 
 .module-dimmed {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow-y: hidden;
-    z-index: $zindex-modal-backdrop;
-    background: rgba(30, 30, 30, 0.6);
+    display: none;
+    @include dimmed();
     .dimmed-pos {
         position: absolute;
         z-index: $zindex-modal;
@@ -30,6 +26,62 @@
                 $y: 0
             );
         }
+        &.pos-left {
+            @include dialogPos(
+                $top: 0,
+                $left: 0,
+                $bottom: 0,
+                $right: null,
+                $x: 0,
+                $y: 0
+            );
+        }
+        &.pos-right {
+            @include dialogPos(
+                $top: 0,
+                $left: null,
+                $bottom: 0,
+                $right: 0,
+                $x: 0,
+                $y: 0
+            );
+        }
+    }
+    .layout-sidebar {
+        width: $stds-breakpoint-xs;
+        height: 100%;
+        background: #fff;
+        position: fixed;
+        transition: transform .4s ease-in-out;
+        z-index: $zindex-modal;
+        -webkit-overflow-scrolling: touch;
+        &.sidebar-left {
+            transform: translateX(-100%);
+            left: 0;
+        }
+        &.sidebar-right {
+            transform: translateX(0);
+            right: 0;
+        }
+    }
+    &.is-opened {
+        display: block;
+        .layout-sidebar {
+            &.sidebar-left {
+                transform: translateX(0);
+            }
+            &.sidebar-right {
+                transform: translateX(0);
+            }
+        }
+    }
+    .dimmed {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: $zindex-modal-backdrop;
     }
 }
-

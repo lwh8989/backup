@@ -13,7 +13,7 @@
     left: 0;
     overflow-y: hidden;
     z-index: z-index.$zindex-modal-backdrop;
-    background: color.$black-alpha50;
+    background: color.$black_alpha50;
 
     &.absolute {
         position: absolute;
@@ -87,11 +87,11 @@
     .module-dialog-header {
         @include mixin.flex($y: center);
         min-height: 3.5rem;
-        border-bottom: 1px solid color.$ui-divider-02;
+        border-bottom: 1px solid color.$ui_divider_black_02;
         padding: 14px 64px 14px space.$stds-spacing-24;
         font-size: 18px;
         font-weight: bold;
-        color: color.$ui-text-01;
+        color: color.$ui_text_01;
         line-height: font.$stdsLineHeightM;
         letter-spacing: -0.45px;
 
@@ -103,12 +103,12 @@
         padding-bottom: space.$stds-spacing-16;
         font-size: 16px;
         font-weight: bold;
-        color: color.$ui-text-01;
+        color: color.$ui_text_01;
         line-height: font.$stdsLineHeightL;
         letter-spacing: -0.4px;
     }
     .module-dialog-content {
-        color: color.$ui-text-02;
+        color: color.$ui_text_02;
         line-height: font.$stdsLineHeightM;
     }
     .module-dialog-btns {
@@ -132,10 +132,10 @@
         }
     }
     .module-dialog-footer {
-        border-top: 1px solid color.$ui-divider-02;
+        border-top: 1px solid color.$ui_divider_black_02;
         padding: space.$stds-spacing-16 space.$stds-spacing-24
             space.$stds-spacing-32;
-        color: color.$ui-text-03;
+        color: color.$ui_text_03;
     }
 
     .module-dialog-close {
@@ -143,7 +143,7 @@
         right: 20px;
         top: 16px;
         font-size: 20px;
-        color: color.$ui-text-03;
+        color: color.$ui_text_03;
 
         &::after {
             transition: all 0.3s;
@@ -154,7 +154,7 @@
             top: 50%;
             width: 0;
             height: 0;
-            background-color: color.$black-alpha5;
+            background-color: color.$black_alpha5;
             border-radius: 36px;
         }
 

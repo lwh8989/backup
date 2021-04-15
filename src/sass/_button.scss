@@ -17,19 +17,19 @@ $bg-gray-btn-focus: #6e6e6e;
 */
 
 /* 메인에서 씌이는 custom 버튼 _color.scss에 추가된 후 삭제 예정 */
-$ui-button-gray-main-enabled: #f5f5f5;
-$ui-button-gray-main-hover: #eaeaea;
-$ui-button-gray-main-pressed: #d5d5d5;
-$ui-button-gray-main-bg-focused: #f5f5f5;
-$ui-button-gray-main-border1-focused: #6e6e6e;
-$ui-button-gray-main-border2-focused: #ffffff;
-$ui-button-gray-main-border3-focused: rgba(0,0,0,0.015);
-$ui-button-gray-main-disabled: #eaeaea;
+$ui_button_gray_main_enabled: #f5f5f5;
+$ui_button_gray_main_hover: #eaeaea;
+$ui_button_gray_main_pressed: #d5d5d5;
+$ui_button_gray_main_bg_focused: #f5f5f5;
+$ui_button_gray_main_border1_focused: #6e6e6e;
+$ui_button_gray_main_border2_focused: #ffffff;
+$ui_button_gray_main_border3_focused: rgba(0,0,0,0.015);
+$ui_button_gray_main_disabled: #eaeaea;
 
-$bg-trans-btn: transparent;
-$bg-trans-btn-hover: transparent;
-$bg-trans-btn-active: transparent;
-$bg-trans-btn-focus: transparent;
+$bg_trans_btn: transparent;
+$bg_trans_btn_hover: transparent;
+$bg_trans_btn_active: transparent;
+$bg_trans_btn_focus: transparent;
 
 
 .element-btn {
@@ -277,207 +277,175 @@ $bg-trans-btn-focus: transparent;
 
 /* color */
 .element-btn.bg-primary{
-    background-color: $ui-button-primary-enabled;
-    border: 2px solid $ui-button-primary-enabled;
+    background-color: $ui_button_primary_enabled;
+    border: 2px solid $ui_button_primary_enabled;
     &:hover{
-        background-color: $ui-button-primary-hover;    
-        border: 2px solid $ui-button-primary-hover;
+        background-color: $ui_button_primary_hover;    
+        border: 2px solid $ui_button_primary_hover;
     }
     &:active{
-        background-color: $ui-button-primary-pressed;    
-        border: 2px solid $ui-button-primary-pressed;
+        background-color: $ui_button_primary_pressed;    
+        border: 2px solid $ui_button_primary_pressed;
     }
     &:focus{
         outline: none;
-        border: 2px solid $ui-button-primary-enabled;
+        border: 2px solid $ui_button_primary_enabled;
         box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,
     &.disabled{
-        background: $ui-button-primary-disabled;
-        border-color: $ui-button-primary-disabled;
+        background: $ui_button_primary_disabled;
+        border-color: $ui_button_primary_disabled;
     }
 }
 .element-btn.bg-secondary{
-    background-color: $ui-button-secondary-enabled;
-    border: 2px solid $ui-button-secondary-enabled;
+    background-color: $ui_button_secondary_enabled;
+    border: 2px solid $ui_button_secondary_enabled;
     &:hover{
-        background-color: $ui-button-secondary-hover;    
-        border: 2px solid $ui-button-secondary-hover;
+        background-color: $ui_button_secondary_hover;    
+        border: 2px solid $ui_button_secondary_hover;
     }
     &:active{
-        background-color: $ui-button-secondary-pressed;    
-        border: 2px solid $ui-button-secondary-pressed;
+        background-color: $ui_button_secondary_pressed;    
+        border: 2px solid $ui_button_secondary_pressed;
     }
     &:focus{
         outline: none;
-        border: 2px solid $ui-button-secondary-enabled;
+        border: 2px solid $ui_button_secondary_enabled;
         box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,
     &.disabled{
-        background: $ui-button-secondary-disabled;
-        border-color: $ui-button-secondary-disabled;
+        background: $ui_button_secondary_disabled;
+        border-color: $ui_button_secondary_disabled;
     }    
 }
 .element-btn.bg-gray{
-    background-color: $ui-button-gray-enabled;
-    border: 2px solid $ui-button-gray-enabled;
+    background-color: $ui_button_gray_enabled;
+    border: 2px solid $ui_button_gray_enabled;
     color:#3a3a3a;
     &:hover{
-        background-color: $ui-button-gray-hover;    
-        border: 2px solid $ui-button-gray-hover;
+        background-color: $ui_button_gray_hover;    
+        border: 2px solid $ui_button_gray_hover;
     }
     &:active{
-        background-color: $ui-button-gray-pressed;    
-        border: 2px solid $ui-button-gray-pressed;
+        background-color: $ui_button_gray_pressed;    
+        border: 2px solid $ui_button_gray_pressed;
     }
     &:focus{
         outline: none;
-        background-color: $ui-button-gray-hover;    
-        border: 2px solid $ui-button-gray-pressed;
+        background-color: $ui_button_gray_hover;    
+        border: 2px solid $ui_button_gray_pressed;
         box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,
     &.disabled{
         color: #cacaca;
-        background: $ui-button-gray-disabled;
-        border-color: $ui-button-gray-disabled;
+        background: $ui_button_gray_disabled;
+        border-color: $ui_button_gray_disabled;
     }    
 }
 .element-btn.bg-gray-main{
-    background-color: $ui-button-gray-main-enabled;
-    border: 1px solid $ui-button-gray-main-border3-focused;
+    background-color: $ui_button_gray_main_enabled;
+    border: 1px solid $ui_button_gray_main_border3_focused;
     color:#3a3a3a;
     &:hover{
-        background-color: $ui-button-gray-main-hover;    
-        border: 1px solid $ui-button-gray-main-hover;
+        background-color: $ui_button_gray_main_hover;    
+        border: 1px solid $ui_button_gray_main_hover;
     }
     &:active{
-        background-color: $ui-button-gray-main-pressed;    
-        border: 1px solid $ui-button-gray-main-pressed;
+        background-color: $ui_button_gray_main_pressed;    
+        border: 1px solid $ui_button_gray_main_pressed;
     }
     &:focus{
         outline: none;
-        background-color: $ui-button-gray-main-hover;    
-        border: 1px solid $ui-button-gray-main-pressed;
+        background-color: $ui_button_gray_main_hover;    
+        border: 1px solid $ui_button_gray_main_pressed;
         box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,
     &.disabled{
         color: #cacaca;
-        background: $ui-button-gray-disabled;
-        border-color: $ui-button-gray-disabled;
+        background: $ui_button_gray_disabled;
+        border-color: $ui_button_gray_disabled;
     }    
 }
 .element-btn.bg-inverse{
-    background-color: $ui-button-inverse-enabled;
-    border: 2px solid $ui-button-inverse-enabled;
+    background-color: $ui_button_inverse_enabled;
+    border: 2px solid $ui_button_inverse_enabled;
     color:#3a3a3a;
     &:hover{
-        background-color: $ui-button-inverse-hover;    
-        border: 2px solid $ui-button-inverse-hover;
+        background-color: $ui_button_inverse_hover;    
+        border: 2px solid $ui_button_inverse_hover;
     }
     &:active{
-        background-color: $ui-button-inverse-pressed;    
-        border: 2px solid $ui-button-inverse-pressed;
+        background-color: $ui_button_inverse_pressed;    
+        border: 2px solid $ui_button_inverse_pressed;
     }
     &:focus{
         outline: none;
-        background-color: $ui-button-inverse-bg-focused;    
-        border: 2px solid $ui-button-inverse-border-focused;
+        background-color: $ui_button_inverse_bg_focused;    
+        border: 2px solid $ui_button_inverse_border_focused;
         box-shadow: inset 0 0 0 1px #bfbfbf;
     }
     &:disabled,
     &.disabled{
-        background: $ui-button-inverse-disabled;
-        border-color: $ui-button-inverse-disabled;
+        background: $ui_button_inverse_disabled;
+        border-color: $ui_button_inverse_disabled;
     }    
 }
 .element-btn.bg-outline{
-    background-color: $ui-button-outline-enabled;
-    border: 1px solid $ui-button-outline-border1-focused;
+    background-color: $ui_button_outline_enabled;
+    border: 1px solid $ui_button_outline_border1_focused;
     color:#3a3a3a;
     &:hover{
-        background-color: $ui-button-outline-hover;    
+        background-color: $ui_button_outline_hover;    
         border: 1px solid #999;
     }
     &:active{
-        background-color: $ui-button-outline-pressed;    
-        border: 1px solid $ui-button-outline-border2-focused;
+        background-color: $ui_button_outline_pressed;    
+        border: 1px solid $ui_button_outline_border2_focused;
     }
     &:focus{
         outline: none;
-        background-color: $ui-button-outline-bg-focused;    
-        border: 1px solid $ui-button-outline-border3-focused;
-        box-shadow: inset 0 0 0 2px $ui-button-outline-border3-focused;
+        background-color: $ui_button_outline_bg_focused;    
+        border: 1px solid $ui_button_outline_border3_focused;
+        box-shadow: inset 0 0 0 2px $ui_button_outline_border3_focused;
     }
     &:disabled,
     &.disabled{
-        background: $ui-button-outline-disabled;
-        border-color: $ui-button-outline-border4-focused;
+        background: $ui_button_outline_disabled;
+        border-color: $ui_button_outline_border4_focused;
     }
 }
 .element-btn.bg-ghost{
-    background-color: $ui-button-inverse-ghost-enabled;
-    border: 1px solid $ui-button-inverse-ghost-border1-focused;
+    background-color: $ui_button_inverse_ghost_enabled;
+    border: 1px solid $ui_button_inverse_ghost_border1_focused;
     color: #fff;
     &:hover{
-        background-color: $ui-button-inverse-ghost-hover;    
-        border: 1px solid $ui-button-inverse-ghost-border1-focused;
+        background-color: $ui_button_inverse_ghost_hover;    
+        border: 1px solid $ui_button_inverse_ghost_border1_focused;
     }
     &:active{
-        background-color: $ui-button-inverse-ghost-pressed;    
-        border: 1px solid $ui-button-inverse-ghost-border1-focused;
+        background-color: $ui_button_inverse_ghost_pressed;    
+        border: 1px solid $ui_button_inverse_ghost_border1_focused;
     }
     &:focus{
         outline: none;
-        background-color: $ui-button-inverse-ghost-bg-focused;    
-        border: 1px solid $ui-button-inverse-ghost-border1-focused;
-        box-shadow: inset 0 0 0 2px $ui-button-inverse-ghost-border1-focused;
+        background-color: $ui_button_inverse_ghost_bg_focused;    
+        border: 1px solid $ui_button_inverse_ghost_border1_focused;
+        box-shadow: inset 0 0 0 2px $ui_button_inverse_ghost_border1_focused;
     }
     &:disabled,
     &.disabled{
-        background: $ui-button-outline-disabled;
-        border-color: $ui-button-outline-disabled;
+        background: $ui_button_outline_disabled;
+        border-color: $ui_button_outline_disabled;
         & .btn-txt{
             color: #cacaca;
         }
     }
 
 }
-/*
-.element-btn.bg-ghost-white{
-    background-color: $ui-button-ghost-bg-enabled;
-    border: 1px solid $ui-button-ghost-border-enabled;
-    color: #fff;
-    & .btn-txt{
-        color: #fff;
-    }
-    &:hover{
-        background-color: $ui-button-ghost-bg-hover;    
-        border: 1px solid $ui-button-ghost-border-hover;
-    }
-    &:active{
-        background-color: $ui-button-ghost-bg-pressed;    
-        border: 1px solid $ui-button-ghost-border-pressed;
-    }
-    &:focus{
-        outline: none;
-        background-color: $ui-button-ghost-bg-focused;    
-        border: 1px solid $ui-button-ghost-border-focused;
-        box-shadow: inset 0 0 0 1px #fff;
-    }
-    &:disabled,
-    &.disabled{
-        background-color: $ui-button-ghost-bg-disabled;    
-        border: 1px solid $ui-button-ghost-border-disabled;
-        & .btn-txt{
-            color: rgba(255, 255, 255, 0.6);
-        }
-    }
-        
-}*/
 
 /* mobile */
 

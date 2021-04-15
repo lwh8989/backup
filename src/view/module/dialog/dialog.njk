@@ -1,0 +1,115 @@
+{% extends "_include/layout/guide/guide.njk" %}
+
+{% import "_include/module/dialog/dialog.njk" as dialog %}
+{% import "_include/element/button/button.njk" as btn %}
+
+<!-- styles -->
+{% block styles %}{% endblock %}
+
+<!-- styles -->
+{% block content %}
+    <!-- [D]   -->
+    <div class="guide full">
+        <h1 class="guide-tit">Dialog</h1>
+
+        <!-- dropdown -->
+        <div class="guide-layer">
+            <div class="guide-section">
+                <h2 class="guide-section-tit">dialog - size</h2>
+
+                <div class="guide-flex ratio gap">
+                    <div>
+                        <div class="guide-flex ratio gap">
+                            <div>
+                                <h3 class="guide-section-stit">Popup-S (w 328)</h3>
+                                <div class="guide-flex ratio gap">
+                                    <div class="guide-flex-box">
+                                        {{ dialog.dialogBase(dimmed="true", posClass="pos-center", size="dialog-size-s", txt="타이틀 없이 텍스트 내용이 들어갑니다", close="true") }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="guide-section-stit">Popup-M (w 440)</h3>
+                                <div class="guide-flex ratio gap">
+                                    <div class="guide-flex-box">
+                                        {{ dialog.dialogBase(dimmed="true", posClass="pos-center", size="dialog-size-m", txt="타이틀 없이 텍스트 내용이 들어갑니다", close="true") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="guide-section-stit">Popup-L (w 664)</h3>
+                        <div class="guide-flex ratio gap">
+                            <div class="guide-flex-box">
+                                {{ dialog.dialogBase(dimmed="true", posClass="pos-center", size="dialog-size-l", txt="타이틀 없이 텍스트 내용이 들어갑니다", close="true") }}
+                            </div>
+                        </div>
+
+                        <h3 class="guide-section-stit">Popup-L (min-width 664) ~ full size</h3>
+                        <div class="guide-flex ratio gap">
+                            <div class="guide-flex-box">
+                                {{ dialog.dialogBase(dimmed="true", posClass="pos-center", size="dialog-size-full", txt="타이틀 없이 텍스트 내용이 들어갑니다", close="true") }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="guide-section-tit">dialog - align(정렬)</h2>
+                <div>
+                    <div class="guide-desc-wrap space-none">
+                        <div class="guide-desc">Popup-S (w 328) -서브 타이틀(좌측 정렬), 내용(좌측 정렬)</div>
+                        <div class="guide-desc">Popup-S (w 328) -서브 타이틀(가운데), 내용(가운데)</div>
+                        <div class="guide-desc">Popup-S (w 328) -서브 타이틀(우측 정렬), 내용(우측 정렬)</div>
+                    </div>
+                    <div class="guide-flex ratio gap">
+                        <div class="guide-flex-box">
+                            {{ dialog.dialogBase(dimmed="true", posClass="pos-center", size="dialog-size-s", titleAlign="align-left", title="서브 타이틀", contentAlign="align-left", txt="타이틀 없이 텍스트 내용이 들어갑니다", close="true") }}
+                        </div>
+                        <div class="guide-flex-box">
+                            {{ dialog.dialogBase(dimmed="true", posClass="pos-center", size="dialog-size-s", titleAlign="align-center", title="서브 타이틀", contentAlign="align-center", txt="타이틀 없이 텍스트 내용이 들어갑니다", close="true") }}
+                        </div>
+                        <div class="guide-flex-box">
+                            {{ dialog.dialogBase(dimmed="true", posClass="pos-center", size="dialog-size-s", titleAlign="align-right", title="서브 타이틀", contentAlign="align-right", txt="타이틀 없이 텍스트 내용이 들어갑니다", close="true") }}
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="guide-section-tit">dialog - btn</h2>
+                <div class="guide-flex ratio gap">
+                    <div>
+                        <h3 class="guide-section-stit">title, btn</h3>
+                        <div class="guide-flex-box">
+                            {{ dialog.dialogBase(dimmed="true", posClass="pos-center", size="dialog-size-s", titleAlign="align-center", title="서브 타이틀", contentAlign="align-center", txt="타이틀 없이 텍스트 내용이 들어갑니다서브 타이틀 없이 텍스트 내용이 들어갑니다서브 타이틀 없이", btns="true") }}
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="guide-section-stit">header</h3>
+                        <div class="guide-flex ratio gap">
+                            <div class="guide-flex-box">
+                                {{ dialog.dialogBase(dimmed="true", posClass="pos-center", size="dialog-size-s", contentAlign="align-center", txt="타이틀 없이 텍스트 내용이 들어갑니다", btns="true", header="다국어 처리시 줄바꿈 됩니다. 타이틀영역도 줄바꿈이 가능합니다.", close="true") }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="guide-section-stit">footer</h3>
+                        <div class="guide-flex ratio gap">
+                            <div class="guide-flex-box">
+                                {{ dialog.dialogBase(dimmed="true", posClass="pos-center", size="dialog-size-s", titleAlign="align-center", title="서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀", contentAlign="align-center", txt="타이틀 없이 텍스트 내용이 들어갑니다서브 타이틀 없이 텍스트 내용이 들어갑니다서브 타이틀 없이", btns="true", footer="저작권에 위배되는 파일을 등록하는 경우 관련 법령에 의하여 처벌 받을 수 있습니다. 부가적인 안내문구 등이 들어갑니다.") }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %}{% endblock %}

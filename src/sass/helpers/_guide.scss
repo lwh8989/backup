@@ -140,6 +140,7 @@
     }
     .guide-layer {
         padding: 20px;
+        font-size: small;
     }
     .guide-section {
         margin-bottom: 50px;
@@ -185,6 +186,10 @@
             }
         }
     }
+    .guide-flex-box {
+        position: relative;
+        min-height: 400px;
+    }
 
     .guide-desc-wrap {
         @include flex;
@@ -192,6 +197,10 @@
         padding-left: 20%;
         color: #666;
         gap: 40px;
+
+        &.space-none {
+            padding: 0;
+        }
 
         & > div {
             flex: 1;

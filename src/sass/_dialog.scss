@@ -23,7 +23,6 @@
 .module-dialog {
     @include dialog.dialogLayer {
         min-width: 200px;
-        min-height: 100px;
     }
 
     $dialogSize: (
@@ -87,7 +86,7 @@
 
     .module-dialog-header {
         @include mixin.flex($y: center);
-        min-height: 56px;
+        min-height: 3.5rem;
         border-bottom: 1px solid color.$ui-divider-02;
         padding: 14px 64px 14px space.$stds-spacing-24;
         font-size: 18px;

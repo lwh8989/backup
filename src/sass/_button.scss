@@ -5,54 +5,31 @@
 /* 확인 후 삭제 예정 
 secondary 컬러값 틀림 확인 필요 
 
-$bg-primary-btn : #fc6020;
-$bg-primary-btn-hover : #fe763c;
-$bg-primary-btn-active : #e14b12;
-
 $bg-secondary-btn: #353f54;
 $bg-secondary-btn-hover: #455169;
 $bg-secondary-btn-active: #222b3c;
 
+gray 컬러값   확인 필요
 $bg-gray-btn: #eaeaea;
 $bg-gray-btn-hover: #fafafa;
 $bg-gray-btn-active: #d5d5d5;
 $bg-gray-btn-focus: #6e6e6e;
-
-$bg-inverse-btn: #fff;
-$bg-inverse-btn-hover: #f5f5f5;
-$bg-inverse-btn-active: #e0e0e0;
-$bg-inverse-btn-focus: #fff;
-
-$bg-ghost-btn: transparent;
-$bg-ghost-btn-hover: transparent;
-$bg-ghost-btn-active: transparent;
-$bg-ghost-btn-focus: #d5d5d5;
 */
+
+/* 메인에서 씌이는 custom 버튼 _color.scss에 추가된 후 삭제 예정 */
+$ui-button-gray-main-enabled: #f5f5f5;
+$ui-button-gray-main-hover: #eaeaea;
+$ui-button-gray-main-pressed: #d5d5d5;
+$ui-button-gray-main-bg-focused: #f5f5f5;
+$ui-button-gray-main-border1-focused: #6e6e6e;
+$ui-button-gray-main-border2-focused: #ffffff;
+$ui-button-gray-main-border3-focused: rgba(0,0,0,0.015);
+$ui-button-gray-main-disabled: #eaeaea;
+
 $bg-trans-btn: transparent;
 $bg-trans-btn-hover: transparent;
 $bg-trans-btn-active: transparent;
 $bg-trans-btn-focus: transparent;
-
-// _color.scss 에 컬러 추가되면 button-ghost-white 변수 삭제예정  
-$ui-button-ghost-white-bg-enabled: transparent;
-$ui-button-ghost-white-border-enabled: #fff;
-$ui-button-ghost-white-bg-hover: rgba(#000000, $alpha: 0.05);
-$ui-button-ghost-white-border-hover: #fff;
-$ui-button-ghost-white-bg-pressed: rgba(#000000, $alpha: 0.1);
-$ui-button-ghost-white-border-pressed: #fff;
-$ui-button-ghost-white-bg-focused: rgba(#000000, $alpha: 0.08);
-$ui-button-ghost-white-border-focused: #fff;
-$ui-button-ghost-white-bg-disabled: transparent;
-$ui-button-ghost-white-border-disabled: rgba(255, 255, 255, 0.2);
-
-// Button-Inverse-ghost
-$ui-button-ghost-enabled: transparent;
-$ui-button-ghost-hover: rgba(#ffffff, $alpha: 0.2);
-$ui-button-ghost-pressed: rgba(#ffffff, $alpha: 0.1);
-$ui-button-ghost-bg-focused: rgba(#ffffff, $alpha: 0.2);
-$ui-button-ghost-border1-focused: #ffffff;
-$ui-button-ghost-border2-disabled: rgba(#ffffff, $alpha: 0.2);
-$ui-button-ghost-disabled: transparent;
 
 
 .element-btn {
@@ -359,6 +336,31 @@ $ui-button-ghost-disabled: transparent;
         outline: none;
         background-color: $ui-button-gray-hover;    
         border: 2px solid $ui-button-gray-pressed;
+        box-shadow: inset 0 0 0 2px #fff;
+    }
+    &:disabled,
+    &.disabled{
+        color: #cacaca;
+        background: $ui-button-gray-disabled;
+        border-color: $ui-button-gray-disabled;
+    }    
+}
+.element-btn.bg-gray-main{
+    background-color: $ui-button-gray-main-enabled;
+    border: 1px solid $ui-button-gray-main-border3-focused;
+    color:#3a3a3a;
+    &:hover{
+        background-color: $ui-button-gray-main-hover;    
+        border: 1px solid $ui-button-gray-main-hover;
+    }
+    &:active{
+        background-color: $ui-button-gray-main-pressed;    
+        border: 1px solid $ui-button-gray-main-pressed;
+    }
+    &:focus{
+        outline: none;
+        background-color: $ui-button-gray-main-hover;    
+        border: 1px solid $ui-button-gray-main-pressed;
         box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,

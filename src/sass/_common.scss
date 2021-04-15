@@ -109,7 +109,7 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
 .box-type {
     @include boxType {
         &::placeholder {
-            color: $gray-300;
+            color: $gray300;
         }
     }
     &.disabled,

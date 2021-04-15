@@ -12,7 +12,7 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     &.active .element-select-button,
     .element-select-button:hover,
     .element-select-button:focus {
-        color: color.$ui-text-02;
+        color: color.$ui_text_02;
     }
 
     &.active {
@@ -34,7 +34,7 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     @include mixin.flex($y: center);
     width: 100%;
     height: 100%;
-    color: color.$ui-text-03;
+    color: color.$ui_text_03;
     line-height: 0;
 
     &.box-type {
@@ -50,7 +50,7 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     overflow-y: auto;
     background-color: $white;
     border-radius: 4px;
-    box-shadow: 0 4px 10px color.$black-alpha10;
+    box-shadow: 0 4px 10px color.$black_alpha10;
 
     &.absolute {
         position: absolute;
@@ -77,12 +77,12 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     @include mixin.flex($y: center);
     width: 100%;
     padding: $dropdown-default-space;
-    color: color.$ui-text-03;
+    color: color.$ui_text_03;
     white-space: nowrap;
 
     &:hover,
     &:focus {
-        background-color: color.$black-alpha5;
-        color: color.$ui-text-02;
+        background-color: color.$black_alpha5;
+        color: color.$ui_text_02;
     }
 }

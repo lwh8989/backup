@@ -1,5 +1,12 @@
 {% import "_include/partial/navigation/navigation.njk" as navigation %}
 
 {% macro base() %}
-    {{ navigation.base() }}
+    {{ navigation.base(
+        state="navigation-default-fixed",
+        iconLeft1="ic-navigation-menu-line", 
+        menudepth1="%텍스트%", 
+        menudepth2="%텍스트%", 
+        itemActive2="is-active"
+        ) 
+    }}
 {% endmacro %}

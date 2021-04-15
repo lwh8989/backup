@@ -1,5 +1,6 @@
 @import "./helpers/z-index";
 @import "./mixin/responsive";
+@import "./mixin/gnb";
 @import "./responsive";
 @import "./font";
 @import "./color";
@@ -12,6 +13,13 @@
     padding: $stds-spacing-12 $stds-spacing-16;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     background: $white;
+    &.navigation-default-fixed {
+        position: fixed;
+        left: 0;
+        top: $stds-gnbHeight;
+        width: 100%;
+        z-index: $zindex-fixed;
+    }
     .container {
         display: flex;
         max-width: 100%;

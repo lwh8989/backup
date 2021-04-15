@@ -1,7 +1,7 @@
 <!-- [D] Tablet Mobile 에서 나오는 UI Size -->
 <!-- 기본형 -->
-{% macro base( iconLeft1, menudepth1, menudepth2, itemActive1, itemActive2 ) %}
-<div class="layout-navigation">
+{% macro base( state, iconLeft1, menudepth1, menudepth2, itemActive1, itemActive2 ) %}
+<div class="layout-navigation {{state}}">
     <div class="container">
         <button class="nav-btn align-left">
             <i class="{{ iconLeft1 }}"></i>
@@ -16,8 +16,8 @@
 {% endmacro %}
 
 <!-- 기본형 좌우버튼 -->
-{% macro baseStyle2( iconLeft1, menudepth1, menudepth2, itemActive1, itemActive2, iconRight1 ) %}
-<div class="layout-navigation">
+{% macro baseStyle2( state, iconLeft1, menudepth1, menudepth2, itemActive1, itemActive2, iconRight1 ) %}
+<div class="layout-navigation {{state}}">
     <div class="container">
         <button class="nav-btn align-left">
             <i class="{{ iconLeft1 }}"></i>
@@ -35,8 +35,8 @@
 {% endmacro %}
 
 <!-- 리스트 Case -->
-{% macro listStyle( iconLeft1, menudepth1, itemActive1, iconRight1, iconRight2, iconRight3 ) %}
-<div class="layout-navigation">
+{% macro listStyle( state, iconLeft1, menudepth1, itemActive1, iconRight1, iconRight2, iconRight3 ) %}
+<div class="layout-navigation {{state}}">
     <div class="container">
         <button class="nav-btn align-left">
             <i class="{{ iconLeft1 }}"></i>
@@ -58,8 +58,8 @@
 {% endmacro %}
 
 <!-- 상세보기 Case -->
-{% macro detailStyle( iconLeft1, menudepth1, itemActive1, iconRight1 ) %}
-<div class="layout-navigation">
+{% macro detailStyle( state, iconLeft1, menudepth1, itemActive1, iconRight1 ) %}
+<div class="layout-navigation {{state}}">
     <div class="container">
         <button class="nav-btn align-left">
             <i class="{{ iconLeft1 }}"></i>
@@ -75,8 +75,8 @@
 {% endmacro %}
 
 <!-- 글쓰기 Case -->
-{% macro writeStyle( iconLeft1, navTextBtnState ) %}
-<div class="layout-navigation">
+{% macro writeStyle( state, iconLeft1, navTextBtnState ) %}
+<div class="layout-navigation {{state}}">
     <div class="container">
         <button class="nav-btn align-left">
             <i class="{{ iconLeft1 }}"></i>
@@ -90,8 +90,8 @@
 {% endmacro %}
 
 <!-- 닉네임 검색 Case -->
-{% macro nameSearchStyle( iconLeft1, menudepth1, menudepth2, itemActive1, itemActive2 ) %}
-<div class="layout-navigation">
+{% macro nameSearchStyle( state, iconLeft1, menudepth1, menudepth2, itemActive1, itemActive2 ) %}
+<div class="layout-navigation {{state}}">
     <div class="container">
         <button class="nav-btn align-left">
             <i class="{{ iconLeft1 }}"></i>

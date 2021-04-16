@@ -1,6 +1,9 @@
 @import "./../space";
 @import "./../responsive";
 @import "./responsive";
+@import "./gnb";
+@import "./footer";
+
 
 /* layout */
 @mixin layout (
@@ -12,33 +15,12 @@
 ) {
     position: $position;
     display: $display;
-        -webkit-display: $display;
-        -moz-display: $display;
-        -ms-display: $display;
     flex-flow: $flex-flow;
     width: $width;
     height: $height;
     align-items: center;
     justify-content: center;
 }
-
-/* layout Header order 1 */
-@mixin layoutHeader(
-    $order: 1,
-    $height: 48px,
-    $flex: 0 1 100%
-) {
-    order: $order;
-    height: $height;
-    flex: $flex;
-}
-.layout-header {
-    @include layoutHeader();
-    &.depth2 {
-        height: 96px;
-    }
-}
-/* header 배경영역에 bg 색상 넣을지 고민하기 */
 
 /* layout Style order 2 */
 @mixin layoutStyle
@@ -66,24 +48,34 @@
 }
 .layout {
     @include layout($width: null);
+    .layout-header {
+        &.depth2 {
+            .layout-basic {
+                $margin: $stds-gnbDepth2 $stds-spacing-16 0
+            }
+            &~.layout-basic {
+                margin-top: 96px;
+                padding-top: 48px;
+            }
+        }
+    }
+    .layout-navigation {
+        &+.layout-basic{
+            margin-top: 48px;
+            padding-top: 48px;
+        }
+    }
     .layout-basic {
-        @include layoutStyle($max-width: null, $min-width: null, $min-height: 100%, $margin: 0 $stds-spacing-16);
+        @include layoutStyle(
+            $max-width: null, 
+            $min-width: null, 
+            $min-height: 100%, 
+            $margin: $stds-gnbHeight $stds-spacing-16 0
+        );
     }
 }
 
-/* layout Footer order 5 */
-@mixin layoutFooter(
-    $height: auto,
-    $flex: 0 1 100%,
-    $order: 5
-) {
-    height: $height;
-    flex: $flex;
-    order: $order;
-}
-.layout-footer {
-    @include layoutFooter();
-}
+
 
 // nav {
 //   order:2;
@@ -115,11 +107,27 @@
 @include mobile {
     .layout {
         @include layout($width: null);
+        .layout-navigation {
+            &+.layout-basic {
+                margin-top: 48px;
+                padding-top: 48px;
+            }
+        }
+        .layout-header.depth2 ~ .layout-basic {
+            margin-top: 96px;
+            padding-top: 48px;
+        }
         .layout-basic {
-            @include layoutStyle($max-width: null, $min-width: null, $width: null, $min-height: 100%, $margin: 0 $stds-spacing-16);
+            @include layoutStyle(
+                $max-width: null, 
+                $min-width: null, 
+                $width: null, 
+                $min-height: 100%, 
+                $margin: $stds-gnbHeight $stds-spacing-16
+            );
         }
         .layout-footer {
-            @include layoutFooter();
+            @include layoutFooter($top: $stds-spacing-80);
         }
     }
 }
@@ -128,78 +136,179 @@
 @include tablet {
     .layout {
         @include layout($width: null);
+        .layout-navigation {
+            &+.layout-basic {
+                margin-top: 48px;
+                padding-top: 48px;
+            }
+        }
+        .layout-header.depth2~.layout-basic {
+            margin-top: 96px;
+            padding-top: 48px;
+        }
         .layout-basic {
-            @include layoutStyle($max-width: null, $min-width: null, $width: null, $min-height: 100%, $margin: 0 $stds-spacing-32);
+            @include layoutStyle(
+                $max-width: null, 
+                $min-width: null, 
+                $width: null, 
+                $min-height: 100%, 
+                $margin: $stds-gnbHeight $stds-spacing-32
+            );
         }
         .layout-footer {
-            @include layoutFooter();
+            @include layoutFooter($top: $stds-spacing-80);
         }
     }
 }
 
 /* desktopM 1280 */
 @include desktopM {
+    $stds-gnbHeight: 68px;
+    $stds-gnbDepth1: 68px;
+    $stds-gnbDepth2: 136px;
     .layout {
         @include layout($width: null);
         .layout-header {
-            @include layoutHeader($height: 68px);
+            @include layoutHeader($height: $stds-gnbHeight);
             &.depth2 {
-                height: 136px;
+                height: $stds-gnbDepth2;
+                &~.layout-basic {
+                    margin-top: $stds-gnbDepth2;
+                    padding: 0;
+                }
+            }
+        }
+        .layout-navigation {
+            &+.layout-basic {
+                margin-top: $stds-gnbHeight;
+                padding-top: 0;
             }
         }
         .layout-basic {
-            @include layoutStyle($max-width: null, $min-width: null, $width: null, $min-height: 100%, $margin: 0 $stds-spacing-48);
+            @include layoutStyle(
+                $max-width: null, 
+                $min-width: null, 
+                $width: null, 
+                $min-height: 100%, 
+                $margin: $stds-gnbHeight $stds-spacing-48
+            );
+        }
+        .layout-footer {
+            @include layoutFooter($top: $stds-spacing-200);
         }
     }
 }
 
 /* desktopL 1440 */
 @include desktopL {
+    $stds-gnbHeight: 68px;
+    $stds-gnbDepth1: 68px;
+    $stds-gnbDepth2: 136px;
     .layout {
         @include layout($width: null);
         .layout-header {
-            @include layoutHeader($height: 68px);
+            @include layoutHeader($height: $stds-gnbHeight);
             &.depth2 {
-                height: 136px;
+                height: $stds-gnbDepth2;
+                &~.layout-basic {
+                    margin-top: $stds-gnbDepth2;
+                    padding: 0;
+                }
+            }
+        }
+        .layout-navigation {
+            &+.layout-basic {
+                margin-top: $stds-gnbHeight;
+                padding-top: 0;
             }
         }
         .layout-basic {
-            @include layoutStyle($max-width: null, $min-width: null, $width: null, $min-height: 100%, $margin: 0 $stds-spacing-52);
+            @include layoutStyle(
+                $max-width: null, 
+                $min-width: null, 
+                $width: null,
+                $min-height: 100%, 
+                $margin: 0 $stds-spacing-52
+            );
         }
+         .layout-footer {
+             @include layoutFooter($top: $stds-spacing-200);
+         }
     }
 }
 
 /* desktopXL 1600 */
 @include desktopXL {
+    $stds-gnbHeight: 68px;
+    $stds-gnbDepth1: 68px;
+    $stds-gnbDepth2: 136px;
     .layout {
         @include layout($width: null);
         .layout-header {
-            @include layoutHeader($height: 68px);
+            @include layoutHeader($height: $stds-gnbHeight);
             &.depth2 {
-                height: 136px;
+                height: $stds-gnbDepth2;
+                &~.layout-basic {
+                    margin-top: $stds-gnbDepth2;
+                    padding: 0;
+                }
+            }
+        }
+        .layout-navigation {
+            &+.layout-basic {
+                margin-top: $stds-gnbHeight;
+                padding-top: 0;
             }
         }
         .layout-basic {
-            @include layoutStyle($max-width: null, $min-width: null, $width: null, $min-height: 100%, $margin: 0 $stds-spacing-52);
+            @include layoutStyle(
+                $max-width: null, 
+                $min-width: null, 
+                $width: null, 
+                $min-height: 100%, 
+                $margin: $stds-gnbHeight $stds-spacing-52
+            );
         }
+         .layout-footer {
+             @include layoutFooter($top: $stds-spacing-200);
+         }
     }
 }
 
 /* desktop2XL 1920 */
 @include desktop2XL {
+    $stds-gnbHeight: 68px;
+    $stds-gnbDepth1: 68px;
+    $stds-gnbDepth2: 136px;
     .layout {
         @include layout($width: null);
         .layout-header {
-            @include layoutHeader($height: 68px);
+            @include layoutHeader($height: $stds-gnbHeight);
             &.depth2 {
-                height: 136px;
+                height: $stds-gnbDepth2;
+                &~.layout-basic {
+                    margin-top: $stds-gnbDepth2;
+                    padding: 0;
+                }
+            }
+        }
+        .layout-navigation {
+            &+.layout-basic {
+                margin-top: $stds-gnbHeight;
+                padding-top: 0;
             }
         }
         .layout-basic {
-            @include layoutStyle($max-width: null, $min-width: null, $width: null, $min-height: 100%, $margin: 0 $stds-spacing-52);
+            @include layoutStyle(
+                $max-width: null, 
+                $min-width: null, 
+                $width: null, 
+                $min-height: 100%, 
+                $margin: $stds-gnbHeight $stds-spacing-52 0
+            );
         }
+        .layout-footer {
+             @include layoutFooter($top: $stds-spacing-200);
+         }
     }
 }
-
-
-

@@ -1,0 +1,86 @@
+{% extends "_include/layout/guide/guide.njk" %}
+{% import "_include/partial/navigation/navigation.njk" as navigation %}
+
+<!-- styles -->
+{% block styles %}
+{% endblock %}
+
+<!-- styles -->
+{% block content %}
+<!-- [D]   -->
+<div class="guide">
+    <p class="tit"><b>Stove navigation Guide</b></p>
+    <p class="desc">
+        base, notice, channeling, rating
+    </p>
+    <p class="desc">기본형</p>
+    {{ navigation.base(
+        iconLeft1="ic-navigation-menu-line", 
+        menudepth1="%텍스트%", 
+        menudepth2="%텍스트%", 
+        itemActive2="is-active"
+        ) 
+    }}
+    {{ navigation.base(
+        iconLeft1="ic-navigation-menu-line", 
+        menudepth1="커뮤니티", 
+        menudepth2="내 활동", 
+        itemActive2="is-active"
+        ) 
+    }}
+
+    <p class="desc">좌우 버튼 Case</p>
+    {{ navigation.baseStyle2(
+        iconLeft1="ic-navigation-menu-line", 
+        menudepth1="커뮤니티", 
+        menudepth2="게임 커뮤니티", 
+        itemActive2="is-active",
+        iconRight1="ic-navigation-search-line"
+        ) 
+    }}
+
+    <p class="desc">리스트 Case</p>
+    {{ navigation.listStyle(
+        iconLeft1="ic-navigation-menu-line", 
+        menudepth1="자유게시판", 
+        itemActive1="is-active",
+        iconRight1="ic-navigation-search-line",
+        iconRight2="ic-community-write-line",
+        iconRight3="ic-navigation-option-horizontal-fill"
+        ) 
+    }}
+
+    <p class="desc">상세보기 Case</p>
+    {{ navigation.detailStyle(
+        iconLeft1="ic-navigation-menu-line", 
+        menudepth1="%텍스트%", 
+        itemActive1="is-active",
+        iconRight1="ic-community-share-line"
+        ) 
+    }}
+
+    <p class="desc">글쓰기 Case</p>
+    {{ navigation.writeStyle(
+        iconLeft1="ic-control-close-line",
+        navTextBtnState="is-active"
+        ) 
+    }}
+
+    <p class="desc">닉네임 검색 Case</p>
+    {{ navigation.nameSearchStyle(
+        iconLeft1="ic-navigation-menu-line", 
+        menudepth1="커뮤니티", 
+        menudepth2="%닉네임%님의 활동", 
+        itemActive2="is-active"
+        ) 
+    }}
+    
+</div>
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %} 
+{% endblock %}

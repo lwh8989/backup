@@ -6,13 +6,13 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
 
 .element-input {
     padding: $dropdown-default-space;
-    color: color.$gray-500;
+    color: color.$gray500;
 }
 
 .element-input.active,
 .element-input-icon.active .element-input,
 .element-input:focus {
-    color: color.$gray-700;
+    color: color.$gray700;
 }
 
 .element-input-icon {
@@ -34,11 +34,11 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         margin-right: 8px;
 
         &.ic-control-close-circle-fill {
-            color: color.$ui-text-04;
+            color: color.$ui_text_04;
             display: none;
         }
         &.ic-navigation-search-line {
-            color: color.$ui-text-03;
+            color: color.$ui_text_03;
         }
 
         &:last-of-type {
@@ -46,7 +46,7 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         }
 
         &:hover {
-            color: color.$gray-200;
+            color: color.$gray200;
         }
     }
 
@@ -54,7 +54,7 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     &:hover {
         button {
             &.ic-navigation-search-line {
-                color: color.$gray-300;
+                color: color.$gray300;
             }
         }
     }
@@ -63,7 +63,7 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     &:focus-within {
         button {
             &.ic-navigation-search-line {
-                color: color.$ui-text-02;
+                color: color.$ui_text_02;
             }
         }
     }
@@ -81,12 +81,12 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
 
     &.filled {
         border: 0;
-        background-color: color.$gray-50;
+        background-color: color.$gray50;
 
         &.active,
         &:focus-within,
         &:hover {
-            background-color: color.$gray-75;
+            background-color: color.$gray75;
         }
     }
 }

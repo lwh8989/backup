@@ -275,76 +275,76 @@ $bg_trans_btn_focus: transparent;
 
 /* color */
 .element-btn.bg-primary{
-    background-color: $ui_button_primary_enabled;
-    border: 2px solid $ui_button_primary_enabled;
+    // background-color: $ui_button_primary_enabled;
+    // border: 2px solid $ui_button_primary_enabled;
     &:hover{
-        background-color: $ui_button_primary_hover;    
-        border: 2px solid $ui_button_primary_hover;
+        // background-color: $ui_button_primary_hover;    
+        // border: 2px solid $ui_button_primary_hover;
     }
     &:active{
-        background-color: $ui_button_primary_pressed;    
-        border: 2px solid $ui_button_primary_pressed;
+        // background-color: $ui_button_primary_pressed;    
+        // border: 2px solid $ui_button_primary_pressed;
     }
     &:focus {
         outline: none;
-        border: 2px solid $ui_button_primary_enabled;
+        // border: 2px solid $ui_button_primary_enabled;
         box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,
     &.disabled{
-        background: $ui_button_primary_disabled;
-        border-color: $ui_button_primary_disabled;
+        // background: $ui_button_primary_disabled;
+        // border-color: $ui_button_primary_disabled;
     }
 }
 .element-btn.bg-secondary{
-    background-color: $ui_button_secondary_enabled;
-    border: 2px solid $ui_button_secondary_enabled;
+    // background-color: $ui_button_secondary_enabled;
+    // border: 2px solid $ui_button_secondary_enabled;
     &:hover{
-        background-color: $ui_button_secondary_hover;    
-        border: 2px solid $ui_button_secondary_hover;
+        // background-color: $ui_button_secondary_hover;    
+        // border: 2px solid $ui_button_secondary_hover;
     }
     &:active{
-        background-color: $ui_button_secondary_pressed;    
-        border: 2px solid $ui_button_secondary_pressed;
+        // background-color: $ui_button_secondary_pressed;    
+        // border: 2px solid $ui_button_secondary_pressed;
     }
     &:focus {
         outline: none;
-        border: 2px solid $ui_button_secondary_enabled;
+        // border: 2px solid $ui_button_secondary_enabled;
         box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,
     &.disabled{
-        background: $ui_button_secondary_disabled;
-        border-color: $ui_button_secondary_disabled;
+        // background: $ui_button_secondary_disabled;
+        // border-color: $ui_button_secondary_disabled;
     }    
 }
 .element-btn.bg-gray{
-    background-color: $ui_button_gray_enabled;
-    border: 2px solid $ui_button_gray_enabled;
+    // background-color: $ui_button_gray_enabled;
+    // border: 2px solid $ui_button_gray_enabled;
     color:#3a3a3a;
     &:hover{
-        background-color: $ui_button_gray_hover;    
-        border: 2px solid $ui_button_gray_hover;
+        // background-color: $ui_button_gray_hover;    
+        // border: 2px solid $ui_button_gray_hover;
     }
     &:active{
-        background-color: $ui_button_gray_pressed;    
-        border: 2px solid $ui_button_gray_pressed;
+        // background-color: $ui_button_gray_pressed;    
+        // border: 2px solid $ui_button_gray_pressed;
     }
     &:active {
-        background-color: $ui_button_03_pressed;
-        border: 2px solid $ui_button_03_pressed;
+        // background-color: $ui_button_03_pressed;
+        // border: 2px solid $ui_button_03_pressed;
     }
     &:focus {
         outline: none;
-        background-color: $ui_button_gray_hover;    
-        border: 2px solid $ui_button_gray_pressed;
+        // background-color: $ui_button_gray_hover;    
+        // border: 2px solid $ui_button_gray_pressed;
         box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,
     &.disabled {
         color: #cacaca;
-        background: $ui_button_gray_disabled;
-        border-color: $ui_button_gray_disabled;
+        // background: $ui_button_gray_disabled;
+        // border-color: $ui_button_gray_disabled;
     }    
 }
 .element-btn.bg-gray-main{
@@ -372,80 +372,80 @@ $bg_trans_btn_focus: transparent;
     &:disabled,
     &.disabled{
         color: #cacaca;
-        background: $ui_button_gray_disabled;
-        border-color: $ui_button_gray_disabled;
+        // background: $ui_button_gray_disabled;
+        // border-color: $ui_button_gray_disabled;
     }    
 }
 .element-btn.bg-inverse{
-    background-color: $ui_button_inverse_enabled;
-    border: 2px solid $ui_button_inverse_enabled;
+    // background-color: $ui_button_inverse_enabled;
+    // border: 2px solid $ui_button_inverse_enabled;
     color:#3a3a3a;
     &:hover{
-        background-color: $ui_button_inverse_hover;    
-        border: 2px solid $ui_button_inverse_hover;
+        // background-color: $ui_button_inverse_hover;    
+        // border: 2px solid $ui_button_inverse_hover;
     }
     &:active{
-        background-color: $ui_button_inverse_pressed;    
-        border: 2px solid $ui_button_inverse_pressed;
+        // background-color: $ui_button_inverse_pressed;    
+        // border: 2px solid $ui_button_inverse_pressed;
     }
     &:focus {
         outline: none;
-        background-color: $ui_button_inverse_bg_focused;    
-        border: 2px solid $ui_button_inverse_border_focused;
+        // background-color: $ui_button_inverse_bg_focused;    
+        // border: 2px solid $ui_button_inverse_border_focused;
         box-shadow: inset 0 0 0 1px #bfbfbf;
     }
     &:disabled,
     &.disabled{
-        background: $ui_button_inverse_disabled;
-        border-color: $ui_button_inverse_disabled;
+        // background: $ui_button_inverse_disabled;
+        // border-color: $ui_button_inverse_disabled;
     }    
 }
 .element-btn.bg-outline{
-    background-color: $ui_button_outline_enabled;
-    border: 1px solid $ui_button_outline_border1_focused;
+    // background-color: $ui_button_outline_enabled;
+    // border: 1px solid $ui_button_outline_border1_focused;
     color:#3a3a3a;
     &:hover{
-        background-color: $ui_button_outline_hover;    
+        // background-color: $ui_button_outline_hover;    
         border: 1px solid #999;
     }
     &:active{
-        background-color: $ui_button_outline_pressed;    
-        border: 1px solid $ui_button_outline_border2_focused;
+        // background-color: $ui_button_outline_pressed;    
+        // border: 1px solid $ui_button_outline_border2_focused;
     }
     &:focus {
         outline: none;
-        background-color: $ui_button_outline_bg_focused;    
-        border: 1px solid $ui_button_outline_border3_focused;
-        box-shadow: inset 0 0 0 2px $ui_button_outline_border3_focused;
+        // background-color: $ui_button_outline_bg_focused;    
+        // border: 1px solid $ui_button_outline_border3_focused;
+        // box-shadow: inset 0 0 0 2px $ui_button_outline_border3_focused;
     }
     &:disabled,
     &.disabled{
-        background: $ui_button_outline_disabled;
-        border-color: $ui_button_outline_border4_focused;
+        // background: $ui_button_outline_disabled;
+        // border-color: $ui_button_outline_border4_focused;
     }
 }
 .element-btn.bg-ghost{
-    background-color: $ui_button_inverse_ghost_enabled;
-    border: 1px solid $ui_button_inverse_ghost_border1_focused;
+    // background-color: $ui_button_inverse_ghost_enabled;
+    // border: 1px solid $ui_button_inverse_ghost_border1_focused;
     color: #fff;
     &:hover{
-        background-color: $ui_button_inverse_ghost_hover;    
-        border: 1px solid $ui_button_inverse_ghost_border1_focused;
+        // background-color: $ui_button_inverse_ghost_hover;    
+        // border: 1px solid $ui_button_inverse_ghost_border1_focused;
     }
     &:active{
-        background-color: $ui_button_inverse_ghost_pressed;    
-        border: 1px solid $ui_button_inverse_ghost_border1_focused;
+        // background-color: $ui_button_inverse_ghost_pressed;    
+        // border: 1px solid $ui_button_inverse_ghost_border1_focused;
     }
     &:focus{
         outline: none;
-        background-color: $ui_button_inverse_ghost_bg_focused;    
-        border: 1px solid $ui_button_inverse_ghost_border1_focused;
-        box-shadow: inset 0 0 0 2px $ui_button_inverse_ghost_border1_focused;
+        // background-color: $ui_button_inverse_ghost_bg_focused;    
+        // border: 1px solid $ui_button_inverse_ghost_border1_focused;
+        // box-shadow: inset 0 0 0 2px $ui_button_inverse_ghost_border1_focused;
     }
     &:disabled,
     &.disabled{
-        background: $ui_button_outline_disabled;
-        border-color: $ui_button_outline_disabled;
+        // background: $ui_button_outline_disabled;
+        // border-color: $ui_button_outline_disabled;
         & .btn-txt{
             color: #cacaca;
         }

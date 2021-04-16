@@ -19,53 +19,16 @@
     &.absolute {
         position: absolute;
     }
-    .layout-sidebar {
-        width: $stds-breakpoint-xs;
-        height: 100%;
-        background: #fff;
-        position: fixed;
-        transition: transform .4s ease-in-out;
-        z-index: $zindex-modal;
-        -webkit-overflow-scrolling: touch;
-        &.sidebar-left {
-            transform: translateX(-100%);
-            left: 0;
-        }
-        &.sidebar-right {
-            transform: translateX(0);
-            right: 0;
-        }
-    }
-    &.is-opened {
-        display: block;
-        .layout-sidebar {
-            &.sidebar-left {
-                transform: translateX(0);
-            }
-            &.sidebar-right {
-                transform: translateX(0);
-            }
-        }
-    }
-    .dimmed {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: color.$black_alpha50;
-        z-index: $zindex-modal-backdrop;
-    }
 }
 
 .module-dialog {
     @include dialog.dialogLayer {
-        min-width: 200px;
+        min-width: 20rem;
     }
     $dialogSize: (
-        dialog-size-s: 328px,
-        dialog-size-m: 440px,
-        dialog-size-l: 664px,
+        dialog-size-s: 32.8rem,
+        dialog-size-m: 44rem,
+        dialog-size-l: 66.4rem,
         dialog-size-full: 100%,
     );
     @each $name, $value in $dialogSize {
@@ -139,8 +102,8 @@
         @include mixin.flex($y: center);
         min-height: 3.5rem;
         border-bottom: 1px solid color.$ui_divider_black_02;
-        padding: 14px 64px 14px space.$stds-spacing-24;
-        font-size: 18px;
+        padding: 1.4rem 6.4rem 1.4rem space.$stds-spacing-24;
+        font-size: 1.8rem;
         font-weight: bold;
         color: color.$ui_text_01;
         line-height: font.$stdsLineHeightM;
@@ -152,11 +115,11 @@
     }
     .module-dialog-title {
         padding-bottom: space.$stds-spacing-16;
-        font-size: 16px;
+        font-size: 1.6rem;
         font-weight: bold;
         color: color.$ui_text_01;
         line-height: font.$stdsLineHeightL;
-        letter-spacing: -0.4px;
+        letter-spacing: -0.4px; // letter-spacing 적용 해 주세요.
     }
     .module-dialog-content {
         color: color.$ui_text_02;
@@ -175,7 +138,7 @@
         }
         button .btn-txt {
             font-weight: bold;
-            font-size: 13px;
+            font-size: 1.3rem;
 
             &:hover {
                 text-decoration: initial;
@@ -190,9 +153,9 @@
     }
     .module-dialog-close {
         position: absolute;
-        right: 20px;
-        top: 16px;
-        font-size: 20px;
+        right: 2rem;
+        top: 1.6rem;
+        font-size: 2rem;
         color: color.$ui_text_03;
 
         &::after {
@@ -205,13 +168,13 @@
             width: 0;
             height: 0;
             background-color: color.$black_alpha5;
-            border-radius: 36px;
+            border-radius: 3.6rem;
         }
 
         &:hover {
             &::after {
-                width: 36px;
-                height: 36px;
+                width: 3.6rem;
+                height: 3.6rem;
             }
         }
     }

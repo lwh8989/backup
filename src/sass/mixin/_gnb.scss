@@ -2,9 +2,9 @@
 @import "./../helpers/z-index";
 
 /* layout Header order 1 */
-$stds-gnbHeight: 48px;
-$stds-gnbDepth1: 48px;
-$stds-gnbDepth2: 96px;
+$stds-gnbHeight: 4.8rem;
+$stds-gnbDepth1: 4.8rem;
+$stds-gnbDepth2: 9.6rem;
 
 @mixin layoutHeader(
     $order: 1,
@@ -24,7 +24,7 @@ $stds-gnbDepth2: 96px;
         height: $stds-gnbDepth2;
         &+ .layout-navigation{
             &.navigation-default-fixed {
-                top: 96px;
+                top: $stds-gnbDepth2;
             }
         }
     }

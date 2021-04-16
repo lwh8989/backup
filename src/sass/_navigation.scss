@@ -8,10 +8,10 @@
 
 .layout-navigation {
     order: 2;
-    height: 48px;
+    height: 4.8rem;
     flex: 0 1 100%;
     padding: $stds-spacing-12 $stds-spacing-16;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
     background: $white;
     &.navigation-default-fixed {
         position: fixed;
@@ -23,31 +23,31 @@
     .container {
         display: flex;
         max-width: 100%;
-        height: 24px;
+        height: 2.4rem;
         // flex-direction: row;
         .nav-btn {
-            width: 24px;
-            height: 24px;
+            width: 2.4rem;
+            height: 2.4rem;
             i {
-                font-size: 24px;
+                font-size: 2.4rem;
                 // color: $ui_icon_primary_enabled;
             }
             &.align-left {
-                margin-right: 20px;
+                margin-right: 2rem;
             }
             &.align-right {
-                margin-left: 20px;
+                margin-left: 2rem;
             }
         }
         .nav-text-btn {
-            font-size: 15px;
+            font-size: 1.5rem;
             color: $ui-text-03;
             flex: none;
             &.align-left {
-                margin-right: 20px;
+                margin-right: 2rem;
             }
             &.align-right {
-                margin-left: 20px;
+                margin-left: 2rem;
             }
             &.is-active {
                 color: $ui-text-brand;
@@ -56,14 +56,14 @@
         }
         .contents {
             width: 100%;
-            line-height: 24px;
+            line-height: 2.4rem;
             flex-wrap: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
             flex-basis: auto;
             .item {
-                font-size: 15px;
+                font-size: 1.5rem;
                 color: $ui-text-03;
                 margin-left: $stds-spacing-8;
                 &:first-child {

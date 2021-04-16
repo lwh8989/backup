@@ -6,10 +6,10 @@ $black15:rgba(0,0,0,0.15);
 $black20:rgba(0,0,0,0.20);
 
 $base : none;
-$shadow_02 :  0px 2px 4px $black5;
-$shadow_04 :  0px 4px 10px $black10;
-$shadow_08 :  0px 8px 24px $black15;
-$shadow_12 :  0px 12px 28px $black20;
+$shadow_02 :  0rem 0.2rem 0.4rem $black5;
+$shadow_04 :  0rem 0.4rem 1rem $black10;
+$shadow_08 :  0rem 0.8rem 2.4rem $black15;
+$shadow_12 :  0rem 1.2rem 2.8rem $black20;
 
 .shadow-box-0{
     box-shadow: $base;

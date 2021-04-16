@@ -1,32 +1,32 @@
 /* [D] 개발에 반영되면 안되는 Scss입니다. */
 .guide {
-    width: 800px;
+    width: 80rem;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 6rem 0;
 
     .tit {
-        font-size: 28px;
+        font-size: 2.8rem;
         color: #333;
-        padding-bottom: 16px;
-        margin-top: 60px;
+        padding-bottom: 1.6rem;
+        margin-top: 6rem;
         :first-of-type {
             margin-top: 0;
         }
     }
     .tit2 {
-        font-size: 22px;
+        font-size: 2.2rem;
         color: #333;
-        padding-bottom: 16px;
-        margin-top: 50px;
+        padding-bottom: 1.6rem;
+        margin-top: 5rem;
         :first-of-type {
             margin-top: 0;
         }
     }
     .desc {
-        font-size: 16px;
-        line-height: 26px;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
         color: #666;
-        padding-bottom: 16px;
+        padding-bottom: 1.6rem;
     }
     .line-through {
         text-decoration: line-through;
@@ -38,7 +38,7 @@
     /* Example */
     .example {
         width: 100%;
-        margin: 48px 0;
+        margin: 4.8rem 0;
     }
 
     /* Guide table */
@@ -49,22 +49,23 @@
         }
         thead {
             background-color: #f4f4f4;
-            font-size: 14px;
+            font-size: 1.4rem;
             color: #333;
             font-weight: bold;
-            padding: 16px 0;
+            padding: 1.6rem 0;
             tr th {
-                padding: 16px 0;
+                padding: 1.6rem 0;
                 vertical-align: middle;
             }
         }
         tbody {
+            background: #fff;
             tr {
-                border-bottom: 1px solid #eff5fc;
+                border-bottom: 0.1rem solid #eff5fc;
                 td {
                     font-size: 1.4rem;
                     color: #333;
-                    padding: 20px 0;
+                    padding: 2rem 0;
                     text-align: center;
                     vertical-align: middle;
                 }
@@ -101,25 +102,25 @@
         .view {
             display: inline-block;
             width: 33%;
-            margin-bottom: 32px;
+            margin-bottom: 3.2rem;
             vertical-align: top;
             .stove-icon {
-                font-size: 32px;
+                font-size: 3.2rem;
                 display: block;
                 text-align: center;
-                margin-bottom: 8px;
+                margin-bottom: 0.8rem;
             }
 
             .name {
                 font-size: 1.2rem;
                 display: block;
                 text-align: center;
-                height: 40px;
+                height: 4rem;
             }
         }
 
         .desc {
-            padding: 16px 0;
+            padding: 1.6rem 0;
         }
     }
 
@@ -128,56 +129,56 @@
         width: 90%;
     }
     .guide-tit {
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-        border-bottom: 4px solid #eaeaea;
-        font-size: 30px;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 0.4rem solid #eaeaea;
+        font-size: 3rem;
 
         &::before {
             content: "📒";
-            margin-right: 8px;
+            margin-right: 0.8rem;
         }
     }
     .guide-layer {
-        padding: 20px;
+        padding: 2rem;
         font-size: small;
     }
     .guide-section {
-        margin-bottom: 50px;
+        margin-bottom: 5rem;
 
         .guide-section-tit {
-            margin-bottom: 20px;
-            font-size: 18px;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
 
             &::before {
                 content: "🌼";
-                margin-right: 5px;
+                margin-right: 0.5rem;
             }
 
             & + div {
-                padding: 0 20px;
+                padding: 0 2rem;
             }
         }
 
         .guide-section-stit {
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eaeaea;
-            font-size: 14px;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 0.1rem solid #eaeaea;
+            font-size: 1.4rem;
 
             &::before {
                 content: "📌";
-                margin-right: 5px;
+                margin-right: 0.5rem;
             }
         }
     }
     .guide-flex {
         @include flex;
         flex: 1;
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
 
         &.gap {
-            gap: 40px;
+            gap: 4rem;
         }
 
         &.ratio {
@@ -188,15 +189,15 @@
     }
     .guide-flex-box {
         position: relative;
-        min-height: 400px;
+        min-height: 40rem;
     }
 
     .guide-desc-wrap {
         @include flex;
-        margin-bottom: 8px;
+        margin-bottom: 0.8rem;
         padding-left: 20%;
         color: #666;
-        gap: 40px;
+        gap: 4rem;
 
         &.space-none {
             padding: 0;
@@ -209,17 +210,17 @@
 
     .guide-state-wrap {
         @include flex;
-        padding: 10px 0;
+        padding: 1rem 0;
 
         .guide-state {
             width: 20%;
-            padding: 8px 0;
+            padding: 0.8rem 0;
             color: #1e88e5;
         }
     }
 
     /* navigation */
     .layout-navigation {
-        margin-bottom: 40px;
+        margin-bottom: 4rem;
     }
 }

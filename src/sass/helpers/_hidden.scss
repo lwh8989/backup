@@ -5,7 +5,7 @@
 @mixin text-hidden() {
     overflow: hidden;
     font-size: 0;
-    text-indent: -999999px;
+    text-indent: -999999rem;
     white-space: nowrap;
 }
 /* 샘플용 element*/

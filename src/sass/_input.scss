@@ -31,7 +31,7 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         }
     }
     button {
-        margin-right: 8px;
+        margin-right: 0.8rem;
 
         &.ic-control-close-circle-fill {
             color: color.$ui_text_04;
@@ -76,7 +76,7 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     }
 
     &.round {
-        border-radius: 999px;
+        border-radius: 99.9rem;
     }
 
     &.filled {

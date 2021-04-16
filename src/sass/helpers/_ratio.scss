@@ -3,12 +3,12 @@
 
 .resizable {
     position: relative;
-    margin-bottom: 40px;
-    margin: 2px;
+    margin-bottom: 4rem;
+    margin: 0.2rem;
     flex: 1;
 
     .dl-list {
-        height: 90px;
+        height: 9rem;
 
         dd {
             opacity: 0.7;
@@ -18,10 +18,10 @@
 
 .resizable .resizers {
     @include flex($y: flex-start);
-    width: 400px;
-    height: 400px;
+    width: 40rem;
+    height: 40rem;
     max-width: 100% !important;
-    min-width: 200px !important;
+    min-width: 20rem !important;
     padding: 10%;
     border: 1px solid #a0a0a0;
     resize: horizontal;

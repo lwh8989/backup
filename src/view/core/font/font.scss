@@ -1,68 +1,68 @@
 /* view 에서 Guide 하기 위한 Css */
-@import "./src/sass/font";
+@use "./src/sass/font";
 
 /* [D] 가이드용 SCSS입니다. */
 /* 영향도 : 가이드 페이지의 font-style */
 /* title */
 .stds-title1 {
-    @include stdsTitle1;
+    @include font.stdsTitle1;
 }
 .stds-title2 {
-    @include stdsTitle2;
+    @include font.stdsTitle2;
 }
 .stds-title3 {
-    @include stdsTitle3;
+    @include font.stdsTitle3;
 }
 .stds-title4 {
-    @include stdsTitle4;
+    @include font.stdsTitle4;
 }
 .stds-title5 {
-    @include stdsTitle5;
+    @include font.stdsTitle5;
 }
 .stds-title6 {
-    @include stdsTitle6;
+    @include font.stdsTitle6;
 }
 .stds-title7 {
-    @include stdsTitle7;
+    @include font.stdsTitle7;
 }
 .stds-title8 {
-    @include stdsTitle8;
+    @include font.stdsTitle8;
 }
 
 /* Body */
 .stds-body1 {
-    @include stdsBody1($weight: normal);
+    @include font.stdsBody1($weight: normal);
 }
 .stds-body2 {
-    @include stdsBody2($weight: normal);
+    @include font.stdsBody2($weight: normal);
 }
 .stds-body3 {
-    @include stdsBody3($weight: normal);
+    @include font.stdsBody3($weight: normal);
 }
 .stds-body4 {
-    @include stdsBody4($weight: normal);
+    @include font.stdsBody4($weight: normal);
 }
 
 /* Button */
 .stds-button1 {
-    @include stdsButton1($weight: normal);
+    @include font.stdsButton1($weight: normal);
 }
 .stds-button2 {
-    @include stdsButton2($weight: normal);
+    @include font.stdsButton2($weight: normal);
 }
 
 /* Caption */
 .stds-caption1 {
-    @include caption1;
+    @include font.caption1;
 }
 .stds-caption2 {
-    @include caption2;
+    @include font.caption2;
 }
 
 /* Chips */
 .stds-chips1 {
-    @include chips1;
+    @include font.chips1;
 }
 .stds-chips2 {
-    @include chips2;
+    @include font.chips2;
 }

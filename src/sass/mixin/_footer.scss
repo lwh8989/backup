@@ -1,4 +1,4 @@
-@import "./../space";
+@use "./../space";
 
 /* layout Footer order 5 */
 @mixin layoutFooter($height: auto,
@@ -15,5 +15,5 @@
 }
 
 .layout-footer {
-    @include layoutFooter($top: $stds-spacing-80);
+    @include layoutFooter($top: space.$stds-spacing-80);
 }

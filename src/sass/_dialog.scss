@@ -19,8 +19,42 @@
     &.absolute {
         position: absolute;
     }
+    .layout-sidebar {
+        width: $stds-breakpoint-xs;
+        height: 100%;
+        background: #fff;
+        position: fixed;
+        transition: transform .4s ease-in-out;
+        z-index: $zindex-modal;
+        -webkit-overflow-scrolling: touch;
+        &.sidebar-left {
+            transform: translateX(-100%);
+            left: 0;
+        }
+        &.sidebar-right {
+            transform: translateX(0);
+            right: 0;
+        }
+    }
     &.is-opened {
         display: block;
+        .layout-sidebar {
+            &.sidebar-left {
+                transform: translateX(0);
+            }
+            &.sidebar-right {
+                transform: translateX(0);
+            }
+        }
+    }
+    .dimmed {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: color.$black_alpha50;
+        z-index: $zindex-modal-backdrop;
     }
 }
 
@@ -28,14 +62,12 @@
     @include dialog.dialogLayer {
         min-width: 200px;
     }
-
     $dialogSize: (
         dialog-size-s: 328px,
         dialog-size-m: 440px,
         dialog-size-l: 664px,
         dialog-size-full: 100%,
     );
-
     @each $name, $value in $dialogSize {
         &.#{"" + $name + ""} {
             @if $name == dialog-size-full {
@@ -46,9 +78,7 @@
             }
         }
     }
-
     z-index: z-index.$zindex-modal;
-
     &.pos-center {
         @include dialog.dialogPos(
             $top: 50%,
@@ -66,16 +96,13 @@
         //     $y: 0
         // );
     }
-
     .module-dialog-inner {
         padding: space.$stds-spacing-40 space.$stds-spacing-24
             space.$stds-spacing-32;
     }
-
     .layer-flex {
         @include mixin.flex($x: center);
     }
-
     // dialog align
     $dialogAlign: (
         align-left: left,
@@ -161,7 +188,6 @@
             space.$stds-spacing-32;
         color: color.$ui_text_03;
     }
-
     .module-dialog-close {
         position: absolute;
         right: 20px;

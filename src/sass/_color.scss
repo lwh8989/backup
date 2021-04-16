@@ -654,19 +654,19 @@ $interactive_01_selected: $orange600;
 $interactive_01_disabled: $gray300;
 
 // Secondary Color
-$interactive_secondary_highlight: $navy50;
-$interactive_secondary_enabled: $navy800;
-$interactive_secondary_hover: $navy700;
-$interactive_secondary_pressed: $navy900;
-$interactive_secondary_focus: $navy800;
-$interactive_secondary_selected: $navy900;
-$interactive_secondary_disabled: $gray300;
+$interactive_02_highlight: $navy50;
+$interactive_02_enabled: $navy800;
+$interactive_02_hover: $navy700;
+$interactive_02_pressed: $navy900;
+$interactive_02_focus: $navy800;
+$interactive_02_selected: $navy900;
+$interactive_02_disabled: $gray300;
 
 // Gray
-$interactive_gray_hover: $black_alpha5;
-$interactive_gray_pressed: $black_alpha10;
-$interactive_gray_focused: $black_alpha8;
-$interactive_gray_selected: $black_alpha10;
+$interactive_03_hover: $black_alpha5;
+$interactive_03_pressed: $black_alpha10;
+$interactive_03_focused: $black_alpha8;
+$interactive_03_selected: $black_alpha10;
 
 /* color database */
 /* colorDatabase > UI */
@@ -971,21 +971,21 @@ $colorDatabasePrimaryColor: (
 
 // Secondary Color
 $colorDatabaseSecondaryColor: (
-    interactive_secondary_highlight: $navy50,
-    interactive_secondary_enabled: $navy800,
-    interactive_secondary_hover: $navy700,
-    interactive_secondary_pressed: $navy900,
-    interactive_secondary_focus: $navy800,
-    interactive_secondary_selected: $navy900,
-    interactive_secondary_disabled: $gray300,
+    interactive_02_highlight: $navy50,
+    interactive_02_enabled: $navy800,
+    interactive_02_hover: $navy700,
+    interactive_02_pressed: $navy900,
+    interactive_02_focus: $navy800,
+    interactive_02_selected: $navy900,
+    interactive_02_disabled: $gray300,
 );
 
 // Gray Color
 $colorDatabaseGrayColor: (
-    interactive_gray_hover: $black_alpha5,
-    interactive_gray_pressed: $black_alpha10,
-    interactive_gray_focused: $black_alpha8,
-    interactive_gray_selected: $black_alpha10,
+    interactive_03_hover: $black_alpha5,
+    interactive_03_pressed: $black_alpha10,
+    interactive_03_focused: $black_alpha8,
+    interactive_03_selected: $black_alpha10,
 );
 
 $colorList: (

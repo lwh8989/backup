@@ -1,11 +1,13 @@
 @use "./mixin/mixin";
 @use "./mixin/dialog";
+@use "./mixin/dimmed";
 @use "./helpers/z-index";
 @use "./color";
 @use "./font";
 @use "./space";
 
 .module-dimmed {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -14,9 +16,11 @@
     overflow-y: hidden;
     z-index: z-index.$zindex-modal-backdrop;
     background: color.$black_alpha50;
-
     &.absolute {
         position: absolute;
+    }
+    &.is-opened {
+        display: block;
     }
 }
 
@@ -54,13 +58,13 @@
         );
     }
     &.pos-top {
-        @include dialog.dialogPos(
-            $top: 80px,
-            $left: 50%,
-            $bottom: null,
-            $right: null,
-            $y: 0
-        );
+        // @include dialog.dialogPos(
+        //     $top: 80px,
+        //     $left: 50%,
+        //     $bottom: null,
+        //     $right: null,
+        //     $y: 0
+        // );
     }
 
     .module-dialog-inner {
@@ -83,24 +87,24 @@
             text-align: $value;
         }
         &.pos-left {
-            @include dialogPos(
-                $top: 0,
-                $left: 0,
-                $bottom: 0,
-                $right: null,
-                $x: 0,
-                $y: 0
-            );
+            // @include dialogPos(
+            //     $top: 0,
+            //     $left: 0,
+            //     $bottom: 0,
+            //     $right: null,
+            //     $x: 0,
+            //     $y: 0
+            // );
         }
         &.pos-right {
-            @include dialogPos(
-                $top: 0,
-                $left: null,
-                $bottom: 0,
-                $right: 0,
-                $x: 0,
-                $y: 0
-            );
+            // @include dialogPos(
+            //     $top: 0,
+            //     $left: null,
+            //     $bottom: 0,
+            //     $right: 0,
+            //     $x: 0,
+            //     $y: 0
+            // );
         }
     }
 

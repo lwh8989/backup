@@ -9,7 +9,3 @@
     height: $height;
     margin: $top $right $bottom $left;
 }
-
-.layout-footer {
-    @include layoutFooter($top: space.$stds-spacing-80);
-}

@@ -16,7 +16,7 @@
     &.navigation-default-fixed {
         position: fixed;
         left: 0;
-        top: $stds-gnbHeight;
+        top: $stds-gnbDepth1;
         width: 100%;
         z-index: $zindex-fixed;
     }
@@ -87,32 +87,40 @@
 /* desktopM 1280 */
 @include desktopM {
     .layout-navigation {
-        display: none;
         height: 6.8rem;
         padding: 2.2rem 1.6rem;
+        &.navigation-default-fixed {
+            top: 6.8rem
+        }
     }
 }
 /* desktopL 1440 */
 @include desktopL {
     .layout-navigation {
-        display: none;
         height: 6.8rem;
         padding: 2.2rem 1.6rem;
+        &.navigation-default-fixed {
+            top: 6.8rem
+        }
     }
 }
 /* desktopXL 1600 */
 @include desktopXL {
     .layout-navigation {
-        display: none;
         height: 6.8rem;
         padding: 2.2rem 1.6rem;
+        &.navigation-default-fixed {
+            top: 6.8rem
+        }
     }
 }
 /* desktop2XL 1920 */
 @include desktop2XL {
     .layout-navigation {
-        display: none;
         height: 6.8rem;
         padding: 2.2rem 1.6rem;
+        &.navigation-default-fixed {
+            top: 6.8rem
+        }
     }
 }  

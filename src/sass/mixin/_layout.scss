@@ -1,39 +1,42 @@
 @use "./../space";
 @use "./../responsive";
 @import "./responsive";
-// @import "./gnb";
-// @import "./footer";
+@import "./gnb";
+@import "./footer";
 
 
 /* layout */
-@mixin layout (
+@mixin layoutContainer (
     $position: relative,
     $display: flex,
     $flex-flow: row wrap,
+    $justify-content: space-around,
+    $align-items: center,
     $width: 100%,
-    $height: 100%
+    $height: 100%,
+    $margin: 0 space.$stds-spacing-16,
 ) {
     position: $position;
     display: $display;
     flex-flow: $flex-flow;
     width: $width;
     height: $height;
-    align-items: center;
-    justify-content: center;
+    margin: $margin;
+    justify-content: $justify-content;
+    align-items: null;
 }
 
 /* layout Style order 2 */
-@mixin layoutStyle
+@mixin layoutBasic
 (
     $position: relative,
     $display: flex,
     $max-width: auto,
-    $min-width: auto,
     $width: auto,
+    $min-width: auto,
     $max-height: auto,
     $height: auto,
     $min-height: auto,
-    $margin: 0 space.$stds-spacing-16,
     $flex: 1,
     $order: 3
 ) {
@@ -42,30 +45,24 @@
     width: $width;
     height: $height;
     min-height: $min-height;
-    margin: $margin;
     flex: $flex;
     order: $order;
 }
 
 .layout-container {
-    @include layout($width: null);
-    background: red;
-    flex: 1;
-    order: 3;
-    .layout-contatiner {
-        position: relative;
-        height: auto;
-        min-height: 100%;
-        margin: 4.8rem 4.8rem;
-        
+    @include layoutContainer($width: null); 
+    .layout-navigation {
+        + .layout-basic {
+            margin-top: 48px;
+        }
     }
     .layout-basic {
-        @include layoutStyle(
+        @include layoutBasic(
             $max-width: null, 
             $min-width: null, 
-            $min-height: 100%, 
-            $margin: 0 0
+            $min-height: null, 
         );
+        background: #fafafa;
     }
 }
 
@@ -102,7 +99,7 @@
 //     .layout {
 //         @include layout($width: null);
 //         .layout-basic {
-//             @include layoutStyle(
+//             @include layoutBasic(
 //                 $max-width: null, 
 //                 $min-width: null, 
 //                 $width: null, 
@@ -121,7 +118,7 @@
 //     .layout {
 //         @include layout($width: null);
 //         .layout-basic {
-//             @include layoutStyle(
+//             @include layoutBasic(
 //                 $max-width: null, 
 //                 $min-width: null, 
 //                 $width: null, 
@@ -136,77 +133,76 @@
 // }
 
 /* desktopM 1280 */
-// @include desktopM {
-//     .layout {
-//         @include layout($width: null);
-//         .layout-basic {
-//             @include layoutStyle(
-//                 $max-width: null, 
-//                 $min-width: null, 
-//                 $width: null, 
-//                 $min-height: 100%, 
-//                 $margin: 0 0
-//             );
-//         }
-//         .layout-footer {
-//             @include layoutFooter($top: space.$stds-spacing-200);
-//         }
-//     }
-// }
+@include desktopM {
+    .layout-header {
+        + .layout-container {
+            margin-top: 6.8rem !important;
+        }
+    } 
+    .layout-container {
+        @include layoutContainer($width: null);
+        .layout-navigation {
+            + .layout-basic {
+                margin-top: 6.8rem !important;
+            }
+        }
+        .layout-footer {
+            @include layoutFooter($top: space.$stds-spacing-200);
+        }
+    }
+}
 
 /* desktopL 1440 */
-// @include desktopL {
-//     .layout {
-//         @include layout($width: null);
-//         .layout-basic {
-//             @include layoutStyle(
-//                 $max-width: null, 
-//                 $min-width: null, 
-//                 $width: null,
-//                 $min-height: 100%, 
-//                 $margin: 0 0
-//             );
-//         }
-//          .layout-footer {
-//              @include layoutFooter($top: space.$stds-spacing-200);
-//          }
-//     }
-// }
+@include desktopL {
+    .layout-header {
+        + .layout-container {
+            margin-top: 6.8rem !important;
+        }
+    } 
+    .layout-container {
+        @include layoutContainer($width: null);
+        .layout-navigation {
+            + .layout-basic {
+                margin-top: 6.8rem;
+            }
+        }
+        .layout-footer {
+             @include layoutFooter($top: space.$stds-spacing-200);
+         }
+    }
+}
 
 /* desktopXL 1600 */
-// @include desktopXL {
-//     .layout {
-//         @include layout($width: null);
-//         .layout-basic {
-//             @include layoutStyle(
-//                 $max-width: null, 
-//                 $min-width: null, 
-//                 $width: null, 
-//                 $min-height: 100%, 
-//                 $margin: 0 0
-//             );
-//         }
-//          .layout-footer {
-//              @include layoutFooter($top: space.$stds-spacing-200);
-//          }
-//     }
-// }
+@include desktopXL {
+    .layout-header {
+        + .layout-container {
+            margin-top: 6.8rem !important;
+        }
+    } 
+    .layout-container {
+        @include layoutContainer($width: null);
+        .layout-navigation {
+            + .layout-basic {
+                margin-top: 6.8rem;
+            }
+        }
+        .layout-footer {
+             @include layoutFooter($top: space.$stds-spacing-200);
+         }
+    }
+}
 
 /* desktop2XL 1920 */
-// @include desktop2XL {
-//     .layout {
-//         @include layout($width: null);
-//         .layout-basic {
-//             @include layoutStyle(
-//                 $max-width: null, 
-//                 $min-width: null, 
-//                 $width: null, 
-//                 $min-height: 100%, 
-//                 $margin: 0 0
-//             );
-//         }
-//         .layout-footer {
-//              @include layoutFooter($top: space.$stds-spacing-200);
-//          }
-//     }
-// }
+@include desktop2XL {
+    .layout-container {
+        @include layoutContainer($width: null);
+        .layout-navigation {
+            + .layout-basic {
+                margin-top: 6.8rem !important;
+            }
+        }
+        .layout-footer {
+             @include layoutFooter($top: space.$stds-spacing-200);
+         }
+    }
+}

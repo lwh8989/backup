@@ -23,7 +23,7 @@ $ui_button_gray_main_pressed: #d5d5d5;
 $ui_button_gray_main_bg_focused: #f5f5f5;
 $ui_button_gray_main_border1_focused: #6e6e6e;
 $ui_button_gray_main_border2_focused: #ffffff;
-$ui_button_gray_main_border3_focused: rgba(0,0,0,0.015);
+$ui_button_gray_main_border3_focused: rgba(0, 0, 0, 0.015);
 $ui_button_gray_main_disabled: #eaeaea;
 
 $bg_trans_btn: transparent;
@@ -103,12 +103,12 @@ $bg_trans_btn_focus: transparent;
 }
 .element-btn.size-xsmall.only-icon .stove-icon,
 .element-btn.size-xsmall.with-icon .stove-icon {
-    width: 2.0rem;
-    height: 2.0rem;
+    width: 2rem;
+    height: 2rem;
 }
 .element-btn.size-xsmall.only-icon .stove-icon::before,
 .element-btn.size-xsmall.with-icon .stove-icon::before {
-    font-size: 2.0rem;
+    font-size: 2rem;
 }
 .element-btn.size-chips32.only-icon .stove-icon,
 .element-btn.size-chips32.with-icon .stove-icon,
@@ -274,15 +274,15 @@ $bg_trans_btn_focus: transparent;
 }
 
 /* color */
-.element-btn.bg-primary{
+.element-btn.bg-primary {
     // background-color: $ui_button_primary_enabled;
     // border: 2px solid $ui_button_primary_enabled;
-    &:hover{
-        // background-color: $ui_button_primary_hover;    
+    &:hover {
+        // background-color: $ui_button_primary_hover;
         // border: 2px solid $ui_button_primary_hover;
     }
-    &:active{
-        // background-color: $ui_button_primary_pressed;    
+    &:active {
+        // background-color: $ui_button_primary_pressed;
         // border: 2px solid $ui_button_primary_pressed;
     }
     &:focus {
@@ -291,20 +291,20 @@ $bg_trans_btn_focus: transparent;
         box-shadow: inset 0 0 0 2px #fff; // 그림자값 수정 부탁드립니다.
     }
     &:disabled,
-    &.disabled{
+    &.disabled {
         // background: $ui_button_primary_disabled;
         // border-color: $ui_button_primary_disabled;
     }
 }
-.element-btn.bg-secondary{
+.element-btn.bg-secondary {
     // background-color: $ui_button_secondary_enabled;
     // border: 2px solid $ui_button_secondary_enabled;
-    &:hover{
-        // background-color: $ui_button_secondary_hover;    
+    &:hover {
+        // background-color: $ui_button_secondary_hover;
         // border: 2px solid $ui_button_secondary_hover;
     }
-    &:active{
-        // background-color: $ui_button_secondary_pressed;    
+    &:active {
+        // background-color: $ui_button_secondary_pressed;
         // border: 2px solid $ui_button_secondary_pressed;
     }
     &:focus {
@@ -313,21 +313,21 @@ $bg_trans_btn_focus: transparent;
         box-shadow: inset 0 0 0 2px #fff; // 그림자값 수정 부탁드립니다.
     }
     &:disabled,
-    &.disabled{
+    &.disabled {
         // background: $ui_button_secondary_disabled;
         // border-color: $ui_button_secondary_disabled;
-    }    
+    }
 }
-.element-btn.bg-gray{
+.element-btn.bg-gray {
     // background-color: $ui_button_gray_enabled;
     // border: 2px solid $ui_button_gray_enabled;
-    color:#3a3a3a;
-    &:hover{
-        // background-color: $ui_button_gray_hover;    
+    color: #3a3a3a;
+    &:hover {
+        // background-color: $ui_button_gray_hover;
         // border: 2px solid $ui_button_gray_hover;
     }
-    &:active{
-        // background-color: $ui_button_gray_pressed;    
+    &:active {
+        // background-color: $ui_button_gray_pressed;
         // border: 2px solid $ui_button_gray_pressed;
     }
     &:active {
@@ -336,7 +336,7 @@ $bg_trans_btn_focus: transparent;
     }
     &:focus {
         outline: none;
-        // background-color: $ui_button_gray_hover;    
+        // background-color: $ui_button_gray_hover;
         // border: 2px solid $ui_button_gray_pressed;
         box-shadow: inset 0 0 0 2px #fff; // 그림자값 수정 부탁드립니다.
     }
@@ -345,108 +345,108 @@ $bg_trans_btn_focus: transparent;
         color: #cacaca;
         // background: $ui_button_gray_disabled;
         // border-color: $ui_button_gray_disabled;
-    }    
+    }
 }
-.element-btn.bg-gray-main{
+.element-btn.bg-gray-main {
     background-color: $ui_button_gray_main_enabled;
     border: 1px solid $ui_button_gray_main_border3_focused;
-    color:#3a3a3a;
-    &:hover{
-        background-color: $ui_button_gray_main_hover;    
+    color: #3a3a3a;
+    &:hover {
+        background-color: $ui_button_gray_main_hover;
         border: 1px solid $ui_button_gray_main_hover;
     }
-    &:active{
-        background-color: $ui_button_gray_main_pressed;    
+    &:active {
+        background-color: $ui_button_gray_main_pressed;
         border: 1px solid $ui_button_gray_main_pressed;
     }
     &:active {
-        background-color: $ui_button_inverse_f_pressed;
-        border: 2px solid $ui_button_inverse_f_pressed;
+        background-color: $ui_button_white_f_pressed;
+        border: 2px solid $ui_button_white_f_pressed;
     }
     &:focus {
         outline: none;
-        background-color: $ui_button_gray_main_hover;    
+        background-color: $ui_button_gray_main_hover;
         border: 1px solid $ui_button_gray_main_pressed;
         box-shadow: inset 0 0 0 2px #fff; // 그림자값 수정 부탁드립니다.
     }
     &:disabled,
-    &.disabled{
+    &.disabled {
         color: #cacaca;
         // background: $ui_button_gray_disabled;
         // border-color: $ui_button_gray_disabled;
-    }    
+    }
 }
-.element-btn.bg-inverse{
+.element-btn.bg-inverse {
     // background-color: $ui_button_inverse_enabled;
     // border: 2px solid $ui_button_inverse_enabled;
-    color:#3a3a3a;
-    &:hover{
-        // background-color: $ui_button_inverse_hover;    
+    color: #3a3a3a;
+    &:hover {
+        // background-color: $ui_button_inverse_hover;
         // border: 2px solid $ui_button_inverse_hover;
     }
-    &:active{
-        // background-color: $ui_button_inverse_pressed;    
+    &:active {
+        // background-color: $ui_button_inverse_pressed;
         // border: 2px solid $ui_button_inverse_pressed;
     }
     &:focus {
         outline: none;
-        // background-color: $ui_button_inverse_bg_focused;    
+        // background-color: $ui_button_inverse_bg_focused;
         // border: 2px solid $ui_button_inverse_border_focused;
         box-shadow: inset 0 0 0 1px #bfbfbf; // 그림자값 수정 부탁드립니다.
     }
     &:disabled,
-    &.disabled{
+    &.disabled {
         // background: $ui_button_inverse_disabled;
         // border-color: $ui_button_inverse_disabled;
-    }    
+    }
 }
-.element-btn.bg-outline{
+.element-btn.bg-outline {
     // background-color: $ui_button_outline_enabled;
     // border: 1px solid $ui_button_outline_border1_focused;
-    color:#3a3a3a;
-    &:hover{
-        // background-color: $ui_button_outline_hover;    
+    color: #3a3a3a;
+    &:hover {
+        // background-color: $ui_button_outline_hover;
         border: 1px solid #999;
     }
-    &:active{
-        // background-color: $ui_button_outline_pressed;    
+    &:active {
+        // background-color: $ui_button_outline_pressed;
         // border: 1px solid $ui_button_outline_border2_focused;
     }
     &:focus {
         outline: none;
-        // background-color: $ui_button_outline_bg_focused;    
+        // background-color: $ui_button_outline_bg_focused;
         // border: 1px solid $ui_button_outline_border3_focused;
         // box-shadow: inset 0 0 0 2px $ui_button_outline_border3_focused;
     }
     &:disabled,
-    &.disabled{
+    &.disabled {
         // background: $ui_button_outline_disabled;
         // border-color: $ui_button_outline_border4_focused;
     }
 }
-.element-btn.bg-ghost{
+.element-btn.bg-ghost {
     // background-color: $ui_button_inverse_ghost_enabled;
     // border: 1px solid $ui_button_inverse_ghost_border1_focused;
     color: #fff;
-    &:hover{
-        // background-color: $ui_button_inverse_ghost_hover;    
+    &:hover {
+        // background-color: $ui_button_inverse_ghost_hover;
         // border: 1px solid $ui_button_inverse_ghost_border1_focused;
     }
-    &:active{
-        // background-color: $ui_button_inverse_ghost_pressed;    
+    &:active {
+        // background-color: $ui_button_inverse_ghost_pressed;
         // border: 1px solid $ui_button_inverse_ghost_border1_focused;
     }
-    &:focus{
+    &:focus {
         outline: none;
-        // background-color: $ui_button_inverse_ghost_bg_focused;    
+        // background-color: $ui_button_inverse_ghost_bg_focused;
         // border: 1px solid $ui_button_inverse_ghost_border1_focused;
         // box-shadow: inset 0 0 0 2px $ui_button_inverse_ghost_border1_focused;
     }
     &:disabled,
-    &.disabled{
+    &.disabled {
         // background: $ui_button_outline_disabled;
         // border-color: $ui_button_outline_disabled;
-        & .btn-txt{
+        & .btn-txt {
             color: #cacaca;
         }
     }

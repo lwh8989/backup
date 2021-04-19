@@ -19,10 +19,15 @@
             <div class="demo-color-bx">
                 <div>
                     {{ color.box(cssType='Background', category='Base', className='ui_bg_base_white') }}
-                    {{ color.box(cssType='Background', category='Base', className='ui_bg_base_gray') }}
-                    {{ color.box(cssType='Background', category='Navigation bar', className='ui_bg_navigation') }}
+                    {{ color.box(cssType='Background', category='Base', className='ui_bg_base_gray50') }}
+                    {{ color.box(cssType='Background', category='Navigation bar', className='ui_bg_navigation_white') }}
+                    {{ color.box(cssType='Background', category='Navigation bar', className='ui_bg_navigation_gray', color="txt_white") }}
                     {{ color.box(cssType='Background', category='Surface', className='ui_bg_surface_white') }}
-                    {{ color.box(cssType='Background', category='Surface', className='ui_bg_surface_gray') }}
+                    {{ color.box(cssType='Background', category='Surface', className='ui_bg_surface_white_inverse') }}
+                    {{ color.box(cssType='Background', category='Surface', className='ui_bg_surface_gray25') }}
+                    {{ color.box(cssType='Background', category='Surface', className='ui_bg_surface_navy', color="txt_white") }}
+                    {{ color.box(cssType='Background', category='Surface', className='ui_bg_surface_Elevated') }}
+                    {{ color.box(cssType='Background', category='Highlight', className='ui_bg_highlight_gray25') }}
                     {{ color.box(cssType='Background', category='Highlight', className='ui_bg_highlight') }}
                 </div>
             </div>
@@ -121,17 +126,48 @@
         </div>
 
         <p class="tit2">
-            <b>UI Color &gt; Icon-Inverse</b>
+            <b>UI Color &gt; Icon-Black</b>
         </p>
         <div class="demo-color-wrap">
             <div class="demo-color-bx">
                 <div>
-                    {{ color.box(cssType='color(icon)', category='Enabled', className='ui_icon_inverse_enabled')}}
-                    {{ color.box(cssType='color(icon)', category='Hover', className='ui_icon_inverse_hover')}}
-                    {{ color.box(cssType='color(icon)', category='Pressed', className='ui_icon_inverse_pressed')}}
-                    {{ color.box(cssType='color(icon)', category='Focused', className='ui_icon_inverse_focused', color="txt_white")}}
-                    {{ color.box(cssType='color(icon)', category='Selected', className='ui_icon_inverse_selected')}}
-                    {{ color.box(cssType='color(icon)', category='Disabled', className='ui_icon_inverse_disabled')}}
+                    {{ color.box(cssType='color(icon)', category='Enabled', className='ui_icon_black_enabled', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Hover', className='ui_icon_black_hover', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Pressed', className='ui_icon_black_pressed', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Focused', className='ui_icon_black_focused', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Selected', className='ui_icon_black_selected', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Disabled', className='ui_icon_black_disabled', color="txt_white")}}
+                </div>
+            </div>
+        </div>
+
+        <p class="tit2">
+            <b>UI Color &gt; Icon-White</b>
+        </p>
+        <div class="demo-color-wrap">
+            <div class="demo-color-bx">
+                <div>
+                    {{ color.box(cssType='color(icon)', category='Enabled', className='ui_icon_white_enabled')}}
+                    {{ color.box(cssType='color(icon)', category='Hover', className='ui_icon_white_hover')}}
+                    {{ color.box(cssType='color(icon)', category='Pressed', className='ui_icon_white_pressed')}}
+                    {{ color.box(cssType='color(icon)', category='Focused', className='ui_icon_white_focused', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Selected', className='ui_icon_white_selected')}}
+                    {{ color.box(cssType='color(icon)', category='Disabled(icon)', className='ui_icon_white_disabled')}}
+                    {{ color.box(cssType='color(Elements)', category='Disabled(Elements)', className='ui_icon_white_disabled')}}
+                </div>
+            </div>
+        </div>
+
+        <p class="tit2">
+            <b>UI Color &gt; Icon-System</b>
+        </p>
+        <div class="demo-color-wrap">
+            <div class="demo-color-bx">
+                <div>
+                    {{ color.box(cssType='color(icon)', category='Enabled', className='ui_icon_error', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Enabled', className='ui_icon_warning', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Enabled', className='ui_icon_success', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Enabled', className='ui_icon_information', color="txt_white")}}
                 </div>
             </div>
         </div>
@@ -171,7 +207,7 @@
         </div>
 
         <p class="tit2">
-            <b>UI Color &gt; Button-Gray</b>
+            <b>UI Color &gt; Button-Tertiary</b>
         </p>
         <div class="demo-color-wrap">
             <div class="demo-color-bx">
@@ -188,57 +224,74 @@
         </div>
 
         <p class="tit2">
-            <b>UI Color &gt; Button-Outline</b>
+            <b>UI Color &gt; Button-Quaternary</b>
         </p>
         <div class="demo-color-wrap">
             <div class="demo-color-bx">
                 <div>
                     {{ color.box(cssType='Background(Button)', category='Enabled', className='ui_button_04_enabled')}}
-                    {{ color.box(cssType='Background(Button)', category='Enabled', className='ui_button_04_enabled_border')}}
                     {{ color.box(cssType='Background(Button)', category='Hover', className='ui_button_04_hover')}}
-                    {{ color.box(cssType='Background(Button)', category='Hover', className='ui_button_04_hover_border')}}
                     {{ color.box(cssType='Background(Button)', category='Pressed', className='ui_button_04_pressed')}}
-                    {{ color.box(cssType='Background(Button)', category='Pressed', className='ui_button_04_pressed_border')}}
                     {{ color.box(cssType='Background(Button)', category='Focused', className='ui_button_04_focused')}}
-                    {{ color.box(cssType='Background(Button)', category='Focused', className='ui_button_04_focused_border')}}
+                    {{ color.box(cssType='Border(Button)', category='Focused', className='ui_button_04_focused_border1')}}
+                    {{ color.box(cssType='Border(Button)', category='Focused', className='ui_button_04_focused_border2', color="txt_white")}}
                     {{ color.box(cssType='Background(Button)', category='Disabled', className='ui_button_04_disabled')}}
-                    {{ color.box(cssType='Background(Button)', category='Disabled', className='ui_button_04_disabled_border')}}
                 </div>
             </div>
         </div>
 
         <p class="tit2">
-            <b>UI Color &gt; Button-Inverse</b>
+            <b>UI Color &gt; Button-Outline</b>
         </p>
         <div class="demo-color-wrap">
             <div class="demo-color-bx">
                 <div>
-                    {{ color.box(cssType='Background(Button)', category='Enabled', className='ui_button_inverse_f_enabled')}}
-                    {{ color.box(cssType='Background(Button)', category='Hover', className='ui_button_inverse_f_hover')}}
-                    {{ color.box(cssType='Background(Button)', category='Pressed', className='ui_button_inverse_f_pressed')}}
-                    {{ color.box(cssType='Background(Button)', category='Focused', className='ui_button_inverse_f_focused')}}
-                    {{ color.box(cssType='Border(Button)', category='Focused', className='ui_button_inverse_f_focused_border')}}
-                    {{ color.box(cssType='Background(Button)', category='Disabled', className='ui_button_inverse_f_disabled')}}
+                    {{ color.box(cssType='Background(Button)', category='Enabled', className='ui_button_05_enabled')}}
+                    {{ color.box(cssType='Background(Button)', category='Enabled', className='ui_button_05_enabled_border')}}
+                    {{ color.box(cssType='Background(Button)', category='Hover', className='ui_button_05_hover')}}
+                    {{ color.box(cssType='Background(Button)', category='Hover', className='ui_button_05_hover_border', color="txt_white")}}
+                    {{ color.box(cssType='Background(Button)', category='Pressed', className='ui_button_05_pressed')}}
+                    {{ color.box(cssType='Background(Button)', category='Pressed', className='ui_button_05_pressed_border')}}
+                    {{ color.box(cssType='Background(Button)', category='Focused', className='ui_button_05_focused')}}
+                    {{ color.box(cssType='Background(Button)', category='Focused', className='ui_button_05_focused_border', color="txt_white")}}
+                    {{ color.box(cssType='Background(Button)', category='Disabled', className='ui_button_05_disabled')}}
+                    {{ color.box(cssType='Background(Button)', category='Disabled', className='ui_button_05_disabled_border')}}
                 </div>
             </div>
         </div>
 
         <p class="tit2">
-            <b>UI Color &gt; Button-Inverse-ghost</b>
+            <b>UI Color &gt; Button-White(fill)</b>
         </p>
         <div class="demo-color-wrap">
             <div class="demo-color-bx">
                 <div>
-                    {{ color.box(cssType='Background(Button)', category='Enabled', className='ui_button_inverse_g_enabled')}}
-                    {{ color.box(cssType='Border(Button)', category='Enabled', className='ui_button_inverse_g_enabled_border')}}
-                    {{ color.box(cssType='Background(Button)', category='Hover', className='ui_button_inverse_g_hover')}}
-                    {{ color.box(cssType='Border(Button)', category='Hover', className='ui_button_inverse_g_hover_border')}}
-                    {{ color.box(cssType='Background(Button)', category='Pressed', className='ui_button_inverse_g_pressed')}}
-                    {{ color.box(cssType='Border(Button)', category='Pressed', className='ui_button_inverse_g_pressed_border')}}
-                    {{ color.box(cssType='Background(Button)', category='Focused', className='ui_button_inverse_g_focused')}}
-                    {{ color.box(cssType='Border(Button)', category='Focused', className='ui_button_inverse_g_focused_border')}}
-                    {{ color.box(cssType='Background(Button)', category='Disabled', className='ui_button_inverse_g_disabled')}}
-                    {{ color.box(cssType='Border(Button)', category='Disabled', className='ui_button_inverse_g_disabled_border')}}
+                    {{ color.box(cssType='Background(Button)', category='Enabled', className='ui_button_white_f_enabled')}}
+                    {{ color.box(cssType='Background(Button)', category='Hover', className='ui_button_white_f_hover')}}
+                    {{ color.box(cssType='Background(Button)', category='Pressed', className='ui_button_white_f_pressed')}}
+                    {{ color.box(cssType='Background(Button)', category='Focused', className='ui_button_white_f_focused')}}
+                    {{ color.box(cssType='Border(Button)', category='Focused', className='ui_button_white_f_focused_border')}}
+                    {{ color.box(cssType='Background(Button)', category='Disabled', className='ui_button_white_f_disabled')}}
+                </div>
+            </div>
+        </div>
+
+        <p class="tit2">
+            <b>UI Color &gt; Button-White(ghost)</b>
+        </p>
+        <div class="demo-color-wrap">
+            <div class="demo-color-bx">
+                <div>
+                    {{ color.box(cssType='Background(Button)', category='Enabled', className='ui_button_white_g_enabled')}}
+                    {{ color.box(cssType='Border(Button)', category='Enabled', className='ui_button_white_g_enabled_border')}}
+                    {{ color.box(cssType='Background(Button)', category='Hover', className='ui_button_white_g_hover')}}
+                    {{ color.box(cssType='Border(Button)', category='Hover', className='ui_button_white_g_hover_border')}}
+                    {{ color.box(cssType='Background(Button)', category='Pressed', className='ui_button_white_g_pressed')}}
+                    {{ color.box(cssType='Border(Button)', category='Pressed', className='ui_button_white_g_pressed_border')}}
+                    {{ color.box(cssType='Background(Button)', category='Focused', className='ui_button_white_g_focused')}}
+                    {{ color.box(cssType='Border(Button)', category='Focused', className='ui_button_white_g_focused_border')}}
+                    {{ color.box(cssType='Background(Button)', category='Disabled', className='ui_button_white_g_disabled')}}
+                    {{ color.box(cssType='Border(Button)', category='Disabled', className='ui_button_white_g_disabled_border')}}
                 </div>
             </div>
         </div>
@@ -249,22 +302,22 @@
         <div class="demo-color-wrap">
             <div class="demo-color-bx">
                 <div>
-                    {{ color.box(cssType='Border(Input)', category='Enabled', className='ui_form_line_enabled')}}
-                    {{ color.box(cssType='Border(Input)', category='Enabled', className='ui_form_line_enabled_border', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Hover', className='ui_form_line_hover')}}
-                    {{ color.box(cssType='Border(Input)', category='Hover', className='ui_form_line_hover_border', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Focused', className='ui_form_line_focused')}}
-                    {{ color.box(cssType='Border(Input)', category='Focused', className='ui_form_line_focused_border', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Error', className='ui_form_line_error')}}
-                    {{ color.box(cssType='Border(Input)', category='Error', className='ui_form_line_error_border', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Warning', className='ui_form_line_warning')}}
-                    {{ color.box(cssType='Border(Input)', category='Warning', className='ui_form_line_warning_border', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Success', className='ui_form_line_success')}}
-                    {{ color.box(cssType='Border(Input)', category='Success', className='ui_form_line_success_border', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Informational', className='ui_form_line_informational')}}
-                    {{ color.box(cssType='Border(Input)', category='Informational', className='ui_form_line_informational_border', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Disabled', className='ui_form_line_disabled')}}
-                    {{ color.box(cssType='Border(Input)', category='Disabled', className='ui_form_line_disabled_border', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Enabled', className='ui_form_line_enabled')}}
+                    {{ color.box(cssType='form', category='Enabled', className='ui_form_line_enabled_border', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Hover', className='ui_form_line_hover')}}
+                    {{ color.box(cssType='form', category='Hover', className='ui_form_line_hover_border', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Focused', className='ui_form_line_focused')}}
+                    {{ color.box(cssType='form', category='Focused', className='ui_form_line_focused_border', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Error', className='ui_form_line_error')}}
+                    {{ color.box(cssType='form', category='Error', className='ui_form_line_error_border', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Warning', className='ui_form_line_warning')}}
+                    {{ color.box(cssType='form', category='Warning', className='ui_form_line_warning_border', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Success', className='ui_form_line_success')}}
+                    {{ color.box(cssType='form', category='Success', className='ui_form_line_success_border', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Informational', className='ui_form_line_informational')}}
+                    {{ color.box(cssType='form', category='Informational', className='ui_form_line_informational_border', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Disabled', className='ui_form_line_disabled')}}
+                    {{ color.box(cssType='form', category='Disabled', className='ui_form_line_disabled_border', color="txt_white")}}
                 </div>
             </div>
         </div>
@@ -275,40 +328,40 @@
         <div class="demo-color-wrap">
             <div class="demo-color-bx">
                 <div>
-                    {{ color.box(cssType='Border(Input)', category='Enabled', className='ui_form_fill_enabled')}}
-                    {{ color.box(cssType='Border(Input)', category='Hover', className='ui_form_fill_hover')}}
-                    {{ color.box(cssType='Border(Input)', category='Focused', className='ui_form_fill_focused')}}
-                    {{ color.box(cssType='Border(Input)', category='Error', className='ui_form_fill_error', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Error', className='ui_form_fill_error_border')}}
-                    {{ color.box(cssType='Border(Input)', category='Warning', className='ui_form_fill_warning', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Warning', className='ui_form_fill_warning_border')}}
-                    {{ color.box(cssType='Border(Input)', category='Success', className='ui_form_fill_success', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Success', className='ui_form_fill_success_border')}}
-                    {{ color.box(cssType='Border(Input)', category='Informational', className='ui_form_fill_informational', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Informational', className='ui_form_fill_informational_border')}}
-                    {{ color.box(cssType='Border(Input)', category='Disabled', className='ui_form_fill_disabled')}}
+                    {{ color.box(cssType='form', category='Enabled', className='ui_form_fill_enabled')}}
+                    {{ color.box(cssType='form', category='Hover', className='ui_form_fill_hover')}}
+                    {{ color.box(cssType='form', category='Focused', className='ui_form_fill_focused')}}
+                    {{ color.box(cssType='form', category='Error', className='ui_form_fill_error', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Error', className='ui_form_fill_error_border')}}
+                    {{ color.box(cssType='form', category='Warning', className='ui_form_fill_warning', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Warning', className='ui_form_fill_warning_border')}}
+                    {{ color.box(cssType='form', category='Success', className='ui_form_fill_success', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Success', className='ui_form_fill_success_border')}}
+                    {{ color.box(cssType='form', category='Informational', className='ui_form_fill_informational', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Informational', className='ui_form_fill_informational_border')}}
+                    {{ color.box(cssType='form', category='Disabled', className='ui_form_fill_disabled')}}
                 </div>
             </div>
         </div>
 
         <p class="tit2">
-            <b>UI Color &gt; Form-Line</b>
+            <b>UI Color &gt; Form-White</b>
         </p>
         <div class="demo-color-wrap">
             <div class="demo-color-bx">
                 <div>
-                    {{ color.box(cssType='Border(Input)', category='Enabled', className='ui_form_inverse_enabled')}}
-                    {{ color.box(cssType='Border(Input)', category='Hover', className='ui_form_inverse_hover')}}
-                    {{ color.box(cssType='Border(Input)', category='Focused', className='ui_form_inverse_focused')}}
-                    {{ color.box(cssType='Border(Input)', category='Error', className='ui_form_inverse_error')}}
-                    {{ color.box(cssType='Border(Input)', category='Error', className='ui_form_inverse_error_border', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Warning', className='ui_form_inverse_warning')}}
-                    {{ color.box(cssType='Border(Input)', category='Warning', className='ui_form_inverse_warning_border', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Success', className='ui_form_inverse_success')}}
-                    {{ color.box(cssType='Border(Input)', category='Success', className='ui_form_inverse_success_border', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Informational', className='ui_form_inverse_informational')}}
-                    {{ color.box(cssType='Border(Input)', category='Informational', className='ui_form_inverse_informational_border', color="txt_white")}}
-                    {{ color.box(cssType='Border(Input)', category='Disabled', className='ui_form_inverse_disabled')}}
+                    {{ color.box(cssType='form', category='Enabled', className='ui_form_white_enabled')}}
+                    {{ color.box(cssType='form', category='Hover', className='ui_form_white_hover')}}
+                    {{ color.box(cssType='form', category='Focused', className='ui_form_white_focused')}}
+                    {{ color.box(cssType='form', category='Error', className='ui_form_white_error')}}
+                    {{ color.box(cssType='form', category='Error', className='ui_form_white_error_border', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Warning', className='ui_form_white_warning')}}
+                    {{ color.box(cssType='form', category='Warning', className='ui_form_white_warning_border', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Success', className='ui_form_white_success')}}
+                    {{ color.box(cssType='form', category='Success', className='ui_form_white_success_border', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Informational', className='ui_form_white_informational')}}
+                    {{ color.box(cssType='form', category='Informational', className='ui_form_white_informational_border', color="txt_white")}}
+                    {{ color.box(cssType='form', category='Disabled', className='ui_form_white_disabled')}}
                 </div>
             </div>
         </div>
@@ -324,8 +377,17 @@
                     {{ color.box(cssType='Color', category='Tertiary', className='ui_text_03', color="txt_white")}}
                     {{ color.box(cssType='Color', category='Quarternary', className='ui_text_04', color="txt_white")}}
                     {{ color.box(cssType='Color', category='Brand', className='ui_text_brand', color="txt_white")}}
+                    {{ color.box(cssType='Color', category='text', className='ui_text_black', color="txt_white")}}
                     {{ color.box(cssType='Color', category='Inverse - Primary', className='ui_text_inverse_01', color="txt_black")}}
                     {{ color.box(cssType='Color', category='Inverse - Secondary', className='ui_text_inverse_02', color="txt_black")}}
+                    {{ color.box(cssType='Color', category='text', className='ui_text_error', color="txt_white")}}
+                    {{ color.box(cssType='Color', category='text', className='ui_text_warning', color="txt_white")}}
+                    {{ color.box(cssType='Color', category='text', className='ui_text_success', color="txt_white")}}
+                    {{ color.box(cssType='Color', category='text', className='ui_text_informational', color="txt_white")}}
+                    {{ color.box(cssType='Color', category='text', className='ui_text_link', color="txt_white")}}
+                    {{ color.box(cssType='Color', category='text', className='ui_text_link_visited', color="txt_white")}}
+                    {{ color.box(cssType='Color', category='text', className='ui_text_placeholder', color="txt_white")}}
+                    {{ color.box(cssType='Color', category='text', className='ui_text_disabled', color="txt_white")}}
                 </div>
             </div>
         </div>
@@ -349,7 +411,7 @@
         </div>
 
         <p class="tit2">
-            <b>UI Color &gt; Divider</b>
+            <b>UI Color &gt; Divider-Black</b>
         </p>
         <div class="demo-color-wrap">
             <div class="demo-color-bx">
@@ -362,14 +424,14 @@
         </div>
 
         <p class="tit2">
-            <b>UI Color &gt; Divider-Inverse</b>
+            <b>UI Color &gt; Divider-White</b>
         </p>
         <div class="demo-color-wrap">
             <div class="demo-color-bx">
                 <div>
-                    {{ color.box(cssType='Background', category='Primary', className='ui_divider_inverse_01')}}
-                    {{ color.box(cssType='Background', category='Secondary', className='ui_divider_inverse_02')}}
-                    {{ color.box(cssType='Background', category='Tertiary', className='$ui_divider_inverse_03')}}
+                    {{ color.box(cssType='Background', category='Primary', className='ui_divider_white_01')}}
+                    {{ color.box(cssType='Background', category='Secondary', className='ui_divider_white_02')}}
+                    {{ color.box(cssType='Background', category='Tertiary', className='ui_divider_white_03')}}
                 </div>
             </div>
         </div>

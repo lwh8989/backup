@@ -142,6 +142,17 @@ $orange700: #e14b12;
 $orange800: #d2450f;
 $orange900: #b63a0a;
 
+$brand50: #fff9f0;
+$brand100: #ffe0c9;
+$brand200: #ffc298;
+$brand300: #fe9d6c;
+$brand400: #fe763c;
+$brand500: #fc6020;
+$brand600: #f05417;
+$brand700: #e14b12;
+$brand800: #d2450f;
+$brand900: #b63a0a;
+
 $navy50: #e8f0ff;
 $navy100: #ccd8ee;
 $navy200: #abb9d2;
@@ -208,7 +219,7 @@ $black_alpha75: rgba(#000000, $alpha: 0.75);
 $black_alpha80: rgba(#000000, $alpha: 0.8);
 $black_alpha90: rgba(#000000, $alpha: 0.9);
 $black: #000000;
-$system_error: #d53430 ;
+$system_error: #d53430;
 $system_warning: #ef9500;
 $system_success: #37a458;
 $system_info: #1e88e5;
@@ -398,12 +409,15 @@ $tint_pinka700: #ab0949;
 /* ColorVariable > Sementic color */
 // Background
 $ui_bg_base_white: $white;
-$ui_bg_base_gray1: $gray25;
-$ui_bg_base_gray2: $gray50;
+$ui_bg_base_gray50: $gray50;
 $ui_bg_navigation_white: $white;
 $ui_bg_navigation_gray: $gray900;
 $ui_bg_surface_white: $white;
-$ui_bg_surface_gray: $gray50;
+$ui_bg_surface_white_inverse: $white;
+$ui_bg_surface_gray25: $gray25;
+$ui_bg_surface_navy: $navy800;
+$ui_bg_surface_Elevated: $white;
+$ui_bg_highlight_gray25: $gray25;
 $ui_bg_highlight: $orange50;
 
 // Border
@@ -458,13 +472,28 @@ $ui_icon_05_focused: $gray200;
 $ui_icon_05_selected: $orange500;
 $ui_icon_05_disabled: $gray100;
 
-// Icon_Inverse
-$ui_icon_inverse_enabled: $white;
-$ui_icon_inverse_hover: $white_alpha80;
-$ui_icon_inverse_pressed: $white_alpha60;
-$ui_icon_inverse_focused: $orange500;
-$ui_icon_inverse_selected: $white_alpha90;
-$ui_icon_inverse_disabled: $white_alpha40;
+// Icon_Black
+$ui_icon_black_enabled: $gray700;
+$ui_icon_black_hover: $gray500;
+$ui_icon_black_pressed: $gray900;
+$ui_icon_black_focused: $gray800;
+$ui_icon_black_selected: $brand500;
+$ui_icon_black_disabled: $gray300;
+
+// Icon_White
+$ui_icon_white_enabled: $white;
+$ui_icon_white_hover: $white_alpha80;
+$ui_icon_white_pressed: $white_alpha60;
+$ui_icon_white_focused: $orange500;
+$ui_icon_white_selected: $white_alpha90;
+$ui_icon_white_disabled: $gray300;
+$ui_icon_white_disabled_white: $white_alpha40;
+
+// Icon_System
+$ui_icon_error: $system_error;
+$ui_icon_warning: $system_warning;
+$ui_icon_success: $system_success;
+$ui_icon_information: $system_info;
 
 // Button_Primary
 $ui_button_01_enabled: $orange500;
@@ -484,46 +513,55 @@ $ui_button_02_focused_border1: $white;
 $ui_button_02_focused_border2: $gray600;
 $ui_button_02_disabled: $gray75;
 
-// Button_Gray
-$ui_button_03_enabled: $gray50;
-$ui_button_03_hover: $gray75;
-$ui_button_03_pressed: $gray150;
-$ui_button_03_focused: $gray50;
+// Button_Tertiary
+$ui_button_03_enabled: $gray75;
+$ui_button_03_hover: $gray100;
+$ui_button_03_pressed: $gray200;
+$ui_button_03_focused: $gray75;
 $ui_button_03_focused_border1: $white;
 $ui_button_03_focused_border2: $gray500;
 $ui_button_03_disabled: $gray75;
 
-// Button_Outline
-$ui_button_04_enabled: $white;
-$ui_button_04_enabled_border: $gray150;
-$ui_button_04_hover: $gray50;
-$ui_button_04_hover_border: $gray400;
-$ui_button_04_pressed: $gray100;
-$ui_button_04_pressed_border: $gray200;
-$ui_button_04_focused: $white;
-$ui_button_04_focused_border: $gray500;
+// Button_Quaternary
+$ui_button_04_enabled: $gray50;
+$ui_button_04_hover: $gray75;
+$ui_button_04_pressed: $gray150;
+$ui_button_04_focused: $gray50;
+$ui_button_04_focused_border1: $white;
+$ui_button_04_focused_border2: $gray500;
 $ui_button_04_disabled: $gray75;
-$ui_button_04_disabled_border: $gray150;
 
-// Button_Inverse
-$ui_button_inverse_f_enabled: $white;
-$ui_button_inverse_f_hover: $gray50;
-$ui_button_inverse_f_pressed: $gray100;
-$ui_button_inverse_f_focused: $white;
-$ui_button_inverse_f_focused_border: $black_alpha25;
-$ui_button_inverse_f_disabled: $gray75;
+// Button_Outline
+$ui_button_05_enabled: $white;
+$ui_button_05_enabled_border: $gray150;
+$ui_button_05_hover: $gray50;
+$ui_button_05_hover_border: $gray400;
+$ui_button_05_pressed: $gray100;
+$ui_button_05_pressed_border: $gray200;
+$ui_button_05_focused: $white;
+$ui_button_05_focused_border: $gray500;
+$ui_button_05_disabled: $gray75;
+$ui_button_05_disabled_border: $gray150;
 
-// Button_Inverse_ghost
-$ui_button_inverse_g_enabled: transparent;
-$ui_button_inverse_g_enabled_border: $white;
-$ui_button_inverse_g_hover: $white_alpha20;
-$ui_button_inverse_g_hover_border: $white;
-$ui_button_inverse_g_pressed: $white_alpha10;
-$ui_button_inverse_g_pressed_border: $white;
-$ui_button_inverse_g_focused: $white_alpha20;
-$ui_button_inverse_g_focused_border: $white;
-$ui_button_inverse_g_disabled: transparent;
-$ui_button_inverse_g_disabled_border: $white_alpha20;
+// Button_White(fill)
+$ui_button_white_f_enabled: $white;
+$ui_button_white_f_hover: $gray50;
+$ui_button_white_f_pressed: $gray100;
+$ui_button_white_f_focused: $white;
+$ui_button_white_f_focused_border: $black_alpha25;
+$ui_button_white_f_disabled: $gray75;
+
+// Button_White(ghost)
+$ui_button_white_g_enabled: transparent;
+$ui_button_white_g_enabled_border: $white;
+$ui_button_white_g_hover: $white_alpha20;
+$ui_button_white_g_hover_border: $white;
+$ui_button_white_g_pressed: $white_alpha10;
+$ui_button_white_g_pressed_border: $white;
+$ui_button_white_g_focused: $white_alpha20;
+$ui_button_white_g_focused_border: $white;
+$ui_button_white_g_disabled: transparent;
+$ui_button_white_g_disabled_border: $white_alpha20;
 
 // Form_Line
 $ui_form_line_enabled: $white;
@@ -557,19 +595,20 @@ $ui_form_fill_informational: $gray50;
 $ui_form_fill_informational_border: $system_info;
 $ui_form_fill_disabled: $gray50;
 
-// Form_Inverse
-$ui_form_inverse_enabled: $white_alpha20;
-$ui_form_inverse_hover: $white_alpha30;
-$ui_form_inverse_focused: $white_alpha30;
-$ui_form_inverse_error: $white_alpha20;
-$ui_form_inverse_error_border: $system_error;
-$ui_form_inverse_warning: $white_alpha20;
-$ui_form_inverse_warning_border: $system_warning;
-$ui_form_inverse_success: $white_alpha20;
-$ui_form_inverse_success_border: $system_success;
-$ui_form_inverse_informational: $white_alpha20;
-$ui_form_inverse_informational_border: $system_info;
-$ui_form_inverse_disabled: $white_alpha20;
+// Form_White
+$ui_form_white_enabled: $white_alpha20;
+$ui_form_white_hover: $white_alpha30;
+$ui_form_white_focused: $white_alpha20;
+$ui_form_white_focused_border: $white;
+$ui_form_white_error: $white_alpha20;
+$ui_form_white_error_border: $system_error;
+$ui_form_white_warning: $white_alpha20;
+$ui_form_white_warning_border: $system_warning;
+$ui_form_white_success: $white_alpha20;
+$ui_form_white_success_border: $system_success;
+$ui_form_white_informational: $white_alpha20;
+$ui_form_white_informational_border: $system_info;
+$ui_form_white_disabled: $white_alpha20;
 
 // Font
 $ui_text_01: $gray900;
@@ -577,6 +616,7 @@ $ui_text_02: $gray700;
 $ui_text_03: $gray500;
 $ui_text_04: $gray400;
 $ui_text_brand: $orange500;
+$ui_text_black: $black;
 $ui_text_inverse_01: $white;
 $ui_text_inverse_02: $white_alpha60;
 $ui_text_error: $system_error;
@@ -587,16 +627,17 @@ $ui_text_link: $system_link;
 $ui_text_link_visited: $system_link_visited;
 $ui_text_placeholder: $gray200;
 $ui_text_disabled: $gray300;
+$ui_text_disabled_surface: $gray300;
 
-// Divider
+// Divider_black
 $ui_divider_black_01: $black_alpha15;
 $ui_divider_black_02: $black_alpha10;
 $ui_divider_black_03: $black_alpha5;
 
-// Divider_Inverse
-$ui_divider_inverse_01: $white_alpha15;
-$ui_divider_inverse_02: $white_alpha10;
-$ui_divider_inverse_03: $white_alpha5;
+// Divider_White
+$ui_divider_white_01: $white_alpha15;
+$ui_divider_white_02: $white_alpha10;
+$ui_divider_white_03: $white_alpha5;
 
 // Shadow
 $ui_shadow_01: $black_alpha5;
@@ -651,16 +692,16 @@ $interactive_01_hover: $orange400;
 $interactive_01_pressed: $orange700;
 $interactive_01_focus: $orange500;
 $interactive_01_selected: $orange600;
-$interactive_01_disabled: $gray300;
+$interactive_01_disabled: $gray200;
 
 // Secondary Color
-$interactive_02_highlight: $navy50;
-$interactive_02_enabled: $navy800;
-$interactive_02_hover: $navy700;
-$interactive_02_pressed: $navy900;
-$interactive_02_focus: $navy800;
-$interactive_02_selected: $navy900;
-$interactive_02_disabled: $gray300;
+$interactive_02_highlight: $gray25;
+$interactive_02_enabled: $gray300;
+$interactive_02_hover: $gray200;
+$interactive_02_pressed: $gray500;
+$interactive_02_focus: $gray300;
+$interactive_02_selected: $gray400;
+$interactive_02_disabled: $gray200;
 
 // Gray
 $interactive_03_hover: $black_alpha5;
@@ -673,12 +714,15 @@ $interactive_03_selected: $black_alpha10;
 // Background
 $colorDatabaseBackground: (
     ui_bg_base_white: $ui_bg_base_white,
-    ui_bg_base_gray1: $ui_bg_base_gray1,
-    ui_bg_base_gray2: $ui_bg_base_gray2,
+    ui_bg_base_gray50: $ui_bg_base_gray50,
     ui_bg_navigation_white: $ui_bg_navigation_white,
     ui_bg_navigation_gray: $ui_bg_navigation_gray,
     ui_bg_surface_white: $ui_bg_surface_white,
-    ui_bg_surface_gray: $ui_bg_surface_gray,
+    ui_bg_surface_white_inverse: $ui_bg_surface_white_inverse,
+    ui_bg_surface_gray25: $ui_bg_surface_gray25,
+    ui_bg_surface_navy: $ui_bg_surface_navy,
+    ui_bg_surface_Elevated: $ui_bg_surface_Elevated,
+    ui_bg_highlight_gray25: $ui_bg_highlight_gray25,
     ui_bg_highlight: $ui_bg_highlight,
 );
 
@@ -689,303 +733,334 @@ $colorDatabaseBorder: (
 );
 
 $colorDatabaseBrand: (
-    ui_icon_brand_enabled: $orange500,
-    ui_icon_brand_hover: $orange400,
-    ui_icon_brand_pressed: $orange700,
-    ui_icon_brand_focused: $orange500,
-    ui_icon_brand_selected: $orange700,
-    ui_icon_brand_disabled: $gray300,
+    ui_icon_brand_enabled: $ui_icon_brand_enabled,
+    ui_icon_brand_hover: $ui_icon_brand_hover,
+    ui_icon_brand_pressed: $ui_icon_brand_pressed,
+    ui_icon_brand_focused: $ui_icon_brand_focused,
+    ui_icon_brand_selected: $ui_icon_brand_selected,
+    ui_icon_brand_disabled: $ui_icon_brand_disabled,
 );
 
 // Icon_Primary
 $colorDatabaseIconPrimary: (
-    ui_icon_01_enabled: $gray900,
-    ui_icon_01_hover: $gray600,
-    ui_icon_01_pressed: $black,
-    ui_icon_01_focused: $gray900,
-    ui_icon_01_selected: $orange500,
-    ui_icon_01_disabled: $gray300,
+    ui_icon_01_enabled: $ui_icon_01_enabled,
+    ui_icon_01_hover: $ui_icon_01_hover,
+    ui_icon_01_pressed: $ui_icon_01_pressed,
+    ui_icon_01_focused: $ui_icon_01_focused,
+    ui_icon_01_selected: $ui_icon_01_selected,
+    ui_icon_01_disabled: $ui_icon_01_disabled,
 );
 
 // Icon_Secondary
 $colorDatabaseIconSecondary: (
-    ui_icon_02_enabled: $gray700,
-    ui_icon_02_hover: $gray500,
-    ui_icon_02_pressed: $gray900,
-    ui_icon_02_focused: $gray700,
-    ui_icon_02_selected: $orange500,
-    ui_icon_02_disabled: $gray300,
+    ui_icon_02_enabled: $ui_icon_02_enabled,
+    ui_icon_02_hover: $ui_icon_02_hover,
+    ui_icon_02_pressed: $ui_icon_02_pressed,
+    ui_icon_02_focused: $ui_icon_02_focused,
+    ui_icon_02_selected: $ui_icon_02_selected,
+    ui_icon_02_disabled: $ui_icon_02_disabled,
 );
 
 // Icon_Tertiary
 $colorDatabaseIconTertiary: (
-    ui_icon_03_enabled: $gray500,
-    ui_icon_03_hover: $gray300,
-    ui_icon_03_pressed: $gray700,
-    ui_icon_03_focused: $gray500,
-    ui_icon_03_selected: $orange500,
-    ui_icon_03_disabled: $gray300,
+    ui_icon_03_enabled: $ui_icon_03_enabled,
+    ui_icon_03_hover: $ui_icon_03_hover,
+    ui_icon_03_pressed: $ui_icon_03_pressed,
+    ui_icon_03_focused: $ui_icon_03_focused,
+    ui_icon_03_selected: $ui_icon_03_selected,
+    ui_icon_03_disabled: $ui_icon_03_disabled,
 );
 
 // Icon_Quaternary
 $colorDatabaseIconQuaternary: (
-    ui_icon_04_enabled: $gray400,
-    ui_icon_04_hover: $gray200,
-    ui_icon_04_pressed: $gray600,
-    ui_icon_04_focused: $gray400,
-    ui_icon_04_selected: $orange500,
-    ui_icon_04_disabled: $gray200,
+    ui_icon_04_enabled: $ui_icon_04_enabled,
+    ui_icon_04_hover: $ui_icon_04_hover,
+    ui_icon_04_pressed: $ui_icon_04_pressed,
+    ui_icon_04_focused: $ui_icon_04_focused,
+    ui_icon_04_selected: $ui_icon_04_selected,
+    ui_icon_04_disabled: $ui_icon_04_disabled,
 );
 
 // Icon_Quinary
 $colorDatabaseIconQuinary: (
-    ui_icon_05_enabled: $gray200,
-    ui_icon_05_hover: $gray100,
-    ui_icon_05_pressed: $gray400,
-    ui_icon_05_focused: $gray200,
-    ui_icon_05_selected: $orange500,
-    ui_icon_05_disabled: $gray100,
+    ui_icon_05_enabled: $ui_icon_05_enabled,
+    ui_icon_05_hover: $ui_icon_05_hover,
+    ui_icon_05_pressed: $ui_icon_05_pressed,
+    ui_icon_05_focused: $ui_icon_05_focused,
+    ui_icon_05_selected: $ui_icon_05_selected,
+    ui_icon_05_disabled: $ui_icon_05_disabled,
 );
 
-// Icon_Inverse
-$colorDatabaseIconInverse: (
-    ui_icon_inverse_enabled: $white,
-    ui_icon_inverse_hover: $white_alpha80,
-    ui_icon_inverse_pressed: $white_alpha60,
-    ui_icon_inverse_focused: $orange500,
-    ui_icon_inverse_selected: $white_alpha90,
-    ui_icon_inverse_disabled: $white_alpha40,
+// Icon_Black
+$colorDatabaseIconBlack: (
+    ui_icon_black_enabled: $ui_icon_black_enabled,
+    ui_icon_black_hover: $ui_icon_black_hover,
+    ui_icon_black_pressed: $ui_icon_black_pressed,
+    ui_icon_black_focused: $ui_icon_black_focused,
+    ui_icon_black_selected: $ui_icon_black_selected,
+    ui_icon_black_disabled: $ui_icon_black_disabled,
+);
+
+// Icon_White
+$colorDatabaseIconWhite: (
+    ui_icon_white_enabled: $ui_icon_white_enabled,
+    ui_icon_white_hover: $ui_icon_white_hover,
+    ui_icon_white_pressed: $ui_icon_white_pressed,
+    ui_icon_white_focused: $ui_icon_white_focused,
+    ui_icon_white_selected: $ui_icon_white_selected,
+    ui_icon_white_disabled: $ui_icon_white_disabled,
+);
+
+// Icon_System
+$colorDatabaseIconSystem: (
+    ui_icon_error: $ui_icon_error,
+    ui_icon_warning: $ui_icon_warning,
+    ui_icon_success: $ui_icon_success,
+    ui_icon_information: $ui_icon_information,
 );
 
 // Button_Primary
 $colorDatabaseButtonPrimary: (
-    ui_button_01_enabled: $orange500,
-    ui_button_01_hover: $orange400,
-    ui_button_01_pressed: $orange700,
-    ui_button_01_focused: $orange500,
-    ui_button_01_focused_border1: $white,
-    ui_button_01_focused_border2: $orange500,
-    ui_button_01_disabled: $gray75,
+    ui_button_01_enabled: $ui_button_01_enabled,
+    ui_button_01_hover: $ui_button_01_hover,
+    ui_button_01_pressed: $ui_button_01_pressed,
+    ui_button_01_focused: $ui_button_01_focused,
+    ui_button_01_focused_border1: $ui_button_01_focused_border1,
+    ui_button_01_focused_border2: $ui_button_01_focused_border2,
+    ui_button_01_disabled: $ui_button_01_disabled,
 );
 
 // Button_Secondary
 $colorDatabaseButtonSecondary: (
-    ui_button_02_enabled: $gray600,
-    ui_button_02_hover: $gray500,
-    ui_button_02_pressed: $gray700,
-    ui_button_02_focused: $gray600,
-    ui_button_02_focused_border1: $white,
-    ui_button_02_focused_border2: $gray600,
-    ui_button_02_disabled: $gray75,
+    ui_button_02_enabled: $ui_button_02_enabled,
+    ui_button_02_hover: $ui_button_02_hover,
+    ui_button_02_pressed: $ui_button_02_pressed,
+    ui_button_02_focused: $ui_button_02_focused,
+    ui_button_02_focused_border1: $ui_button_02_focused_border1,
+    ui_button_02_focused_border2: $ui_button_02_focused_border2,
+    ui_button_02_disabled: $ui_button_02_disabled,
 );
 
-// Button_Gray
-$colorDatabaseButtonGray: (
-    ui_button_03_enabled: $gray50,
-    ui_button_03_hover: $gray75,
-    ui_button_03_pressed: $gray150,
-    ui_button_03_focused: $gray50,
-    ui_button_03_focused_border1: $white,
-    ui_button_03_focused_border2: $gray500,
-    ui_button_03_disabled: $gray75,
+// Button_Tertiary
+$colorDatabaseButtonTertiary: (
+    ui_button_03_enabled: $ui_button_03_enabled,
+    ui_button_03_hover: $ui_button_03_hover,
+    ui_button_03_pressed: $ui_button_03_pressed,
+    ui_button_03_focused: $ui_button_03_focused,
+    ui_button_03_focused_border1: $ui_button_03_focused_border1,
+    ui_button_03_focused_border2: $ui_button_03_focused_border2,
+    ui_button_03_disabled: $ui_button_03_disabled,
+);
+
+// Button_Quaternary
+$colorDatabaseButtonQuaternary: (
+    ui_button_04_enabled: $ui_button_04_enabled,
+    ui_button_04_hover: $ui_button_04_hover,
+    ui_button_04_pressed: $ui_button_04_pressed,
+    ui_button_04_focused: $ui_button_04_focused,
+    ui_button_04_focused_border1: $ui_button_04_focused_border1,
+    ui_button_04_focused_border2: $ui_button_04_focused_border2,
+    ui_button_04_disabled: $ui_button_04_disabled,
 );
 
 // Button_Outline
 $colorDatabaseButtonOutline: (
-    ui_button_04_enabled: $white,
-    ui_button_04_enabled_border: $gray150,
-    ui_button_04_hover: $gray50,
-    ui_button_04_hover_border: $gray400,
-    ui_button_04_pressed: $gray100,
-    ui_button_04_pressed_border: $gray200,
-    ui_button_04_focused: $white,
-    ui_button_04_focused_border: $gray500,
-    ui_button_04_disabled: $gray75,
-    ui_button_04_disabled_border: $gray150,
+    ui_button_05_enabled: $ui_button_05_enabled,
+    ui_button_05_enabled_border: $ui_button_05_enabled_border,
+    ui_button_05_hover: $ui_button_05_hover,
+    ui_button_05_hover_border: $ui_button_05_hover_border,
+    ui_button_05_pressed: $ui_button_05_pressed,
+    ui_button_05_pressed_border: $ui_button_05_pressed_border,
+    ui_button_05_focused: $ui_button_05_focused,
+    ui_button_05_focused_border: $ui_button_05_focused_border,
+    ui_button_05_disabled: $ui_button_05_disabled,
+    ui_button_05_disabled_border: $ui_button_05_disabled_border,
 );
 
-// Button_Inverse
-$colorDatabaseButtonInverse: (
-    ui_button_inverse_f_enabled: $white,
-    ui_button_inverse_f_hover: $gray50,
-    ui_button_inverse_f_pressed: $gray100,
-    ui_button_inverse_f_focused: $white,
-    ui_button_inverse_f_focused_border: $black_alpha25,
-    ui_button_inverse_f_disabled: $gray75,
+// Button_White(fill)
+$colorDatabaseButtonWhiteFill: (
+    ui_button_white_f_enabled: $ui_button_white_f_enabled,
+    ui_button_white_f_hover: $ui_button_white_f_hover,
+    ui_button_white_f_pressed: $ui_button_white_f_pressed,
+    ui_button_white_f_focused: $ui_button_white_f_focused,
+    ui_button_white_f_focused_border: $ui_button_white_f_focused_border,
+    ui_button_white_f_disabled: $ui_button_white_f_disabled,
 );
 
-// Button_Inverse_ghost
-$colorDatabaseButtonInverseGhost: (
-    ui_button_inverse_g_enabled: transparent,
-    ui_button_inverse_g_enabled_border: $white,
-    ui_button_inverse_g_hover: $white_alpha20,
-    ui_button_inverse_g_hover_border: $white,
-    ui_button_inverse_g_pressed: $white_alpha10,
-    ui_button_inverse_g_pressed_border: $white,
-    ui_button_inverse_g_focused: $white_alpha20,
-    ui_button_inverse_g_focused_border: $white,
-    ui_button_inverse_g_disabled: transparent,
-    ui_button_inverse_g_disabled_border: $white_alpha20,
+// Button_White(ghost)
+$colorDatabaseButtonWhiteGhost: (
+    ui_button_white_g_enabled: $ui_button_white_g_enabled,
+    ui_button_white_g_enabled_border: $ui_button_white_g_enabled_border,
+    ui_button_white_g_hover: $ui_button_white_g_hover,
+    ui_button_white_g_hover_border: $ui_button_white_g_hover_border,
+    ui_button_white_g_pressed: $ui_button_white_g_pressed,
+    ui_button_white_g_pressed_border: $ui_button_white_g_pressed_border,
+    ui_button_white_g_focused: $ui_button_white_g_focused,
+    ui_button_white_g_focused_border: $ui_button_white_g_focused_border,
+    ui_button_white_g_disabled: $ui_button_white_g_disabled,
+    ui_button_white_g_disabled_border: $ui_button_white_g_disabled_border,
 );
 
 // Form_Line
 $colorDatabaseFormLine: (
-    ui_form_line_enabled: $white,
-    ui_form_line_enabled_border: $gray150,
-    ui_form_line_hover: $white,
-    ui_form_line_hover_border: $gray500,
-    ui_form_line_focused: $white,
-    ui_form_line_focused_border: $gray500,
-    ui_form_line_error: $white,
-    ui_form_line_error_border: $system_error,
-    ui_form_line_warning: $white,
-    ui_form_line_warning_border: $system_warning,
-    ui_form_line_success: $white,
-    ui_form_line_success_border: $system_success,
-    ui_form_line_informational: $white,
-    ui_form_line_informational_border: $system_info,
-    ui_form_line_disabled: $gray50,
-    ui_form_line_disabled_border: $gray200,
+    ui_form_line_enabled: $ui_form_line_enabled,
+    ui_form_line_enabled_border: $ui_form_line_enabled_border,
+    ui_form_line_hover: $ui_form_line_hover,
+    ui_form_line_hover_border: $ui_form_line_hover_border,
+    ui_form_line_focused: $ui_form_line_focused,
+    ui_form_line_focused_border: $ui_form_line_focused_border,
+    ui_form_line_error: $ui_form_line_error,
+    ui_form_line_error_border: $ui_form_line_error_border,
+    ui_form_line_warning: $ui_form_line_warning,
+    ui_form_line_warning_border: $ui_form_line_warning_border,
+    ui_form_line_success: $ui_form_line_success,
+    ui_form_line_success_border: $ui_form_line_success_border,
+    ui_form_line_informational: $ui_form_line_informational,
+    ui_form_line_informational_border: $ui_form_line_informational_border,
+    ui_form_line_disabled: $ui_form_line_disabled,
+    ui_form_line_disabled_border: $ui_form_line_disabled_border,
 );
 
 // Form_Fill
 $colorDatabaseFormFill: (
-    ui_form_fill_enabled: $gray50,
-    ui_form_fill_hover: $gray75,
-    ui_form_fill_focused: $gray75,
-    ui_form_fill_error: $system_error,
-    ui_form_fill_error_border: $gray50,
-    ui_form_fill_warning: $system_warning,
-    ui_form_fill_warning_border: $gray50,
-    ui_form_fill_success: $system_success,
-    ui_form_fill_success_border: $gray50,
-    ui_form_fill_informational: $system_info,
-    ui_form_fill_informational_border: $gray50,
-    ui_form_fill_disabled: $gray50,
+    ui_form_fill_enabled: $ui_form_fill_enabled,
+    ui_form_fill_hover: $ui_form_fill_hover,
+    ui_form_fill_focused: $ui_form_fill_focused,
+    ui_form_fill_error: $ui_form_fill_error,
+    ui_form_fill_error_border: $ui_form_fill_error_border,
+    ui_form_fill_warning: $ui_form_fill_warning,
+    ui_form_fill_warning_border: $ui_form_fill_warning_border,
+    ui_form_fill_success: $ui_form_fill_success,
+    ui_form_fill_success_border: $ui_form_fill_success_border,
+    ui_form_fill_informational: $ui_form_fill_informational,
+    ui_form_fill_informational_border: $ui_form_fill_informational_border,
+    ui_form_fill_disabled: $ui_form_fill_disabled,
 );
 
-// Form_Inverse
-$colorDatabaseFormInverse: (
-    ui_form_inverse_enabled: $white_alpha20,
-    ui_form_inverse_hover: $white_alpha30,
-    ui_form_inverse_focused: $white_alpha30,
-    ui_form_inverse_error: $white_alpha20,
-    ui_form_inverse_error_border: $system_error,
-    ui_form_inverse_warning: $white_alpha20,
-    ui_form_inverse_warning_border: $system_warning,
-    ui_form_inverse_success: $white_alpha20,
-    ui_form_inverse_success_border: $system_success,
-    ui_form_inverse_informational: $white_alpha20,
-    ui_form_inverse_informational_border: $system_info,
-    ui_form_inverse_disabled: $white_alpha20,
+// Form_White
+$colorDatabaseFormWhite: (
+    ui_form_white_enabled: $ui_form_white_enabled,
+    ui_form_white_hover: $ui_form_white_hover,
+    ui_form_white_focused: $ui_form_white_focused,
+    ui_form_white_error: $ui_form_white_error,
+    ui_form_white_error_border: $ui_form_white_error_border,
+    ui_form_white_warning: $ui_form_white_warning,
+    ui_form_white_warning_border: $ui_form_white_warning_border,
+    ui_form_white_success: $ui_form_white_success,
+    ui_form_white_success_border: $ui_form_white_success_border,
+    ui_form_white_informational: $ui_form_white_informational,
+    ui_form_white_informational_border: $ui_form_white_informational_border,
+    ui_form_white_disabled: $ui_form_white_disabled,
 );
 
 // Font
 $colorDatabaseFont: (
-    ui_text_01: $gray900,
-    ui_text_02: $gray700,
-    ui_text_03: $gray500,
-    ui_text_04: $gray400,
-    ui_text_brand: $orange500,
-    ui_text_inverse_01: $white,
-    ui_text_inverse_02: $white_alpha60,
-    ui_text_error: $system_error,
-    ui_text_warning: $system_warning,
-    ui_text_success: $system_success,
-    ui_text_informational: $system_info,
-    ui_text_link: $system_link,
-    ui_text_link_visited: $system_link_visited,
-    ui_text_placeholder: $gray200,
-    ui_text_disabled: $gray300,
+    ui_text_01: $ui_text_01,
+    ui_text_02: $ui_text_02,
+    ui_text_03: $ui_text_03,
+    ui_text_04: $ui_text_04,
+    ui_text_brand: $ui_text_brand,
+    ui_text_black: $ui_text_black,
+    ui_text_inverse_01: $ui_text_inverse_01,
+    ui_text_inverse_02: $ui_text_inverse_02,
+    ui_text_error: $ui_text_error,
+    ui_text_warning: $ui_text_warning,
+    ui_text_success: $ui_text_success,
+    ui_text_informational: $ui_text_informational,
+    ui_text_link: $ui_text_link,
+    ui_text_link_visited: $ui_text_link_visited,
+    ui_text_placeholder: $ui_text_placeholder,
+    ui_text_disabled: $ui_text_disabled,
+    ui_text_disabled_surface: $ui_text_disabled_surface,
 );
 
 // Divider
 $colorDatabaseDivider: (
-    ui_divider_black_01: $black_alpha15,
-    ui_divider_black_02: $black_alpha10,
-    ui_divider_black_03: $black_alpha5,
+    ui_divider_black_01: $ui_divider_black_01,
+    ui_divider_black_02: $ui_divider_black_02,
+    ui_divider_black_03: $ui_divider_black_03,
 );
-// Divider_Inverse
-$colorDatabaseDividerInverse: (
-    ui_divider_inverse_01: $white_alpha15,
-    ui_divider_inverse_02: $white_alpha10,
-    ui_divider_inverse_03: $white_alpha5,
+// Divider_White
+$colorDatabaseDividerWhite: (
+    ui_divider_white_01: $white_alpha15,
+    ui_divider_white_02: $white_alpha10,
+    ui_divider_white_03: $white_alpha5,
 );
 
 // Shadow
 $colorDatabaseShadow: (
-    ui_shadow_01: $black_alpha5,
-    ui_shadow_02: $black_alpha10,
-    ui_shadow_03: $black_alpha15,
-    ui_shadow_04: $black_alpha20,
+    ui_shadow_01: $ui_shadow_01,
+    ui_shadow_02: $ui_shadow_02,
+    ui_shadow_03: $ui_shadow_03,
+    ui_shadow_04: $ui_shadow_04,
 );
 
 // Overlays _ Black
 $colorDatabaseOverlaysBlack: (
-    ui_overlay_b_d01: $black_alpha75,
-    ui_overlay_b_d02: $black_alpha50,
-    ui_overlay_b_d03: $black_alpha15,
-    ui_overlay_b_b10_01: $black_alpha75,
-    ui_overlay_b_b10_02: $black_alpha50,
-    ui_overlay_b_b10_03: $black_alpha15,
-    ui_overlay_b_b20_01: $black_alpha75,
-    ui_overlay_b_b20_02: $black_alpha50,
-    ui_overlay_b_b20_03: $black_alpha15,
-    ui_overlay_b_b40_01: $black_alpha75,
-    ui_overlay_b_b40_02: $black_alpha50,
-    ui_overlay_b_b40_03: $black_alpha15,
+    ui_overlay_b_d01: $ui_overlay_b_d01,
+    ui_overlay_b_d02: $ui_overlay_b_d02,
+    ui_overlay_b_d03: $ui_overlay_b_d03,
+    ui_overlay_b_b10_01: $ui_overlay_b_b10_01,
+    ui_overlay_b_b10_02: $ui_overlay_b_b10_02,
+    ui_overlay_b_b10_03: $ui_overlay_b_b10_03,
+    ui_overlay_b_b20_01: $ui_overlay_b_b20_01,
+    ui_overlay_b_b20_02: $ui_overlay_b_b20_02,
+    ui_overlay_b_b20_03: $ui_overlay_b_b20_03,
+    ui_overlay_b_b40_01: $ui_overlay_b_b40_01,
+    ui_overlay_b_b40_02: $ui_overlay_b_b40_02,
+    ui_overlay_b_b40_03: $ui_overlay_b_b40_03,
 );
 // Overlays _ White
 $colorDatabaseOverlaysWhite: (
-    ui_overlay_w_d01: $white_alpha75,
-    ui_overlay_w_d02: $white_alpha50,
-    ui_overlay_w_d03: $white_alpha15,
-    ui_overlay_w_b10_01: $white_alpha75,
-    ui_overlay_w_b10_02: $white_alpha50,
-    ui_overlay_w_b10_03: $white_alpha15,
-    ui_overlay_w_b20_01: $white_alpha75,
-    ui_overlay_w_b20_02: $white_alpha50,
-    ui_overlay_w_b20_03: $white_alpha15,
-    ui_overlay_w_b40_01: $white_alpha75,
-    ui_overlay_w_b40_02: $white_alpha50,
-    ui_overlay_w_b40_03: $white_alpha15,
+    ui_overlay_w_d01: $ui_overlay_w_d01,
+    ui_overlay_w_d02: $ui_overlay_w_d02,
+    ui_overlay_w_d03: $ui_overlay_w_d03,
+    ui_overlay_w_b10_01: $ui_overlay_w_b10_01,
+    ui_overlay_w_b10_02: $ui_overlay_w_b10_02,
+    ui_overlay_w_b10_03: $ui_overlay_w_b10_03,
+    ui_overlay_w_b20_01: $ui_overlay_w_b20_01,
+    ui_overlay_w_b20_02: $ui_overlay_w_b20_02,
+    ui_overlay_w_b20_03: $ui_overlay_w_b20_03,
+    ui_overlay_w_b40_01: $ui_overlay_w_b40_01,
+    ui_overlay_w_b40_02: $ui_overlay_w_b40_02,
+    ui_overlay_w_b40_03: $ui_overlay_w_b40_03,
 );
 
 // Skeleton
 $colorDatabaseSkeleton: (
-    ui_skeleton_white: $white,
-    ui_skeleton_gray: $black_alpha5,
+    ui_skeleton_white: $ui_skeleton_white,
+    ui_skeleton_gray: $ui_skeleton_gray,
 );
 
 /* colorDatabase >  InteractiveColor */
 // Primary Color
 $colorDatabasePrimaryColor: (
-    interactive_01_highlight: $orange50,
-    interactive_01_enabled: $orange500,
-    interactive_01_hover: $orange400,
-    interactive_01_pressed: $orange700,
-    interactive_01_focus: $orange500,
-    interactive_01_selected: $orange600,
-    interactive_01_disabled: $gray300,
+    interactive_01_highlight: $interactive_01_highlight,
+    interactive_01_enabled: $interactive_01_enabled,
+    interactive_01_hover: $interactive_01_hover,
+    interactive_01_pressed: $interactive_01_pressed,
+    interactive_01_focus: $interactive_01_focus,
+    interactive_01_selected: $interactive_01_selected,
+    interactive_01_disabled: $interactive_01_disabled,
 );
 
 // Secondary Color
 $colorDatabaseSecondaryColor: (
-    interactive_02_highlight: $navy50,
-    interactive_02_enabled: $navy800,
-    interactive_02_hover: $navy700,
-    interactive_02_pressed: $navy900,
-    interactive_02_focus: $navy800,
-    interactive_02_selected: $navy900,
-    interactive_02_disabled: $gray300,
+    interactive_02_highlight: $interactive_02_highlight,
+    interactive_02_enabled: $interactive_02_enabled,
+    interactive_02_hover: $interactive_02_hover,
+    interactive_02_pressed: $interactive_02_pressed,
+    interactive_02_focus: $interactive_02_focus,
+    interactive_02_selected: $interactive_02_selected,
+    interactive_02_disabled: $interactive_02_disabled,
 );
 
 // Gray Color
 $colorDatabaseGrayColor: (
-    interactive_03_hover: $black_alpha5,
-    interactive_03_pressed: $black_alpha10,
-    interactive_03_focused: $black_alpha8,
-    interactive_03_selected: $black_alpha10,
+    interactive_03_hover: $interactive_03_hover,
+    interactive_03_pressed: $interactive_03_pressed,
+    interactive_03_focused: $interactive_03_focused,
+    interactive_03_selected: $interactive_03_selected,
 );
 
 $colorList: (
@@ -997,19 +1072,22 @@ $colorList: (
     $colorDatabaseIconTertiary,
     $colorDatabaseIconQuaternary,
     $colorDatabaseIconQuinary,
-    $colorDatabaseIconInverse,
+    $colorDatabaseIconBlack,
+    $colorDatabaseIconWhite,
+    $colorDatabaseIconSystem,
     $colorDatabaseButtonPrimary,
     $colorDatabaseButtonSecondary,
-    $colorDatabaseButtonGray,
+    $colorDatabaseButtonTertiary,
+    $colorDatabaseButtonQuaternary,
     $colorDatabaseButtonOutline,
-    $colorDatabaseButtonInverse,
-    $colorDatabaseButtonInverseGhost,
+    $colorDatabaseButtonWhiteFill,
+    $colorDatabaseButtonWhiteGhost,
     $colorDatabaseFormLine,
     $colorDatabaseFormFill,
-    $colorDatabaseFormInverse,
+    $colorDatabaseFormWhite,
     $colorDatabaseFont,
     $colorDatabaseDivider,
-    $colorDatabaseDividerInverse,
+    $colorDatabaseDividerWhite,
     $colorDatabaseShadow,
     $colorDatabaseOverlaysBlack,
     $colorDatabaseOverlaysWhite,

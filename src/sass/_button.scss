@@ -353,7 +353,7 @@ $bg_trans_btn_focus: transparent;
 // Button_Quaternary
 .element-btn.bg-gray-main {
     background-color: $ui_button_04_enabled;
-    border: 1px solid $ui_button_gray_main_border3_focused;
+    border: 1px solid $ui_button_04_enabled;
     color: #3a3a3a;
     &:hover {
         background-color: $ui_button_04_hover;

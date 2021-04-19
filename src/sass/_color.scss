@@ -416,7 +416,7 @@ $ui_bg_surface_white: $white;
 $ui_bg_surface_white_inverse: $white;
 $ui_bg_surface_gray25: $gray25;
 $ui_bg_surface_navy: $navy800;
-$ui_bg_surface_Elevated: $white;
+$ui_bg_surface_elevated: $white;
 $ui_bg_highlight_gray25: $gray25;
 $ui_bg_highlight: $orange50;
 
@@ -616,9 +616,9 @@ $ui_text_02: $gray700;
 $ui_text_03: $gray500;
 $ui_text_04: $gray400;
 $ui_text_brand: $orange500;
-$ui_text_black: $black;
-$ui_text_inverse_01: $white;
-$ui_text_inverse_02: $white_alpha60;
+$ui_text_gray: $gray900;
+$ui_text_white_01: $white;
+$ui_text_white_02: $white_alpha60;
 $ui_text_error: $system_error;
 $ui_text_warning: $system_warning;
 $ui_text_success: $system_success;
@@ -721,7 +721,7 @@ $colorDatabaseBackground: (
     ui_bg_surface_white_inverse: $ui_bg_surface_white_inverse,
     ui_bg_surface_gray25: $ui_bg_surface_gray25,
     ui_bg_surface_navy: $ui_bg_surface_navy,
-    ui_bg_surface_Elevated: $ui_bg_surface_Elevated,
+    ui_bg_surface_elevated: $ui_bg_surface_elevated,
     ui_bg_highlight_gray25: $ui_bg_highlight_gray25,
     ui_bg_highlight: $ui_bg_highlight,
 );
@@ -960,9 +960,9 @@ $colorDatabaseFont: (
     ui_text_03: $ui_text_03,
     ui_text_04: $ui_text_04,
     ui_text_brand: $ui_text_brand,
-    ui_text_black: $ui_text_black,
-    ui_text_inverse_01: $ui_text_inverse_01,
-    ui_text_inverse_02: $ui_text_inverse_02,
+    ui_text_gray: $ui_text_gray,
+    ui_text_white_01: $ui_text_white_01,
+    ui_text_white_02: $ui_text_white_02,
     ui_text_error: $ui_text_error,
     ui_text_warning: $ui_text_warning,
     ui_text_success: $ui_text_success,

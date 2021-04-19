@@ -1,0 +1,111 @@
+@import "./helpers/z-index";
+@import "./mixin/responsive";
+@import "./mixin/gnb";
+@import "./responsive";
+@import "./font";
+@import "./color";
+@import "./space";
+
+.layout-navigation {
+    order: 2;
+    height: 4.8rem;
+    flex: 0 1 100%;
+    padding: $stds-spacing-12 $stds-spacing-16;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
+    background: $white;
+    &.navigation-default-fixed {
+        position: fixed;
+        left: 0;
+        top: $stds-gnbHeight;
+        width: 100%;
+        z-index: $zindex-fixed;
+    }
+    .container {
+        display: flex;
+        max-width: 100%;
+        height: 2.4rem;
+        // flex-direction: row;
+        .nav-btn {
+            width: 2.4rem;
+            height: 2.4rem;
+            i {
+                font-size: 2.4rem;
+                // color: $ui_icon_primary_enabled;
+            }
+            &.align-left {
+                margin-right: 2rem;
+            }
+            &.align-right {
+                margin-left: 2rem;
+            }
+        }
+        .nav-text-btn {
+            font-size: 1.5rem;
+            color: $ui-text-03;
+            flex: none;
+            &.align-left {
+                margin-right: 2rem;
+            }
+            &.align-right {
+                margin-left: 2rem;
+            }
+            &.is-active {
+                color: $ui-text-brand;
+                font-weight: $stdsWeightBold;
+            }
+        }
+        .contents {
+            width: 100%;
+            line-height: 2.4rem;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            flex-basis: auto;
+            .item {
+                font-size: 1.5rem;
+                color: $ui-text-03;
+                margin-left: $stds-spacing-8;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &.is-active {
+                    color: $ui-text-02;
+                    font-weight: $stdsWeightBold;
+                }
+                .ic-control-arrow-right-line {
+                    color: #cacaca;
+                }
+            }
+        }
+    }
+}
+
+/* mobile 360 */
+@include mobile {}
+/* tablet 768 */
+@include tablet {}
+/* desktopM 1280 */
+@include desktopM {
+    .layout-navigation {
+        display: none;
+    }
+}
+/* desktopL 1440 */
+@include desktopL {
+    .layout-navigation {
+        display: none;
+    }
+}
+/* desktopXL 1600 */
+@include desktopXL {
+    .layout-navigation {
+        display: none;
+    }
+}
+/* desktop2XL 1920 */
+@include desktop2XL {
+    .layout-navigation {
+        display: none;
+    }
+}  

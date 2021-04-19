@@ -1,4 +1,4 @@
-@import "./src/sass/mixin/font";
+@use "./src/sass/mixin/font";
 
 /* stds Title 1rem = 10px */
 /* Title */
@@ -68,7 +68,7 @@ h4.is-hidden,
 h5.is-hidden,
 h6.is-hidden {
     font-size: 0;
-    text-indent: -99999px;
+    text-indent: -99999rem;
 }
 
 /* fonts by lang */
@@ -84,7 +84,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include sdtxFamily($inter: 'Intel KR', $noto: 'Noto Sans KR');
+    @include font.sdtxFamily($inter: 'Intel KR', $noto: 'Noto Sans KR');
 }
 
 /* Chinese zh */
@@ -99,7 +99,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include sdtxFamily($inter: 'Intel SC', $noto: 'Noto Sans SC');
+    @include font.sdtxFamily($inter: 'Intel SC', $noto: 'Noto Sans SC');
 }
 
 /* Chinese zh-tw  */
@@ -114,7 +114,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include sdtxFamily($inter: 'Intel TC', $noto: 'Noto Sans TC');
+    @include font.sdtxFamily($inter: 'Intel TC', $noto: 'Noto Sans TC');
 }
 
 /* Japan */
@@ -129,7 +129,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include sdtxFamily($inter: 'Intel JP', $noto: 'Noto Sans JP');
+    @include font.sdtxFamily($inter: 'Intel JP', $noto: 'Noto Sans JP');
 }
 
 /* English */
@@ -144,7 +144,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include sdtxFamily($inter: 'Intel Global', $noto: null);
+    @include font.sdtxFamily($inter: 'Intel Global', $noto: null);
 }
 
 /* French  */
@@ -159,7 +159,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include sdtxFamily($inter: 'Intel Global', $noto: null);
+    @include font.sdtxFamily($inter: 'Intel Global', $noto: null);
 }
 
 /* Portugal */
@@ -174,7 +174,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include sdtxFamily($inter: 'Intel Global', $noto: null);
+    @include font.sdtxFamily($inter: 'Intel Global', $noto: null);
 }
 
 /* Spanish */
@@ -189,7 +189,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include sdtxFamily($inter: 'Intel Global', $noto: null);
+    @include font.sdtxFamily($inter: 'Intel Global', $noto: null);
 }
 
 /* German */
@@ -204,7 +204,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include sdtxFamily($inter: 'Intel Global', $noto: null);
+    @include font.sdtxFamily($inter: 'Intel Global', $noto: null);
 }
 
 /* Thailand */
@@ -219,5 +219,5 @@ h3,
 h4,
 h5,
 h6 {
-    @include sdtxFamily($inter: 'Intel Thai', $noto: 'Noto Sans Thai');
+    @include font.sdtxFamily($inter: 'Intel Thai', $noto: 'Noto Sans Thai');
 }

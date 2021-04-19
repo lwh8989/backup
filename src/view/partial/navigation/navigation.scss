@@ -1,0 +1,32 @@
+@import "./src/sass/mixin/mixin";
+@import "./src/sass/helpers/guide";
+@import "./src/sass/navigation";
+@import "./src/sass/mixin/responsive";
+
+/* 가이드용 CSS */
+/* desktopM 1280 */
+@include desktopM {
+    .layout-navigation {
+        display: block !important;
+    }
+}
+/* desktopL 1440 */
+@include desktopL {
+    .layout-navigation {
+        display: block !important;
+    }
+}
+
+/* desktopXL 1600 */
+@include desktopXL {
+    .layout-navigation {
+        display: block !important;
+    }
+}
+
+/* desktop2XL 1920 */
+@include desktop2XL {
+    .layout-navigation {
+        display: block !important;
+    }
+}  

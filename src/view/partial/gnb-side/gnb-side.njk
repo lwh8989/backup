@@ -1,0 +1,26 @@
+{% extends "_include/layout/guide/guide.njk" %}
+{% import "_include/partial/gnb-side/gnb-side.njk" as snbSide %}
+
+<!-- styles -->
+{% block styles %}
+{% endblock %}
+
+<!-- styles -->
+{% block content %}
+<!-- [D]   -->
+<div class="guide">
+    <p class="tit"><b>Stove GNB Sidebar Guide</b></p>
+    <p class="desc">Base</p>
+</div>
+<div class="guide">
+  {{ snbSide.base() }}
+</div>
+
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %} 
+{% endblock %}

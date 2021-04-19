@@ -3,12 +3,12 @@
 
 .resizable {
     position: relative;
-    margin-bottom: 40px;
-    margin: 2px;
+    margin-bottom: 4rem;
+    margin: 0.2rem;
     flex: 1;
 
     .dl-list {
-        height: 90px;
+        height: 9rem;
 
         dd {
             opacity: 0.7;
@@ -18,10 +18,10 @@
 
 .resizable .resizers {
     @include flex($y: flex-start);
-    width: 400px;
-    height: 400px;
+    width: 40rem;
+    height: 40rem;
     max-width: 100% !important;
-    min-width: 200px !important;
+    min-width: 20rem !important;
     padding: 10%;
     border: 1px solid #a0a0a0;
     resize: horizontal;
@@ -57,7 +57,7 @@
 
         &.thumb-1-1 {
             @include aspectRatio;
-            background-color: $ui-text-success;
+            background-color: $ui_text_success;
 
             &::before {
                 content: "1:1";
@@ -65,7 +65,7 @@
         }
         &.thumb-3-4 {
             @include aspectRatio(3, 4);
-            background-color: $ui-text-informational;
+            background-color: $ui_text_informational;
 
             &::before {
                 content: "3:4";
@@ -73,7 +73,7 @@
         }
         &.thumb-4-3 {
             @include aspectRatio(4, 3);
-            background-color: $ui-text-warning;
+            background-color: $ui_text_warning;
 
             &::before {
                 content: "4:3";
@@ -81,7 +81,7 @@
         }
         &.thumb-16-9 {
             @include aspectRatio(16, 9);
-            background-color: $ui-text-brand;
+            background-color: $ui_text_brand;
 
             &::before {
                 content: "16:9";
@@ -89,7 +89,7 @@
         }
         &.thumb-9-16 {
             @include aspectRatio(9, 16);
-            background-color: $ui-text-link-visited;
+            background-color: $ui_text_link_visited;
 
             &::before {
                 content: "9:16";

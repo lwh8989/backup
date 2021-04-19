@@ -1,0 +1,19 @@
+@use "./../space";
+
+/* layout Footer order 5 */
+@mixin layoutFooter($height: auto,
+    $flex: 0 1 100%,
+    $order: 5,
+    $top: 0,
+    $right: 0,
+    $bottom: 0,
+    $left: 0) {
+    height: $height;
+    flex: $flex;
+    order: $order;
+    margin: $top $right $bottom $left;
+}
+
+.layout-footer {
+    @include layoutFooter($top: space.$stds-spacing-80);
+}

@@ -1,0 +1,35 @@
+{% import "_include/element/button/button.njk" as btn %}
+
+{% macro dialogBase(dimmed, posClass, size, title, titleAlign, contentAlign, txt, btns, close, header, footer) %}
+  <!-- posClass = pos-center / pos-top -->
+  <div class="module-dialog {{ posClass }} {{ size }}">
+    {% if header %}
+      <div class="module-dialog-header">{{ header }}</div>
+    {% endif %}
+
+    <div class="module-dialog-inner">
+      {% if title %}
+        <div class="module-dialog-title {{ titleAlign }}">{{ title }}</div>
+      {% endif %}
+      <div class="module-dialog-content {{ contentAlign }}">{{ txt }}</div>
+
+      {% if close %}
+        <button class="module-dialog-close ic-control-close-line"></button>
+      {% endif %}
+    </div>
+    {% if btns %}
+      <div class="module-dialog-btns">
+        {{ btn.base(colorClass='bg-outline', sizeClass='size-small', txt='취소') }}
+        {{ btn.base(colorClass='bg-primary', sizeClass='size-small', txt='확인') }}
+      </div>
+    {% endif %}
+    {% if footer %}
+      <div class="module-dialog-footer">
+        {{ footer }}
+      </div>
+    {% endif %}
+  </div>
+  {% if dimmed %}
+    <div class="module-dimmed absolute"></div>
+  {% endif %}
+{% endmacro %}

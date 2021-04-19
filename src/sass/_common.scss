@@ -20,31 +20,44 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
     @if $h < 40 {
         .#{"h" + $h + ""} {
             .element-select-txt {
-                margin-right: 8px;
+                margin-right: 0.8rem;
             }
+            .element-select-button,
+            .element-dropdown-button,
+            &.element-input,
+            .element-input {
+                font-size: 1.3rem;
+            }
+
             .element-dropdown-button {
-                font-size: 13px;
-                height: 36px;
+                height: 3.6rem;
             }
 
             &.box-type {
                 button {
-                    font-size: 16px;
+                    font-size: 1.6rem;
                 }
             }
         }
     } @else {
         .#{"h" + $h + ""} {
             .element-select-txt {
-                margin-right: 12px;
+                margin-right: 1.2rem;
             }
+            .element-select-button,
+            .element-dropdown-button,
+            &.element-input,
+            .element-input {
+                font-size: 1.5rem;
+            }
+
             .element-dropdown-button {
-                font-size: 15px;
-                height: 40px;
+                height: 4rem;
             }
+
             &.box-type {
                 button {
-                    font-size: 20px;
+                    font-size: 2rem;
                 }
             }
         }
@@ -53,23 +66,23 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
     @if $h >= 28 {
         .#{"h" + $h + ""} {
             &.element-badge {
-                padding: 0 8px;
-                font-size: 13px;
+                padding: 0 0.8rem;
+                font-size: 1.3rem;
             }
         }
     }
     @if $h <= 20 {
         .#{"h" + $h + ""} {
             &.element-badge {
-                padding: 0 6px;
-                font-size: 11px;
+                padding: 0 0.6rem;
+                font-size: 1.1rem;
             }
         }
     }
     @if $h <= 16 {
         .#{"h" + $h + ""} {
             &.element-badge {
-                padding: 0 4px;
+                padding: 0 0.4rem;
             }
         }
     }
@@ -78,10 +91,10 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
 /* common */
 /* font-size */
 .common-bx-size {
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 .common-bx-size-s {
-    font-size: 13px;
+    font-size: 1.3rem;
 }
 
 /* element */
@@ -96,12 +109,12 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
 .box-type {
     @include boxType {
         &::placeholder {
-            color: $gray-300;
+            color: $gray300;
         }
     }
     &.disabled,
     &:disabled {
-        background-color: $ui-input-bg-disabled;
+        background-color: $ui_form_fill_disabled;
     }
 }
 .element-input:disabled,
@@ -109,13 +122,13 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
 .element-input-icon.disabled {
     &,
     * {
-        color: $gray-300;
+        color: $gray300;
         cursor: default;
         pointer-events: none;
     }
 }
 .h56 {
-    height: 56px;
+    height: 5.6rem;
 }
 
 /* option Class */

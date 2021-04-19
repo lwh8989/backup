@@ -34,11 +34,11 @@
 /* box-type */
 @mixin boxType(
     $width: auto,
-    $bgc: $ui-input-bg-enabled,
+    $bgc: $ui_form_fill_enabled,
     $borderSize: 1px,
     $borderType: solid,
-    $borderColor: $ui-input-border-enabled,
-    $borderColorActive: $ui-input-border-focused,
+    $borderColor: $ui_form_line_enabled_border,
+    $borderColorActive: $ui_form_line_focused_border,
     $radius: 4px
 ) {
     width: $width;

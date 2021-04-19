@@ -1,0 +1,9 @@
+<!-- [D] lnb Tablet / Mobile 에서 나오는 UI Size = 360px -->
+{% macro base(posClass, sidebarAlign) %}
+<!-- posClass = pos-center / pos-top -->
+<div class="dimmed-pos {{ posClass }}">
+  <div class="layout-sidebar {{ sidebarAlign }}">
+    lnb side 마크업 영역
+  </div>
+</div>  
+{% endmacro %}

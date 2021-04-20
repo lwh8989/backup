@@ -274,90 +274,94 @@ $bg_trans_btn_focus: transparent;
 }
 
 /* color */
+// Button_Primary
 .element-btn.bg-primary {
-    // background-color: $ui_button_primary_enabled;
-    // border: 2px solid $ui_button_primary_enabled;
+    background-color: $ui_button_01_enabled;
+    border: 2px solid $ui_button_01_enabled;
     &:hover {
-        // background-color: $ui_button_primary_hover;
-        // border: 2px solid $ui_button_primary_hover;
+        background-color: $ui_button_01_hover;
+        border: 2px solid $ui_button_01_hover;
     }
     &:active {
-        // background-color: $ui_button_primary_pressed;
-        // border: 2px solid $ui_button_primary_pressed;
+        background-color: $ui_button_01_pressed;
+        border: 2px solid $ui_button_01_pressed;
     }
     &:focus {
         outline: none;
-        // border: 2px solid $ui_button_primary_enabled;
-        box-shadow: inset 0 0 0 2px #fff; // 그림자값 수정 부탁드립니다.
+        border: 2px solid $ui_button_01_enabled;
+        box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,
     &.disabled {
-        // background: $ui_button_primary_disabled;
-        // border-color: $ui_button_primary_disabled;
+        background: $ui_button_01_disabled;
+        border: 2px solid $ui_button_01_disabled;
     }
 }
+// Button_Secondary
 .element-btn.bg-secondary {
-    // background-color: $ui_button_secondary_enabled;
-    // border: 2px solid $ui_button_secondary_enabled;
+    background-color: $ui_button_02_enabled;
+    border: 2px solid $ui_button_02_enabled;
     &:hover {
-        // background-color: $ui_button_secondary_hover;
-        // border: 2px solid $ui_button_secondary_hover;
+        background-color: $ui_button_02_hover;
+        border: 2px solid $ui_button_02_hover;
     }
     &:active {
-        // background-color: $ui_button_secondary_pressed;
-        // border: 2px solid $ui_button_secondary_pressed;
+        background-color: $ui_button_02_pressed;
+        border: 2px solid $ui_button_02_pressed;
     }
     &:focus {
         outline: none;
-        // border: 2px solid $ui_button_secondary_enabled;
-        box-shadow: inset 0 0 0 2px #fff; // 그림자값 수정 부탁드립니다.
+        border: 2px solid $ui_button_02_enabled;
+        box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,
     &.disabled {
-        // background: $ui_button_secondary_disabled;
-        // border-color: $ui_button_secondary_disabled;
+        background: $ui_button_02_disabled;
+        border: 1px solid $ui_button_02_disabled;
     }
 }
+// Button_Tertiary
 .element-btn.bg-gray {
-    // background-color: $ui_button_gray_enabled;
-    // border: 2px solid $ui_button_gray_enabled;
+    background-color: $ui_button_03_enabled;
+    border: 2px solid $ui_button_03_enabled;
     color: #3a3a3a;
     &:hover {
-        // background-color: $ui_button_gray_hover;
-        // border: 2px solid $ui_button_gray_hover;
+        background-color: $ui_button_03_hover;
+        border: 2px solid $ui_button_03_hover;
     }
     &:active {
-        // background-color: $ui_button_gray_pressed;
-        // border: 2px solid $ui_button_gray_pressed;
+        background-color: $ui_button_03_pressed;
+        border: 2px solid $ui_button_03_pressed;
     }
     &:active {
-        // background-color: $ui_button_03_pressed;
-        // border: 2px solid $ui_button_03_pressed;
+        background-color: $ui_button_03_pressed;
+        border: 2px solid $ui_button_03_pressed;
     }
     &:focus {
         outline: none;
-        // background-color: $ui_button_gray_hover;
-        // border: 2px solid $ui_button_gray_pressed;
-        box-shadow: inset 0 0 0 2px #fff; // 그림자값 수정 부탁드립니다.
+        background-color: $ui_button_03_hover;
+        border: 2px solid $ui_button_03_pressed;
+        box-shadow: inset 0 0 0 2px #fff; 
     }
     &:disabled,
     &.disabled {
         color: #cacaca;
-        // background: $ui_button_gray_disabled;
-        // border-color: $ui_button_gray_disabled;
+        background: $ui_button_03_disabled;
+        border-color: $ui_button_03_disabled;
     }
 }
+// Button_Quaternary
 .element-btn.bg-gray-main {
-    background-color: $ui_button_gray_main_enabled;
-    border: 1px solid $ui_button_gray_main_border3_focused;
+    background-color: $ui_button_04_enabled;
+    border: 1px solid $ui_button_04_enabled;
     color: #3a3a3a;
     &:hover {
-        background-color: $ui_button_gray_main_hover;
-        border: 1px solid $ui_button_gray_main_hover;
+        background-color: $ui_button_04_hover;
+        border: 1px solid $ui_button_04_hover;
     }
     &:active {
-        background-color: $ui_button_gray_main_pressed;
-        border: 1px solid $ui_button_gray_main_pressed;
+        background-color: $ui_button_04_pressed;
+        border: 1px solid $ui_button_04_pressed;
     }
     &:active {
         background-color: $ui_button_white_f_pressed;
@@ -365,92 +369,121 @@ $bg_trans_btn_focus: transparent;
     }
     &:focus {
         outline: none;
-        background-color: $ui_button_gray_main_hover;
-        border: 1px solid $ui_button_gray_main_pressed;
-        box-shadow: inset 0 0 0 2px #fff; // 그림자값 수정 부탁드립니다.
+        background-color: $ui_button_04_hover;
+        border: 1px solid $ui_button_04_pressed;
+        box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,
     &.disabled {
         color: #cacaca;
-        // background: $ui_button_gray_disabled;
-        // border-color: $ui_button_gray_disabled;
+        background: $ui_button_04_disabled;
+        border-color: $ui_button_04_disabled;
     }
 }
-.element-btn.bg-inverse {
-    // background-color: $ui_button_inverse_enabled;
-    // border: 2px solid $ui_button_inverse_enabled;
-    color: #3a3a3a;
-    &:hover {
-        // background-color: $ui_button_inverse_hover;
-        // border: 2px solid $ui_button_inverse_hover;
-    }
-    &:active {
-        // background-color: $ui_button_inverse_pressed;
-        // border: 2px solid $ui_button_inverse_pressed;
-    }
-    &:focus {
-        outline: none;
-        // background-color: $ui_button_inverse_bg_focused;
-        // border: 2px solid $ui_button_inverse_border_focused;
-        box-shadow: inset 0 0 0 1px #bfbfbf; // 그림자값 수정 부탁드립니다.
-    }
-    &:disabled,
-    &.disabled {
-        // background: $ui_button_inverse_disabled;
-        // border-color: $ui_button_inverse_disabled;
-    }
-}
+// Button_Outline
 .element-btn.bg-outline {
-    // background-color: $ui_button_outline_enabled;
-    // border: 1px solid $ui_button_outline_border1_focused;
+    background-color: $ui_button_05_enabled;
+    border: 1px solid $ui_button_05_enabled_border;
     color: #3a3a3a;
     &:hover {
-        // background-color: $ui_button_outline_hover;
-        border: 1px solid #999;
+        background-color: $ui_button_05_hover;
+        border: 1px solid $ui_button_05_hover_border;
     }
     &:active {
-        // background-color: $ui_button_outline_pressed;
-        // border: 1px solid $ui_button_outline_border2_focused;
+        background-color: $ui_button_05_pressed;
+        border: 1px solid $ui_button_05_pressed_border;
     }
     &:focus {
         outline: none;
-        // background-color: $ui_button_outline_bg_focused;
-        // border: 1px solid $ui_button_outline_border3_focused;
-        // box-shadow: inset 0 0 0 2px $ui_button_outline_border3_focused;
+        background-color: $ui_button_05_focused;
+        border: 1px solid $ui_button_05_focused_border;
+        box-shadow: inset 0 0 0 2px #fff;
     }
     &:disabled,
     &.disabled {
-        // background: $ui_button_outline_disabled;
-        // border-color: $ui_button_outline_border4_focused;
+        background: $ui_button_05_disabled;
+        border-color: 1px solid $ui_button_05_disabled_border;
     }
 }
+// Button_White(fill)
+.element-btn.bg-white {
+    background-color: $ui_button_white_f_enabled;
+    border: 1px solid $ui_button_white_f_enabled;
+    color: #3a3a3a;
+    &:hover {
+        background-color: $ui_button_white_f_hover;
+        border: 1px solid $ui_button_white_f_enabled;
+    }
+    &:active {
+        background-color: $ui_button_white_f_pressed;
+        border: 1px solid $ui_button_white_f_enabled;
+    }
+    &:focus {
+        outline: none;
+        background-color: $ui_button_white_f_focused;
+        border-color: 1px solid $ui_button_05_disabled_border;
+        border: 1px solid $ui_button_white_f_enabled;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+    }
+    &:disabled,
+    &.disabled {
+        background: $ui_button_05_disabled;
+        border-color: $ui_button_05_disabled_border;
+    }
+}
+// Button_White(ghost)
 .element-btn.bg-ghost {
-    // background-color: $ui_button_inverse_ghost_enabled;
-    // border: 1px solid $ui_button_inverse_ghost_border1_focused;
+    background-color: $ui_button_white_g_enabled;
+    border: 1px solid $ui_button_white_g_enabled_border;
     color: #fff;
     &:hover {
-        // background-color: $ui_button_inverse_ghost_hover;
-        // border: 1px solid $ui_button_inverse_ghost_border1_focused;
+        background-color: $ui_button_white_g_hover;
+        border: 1px solid $ui_button_white_g_hover_border;
     }
     &:active {
-        // background-color: $ui_button_inverse_ghost_pressed;
-        // border: 1px solid $ui_button_inverse_ghost_border1_focused;
+        background-color: $ui_button_white_g_pressed;
+        border: 1px solid $ui_button_white_g_pressed_border;
     }
     &:focus {
         outline: none;
-        // background-color: $ui_button_inverse_ghost_bg_focused;
-        // border: 1px solid $ui_button_inverse_ghost_border1_focused;
-        // box-shadow: inset 0 0 0 2px $ui_button_inverse_ghost_border1_focused;
+        background-color: $ui_button_white_g_focused;
+        border: 1px solid $ui_button_white_g_focused_border;
+        box-shadow: inset 0 0 0 2px $ui_button_white_g_enabled_border;
     }
     &:disabled,
     &.disabled {
-        // background: $ui_button_outline_disabled;
-        // border-color: $ui_button_outline_disabled;
+        background: $ui_button_white_g_disabled;
+        border-color: $ui_button_white_g_disabled_border;
         & .btn-txt {
             color: #cacaca;
         }
     }
 }
+/* inverse 삭제 예정
+.element-btn.bg-inverse {
+    background-color: $ui_button_inverse_enabled;
+    border: 2px solid $ui_button_inverse_enabled;
+    color: #3a3a3a;
+    &:hover {
+        background-color: $ui_button_inverse_hover;
+        border: 2px solid $ui_button_inverse_hover;
+    }
+    &:active {
+        background-color: $ui_button_inverse_pressed;
+        border: 2px solid $ui_button_inverse_pressed;
+    }
+    &:focus {
+        outline: none;
+        background-color: $ui_button_inverse_bg_focused;
+        border: 2px solid $ui_button_inverse_border_focused;
+        box-shadow: inset 0 0 0 1px #bfbfbf; // 그림자값 수정 부탁드립니다.
+    }
+    &:disabled,
+    &.disabled {
+        background: $ui_button_inverse_disabled;
+        border-color: $ui_button_inverse_disabled;
+    }
+}*/
 
 /* mobile */
 

@@ -1,4 +1,4 @@
-@use "./src/sass/responsive";
+@use "./../responsive";
 
 @mixin mobile {
     @media (min-width: #{responsive.$stds-breakpoint-xs}) and (max-width: #{responsive.$stds-breakpoint-s - 1px}) {

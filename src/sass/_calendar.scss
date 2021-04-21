@@ -1,8 +1,8 @@
-@use "./src/sass/mixin/mixin";
-@use "./src/sass/color";
-@use "./src/sass/helpers/z-index";
-@use "./src/sass/space";
-@use "./src/sass/font";
+@use "./mixin/mixin";
+@use "./color";
+@use "./helpers/z-index";
+@use "./space";
+@use "./font";
 
 .module-dialog-calendar-wrap {
     @include mixin.flex {

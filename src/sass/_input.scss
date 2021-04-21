@@ -126,7 +126,10 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         }
     }
     &.calendar {
-        cursor: pointer;
+        &,
+        input {
+            cursor: pointer;
+        }
     }
     .ic-community-calendar-line {
         margin-top: 1px;

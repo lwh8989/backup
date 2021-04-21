@@ -1,6 +1,6 @@
-@use "~/src/sass/color";
-@use "~/src/sass/radius";
-@use "~/src/sass/shadow";
+@use "./../color";
+@use "./../radius";
+@use "./../shadow";
 
 @mixin dialogPos(
     $top: 50%,

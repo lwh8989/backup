@@ -1,39 +1,39 @@
 /* core */
-@import "./src/sass/font";
-@import "./src/sass/color";
-@import "./src/sass/space";
-@import "./src/sass/motion";
-@import "./src/sass/radius";
-@import "./src/sass/shadow";
-@import "./src/sass/common";
+@import "./font";
+@import "./color";
+@import "./space";
+@import "./motion";
+@import "./radius";
+@import "./shadow";
+@import "./common";
 
 /* helpers */
-@import "./src/sass/helpers/clearfix";
-@import "./src/sass/helpers/guide";
-@import "./src/sass/helpers/hidden";
-@import "./src/sass/helpers/ratio";
-@import "./src/sass/helpers/z-index";
+@import "./helpers/clearfix";
+@import "./helpers/guide";
+@import "./helpers/hidden";
+@import "./helpers/ratio";
+@import "./helpers/z-index";
 
 /* element */
-@import "./src/sass/button";
-@import "./src/sass/dropdown";
-@import "./src/sass/input";
-@import "./src/sass/badge";
+@import "./button";
+@import "./dropdown";
+@import "./input";
+@import "./badge";
 
 /* module */
-@import "./src/sass/dialog";
+@import "./dialog";
 
 /* partial */
 
 /* mixin */
-@import "./src/sass/mixin/font";
-@import "./src/sass/mixin/mixin";
-@import "./src/sass/mixin/responsive";
+@import "./mixin/font";
+@import "./mixin/mixin";
+@import "./mixin/responsive";
+@import "./mixin/layout";
 
 /* Layout */
-@import "./src/sass/mixin/layout";
-@import "./src/sass/index";
-@import "./src/sass/responsive";
+@import "./index";
+@import "./responsive";
 
 /* legarcy */
-@import "./src/sass/floara/fr-view";
+@import "./floara/fr-view";

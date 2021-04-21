@@ -9,7 +9,7 @@
 }
 
 /* height = hNN */
-$elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
+$elementHeight: (4, 16, 20, 24, 28, 32, 36, 40, 44, 48, 56);
 
 @each $h in $elementHeight {
     // element height
@@ -71,7 +71,7 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
         }
     }
 
-    @if $h >= 28 {
+    @if $h >= 24 {
         .#{"h" + $h + ""} {
             &.element-badge {
                 padding: 0 0.8rem;
@@ -91,6 +91,13 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
         .#{"h" + $h + ""} {
             &.element-badge {
                 padding: 0 0.4rem;
+            }
+        }
+    }
+    @if $h <= 4 {
+        .#{"h" + $h + ""} {
+            &.element-badge {
+                padding: 0 0.2rem;
             }
         }
     }

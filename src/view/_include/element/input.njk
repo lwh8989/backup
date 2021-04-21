@@ -1,15 +1,23 @@
-{% macro base(width, height, type, boxType, active, txt, place, state) %}
-    <input type="{{ type }}" class="element-input {{ width }} {{ height }} {{ boxType }} {{ active }}" placeholder="{{ place }}"  value="{{ txt }}" {{ state }}/>
+{% import "_include/partial/dialog/dialog.njk" as dialog %}
+
+{% macro base(width, height, type, addClass, active, txt, place, state) %}
+    <input type="{{ type }}" class="element-input {{ width }} {{ height }} {{ addClass }} {{ active }}" placeholder="{{ place }}"  value="{{ txt }}" {{ state }}/>
 {% endmacro %}
 
-{% macro icon(width, height, type, boxType, active, txt, place, state, icon, round) %}
-    <div class="element-input-icon {{ width }} {{ height }} {{ boxType }} {{ active }} {{ round }} {{ state }}">
+{% macro icon(width, height, type, addClass, active, txt, place, state, icon, round, dialogLayer, posClass, year, month, dialogNum, firstNum, lastNum) %}
+    <div class="element-input-icon {{ width }} {{ height }} {{ addClass }} {{ active }} {{ round }} {{ state }}">
         <div class="element-input-wrap">
             <input type="{{ type }}" class="element-input" placeholder="{{ place }}"  value="{{ txt }}" {{ state }}/>
         </div>
         {% if icon %}
             <button class="{{ icon.first }}"></button>
-            <button class="{{ icon.second }}"></button>
+            {% if icon.second %}
+                <button class="{{ icon.second }}"></button>
+            {% endif %}
+        {% endif %}
+
+        {% if dialogLayer %}
+            {{ dialog.dialogCalendar(posClass, year, month, dialogNum, firstNum, lastNum) }}
         {% endif %}
     </div>
 {% endmacro %}

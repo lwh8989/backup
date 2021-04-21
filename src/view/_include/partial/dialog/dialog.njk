@@ -1,4 +1,5 @@
 {% import "_include/element/button/button.njk" as btn %}
+{% import "_include/module/calendar.njk" as calendar %}
 
 {% macro dialogBase(dimmed, posClass, size, title, titleAlign, contentAlign, txt, btns, close, header, footer) %}
   <!-- posClass = pos-center / pos-top -->
@@ -32,4 +33,19 @@
   {% if dimmed %}
     <div class="module-dimmed absolute"></div>
   {% endif %}
+{% endmacro %}
+
+{% macro dialogCalendar(posClass, year, month, dialogNum, firstNum, lastNum) %}
+  <!-- posClass = pos-center, pos-right, pos-bottom  -->
+  <div class="module-dialog dialog-calendar {{ posClass }}">
+    <div class="module-dialog-inner">
+      <div class="module-dialog-content">
+        <div class="module-dialog-calendar-wrap">
+          {% for item in range(0, dialogNum) %}
+            {{ calendar.base(year, month, dialogNum, firstNum, lastNum, item) }}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
 {% endmacro %}

@@ -1,0 +1,147 @@
+@use "./src/sass/mixin/mixin";
+@use "./src/sass/color";
+@use "./src/sass/helpers/z-index";
+@use "./src/sass/space";
+@use "./src/sass/font";
+
+.module-dialog-calendar-wrap {
+    @include mixin.flex {
+        gap: 1px;
+    }
+}
+.module-calendar {
+    min-width: 30.8rem;
+    padding-bottom: space.$stds-spacing-8;
+    box-shadow: -1px 0 0 color.$ui_border_contents;
+
+    &:first-child {
+        box-shadow: none;
+    }
+
+    .module-calendar-header {
+        @include mixin.flexCenter;
+        padding: space.$stds-spacing-20 0;
+
+        button {
+            font-size: font.$stdsTitle4;
+        }
+        .calendar-tit {
+            font-weight: bold;
+            font-size: font.$stdsTitle5;
+            letter-spacing: font.$letterSpacing_5;
+        }
+    }
+
+    .module-calendar-top,
+    .module-calendar-day {
+        @include mixin.flex($wrap: wrap);
+    }
+    .box {
+        @include mixin.flexCenter;
+        width: 4.4rem;
+        height: 3.6rem;
+    }
+
+    .module-calendar-top {
+        background-color: color.$ui_bg_base_gray50;
+
+        .box {
+            color: color.$ui_text_03;
+        }
+
+        & + .module-calendar-day {
+            margin-top: space.$stds-spacing-8;
+        }
+    }
+    .module-calendar-day {
+        .box {
+            position: relative;
+            cursor: pointer;
+            color: color.$ui_text_02;
+            font-size: font.$stdsBody4;
+
+            button {
+                font-size: font.$stdsBody4;
+            }
+
+            // sunday
+            &:nth-child(7n + 1) {
+                color: color.$ui_text_brand;
+            }
+
+            &::before {
+                content: "";
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            &::after {
+                transition: all 0.3s;
+                transform: translate(-50%, -50%);
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 0;
+                height: 0;
+                border-radius: 3.6rem;
+                background-color: color.$interactive_03_hover;
+            }
+
+            &.selected {
+                font-weight: bold;
+
+                &::after {
+                    width: 3.6rem;
+                    height: 3.6rem;
+                    background-color: color.$interactive_03_selected;
+                }
+            }
+            &:hover {
+                font-weight: bold;
+
+                &::after {
+                    width: 3.6rem;
+                    height: 3.6rem;
+                }
+            }
+
+            &.first,
+            &.last,
+            &:active {
+                font-weight: bold;
+
+                & > span {
+                    color: color.$ui_text_white_01;
+                }
+                &::after {
+                    width: 3.6rem;
+                    height: 3.6rem;
+                    background-color: color.$interactive_01_enabled;
+                }
+            }
+            &.first {
+                &::before {
+                    background-color: color.$ui_bg_highlight;
+                }
+            }
+            &.last {
+                &::before {
+                    right: initial;
+                    left: 0;
+                    background-color: color.$ui_bg_highlight;
+                }
+            }
+            &.bridge {
+                background-color: color.$ui_bg_highlight;
+            }
+
+            & > span {
+                position: relative;
+                z-index: z-index.$zindex-tooltip;
+            }
+        }
+    }
+}

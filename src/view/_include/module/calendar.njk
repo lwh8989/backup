@@ -1,0 +1,120 @@
+{% macro base(year, month, dialogNum, firstNum, lastNum, item) %}
+  <div class="module-calendar">
+    <div class="module-calendar-header">
+      <button class="ic-control-arrow-left-line"></button>
+      <button class="calendar-tit">
+        <!-- 달력 한개일때 -->
+        {% if dialogNum == 1 %}
+          {% if month %}
+            {{ year }}.{{ month }}
+          {% else %}
+            {{ year }}
+          {% endif %}
+        {% else %}
+          <!-- 달력 두개 이상일때 -->
+          {% if (item + 1) == 1 %}
+            {% if month %}
+              {{ year[0] }}.{{ month[0] }}
+            {% else %}
+              {{ year[0] }}
+            {% endif %}
+          {% else %}
+            {% if month %}
+              {{ year[1] }}.{{ month[1] }}
+            {% else %}
+              {{ year[1] }}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      </button>
+      <button class="ic-control-arrow-right-line"></button>
+    </div>
+
+    <div class="module-calendar-body">
+      <div class="module-calendar-top">
+        <span class="box">일</span>
+        <span class="box">월</span>
+        <span class="box">화</span>
+        <span class="box">수</span>
+        <span class="box">목</span>
+        <span class="box">금</span>
+        <span class="box">토</span>
+      </div>
+      <div class="module-calendar-day">
+        {% if dialogNum == 1 %}
+          <!-- 달력 한개일때 -->
+          {% for days in range(0, 31) %}
+            <!-- 달력 한개일때 - 기간을 설정 했을 때 ( lastNum 없으면 기간 설정이 없다고 침 ) -->
+            {% if lastNum %}
+              {% if loop.index == firstNum %}
+                <button class="box first">
+                  <span>{{ loop.index }}</span>
+                </button>
+              {% elif loop.index == lastNum %}
+                <button class="box last">
+                  <span>{{ loop.index }}</span>
+                </button>
+              {% elif loop.index > firstNum and loop.index < lastNum %}
+                <button class="box bridge">
+                  <span>{{ loop.index }}</span>
+                </button>
+              {% else %}
+                <button class="box">
+                  <span>{{ loop.index }}</span>
+                </button>
+              {% endif %}
+            {% else %}
+              <!-- 달력 한개일때 - 기간을 설정 없이 하나만 선택 할때-->
+              {% if loop.index == firstNum %}
+                <button class="box selected">
+                  <span>{{ loop.index }}</span>
+                </button>
+              {% else %}
+                <button class="box">
+                  <span>{{ loop.index }}</span>
+                </button>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <!-- 달력 두개 이상일때 -->
+          {% if (item + 1) == 1 %}
+            <!-- 첫 번째 달력 -->
+            {% for days in range(0, 31) %}
+              {% if loop.index == firstNum %}
+                <button class="box first">
+                  <span>{{ loop.index }}</span>
+                </button>
+              {% elif loop.index > firstNum %}
+                <button class="box bridge">
+                  <span>{{ loop.index }}</span>
+                </button>
+              {% else %}
+                <button class="box">
+                  <span>{{ loop.index }}</span>
+                </button>
+              {% endif %}
+            {% endfor %}
+          {% elif(item + 1) == 2 %}
+            <!-- 두 번째 달력 -->
+            {% for days in range(0, 31) %}
+              {% if loop.index == lastNum %}
+                <button class="box last">
+                  <span>{{ loop.index }}</span>
+                </button>
+              {% elif loop.index < lastNum %}
+                <button class="box bridge">
+                  <span>{{ loop.index }}</span>
+                </button>
+              {% else %}
+                <button class="box">
+                  <span>{{ loop.index }}</span>
+                </button>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endmacro %}

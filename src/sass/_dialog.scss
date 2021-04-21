@@ -59,6 +59,35 @@
         //     $y: 0
         // );
     }
+
+    // calendar
+    &.dialog-calendar {
+        top: calc(100% + #{space.$stds-spacing-8});
+        left: 0;
+        cursor: default;
+
+        %center {
+            transform: translateX(-50%, -50%);
+        }
+
+        &.pos-center {
+            @extend %center;
+            left: 50%;
+        }
+        &.pos-right {
+            left: initial;
+            right: 0;
+        }
+        &.pos-bottom {
+            top: initial;
+            bottom: calc(100% + #{space.$stds-spacing-8});
+        }
+
+        .module-dialog-inner {
+            padding: 0;
+        }
+    }
+
     .module-dialog-inner {
         padding: space.$stds-spacing-40 space.$stds-spacing-24
             space.$stds-spacing-32;

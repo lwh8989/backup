@@ -1,6 +1,7 @@
 @use "./src/sass/mixin/mixin";
 @use "./src/sass/color";
 @use "./src/sass/space";
+@use "./src/sass/radius";
 @use "./helpers/z-index";
 
 $dropdown-default-space: 0 space.$stds-spacing-16;
@@ -45,12 +46,17 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
 
 .element-dropdown-layer {
     display: none;
-    padding: 0.8rem 0;
-    overflow: hidden;
-    overflow-y: auto;
-    background-color: $white;
-    border-radius: 4px; // Radius 적용 부탁드립니다.
-    box-shadow: 0 4px 10px color.$black_alpha10;
+    padding-top: space.$stds-spacing-8;
+
+    .element-dropdown-layer-inner {
+        padding: space.$stds-spacing-8 0;
+        overflow: hidden;
+        overflow-y: auto;
+        background-color: $white;
+        border: 1px solid color.$ui_border_contents;
+        border-radius: radius.$radius-S;
+        box-shadow: 0 4px 10px color.$ui_shadow_02;
+    }
 
     &.absolute {
         position: absolute;
@@ -82,7 +88,12 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
 
     &:hover,
     &:focus {
-        background-color: color.$black_alpha5;
+        background-color: color.$interactive_03_hover;
         color: color.$ui_text_02;
+    }
+
+    &.selected {
+        font-weight: bold;
+        color: $ui_text_brand;
     }
 }

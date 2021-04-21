@@ -34,13 +34,22 @@
     }
 
     .module-calendar-top,
+    .module-calendar-tile,
     .module-calendar-day {
         @include mixin.flex($wrap: wrap);
     }
+
     .box {
         @include mixin.flexCenter;
+        position: relative;
+        cursor: pointer;
+        color: color.$ui_text_02;
         width: 4.4rem;
         height: 3.6rem;
+
+        button {
+            font-size: inherit;
+        }
     }
 
     .module-calendar-top {
@@ -56,14 +65,7 @@
     }
     .module-calendar-day {
         .box {
-            position: relative;
-            cursor: pointer;
-            color: color.$ui_text_02;
             font-size: font.$stdsBody4;
-
-            button {
-                font-size: font.$stdsBody4;
-            }
 
             // sunday
             &:nth-child(7n + 1) {
@@ -92,12 +94,16 @@
                 background-color: color.$interactive_03_hover;
             }
 
+            @mixin iconSize {
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+
             &.selected {
                 font-weight: bold;
 
                 &::after {
-                    width: 3.2rem;
-                    height: 3.2rem;
+                    @include iconSize;
                     background-color: color.$interactive_03_selected;
                 }
             }
@@ -105,8 +111,7 @@
                 font-weight: bold;
 
                 &::after {
-                    width: 3.2rem;
-                    height: 3.2rem;
+                    @include iconSize;
                 }
             }
 
@@ -119,8 +124,7 @@
                     color: color.$ui_text_white_01;
                 }
                 &::after {
-                    width: 3.2rem;
-                    height: 3.2rem;
+                    @include iconSize;
                     background-color: color.$interactive_01_enabled;
                 }
             }
@@ -143,6 +147,62 @@
                 }
             }
 
+            & > span {
+                position: relative;
+                z-index: z-index.$zindex-tooltip;
+            }
+        }
+    }
+
+    .module-calendar-tile {
+        // padding: 0 space.$stds-spacing-4;
+        .box {
+            width: 7.7rem;
+            height: 7.2rem;
+
+            &::after {
+                transition: all 0.3s;
+                transform: translate(-50%, -50%);
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 0;
+                height: 0;
+                background-color: color.$interactive_03_hover;
+            }
+
+            @mixin iconSize {
+                width: 7.7rem;
+                height: 4.8rem;
+            }
+
+            &:hover {
+                font-weight: bold;
+
+                &::after {
+                    @include iconSize;
+                }
+            }
+            &:active {
+                font-weight: bold;
+
+                & > span {
+                    color: color.$ui_text_white_01;
+                }
+                &::after {
+                    @include iconSize;
+                    background-color: color.$interactive_01_enabled;
+                }
+            }
+            &.selected {
+                font-weight: bold;
+
+                &::after {
+                    @include iconSize;
+                    background-color: color.$interactive_03_selected;
+                }
+            }
             & > span {
                 position: relative;
                 z-index: z-index.$zindex-tooltip;

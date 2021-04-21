@@ -1,0 +1,136 @@
+@use "./mixin/mixin";
+@use "./color";
+@use "./space";
+@use "./radius";
+
+.element-tooltip {
+    .tooltip-txt {
+        @include flex($type: inline-flex, $x: center, $y: center);
+        position: relative;
+        white-space: nowrap;
+        padding: space.$stds-spacing-4;
+        border-radius: radius.$radius-XS;
+        background-color: color.$gray600;
+        font-weight: bold;
+
+        &.white {
+            color: color.$white;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+
+        $formSizeL: 0.4rem;
+        @mixin axis(
+            $top: -#{$formSizeL},
+            $bottom: -#{$formSizeL},
+            $axisX: left,
+            $axisY: top,
+            $left: space.$stds-spacing-6,
+            $right: space.$stds-spacing-6,
+            $formColor: color.$gray600
+        ) {
+            $center: 0;
+
+            @if $axisX == left {
+                left: $left;
+            }
+            @if $axisX == right {
+                right: $right;
+            }
+            @if $axisX == center {
+                $center: -50%;
+            }
+            @if $axisX == leftSide {
+                left: -#{$formSizeL + 0.2rem};
+            }
+            @if $axisX == rightSide {
+                right: -#{$formSizeL + 0.2rem};
+            }
+
+            transform: translateX($center);
+            border-left: $formSizeL solid transparent;
+            border-right: $formSizeL solid transparent;
+            border-bottom: $formSizeL solid $formColor;
+
+            @if $axisY == top {
+                top: $top;
+            }
+            @if $axisY == bottom {
+                bottom: $bottom;
+                transform: translateX($center) rotate(180deg);
+            }
+            @if $axisY == leftSideCenter {
+                transform: translateY($center) rotate(-90deg);
+            }
+            @if $axisY == rightSideCenter {
+                transform: translateY($center) rotate(90deg);
+            }
+        }
+
+        &.arrow-tc {
+            &::before {
+                @include axis($left: 50%);
+            }
+        }
+        &.arrow-tl {
+            &::before {
+                @include axis;
+            }
+        }
+        &.arrow-tr {
+            &::before {
+                @include axis($axisX: right);
+            }
+        }
+
+        &.arrow-bc {
+            &::before {
+                @include axis($left: 50%, $axisY: bottom);
+            }
+        }
+        &.arrow-bl {
+            &::before {
+                @include axis($axisY: bottom);
+            }
+        }
+        &.arrow-br {
+            &::before {
+                @include axis($axisX: right, $axisY: bottom);
+            }
+        }
+
+        &.arrow-lc {
+            &::before {
+                @include axis($axisX: leftSide, $axisY: leftSideCenter);
+            }
+        }
+        &.arrow-rc {
+            &::before {
+                @include axis($axisX: rightSide, $axisY: rightSideCenter);
+            }
+        }
+
+        $elementBgcolor: (
+            orange: color.$orange500,
+            red: color.$tint_reda400,
+            purple: color.$tint_purplea400,
+            blue: color.$tint_bluea400,
+            gray: color.$gray700,
+        );
+
+        @each $name, $color in $elementBgcolor {
+            &.#{"" + $name + ""} {
+                background-color: $color;
+
+                &::before {
+                    border-bottom-color: $color;
+                }
+            }
+        }
+    }
+}

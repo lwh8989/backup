@@ -1407,7 +1407,3 @@ $colorDatabasePalette: (
         }
     }
 }
-
-@include dataCssGnerator($colorList, background-color);
-@include cssGnerator($colorDatabasePalette, background-color);
-@include cssGnerator($colorDatabasePalettePrimary, background-color);

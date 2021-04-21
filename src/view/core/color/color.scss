@@ -1,6 +1,12 @@
 @import "./src/sass/mixin/mixin";
 @import "./src/sass/color";
 
+html {
+    @include dataCssGnerator($colorList, background-color);
+    @include cssGnerator($colorDatabasePalette, background-color);
+    @include cssGnerator($colorDatabasePalettePrimary, background-color);
+}
+
 .guide {
     width: 95%;
 

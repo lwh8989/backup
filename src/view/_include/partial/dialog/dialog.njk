@@ -35,14 +35,14 @@
   {% endif %}
 {% endmacro %}
 
-{% macro dialogCalendar(posClass, year, month, dialogNum, firstNum, lastNum) %}
+{% macro dialogCalendar(posClass, year, month, dialogNum, firstNum, lastNum, yearMode, monthMode) %}
   <!-- posClass = pos-center, pos-right, pos-bottom  -->
   <div class="module-dialog dialog-calendar {{ posClass }}">
     <div class="module-dialog-inner">
       <div class="module-dialog-content">
         <div class="module-dialog-calendar-wrap">
           {% for item in range(0, dialogNum) %}
-            {{ calendar.base(year, month, dialogNum, firstNum, lastNum, item) }}
+            {{ calendar.base(year, month, dialogNum, firstNum, lastNum, item, yearMode, monthMode) }}
           {% endfor %}
         </div>
       </div>

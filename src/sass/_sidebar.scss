@@ -6,7 +6,7 @@
     height: 100%;
     background: #fff;
     position: fixed;
-    transition: transform .4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
     z-index: $zindex-modal;
     -webkit-overflow-scrolling: touch;
     &.sidebar-left {
@@ -35,6 +35,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: color.$black_alpha50;
+    background: color.$black50;
     z-index: z-index.$zindex-modal-backdrop;
 }

@@ -163,20 +163,20 @@ $navy600: #506585 !default;
 $navy700: #40526e !default;
 $navy800: #314058 !default;
 $navy900: #1e2c40 !default;
-$white_alpha5: rgba(#ffffff, $alpha: 0.05) !default;
-$white_alpha8: rgba(#ffffff, $alpha: 0.08) !default;
-$white_alpha10: rgba(#ffffff, $alpha: 0.1) !default;
-$white_alpha15: rgba(#ffffff, $alpha: 0.15) !default;
-$white_alpha20: rgba(#ffffff, $alpha: 0.2) !default;
-$white_alpha25: rgba(#ffffff, $alpha: 0.25) !default;
-$white_alpha30: rgba(#ffffff, $alpha: 0.3) !default;
-$white_alpha40: rgba(#ffffff, $alpha: 0.4) !default;
-$white_alpha50: rgba(#ffffff, $alpha: 0.5) !default;
-$white_alpha60: rgba(#ffffff, $alpha: 0.6) !default;
-$white_alpha70: rgba(#ffffff, $alpha: 0.7) !default;
-$white_alpha75: rgba(#ffffff, $alpha: 0.75) !default;
-$white_alpha80: rgba(#ffffff, $alpha: 0.8) !default;
-$white_alpha90: rgba(#ffffff, $alpha: 0.9) !default;
+$white05: rgba(#ffffff, $alpha: 0.05) !default;
+$white08: rgba(#ffffff, $alpha: 0.08) !default;
+$white10: rgba(#ffffff, $alpha: 0.1) !default;
+$white15: rgba(#ffffff, $alpha: 0.15) !default;
+$white20: rgba(#ffffff, $alpha: 0.2) !default;
+$white25: rgba(#ffffff, $alpha: 0.25) !default;
+$white30: rgba(#ffffff, $alpha: 0.3) !default;
+$white40: rgba(#ffffff, $alpha: 0.4) !default;
+$white50: rgba(#ffffff, $alpha: 0.5) !default;
+$white60: rgba(#ffffff, $alpha: 0.6) !default;
+$white70: rgba(#ffffff, $alpha: 0.7) !default;
+$white75: rgba(#ffffff, $alpha: 0.75) !default;
+$white80: rgba(#ffffff, $alpha: 0.8) !default;
+$white90: rgba(#ffffff, $alpha: 0.9) !default;
 $white: #ffffff !default;
 $gray25: #fafafa !default;
 $gray50: #f3f3f3 !default;
@@ -204,20 +204,20 @@ $bluegray750: #26282f !default;
 $bluegray800: #18191f !default;
 $bluegray850: #1f2128 !default;
 $bluegray900: #14151a !default;
-$black_alpha5: rgba(#000000, $alpha: 0.05) !default;
-$black_alpha8: rgba(#000000, $alpha: 0.08) !default;
-$black_alpha10: rgba(#000000, $alpha: 0.1) !default;
-$black_alpha15: rgba(#000000, $alpha: 0.15) !default;
-$black_alpha20: rgba(#000000, $alpha: 0.2) !default;
-$black_alpha25: rgba(#000000, $alpha: 0.25) !default;
-$black_alpha30: rgba(#000000, $alpha: 0.3) !default;
-$black_alpha40: rgba(#000000, $alpha: 0.4) !default;
-$black_alpha50: rgba(#000000, $alpha: 0.5) !default;
-$black_alpha60: rgba(#000000, $alpha: 0.6) !default;
-$black_alpha70: rgba(#000000, $alpha: 0.7) !default;
-$black_alpha75: rgba(#000000, $alpha: 0.75) !default;
-$black_alpha80: rgba(#000000, $alpha: 0.8) !default;
-$black_alpha90: rgba(#000000, $alpha: 0.9) !default;
+$black05: rgba(#000000, $alpha: 0.05) !default;
+$black08: rgba(#000000, $alpha: 0.08) !default;
+$black10: rgba(#000000, $alpha: 0.1) !default;
+$black15: rgba(#000000, $alpha: 0.15) !default;
+$black20: rgba(#000000, $alpha: 0.2) !default;
+$black25: rgba(#000000, $alpha: 0.25) !default;
+$black30: rgba(#000000, $alpha: 0.3) !default;
+$black40: rgba(#000000, $alpha: 0.4) !default;
+$black50: rgba(#000000, $alpha: 0.5) !default;
+$black60: rgba(#000000, $alpha: 0.6) !default;
+$black70: rgba(#000000, $alpha: 0.7) !default;
+$black75: rgba(#000000, $alpha: 0.75) !default;
+$black80: rgba(#000000, $alpha: 0.8) !default;
+$black90: rgba(#000000, $alpha: 0.9) !default;
 $black: #000000 !default;
 $system_error: #d53430 !default;
 $system_warning: #ef9500 !default;
@@ -421,8 +421,8 @@ $ui_bg_highlight_gray25: $gray25;
 $ui_bg_highlight: $orange50;
 
 // Border
-$ui_border_thumbnail: $black_alpha5;
-$ui_border_contents: $black_alpha15;
+$ui_border_thumbnail: $black05;
+$ui_border_contents: $black15;
 
 // Icon_Brand
 $ui_icon_brand_enabled: $orange500;
@@ -436,32 +436,32 @@ $ui_icon_brand_disabled: $gray300;
 $ui_icon_01_enabled: $gray900;
 $ui_icon_01_hover: $gray600;
 $ui_icon_01_pressed: $black;
-$ui_icon_01_focused: $gray900;
-$ui_icon_01_selected: $orange500;
+$ui_icon_01_focused: $brand500;
+$ui_icon_01_selected: $black;
 $ui_icon_01_disabled: $gray300;
 
 // Icon_Secondary
 $ui_icon_02_enabled: $gray700;
 $ui_icon_02_hover: $gray500;
 $ui_icon_02_pressed: $gray900;
-$ui_icon_02_focused: $gray700;
-$ui_icon_02_selected: $orange500;
+$ui_icon_02_focused: $brand500;
+$ui_icon_02_selected: $gray800;
 $ui_icon_02_disabled: $gray300;
 
 // Icon_Tertiary
 $ui_icon_03_enabled: $gray500;
 $ui_icon_03_hover: $gray300;
 $ui_icon_03_pressed: $gray700;
-$ui_icon_03_focused: $gray500;
-$ui_icon_03_selected: $orange500;
+$ui_icon_03_focused: $brand500;
+$ui_icon_03_selected: $gray500;
 $ui_icon_03_disabled: $gray300;
 
 // Icon_Quaternary
 $ui_icon_04_enabled: $gray400;
 $ui_icon_04_hover: $gray200;
 $ui_icon_04_pressed: $gray600;
-$ui_icon_04_focused: $gray400;
-$ui_icon_04_selected: $orange500;
+$ui_icon_04_focused: $brand500;
+$ui_icon_04_selected: $gray300;
 $ui_icon_04_disabled: $gray200;
 
 // Icon_Quinary
@@ -473,21 +473,21 @@ $ui_icon_05_selected: $orange500;
 $ui_icon_05_disabled: $gray100;
 
 // Icon_Black
-$ui_icon_black_enabled: $gray700;
-$ui_icon_black_hover: $gray500;
-$ui_icon_black_pressed: $gray900;
-$ui_icon_black_focused: $gray800;
-$ui_icon_black_selected: $brand500;
-$ui_icon_black_disabled: $gray300;
+$ui_icon_gray_enabled: $gray700;
+$ui_icon_gray_hover: $gray500;
+$ui_icon_gray_pressed: $gray900;
+$ui_icon_gray_focused: $brand500;
+$ui_icon_gray_selected: $gray800;
+$ui_icon_gray_disabled: $gray300;
 
 // Icon_White
 $ui_icon_white_enabled: $white;
-$ui_icon_white_hover: $white_alpha80;
-$ui_icon_white_pressed: $white_alpha60;
+$ui_icon_white_hover: $white80;
+$ui_icon_white_pressed: $white60;
 $ui_icon_white_focused: $orange500;
-$ui_icon_white_selected: $white_alpha90;
+$ui_icon_white_selected: $white90;
 $ui_icon_white_disabled: $gray300;
-$ui_icon_white_disabled_white: $white_alpha40;
+$ui_icon_white_disabled_white: $white40;
 
 // Icon_System
 $ui_icon_error: $system_error;
@@ -500,7 +500,7 @@ $ui_button_01_enabled: $orange500;
 $ui_button_01_hover: $orange400;
 $ui_button_01_pressed: $orange700;
 $ui_button_01_focused: $orange500;
-$ui_button_01_focused_border1: $white;
+$ui_button_01_focused_border1: $bluegray800;
 $ui_button_01_focused_border2: $orange500;
 $ui_button_01_disabled: $gray75;
 
@@ -529,7 +529,7 @@ $ui_button_04_pressed: $gray150;
 $ui_button_04_focused: $gray50;
 $ui_button_04_focused_border1: $white;
 $ui_button_04_focused_border2: $gray500;
-$ui_button_04_disabled: $gray75;
+$ui_button_04_disabled: $gray50;
 
 // Button_Outline
 $ui_button_05_enabled: $white;
@@ -548,20 +548,21 @@ $ui_button_white_f_enabled: $white;
 $ui_button_white_f_hover: $gray50;
 $ui_button_white_f_pressed: $gray100;
 $ui_button_white_f_focused: $white;
-$ui_button_white_f_focused_border: $black_alpha25;
+$ui_button_white_f_focused_border1: $white;
+$ui_button_white_f_focused_border2: $black25;
 $ui_button_white_f_disabled: $gray75;
 
 // Button_White(ghost)
 $ui_button_white_g_enabled: transparent;
 $ui_button_white_g_enabled_border: $white;
-$ui_button_white_g_hover: $white_alpha20;
+$ui_button_white_g_hover: $white20;
 $ui_button_white_g_hover_border: $white;
-$ui_button_white_g_pressed: $white_alpha10;
+$ui_button_white_g_pressed: $white10;
 $ui_button_white_g_pressed_border: $white;
-$ui_button_white_g_focused: $white_alpha20;
+$ui_button_white_g_focused: $white20;
 $ui_button_white_g_focused_border: $white;
 $ui_button_white_g_disabled: transparent;
-$ui_button_white_g_disabled_border: $white_alpha20;
+$ui_button_white_g_disabled_border: $white20;
 
 // Form_Line
 $ui_form_line_enabled: $white;
@@ -584,7 +585,7 @@ $ui_form_line_disabled_border: $gray200;
 // Form_Fill
 $ui_form_fill_enabled: $gray50;
 $ui_form_fill_hover: $gray75;
-$ui_form_fill_focused: $gray75;
+$ui_form_fill_focused: $gray50;
 $ui_form_fill_error: $gray50;
 $ui_form_fill_error_border: $system_error;
 $ui_form_fill_warning: $gray50;
@@ -596,19 +597,19 @@ $ui_form_fill_informational_border: $system_info;
 $ui_form_fill_disabled: $gray50;
 
 // Form_White
-$ui_form_white_enabled: $white_alpha20;
-$ui_form_white_hover: $white_alpha30;
-$ui_form_white_focused: $white_alpha20;
+$ui_form_white_enabled: $white20;
+$ui_form_white_hover: $white30;
+$ui_form_white_focused: $white20;
 $ui_form_white_focused_border: $white;
-$ui_form_white_error: $white_alpha20;
+$ui_form_white_error: $white20;
 $ui_form_white_error_border: $system_error;
-$ui_form_white_warning: $white_alpha20;
+$ui_form_white_warning: $white20;
 $ui_form_white_warning_border: $system_warning;
-$ui_form_white_success: $white_alpha20;
+$ui_form_white_success: $white20;
 $ui_form_white_success_border: $system_success;
-$ui_form_white_informational: $white_alpha20;
+$ui_form_white_informational: $white20;
 $ui_form_white_informational_border: $system_info;
-$ui_form_white_disabled: $white_alpha20;
+$ui_form_white_disabled: $white20;
 
 // Font
 $ui_text_01: $gray900;
@@ -618,7 +619,7 @@ $ui_text_04: $gray400;
 $ui_text_brand: $orange500;
 $ui_text_gray: $gray900;
 $ui_text_white_01: $white;
-$ui_text_white_02: $white_alpha60;
+$ui_text_white_02: $white60;
 $ui_text_error: $system_error;
 $ui_text_warning: $system_warning;
 $ui_text_success: $system_success;
@@ -630,48 +631,48 @@ $ui_text_disabled: $gray300;
 $ui_text_disabled_surface: $gray300;
 
 // Divider_black
-$ui_divider_black_01: $black_alpha15;
-$ui_divider_black_02: $black_alpha10;
-$ui_divider_black_03: $black_alpha5;
+$ui_divider_black_01: $black15;
+$ui_divider_black_02: $black10;
+$ui_divider_black_03: $black05;
 
 // Divider_White
-$ui_divider_white_01: $white_alpha15;
-$ui_divider_white_02: $white_alpha10;
-$ui_divider_white_03: $white_alpha5;
+$ui_divider_white_01: $white15;
+$ui_divider_white_02: $white10;
+$ui_divider_white_03: $white05;
 
 // Shadow
-$ui_shadow_01: $black_alpha5;
-$ui_shadow_02: $black_alpha10;
-$ui_shadow_03: $black_alpha15;
-$ui_shadow_04: $black_alpha20;
+$ui_shadow_01: $black05;
+$ui_shadow_02: $black10;
+$ui_shadow_03: $black15;
+$ui_shadow_04: $black20;
 
 // Overlays _ Black
-$ui_overlay_b_d01: $black_alpha75;
-$ui_overlay_b_d02: $black_alpha50;
-$ui_overlay_b_d03: $black_alpha15;
-$ui_overlay_b_b10_01: $black_alpha75;
-$ui_overlay_b_b10_02: $black_alpha50;
-$ui_overlay_b_b10_03: $black_alpha15;
-$ui_overlay_b_b20_01: $black_alpha75;
-$ui_overlay_b_b20_02: $black_alpha50;
-$ui_overlay_b_b20_03: $black_alpha15;
-$ui_overlay_b_b40_01: $black_alpha75;
-$ui_overlay_b_b40_02: $black_alpha50;
-$ui_overlay_b_b40_03: $black_alpha15;
+$ui_overlay_b_d01: $black75;
+$ui_overlay_b_d02: $black50;
+$ui_overlay_b_d03: $black15;
+$ui_overlay_b_b10_01: $black75;
+$ui_overlay_b_b10_02: $black50;
+$ui_overlay_b_b10_03: $black15;
+$ui_overlay_b_b20_01: $black75;
+$ui_overlay_b_b20_02: $black50;
+$ui_overlay_b_b20_03: $black15;
+$ui_overlay_b_b40_01: $black75;
+$ui_overlay_b_b40_02: $black50;
+$ui_overlay_b_b40_03: $black15;
 
 // Overlays _ White
-$ui_overlay_w_d01: $white_alpha75;
-$ui_overlay_w_d02: $white_alpha50;
-$ui_overlay_w_d03: $white_alpha15;
-$ui_overlay_w_b10_01: $white_alpha75;
-$ui_overlay_w_b10_02: $white_alpha50;
-$ui_overlay_w_b10_03: $white_alpha15;
-$ui_overlay_w_b20_01: $white_alpha75;
-$ui_overlay_w_b20_02: $white_alpha50;
-$ui_overlay_w_b20_03: $white_alpha15;
-$ui_overlay_w_b40_01: $white_alpha75;
-$ui_overlay_w_b40_02: $white_alpha50;
-$ui_overlay_w_b40_03: $white_alpha15;
+$ui_overlay_w_d01: $white75;
+$ui_overlay_w_d02: $white50;
+$ui_overlay_w_d03: $white15;
+$ui_overlay_w_b10_01: $white75;
+$ui_overlay_w_b10_02: $white50;
+$ui_overlay_w_b10_03: $white15;
+$ui_overlay_w_b20_01: $white75;
+$ui_overlay_w_b20_02: $white50;
+$ui_overlay_w_b20_03: $white15;
+$ui_overlay_w_b40_01: $white75;
+$ui_overlay_w_b40_02: $white50;
+$ui_overlay_w_b40_03: $white15;
 
 // Gradients _ Black
 // $ui_gradients_b_b01: linear_gradient(to bottom, transparent 80%, #000000);
@@ -682,7 +683,7 @@ $ui_overlay_w_b40_03: $white_alpha15;
 
 // Skeleton
 $ui_skeleton_white: $white;
-$ui_skeleton_gray: $black_alpha5;
+$ui_skeleton_gray: $black05;
 
 /* ColorVariable > InteractiveColor */
 // Primary Color
@@ -692,7 +693,7 @@ $interactive_01_hover: $orange400;
 $interactive_01_pressed: $orange700;
 $interactive_01_focus: $orange500;
 $interactive_01_selected: $orange600;
-$interactive_01_disabled: $gray200;
+$interactive_01_disabled: $gray150;
 
 // Secondary Color
 $interactive_02_highlight: $gray25;
@@ -704,10 +705,10 @@ $interactive_02_selected: $gray400;
 $interactive_02_disabled: $gray200;
 
 // Gray
-$interactive_03_hover: $black_alpha5;
-$interactive_03_pressed: $black_alpha10;
-$interactive_03_focused: $black_alpha8;
-$interactive_03_selected: $black_alpha10;
+$interactive_03_hover: $black05;
+$interactive_03_pressed: $black10;
+$interactive_03_focused: $black08;
+$interactive_03_selected: $black10;
 
 // state
 $elementState: (
@@ -801,12 +802,12 @@ $colorDatabaseIconQuinary: (
 
 // Icon_Black
 $colorDatabaseIconBlack: (
-    ui_icon_black_enabled: $ui_icon_black_enabled,
-    ui_icon_black_hover: $ui_icon_black_hover,
-    ui_icon_black_pressed: $ui_icon_black_pressed,
-    ui_icon_black_focused: $ui_icon_black_focused,
-    ui_icon_black_selected: $ui_icon_black_selected,
-    ui_icon_black_disabled: $ui_icon_black_disabled,
+    ui_icon_gray_enabled: $ui_icon_gray_enabled,
+    ui_icon_gray_hover: $ui_icon_gray_hover,
+    ui_icon_gray_pressed: $ui_icon_gray_pressed,
+    ui_icon_gray_focused: $ui_icon_gray_focused,
+    ui_icon_gray_selected: $ui_icon_gray_selected,
+    ui_icon_gray_disabled: $ui_icon_gray_disabled,
 );
 
 // Icon_White
@@ -891,7 +892,8 @@ $colorDatabaseButtonWhiteFill: (
     ui_button_white_f_hover: $ui_button_white_f_hover,
     ui_button_white_f_pressed: $ui_button_white_f_pressed,
     ui_button_white_f_focused: $ui_button_white_f_focused,
-    ui_button_white_f_focused_border: $ui_button_white_f_focused_border,
+    ui_button_white_f_focused_border1: $ui_button_white_f_focused_border1,
+    ui_button_white_f_focused_border2: $ui_button_white_f_focused_border2,
     ui_button_white_f_disabled: $ui_button_white_f_disabled,
 );
 
@@ -990,9 +992,9 @@ $colorDatabaseDivider: (
 );
 // Divider_White
 $colorDatabaseDividerWhite: (
-    ui_divider_white_01: $white_alpha15,
-    ui_divider_white_02: $white_alpha10,
-    ui_divider_white_03: $white_alpha5,
+    ui_divider_white_01: $white15,
+    ui_divider_white_02: $white10,
+    ui_divider_white_03: $white05,
 );
 
 // Shadow
@@ -1130,20 +1132,20 @@ $colorDatabasePalette: (
     navy700: $navy700,
     navy800: $navy800,
     navy900: $navy900,
-    white_alpha5: $white_alpha5,
-    white_alpha8: $white_alpha8,
-    white_alpha10: $white_alpha10,
-    white_alpha15: $white_alpha15,
-    white_alpha20: $white_alpha20,
-    white_alpha25: $white_alpha25,
-    white_alpha30: $white_alpha30,
-    white_alpha40: $white_alpha40,
-    white_alpha50: $white_alpha50,
-    white_alpha60: $white_alpha60,
-    white_alpha70: $white_alpha70,
-    white_alpha75: $white_alpha75,
-    white_alpha80: $white_alpha80,
-    white_alpha90: $white_alpha90,
+    white5: $white05,
+    white8: $white08,
+    white10: $white10,
+    white15: $white15,
+    white20: $white20,
+    white25: $white25,
+    white30: $white30,
+    white40: $white40,
+    white50: $white50,
+    white60: $white60,
+    white70: $white70,
+    white75: $white75,
+    white80: $white80,
+    white90: $white90,
     white: $white,
     gray25: $gray25,
     gray50: $gray50,
@@ -1171,20 +1173,20 @@ $colorDatabasePalette: (
     bluegray800: $bluegray800,
     bluegray850: $bluegray850,
     bluegray900: $bluegray900,
-    black_alpha5: $black_alpha5,
-    black_alpha8: $black_alpha8,
-    black_alpha10: $black_alpha10,
-    black_alpha15: $black_alpha15,
-    black_alpha20: $black_alpha20,
-    black_alpha25: $black_alpha25,
-    black_alpha30: $black_alpha30,
-    black_alpha40: $black_alpha40,
-    black_alpha50: $black_alpha50,
-    black_alpha60: $black_alpha60,
-    black_alpha70: $black_alpha70,
-    black_alpha75: $black_alpha75,
-    black_alpha80: $black_alpha80,
-    black_alpha90: $black_alpha90,
+    black5: $black05,
+    black8: $black08,
+    black10: $black10,
+    black15: $black15,
+    black20: $black20,
+    black25: $black25,
+    black30: $black30,
+    black40: $black40,
+    black50: $black50,
+    black60: $black60,
+    black70: $black70,
+    black75: $black75,
+    black80: $black80,
+    black90: $black90,
     black: $black,
     system_error: $system_error,
     system_warning: $system_warning,

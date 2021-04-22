@@ -184,6 +184,7 @@
                     @include iconSize;
                 }
             }
+            &.selected:active,
             &:active {
                 font-weight: bold;
 

@@ -15,7 +15,7 @@
     left: 0;
     overflow-y: hidden;
     z-index: z-index.$zindex-modal-backdrop;
-    background: color.$black_alpha50;
+    background: color.$black50;
     &.absolute {
         position: absolute;
     }
@@ -196,7 +196,7 @@
             top: 50%;
             width: 0;
             height: 0;
-            background-color: color.$black_alpha5;
+            background-color: color.$black05;
             border-radius: 3.6rem;
         }
 

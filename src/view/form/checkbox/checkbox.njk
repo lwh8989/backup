@@ -1,5 +1,5 @@
 {% extends "_include/layout/guide/guide.njk" %}
-{% import "_include/element/badge.njk" as badge %}
+{% import "_include/form/checkbox.njk" as checkbox %}
 
 <!-- styles -->
 {% block styles %}{% endblock %}
@@ -8,60 +8,124 @@
 {% block content %}
     <!-- [D]   -->
     <div class="guide full">
-        <h1 class="guide-tit">Radio</h1>
+        <h1 class="guide-tit">Form - Checkbox</h1>
 
         <!-- dropdown -->
         <div class="guide-layer">
             <div class="guide-section">
-                <h2 class="guide-section-tit">Badge</h2>
+                <h2 class="guide-section-tit">Checkbox</h2>
 
                 <div>
                     <div class="guide-flex ratio gap">
                         <div>
-                            <h3 class="guide-section-stit">Fill</h3>
-
-                            <div class="guide-desc-wrap">
-                                <div class="guide-desc">H 28</div>
-                                <div class="guide-desc">H 20</div>
-                            </div>
-
-                            <div class="guide-state-wrap">
-                                <div class="guide-flex ratio gap">
-                                    <div>
-                                        {{ badge.base(height="h28", txt="NEW", bgColor="orange") }}
-                                        {{ badge.base(height="h28", txt="SALE", bgColor="red") }}
-                                        {{ badge.base(height="h28", txt="UPDATE", bgColor="purple") }}
-                                        {{ badge.base(height="h28", txt="VR", bgColor="blue") }}
-                                        {{ badge.base(height="h28", txt="DEMO", bgColor="gray") }}
-                                        {{ badge.base(height="h28", txt="DLC", bgColor="gray") }}
-                                    </div>
-                                    <div>
-                                        {{ badge.base(height="h20", txt="NEW", bgColor="orange") }}
-                                        {{ badge.base(height="h20", txt="SALE", bgColor="red") }}
-                                        {{ badge.base(height="h20", txt="UPDATE", bgColor="purple") }}
-                                        {{ badge.base(height="h20", txt="VR", bgColor="blue") }}
-                                        {{ badge.base(height="h20", txt="DEMO", bgColor="gray") }}
-                                        {{ badge.base(height="h20", txt="DLC", bgColor="gray") }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="guide-section-stit">Fill_round</h3>
+                            <h3 class="guide-section-stit">Square</h3>
 
                             <div class="guide-desc-wrap">
                                 <div class="guide-desc">H 16</div>
+                                <div class="guide-desc">H 20</div>
+                                <div class="guide-desc">H 24</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-flex ratio gap">
+                                    <div style="text-align: center;">
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", label="Checkbox", state="" ) }}
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", label="Checkbox", state="checked" ) }}
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", label="Checkbox", state="disabled" ) }}
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", label="Checkbox", state="checked disabled" ) }}
+                                    </div>
+                                    <div style="text-align: center;">
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", label="Checkbox", state="" ) }}
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", label="Checkbox", state="checked" ) }}
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", label="Checkbox", state="disabled" ) }}
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", label="Checkbox", state="checked disabled" ) }}
+                                    </div>
+                                    <div style="text-align: center;">
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", label="Checkbox", state="" ) }}
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", label="Checkbox", state="checked" ) }}
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", label="Checkbox", state="disabled" ) }}
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", label="Checkbox", state="checked disabled" ) }}
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="guide-state-wrap">
                                 <div class="guide-flex ratio gap">
                                     <div>
-                                        {{ badge.base(height="h16", round="round", txt="9", bgColor="orange") }}
-                                        {{ badge.base(height="h16", round="round", txt="99", bgColor="orange") }}
-                                        {{ badge.base(height="h16", round="round", txt="99+", bgColor="orange") }}
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square", state="" ) }}
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square", state="checked" ) }}
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square", state="disabled" ) }}
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square", state="checked disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square", state="" ) }}
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square", state="checked" ) }}
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square", state="disabled" ) }}
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square", state="checked disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square", state="" ) }}
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square", state="checked" ) }}
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square", state="disabled" ) }}
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square", state="checked disabled" ) }}
                                     </div>
                                 </div>
                             </div>
+
+                            <h3 class="guide-section-stit">Round</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 16</div>
+                                <div class="guide-desc">H 20</div>
+                                <div class="guide-desc">H 24</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-flex ratio gap">
+                                    <div style="text-align: center;">
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", label="Checkbox Round", state="" ) }}
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", label="Checkbox Round", state="checked" ) }}
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", label="Checkbox Round", state="disabled" ) }}
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", label="Checkbox Round", state="checked disabled" ) }}
+                                    </div>
+                                    <div style="text-align: center;">
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", label="Checkbox Round", state="" ) }}
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", label="Checkbox Round", state="checked" ) }}
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", label="Checkbox Round", state="disabled" ) }}
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", label="Checkbox Round", state="checked disabled" ) }}
+                                    </div>
+                                    <div style="text-align: center;">
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", label="Checkbox Round", state="" ) }}
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", label="Checkbox Round", state="checked" ) }}
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", label="Checkbox Round", state="disabled" ) }}
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", label="Checkbox Round", state="checked disabled" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="" ) }}
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="checked" ) }}
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="disabled" ) }}
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="checked disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="" ) }}
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="checked" ) }}
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="disabled" ) }}
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="checked disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="" ) }}
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="checked" ) }}
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="disabled" ) }}
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="checked disabled" ) }}
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

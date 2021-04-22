@@ -15,10 +15,14 @@
 @import "./helpers/z-index";
 
 /* element */
+@import "./badge";
+
+/* form */
 @import "./button";
 @import "./dropdown";
 @import "./input";
-@import "./badge";
+@import "./checkbox";
+@import "./radio";
 
 /* module */
 @import "./dialog";

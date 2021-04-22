@@ -1,1 +1,185 @@
-/* checkbox 이원호 */
+@use "./mixin/mixin";
+@use "./radius";
+@use "./color";
+@use "./font";
+@use "./space";
+
+$stds-form-size-S: 1.6rem;
+$stds-form-size-M: 2rem;
+$stds-form-size-L: 2.4rem;
+
+/* checkbox */
+.element-checkbox {
+    position: relative;
+    display: flex;
+    &.checkbox-square {
+        input[type='checkbox'] {
+            position: relative;
+            background: color.$ui_form_line_enabled;
+            border: solid 1px color.$ui_form_line_enabled_border;
+            border-radius: radius.$radius-XS;
+            cursor: pointer;
+        }
+        
+    }
+    &.checkbox-round {
+        input[type='checkbox'] {
+            position: relative;
+            background: color.$ui_form_line_enabled;
+            border: solid 1px color.$ui_form_line_enabled_border;
+            border-radius: radius.$Radius-50;
+            cursor: pointer;
+        }
+    }
+    input[type='checkbox']:after {
+        content: "";    
+        position: absolute;
+        top: 0.1rem;
+        right: 0.1rem;
+        bottom: 0.1rem;
+        left: 0.1rem;
+        display: block;
+        font-family: 'StoveFontIcon' !important;
+        color: color.$ui_icon_white_enabled;
+    }
+    input[type='checkbox']:checked:after {
+        content: "\e96d";    
+        position: absolute;
+        top: 0.1rem;
+        right: 0.1rem;
+        bottom: 0.1rem;
+        left: 0.1rem;
+        display: block;
+        font-family: 'StoveFontIcon' !important;
+        color: color.$ui_icon_white_enabled;
+    }
+    input[type='checkbox']:hover {
+        background: color.$ui_form_line_hover;
+        border: solid 1px color.$ui_form_line_hover_border;
+    }
+    input[type='checkbox']:disabled {
+        background: color.$ui_form_line_disabled;
+        border: solid 1px color.$ui_form_line_disabled_border;
+        cursor: not-allowed;
+    }
+    input[type='checkbox']:checked {
+        background: color.$ui_icon_brand_enabled;
+        border: solid 1px color.$ui_icon_brand_enabled;
+    }
+    input[type='checkbox']:checked:hover {
+        background: color.$ui_icon_brand_hover;
+        border: solid 1px color.$ui_icon_brand_hover;
+    }
+    input[type='checkbox']:checked:disabled {
+        background: color.$ui_icon_brand_disabled;
+        border: solid 1px color.$ui_icon_brand_disabled;
+        cursor: not-allowed;
+    }
+    label {
+        display: none;
+    }
+    &.checkbox-text {
+        label {
+            display: inline-flex;
+            color: color.$ui_text_02;
+        }
+    }
+    &.h16 {
+        &.checkbox-square {
+            input[type='checkbox'] {
+                width: $stds-form-size-S;
+                height: $stds-form-size-S;
+                border-radius: radius.$radius-XS;
+            }
+            
+        }
+        &.checkbox-round {
+            input[type='checkbox'] {
+                width: $stds-form-size-S;
+                height: $stds-form-size-S;
+                border-radius: radius.$Radius-50;
+            }
+        }
+        &.checkbox-text {
+            label {
+                font-size: 1.3rem;
+                margin-left: space.$stds-spacing-8;
+                line-height: 1.6rem;
+            }
+        }
+        input[type='checkbox']:after {
+            font-size: 1.2rem;
+        }
+        input[type='checkbox']:checked:after {
+            font-size: 1.2rem;
+        }
+    }
+    &.h20 {
+        &.checkbox-square {
+            input[type='checkbox'] {
+                width: $stds-form-size-M;
+                height: $stds-form-size-M;
+                border-radius: radius.$radius-XS;
+            }
+            
+        }
+        &.checkbox-round {
+            input[type='checkbox'] {
+                width: $stds-form-size-M;
+                height: $stds-form-size-M;
+                border-radius: radius.$Radius-50;
+            }
+        }
+        &.checkbox-text {
+            label {
+                font-size: 1.5rem;
+                margin-left: space.$stds-spacing-12;
+                line-height: 2rem;
+            }
+        }
+        input[type='checkbox']:after {
+            font-size: 1.5rem;
+        }
+        input[type='checkbox']:checked:after {
+            font-size: 1.5rem;
+        }
+    }
+    &.h24 {
+        &.checkbox-square {
+            input[type='checkbox'] {
+                width: $stds-form-size-L;
+                height: $stds-form-size-L;
+                border-radius: radius.$radius-XS;
+            }
+            
+        }
+        &.checkbox-round {
+            input[type='checkbox'] {
+                width: $stds-form-size-L;
+                height: $stds-form-size-L ;
+                border-radius: radius.$Radius-50;
+            }
+        }
+        &.checkbox-text {
+            label {
+                font-size: 1.6rem;
+                margin-left: space.$stds-spacing-12;
+                line-height: 2.4rem;
+            }
+        }
+        input[type='checkbox']:after {
+            font-size: 1.9rem;
+        }
+        input[type='checkbox']:checked:after {
+            font-size: 1.9rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+

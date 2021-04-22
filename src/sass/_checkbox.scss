@@ -61,6 +61,9 @@ $stds-form-size-L: 2.4rem;
         background: color.$ui_form_line_disabled;
         border: solid 1px color.$ui_form_line_disabled_border;
         cursor: not-allowed;
+        + label {
+            cursor: not-allowed;
+        }
     }
     input[type='checkbox']:checked {
         background: color.$ui_icon_brand_enabled;
@@ -74,6 +77,9 @@ $stds-form-size-L: 2.4rem;
         background: color.$ui_icon_brand_disabled;
         border: solid 1px color.$ui_icon_brand_disabled;
         cursor: not-allowed;
+        + label {
+            cursor: not-allowed;
+        }
     }
     label {
         display: none;
@@ -82,6 +88,7 @@ $stds-form-size-L: 2.4rem;
         label {
             display: inline-flex;
             color: color.$ui_text_02;
+            cursor: pointer;
         }
     }
     &.h16 {

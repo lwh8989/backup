@@ -1,17 +1,16 @@
-@use "./mixin/mixin";
 @use "./radius";
 @use "./color";
 @use "./font";
 @use "./space";
 
-$stds-form-size-S: 1.6rem;
-$stds-form-size-M: 2rem;
-$stds-form-size-L: 2.4rem;
+$stds-checkbox-size-S: 1.6rem;
+$stds-checkbox-size-M: 2rem;
+$stds-checkbox-size-L: 2.4rem;
 
 /* checkbox */
 .element-checkbox {
     position: relative;
-    display: flex;
+    display: inline-flex;
     &.checkbox-square {
         input[type='checkbox'] {
             position: relative;
@@ -94,16 +93,16 @@ $stds-form-size-L: 2.4rem;
     &.h16 {
         &.checkbox-square {
             input[type='checkbox'] {
-                width: $stds-form-size-S;
-                height: $stds-form-size-S;
+                width: $stds-checkbox-size-S;
+                height: $stds-checkbox-size-S;
                 border-radius: radius.$radius-XS;
             }
             
         }
         &.checkbox-round {
             input[type='checkbox'] {
-                width: $stds-form-size-S;
-                height: $stds-form-size-S;
+                width: $stds-checkbox-size-S;
+                height: $stds-checkbox-size-S;
                 border-radius: radius.$Radius-50;
             }
         }
@@ -124,16 +123,16 @@ $stds-form-size-L: 2.4rem;
     &.h20 {
         &.checkbox-square {
             input[type='checkbox'] {
-                width: $stds-form-size-M;
-                height: $stds-form-size-M;
+                width: $stds-checkbox-size-M;
+                height: $stds-checkbox-size-M;
                 border-radius: radius.$radius-XS;
             }
             
         }
         &.checkbox-round {
             input[type='checkbox'] {
-                width: $stds-form-size-M;
-                height: $stds-form-size-M;
+                width: $stds-checkbox-size-M;
+                height: $stds-checkbox-size-M;
                 border-radius: radius.$Radius-50;
             }
         }
@@ -154,16 +153,16 @@ $stds-form-size-L: 2.4rem;
     &.h24 {
         &.checkbox-square {
             input[type='checkbox'] {
-                width: $stds-form-size-L;
-                height: $stds-form-size-L;
+                width: $stds-checkbox-size-L;
+                height: $stds-checkbox-size-L;
                 border-radius: radius.$radius-XS;
             }
             
         }
         &.checkbox-round {
             input[type='checkbox'] {
-                width: $stds-form-size-L;
-                height: $stds-form-size-L ;
+                width: $stds-checkbox-size-L;
+                height: $stds-checkbox-size-L ;
                 border-radius: radius.$Radius-50;
             }
         }

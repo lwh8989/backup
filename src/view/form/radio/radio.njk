@@ -1,5 +1,5 @@
 {% extends "_include/layout/guide/guide.njk" %}
-{% import "_include/element/badge.njk" as badge %}
+{% import "_include/form/radio.njk" as radio %}
 
 <!-- styles -->
 {% block styles %}{% endblock %}
@@ -13,55 +13,67 @@
         <!-- dropdown -->
         <div class="guide-layer">
             <div class="guide-section">
-                <h2 class="guide-section-tit">Badge</h2>
+                <h2 class="guide-section-tit">Radio</h2>
 
                 <div>
                     <div class="guide-flex ratio gap">
                         <div>
-                            <h3 class="guide-section-stit">Fill</h3>
-
-                            <div class="guide-desc-wrap">
-                                <div class="guide-desc">H 28</div>
-                                <div class="guide-desc">H 20</div>
-                            </div>
-
-                            <div class="guide-state-wrap">
-                                <div class="guide-flex ratio gap">
-                                    <div>
-                                        {{ badge.base(height="h28", txt="NEW", bgColor="orange") }}
-                                        {{ badge.base(height="h28", txt="SALE", bgColor="red") }}
-                                        {{ badge.base(height="h28", txt="UPDATE", bgColor="purple") }}
-                                        {{ badge.base(height="h28", txt="VR", bgColor="blue") }}
-                                        {{ badge.base(height="h28", txt="DEMO", bgColor="gray") }}
-                                        {{ badge.base(height="h28", txt="DLC", bgColor="gray") }}
-                                    </div>
-                                    <div>
-                                        {{ badge.base(height="h20", txt="NEW", bgColor="orange") }}
-                                        {{ badge.base(height="h20", txt="SALE", bgColor="red") }}
-                                        {{ badge.base(height="h20", txt="UPDATE", bgColor="purple") }}
-                                        {{ badge.base(height="h20", txt="VR", bgColor="blue") }}
-                                        {{ badge.base(height="h20", txt="DEMO", bgColor="gray") }}
-                                        {{ badge.base(height="h20", txt="DLC", bgColor="gray") }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="guide-section-stit">Fill_round</h3>
+                            <h3 class="guide-section-stit">Base</h3>
 
                             <div class="guide-desc-wrap">
                                 <div class="guide-desc">H 16</div>
+                                <div class="guide-desc">H 20</div>
+                                <div class="guide-desc">H 24</div>
                             </div>
 
                             <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
                                 <div class="guide-flex ratio gap">
                                     <div>
-                                        {{ badge.base(height="h16", round="round", txt="9", bgColor="orange") }}
-                                        {{ badge.base(height="h16", round="round", txt="99", bgColor="orange") }}
-                                        {{ badge.base(height="h16", round="round", txt="99+", bgColor="orange") }}
+                                        {{ radio.base( height="h16", name="radio-01", styleClass="radio-round", label="Radio", state="", value="submit" ) }}
+                                        {{ radio.base( height="h16", name="radio-01", styleClass="radio-round", label="Radio", state="checked", value="submit" ) }}
+                                        {{ radio.base( height="h16", name="radio-01", styleClass="radio-round", label="Radio", state="disabled", value="submit" ) }}
+                                        {{ radio.base( height="h16", name="radio-01", styleClass="radio-round", label="Radio", state="checked disabled", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h20", name="radio-02", styleClass="radio-round", label="Radio", state="", value="submit" ) }}
+                                        {{ radio.base( height="h20", name="radio-02", styleClass="radio-round", label="Radio", state="checked", value="submit" ) }}
+                                        {{ radio.base( height="h20", name="radio-02", styleClass="radio-round", label="Radio", state="disabled", value="submit" ) }}
+                                        {{ radio.base( height="h20", name="radio-02", styleClass="radio-round", label="Radio", state="checked disabled", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h24", name="radio-03", styleClass="radio-round", label="Radio", state="", value="submit" ) }}
+                                        {{ radio.base( height="h24", name="radio-03", styleClass="radio-round", label="Radio", state="checked", value="submit" ) }}
+                                        {{ radio.base( height="h24", name="radio-03", styleClass="radio-round", label="Radio", state="disabled", value="submit" ) }}
+                                        {{ radio.base( height="h24", name="radio-03", styleClass="radio-round", label="Radio", state="checked disabled", value="submit" ) }}
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ radio.base( height="h16", name="radio-04", styleText="radio-text", styleClass="radio-round", label="Radio", state="", value="submit" ) }}
+                                        {{ radio.base( height="h16", name="radio-04", styleText="radio-text", styleClass="radio-round", label="Radio", state="checked", value="submit" ) }}
+                                        {{ radio.base( height="h16", name="radio-04", styleText="radio-text", styleClass="radio-round", label="Radio", state="disabled", value="submit" ) }}
+                                        {{ radio.base( height="h16", name="radio-04", styleText="radio-text", styleClass="radio-round", label="Radio", state="checked disabled", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h20", name="radio-05", styleText="radio-text", styleClass="radio-round", label="Radio", state="", value="submit" ) }}
+                                        {{ radio.base( height="h20", name="radio-05", styleText="radio-text", styleClass="radio-round", label="Radio", state="checked", value="submit" ) }}
+                                        {{ radio.base( height="h20", name="radio-05", styleText="radio-text", styleClass="radio-round", label="Radio", state="disabled", value="submit" ) }}
+                                        {{ radio.base( height="h20", name="radio-05", styleText="radio-text", styleClass="radio-round", label="Radio", state="checked disabled", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h24", name="radio-06", styleText="radio-text", styleClass="radio-round", label="Radio", state="", value="submit" ) }}
+                                        {{ radio.base( height="h24", name="radio-06", styleText="radio-text", styleClass="radio-round", label="Radio", state="checked", value="submit" ) }}
+                                        {{ radio.base( height="h24", name="radio-06", styleText="radio-text", styleClass="radio-round", label="Radio", state="disabled", value="submit" ) }}
+                                        {{ radio.base( height="h24", name="radio-06", styleText="radio-text", styleClass="radio-round", label="Radio", state="checked disabled", value="submit" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

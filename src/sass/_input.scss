@@ -17,6 +17,7 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
 
 .element-input-icon {
     @include mixin.flex($type: inline-flex, $y: center);
+    position: relative;
     padding-right: space.$stds-spacing-16;
 
     .element-input-wrap {
@@ -25,12 +26,21 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         flex: 1 100%;
         height: 100%;
 
-        input[type="text"] {
+        input {
             width: 100%;
             height: 100%;
+
+            @at-root .element-input-icon {
+                &.box-reverse {
+                    input {
+                        padding: 0;
+                    }
+                }
+            }
         }
     }
-    button {
+    & > button {
+        color: color.$gray500;
         margin-right: 0.8rem;
 
         &.ic-control-close-circle-fill {
@@ -45,9 +55,9 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
             margin-right: 0;
         }
 
-        &:hover {
-            color: color.$gray200;
-        }
+        // &:hover {
+        //     color: color.$gray200;
+        // }
     }
 
     &.disabled,
@@ -69,6 +79,8 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     }
     &.active {
         button {
+            color: color.$ui_icon_02_focused;
+
             &.ic-control-close-circle-fill {
                 display: block;
             }
@@ -80,13 +92,50 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     }
 
     &.filled {
-        border: 0;
-        background-color: color.$gray50;
+        border: 1px solid transparent;
+        background-color: color.$ui_form_fill_enabled;
 
         &.active,
         &:focus-within,
         &:hover {
-            background-color: color.$gray75;
+            background-color: color.$ui_form_fill_hover;
         }
+        &.active,
+        &:focus-within {
+            border: 1px solid color.$gray500;
+        }
+    }
+
+    // state colors
+    @each $name, $color in color.$elementState {
+        &.#{"" + $name + ""} {
+            border-color: $color;
+            border-width: 2px;
+
+            button {
+                color: $color !important;
+            }
+        }
+    }
+
+    &.box-reverse {
+        padding-left: space.$stds-spacing-16;
+    }
+    &.readonly {
+        &,
+        * {
+            &::selection {
+                user-select: none;
+            }
+        }
+    }
+    &.calendar {
+        &,
+        input {
+            cursor: pointer;
+        }
+    }
+    .ic-community-calendar-line {
+        margin-top: 1px;
     }
 }

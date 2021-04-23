@@ -34,12 +34,12 @@
 /* box-type */
 @mixin boxType(
     $width: auto,
-    $bgc: $ui_form_fill_enabled,
+    $bgc: $ui_form_line_enabled,
     $borderSize: 1px,
     $borderType: solid,
     $borderColor: $ui_form_line_enabled_border,
-    $borderColorActive: $ui_form_line_focused_border,
-    $radius: 4px
+    $borderColorActive: $ui_form_line_hover_border,
+    $radius: $radius-S
 ) {
     width: $width;
     background-color: $bgc;

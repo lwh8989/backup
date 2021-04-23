@@ -1,0 +1,112 @@
+@use "./radius";
+@use "./color";
+@use "./font";
+@use "./space";
+
+.element-switch {
+    position: relative;
+    display: inline-block;
+    .switch-input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .switch-round {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: color.$interactive_02_enabled;        
+        -webkit-transition: .4s;
+        transition: .4s;
+        &:before {
+            content: "";
+            position: absolute;
+            background-color: color.$ui_bg_surface_white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+    }
+    input:hover + .switch-round {
+        background-color: color.$interactive_02_hover;
+    }
+    input:disabled + .switch-round {
+        background-color: color.$interactive_02_disabled;
+        cursor: not-allowed;
+    }
+    input:disabled:hover + .switch-round {
+        background-color: color.$interactive_02_hover;
+        cursor: not-allowed;
+    }
+    input:checked + .switch-round {
+        background-color: color.$interactive_01_enabled;
+    }
+    input:checked:disabled + .switch-round {
+        background-color: color.$ui_button_01_enabled;
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    input:checked:hover + .switch-round {
+        background-color: color.$ui_button_01_hover;
+    }
+    input:checked + .switch-round:before {}
+    &.h24 {
+        width: 44px;
+        height: 24px;
+        .switch-round {
+            border-radius: 14px;
+            &:before {
+                top: 4px;
+                left: 4px;
+                width: 16px;
+                height: 16px;
+                border-radius: radius.$Radius-50;
+            }
+        }
+        input:checked + .switch-round:before {
+            -webkit-transform: translateX(18px);
+            -ms-transform: translateX(18px);
+            transform: translateX(18px);
+        }
+    }
+    &.h28 {
+        width: 52px;
+        height: 28px;
+        .switch-round {
+            border-radius: 14px;
+            &:before {
+                top: 4px;
+                left: 4px;
+                width: 20px;
+                height: 20px;
+                border-radius: radius.$Radius-50;
+            }
+        }
+        input:checked + .switch-round:before {
+            -webkit-transform: translateX(22px);
+            -ms-transform: translateX(22px);
+            transform: translateX(22px);
+        }
+    }
+    &.h32 {
+        width: 60px;
+        height: 32px;
+        .switch-round {
+            border-radius: 16px;
+            &:before {
+                top: 4px;
+                left: 4px;
+                width: 24px;
+                height: 24px;
+                border-radius: radius.$Radius-50;
+            }
+        }
+        input:checked + .switch-round:before {
+            -webkit-transform: translateX(22px);
+            -ms-transform: translateX(22px);
+            transform: translateX(22px);
+        }
+    }
+}

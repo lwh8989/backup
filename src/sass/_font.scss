@@ -6,7 +6,7 @@ $stdsTitle1: 5.4rem;
 $stdsTitle2: 4.2rem;
 $stdsTitle3: 3.2rem;
 $stdsTitle4: 2.4rem;
-$stdsTitle5: 2.0rem;
+$stdsTitle5: 2rem;
 $stdsTitle6: 1.8rem;
 $stdsTitle7: 1.6rem;
 $stdsTitle8: 1.4rem;
@@ -30,11 +30,12 @@ $stdsChips1: 1.3rem;
 $stdsChips2: 1.1rem;
 
 /* Font-weight */
-$stdsWeightBold : bold;
-$stdsWeightNormal : normal;
+$stdsWeightBold: bold;
+$stdsWeightNormal: normal;
 
 /* stds letter-spacing */
 $letterSpacing: -0.025em;
+$letterSpacing_5: -0.05rem;
 
 /* line-height */
 $stdsLineHeightL: 1.6;
@@ -84,7 +85,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include font.sdtxFamily($inter: 'Intel KR', $noto: 'Noto Sans KR');
+    @include font.sdtxFamily($inter: "Intel KR", $noto: "Noto Sans KR");
 }
 
 /* Chinese zh */
@@ -99,7 +100,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include font.sdtxFamily($inter: 'Intel SC', $noto: 'Noto Sans SC');
+    @include font.sdtxFamily($inter: "Intel SC", $noto: "Noto Sans SC");
 }
 
 /* Chinese zh-tw  */
@@ -114,7 +115,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include font.sdtxFamily($inter: 'Intel TC', $noto: 'Noto Sans TC');
+    @include font.sdtxFamily($inter: "Intel TC", $noto: "Noto Sans TC");
 }
 
 /* Japan */
@@ -129,7 +130,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include font.sdtxFamily($inter: 'Intel JP', $noto: 'Noto Sans JP');
+    @include font.sdtxFamily($inter: "Intel JP", $noto: "Noto Sans JP");
 }
 
 /* English */
@@ -144,7 +145,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include font.sdtxFamily($inter: 'Intel Global', $noto: null);
+    @include font.sdtxFamily($inter: "Intel Global", $noto: null);
 }
 
 /* French  */
@@ -159,7 +160,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include font.sdtxFamily($inter: 'Intel Global', $noto: null);
+    @include font.sdtxFamily($inter: "Intel Global", $noto: null);
 }
 
 /* Portugal */
@@ -174,7 +175,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include font.sdtxFamily($inter: 'Intel Global', $noto: null);
+    @include font.sdtxFamily($inter: "Intel Global", $noto: null);
 }
 
 /* Spanish */
@@ -189,7 +190,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include font.sdtxFamily($inter: 'Intel Global', $noto: null);
+    @include font.sdtxFamily($inter: "Intel Global", $noto: null);
 }
 
 /* German */
@@ -204,7 +205,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include font.sdtxFamily($inter: 'Intel Global', $noto: null);
+    @include font.sdtxFamily($inter: "Intel Global", $noto: null);
 }
 
 /* Thailand */
@@ -219,5 +220,5 @@ h3,
 h4,
 h5,
 h6 {
-    @include font.sdtxFamily($inter: 'Intel Thai', $noto: 'Noto Sans Thai');
+    @include font.sdtxFamily($inter: "Intel Thai", $noto: "Noto Sans Thai");
 }

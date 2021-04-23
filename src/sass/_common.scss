@@ -9,7 +9,7 @@
 }
 
 /* height = hNN */
-$elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
+$elementHeight: (4, 16, 20, 24, 28, 32, 36, 40, 44, 48, 56);
 
 @each $h in $elementHeight {
     // element height
@@ -20,8 +20,12 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
     @if $h < 40 {
         .#{"h" + $h + ""} {
             .element-select-txt {
-                margin-right: 0.8rem;
+                margin-right: $stds-spacing-8;
             }
+            .element-input-wrap {
+                padding-left: $stds-spacing-8;
+            }
+
             .element-select-button,
             .element-dropdown-button,
             &.element-input,
@@ -42,8 +46,12 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
     } @else {
         .#{"h" + $h + ""} {
             .element-select-txt {
-                margin-right: 1.2rem;
+                margin-right: $stds-spacing-16;
             }
+            .element-input-wrap {
+                padding-left: $stds-spacing-12;
+            }
+
             .element-select-button,
             .element-dropdown-button,
             &.element-input,
@@ -63,7 +71,7 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
         }
     }
 
-    @if $h >= 28 {
+    @if $h >= 24 {
         .#{"h" + $h + ""} {
             &.element-badge {
                 padding: 0 0.8rem;
@@ -83,6 +91,13 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
         .#{"h" + $h + ""} {
             &.element-badge {
                 padding: 0 0.4rem;
+            }
+        }
+    }
+    @if $h <= 4 {
+        .#{"h" + $h + ""} {
+            &.element-badge {
+                padding: 0 0.2rem;
             }
         }
     }
@@ -109,12 +124,16 @@ $elementHeight: (16, 20, 28, 32, 36, 40, 44, 48, 56);
 .box-type {
     @include boxType {
         &::placeholder {
-            color: $gray300;
+            color: $ui_text_placeholder;
         }
     }
     &.disabled,
     &:disabled {
         background-color: $ui_form_fill_disabled;
+    }
+
+    &.box-reverse {
+        flex-direction: row-reverse;
     }
 }
 .element-input:disabled,

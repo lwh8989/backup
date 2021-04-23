@@ -1,0 +1,65 @@
+{% extends "_include/layout/guide/guide.njk" %}
+{% import "_include/form/toggle.njk" as toggle %}
+
+<!-- styles -->
+{% block styles %}{% endblock %}
+
+<!-- styles -->
+{% block content %}
+    <!-- [D]   -->
+    <div class="guide full">
+        <h1 class="guide-tit">Toggle</h1>
+
+        <!-- dropdown -->
+        <div class="guide-layer">
+            <div class="guide-section">
+                <h2 class="guide-section-tit">Toggle</h2>
+
+                <div>
+                    <div class="guide-flex ratio gap">
+                        <div>
+                            <h3 class="guide-section-stit">Base</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 24</div>
+                                <div class="guide-desc">H 28</div>
+                                <div class="guide-desc">H 32</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Base</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ toggle.base( height="h24", state="" ) }}
+                                        {{ toggle.base( height="h24", state="checked" ) }}
+                                        {{ toggle.base( height="h24", state="disabled" ) }}
+                                        {{ toggle.base( height="h24", state="checked disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ toggle.base( height="h28", state="" ) }}
+                                        {{ toggle.base( height="h28", state="checked" ) }}
+                                        {{ toggle.base( height="h28", state="disabled" ) }}
+                                        {{ toggle.base( height="h28", state="checked disabled" ) }}
+                                    </div>
+                                    <div> 
+                                        {{ toggle.base( height="h32", state="" ) }}
+                                        {{ toggle.base( height="h32", state="checked" ) }}
+                                        {{ toggle.base( height="h32", state="disabled" ) }}
+                                        {{ toggle.base( height="h32", state="checked disabled" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %}{% endblock %}

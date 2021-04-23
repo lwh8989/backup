@@ -32,24 +32,16 @@ $stds-radio-size-L: 2.4rem;
     input[type='radio']:after {
         content: "";    
         position: absolute;
-        top: 0.1rem;
-        right: 0.1rem;
-        bottom: 0.1rem;
-        left: 0.1rem;
         display: block;
-        font-family: 'StoveFontIcon' !important;
-        color: color.$ui_icon_white_enabled;
+        background: color.$white;
+        border-radius: radius.$Radius-50;
     }
     input[type='radio']:checked:after {
-        content: "\e96d";    
+        content: "";    
         position: absolute;
-        top: 0.1rem;
-        right: 0.1rem;
-        bottom: 0.1rem;
-        left: 0.1rem;
         display: block;
-        font-family: 'StoveFontIcon' !important;
-        color: color.$ui_icon_white_enabled;
+        background: color.$white;
+        border-radius: radius.$Radius-50;
     }
     input[type='radio']:hover {
         background: color.$ui_form_line_hover;
@@ -116,10 +108,20 @@ $stds-radio-size-L: 2.4rem;
             }
         }
         input[type='radio']:after {
-            font-size: 1.2rem;
+            width: 8px;
+            height: 8px;
+            top: 0.3rem;
+            right: 0.3rem;
+            bottom: 0.3rem;
+            left: 0.3rem;
         }
         input[type='radio']:checked:after {
-            font-size: 1.2rem;
+            width: 8px;
+            height: 8px;
+            top: 0.3rem;
+            right: 0.3rem;
+            bottom: 0.3rem;
+            left: 0.3rem;
         }
     }
     &.h20 {
@@ -146,10 +148,20 @@ $stds-radio-size-L: 2.4rem;
             }
         }
         input[type='radio']:after {
-            font-size: 1.5rem;
+            width: 10px;
+            height: 10px;
+            top: 0.4rem;
+            right: 0.4rem;
+            bottom: 0.4rem;
+            left: 0.4rem;
         }
         input[type='radio']:checked:after {
-            font-size: 1.5rem;
+            width: 10px;
+            height: 10px;
+            top: 0.4rem;
+            right: 0.4rem;
+            bottom: 0.4rem;
+            left: 0.4rem;
         }
     }
     &.h24 {
@@ -176,10 +188,20 @@ $stds-radio-size-L: 2.4rem;
             }
         }
         input[type='radio']:after {
-            font-size: 1.9rem;
+            width: 12px;
+            height: 12px;
+            top: 0.5rem;
+            right: 0.5rem;
+            bottom: 0.5rem;
+            left: 0.5rem;
         }
         input[type='radio']:checked:after {
-            font-size: 1.9rem;
+            width: 12px;
+            height: 12px;
+            top: 0.5rem;
+            right: 0.5rem;
+            bottom: 0.5rem;
+            left: 0.5rem;
         }
     }
 }

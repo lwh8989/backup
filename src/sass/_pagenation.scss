@@ -11,7 +11,8 @@ $ui-button-pagination-hover : #fc6020;
     padding: 1.4rem 0;
     width: 100%;
     line-height: normal;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    color: #3a3a3a;
     text-align: center;
 }
 .pagination .stove-icon {
@@ -34,9 +35,9 @@ $ui-button-pagination-hover : #fc6020;
 .pagination a {
     position: relative;
     display: inline-block;
-    min-width: 2.4rem;
-    height: 2.4rem;
-    line-height: 2.4rem;
+    min-width: 3.2rem;
+    height: 3.2rem;
+    line-height: 3.2rem;
     padding: 0 0.7rem;
     color: $ui-button-pagination-enabled;
     border-radius: 1.8rem;
@@ -58,8 +59,8 @@ $ui-button-pagination-hover : #fc6020;
 .pagination a:hover::after {
     content: '';
     width: 100%;
-    height: 2.4rem;
-    border-radius: 1.2rem;
+    height: 3.2rem;
+    border-radius: 1.6rem;
     display: block;
     background-color: #eaeaea;
     position: absolute;
@@ -72,9 +73,16 @@ $ui-button-pagination-hover : #fc6020;
     z-index: 2;
 }
 .pagination a:hover span,
-.pagination a:active span{
+.pagination a:active span,
+.pagination a.active span{
     position: relative;
     z-index: 3;
+}
+.pagination a.stove-icon:hover::before {
+    color: #b3b3b3;
+}
+.pagination a.stove-icon:active::before {
+    color: #3a3a3a;
 }
 .pagination a.stove-icon::before{
     position: relative;
@@ -87,13 +95,24 @@ $ui-button-pagination-hover : #fc6020;
 .pagination .num-last:hover::after{
     content: none!important;
 }
-.pagination a:active,
 .pagination a.active{
-    color: $ui-button-pagination-hover;
+    color: #fff;
     font-weight: 700;
 }
 .pagination a.active {
     pointer-events: none;
+}
+.pagination a.active:after{
+    content: '';
+    width: 100%;
+    height: 3.2rem;
+    border-radius: 1.6rem;
+    display: block;
+    background-color: #fc6020;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /*pagination-bullet*/

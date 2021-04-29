@@ -57,6 +57,8 @@ $bg_trans_btn_focus: transparent;
     &.disabled,
     &:disabled {
         color: #cacaca !important;
+        pointer-events: unset;
+        cursor: no-drop;
     }
     &.disabled:focus,
     &:disabled:focus {

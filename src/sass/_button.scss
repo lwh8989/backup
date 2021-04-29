@@ -404,7 +404,7 @@ $bg_trans_btn_focus: transparent;
     &:disabled,
     &.disabled {
         background: $ui_button_05_disabled;
-        border-color: 1px solid $ui_button_05_disabled_border;
+        border: 1px solid $ui_button_05_disabled_border;
     }
 }
 // Button_White(fill)

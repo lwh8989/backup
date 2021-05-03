@@ -113,6 +113,17 @@ module.exports = async function () {
           test: /\.css$/,
           use: ["style-loader", "postcss-loader"],
         },
+        {
+          test: /\.(jpe?g|png|gif|svg)$/,
+          use : [
+            {
+              loader: 'url-loader',
+              options: {
+                name: 'images/[name].[ext]'
+              }
+            },
+          ]
+        }
       ],
     },
     plugins: [...templates],

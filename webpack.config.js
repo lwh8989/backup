@@ -127,17 +127,6 @@ module.exports = async function () {
               }
             },
           ]
-        },
-        {
-          test: /\.(jpe?g|png|gif|svg)$/,
-          use : [
-            {
-              loader: 'url-loader',
-              options: {
-                name: 'images/[name].[ext]'
-              }
-            },
-          ]
         }
       ],
     },

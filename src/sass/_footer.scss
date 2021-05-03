@@ -188,8 +188,11 @@ $ui-button-pagination-hover : #fc6020;
 .footer .footer-logo img{
     height: 4.4rem;
     margin-right: 3.2rem;
-
 }
+.footer .footer-logo .ci-logo {
+    background: url(../../static/image/ci/ci-sgs.png);
+}
+
 
 /* tab 세로형 확인 */
 .module-tab.tab-vertical {

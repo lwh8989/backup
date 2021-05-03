@@ -1,0 +1,315 @@
+{% extends "_include/layout/guide/guide.njk" %}
+{% import "_include/form/button.njk" as btn %}
+
+<!-- styles -->
+{% block styles %}
+{% endblock %}
+
+<!-- styles -->
+{% block content %}
+<!-- [D]   -->
+<div class="guide guide-button">
+    <p class="tit"><b>Stove Button Guide</b></p>
+    <p class="desc">- 버튼의 기본 height은 <strong>48px</strong></p>
+    <p class="desc">- 버튼의 사이즈(height) 변경 시 <strong>.size-N</strong> 클래스를 추가하여 적용</p>
+    <p class="desc">- 모든 버튼은 <strong>&lt button &gt</strong> 태그와 <strong>&lt a &gt</strong>태그 모두 적용 가능.</p>
+    <p class="desc">- <strong>&lt a &gt</strong>태그 disabled은 .disabled로 사용.</p>
+    <p class="desc"></p>
+
+    <div class="ex-button">
+        <ul>
+            <li>
+                {{ btn.base(colorClass='bg-primary', txt='button 태그') }}
+            </li>
+            <li>
+                <p class="list-tit">버튼 텍스트 타입 볼드/레귤러  볼드일떄 클래스 추가 - btn-txt-b </p>
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-large',fontClass='btn-txt-b', txt='볼드') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-large', txt='레귤러') }}
+            </li>
+            <li>
+                <p class="list-tit">버튼 라운드 </p>
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-large', txt='기본') }}
+                {{ btn.aLink(colorClass='bg-primary', sizeClass='size-large',shapeClass='btn-round', txt='btn-round') }}
+            </li>
+            <li>
+                <p class="list-tit">버튼 컬러 (bg-primary,bg-secondary,bg-gray,bg-inverse,bg-ghost,bg-trans)</p>
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-large', txt='bg-primary') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-large', txt='bg-primary', state='disabled' ) }}
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-large', txt='bg-secondary') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-large', txt='bg-secondary', state='disabled' ) }}
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-gray', sizeClass='size-large', txt='bg-gray') }}
+                {{ btn.base(colorClass='bg-gray', sizeClass='size-large', txt='bg-gray', state='disabled' ) }}
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-gray-main', sizeClass='size-large', txt='bg-gray-main') }}
+                {{ btn.base(colorClass='bg-gray-main', sizeClass='size-large', txt='bg-gray-main', state='disabled' ) }}
+            </li>
+            <!-- Button-Inverse 삭제 예정 <li>
+                <div style="background-color:#dfdfdf;padding:10px;display:inline-block">
+                    {{ btn.base(colorClass='bg-inverse', sizeClass='size-large', txt='bg-inverse') }}
+                    {{ btn.base(colorClass='bg-inverse', sizeClass='size-large', txt='bg-inverse', state='disabled' ) }}
+                </div> -->
+            </li>
+            <li>
+                <div style="background-color:#dfdfdf;padding:10px;display:inline-block">
+                    {{ btn.base(colorClass='bg-outline', sizeClass='size-large', txt='bg-outline') }}
+                    {{ btn.base(colorClass='bg-outline', sizeClass='size-large', txt='bg-outline', state='disabled' ) }}
+                </div>
+            </li>
+            <li>
+                <div style="background-color:#dfdfdf;padding:10px;display:inline-block">
+                    {{ btn.base(colorClass='bg-white', sizeClass='size-large', txt='bg-white') }}
+                    {{ btn.base(colorClass='bg-white', sizeClass='size-large', txt='bg-white', state='disabled' ) }}
+                </div>
+            </li>
+            <li>
+                <div style="background-color:#373e8a;padding:10px;display:inline-block">
+                    {{ btn.base(colorClass='bg-ghost', sizeClass='size-large', txt='bg-ghost') }}
+                    {{ btn.base(colorClass='bg-ghost', sizeClass='size-large', txt='bg-ghost', state='disabled' ) }}
+                </div>
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-trans', sizeClass='size-large', txt='bg-trans text Button') }}
+            </li>
+            <li>
+                <p class="list-tit">버튼 크기별 라운드 (xlarge:56px, large:48px, medium:44px, small:40px, xsmall:36px, chips32:32px, chips28:28px)</p>
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-xlarge', txt='X-large', shapeClass='btn-round') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-large', txt='large', shapeClass='btn-round') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-medium', txt='Medium', shapeClass='btn-round') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-small', txt='Small', shapeClass='btn-round') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-xsmall', txt='X-small', shapeClass='btn-round') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-chips32', txt='chips32', shapeClass='btn-round') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-chips28', txt='chips28', shapeClass='btn-round') }}
+            </li>
+
+<script type="text/plain" class="language-markup">
+    xlarge:56px, large:48px, medium:44px, small:40px, xsmall:36px, chips32:32px, chips28:28px
+    size-xlarge
+    <button class="element-btn btn-round bg-primary size-xlarge">
+        <span class="btn-txt">X-large</span>
+    </button>
+
+</script>
+
+            <li>
+                <p class="list-tit">버튼 크기별 (xlarge:56px, large:48px, medium:44px, small:40px, xsmall:36px, chips32:32px, chips28:28px)</p>
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-xlarge', txt='X-large') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-large', txt='large') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-medium', txt='Medium') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-small', txt='Small') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-xsmall', txt='X-small') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-chips32', txt='chips32') }}
+                {{ btn.base(colorClass='bg-primary', sizeClass='size-chips28', txt='chips28') }}
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-xlarge', txt='X-large') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-large', txt='large') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-medium', txt='Medium') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-small', txt='Small') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-xsmall', txt='X-small') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-chips32', txt='chips32') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-chips28', txt='chips28') }}
+            </li>
+
+<script type="text/plain" class="language-markup">
+    bg-primary Style
+    xlarge:56px, large:48px, medium:44px, small:40px, xsmall:36px, chips32:32px, chips28:28px
+    <button class="element-btn bg-primary size-xlarge">
+        <span class="btn-txt">X-large</span>
+    </button> 
+
+    bg-secondary Style
+    xlarge:56px, large:48px, medium:44px, small:40px, xsmall:36px, chips32:32px, chips28:28px
+    <button class="element-btn bg-secondary size-xlarge">
+        <span class="btn-txt">X-large</span>
+    </button>
+
+</script>
+
+            <li>
+                <p class="list-tit">버튼 아이콘 (아이콘 + 텍스트 : .with-icon ,아이콘 하나일 때: .only-icon 클래스)</p>
+            </li>
+            <li>
+                {{ btn.withIconInverse(colorClass='bg-secondary', sizeClass='size-xlarge', txt='X-large Button', withIcon='with-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}
+                {{ btn.withIconInverse(colorClass='bg-secondary', sizeClass='size-large', txt='large Button', withIcon='with-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}
+                {{ btn.withIconInverse(colorClass='bg-secondary', sizeClass='size-medium', txt='Medium Button', withIcon='with-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}
+                {{ btn.withIconInverse(colorClass='bg-secondary', sizeClass='size-small', txt='Small Button', withIcon='with-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}
+                {{ btn.withIconInverse(colorClass='bg-secondary', sizeClass='size-xsmall', txt='X-small Button', withIcon='with-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}
+                {{ btn.withIconInverse(colorClass='bg-secondary', sizeClass='size-chips32', txt='chips32', withIcon='with-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}
+                {{ btn.withIconInverse(colorClass='bg-secondary', sizeClass='size-chips28', txt='chips28', withIcon='with-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}
+            </li>
+            <li>
+                {{ btn.withIconInverse(colorClass='bg-secondary', sizeClass='size-xlarge', txt='X-large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIconInverse(colorClass='bg-secondary', sizeClass='size-large', txt='large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIconInverse(colorClass='bg-secondary', sizeClass='size-medium', txt='Medium Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIconInverse(colorClass='bg-secondary', sizeClass='size-small', txt='Small Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIconInverse(colorClass='bg-secondary', sizeClass='size-xsmall', txt='X-small Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIconInverse(colorClass='bg-secondary', sizeClass='size-chips32', txt='chips32', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIconInverse(colorClass='bg-secondary', sizeClass='size-chips28', txt='chips28', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+            </li>
+            <li>
+                {{ btn.withIcon(colorClass='bg-secondary', sizeClass='size-xlarge', txt='X-large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-secondary', sizeClass='size-large', txt='large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-secondary', sizeClass='size-medium', txt='Medium Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-secondary', sizeClass='size-small', txt='Small Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-secondary', sizeClass='size-xsmall', txt='X-small Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-secondary', sizeClass='size-chips32', txt='chips32', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-secondary', sizeClass='size-chips28', txt='chips28', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+            </li>
+            <li>
+                {{ btn.withIcon(colorClass='bg-gray', sizeClass='size-xlarge', txt='X-large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-gray', sizeClass='size-large', txt='large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-gray', sizeClass='size-medium', txt='Medium Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-gray', sizeClass='size-small', txt='Small Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-gray', sizeClass='size-xsmall', txt='X-small Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-gray', sizeClass='size-chips32', txt='chips32', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-gray', sizeClass='size-chips28', txt='chips28', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+            </li>
+            <li style="background: #f5f2f0;">
+                {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-xlarge', txt='X-large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-large', txt='large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-medium', txt='Medium Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-small', txt='Small Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-xsmall', txt='X-small Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-chips32', txt='chips32', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-chips28', txt='chips28', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+            </li>
+
+<script type="text/plain" class="language-markup">
+    with-icon
+    xlarge:56px, large:48px, medium:44px, small:40px, xsmall:36px, chips32:32px, chips28:28px
+
+    <button class="element-btn btn-round bg-secondary size-xlarge with-icon">
+        <span class="btn-txt">X-large Button</span>
+        <span class="stove-icon ic-community-write-fill" style=""></span>
+    </button>
+
+    <button class="element-btn bg-secondary size-xlarge with-icon">
+        <span class="btn-txt">X-large Button</span>
+        <span class="stove-icon ic-community-write-fill" style=""></span>
+    </button>
+
+    <button class="element-btn bg-secondary size-xlarge with-icon">
+        <span class="stove-icon ic-community-write-fill" style=""></span>
+        <span class="btn-txt">X-large Button</span>
+    </button>
+
+    <button class="element-btn bg-gray size-xlarge with-icon">
+        <span class="stove-icon ic-community-write-fill" style=""></span>
+        <span class="btn-txt">X-large Button</span>
+    </button>
+
+    <button class="element-btn bg-inverse size-xlarge with-icon">
+        <span class="stove-icon ic-community-write-fill" style=""></span>
+        <span class="btn-txt">X-large Button</span>
+    </button>
+
+</script>
+
+            <li>
+                <div style="background-color:#373e8a;padding:10px;display:inline-block">
+                {{ btn.withIcon(colorClass='bg-ghost', sizeClass='size-xlarge', txt='X-large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-ghost', sizeClass='size-large', txt='large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-ghost', sizeClass='size-medium', txt='Medium Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-ghost', sizeClass='size-small', txt='Small Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-ghost', sizeClass='size-xsmall', txt='X-small Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-ghost', sizeClass='size-chips32', txt='chips32', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.withIcon(colorClass='bg-ghost', sizeClass='size-chips28', txt='chips28', withIcon='with-icon', iconClass='ic-community-write-fill') }}
+                </div>
+            </li>
+            <li>
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-xlarge', txt='X-large', onlyIcon='only-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-large', txt='large', onlyIcon='only-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-medium', txt='Medium', onlyIcon='only-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-small', txt='Small', onlyIcon='only-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-xsmall', txt='X-small', onlyIcon='only-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-chips32', txt='chips32', onlyIcon='only-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-chips28', txt='chips28', onlyIcon='only-icon', iconClass='ic-community-write-fill', shapeClass='btn-round') }}
+            </li>
+            <li>
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-xlarge', txt='X-large', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-large', txt='large', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-medium', txt='Medium', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-small', txt='Small', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-xsmall', txt='X-small', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-chips32', txt='chips32', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-chips28', txt='chips28', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+            </li>
+
+<script type="text/plain" class="language-markup">
+    only-icon
+    xlarge:56px, large:48px, medium:44px, small:40px, xsmall:36px, chips32:32px, chips28:28px
+
+    <button class="element-btn btn-round bg-secondary size-xlarge only-icon">
+        <span class="stove-icon ic-community-write-fill" style=""></span>
+    </button>
+
+    <button class="element-btn bg-secondary size-xlarge only-icon">
+        <span class="stove-icon ic-community-write-fill" style=""></span>
+    </button>
+
+</script>
+
+            <li>
+                {{ btn.onlyIcon(colorClass='bg-inverse', sizeClass='size-xlarge', txt='X-large', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-inverse', sizeClass='size-large', txt='large', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-inverse', sizeClass='size-medium', txt='Medium', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-inverse', sizeClass='size-small', txt='Small', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-inverse', sizeClass='size-xsmall', txt='X-small', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-inverse', sizeClass='size-chips32', txt='chips32', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+                {{ btn.onlyIcon(colorClass='bg-inverse', sizeClass='size-chips28', txt='chips28', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
+            </li>
+            <li>
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-xlarge', txt='X-large', state='disabled') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-large', txt='large', state='disabled') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-medium', txt='Medium', state='disabled') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-small', txt='Small', state='disabled') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-xsmall', txt='X-small', state='disabled') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-chips32', txt='chips32', state='disabled') }}
+                {{ btn.base(colorClass='bg-secondary', sizeClass='size-chips28', txt='chips28', state='disabled') }}
+            </li>
+            <li>
+                {{ btn.aLink(colorClass='bg-secondary', sizeClass='size-xlarge', txt='X-large', state='disabled') }}
+                {{ btn.aLink(colorClass='bg-secondary', sizeClass='size-large', txt='large', state='disabled') }}
+                {{ btn.aLink(colorClass='bg-secondary', sizeClass='size-medium', txt='Medium', state='disabled') }}
+                {{ btn.aLink(colorClass='bg-secondary', sizeClass='size-small', txt='Small', state='disabled') }}
+                {{ btn.aLink(colorClass='bg-secondary', sizeClass='size-xsmall', txt='X-small', state='disabled') }}
+                {{ btn.aLink(colorClass='bg-secondary', sizeClass='size-chips32', txt='chips32', state='disabled') }}
+                {{ btn.aLink(colorClass='bg-secondary', sizeClass='size-chips28', txt='chips28', state='disabled') }}
+            </li>
+            <li>
+                {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-xlarge', txt='X-large 버튼', withIcon='with-icon', iconClass='ic-community-write-fill', state='disabled') }}
+                {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-large', txt='large 버튼', withIcon='with-icon', iconClass='ic-community-write-fill', state='disabled') }}
+                {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-medium', txt='Medium 버튼', withIcon='with-icon', iconClass='ic-community-write-fill', state='disabled') }}
+                {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-small', txt='Small 버튼', withIcon='with-icon', iconClass='ic-community-write-fill', state='disabled') }}
+                {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-xsmall', txt='X-small 버튼', withIcon='with-icon', iconClass='ic-community-write-fill', state='disabled') }}
+                {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-chips32', txt='chips32', withIcon='with-icon', iconClass='ic-community-write-fill', state='disabled') }}
+                {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-chips28', txt='chips28', withIcon='with-icon', iconClass='ic-community-write-fill', state='disabled') }}
+            </li>
+            
+        </ul>
+    </div>
+    
+</div>
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %} 
+{% endblock %}

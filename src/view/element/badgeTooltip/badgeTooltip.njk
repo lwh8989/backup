@@ -1,0 +1,216 @@
+{% extends "_include/layout/guide/guide.njk" %}
+
+{% import "_include/element/badge.njk" as badge %}
+{% import "_include/element/tooltip.njk" as tooltip %}
+
+<!-- styles -->
+{% block styles %}{% endblock %}
+
+<!-- styles -->
+{% block content %}
+    <!-- [D]   -->
+    <div class="guide full">
+        <h1 class="guide-tit">Badge &apm; Tooltip</h1>
+
+        <!-- dropdown -->
+        <div class="guide-layer">
+            <div class="guide-section">
+                <h2 class="guide-section-tit">Badge</h2>
+
+                <div>
+                    <div class="guide-flex ratio gap">
+                        <div>
+                            <h3 class="guide-section-stit">Fill</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 28</div>
+                                <div class="guide-desc">H 24</div>
+                                <div class="guide-desc">H 20</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">orange</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ badge.base(height="h28", txt="NEW", bgColor="orange") }}
+                                    </div>
+                                    <div>
+                                        {{ badge.base(height="h24", txt="NEW", bgColor="orange") }}
+                                    </div>
+                                    <div>
+                                        {{ badge.base(height="h20", txt="NEW", bgColor="orange") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">red</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ badge.base(height="h28", txt="SALE", bgColor="red") }}
+                                    </div>
+                                    <div>
+                                        {{ badge.base(height="h24", txt="SALE", bgColor="red") }}
+                                    </div>
+                                    <div>
+                                        {{ badge.base(height="h20", txt="SALE", bgColor="red") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">purple</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ badge.base(height="h28", txt="UPDATE", bgColor="purple") }}
+                                    </div>
+                                    <div>
+                                        {{ badge.base(height="h24", txt="UPDATE", bgColor="purple") }}
+                                    </div>
+                                    <div>
+                                        {{ badge.base(height="h20", txt="UPDATE", bgColor="purple") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">blue</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ badge.base(height="h28", txt="VR", bgColor="blue") }}
+                                    </div>
+                                    <div>
+                                        {{ badge.base(height="h24", txt="VR", bgColor="blue") }}
+                                    </div>
+                                    <div>
+                                        {{ badge.base(height="h20", txt="VR", bgColor="blue") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">gray</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ badge.base(height="h28", txt="DEMO", bgColor="gray") }}
+                                    </div>
+                                    <div>
+                                        {{ badge.base(height="h24", txt="DEMO", bgColor="gray") }}
+                                    </div>
+                                    <div>
+                                        {{ badge.base(height="h20", txt="DEMO", bgColor="gray") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="guide-section-stit">Fill_round</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 16</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ badge.base(height="h16", round="round", txt="N", bgColor="orange") }}
+                                        {{ badge.base(height="h16", round="round", txt="9", bgColor="orange") }}
+                                        {{ badge.base(height="h16", round="round", txt="99", bgColor="orange") }}
+                                        {{ badge.base(height="h16", round="round", txt="99+", bgColor="orange") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="guide-section-stit">Fill_dot</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 4</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ badge.base(height="h4", round="round", txt="", bgColor="orange") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="guide-section-tit">Tooltip</h2>
+
+                <div>
+                    <div class="guide-flex ratio gap">
+                        <div>
+                            {# <h3 class="guide-section-stit">Tooltip</h3> #}
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">가운데</div>
+                                <div class="guide-desc">왼쪽</div>
+                                <div class="guide-desc">오른쪽</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">말꼬리 위쪽</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-tc") }}
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-tc") }}
+                                    </div>
+                                    <div>
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-tl") }}
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-tl") }}
+                                    </div>
+                                    <div>
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-tr") }}
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-tr") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">말꼬리 아래쪽</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-bc") }}
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-bc") }}
+                                    </div>
+                                    <div>
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-bl") }}
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-bl") }}
+                                    </div>
+                                    <div>
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-br") }}
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-br") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">말꼬리 왼쪽</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-lc") }}
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-lc") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">말꼬리 오른쪽</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-rc") }}
+                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-rc") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %}{% endblock %}

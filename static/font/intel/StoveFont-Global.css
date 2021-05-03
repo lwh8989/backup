@@ -6,14 +6,12 @@
   font-family: 'Intel Global';
   font-style: normal;
   font-weight: normal;
-  color: red;
   src: url(woff2/InterGlobal-Regular.woff2) format('woff2'), url(woff/InterGlobal-Regular.woff) format('woff');
 }
 @font-face {
   font-family: 'Intel Global';
   font-style: normal;
   font-weight: bold;
-  color: pink;
   src: url(woff2/InterGlobal-Bold.woff2) format('woff2'), url(woff/InterGlobal-Bold.woff) format('woff');
 }
 /* [E] Global */

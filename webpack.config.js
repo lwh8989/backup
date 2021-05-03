@@ -1,54 +1,82 @@
 const path = require("path");
+const fs = require("fs");
 const glob = require("glob");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
-
-const devMode = process.env.NODE_ENV !== "production";
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const isProd = process.env.NODE_ENV === "production";
+const ROOT_VIEW_DIR = "src/view";
+const marked = require("marked");
+const renderer = new marked.Renderer();
 
 function getTemplates() {
   return new Promise(function (resolve, reject) {
-    glob("**/!(_*).njk", function (error, files) {
-      if (error) {
-        return reject(error);
+    glob(
+      `${ROOT_VIEW_DIR}/**/*.njk`,
+      { ignore: "**/_include/**" },
+      function (error, files) {
+        if (error) {
+          return reject(error);
+        }
+        resolve(files);
       }
-      resolve(files);
-    });
+    );
   });
+}
+
+function getFilePath(fileName, ext = ".njk") {
+  const dir = path.dirname(fileName).replace(`${ROOT_VIEW_DIR}/`, "");
+  const file = path.basename(fileName, ext);
+  return `${dir}/${file}`;
 }
 
 function toPlugin(fileName) {
   return new HtmlWebpackPlugin({
     template: fileName,
-    filename: fileName.replace(/\.njk$/, ".html"),
-    chunks: [
-      'core',
-      fileName
-        .split("/")
-        .pop()
-        .replace(/\.njk$/, ""),
-    ],
+    filename: `${getFilePath(fileName)}.html`.replace(`${ROOT_VIEW_DIR}/`, ""),
+    chunks: [fileName, "core", getFilePath(fileName)],
   });
 }
 
 module.exports = async function () {
   const entryFiles = await getTemplates();
   const templates = entryFiles.map(toPlugin);
-  const entry = entryFiles.reduce((files, filePath) => {
-    const dir = path.dirname(filePath);
-    const fileName = path.basename(filePath, ".njk");
-    const file = path.join(__dirname, dir, `${fileName}.scss`);
-    files[fileName] = file;
+  const guides = entryFiles
+    .map((fileName) => {
+      const scssFile = `${getFilePath(fileName)}.scss`;
+      if (fs.existsSync(path.resolve(__dirname, ROOT_VIEW_DIR, scssFile))) {
+        return scssFile;
+      }
+    })
+    .filter(Boolean)
+    .reduce((files, file) => {
+      const key = getFilePath(file, ".scss");
+      files[key] = path.resolve(__dirname, ROOT_VIEW_DIR, file);
 
-    return files;
-  }, { core: path.join(__dirname, './src/sass/core.scss') });
+      return files;
+    }, {});
+  // console.log("🚀 ~ file: webpack.config.js ~ line 58 ~ guides", guides);
+
+  const plugins = [...templates];
+
+  if (isProd) {
+    plugins.push(new MiniCssExtractPlugin());
+  }
 
   return {
-    mode: "development",
-    entry,
+    mode: isProd ? "production" : "development",
+    entry: {
+      core: "./src/sass/core.scss",
+      view: entryFiles.map((entry) => path.resolve(__dirname, entry)),
+      ...guides,
+    },
     devServer: {
       port: 9009,
       hot: true,
-      host:'0.0.0.0'
+      host: "0.0.0.0",
+    },
+    optimization: {
+      removeEmptyChunks: true,
     },
     module: {
       rules: [
@@ -57,7 +85,9 @@ module.exports = async function () {
           use: [
             {
               loader: "simple-nunjucks-loader",
-              options: {},
+              options: {
+                searchPaths: [ROOT_VIEW_DIR],
+              },
             },
           ],
         },
@@ -65,7 +95,7 @@ module.exports = async function () {
           test: /\.s[ac]ss$/i,
           use: [
             // Creates `style` nodes from JS strings
-            "style-loader",
+            isProd ? MiniCssExtractPlugin.loader : "style-loader",
             // Translates CSS into CommonJS
             "css-loader",
             // Compiles Sass to CSS
@@ -88,30 +118,15 @@ module.exports = async function () {
           ],
         },
         {
-          test: /\.css$/i,
-          use: [
-            "style-loader",
-            "css-loader",
+          test: /\.(jpe?g|png|gif|svg)$/,
+          use : [
             {
-              loader: "postcss-loader",
+              loader: 'url-loader',
               options: {
-                postcssOptions: {
-                  plugins: [
-                    [
-                      "postcss-preset-env",
-                      {
-                        // Options
-                      },
-                    ],
-                  ],
-                },
-              },
+                name: 'images/[name].[ext]'
+              }
             },
-          ],
-        },
-        {
-          test: /\.css$/,
-          use: ["style-loader", "postcss-loader"],
+          ]
         },
         {
           test: /\.(jpe?g|png|gif|svg)$/,
@@ -126,6 +141,6 @@ module.exports = async function () {
         }
       ],
     },
-    plugins: [...templates],
+    plugins,
   };
 };

@@ -1,0 +1,396 @@
+/* Base S */
+.fr-element {
+  position: relative;
+}
+/* Base E */
+
+/* Emoji S */
+.emoji-wrap {
+  display: inline-block;
+  margin: 4px 0;
+  width: 100px;
+  height: 100px;
+}
+.emoji-wrap img {
+  max-width: 100%;
+  height: auto;
+}
+.emoji__img {
+  display: inline-block;
+  margin: 4px 0;
+  width: 100px;
+  height: 100px;
+}
+/* Emoji E */
+
+/* image S */
+.img-wrap {
+  display: inline-block;
+  margin: 4px 0;
+  max-width: 250px;
+  max-height: 375px;
+  overflow: hidden;
+  vertical-align: top;
+}
+.img-wrap img {
+  max-width: 100%;
+  height: auto;
+}
+.fr-view img {
+  vertical-align: bottom !important;
+}
+/* image E */
+
+/* video S */
+.video-wrap {
+  position: relative;
+  display: block;
+  left: 0;
+  width: 100% !important;
+  padding-bottom: 59% !important;
+}
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 4px 0;
+}
+/* 
+.video-wrap .fr-view .fr-video {
+  position: unset !important;
+}
+.fr-view .fr-video {
+  position: unset !important;
+} 
+*/
+/* video E */
+
+/* table */
+.fr-view table {
+  width: 100%;
+  table-layout: auto;
+}
+.fr-view table td {
+  word-break: break-all;
+  vertical-align: top;
+}
+.fr-view table td iframe {
+  width: 100%;
+  height: 100%;
+}
+.fr-view table td img {
+  width: 100% !important;
+  vertical-align: baseline;
+}
+/* table */
+
+/* fr-view 초기화 S */
+.fr-view {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.fr-element.fr-view > p {
+  word-break: break-all;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+.fr-view .lagarcy-module-editor {
+  margin: 20px 0 !important;
+}
+.fr-view .lagarcy-module-editor:last-of-type {
+  margin: 20px 0 0 !important;
+}
+.fr-view .fr-video {
+  display: block !important;
+  text-align: left !important;
+}
+.fr-view ul {
+  padding-left: 32px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  list-style: inherit;
+}
+.fr-view ul li {
+  list-style: inherit;
+}
+.fr-view ol {
+  padding-left: 32px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.fr-view ol li {
+  list-style: decimal;
+}
+.fr-view strong {
+  font-weight: 700;
+}
+.fr-view em {
+  font-style: italic;
+}
+.fr-view u {
+  text-decoration: underline;
+}
+.fr-view s {
+  text-decoration: line-through;
+}
+.fr-view blockquote {
+  border-left: solid 2px #5e35b1;
+  margin-left: 0;
+  padding-left: 5px;
+  color: #5e35b1;
+}
+.fr-view hr {
+  clear: both;
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  page-break-after: always;
+}
+.fr-view .img-wrap {
+  vertical-align: bottom !important;
+  font-size: 0;
+}
+.fr-view .emoji-wrap {
+  vertical-align: bottom !important;
+  font-size: 0;
+}
+.fr-view span[style~='font-size:'] a {
+  font-size: inherit !important;
+}
+.fr-element.fr-view.userselect {
+  -ms-user-select: none; /* IE 10+ */
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+/* fr-view 초기화 E */
+
+/* write-form 영향도 받는 fr-view S */
+.write-form .fr-wrapper.show-placeholder {
+  box-shadow: none !important;
+  /* border: 1px solid #dbdbdb !important; */
+  border-radius: 0 !important;
+}
+.write-form .fr-wrapper.show-placeholder .fr-element {
+  /* border: 1px solid #dbdbdb !important; */
+  padding: 16px;
+}
+.write-form .fr-toolbar.fr-ltr.fr-desktop.fr-top.fr-basic {
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border-top: 1px solid #dbdbdb !important;
+  border-left: 1px solid #dbdbdb !important;
+  border-right: 1px solid #dbdbdb !important;
+}
+.write-form .fr-box {
+  border: 1px solid #ddd !important;
+}
+.write-form .fr-toolbar.fr-ltr.fr-desktop.fr-top.fr-basic {
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 1px solid #ddd;
+}
+.write-form .fr-box .fr-wrapper {
+  box-shadow: none !important;
+  border: 0 !important;
+}
+.write-form .fr-box .fr-wrapper .fr-element {
+}
+.write-form .fr-box .fr-wrapper .fr-element.fr-view {
+}
+.write-form .fr-element.fr-view > p {
+  word-break: break-all;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+.write-form .fr-view .lagarcy-module-editor {
+  margin: 20px 0 !important;
+}
+.write-form .fr-view .lagarcy-module-editor ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.write-form .fr-view .lagarcy-module-editor ul li {
+  list-style: none;
+}
+.write-form .fr-view .lagarcy-module-editor ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+.write-form .fr-view .lagarcy-module-editor ol li {
+  list-style: none;
+}
+.write-form .fr-view ul {
+  padding-left: 32px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  list-style: disc;
+}
+.write-form .fr-view ul li {
+  list-style: disc;
+}
+.write-form .fr-view ol {
+  padding-left: 32px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  list-style-type: decimal;
+}
+.write-form .fr-view ol li {
+  list-style: decimal;
+}
+.write-form .fr-view strong {
+  font-weight: 700;
+}
+.write-form .fr-view em {
+  font-style: italic;
+}
+.write-form .fr-view u {
+  text-decoration: underline;
+}
+.write-form .fr-view s {
+  text-decoration: line-through;
+}
+.write-form .fr-view blockquote {
+  border-left: solid 2px #5e35b1;
+  margin-left: 0;
+  padding-left: 5px;
+  color: #5e35b1;
+}
+.write-form .fr-view hr {
+  clear: both;
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  page-break-after: always;
+}
+/* write-form 영향도 받는 fr-view E */
+
+/* detail-content 영향도 받는 fr-view S */
+.detail-content .fr-element.fr-view > p {
+  word-break: break-all;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+.detail-content .fr-view .lagarcy-module-editor ul {
+  padding-left: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  list-style: none !important;
+}
+.detail-content .fr-view .lagarcy-module-editor ul li {
+  list-style: none !important;
+}
+.detail-content .fr-view .lagarcy-module-editor ol {
+  padding-left: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  list-style: none !important;
+}
+.detail-content .fr-view .lagarcy-module-editor ol li {
+  list-style: none !important;
+}
+.detail-content .fr-view .lagarcy-module-editor.editor-survey {
+  width: 480px;
+}
+.detail-content .fr-element.fr-view > p {
+  word-break: break-all;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+.detail-content .fr-view ul {
+  padding-left: 32px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  list-style: disc;
+}
+.detail-content .fr-view ul li {
+  list-style: disc;
+}
+.detail-content .fr-view ol {
+  padding-left: 32px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  list-style-type: decimal;
+}
+.detail-content .fr-view ol li {
+  list-style: decimal;
+}
+.detail-content .fr-view strong {
+  font-weight: 700;
+}
+.detail-content .fr-view em {
+  font-style: italic;
+}
+.detail-content .fr-view u {
+  text-decoration: underline;
+}
+.detail-content .fr-view s {
+  text-decoration: line-through;
+}
+.detail-content .fr-view blockquote {
+  border-left: solid 2px #5e35b1;
+  margin-left: 0;
+  padding-left: 5px;
+  color: #5e35b1;
+}
+.detail-content .fr-view hr {
+  clear: both;
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  page-break-after: always;
+}
+.detail-content .video-wrap .fr-view .fr-video {
+  position: unset !important;
+}
+.detail-content .fr-view .fr-video {
+  position: unset !important;
+}
+.detail-content .fr-view .lagarcy-module-editor.editor-join {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: inherit;
+  position: unset;
+  z-index: inherit;
+}
+/* detail-content 영향도 받는 fr-view E */
+
+/* module-write 영향도 받는 fr-view S */
+.lagarcy-module-write .fr-view .img-wrap img {
+  max-width: 100% !important;
+}
+/* module-write 영향도 받는 fr-view E */
+
+/* reply-txt 영향도 받는 fr-view S */
+.reply-txt .fr-view p {
+  font-size: 13px;
+  color: #333;
+  line-height: 22px;
+  word-break: break-word;
+}
+.reply-txt .video-wrap .fr-view .fr-video {
+  position: static !important;
+}
+.reply-txt .fr-view .fr-video {
+  position: static !important;
+}
+/* reply-txt 영향도 받는 fr-view E */

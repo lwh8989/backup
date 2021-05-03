@@ -1,0 +1,189 @@
+{% import "lagarcy/elements/icon.njk" as icon %}
+
+{% macro recommend() %}
+  <!-- slider 적용 -->
+  <!-- 슬라이드 적용시 active 클래스를 추가 해 주세요. -->
+  <div class="lagarcy-module-slider slider-recommend active">
+    <div class="swiper-container">
+      <div class="recommend-top">
+        <h3 class="recommend-top-tit">STOVE 추천 컨텐츠</h3>
+        <div class="swiper-menu-wrap">
+          <button type="button" class="swiper-button-prev"></button>
+          <button type="button" class="swiper-button-next"></button>
+        </div>
+        <button class="recommend-more">
+          <span class="btn-txt">접기</span>
+          <i class="lagarcy-element-icon ic-arrow-down-white"></i>
+        </button>
+        <!-- [D] 접은 후 보여지는 영역: 텍스트와 아이콘 변경됨 -->
+        <!--<button class="recommend-more"><span class="btn-txt">펼치기</span><i class="lagarcy-element-icon ic-arrow-up-white"></i></button>-->
+      </div>
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide">
+          <div class="recommend-cont">
+            <div class="recommend-cont-left">
+              <div class="lagarcy-module-card banner-view mini">
+                <div class="card-inner">
+                  <div class="card-img">
+                    <img src="https://dummyimage.com/284x174/cc00ff/4cffc0" alt="Thumbnail image">
+                  </div>
+                  <div class="subject-inner">
+                    <a href="#" class="subject-txt">
+                      카오스마스터즈 게시글입니다.입니다. 바다에서 함께할 가족을 모집합니다 두줄까지 노출됩니다. 그이상은 말줄임입니다.
+                    </a>
+                  </div>
+                  <div class="user-link">
+                    <div class="lagarcy-module-profile">
+                      <div class="profile-content">
+                        <a href="#" class="profile-name">로스트아크</a>
+                        <time>방금전</time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lagarcy-module-card banner-view mini">
+                <div class="card-inner">
+                  <div class="card-img">
+                    <img src="https://dummyimage.com/284x174/cc00ff/4cffc0" alt="Thumbnail image">
+                  </div>
+                  <div class="subject-inner">
+                    <a href="#" class="subject-txt">
+                      바다에서 함께할 가족을 모집합니다 두줄까지 노출됩니다. 그이상은 말줄임입니다. 바다에서 함께할 가족을 모집합니다 두줄까지 노출됩니다. 그이상은 말줄임입니다.
+                    </a>
+                    <div class="subject-info">
+                      <span class="subject-info-count">[999+]</span>
+                    </div>
+                  </div>
+                  <div class="user-link">
+                    <div class="lagarcy-module-profile">
+                      <div class="profile-content">
+                        <a href="#" class="profile-name">로스트아크</a>
+                        <time>방금전</time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="recommend-cont-right">
+              <ul class="lagarcy-module-list list-basic">
+                <li class="list-item">
+                  <div class="group">
+                    <div class="group-col group-subject">
+                      <a href="#" class="subject-icon1">
+                        <div class="subject-txt">카오스마스터즈 게시글입니다.</div>
+                        <div class="subject-info">
+                          <span class="subject-info-count">[999+]</span>
+                          <span class="lagarcy-element-icon ic-new" style="">새글</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="group-col group-time">
+                      <span class="cp-name">로스트아크</span>
+                      <span class="time-date">Hace 59 minutos
+                        <span class="lagarcy-module-tooltip">
+                          <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-item">
+                  <div class="group">
+                    <div class="group-col group-subject">
+                      <a href="#" class="subject-icon1">
+                        <div class="subject-txt">[블래스터] 바드 벨가 솔플이 블래랑 비슷하거나 10초 빠르다.</div>
+                        <div class="subject-info">
+                          <span class="subject-info-count">[999+]</span>
+                          <span class="lagarcy-element-icon ic-new" style="">새글</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="group-col group-time">
+                      <span class="time-date">
+                        Hace 59 minutos
+                        <span class="lagarcy-module-tooltip">
+                          <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-item">
+                  <div class="group">
+                    <div class="group-col group-subject">
+                      <a href="#" class="subject-icon1">
+                        <div class="subject-txt">에픽세븐 길드원모집 게시글이 노출되네요</div>
+                        <div class="subject-info">
+                          <span class="subject-info-count">[999+]</span>
+                          <span class="lagarcy-element-icon ic-new" style="">새글</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="group-col group-time">
+                      <span class="time-date">
+                        Hace 59 minutos
+                        <span class="lagarcy-module-tooltip">
+                          <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-item">
+                  <div class="group">
+                    <div class="group-col group-subject">
+                      <a href="#" class="subject-icon1">
+                        <div class="subject-txt">알려진 버그를 안내해 드립니다에 워로드 도발 들어가..</div>
+                        <div class="subject-info">
+                          <span class="subject-info-count">[999+]</span>
+                          <span class="lagarcy-element-icon ic-new" style="">새글</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="group-col group-time">
+                      <span class="time-date">
+                        Hace 59 minutos
+                        <span class="lagarcy-module-tooltip">
+                          <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-item">
+                  <div class="group">
+                    <div class="group-col group-subject">
+                      <a href="#" class="subject-icon1">
+                        <div class="subject-txt">크로스파이어 글입니다</div>
+                        <div class="subject-info">
+                          <span class="subject-info-count">[999+]</span>
+                          <span class="lagarcy-element-icon ic-new" style="">새글</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="group-col group-time">
+                      <span class="time-date">
+                        Hace 59 minutos
+                        <span class="lagarcy-module-tooltip">
+                          <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--
+  <div class="swiper-menu-wrap">
+    <button type="button" class="swiper-button-prev"></button>
+    <button type="button" class="swiper-button-next"></button>
+  </div>
+  -->
+  </div>
+{% endmacro %}

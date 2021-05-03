@@ -1,0 +1,28 @@
+
+/* shadow */
+$black5:rgba(0,0,0,0.05);
+$black10:rgba(0,0,0,0.1);
+$black15:rgba(0,0,0,0.15);
+$black20:rgba(0,0,0,0.20);
+
+$base : none;
+$shadow_02 :  0rem 0.2rem 0.4rem $black5;
+$shadow_04 :  0rem 0.4rem 1rem $black10;
+$shadow_08 :  0rem 0.8rem 2.4rem $black15;
+$shadow_12 :  0rem 1.2rem 2.8rem $black20;
+
+.shadow-box-0{
+    box-shadow: $base;
+}
+.shadow-box-2{
+    box-shadow: $shadow_02;
+}
+.shadow-box-4{
+    box-shadow: $shadow_04;
+}
+.shadow-box-8{
+    box-shadow: $shadow_08;
+}
+.shadow-box-12{
+    box-shadow: $shadow_12;
+}

@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Noto Sans CJK';
+  font-style: normal;
+  font-weight: normal;
+  src: url(woff2/NotoSansKR-DemiLight.woff2) format('woff2'), url(woff/NotoSansKR-DemiLight.woff) format('woff'), url(otf/NotoSansKR-DemiLight.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Noto Sans CJK';
+  font-style: normal;
+  font-weight: 700;
+  src: url(woff2/NotoSansKR-Medium.woff2) format('woff2'), url(woff/NotoSansKR-Medium.woff) format('woff'), url(otf/NotoSansKR-Medium.otf) format('opentype');
+}

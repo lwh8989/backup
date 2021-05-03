@@ -1,0 +1,15 @@
+/* hidden mixin에 사용 */
+@mixin visual-hidden() {
+    display: hidden;
+}
+@mixin text-hidden() {
+    overflow: hidden;
+    font-size: 0;
+    text-indent: -999999rem;
+    white-space: nowrap;
+}
+/* 샘플용 element*/
+.hidden-content {
+    @include visual-hidden;
+}
+

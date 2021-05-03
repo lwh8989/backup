@@ -1,0 +1,170 @@
+@use "./../space";
+@use "./../responsive";
+@import "./responsive";
+@import "./gnb";
+@import "./footer";
+
+
+/* layout */
+@mixin layoutContainer (
+    $position: relative,
+    $display: flex,
+    $flex-flow: row wrap,
+    $justify-content: space-around,
+    $align-items: center,
+    $width: 100%,
+    $height: 100%,
+    $margin: 0 space.$stds-spacing-16,
+) {
+    position: $position;
+    display: $display;
+    flex-flow: $flex-flow;
+    width: $width;
+    height: $height;
+    margin: $margin;
+    justify-content: $justify-content;
+    align-items: null;
+}
+
+/* layout Style order 2 */
+@mixin layoutBasic
+(
+    $position: relative,
+    $display: flex,
+    $max-width: auto,
+    $width: auto,
+    $min-width: auto,
+    $max-height: auto,
+    $height: auto,
+    $min-height: auto,
+    $flex: 1,
+    $order: 3
+) {
+    position: $position;
+    max-width: $max-width;
+    width: $width;
+    height: $height;
+    min-height: $min-height;
+    flex: $flex;
+    order: $order;
+}
+
+.layout-container {
+    @include layoutContainer($width: null); 
+    .layout-navigation {
+        + .layout-basic {
+            margin-top: 48px;
+        }
+    }
+    .layout-basic {
+        @include layoutBasic(
+            $max-width: null, 
+            $min-width: null, 
+            $min-height: null, 
+        );
+        background: #fafafa;
+    }
+}
+
+// nav {
+//   order:2;
+//   flex: 0 1 200px;
+// }
+// aside {
+//   order:4;
+//   flex:0 1 200px;
+// }
+
+/* mobile 360 */
+@include mobile {
+    .layout-footer {
+        @include layoutFooter($top: space.$stds-spacing-80);
+    }
+}
+
+/* tablet 768 */
+@include tablet {  
+    .layout-footer {
+        @include layoutFooter($top: space.$stds-spacing-120);
+    }
+}
+
+/* desktopM 1280 */
+@include desktopM {
+    .layout-header {
+        + .layout-container {
+            margin-top: 6.8rem !important;
+        }
+    } 
+    .layout-container {
+        @include layoutContainer($width: null, $margin: 0 space.$stds-spacing-48);
+        .layout-navigation {
+            + .layout-basic {
+                margin-top: 6.8rem !important;
+            }
+        }
+    }
+    .layout-footer {
+        @include layoutFooter($top: space.$stds-spacing-200);
+    }
+}
+
+/* desktopL 1440 */
+@include desktopL {
+    .layout-header {
+        + .layout-container {
+            margin-top: 6.8rem !important;
+        }
+    } 
+    .layout-container {
+        @include layoutContainer($width: null, $margin: 0 space.$stds-spacing-52);
+        .layout-navigation {
+            + .layout-basic {
+                margin-top: 6.8rem;
+            }
+        }
+    }
+    .layout-footer {
+        @include layoutFooter($top: space.$stds-spacing-200);
+    }
+}
+
+/* desktopXL 1600 */
+@include desktopXL {
+    .layout-header {
+        + .layout-container {
+            margin-top: 6.8rem !important;
+        }
+    } 
+    .layout-container {
+        @include layoutContainer($width: null, $margin: 0 space.$stds-spacing-52);
+        .layout-navigation {
+            + .layout-basic {
+                margin-top: 6.8rem;
+            }
+        }        
+    }
+    .layout-footer {
+        @include layoutFooter($top: space.$stds-spacing-200);
+    }
+}
+
+/* desktop2XL 1920 */
+@include desktop2XL {
+    .layout-header {
+        + .layout-container {
+            margin-top: 6.8rem !important;
+        }
+    } 
+    .layout-container {
+        @include layoutContainer($width: null, $margin: 0 space.$stds-spacing-52);
+        .layout-navigation {
+            + .layout-basic {
+                margin-top: 6.8rem !important;
+            }
+        }        
+    }
+    .layout-footer {
+        @include layoutFooter($top: space.$stds-spacing-200);
+    }
+}

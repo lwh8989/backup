@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>549D3485-CD10-4B10-AA3C-39CB187ADFE5</title>
+    <g id="STDS_Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="control" transform="translate(-784.000000, -1205.000000)" fill="#000000">
+            <g id="ic_control_add_circle_fill" transform="translate(720.000000, 1165.000000)">
+                <g id="ic/control/add_circle/fill" transform="translate(64.000000, 40.000000)">
+                    <g id="ic_control_add_circle_fill" transform="translate(2.000000, 2.000000)">
+                        <path d="M14,0 C21.7319865,0 28,6.2680135 28,14 C28,21.7319865 21.7319865,28 14,28 C6.2680135,28 0,21.7319865 0,14 C0,6.2680135 6.2680135,0 14,0 Z M14,7 C13.4477153,7 13,7.44771525 13,8 L13,8 L13,13 L8,13 L7.88337887,13.0067277 C7.38604019,13.0644928 7,13.4871642 7,14 C7,14.5522847 7.44771525,15 8,15 L8,15 L13,15 L13,20 L13.0067277,20.1166211 C13.0644928,20.6139598 13.4871642,21 14,21 C14.5522847,21 15,20.5522847 15,20 L15,20 L15,15 L20,15 L20.1166211,14.9932723 C20.6139598,14.9355072 21,14.5128358 21,14 C21,13.4477153 20.5522847,13 20,13 L20,13 L15,13 L15,8 L14.9932723,7.88337887 C14.9355072,7.38604019 14.5128358,7 14,7 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,94 @@
+{% extends "_include/layout/guide/guide.njk" %}
+
+<!-- styles -->
+{% block styles %}
+{% endblock %}
+
+<!-- styles -->
+{% block content %}
+<div class="guide">
+    <p class="tit"><b>Stove Radius</b></p>
+    <p class="desc">
+        <b>Small Components</b> : H32 이하의 단일 컴포넌트를 의미합니다.<br />
+        <b>Medium Components</b> : H32 이상(초과)의 단일 컴포넌트를 의미합니다.<br />
+        <b>Large Components</b> : 카드 썸네일 이미지 혹은, 두가지 컴포넌트 이상의 조합 된 형태의 경우를 의미합니다.<br />
+        <b>Oval Components</b> : Tags 혹은 FAB(Floating Action Button), 주위와의 관계를 고려하여 사용하는 특이 케이스 입니다. <br />
+    </p>
+    <table class="table table-col4">
+        <caption>Lorem</caption>
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th>토큰명</th>
+                <th>곡선 값</th>
+                <th>사용처</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Small Components
+                </td>
+                <td>
+                    $Radius-S
+                </td>
+                <td>
+                    4px
+                </td>
+                <td>
+                    H32 이하의<br />단일 컴포넌트
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Medium Components
+                </td>
+                <td>
+                    $Radius-M
+                </td>
+                <td>
+                    6px
+                </td>
+                <td>
+                    H32 이상의<br />단일 컴포넌트
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Large Components
+                </td>
+                <td>
+                    $Radius-L
+                </td>
+                <td>
+                    8px
+                </td>
+                <td>
+                    2가지 이상 컴포넌트가<br />조합되는 형태
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Oval Components
+                </td>
+                <td>
+                    $Radius-50%
+                </td>
+                <td>
+                    50%
+                </td>
+                <td>
+                    Chips, FAB, 주위와의<br />관계를 고려
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %} 
+{% endblock %}

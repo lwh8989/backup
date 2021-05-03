@@ -1,31 +1,67 @@
-/* Stove Title 1rem = 10px */
-$stoveTitle1: 5.4rem;
-$stoveTitle2: 4.2rem;
-$stoveTitle3: 3.2rem;
-$stoveTitle4: 2.4rem;
-$stoveTitle5: 1.8rem;
-$stoveTitle6: 1.4rem;
+@use "./mixin/font";
 
-/* Stove letter-spacing */
+/* stds Title 1rem = 10px */
+/* Title */
+$stdsTitle1: 5.4rem;
+$stdsTitle2: 4.2rem;
+$stdsTitle3: 3.2rem;
+$stdsTitle4: 2.4rem;
+$stdsTitle5: 2rem;
+$stdsTitle6: 1.8rem;
+$stdsTitle7: 1.6rem;
+$stdsTitle8: 1.4rem;
+
+/* Body */
+$stdsBody1: 1.6rem;
+$stdsBody2: 1.5rem;
+$stdsBody3: 1.4rem;
+$stdsBody4: 1.3rem;
+
+/* Button */
+$stdsButton1: 1.5rem;
+$stdsButton2: 1.3rem;
+
+/* Caption */
+$stdsCaption1: 1.3rem;
+$stdsCaption2: 1.1rem;
+
+/* Chips */
+$stdsChips1: 1.3rem;
+$stdsChips2: 1.1rem;
+
+/* Font-weight */
+$stdsWeightBold: bold;
+$stdsWeightNormal: normal;
+
+/* stds letter-spacing */
 $letterSpacing: -0.025em;
+$letterSpacing_5: -0.05rem;
+
+/* line-height */
+$stdsLineHeightL: 1.6;
+$stdsLineHeightM: 1.5;
+$stdsLineHeightS: 1.4;
 
 /* Font reset */
 html {
     font-size: 10px;
 }
+
 body {
     letter-spacing: $letterSpacing;
     word-break: keep-all;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-weight: bold;
+    font-weight: $stdsWeightBold;
     letter-spacing: $letterSpacing;
 }
+
 h1.is-hidden,
 h2.is-hidden,
 h3.is-hidden,
@@ -33,25 +69,7 @@ h4.is-hidden,
 h5.is-hidden,
 h6.is-hidden {
     font-size: 0;
-    text-indent: -99999px;
-}
-h1.s-title {
-    font-size: $stoveTitle1;
-}
-h2.s-title {
-    font-size: $stoveTitle2;
-}
-h3.s-title {
-    font-size: $stoveTitle3;
-}
-h4.s-title {
-    font-size: $stoveTitle4;
-}
-h5.s-title {
-    font-size: $stoveTitle5;
-}
-h6.s-title {
-    font-size: $stoveTitle6;
+    text-indent: -99999rem;
 }
 
 /* fonts by lang */
@@ -67,16 +85,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family:
-        'Intel KR',
-        'Noto Sans KR',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
+    @include font.sdtxFamily($inter: "Intel KR", $noto: "Noto Sans KR");
 }
 
 /* Chinese zh */
@@ -91,16 +100,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family:
-        'Intel SC',
-        'Noto Sans SC',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
+    @include font.sdtxFamily($inter: "Intel SC", $noto: "Noto Sans SC");
 }
 
 /* Chinese zh-tw  */
@@ -115,16 +115,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family:
-        'Intel TC',
-        'Noto Sans TC',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
+    @include font.sdtxFamily($inter: "Intel TC", $noto: "Noto Sans TC");
 }
 
 /* Japan */
@@ -139,16 +130,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family:
-        'Intel JP',
-        'Noto Sans JP',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
+    @include font.sdtxFamily($inter: "Intel JP", $noto: "Noto Sans JP");
 }
 
 /* English */
@@ -163,15 +145,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family:
-        'Intel Global',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
+    @include font.sdtxFamily($inter: "Intel Global", $noto: null);
 }
 
 /* French  */
@@ -186,15 +160,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family:
-        'Intel Global',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
+    @include font.sdtxFamily($inter: "Intel Global", $noto: null);
 }
 
 /* Portugal */
@@ -209,15 +175,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family:
-        'Intel Global',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
+    @include font.sdtxFamily($inter: "Intel Global", $noto: null);
 }
 
 /* Spanish */
@@ -232,15 +190,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family:
-        'Intel Global',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
+    @include font.sdtxFamily($inter: "Intel Global", $noto: null);
 }
 
 /* German */
@@ -255,63 +205,20 @@ h3,
 h4,
 h5,
 h6 {
-    font-family:
-        'Intel Global',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
+    @include font.sdtxFamily($inter: "Intel Global", $noto: null);
 }
 
 /* Thailand */
-:lang(ja) body,
-:lang(ja) a,
-:lang(ja) button,
-:lang(ja) input,
-:lang(ja) textarea,
-:lang(ja) h1,
+:lang(th) body,
+:lang(th) a,
+:lang(th) button,
+:lang(th) input,
+:lang(th) textarea,
+:lang(th) h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family:
-        'Intel Thai',
-        'Noto Sans Thai',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
-}
-
-/* 2XL */
-@media all and (min-width:1920px) and (max-width:9999px) {
-
-}
-
-/* Xl */
-@media all and (min-width:1600px) and (max-width:1919px) {
-}
-
-/* l */
-@media all and (min-width:1440px) and (max-width:1599px) {
-}
-
-/* M */
-@media all and (min-width:1280px) and (max-width:1439px) {
-    
-}
-
-/* tablet */
-@media all and (min-width:768px) and (max-width:1279px) {
-}
-
-/* mobile */
-@media all and (max-width:767px) {
+    @include font.sdtxFamily($inter: "Intel Thai", $noto: "Noto Sans Thai");
 }

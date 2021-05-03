@@ -1,0 +1,27 @@
+{% macro base() %}
+<div class="pagination">
+  <a href="#" class="stove-icon ic-control-double-arrow-left-line" style=""><span class="text-hidden">처음</span></a>
+  <a href="#" class="stove-icon ic-control-arrow-left-line" style=""><span class="text-hidden">이전</span></a>
+  <span class="pagination-num">
+      <a class="num-first" href="#"><span>1</span> <span>...</span> </a>
+      <a href="#"><span>1</span></a>
+      <a href="#"><span>2</span></a>
+      <a href="#"><span>3</span></a>
+      <a href="#"><span>4</span></a>
+      <a class="active"><span>5</span></a>
+      <a class="num-last" href="#"><span>...</span> <span>999</span></a>
+  </span>
+  <a href="#" class="stove-icon ic-control-arrow-right-line" style=""><span class="text-hidden">다음</span></a>
+  <a href="#" class="stove-icon ic-control-double-arrow-right-line" style=""><span class="text-hidden">마지막</span></a>
+</div>    
+{% endmacro %}
+
+{% macro bullet(sizeClass) %}
+<div class="pagination-bullet {{ sizeClass }}">
+  <a href="#" class="bullet-list"><span>1</span></a>
+  <a class="bullet-list bullet-active"><span>2</span></a>
+  <a href="#" class="bullet-list"><span>3</span></a>
+  <a href="#" class="bullet-list"><span>4</span></a>
+  <a href="#" class="bullet-list"><span>5</span></a>
+</div>
+{% endmacro %}

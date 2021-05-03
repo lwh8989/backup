@@ -1,0 +1,29 @@
+@use "./mixin/mixin";
+@use "./color";
+@use "./space";
+@use "./radius";
+
+$elementBgcolor: (
+    orange: color.$orange500,
+    red: color.$tint_reda400,
+    purple: color.$tint_purplea400,
+    blue: color.$tint_bluea400,
+    gray: color.$gray700,
+);
+
+@each $name, $color in $elementBgcolor {
+    .element-badge {
+        &.#{"" + $name + ""} {
+            background-color: $color;
+        }
+    }
+}
+
+.element-badge {
+    @include flex($type: inline-flex, $x: center, $y: center);
+    color: color.$white;
+    border-radius: radius.$radius-XS;
+    &.round {
+        border-radius: 99.9rem;
+    }
+}

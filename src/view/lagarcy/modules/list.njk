@@ -1,0 +1,2018 @@
+{% import "lagarcy/elements/input-select.njk" as inputSelect %}
+{% import "lagarcy/elements/input-text.njk" as inputText %}
+{% import "lagarcy/elements/input-checkbox.njk" as inputCheckbox %}
+{% import "lagarcy/elements/input-radio.njk" as inputRadio %}
+{% import "lagarcy/modules/input-set.njk" as inputSet %}
+{% import "lagarcy/elements/input.njk" as input %}
+{% import "lagarcy/elements/profile.njk" as profile %}
+{% import "lagarcy/elements/icon.njk" as icon %}
+{% import "lagarcy/elements/btn.njk" as btn %}
+{% import "lagarcy/elements/badge.njk" as badge %}
+{% import "lagarcy/modules/pagination.njk" as pagination %}
+
+<!-- list webzine -->
+{% macro listWebzine(dropDownControl, listStatus) %}
+    <ul class="lagarcy-module-list list-webzine {{ listStatus }}">
+        <li class="list-item">
+            <div class="group">
+                <div class="subject-category">
+                    {{ icon.base(class="ic-img-toon", txt="ic-img-toon", width="18px", height="18px") }}
+                    <span class="category-title">툰스푼</span>
+                    <span class="category-board">팬아트게시판</span>
+                    <!-- [D] active 추가하면 활성화 됩니다. -->
+                    <div class="category-dropdown active {{ dropDownControl }}">
+                        {{ icon.base(class="ic-fill-globe-circle-s16-cccc", txt="ic-fill-globe-circle-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-fill-user-s16-cccc", txt="ic-fill-user-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-lock-default-s16-cccc", txt="ic-lock-default-s16-cccc", width="16px", height="16px") }}
+                        <button>{{ icon.base(class="ic-direction-down-s16-cccc", txt="ic-direction-down-s16-cccc", width="16px", height="16px") }}</button>
+                        <ul class="lagarcy-module-dropdown status">
+                            <li class="active">
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">나만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">친구만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">전체 공개</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group-col group-subject">
+                    <!-- [D] href="#" 를 제거했습니다. -->
+                    <a class="subject-icon1">
+                        <div class="subject-txt">
+                            <span class="lagarcy-element-icon ic-write-s16-c999" style="width:16px;height:16px">ic-write-s16-c999</span>
+                            <span class="subject-txt-event">
+                                <span class="txt-event">[이벤트]</span>
+                            </span>
+                            <span class="subject-txt-update">
+                                <span class="txt-update">[업데이트]</span>
+                            </span>
+                            <span class="subject-txt-notice">
+                                <span class="txt-notice">[공지]</span>
+                            </span>
+                            바다에서 함께할 가족을 모집합니다. 최대케이스…게시물 제목이 여기에 표시됩니다.게시물 <span class="keyword">제목</span>이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다.
+                        </div>
+                        <div class="subject-info">
+                            <span class="subject-info-count">[999+]</span>
+                            <span class="lagarcy-element-icon ic-badge-new-s16" style="">새글</span>
+                        </div>
+                        <div class="subject-desc">
+                            이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요.
+                        </div>
+                    </a>
+                    {{ profile.webzine() }}
+                    <div class="lagarcy-module-board-info">
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-view-s16-c999", txt="ic-view-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-heart-s16-c999", txt="ic-heart-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <!--
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-up-s16-cff5000", txt="ic-triangle-up-s16-cff5000", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-down-s16-c999", txt="ic-triangle-down-s16-c999", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        -->
+                    </div>
+                </div>
+                <!-- [D] 이미지가 있을 경우 추가 해 주세요. -->
+                <div class="group-col group-image">
+                    <a href="#" class="lagarcy-module-list-image">
+                        <img src="https://dummyimage.com/112x84/00eaff/040b6b" alt="images">
+                        <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                        <!--  이미지와 관련된 아이콘 입니다.
+                            <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                            <span class="lagarcy-element-icon ic-vote-round" style="">설문</span>
+                            <span class="lagarcy-element-icon ic-lock-round" style="">비공개</span>
+                            <span class="lagarcy-element-icon ic-play-round" style="">영상</span>
+                        -->
+                        <span class="image-count">+999</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="subject-category">
+                    <span class="category-title">로스트아크</span>
+                    <span class="category-board">팬아트게시판</span>
+                    <div class="category-dropdown {{ dropDownControl }}">
+                        {{ icon.base(class="ic-fill-globe-circle-s16-cccc", txt="ic-fill-globe-circle-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-fill-user-s16-cccc", txt="ic-fill-user-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-lock-default-s16-cccc", txt="ic-lock-default-s16-cccc", width="16px", height="16px") }}
+                        <button>{{ icon.base(class="ic-direction-down-s16-cccc", txt="ic-direction-down-s16-cccc", width="16px", height="16px") }}</button>
+                        <ul class="lagarcy-module-dropdown status">
+                            <li class="active">
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">나만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">친구만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">전체 공개</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group-col group-subject">
+                    <a href="#" class="subject-icon0">
+                        <div class="subject-txt">
+                            {{ inputCheckbox.base(id="check2", txt="체크박스", state="checked") }}
+                            바다에서 함께할 가족을 모집합니다. 최대케이스…게시물 제목이 여기에 표시됩니다.게시물 <span class="keyword">제목</span>이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다.
+                        </div>
+                        <div class="subject-info">
+                            <span class="subject-info-count">[999+]</span>
+                        </div>
+                        <div class="subject-desc">
+                            이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요.
+                        </div>
+                    </a>
+                    {{ profile.webzine() }}
+                    <div class="lagarcy-module-board-info">
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-view-s16-c999", txt="ic-view-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-heart-s16-c999", txt="ic-heart-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <!--
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-up-s16-cff5000", txt="ic-triangle-up-s16-cff5000", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-down-s16-c999", txt="ic-triangle-down-s16-c999", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        -->
+                    </div>
+                </div>
+                <!-- [D] 이미지가 있을 경우 추가 해 주세요. -->
+                <div class="group-col group-image">
+                    <a href="#" class="lagarcy-module-list-image">
+                        <img src="https://dummyimage.com/112x84/00eaff/040b6b" alt="images">
+                        <span class="lagarcy-element-icon ic-vote-round" style="">설문</span>
+                        <!--  이미지와 관련된 아이콘 입니다.
+                            <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                            <span class="lagarcy-element-icon ic-vote-round" style="">설문</span>
+                            <span class="lagarcy-element-icon ic-lock-round" style="">비공개</span>
+                            <span class="lagarcy-element-icon ic-play-round" style="">영상</span>
+                        -->
+                        <span class="image-count">+999</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="subject-category">
+                    <span class="category-title">로스트아크</span>
+                    <span class="category-board">팬아트게시판</span>
+                    <div class="category-dropdown {{ dropDownControl }}">
+                        {{ icon.base(class="ic-fill-globe-circle-s16-cccc", txt="ic-fill-globe-circle-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-fill-user-s16-cccc", txt="ic-fill-user-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-lock-default-s16-cccc", txt="ic-lock-default-s16-cccc", width="16px", height="16px") }}
+                        <button>{{ icon.base(class="ic-direction-down-s16-cccc", txt="ic-direction-down-s16-cccc", width="16px", height="16px") }}</button>
+                        <ul class="lagarcy-module-dropdown status">
+                            <li class="active">
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">나만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">친구만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">전체 공개</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group-col group-subject">
+                    <a href="#" class="subject-icon1">
+                        <div class="subject-txt">
+                            바다에서 함께할 가족을 모집합니다. 최대케이스…게시물 제목이 여기에 표시됩니다.게시물 <span class="keyword">제목</span>이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다.
+                        </div>
+                        <div class="subject-info">
+                            <span class="subject-info-count">[99]</span>
+                            <span class="lagarcy-element-icon ic-badge-new-s16" style="">새글</span>
+                        </div>
+                        <div class="subject-desc">
+                            이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요.
+                        </div>
+                    </a>
+                    {{ profile.webzine() }}
+                    <div class="lagarcy-module-board-info">
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-view-s16-c999", txt="ic-view-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-heart-s16-c999", txt="ic-heart-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <!--
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-up-s16-cff5000", txt="ic-triangle-up-s16-cff5000", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-down-s16-c999", txt="ic-triangle-down-s16-c999", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        -->
+                    </div>
+                </div>
+                <!-- [D] 이미지가 있을 경우 추가 해 주세요. -->
+                <div class="group-col group-image">
+                    <a href="#" class="lagarcy-module-list-image">
+                        <img src="https://dummyimage.com/112x84/00eaff/040b6b" alt="images">
+                        <span class="lagarcy-element-icon ic-lock-round" style="">음원</span>
+                        <!--  이미지와 관련된 아이콘 입니다.
+                            <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                            <span class="lagarcy-element-icon ic-vote-round" style="">설문</span>
+                            <span class="lagarcy-element-icon ic-lock-round" style="">비공개</span>
+                            <span class="lagarcy-element-icon ic-play-round" style="">영상</span>
+                        -->
+                        <span class="image-count">+999</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="subject-category">
+                    <span class="category-title">로스트아크</span>
+                    <span class="category-board">팬아트게시판</span>
+                    <div class="category-dropdown {{ dropDownControl }}">
+                        {{ icon.base(class="ic-fill-globe-circle-s16-cccc", txt="ic-fill-globe-circle-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-fill-user-s16-cccc", txt="ic-fill-user-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-lock-default-s16-cccc", txt="ic-lock-default-s16-cccc", width="16px", height="16px") }}
+                        <button>{{ icon.base(class="ic-direction-down-s16-cccc", txt="ic-direction-down-s16-cccc", width="16px", height="16px") }}</button>
+                        <ul class="lagarcy-module-dropdown status">
+                            <li class="active">
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">나만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">친구만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">전체 공개</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group-col group-subject">
+                    <a href="#" class="subject-icon0">
+                        <div class="subject-txt">
+                            바다에서 함께할 가족을 모집합니다. 최대케이스…게시물 제목이 여기에 표시됩니다.게시물 <span class="keyword">제목</span>이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다.
+                        </div>
+                        <div class="subject-info">
+                            <span class="subject-info-count">[99]</span>
+                        </div>
+                        <div class="subject-desc">
+                            이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요.
+                        </div>
+                    </a>
+                    {{ profile.webzine() }}
+                    <div class="lagarcy-module-board-info">
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-view-s16-c999", txt="ic-view-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-heart-s16-c999", txt="ic-heart-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <!--
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-up-s16-cff5000", txt="ic-triangle-up-s16-cff5000", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-down-s16-c999", txt="ic-triangle-down-s16-c999", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        -->
+                    </div>
+                </div>
+                <!-- [D] 이미지가 있을 경우 추가 해 주세요. -->
+                <div class="group-col group-image">
+                    <a href="#" class="lagarcy-module-list-image">
+                        <img src="https://dummyimage.com/112x84/00eaff/040b6b" alt="images">
+                        <span class="lagarcy-element-icon ic-play-round" style="">설문</span>
+                        <!--  이미지와 관련된 아이콘 입니다.
+                            <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                            <span class="lagarcy-element-icon ic-vote-round" style="">설문</span>
+                            <span class="lagarcy-element-icon ic-lock-round" style="">비공개</span>
+                            <span class="lagarcy-element-icon ic-play-round" style="">영상</span>
+                        -->
+                        <span class="image-count">+999</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="subject-category">
+                    <span class="category-title">로스트아크</span>
+                    <span class="category-board">팬아트게시판</span>
+                    <div class="category-dropdown {{ dropDownControl }}">
+                        {{ icon.base(class="ic-fill-globe-circle-s16-cccc", txt="ic-fill-globe-circle-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-fill-user-s16-cccc", txt="ic-fill-user-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-lock-default-s16-cccc", txt="ic-lock-default-s16-cccc", width="16px", height="16px") }}
+                        <button>{{ icon.base(class="ic-direction-down-s16-cccc", txt="ic-direction-down-s16-cccc", width="16px", height="16px") }}</button>
+                        <ul class="lagarcy-module-dropdown status">
+                            <li class="active">
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">나만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">친구만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">전체 공개</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group-col group-subject">
+                    <a href="#" class="subject-icon1">
+                        <div class="subject-txt">
+                            바다에서 함께할 가족을 모집합니다. 최대케이스…게시물 제목이 여기에 표시됩니다.게시물 <span class="keyword">제목</span>이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다.
+                        </div>
+                        <div class="subject-info">
+                            <span class="subject-info-count">[9]</span>
+                            <span class="lagarcy-element-icon ic-badge-new-s16" style="">새글</span>
+                        </div>
+                        <div class="subject-desc">
+                            이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요.
+                        </div>
+                    </a>
+                    {{ profile.webzine() }}
+                    <div class="lagarcy-module-board-info">
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-view-s16-c999", txt="ic-view-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-heart-s16-c999", txt="ic-heart-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <!--
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-up-s16-cff5000", txt="ic-triangle-up-s16-cff5000", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-down-s16-c999", txt="ic-triangle-down-s16-c999", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        -->
+                    </div>
+                </div>
+                <!-- [D] 이미지가 있을 경우 추가 해 주세요. -->
+                <div class="group-col group-image">
+                    <a href="#" class="lagarcy-module-list-image">
+                        <img src="https://dummyimage.com/112x84/00eaff/040b6b" alt="images">
+                        <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                        <!--  이미지와 관련된 아이콘 입니다.
+                            <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                            <span class="lagarcy-element-icon ic-vote-round" style="">설문</span>
+                            <span class="lagarcy-element-icon ic-lock-round" style="">비공개</span>
+                            <span class="lagarcy-element-icon ic-play-round" style="">영상</span>
+                        -->
+                        <span class="image-count">+999</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="subject-category">
+                    <span class="category-title">로스트아크</span>
+                    <span class="category-board">팬아트게시판</span>
+                    <div class="category-dropdown {{ dropDownControl }}">
+                        {{ icon.base(class="ic-fill-globe-circle-s16-cccc", txt="ic-fill-globe-circle-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-fill-user-s16-cccc", txt="ic-fill-user-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-lock-default-s16-cccc", txt="ic-lock-default-s16-cccc", width="16px", height="16px") }}
+                        <button>{{ icon.base(class="ic-direction-down-s16-cccc", txt="ic-direction-down-s16-cccc", width="16px", height="16px") }}</button>
+                        <ul class="lagarcy-module-dropdown status">
+                            <li class="active">
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">나만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">친구만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">전체 공개</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group-col group-subject">
+                    <a href="#" class="subject-icon0">
+                        <div class="subject-txt">
+                            바다에서 함께할 가족을 모집합니다. 최대케이스…게시물 제목이 여기에 표시됩니다.게시물 <span class="keyword">제목</span>이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다.
+                        </div>
+                        <div class="subject-info">
+                            <span class="subject-info-count">[9]</span>
+                        </div>
+                        <div class="subject-desc">
+                            이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요.
+                        </div>
+                    </a>
+                    {{ profile.webzine() }}
+                    <div class="lagarcy-module-board-info">
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-view-s16-c999", txt="ic-view-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-heart-s16-c999", txt="ic-heart-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <!--
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-up-s16-cff5000", txt="ic-triangle-up-s16-cff5000", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-down-s16-c999", txt="ic-triangle-down-s16-c999", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        -->
+                    </div>
+                </div>
+                <!-- [D] 이미지가 있을 경우 추가 해 주세요. -->
+                <div class="group-col group-image">
+                    <a href="#" class="lagarcy-module-list-image">
+                        <img src="https://dummyimage.com/112x84/00eaff/040b6b" alt="images">
+                        <span class="lagarcy-element-icon ic-vote-round" style="">설문</span>
+                        <!--  이미지와 관련된 아이콘 입니다.
+                            <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                            <span class="lagarcy-element-icon ic-vote-round" style="">설문</span>
+                            <span class="lagarcy-element-icon ic-lock-round" style="">비공개</span>
+                            <span class="lagarcy-element-icon ic-play-round" style="">영상</span>
+                        -->
+                        <span class="image-count">+999</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="subject-category">
+                    <span class="category-title">로스트아크</span>
+                    <span class="category-board">팬아트게시판</span>
+                    <div class="category-dropdown {{ dropDownControl }}">
+                        {{ icon.base(class="ic-fill-globe-circle-s16-cccc", txt="ic-fill-globe-circle-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-fill-user-s16-cccc", txt="ic-fill-user-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-lock-default-s16-cccc", txt="ic-lock-default-s16-cccc", width="16px", height="16px") }}
+                        <button>{{ icon.base(class="ic-direction-down-s16-cccc", txt="ic-direction-down-s16-cccc", width="16px", height="16px") }}</button>
+                        <ul class="lagarcy-module-dropdown status">
+                            <li class="active">
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">나만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">친구만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">전체 공개</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group-col group-subject">
+                    <a href="#" class="subject-icon1">
+                        <div class="subject-txt">
+                            바다에서 함께할 가족을 모집합니다. 최대케이스…게시물 제목이 여기에 표시됩니다.게시물 <span class="keyword">제목</span>이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다.
+                        </div>
+                        <div class="subject-info">
+                            <span class="subject-info-count">[999+]</span>
+                            <span class="lagarcy-element-icon ic-badge-new-s16" style="">새글</span>
+                        </div>
+                        <div class="subject-desc">
+                            이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요.
+                        </div>
+                    </a>
+                    {{ profile.webzine() }}
+                    <div class="lagarcy-module-board-info">
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-view-s16-c999", txt="ic-view-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-heart-s16-c999", txt="ic-heart-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <!--
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-up-s16-cff5000", txt="ic-triangle-up-s16-cff5000", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-down-s16-c999", txt="ic-triangle-down-s16-c999", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        -->
+                    </div>
+                </div>
+                <!-- [D] 이미지가 있을 경우 추가 해 주세요. -->
+                <div class="group-col group-image">
+                    <a href="#" class="lagarcy-module-list-image">
+                        <img src="https://dummyimage.com/112x84/00eaff/040b6b" alt="images">
+                        <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                        <!--  이미지와 관련된 아이콘 입니다.
+                            <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                            <span class="lagarcy-element-icon ic-vote-round" style="">설문</span>
+                            <span class="lagarcy-element-icon ic-lock-round" style="">비공개</span>
+                            <span class="lagarcy-element-icon ic-play-round" style="">영상</span>
+                        -->
+                        <span class="image-count">+999</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="subject-category">
+                    <span class="category-title">로스트아크</span>
+                    <span class="category-board">팬아트게시판</span>
+                    <div class="category-dropdown {{ dropDownControl }}">
+                        {{ icon.base(class="ic-fill-globe-circle-s16-cccc", txt="ic-fill-globe-circle-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-fill-user-s16-cccc", txt="ic-fill-user-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-lock-default-s16-cccc", txt="ic-lock-default-s16-cccc", width="16px", height="16px") }}
+                        <button>{{ icon.base(class="ic-direction-down-s16-cccc", txt="ic-direction-down-s16-cccc", width="16px", height="16px") }}</button>
+                        <ul class="lagarcy-module-dropdown status">
+                            <li class="active">
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">나만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">친구만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">전체 공개</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group-col group-subject">
+                    <a href="#" class="subject-icon0">
+                        <div class="subject-txt">
+                            바다에서 함께할 가족을 모집합니다. 최대케이스…게시물 제목이 여기에 표시됩니다.게시물 <span class="keyword">제목</span>이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다.
+                        </div>
+                        <div class="subject-info">
+                            <span class="subject-info-count">[999+]</span>
+                        </div>
+                        <div class="subject-desc">
+                            이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요.
+                        </div>
+                    </a>
+                    {{ profile.webzine() }}
+                    <div class="lagarcy-module-board-info">
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-view-s16-c999", txt="ic-view-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-heart-s16-c999", txt="ic-heart-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <!--
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-up-s16-cff5000", txt="ic-triangle-up-s16-cff5000", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-down-s16-c999", txt="ic-triangle-down-s16-c999", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        -->
+                    </div>
+                </div>
+                <!-- [D] 이미지가 있을 경우 추가 해 주세요. -->
+                <div class="group-col group-image">
+                    <a href="#" class="lagarcy-module-list-image">
+                        <img src="https://dummyimage.com/112x84/00eaff/040b6b" alt="images">
+                        <span class="lagarcy-element-icon ic-vote-round" style="">설문</span>
+                        <!--  이미지와 관련된 아이콘 입니다.
+                            <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                            <span class="lagarcy-element-icon ic-vote-round" style="">설문</span>
+                            <span class="lagarcy-element-icon ic-lock-round" style="">비공개</span>
+                            <span class="lagarcy-element-icon ic-play-round" style="">영상</span>
+                        -->
+                        <span class="image-count">+999</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="subject-category">
+                    <span class="category-title">로스트아크</span>
+                    <span class="category-board">팬아트게시판</span>
+                    <div class="category-dropdown {{ dropDownControl }}">
+                        {{ icon.base(class="ic-fill-globe-circle-s16-cccc", txt="ic-fill-globe-circle-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-fill-user-s16-cccc", txt="ic-fill-user-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-lock-default-s16-cccc", txt="ic-lock-default-s16-cccc", width="16px", height="16px") }}
+                        <button>{{ icon.base(class="ic-direction-down-s16-cccc", txt="ic-direction-down-s16-cccc", width="16px", height="16px") }}</button>
+                        <ul class="lagarcy-module-dropdown status">
+                            <li class="active">
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">나만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">친구만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">전체 공개</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group-col group-subject">
+                    <a href="#" class="subject-icon1">
+                        <div class="subject-txt">
+                            바다에서 함께할 가족을 모집합니다. 최대케이스…게시물 제목이 여기에 표시됩니다.게시물 <span class="keyword">제목</span>이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다.
+                        </div>
+                        <div class="subject-info">
+                            <span class="subject-info-count">[999+]</span>
+                            <span class="lagarcy-element-icon ic-badge-new-s16" style="">새글</span>
+                        </div>
+                        <div class="subject-desc">
+                            이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요.
+                        </div>
+                    </a>
+                    {{ profile.webzine() }}
+                    <div class="lagarcy-module-board-info">
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-view-s16-c999", txt="ic-view-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-heart-s16-c999", txt="ic-heart-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <!--
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-up-s16-cff5000", txt="ic-triangle-up-s16-cff5000", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-down-s16-c999", txt="ic-triangle-down-s16-c999", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        -->
+                    </div>
+                </div>
+                <!-- [D] 이미지가 있을 경우 추가 해 주세요. -->
+                <div class="group-col group-image">
+                    <a href="#" class="lagarcy-module-list-image">
+                        <img src="https://dummyimage.com/112x84/00eaff/040b6b" alt="images">
+                        <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                        <!--  이미지와 관련된 아이콘 입니다.
+                            <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                            <span class="lagarcy-element-icon ic-vote-round" style="">설문</span>
+                            <span class="lagarcy-element-icon ic-lock-round" style="">비공개</span>
+                            <span class="lagarcy-element-icon ic-play-round" style="">영상</span>
+                        -->
+                        <span class="image-count">+999</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="subject-category">
+                    <span class="category-title">로스트아크</span>
+                    <span class="category-board">팬아트게시판</span>
+                    <div class="category-dropdown {{ dropDownControl }}">
+                        {{ icon.base(class="ic-fill-globe-circle-s16-cccc", txt="ic-fill-globe-circle-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-fill-user-s16-cccc", txt="ic-fill-user-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-lock-default-s16-cccc", txt="ic-lock-default-s16-cccc", width="16px", height="16px") }}
+                        <button>{{ icon.base(class="ic-direction-down-s16-cccc", txt="ic-direction-down-s16-cccc", width="16px", height="16px") }}</button>
+                        <ul class="lagarcy-module-dropdown status">
+                            <li class="active">
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">나만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">친구만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">전체 공개</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group-col group-subject">
+                    <a href="#" class="subject-icon0">
+                        <div class="subject-txt">
+                            바다에서 함께할 가족을 모집합니다. 최대케이스…게시물 제목이 여기에 표시됩니다.게시물 <span class="keyword">제목</span>이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다.
+                        </div>
+                        <div class="subject-info">
+                            <span class="subject-info-count">[999+]</span>
+                        </div>
+                        <div class="subject-desc">
+                            이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요.
+                        </div>
+                    </a>
+                    {{ profile.webzine() }}
+                    <div class="lagarcy-module-board-info">
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-view-s16-c999", txt="ic-view-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-heart-s16-c999", txt="ic-heart-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <!--
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-up-s16-cff5000", txt="ic-triangle-up-s16-cff5000", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-down-s16-c999", txt="ic-triangle-down-s16-c999", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        -->
+                    </div>
+                </div>
+                <!-- [D] 이미지가 있을 경우 추가 해 주세요. -->
+                <div class="group-col group-image">
+                    <a href="#" class="lagarcy-module-list-image">
+                        <img src="https://dummyimage.com/112x84/00eaff/040b6b" alt="images">
+                        <span class="lagarcy-element-icon ic-vote-round" style="">설문</span>
+                        <!--  이미지와 관련된 아이콘 입니다.
+                            <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                            <span class="lagarcy-element-icon ic-vote-round" style="">설문</span>
+                            <span class="lagarcy-element-icon ic-lock-round" style="">비공개</span>
+                            <span class="lagarcy-element-icon ic-play-round" style="">영상</span>
+                        -->
+                        <span class="image-count">+999</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="subject-category">
+                    {{ icon.base(class="ic-img-toon", txt="ic-img-toon", width="18px", height="18px") }}
+                    <span class="category-title">툰스푼</span>
+                    <span class="category-board">팬아트게시판</span>
+                    <div class="category-dropdown {{ dropDownControl }}">
+                        {{ icon.base(class="ic-fill-globe-circle-s16-cccc", txt="ic-fill-globe-circle-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-fill-user-s16-cccc", txt="ic-fill-user-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-lock-default-s16-cccc", txt="ic-lock-default-s16-cccc", width="16px", height="16px") }}
+                        <button>{{ icon.base(class="ic-direction-down-s16-cccc", txt="ic-direction-down-s16-cccc", width="16px", height="16px") }}</button>
+                        <ul class="lagarcy-module-dropdown status">
+                            <li class="active">
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">나만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">친구만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">전체 공개</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- [D] 이미지가 없을 시 subject-noimg 클래스를 추가 해 주세요. -->
+                <div class="group-col group-subject subject-noimg">
+                    <a href="#" class="subject-icon1">
+                        <div class="subject-txt">
+                            <span class="subject-txt-pick">
+                                <span class="lagarcy-element-icon ic-pick" style="">pick</span>
+                            </span>
+                            <span class="subject-txt-event">
+                                <span class="txt-event">[이벤트]</span>
+                            </span>
+                            <span class="subject-txt-update">
+                                <span class="txt-update">[업데이트]</span>
+                            </span>
+                            <span class="subject-txt-notice">
+                                <span class="txt-notice">[공지]</span>
+                            </span>
+                            바다에서 함께할 가족을 모집합니다. 최대케이스…게시물 제목이 여기에 표시됩니다.게시물 <span class="keyword">제목</span>이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다.
+                        </div>
+                        <div class="subject-info">
+                            <span class="subject-info-count">[999+]</span>
+                            <span class="lagarcy-element-icon ic-badge-new-s16" style="">새글</span>
+                        </div>
+                        <div class="subject-desc">
+                            이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요.
+                        </div>
+                    </a>
+                    {{ profile.webzine() }}
+                    <div class="lagarcy-module-board-info">
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-view-s16-c999", txt="ic-view-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-heart-s16-c999", txt="ic-heart-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <!--
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-up-s16-cff5000", txt="ic-triangle-up-s16-cff5000", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-down-s16-c999", txt="ic-triangle-down-s16-c999", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="subject-category">
+                    <span class="category-title">로스트아크</span>
+                    <span class="category-board">팬아트게시판</span>
+                    <div class="category-dropdown {{ dropDownControl }}">
+                        {{ icon.base(class="ic-fill-globe-circle-s16-cccc", txt="ic-fill-globe-circle-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-fill-user-s16-cccc", txt="ic-fill-user-s16-cccc", width="16px", height="16px") }}
+                        {{ icon.base(class="ic-lock-default-s16-cccc", txt="ic-lock-default-s16-cccc", width="16px", height="16px") }}
+                        <button>{{ icon.base(class="ic-direction-down-s16-cccc", txt="ic-direction-down-s16-cccc", width="16px", height="16px") }}</button>
+                        <ul class="lagarcy-module-dropdown status">
+                            <li class="active">
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">나만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">친구만 보기</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="lagarcy-element-btn btn-square">
+                                    <span class="btn-txt">전체 공개</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- [D] 이미지가 없을 시 subject-noimg 클래스를 추가 해 주세요. -->
+                <div class="group-col group-subject subject-noimg">
+                    <a href="#" class="subject-icon0">
+                        <div class="subject-txt">
+                            바다에서 함께할 가족을 모집합니다. 최대케이스…게시물 제목이 여기에 표시됩니다.게시물 <span class="keyword">제목</span>이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다.
+                        </div>
+                        <div class="subject-info">
+                            <span class="subject-info-count">[999+]</span>
+                        </div>
+                        <div class="subject-desc">
+                            이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요. 이벤트 참여해서 받은 쿠폰인데 집근처 죠스떡볶이 매장이 없어요ㅠㅠㅋㅋㅋ 떡볶이 좋아하시는 분 쓰세요! 기한은 90일이요~ 사용하실거면 다른 분을 위해 꼭 댓글 남겨주세요.
+                        </div>
+                    </a>
+                    {{ profile.webzine() }}
+                    <div class="lagarcy-module-board-info">
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-view-s16-c999", txt="ic-view-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-heart-s16-c999", txt="ic-heart-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <!--
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-up-s16-cff5000", txt="ic-triangle-up-s16-cff5000", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        <button class="board-info-section">
+                            {{ icon.base(class="ic-triangle-down-s16-c999", txt="ic-triangle-down-s16-c999", width="16px", height="16px") }}<span class="count">999+</span>
+                        </button>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    {{ pagination.pagination() }}
+    {{ pagination.btnMorePagination() }}
+    {{ pagination.loagingPagination() }}
+{% endmacro %}
+<!-- list webzine skeleton -->
+{% macro listWebzineSkeleton() %}
+    <ul class="lagarcy-module-list list-webzine skeleton">
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col group-subject">
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+                <div class="group-col group-image">
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col group-subject">
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+                <div class="group-col group-image">
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+{% endmacro %}
+
+<!-- list myNews -->
+{% macro listMyNews() %}
+    <ul class="lagarcy-module-list list-mynews">
+        <li class="list-item">
+            <div class="group">
+                <div class="group-image">
+                    {{ icon.base(class="ic-img-like", txt="ic-img-like", width="40px", height="40px") }}
+                </div>
+                <div class="group-subject">
+                    <p>
+                        <a href="#">
+                            <em class="username">%초코송이%</em>
+                        </a>님이 <a href="#">
+                            <em>%심심하다%</em>
+                        </a> 게시물에 댓글을 작성했습니다.</p>
+                </div>
+                <div class="group-desc">
+                    <p>영광의 증표 몇주간 전혀 받은적이 없어요!</p>
+                    <span class="time-date">방금 전
+                        <span class="lagarcy-module-tooltip">
+                            <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="group-image">
+                    {{ icon.base(class="ic-img-reply", txt="ic-img-reply", width="40px", height="40px") }}
+                </div>
+                <div class="group-subject">
+                    <p>
+                        <a href="#">
+                            <em class="username">%초코송이%</em>
+                        </a>님이 <a href="www.naver.com" target="_blank">
+                            <em>%[툰스푼] 심심하다%</em>
+                        </a> 게시물에 댓글을 작성했습니다.</p>
+                </div>
+                <div class="group-desc">
+                    <p>영광의 증표 몇주간 전혀 받은적이 없어요!</p>
+                    <span class="time-date">방금 전
+                        <span class="lagarcy-module-tooltip">
+                            <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="group-image">
+                    {{ icon.base(class="ic-img-share", txt="ic-img-share", width="40px", height="40px") }}
+                </div>
+                <div class="group-subject">
+                    <p>
+                        <a href="#">
+                            <em class="username">%아토스%</em>
+                        </a>님이 <a href="#">
+                            <em>%아토스님이 인벤에서 활동하는 이상하는 유저때문에 힘들어서 못해먹겠네 게시물을 공유하였습니다.%</em>
+                        </a> 게시물에 댓글을 작성했습니다.</p>
+                </div>
+                <div class="group-desc">
+                    <p>안녕하세요. 저는 에픽세븐과 로스트아크에서 공략과 팬아트를 담당하고 있는 서울에 거주하는 고딩입니다.</p>
+                    <span class="time-date">Hace 59 minutos
+                        <span class="lagarcy-module-tooltip">
+                            <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </li>
+    </ul>
+    {{ btn.textBtn16(shapeClass='text-btn16', sizeClass='', colorClass='', txt='더보기', iconClass='ic-direction-down-s16-c999') }}
+{% endmacro %}
+<!-- list listSlider -->
+{% macro listSlider() %}
+    <ul class="lagarcy-module-list list-slider" style="width: 496px; margin: 0 auto;">
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col group-subject ">
+                    <a href="#">
+                        <div class="subject-txt">
+                            바다에서 함께할 가족을 모집합니다. 최대케이스…게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다. 게시물 제목이 여기에 표시됩니다.게시물 제목이 여기에 표시됩니다.
+                        </div>
+                    </a>
+                    <div class="lagarcy-module-board-info">
+                        <!-- .active 추가 해 주세요. -->
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-view-s16-c999", txt="ic-view-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-heart-s16-c999", txt="ic-heart-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section">
+                            {{ icon.base(class="ic-reply-s16-c999", txt="ic-reply-s16-c999", width="16px", height="16px") }}
+                            <span class="count">999+</span>
+                        </div>
+                        <div class="board-info-section info-text">좋아요가 많은 글</div>
+                    </div>
+                </div>
+                <!-- [D] 이미지가 있을 경우 추가 해 주세요. -->
+                <div class="group-col group-image">
+                    <a href="#" class="lagarcy-module-list-image">
+                        <img src="https://dummyimage.com/94x94/00eaff/040b6b" alt="images">
+                        <span class="lagarcy-element-icon ic-music-round" style="">음원</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+{% endmacro %}
+
+<!-- list mini -->
+{% macro listMini() %}
+    <ul class="lagarcy-module-list list-mini">
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col group-subject">
+                    <a href="#" class="subject-icon1">
+                        <div class="subject-txt">
+                            <span class="subject-txt-pick">
+                                <span class="lagarcy-element-icon ic-pick" style="">pick</span>
+                            </span>
+                            <span class="subject-txt-event">
+                                <span class="txt-event">[이벤트]</span>
+                            </span>
+                            <span class="subject-txt-update">
+                                <span class="txt-update">[업데이트]</span>
+                            </span>
+                            <span class="subject-txt-notice">
+                                <span class="txt-notice">[공지]</span>
+                            </span>
+                    지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!!
+                    </div>
+                        <div class="subject-info">
+                            <span class="subject-info-count">[999+]</span>
+                            <span class="lagarcy-element-icon ic-badge-new-s16" style="">새글</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col group-subject">
+                    <a href="#" class="subject-icon1">
+                        <div class="subject-txt">
+                    지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!!
+                    </div>
+                        <div class="subject-info">
+                            <span class="lagarcy-element-icon ic-badge-new-s16" style="">새글</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col group-subject">
+                    <a href="#" class="subject-icon1">
+                        <div class="subject-txt active">
+                    지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!! 지령서 34장 브론즈로 다 녹였다!!
+                    </div>
+                        <div class="subject-info"></div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col group-subject">
+                    <a href="#" class="subject-icon1">
+                        <div class="subject-txt">
+                    지령서 34장 브론즈로 다 녹였다!!
+                    </div>
+                        <div class="subject-info"></div>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+{% endmacro %}
+<!-- list line skeleton -->
+{% macro listLineSkeleton() %}
+    <ul class="lagarcy-module-list list-line skeleton-line">
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col group-subject">
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+{% endmacro %}
+<!-- list mini skeleton -->
+{% macro listMminiSkeleton() %}
+    <ul class="lagarcy-module-list list-mini skeleton">
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col group-subject">
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col group-subject">
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+{% endmacro %}
+<!-- myindie list webzine skeleton -->
+{% macro webzineSkeleton() %}
+    <ul class="lagarcy-module-list list-webzine skeleton-myindie">
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col">
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+                <div class="group-col group-profile">
+                    <div class="skeleton-line circle">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col">
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+                <div class="group-col group-profile">
+                    <div class="skeleton-line circle">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col">
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+                <div class="group-col group-profile">
+                    <div class="skeleton-line circle">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col">
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+                <div class="group-col group-profile">
+                    <div class="skeleton-line circle">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-item">
+            <div class="group">
+                <div class="group-col">
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+                <div class="group-col group-profile">
+                    <div class="skeleton-line circle">
+                        <div class="skeleton-content"></div>
+                    </div>
+                    <div class="skeleton-line">
+                        <div class="skeleton-content"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+{% endmacro %}
+<!-- list mini skeleton -->
+{% macro simpleLineSkeleton() %}
+    <div class="skeleton-simple">
+        <div class="group-col">
+            <div class="skeleton-line">
+                <div class="skeleton-content"></div>
+            </div>
+            <div class="skeleton-line">
+                <div class="skeleton-content"></div>
+            </div>
+            <div class="skeleton-line">
+                <div class="skeleton-content"></div>
+            </div>
+            <div class="skeleton-line line-half">
+                <div class="skeleton-content"></div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+<!-- list GAME cart -->
+{% macro listGame(isDetail, isMy, isDevelop, isCompletedPay, isFavorite, isCart, onlyTitle, hasCheckbox, hasPriceInfo, isBtnCart, isBtnPlay, isBtnCoupon, isBtnDemo) %}
+    <ul class="lagarcy-module-list list-dlc list-game">
+        <li class="list-item-wrap">
+            {% if hasCheckbox %}
+                <!-- 클릭 시 is-active를 추가 해 주세요. -->
+                {{ inputCheckbox.base(id="check2", txt="체크박스", state="checked",statusClass="is-active") }}
+            {% endif %}
+            <div class="list-item">
+                <div class="thumb-item">
+                    <a href="#">
+                        <img src="{{ staticUrl }}/static/images/profile/profile-game-03.png"/>
+                        <div class="badge-area">
+                            {{ badge.base(statusClass="status-new",txt="NEW") }}
+                        </div>
+                    </a>
+                </div>
+                <dl class="info-item">
+                    <dt>게임명이 들어갑니다</dt>
+                    {% if onlyTitle %}
+                    {% else %}
+                        <dd class="lagarcy-module-status">
+                            {% if isMy %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% elseif isFavorite %}
+                                <span class="txt-item">120분 플레이</span>
+                                <span class="txt-item">추천</span>
+                            {% elseif isDevelop %}
+                                <span class="txt-item">추천<b>999</b>
+                                </span>
+                                <span class="txt-item">비추천<b>2</b>
+                                </span>
+                            {% elseif isCompletedPay %}
+                                {{ btn.base(sizeClass="size-32", colorClass="btn-orange-line", txt="게임 시작") }}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% endif %}
+                        </dd>
+                        {{ btn.withIconText(shapeClass='btn-small-round no-icon', sizeClass='size-28', colorClass='btn-gray-line', txt='평가하기') }}
+                    {% endif %}
+                </dl>
+                {% if hasPriceInfo %}
+                    <div class="lagarcy-module-price">
+                        {% if isCart %}
+                            <span class="price">₩5,000</span>
+                        {% elseif isCompletedPay %}
+                            <span class="price">₩5,000</span>
+                        {% else %}
+                            <strong class="discount-rate">FREE</strong>
+                        {% endif %}
+                        <!--<span class="original">₩7,000</span>-->
+                    </div>
+                {% endif %}
+                {% if isBtnCart %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass='size-40', shapeClass='', colorClass='btn-orange-line', txt='장바구니') }}
+                    </div>
+                {% elseif isBtnPlay %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-orange-line", txt="게임 시작") }}
+                    </div>
+                {% elseif isBtnDemo %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-lblue-line", txt="게임 다운로드") }}
+                    </div>
+                {% endif %}
+            </div>
+        </li>
+        <li class="list-item-wrap">
+            {% if hasCheckbox %}
+                {{ inputCheckbox.base(id="check3", txt="체크박스", state="",statusClass="") }}
+            {% endif %}
+            <div class="list-item">
+                <div class="thumb-item">
+                    <a href="#">
+                        <img src="{{ staticUrl }}/static/images/profile/profile-game-02.png"/>
+                        <div class="badge-area">
+                            {{ badge.base(statusClass="status-update",txt="UPDATE") }}
+                            {{ badge.base(statusClass="status-dlc",txt="DLC") }}
+                        </div>
+                    </a>
+                </div>
+                <dl class="info-item">
+                    <dt>컨트롤</dt>
+                    {% if onlyTitle %}
+                    {% else %}
+                        <dd class="lagarcy-module-status">
+                            {% if isMy %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% elseif isFavorite %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% elseif isDevelop %}
+                                <span class="txt-item">추천<b>999</b>
+                                </span>
+                                <span class="txt-item">비추천<b>2</b>
+                                </span>
+                            {% elseif isCompletedPay %}
+                                {{ btn.base(sizeClass="size-32", colorClass="btn-orange-line", txt="게임 시작") }}
+                            {% else %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% endif %}
+                        </dd>
+                    {% endif %}
+                </dl>
+                {% if hasPriceInfo %}
+                    <div class="lagarcy-module-price{% if isCart %} type-flex{% endif %}">
+                        {% if isCart %}
+                            <span class="txt-desc">제재 중<br/>
+                                <span>(구매 불가)</span></span>
+                            {{ btn.onlyIcon(iconClass="ic-close-s20-c999") }}
+                        {% elseif isCompletedPay %}
+                            <span class="price">₩5,000</span>
+                        {% else %}
+                            <!--<strong class="discount-rate">-25%</strong>-->
+                            <span class="price">₩5,000</span>
+                            <!--<span class="original">₩7,000</span>-->
+                        {% endif %}
+                    </div>
+                {% endif %}
+                {% if isBtnCart %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass='size-40', shapeClass='', colorClass='btn-orange-line', txt='장바구니') }}
+                    </div>
+                {% elseif isBtnPlay %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-orange-line", txt="게임 시작") }}
+                    </div>
+                {% elseif isBtnDemo %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-lblue-line", txt="게임 다운로드") }}
+                    </div>
+                {% endif %}
+            </div>
+        </li>
+        <li class="list-item-wrap">
+            {% if hasCheckbox %}
+                {{ inputCheckbox.base(id="check4", txt="체크박스", state="",statusClass="") }}
+            {% endif %}
+            <div class="list-item">
+                <div class="thumb-item">
+                    <a href="#">
+                        <img src="{{ staticUrl }}/static/images/profile/profile-game-01.png"/>
+                    </a>
+                </div>
+                <dl class="info-item">
+                    <dt>%게임명 노출% 게임명이 길어질 경우에는 우측 영역과 24px의 마진 유지하며 최대  두 줄 처리 합니다.  두 줄 이상일 경우에는 말줄임처리해주세요. %게임명 노출% 게임명이 길어질 경우에는 우측 영역과 24px의 마진 유지하며 최대  두 줄 처리 합니다.  두 줄 이상일 경우에는 말줄임처리해주세요.</dt>
+                    {% if onlyTitle %}
+                    {% else %}
+                        <dd class="lagarcy-module-status">
+                            {% if isMy %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% elseif isFavorite %}
+                                <span class="txt-item">1분 플레이</span>
+                                <span class="txt-item">바추천</span>
+                            {% elseif isDevelop %}
+                                <span class="txt-item">추천<b>999</b>
+                                </span>
+                                <span class="txt-item">비추천<b>2</b>
+                                </span>
+                            {% elseif isCompletedPay %}
+                                {{ btn.base(sizeClass="size-32", colorClass="btn-orange-line", txt="게임 시작") }}
+                            {% else %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% endif %}
+                        </dd>
+                        {{ btn.withIconText(shapeClass='btn-small-round no-icon', sizeClass='size-28', colorClass='btn-gray-line', txt='평가하기') }}
+                    {% endif %}
+                </dl>
+                {% if hasPriceInfo %}
+                    <div class="lagarcy-module-price">
+                        {% if isCompletedPay %}
+                            <span class="price">₩5,000</span>
+                        {% else %}
+                            <!--<strong class="discount-rate">-25%</strong>-->
+                            <span class="price">VND 99,999,999</span>
+                            <span class="original">VND 99,999,999</span>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                {% if isBtnCart %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass='size-40',  colorClass='btn-orange-line', txt='장바구니') }}
+                    </div>
+                {% elseif isBtnPlay %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-orange-line", txt="Começar o jogo") }}
+                    </div>
+                {% elseif isBtnCoupon %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-lblue-line", txt="Appliquer Coupon") }}
+                    </div>
+                {% elseif isBtnDemo %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-lblue-line", txt="Télécharger des jeux") }}
+                    </div>
+                {% endif %}
+            </div>
+        </li>
+        <li class="list-item-wrap">
+            {% if hasCheckbox %}
+                {{ inputCheckbox.base(id="check5", txt="체크박스", state="",statusClass="") }}
+            {% endif %}
+            <div class="list-item">
+                <div class="thumb-item">
+                    <a href="#">
+                        <img src="{{ staticUrl }}/static/images/profile/profile-game-01.png"/>
+                    </a>
+                </div>
+                <dl class="info-item">
+                    <dt>스페이스 헤븐</dt>
+                    {% if onlyTitle %}
+                    {% else %}
+                        <dd class="lagarcy-module-status">
+                            {% if isMy %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% elseif isFavorite %}
+                                <span class="txt-item">추천</span>
+                            {% elseif isDevelop %}
+                                <span class="txt-item">추천<b>999</b>
+                                </span>
+                                <span class="txt-item">비추천<b>2</b>
+                                </span>
+                            {% elseif isCompletedPay %}
+                                {{ btn.base(sizeClass="size-32", colorClass="btn-orange-line", txt="게임 시작") }}
+                            {% else %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% endif %}
+                        </dd>
+                    {% endif %}
+                </dl>
+                {% if hasPriceInfo %}
+                    <div class="lagarcy-module-price{% if isCart %} type-flex{% endif %}">
+                        {% if isCart %}
+                            <span class="txt-desc">해당 지역에서 구매할 수 없는 게임입니다.</span>
+                            {{ btn.onlyIcon(iconClass="ic-close-s20-c999") }}
+                        {% elseif isCompletedPay %}
+                            <span class="price">₩5,000</span>
+                        {% else %}
+                            <strong class="discount-rate">-25%</strong>
+                            <span class="price">₩5,000</span>
+                            <span class="original">₩7,000</span>
+                        {% endif %}
+
+                    </div>
+                {% endif %}
+                {% if isBtnCart %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass='size-40', shapeClass='', colorClass='btn-orange-line', txt='장바구니') }}
+                    </div>
+                {% elseif isBtnPlay %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-orange-line", txt="게임 시작") }}
+                    </div>
+                {% elseif isBtnDemo %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-lblue-line", txt="게임 다운로드") }}
+                    </div>
+                {% endif %}
+            </div>
+        </li>
+        <li class="list-item-wrap">
+            {% if hasCheckbox %}
+                <!-- 클릭 시 is-active를 추가 해 주세요. -->
+                {{ inputCheckbox.base(id="check6", txt="체크박스", state="",statusClass="is-active") }}
+            {% endif %}
+            <div class="list-item">
+                <div class="thumb-item">
+                    <a href="#">
+                        <img src="{{ staticUrl }}/static/images/profile/profile-game-03.png"/>
+                        <div class="badge-area">
+                            {{ badge.base(statusClass="status-new",txt="NEW") }}
+                        </div>
+                    </a>
+                </div>
+                <dl class="info-item">
+                    <dt>게임명이 들어갑니다</dt>
+                    {% if onlyTitle %}
+                    {% else %}
+                        <dd class="lagarcy-module-status">
+                            {% if isMy %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% elseif isFavorite %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% elseif isDevelop %}
+                                <span class="txt-item">추천<b>999</b>
+                                </span>
+                                <span class="txt-item">비추천<b>2</b>
+                                </span>
+                            {% elseif isCompletedPay %}
+                                {{ btn.base(sizeClass="size-32", colorClass="btn-orange-line", txt="게임 시작") }}
+                            {% else %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% endif %}
+                        </dd>
+                    {% endif %}
+                </dl>
+                {% if hasPriceInfo %}
+                    <div class="lagarcy-module-price">
+                        {% if isCart %}
+                            <span class="price">₩5,000</span>
+                        {% elseif isCompletedPay %}
+                            <span class="price">₩5,000</span>
+                        {% else %}
+                            <strong class="discount-rate">FREE</strong>
+                        {% endif %}
+                        <!--<span class="original">₩7,000</span>-->
+                    </div>
+                {% endif %}
+                {% if isBtnCart %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass='size-40', shapeClass='', colorClass='btn-orange-line', txt='장바구니') }}
+                    </div>
+                {% elseif isBtnPlay %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-orange-line", txt="게임 시작") }}
+                    </div>
+                {% elseif isBtnDemo %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-lblue-line", txt="게임 다운로드") }}
+                    </div>
+                {% endif %}
+            </div>
+        </li>
+        <li class="list-item-wrap">
+            {% if hasCheckbox %}
+                {{ inputCheckbox.base(id="check7", txt="체크박스", state="",statusClass="") }}
+            {% endif %}
+            <div class="list-item">
+                <div class="thumb-item">
+                    <a href="#">
+                        <img src="{{ staticUrl }}/static/images/profile/profile-game-02.png"/>
+                        <div class="badge-area">
+                            {{ badge.base(statusClass="status-update",txt="UPDATE") }}
+                            {{ badge.base(statusClass="status-dlc",txt="DLC") }}
+                        </div>
+                    </a>
+                </div>
+                <dl class="info-item">
+                    <dt>컨트롤</dt>
+                    {% if onlyTitle %}
+                    {% else %}
+                        <dd class="lagarcy-module-status">
+                            {% if isMy %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% elseif isFavorite %}
+                                <span class="txt-item">1분 플레이</span>
+                                <span class="txt-item">비추천</span>
+                            {% elseif isDevelop %}
+                                <span class="txt-item">추천<b>999</b>
+                                </span>
+                                <span class="txt-item">비추천<b>2</b>
+                                </span>
+                            {% elseif isCompletedPay %}
+                                {{ btn.base(sizeClass="size-32", colorClass="btn-orange-line", txt="게임 시작") }}
+                            {% else %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% endif %}
+                        </dd>
+                    {% endif %}
+                </dl>
+                {% if hasPriceInfo %}
+                    <div class="lagarcy-module-price{% if isCart %} type-flex{% endif %}">
+                        {% if isCart %}
+                            <span class="txt-desc">해당 지역에서 구매할 수 없는 게임입니다.</span>
+                            {{ btn.onlyIcon(iconClass="ic-close-s20-c999") }}
+                        {% elseif isCompletedPay %}
+                            <span class="price">₩5,000</span>
+                        {% else %}
+                            <!--<strong class="discount-rate">-25%</strong>-->
+                            <span class="price">₩5,000</span>
+                            <!--<span class="original">₩7,000</span>-->
+                        {% endif %}
+                    </div>
+                {% endif %}
+                {% if isBtnCart %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass='size-40', shapeClass='', colorClass='btn-orange-line', txt='장바구니') }}
+                    </div>
+                {% elseif isBtnPlay %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-orange-line", txt="게임 시작") }}
+                    </div>
+                {% elseif isBtnDemo %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-lblue-line", txt="게임 다운로드") }}
+                    </div>
+                {% endif %}
+            </div>
+        </li>
+        <li class="list-item-wrap">
+            {% if hasCheckbox %}
+                {{ inputCheckbox.base(id="check8", txt="체크박스", state="",statusClass="") }}
+            {% endif %}
+            <div class="list-item">
+                <div class="thumb-item">
+                    <a href="#">
+                        <img src="{{ staticUrl }}/static/images/profile/profile-game-01.png"/>
+                    </a>
+                </div>
+                <dl class="info-item">
+                    <dt>%게임명 노출% 게임명이 길어질 경우에는 우측 영역과 24px의 마진 유지하며 최대  두 줄 처리 합니다.  두 줄 이상일 경우에는 말줄임처리해주세요. %게임명 노출% 게임명이 길어질 경우에는 우측 영역과 24px의 마진 유지하며 최대  두 줄 처리 합니다.  두 줄 이상일 경우에는 말줄임처리해주세요.</dt>
+                    {% if onlyTitle %}
+                    {% else %}
+                        <dd class="lagarcy-module-status">
+                            {% if isMy %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% elseif isFavorite %}
+                                <span class="txt-item">120분 플레이</span>
+                                <span class="txt-item">추천</span>
+                            {% elseif isDevelop %}
+                                <span class="txt-item">추천<b>999</b>
+                                </span>
+                                <span class="txt-item">비추천<b>2</b>
+                                </span>
+                            {% elseif isCompletedPay %}
+                                {{ btn.base(sizeClass="size-32", colorClass="btn-orange-line", txt="게임 시작") }}
+                            {% else %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% endif %}
+                        </dd>
+                    {% endif %}
+                </dl>
+                {% if hasPriceInfo %}
+                    <div class="lagarcy-module-price">
+                        {% if isCompletedPay %}
+                            <span class="price">₩5,000</span>
+                        {% else %}
+                            <!--<strong class="discount-rate">-25%</strong>-->
+                            <span class="price">VND 99,999,999</span>
+                            <span class="original">VND 99,999,999</span>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                {% if isBtnCart %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass='size-40',  colorClass='btn-orange-line', txt='장바구니') }}
+                    </div>
+                {% elseif isBtnPlay %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-orange-line", txt="Começar o jogo") }}
+                    </div>
+                {% elseif isBtnCoupon %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-lblue-line", txt="Appliquer Coupon") }}
+                    </div>
+                {% elseif isBtnDemo %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-lblue-line", txt="Télécharger des jeux") }}
+                    </div>
+                {% endif %}
+            </div>
+        </li>
+        <li class="list-item-wrap">
+            {% if hasCheckbox %}
+                {{ inputCheckbox.base(id="check9", txt="체크박스", state="",statusClass="") }}
+            {% endif %}
+            <div class="list-item">
+                <div class="thumb-item">
+                    <a href="#">
+                        <img src="{{ staticUrl }}/static/images/profile/profile-game-01.png"/>
+                    </a>
+                </div>
+                <dl class="info-item">
+                    <dt>스페이스 헤븐</dt>
+                    {% if onlyTitle %}
+                    {% else %}
+                        <dd class="lagarcy-module-status">
+                            {% if isMy %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% elseif isFavorite %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% elseif isDevelop %}
+                                <span class="txt-item">추천<b>999</b>
+                                </span>
+                                <span class="txt-item">비추천<b>2</b>
+                                </span>
+                            {% elseif isCompletedPay %}
+                                {{ btn.base(sizeClass="size-32", colorClass="btn-orange-line", txt="게임 시작") }}
+                            {% else %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% endif %}
+                        </dd>
+                    {% endif %}
+                </dl>
+                {% if hasPriceInfo %}
+                    <div class="lagarcy-module-price{% if isCart %} type-flex{% endif %}">
+                        {% if isCart %}
+                            <span class="txt-desc">해당 지역에서 구매할 수 없는 게임입니다.</span>
+                            {{ btn.onlyIcon(iconClass="ic-close-s20-c999") }}
+                        {% elseif isCompletedPay %}
+                            <span class="price">₩5,000</span>
+                        {% else %}
+                            <strong class="discount-rate">-25%</strong>
+                            <span class="price">₩5,000</span>
+                            <span class="original">₩7,000</span>
+                        {% endif %}
+
+                    </div>
+                {% endif %}
+                {% if isBtnCart %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass='size-40', shapeClass='', colorClass='btn-orange-line', txt='장바구니') }}
+                    </div>
+                {% elseif isBtnPlay %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-orange-line", txt="게임 시작") }}
+                    </div>
+                {% elseif isBtnDemo %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-lblue-line", txt="게임 다운로드") }}
+                    </div>
+                {% endif %}
+            </div>
+        </li>
+        <li class="list-item-wrap">
+            {% if hasCheckbox %}
+                {{ inputCheckbox.base(id="check10", txt="체크박스", state="",statusClass="") }}
+            {% endif %}
+            <div class="list-item">
+                <div class="thumb-item">
+                    <a href="#">
+                        <img src="{{ staticUrl }}/static/images/profile/profile-game-01.png"/>
+                    </a>
+                </div>
+                <dl class="info-item">
+                    <dt>%게임명 노출% 게임명이 길어질 경우에는 우측 영역과 24px의 마진 유지하며 최대  두 줄 처리 합니다.  두 줄 이상일 경우에는 말줄임처리해주세요. %게임명 노출% 게임명이 길어질 경우에는 우측 영역과 24px의 마진 유지하며 최대  두 줄 처리 합니다.  두 줄 이상일 경우에는 말줄임처리해주세요.</dt>
+                    {% if onlyTitle %}
+                    {% else %}
+                        <dd class="lagarcy-module-status">
+                            {% if isMy %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% elseif isFavorite %}
+                                <span class="txt-item">1분 플레이</span>
+                                <span class="txt-item">추천</span>
+                            {% elseif isDevelop %}
+                                <span class="txt-item">추천<b>999</b>
+                                </span>
+                                <span class="txt-item">비추천<b>2</b>
+                                </span>
+                            {% elseif isCompletedPay %}
+                                {{ btn.base(sizeClass="size-32", colorClass="btn-orange-line", txt="게임 시작") }}
+                            {% else %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% endif %}
+                        </dd>
+                    {% endif %}
+                </dl>
+                {% if hasPriceInfo %}
+                    <div class="lagarcy-module-price">
+                        {% if isCompletedPay %}
+                            <span class="price">₩5,000</span>
+                        {% else %}
+                            <!--<strong class="discount-rate">-25%</strong>-->
+                            <span class="price">VND 99,999,999</span>
+                            <span class="original">VND 99,999,999</span>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                {% if isBtnCart %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass='size-40',  colorClass='btn-orange-line', txt='장바구니') }}
+                    </div>
+                {% elseif isBtnPlay %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-orange-line", txt="Começar o jogo") }}
+                    </div>
+                {% elseif isBtnCoupon %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-lblue-line", txt="Appliquer Coupon") }}
+                    </div>
+                {% elseif isBtnDemo %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-lblue-line", txt="Télécharger des jeux") }}
+                    </div>
+                {% endif %}
+            </div>
+        </li>
+        <li class="list-item-wrap">
+            {% if hasCheckbox %}
+                {{ inputCheckbox.base(id="check11", txt="체크박스", state="",statusClass="") }}
+            {% endif %}
+            <div class="list-item">
+                <div class="thumb-item">
+                    <a href="#">
+                        <img src="{{ staticUrl }}/static/images/profile/profile-game-01.png"/>
+                    </a>
+                </div>
+                <dl class="info-item">
+                    <dt>스페이스 헤븐</dt>
+                    {% if onlyTitle %}
+                    {% else %}
+                        <dd class="lagarcy-module-status">
+                            {% if isMy %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% elseif isFavorite %}
+                                <span class="txt-item">1분 플레이</span>
+                                <span class="txt-item">추천</span>
+                            {% elseif isDevelop %}
+                                <span class="txt-item">추천<b>999</b>
+                                </span>
+                                <span class="txt-item">비추천<b>2</b>
+                                </span>
+                            {% elseif isCompletedPay %}
+                                {{ btn.base(sizeClass="size-32", colorClass="btn-orange-line", txt="게임 시작") }}
+                            {% else %}
+                                <span class="txt-item">6시간 플레이</span>
+                            {% endif %}
+                        </dd>
+                    {% endif %}
+                </dl>
+                {% if hasPriceInfo %}
+                    <div class="lagarcy-module-price{% if isCart %} type-flex{% endif %}">
+                        {% if isCart %}
+                            <span class="txt-desc">해당 지역에서 구매할 수 없는 게임입니다.</span>
+                            {{ btn.onlyIcon(iconClass="ic-close-s20-c999") }}
+                        {% elseif isCompletedPay %}
+                            <span class="price">₩5,000</span>
+                        {% else %}
+                            <strong class="discount-rate">-25%</strong>
+                            <span class="price">₩5,000</span>
+                            <span class="original">₩7,000</span>
+                        {% endif %}
+
+                    </div>
+                {% endif %}
+                {% if isBtnCart %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass='size-40', shapeClass='', colorClass='btn-orange-line', txt='장바구니') }}
+                    </div>
+                {% elseif isBtnPlay %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-orange-line", txt="게임 시작") }}
+                    </div>
+                {% elseif isBtnDemo %}
+                    <div class="btn-item">
+                        {{ btn.base(sizeClass="size-40", colorClass="btn-lblue-line", txt="게임 다운로드") }}
+                    </div>
+                {% endif %}
+            </div>
+        </li>
+    </ul>
+{% endmacro %}

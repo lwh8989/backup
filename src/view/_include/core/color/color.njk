@@ -1,0 +1,9 @@
+{% macro box(cssType, category, className, color) %}
+    <div class="{{ className }} {{ color }}">
+        <div>
+            <div class="css-type">{{ cssType }}</div>
+            <div class="category">{{ category }}</div>
+            <div class="class-name">{{ className }}</div>
+        </div>
+    </div>
+{% endmacro %}

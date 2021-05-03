@@ -1,0 +1,150 @@
+@import "./src/sass/mixin/mixin";
+@import "./src/sass/color";
+@import "./src/sass/motion";
+
+.guide {
+    font-size: 14px;
+
+    hr {
+        margin: 20px 0;
+        opacity: 0.3;
+    }
+
+    .tit {
+        .desc {
+            font-size: 14px;
+            opacity: 0.8;
+            line-height: 1.4em;
+            padding-left: 20px;
+        }
+    }
+    .tit2 {
+        &:first-of-type {
+            margin-top: 10px;
+        }
+
+        .desc {
+            font-size: 12px;
+            opacity: 0.8;
+            line-height: 1.3em;
+            padding-left: 20px;
+        }
+    }
+
+    .ui-text-error {
+        background-color: $ui-text-error;
+    }
+    .ui-text-warning {
+        background-color: $ui-text-warning;
+    }
+    .ui-text-success {
+        background-color: $ui-text-success;
+    }
+
+    a.desc {
+        font-size: 13px;
+        color: $ui-text-link;
+        padding-left: 20px;
+
+        &:hover {
+            color: $ui-text-warning;
+        }
+    }
+    .dl-list {
+        margin: 10px 0;
+
+        &.indent {
+            margin-left: 20px;
+        }
+
+        dt {
+            font-size: 16px;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        dd {
+            padding: 0 0 4px 20px;
+
+            &::before {
+                content: "-";
+                margin-right: 5px;
+            }
+
+            span.txt-white {
+                display: inline-block;
+                padding: 5px;
+            }
+        }
+        .txt-white {
+            color: $ui_text_white_01;
+        }
+    }
+
+    .motion-demo-wrap {
+        position: relative;
+        width: 100%;
+    }
+
+    .motion-circle {
+        position: relative;
+        margin: 50px 0;
+        opacity: 0;
+
+        &:first-of-type {
+            margin-top: 20px;
+        }
+
+        &::before {
+            @include flexCenter;
+            content: "";
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            color: $ui_text_white_01;
+        }
+
+        $time: 3.5s;
+
+        &.standard {
+            animation: motionTest $time $stds-motion-standard-200 infinite;
+
+            &::before {
+                content: "standard";
+                background-color: $ui-text-error;
+            }
+        }
+        &.entrance {
+            animation: motionTest $time $stds-motion-entrance-200 infinite;
+
+            &::before {
+                content: "entrance";
+                background-color: $ui-text-warning;
+            }
+        }
+        &.exit {
+            animation: motionTest $time $stds-motion-exit-200 infinite;
+
+            &::before {
+                content: "exit";
+                background-color: $ui-text-success;
+            }
+        }
+    }
+
+    @keyframes motionTest {
+        0% {
+            transform: translateX(0);
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            transform: translateX(100%);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+}

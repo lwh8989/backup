@@ -1,0 +1,57 @@
+/* flex mixin */
+@mixin flex(
+    $x: flex-start,
+    $y: flex-start,
+    $d: row,
+    $wrap: nowrap,
+    $type: flex
+) {
+    display: $type;
+    justify-content: $x;
+    align-items: $y;
+    flex-direction: $d;
+    flex-wrap: $wrap;
+    @content;
+}
+@mixin flexCenter() {
+    @include flex($x: center, $y: center);
+    @content;
+}
+@mixin flexBetween() {
+    @include flex($x: space-between);
+    @content;
+}
+@mixin flexBetweenCenter() {
+    @include flex($x: space-between, $y: center);
+    @content;
+}
+
+/* ratio */
+@mixin aspectRatio($width: 1, $height: 1) {
+    padding-bottom: percentage($height / $width);
+}
+
+/* box-type */
+@mixin boxType(
+    $width: auto,
+    $bgc: $ui_form_line_enabled,
+    $borderSize: 1px,
+    $borderType: solid,
+    $borderColor: $ui_form_line_enabled_border,
+    $borderColorActive: $ui_form_line_hover_border,
+    $radius: $radius-S
+) {
+    width: $width;
+    background-color: $bgc;
+    border: $borderSize $borderType $borderColor;
+    border-radius: $radius;
+
+    &.active,
+    &:hover,
+    &:focus,
+    &:focus-within {
+        border-color: $borderColorActive;
+    }
+
+    @content;
+}

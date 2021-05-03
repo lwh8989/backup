@@ -1,0 +1,31 @@
+@use "./../color";
+@use "./../radius";
+@use "./../shadow";
+
+@mixin dialogPos(
+    $top: 50%,
+    $left: 50%,
+    $bottom: 50%,
+    $right: 50%,
+    $x: -50%,
+    $y: -50%,
+) {
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+    transform: translate($x, $y);
+}
+
+@mixin dialogLayer(
+    $pos: absolute,
+    $bg: color.$white,
+    $radius: radius.$Radius-M,
+    $shadow: shadow.$shadow-12
+) {
+    position: $pos;
+    background-color: $bg;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    @content;
+}

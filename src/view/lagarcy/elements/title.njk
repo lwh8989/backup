@@ -1,0 +1,28 @@
+{% import "lagarcy/elements/btn.njk" as btn %}
+<!-- TITLE -->
+{% macro base(h1, h2, h3, h4, h5, txt, hasItem, btnTypeClass, sizeClass, btnTxt, alignCenter, iconBtn, iconClass, iconBtnTxt) %}
+    <div class="lagarcy-element-title{% if alignCenter %} align-center{% endif %}">
+        {% if h1 %}
+            <h1>{{ h1 }}</h1>
+        {% elseif h2 %}
+            <h2>{{ h2 }}</h2>
+        {% elseif h3 %}
+            <h3>{{ h3 }}</h3>
+        {% elseif h4 %}
+            <h4>{{ h4 }}</h4>
+        {% elseif h5 %}
+            <h5>{{ h5 }}</h5>
+        {% else %}
+            <p>{{ txt }}</p>
+        {% endif %}
+        {% if hasItem %}
+            <div class="item-right">
+                {% if iconBtn %}
+                    {{ btn.onlyIcon(iconClass=iconClass,txt=iconBtnTxt) }}
+                {% else %}
+                    {{ btn.base(typeClass=btnTypeClass,sizeClass=sizeClass,txt=btnTxt) }}
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+{% endmacro %}

@@ -1,8 +1,8 @@
-@import "./_space.scss";
-@import "./_mixin.scss";
+@import "./mixin/responsive";
+@import "./space";
 
 
-
+/* Basic 스타일만 고도화 완료 추후 정리 예정 */
 .layout {
     position: relative;
     display: flex;
@@ -14,7 +14,7 @@
         width: 100%;
         height: 100%;
         flex-direction: column;
-        margin: 0 $stds-spacing-400;
+        margin: 0 $stds-spacing-16;
         overflow-x: hidden;
         .container {
             position: relative;
@@ -39,7 +39,7 @@
                 display: flex;
                 flex: none;
                 width: 224px;
-                margin-right: $stds-spacing-400;
+                margin-right: $stds-spacing-16;
             }
             .content-area {
                 display: flex;
@@ -73,7 +73,7 @@
                 flex: 1;
                 overflow: auto;
                 width: 100%;
-                margin: 0 $stds-spacing-400;
+                margin: 0 $stds-spacing-16;
             }
         }
     }
@@ -100,7 +100,7 @@
                 flex: 1;
                 overflow: auto;
                 width: 100%;
-                margin: 0 $stds-spacing-400;
+                margin: 0 $stds-spacing-16;
             }
         }
     }
@@ -132,7 +132,7 @@
                 flex: 1;
                 overflow: auto;
                 width: 100%;
-                margin: 0 $stds-spacing-400;
+                margin: 0 $stds-spacing-16;
             }
         }
     }
@@ -167,7 +167,7 @@
                 flex: 1;
                 overflow: auto;
                 width: 100%;
-                margin: 0 $stds-spacing-400;
+                margin: 0 $stds-spacing-16;
             }
         }
     }
@@ -178,10 +178,10 @@
     .layout {
         .layout-basic {
             max-width: 100%;
-            margin: 0 $stds-spacing-400;
+            margin: 0 $stds-spacing-16;
         }
         .layout-information {
-            padding: 0 $stds-spacing-400;
+            padding: 0 $stds-spacing-16;
             .container {
                 .nav-area {
                     display: none
@@ -197,7 +197,7 @@
                     display: none;
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-400;
+                    margin: 0 $stds-spacing-16;
                 }
             }
         }
@@ -207,7 +207,7 @@
                     display: none;
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-400;
+                    margin: 0 $stds-spacing-16;
                 }
             }
         }
@@ -220,7 +220,7 @@
                     display: none;
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-400;
+                    margin: 0 $stds-spacing-16;
                 }
             }
         }
@@ -233,7 +233,7 @@
                     display: none;
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-400;
+                    margin: 0 $stds-spacing-16;
                 }
             }
         }
@@ -244,10 +244,10 @@
     .layout {
         .layout-basic {
             max-width: 100%;
-            margin: 0 $stds-spacing-400;
+            margin: 0 $stds-spacing-16;
         }
         .layout-information {
-            padding: 0 $stds-spacing-400;
+            padding: 0 $stds-spacing-16;
             .container {
                 .nav-area {
                     display: none
@@ -263,7 +263,7 @@
                     display: none;
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-400;
+                    margin: 0 $stds-spacing-16;
                 }
             }
         }
@@ -273,7 +273,7 @@
                     display: none;
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-400;
+                    margin: 0 $stds-spacing-16;
                 }
             }
         }
@@ -286,7 +286,7 @@
                     display: none;
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-400;
+                    margin: 0 $stds-spacing-16;
                 }
             }
         }
@@ -299,7 +299,7 @@
                     display: none;
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-400;
+                    margin: 0 $stds-spacing-16;
                 }
             }
         }
@@ -310,10 +310,10 @@
     .layout {
         .layout-basic {
             max-width: 100%;
-            margin: 0 $stds-spacing-800;
+            margin: 0 $stds-spacing-32;
         }
         .layout-information {
-            padding: 0 $stds-spacing-800;
+            padding: 0 $stds-spacing-32;
             .container {
                 .nav-area {
                 }
@@ -328,7 +328,7 @@
                     display: none;
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-800;
+                    margin: 0 $stds-spacing-32;
                 }
             }
         }
@@ -338,7 +338,7 @@
                     display: none;
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-800;
+                    margin: 0 $stds-spacing-32;
                 }
             }
         }
@@ -351,7 +351,7 @@
                     display: none;
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-800;
+                    margin: 0 $stds-spacing-32;
                 }
             }
         }
@@ -364,7 +364,7 @@
                     display: none;
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-800;
+                    margin: 0 $stds-spacing-32;
                 }
             }
         }
@@ -375,7 +375,7 @@
     .layout {
         .layout-basic {
             max-width: 100%;
-            margin: 0 $stds-spacing-1200;
+            margin: 0 $stds-spacing-48;
         }
         .layout-information {
             .container {
@@ -391,7 +391,7 @@
                 .nav-area {}
                 .content-area {
                     width: 100%;
-                    margin: 0 $stds-spacing-1200;
+                    margin: 0 $stds-spacing-48;
                 }
             }
         }
@@ -405,7 +405,7 @@
                     flex: 1;
                     overflow: auto;
                     width: 100%;
-                    margin: 0 $stds-spacing-1200;
+                    margin: 0 $stds-spacing-48;
                 }
             }
         }
@@ -416,7 +416,7 @@
                 .nav-area {
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-1200;
+                    margin: 0 $stds-spacing-48;
                 }
             }
         }
@@ -427,7 +427,7 @@
                 .nav-area {
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-1200;
+                    margin: 0 $stds-spacing-48;
                 }
             }
         }
@@ -438,7 +438,7 @@
     .layout {
         .layout-basic {
             max-width: 100%;
-            margin: 0 $stds-spacing-1300;
+            margin: 0 $stds-spacing-52;
         }
         .layout-information {
             .container {
@@ -452,7 +452,7 @@
                 .nav-area {}
                 .content-area {
                     width: 100%;
-                    margin: 0 $stds-spacing-1300;
+                    margin: 0 $stds-spacing-52;
                 }
             }
         }
@@ -466,7 +466,7 @@
                     flex: 1;
                     overflow: auto;
                     width: 100%;
-                    margin: 0 $stds-spacing-1300;
+                    margin: 0 $stds-spacing-52;
                 }
             }
         }
@@ -477,7 +477,7 @@
                 .nav-area {
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-1300;
+                    margin: 0 $stds-spacing-52;
                 }
             }
         }
@@ -488,7 +488,7 @@
                 .nav-area {
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-1300;
+                    margin: 0 $stds-spacing-52;
                 }
             }
         }
@@ -499,7 +499,7 @@
     .layout {
         .layout-basic {
             max-width: 100%;
-            margin: 0 $stds-spacing-1300;
+            margin: 0 $stds-spacing-52;
         }
         .layout-information {
             .container {
@@ -513,7 +513,7 @@
                 .nav-area {}
                 .content-area {
                     width: 100%;
-                    margin: 0 $stds-spacing-1300;
+                    margin: 0 $stds-spacing-52;
                 }
             }
         }
@@ -527,7 +527,7 @@
                     flex: 1;
                     overflow: auto;
                     width: 100%;
-                    margin: 0 $stds-spacing-1300;
+                    margin: 0 $stds-spacing-52;
                 }
             }
         }
@@ -538,7 +538,7 @@
                 .nav-area {
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-1300;
+                    margin: 0 $stds-spacing-52;
                 }
             }
         }
@@ -549,7 +549,7 @@
                 .nav-area {
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-1300;
+                    margin: 0 $stds-spacing-52;
                 }
             }
         }
@@ -560,7 +560,7 @@
     .layout {
         .layout-basic {
             max-width: 100%;
-            margin: 0 $stds-spacing-1300;
+            margin: 0 $stds-spacing-52;
         }
         .layout-information {
             .container {
@@ -575,7 +575,7 @@
                 }
                 .content-area {
                     width: 100%;
-                    margin: 0 $stds-spacing-1300;
+                    margin: 0 $stds-spacing-52;
                 }
             }
         }
@@ -589,7 +589,7 @@
                     flex: 1;
                     overflow: auto;
                     width: 100%;
-                    margin: 0 $stds-spacing-1300;
+                    margin: 0 $stds-spacing-52;
                 }
             }
         }
@@ -600,7 +600,7 @@
                 .nav-area {
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-1300;
+                    margin: 0 $stds-spacing-52;
                 }
             }
         }
@@ -611,7 +611,7 @@
                 .nav-area {
                 }
                 .content-area {
-                    margin: 0 $stds-spacing-1300;
+                    margin: 0 $stds-spacing-52;
                 }
             }
         }

@@ -1,0 +1,80 @@
+@import "./src/sass/mixin/mixin";
+@import "./src/sass/color";
+
+.guide {
+    width: 1200px;
+    font-size: 14px;
+
+    hr {
+        margin: 20px 0;
+        opacity: 0.3;
+    }
+
+    .tit {
+        .desc {
+            font-size: 14px;
+            opacity: 0.8;
+            line-height: 1.4em;
+            padding-left: 20px;
+        }
+    }
+    .tit2 {
+        &:first-of-type {
+            margin-top: 10px;
+        }
+
+        .desc {
+            font-size: 12px;
+            opacity: 0.8;
+            line-height: 1.3em;
+            padding-left: 20px;
+        }
+    }
+
+    a.desc {
+        font-size: 13px;
+        color: $ui-text-link;
+        padding-left: 20px;
+
+        &:hover {
+            color: $ui-text-warning;
+        }
+    }
+    .dl-list {
+        margin: 10px 0;
+
+        &.indent {
+            margin-left: 20px;
+        }
+
+        dt {
+            font-size: 16px;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        dd {
+            position: relative;
+            padding: 0 12px 4px 12px;
+
+            &::before {
+                content: "-";
+                position: absolute;
+                left: 0;
+                top: 2px;
+            }
+
+            span.txt-white {
+                display: inline-block;
+                padding: 5px;
+            }
+        }
+        .txt-white {
+            color: $ui_text_white_01;
+        }
+    }
+
+    .demo-wrap {
+        @include flex($y: flex-start);
+        position: relative;
+    }
+}

@@ -1,16 +1,1411 @@
-/* Light Mode */
-html {
-    $ui-bg-base-white: red;
-    &.dark {
-        $ui-bg-base-white: blue;
+/*
+    [ ColorTree ]
+        ♧Semantic
+            ┣━━━ UI
+            ┃    ┣━━━ Background
+            ┃    ┣━━━ Border
+            ┃    ┣━━━ Icon-Primary
+            ┃    ┣━━━ Icon-Secondary
+            ┃    ┣━━━ Icon-Tertiary
+            ┃    ┣━━━ Icon-Quaternary
+            ┃    ┣━━━ Icon-Inverse
+            ┃    ┣━━━ Button-Primary
+            ┃    ┣━━━ Button-Secondary
+            ┃    ┣━━━ Button-Gray
+            ┃    ┣━━━ Button-Outline
+            ┃    ┣━━━ Button-Inverse
+            ┃    ┣━━━ Input field
+            ┃    ┣━━━ Font
+            ┃    ┣━━━ Divider
+            ┃    ┣━━━ Shadow
+            ┃    ┣━━━ Overlays
+            ┃    ┣━━━ Gradients
+            ┃    ┗━━━ Skeleton
+            ┗━━━ Interactive
+                ┣━━━ Brand
+                ┃    ┣━━━ Primary
+                ┃    ┗━━━ Secondary
+                ┗━━━ Gray
+    -------------------------------------------------------
+    -------------------------------------------------------
+    [ UIColorDetail ]
+        ♧UI
+            ┣━━━ Background
+            ┃    ┣━━━ Base
+            ┃    ┣━━━ Navigation bar
+            ┃    ┣━━━ Surface
+            ┃    ┗━━━ Highlight
+            ┣━━━ Border
+            ┃    ┗━━━ on Thumbnail border
+            ┣━━━ Icon-Primary, Icon-Secondary, Icon-Tertiary, Icon-Quaternary
+            ┃    ┣━━━ Enabled
+            ┃    ┣━━━ Hover
+            ┃    ┣━━━ Pressed
+            ┃    ┣━━━ Focused
+            ┃    ┣━━━ Selected
+            ┃    ┗━━━ Disabled
+            ┣━━━ Icon-Inverse
+            ┃    ┗━━━ Enabled
+            ┣━━━ Button-Primary, Button-Secondary, Button-Gray, Button-Outline, Button-Inverse
+            ┃    ┣━━━ Enabled
+            ┃    ┣━━━ Hover
+            ┃    ┣━━━ Pressed
+            ┃    ┣━━━ Focused
+            ┃    ┣━━━ Selected
+            ┃    ┗━━━ Disabled
+            ┣━━━ Input field
+            ┃    ┣━━━ Enabled
+            ┃    ┣━━━ Focused / Activated
+            ┃    ┣━━━ Error
+            ┃    ┣━━━ Warning
+            ┃    ┣━━━ Success
+            ┃    ┣━━━ Informational
+            ┃    ┗━━━ Disabled
+            ┣━━━ Font
+            ┃    ┣━━━ Primary
+            ┃    ┣━━━ Secondary
+            ┃    ┣━━━ Tertiary
+            ┃    ┣━━━ Quarternary
+            ┃    ┣━━━ Brand
+            ┃    ┣━━━ Inverse - Primary
+            ┃    ┣━━━ Inverse - Secondary
+            ┃    ┣━━━ Error
+            ┃    ┣━━━ Warning
+            ┃    ┣━━━ Success
+            ┃    ┣━━━ Informational
+            ┃    ┣━━━ Link
+            ┃    ┣━━━ Link-visited
+            ┃    ┣━━━ Placeholder
+            ┃    ┗━━━ Disabled
+            ┣━━━ Divider
+            ┃    ┣━━━ Primary
+            ┃    ┣━━━ Secondary
+            ┃    ┗━━━ Tertiary
+            ┣━━━ Shadow
+            ┃    ┣━━━ shadow 01 Popover(dropdown), …
+            ┃    ┣━━━ shadow 02 Toast popup, Card(hover), …
+            ┃    ┣━━━ shadow 03 Alert
+            ┃    ┗━━━ shadow 04 Popup
+            ┣━━━ Overlays
+            ┃    ┣━━━ Black
+            ┃    ┃    ┣━━━ Default  - Thick / Basic / Thin
+            ┃    ┃    ┣━━━ Blur 10  - Thick / Basic / Thin
+            ┃    ┃    ┣━━━ Blur 20  - Thick / Basic / Thin
+            ┃    ┃    ┗━━━ Blur 40  - Thick / Basic / Thin
+            ┃    ┗━━━ White
+            ┃         ┣━━━ Default  - Thick / Basic / Thin
+            ┃         ┣━━━ Blur 10  - Thick / Basic / Thin
+            ┃         ┣━━━ Blur 20  - Thick / Basic / Thin
+            ┃         ┗━━━ Blur 40  - Thick / Basic / Thin
+            ┣━━━ Gradients
+            ┃    ┣━━━ Black
+            ┃    ┃    ┣━━━ Bottom - 20%, 40%, 60%, 80%, 100%
+            ┃    ┃    ┗━━━ Top - 20%, 40%, 60%, 80%, 100%
+            ┃    ┗━━━ White
+            ┃         ┣━━━ Bottom - 20%, 40%, 60%, 80%, 100%
+            ┃         ┗━━━ Top - 20%, 40%, 60%, 80%, 100%
+            ┗━━━ Skeleton
+                ┣━━━ 1depth
+                ┗━━━ 2depth
+    -------------------------------------------------------
+    -------------------------------------------------------
+    [ InteractiveColorDetail ]
+        ♧Brand
+            ┗━━━ Primary, Secondary
+                ┣━━━ Highlight
+                ┣━━━ Enabled
+                ┣━━━ Hover
+                ┣━━━ Pressed
+                ┣━━━ Focused
+                ┣━━━ Selected
+                ┗━━━ Disabled
+        ♧Brand
+            ┗━━━ Gray
+                ┣━━━ Hover
+                ┣━━━ Pressed
+                ┣━━━ Focused
+                ┗━━━ Selected
+    -------------------------------------------------------
+    -------------------------------------------------------
+*/
+
+/* color palette */
+// primary
+$orange50: #fff9f0 !default;
+$orange100: #ffe0c9 !default;
+$orange200: #ffc298 !default;
+$orange300: #fe9d6c !default;
+$orange400: #fe763c !default;
+$orange500: #fc6020 !default;
+$orange600: #f05417 !default;
+$orange700: #e14b12 !default;
+$orange800: #d2450f !default;
+$orange900: #b63a0a !default;
+
+$brand50: #fff9f0 !default;
+$brand100: #ffe0c9 !default;
+$brand200: #ffc298 !default;
+$brand300: #fe9d6c !default;
+$brand400: #fe763c !default;
+$brand500: #fc6020 !default;
+$brand600: #f05417 !default;
+$brand700: #e14b12 !default;
+$brand800: #d2450f !default;
+$brand900: #b63a0a !default;
+
+$navy50: #e8f0ff !default;
+$navy100: #ccd8ee !default;
+$navy200: #abb9d2 !default;
+$navy300: #8c9dba !default;
+$navy400: #7588a8 !default;
+$navy500: #5f7496 !default;
+$navy600: #506585 !default;
+$navy700: #40526e !default;
+$navy800: #314058 !default;
+$navy900: #1e2c40 !default;
+$white05: rgba(#ffffff, $alpha: 0.05) !default;
+$white08: rgba(#ffffff, $alpha: 0.08) !default;
+$white10: rgba(#ffffff, $alpha: 0.1) !default;
+$white15: rgba(#ffffff, $alpha: 0.15) !default;
+$white20: rgba(#ffffff, $alpha: 0.2) !default;
+$white25: rgba(#ffffff, $alpha: 0.25) !default;
+$white30: rgba(#ffffff, $alpha: 0.3) !default;
+$white40: rgba(#ffffff, $alpha: 0.4) !default;
+$white50: rgba(#ffffff, $alpha: 0.5) !default;
+$white60: rgba(#ffffff, $alpha: 0.6) !default;
+$white70: rgba(#ffffff, $alpha: 0.7) !default;
+$white75: rgba(#ffffff, $alpha: 0.75) !default;
+$white80: rgba(#ffffff, $alpha: 0.8) !default;
+$white90: rgba(#ffffff, $alpha: 0.9) !default;
+$white: #ffffff !default;
+$gray25: #fafafa !default;
+$gray50: #f3f3f3 !default;
+$gray75: #eaeaea !default;
+$gray100: #e0e0e0 !default;
+$gray150: #d5d5d5 !default;
+$gray200: #cacaca !default;
+$gray300: #b3b3b3 !default;
+$gray400: #999999 !default;
+$gray500: #6e6e6e !default;
+$gray600: #4c4c4c !default;
+$gray700: #3a3a3a !default;
+$gray800: #292929 !default;
+$gray900: #1a1a1a !default;
+$bluegray50: #e4e6ec !default;
+$bluegray100: #c1c4cd !default;
+$bluegray200: #a0a4b1 !default;
+$bluegray300: #8b8f9c !default;
+$bluegray400: #777b89 !default;
+$bluegray500: #656976 !default;
+$bluegray600: #545763 !default;
+$bluegray650: #40434c !default;
+$bluegray700: #33363d !default;
+$bluegray750: #26282f !default;
+$bluegray800: #18191f !default;
+$bluegray850: #1f2128 !default;
+$bluegray900: #14151a !default;
+$black05: rgba(#000000, $alpha: 0.05) !default;
+$black08: rgba(#000000, $alpha: 0.08) !default;
+$black10: rgba(#000000, $alpha: 0.1) !default;
+$black15: rgba(#000000, $alpha: 0.15) !default;
+$black20: rgba(#000000, $alpha: 0.2) !default;
+$black25: rgba(#000000, $alpha: 0.25) !default;
+$black30: rgba(#000000, $alpha: 0.3) !default;
+$black40: rgba(#000000, $alpha: 0.4) !default;
+$black50: rgba(#000000, $alpha: 0.5) !default;
+$black60: rgba(#000000, $alpha: 0.6) !default;
+$black70: rgba(#000000, $alpha: 0.7) !default;
+$black75: rgba(#000000, $alpha: 0.75) !default;
+$black80: rgba(#000000, $alpha: 0.8) !default;
+$black90: rgba(#000000, $alpha: 0.9) !default;
+$black: #000000 !default;
+$system_error: #d53430 !default;
+$system_warning: #ef9500 !default;
+$system_success: #37a458 !default;
+$system_info: #1e88e5 !default;
+$system_link: #457bef !default;
+$system_link_visited: #9b54f6 !default;
+$tint_red50: #f9f1f2 !default;
+$tint_red100: #f1d2d1 !default;
+$tint_red200: #e8b4b6 !default;
+$tint_red300: #e19598 !default;
+$tint_red400: #da787f !default;
+$tint_red500: #cb5967 !default;
+$tint_red600: #ae4855 !default;
+$tint_red700: #8e3846 !default;
+$tint_red800: #6f2a39 !default;
+$tint_red900: #52212d !default;
+$tint_reda50: #fdf0f1 !default;
+$tint_reda100: #f6bab8 !default;
+$tint_reda200: #f2878a !default;
+$tint_reda400: #ec3b47 !default;
+$tint_reda700: #ac0822 !default;
+$tint_orange50: #f6f0e7 !default;
+$tint_orange100: #f1dbc3 !default;
+$tint_orange200: #ecc7a5 !default;
+$tint_orange300: #e6b285 !default;
+$tint_orange400: #e09964 !default;
+$tint_orange500: #d77e45 !default;
+$tint_orange600: #b96436 !default;
+$tint_orange700: #984b2b !default;
+$tint_orange800: #793b24 !default;
+$tint_orange900: #5b2d1c !default;
+$tint_orangea50: #faf2e6 !default;
+$tint_orangea100: #f6d1aa !default;
+$tint_orangea200: #f9b677 !default;
+$tint_orangea400: #f27d23 !default;
+$tint_orangea700: #b73700 !default;
+$tint_yellow50: #f8f5e8 !default;
+$tint_yellow100: #f1e9c3 !default;
+$tint_yellow200: #ecdea3 !default;
+$tint_yellow300: #e6d084 !default;
+$tint_yellow400: #e2bd65 !default;
+$tint_yellow500: #d9ab48 !default;
+$tint_yellow600: #b88c39 !default;
+$tint_yellow700: #986f2d !default;
+$tint_yellow800: #7b5726 !default;
+$tint_yellow900: #5b3e1e !default;
+$tint_yellowa50: #fcf8e7 !default;
+$tint_yellowa100: #f6e79d !default;
+$tint_yellowa200: #f6dd79 !default;
+$tint_yellowa400: #ffb412 !default;
+$tint_yellowa700: #b77408 !default;
+$tint_lime50: #f3f6e7 !default;
+$tint_lime100: #e6f1c5 !default;
+$tint_lime200: #daeba6 !default;
+$tint_lime300: #c1da80 !default;
+$tint_lime400: #aaca60 !default;
+$tint_lime500: #93bc46 !default;
+$tint_lime600: #739e36 !default;
+$tint_lime700: #597c2b !default;
+$tint_lime800: #425f22 !default;
+$tint_lime900: #2f411a !default;
+$tint_limea50: #f6fae6 !default;
+$tint_limea100: #ddf1a1 !default;
+$tint_limea200: #d1eb83 !default;
+$tint_limea400: #9bca2e !default;
+$tint_limea700: #4f8409 !default;
+$tint_green50: #eef6f1 !default;
+$tint_green100: #d6e9dc !default;
+$tint_green200: #b3d7c2 !default;
+$tint_green300: #8bc3a2 !default;
+$tint_green400: #65ab7e !default;
+$tint_green500: #4b9663 !default;
+$tint_green600: #3d7d4d !default;
+$tint_green700: #306339 !default;
+$tint_green800: #244c2b !default;
+$tint_green900: #17361f !default;
+$tint_greena50: #edfaf2 !default;
+$tint_greena100: #beeecd !default;
+$tint_greena200: #9ddcb7 !default;
+$tint_greena400: #2b9450 !default;
+$tint_greena700: #0f7021 !default;
+$tint_teal50: #ecf5f6 !default;
+$tint_teal100: #cae7e6 !default;
+$tint_teal200: #a3d2d6 !default;
+$tint_teal300: #7dbec3 !default;
+$tint_teal400: #5caab0 !default;
+$tint_teal500: #44949e !default;
+$tint_teal600: #36777f !default;
+$tint_teal700: #295d63 !default;
+$tint_teal800: #1d4448 !default;
+$tint_teal900: #152c2f !default;
+$tint_teala50: #ebf9fa !default;
+$tint_teala100: #b2ecea !default;
+$tint_teala200: #64d8e3 !default;
+$tint_teala400: #2bb8c2 !default;
+$tint_teala700: #087582 !default;
+$tint_blue50: #eaf3f7 !default;
+$tint_blue100: #cae3f2 !default;
+$tint_blue200: #abd0eb !default;
+$tint_blue300: #8dbce5 !default;
+$tint_blue400: #70a7de !default;
+$tint_blue500: #5793d8 !default;
+$tint_blue600: #4474b8 !default;
+$tint_blue700: #355b9a !default;
+$tint_blue800: #2c477a !default;
+$tint_blue900: #22355c !default;
+$tint_bluea50: #e9f6fb !default;
+$tint_bluea100: #b1dcf7 !default;
+$tint_bluea200: #7ec5f8 !default;
+$tint_bluea400: #3191f0 !default;
+$tint_bluea700: #0047b9 !default;
+$tint_indigo50: #f1f4fa !default;
+$tint_indigo100: #dde5f5 !default;
+$tint_indigo200: #bfcbee !default;
+$tint_indigo300: #a0afe7 !default;
+$tint_indigo400: #7d8fd9 !default;
+$tint_indigo500: #5c6cc9 !default;
+$tint_indigo600: #4853a8 !default;
+$tint_indigo700: #373e8a !default;
+$tint_indigo800: #282c6b !default;
+$tint_indigo900: #20204d !default;
+$tint_indigoa50: #f0f4fe !default;
+$tint_indigoa100: #c4d6fa !default;
+$tint_indigoa200: #92acfb !default;
+$tint_indigoa400: #4163eb !default;
+$tint_indigoa700: #0816a9 !default;
+$tint_dazzlingblue50: #f5f5fa !default;
+$tint_dazzlingblue100: #e4e1f7 !default;
+$tint_dazzlingblue200: #cdc8ee !default;
+$tint_dazzlingblue300: #b0adea !default;
+$tint_dazzlingblue400: #9090de !default;
+$tint_dazzlingblue500: #7175d0 !default;
+$tint_dazzlingblue600: #575fb1 !default;
+$tint_dazzlingblue700: #424b90 !default;
+$tint_dazzlingblue800: #313b71 !default;
+$tint_dazzlingblue900: #242d52 !default;
+$tint_dazzlingbluea50: #f4f4fe !default;
+$tint_dazzlingbluea100: #cfc7fc !default;
+$tint_dazzlingbluea200: #a89bfb !default;
+$tint_dazzlingbluea400: #5252eb !default;
+$tint_dazzlingbluea700: #1325af !default;
+$tint_purple50: #f6f4f9 !default;
+$tint_purple100: #ebdff5 !default;
+$tint_purple200: #dac4eb !default;
+$tint_purple300: #c7a6e6 !default;
+$tint_purple400: #ad88da !default;
+$tint_purple500: #946bcd !default;
+$tint_purple600: #7656af !default;
+$tint_purple700: #5d4390 !default;
+$tint_purple800: #473472 !default;
+$tint_purple900: #332853 !default;
+$tint_purplea50: #f7f3fd !default;
+$tint_purplea100: #dbbaf5 !default;
+$tint_purplea200: #ce9cf5 !default;
+$tint_purplea400: #944cec !default;
+$tint_purplea700: #4814af !default;
+$tint_magenta50: #f9f1f5 !default;
+$tint_magenta100: #f5dce9 !default;
+$tint_magenta200: #ebbed5 !default;
+$tint_magenta300: #e29dc6 !default;
+$tint_magenta400: #d27ab2 !default;
+$tint_magenta500: #c45da0 !default;
+$tint_magenta600: #a24987 !default;
+$tint_magenta700: #83386e !default;
+$tint_magenta800: #662a58 !default;
+$tint_magenta900: #492141 !default;
+$tint_magentaa50: #fdf0f6 !default;
+$tint_magentaa100: #f5b7d7 !default;
+$tint_magentaa200: #f595c7 !default;
+$tint_magentaa400: #e440a8 !default;
+$tint_magentaa700: #a20c77 !default;
+$tint_pink50: #f9f0f3 !default;
+$tint_pink100: #f6dce2 !default;
+$tint_pink200: #edbfc9 !default;
+$tint_pink300: #e79db4 !default;
+$tint_pink400: #d97a9b !default;
+$tint_pink500: #cd5d84 !default;
+$tint_pink600: #ab496f !default;
+$tint_pink700: #8c385a !default;
+$tint_pink800: #6e2948 !default;
+$tint_pink900: #4e2036 !default;
+$tint_pinka50: #fdf0f6 !default;
+$tint_pinka100: #fbc2d0 !default;
+$tint_pinka200: #fa92a9 !default;
+$tint_pinka400: #eb3e7a !default;
+$tint_pinka700: #ab0949 !default;
+
+/* ColorVariable > Sementic color */
+// Background
+$ui_bg_base_white: $white;
+$ui_bg_base_gray50: $gray50;
+$ui_bg_navigation_white: $white;
+$ui_bg_navigation_gray: $gray900;
+$ui_bg_surface_white: $white;
+$ui_bg_surface_white_inverse: $white;
+$ui_bg_surface_gray25: $gray25;
+$ui_bg_surface_navy: $navy800;
+$ui_bg_surface_elevated: $white;
+$ui_bg_highlight_gray25: $gray25;
+$ui_bg_highlight: $orange50;
+
+// Border
+$ui_border_thumbnail: $black05;
+$ui_border_contents: $black15;
+
+// Icon_Brand
+$ui_icon_brand_enabled: $orange500;
+$ui_icon_brand_hover: $orange400;
+$ui_icon_brand_pressed: $orange700;
+$ui_icon_brand_focused: $orange500;
+$ui_icon_brand_selected: $orange700;
+$ui_icon_brand_disabled: $gray300;
+
+// Icon_Primary
+$ui_icon_01_enabled: $gray900;
+$ui_icon_01_hover: $gray600;
+$ui_icon_01_pressed: $black;
+$ui_icon_01_focused: $brand500;
+$ui_icon_01_selected: $black;
+$ui_icon_01_disabled: $gray300;
+
+// Icon_Secondary
+$ui_icon_02_enabled: $gray700;
+$ui_icon_02_hover: $gray500;
+$ui_icon_02_pressed: $gray900;
+$ui_icon_02_focused: $brand500;
+$ui_icon_02_selected: $gray800;
+$ui_icon_02_disabled: $gray300;
+
+// Icon_Tertiary
+$ui_icon_03_enabled: $gray500;
+$ui_icon_03_hover: $gray300;
+$ui_icon_03_pressed: $gray700;
+$ui_icon_03_focused: $brand500;
+$ui_icon_03_selected: $gray500;
+$ui_icon_03_disabled: $gray300;
+
+// Icon_Quaternary
+$ui_icon_04_enabled: $gray400;
+$ui_icon_04_hover: $gray200;
+$ui_icon_04_pressed: $gray600;
+$ui_icon_04_focused: $brand500;
+$ui_icon_04_selected: $gray300;
+$ui_icon_04_disabled: $gray200;
+
+// Icon_Quinary
+$ui_icon_05_enabled: $gray200;
+$ui_icon_05_hover: $gray100;
+$ui_icon_05_pressed: $gray400;
+$ui_icon_05_focused: $gray200;
+$ui_icon_05_selected: $orange500;
+$ui_icon_05_disabled: $gray100;
+
+// Icon_Black
+$ui_icon_gray_enabled: $gray700;
+$ui_icon_gray_hover: $gray500;
+$ui_icon_gray_pressed: $gray900;
+$ui_icon_gray_focused: $brand500;
+$ui_icon_gray_selected: $gray800;
+$ui_icon_gray_disabled: $gray300;
+
+// Icon_White
+$ui_icon_white_enabled: $white;
+$ui_icon_white_hover: $white80;
+$ui_icon_white_pressed: $white60;
+$ui_icon_white_focused: $orange500;
+$ui_icon_white_selected: $white90;
+$ui_icon_white_disabled: $gray300;
+$ui_icon_white_disabled_white: $white40;
+
+// Icon_System
+$ui_icon_error: $system_error;
+$ui_icon_warning: $system_warning;
+$ui_icon_success: $system_success;
+$ui_icon_information: $system_info;
+
+// Button_Primary
+$ui_button_01_enabled: $orange500;
+$ui_button_01_hover: $orange400;
+$ui_button_01_pressed: $orange700;
+$ui_button_01_focused: $orange500;
+$ui_button_01_focused_border1: $bluegray800;
+$ui_button_01_focused_border2: $orange500;
+$ui_button_01_disabled: $gray75;
+
+// Button_Secondary
+$ui_button_02_enabled: $gray600;
+$ui_button_02_hover: $gray500;
+$ui_button_02_pressed: $gray700;
+$ui_button_02_focused: $gray600;
+$ui_button_02_focused_border1: $white;
+$ui_button_02_focused_border2: $gray600;
+$ui_button_02_disabled: $gray75;
+
+// Button_Tertiary
+$ui_button_03_enabled: $gray75;
+$ui_button_03_hover: $gray100;
+$ui_button_03_pressed: $gray200;
+$ui_button_03_focused: $gray75;
+$ui_button_03_focused_border1: $white;
+$ui_button_03_focused_border2: $gray500;
+$ui_button_03_disabled: $gray75;
+
+// Button_Quaternary
+$ui_button_04_enabled: $gray50;
+$ui_button_04_hover: $gray75;
+$ui_button_04_pressed: $gray150;
+$ui_button_04_focused: $gray50;
+$ui_button_04_focused_border1: $white;
+$ui_button_04_focused_border2: $gray500;
+$ui_button_04_disabled: $gray50;
+
+// Button_Outline
+$ui_button_05_enabled: $white;
+$ui_button_05_enabled_border: $gray150;
+$ui_button_05_hover: $gray50;
+$ui_button_05_hover_border: $gray400;
+$ui_button_05_pressed: $gray100;
+$ui_button_05_pressed_border: $gray200;
+$ui_button_05_focused: $white;
+$ui_button_05_focused_border: $gray500;
+$ui_button_05_disabled: $gray75;
+$ui_button_05_disabled_border: $gray150;
+
+// Button_White(fill)
+$ui_button_white_f_enabled: $white;
+$ui_button_white_f_hover: $gray50;
+$ui_button_white_f_pressed: $gray100;
+$ui_button_white_f_focused: $white;
+$ui_button_white_f_focused_border1: $white;
+$ui_button_white_f_focused_border2: $black25;
+$ui_button_white_f_disabled: $gray75;
+
+// Button_White(ghost)
+$ui_button_white_g_enabled: transparent;
+$ui_button_white_g_enabled_border: $white;
+$ui_button_white_g_hover: $white20;
+$ui_button_white_g_hover_border: $white;
+$ui_button_white_g_pressed: $white10;
+$ui_button_white_g_pressed_border: $white;
+$ui_button_white_g_focused: $white20;
+$ui_button_white_g_focused_border: $white;
+$ui_button_white_g_disabled: transparent;
+$ui_button_white_g_disabled_border: $white20;
+
+// Form_Line
+$ui_form_line_enabled: $white;
+$ui_form_line_enabled_border: $gray150;
+$ui_form_line_hover: $white;
+$ui_form_line_hover_border: $gray500;
+$ui_form_line_focused: $white;
+$ui_form_line_focused_border: $gray500;
+$ui_form_line_error: $white;
+$ui_form_line_error_border: $system_error;
+$ui_form_line_warning: $white;
+$ui_form_line_warning_border: $system_warning;
+$ui_form_line_success: $white;
+$ui_form_line_success_border: $system_success;
+$ui_form_line_informational: $white;
+$ui_form_line_informational_border: $system_info;
+$ui_form_line_disabled: $gray50;
+$ui_form_line_disabled_border: $gray200;
+
+// Form_Fill
+$ui_form_fill_enabled: $gray50;
+$ui_form_fill_hover: $gray75;
+$ui_form_fill_focused: $gray50;
+$ui_form_fill_error: $gray50;
+$ui_form_fill_error_border: $system_error;
+$ui_form_fill_warning: $gray50;
+$ui_form_fill_warning_border: $system_warning;
+$ui_form_fill_success: $gray50;
+$ui_form_fill_success_border: $system_success;
+$ui_form_fill_informational: $gray50;
+$ui_form_fill_informational_border: $system_info;
+$ui_form_fill_disabled: $gray50;
+
+// Form_White
+$ui_form_white_enabled: $white20;
+$ui_form_white_hover: $white30;
+$ui_form_white_focused: $white20;
+$ui_form_white_focused_border: $white;
+$ui_form_white_error: $white20;
+$ui_form_white_error_border: $system_error;
+$ui_form_white_warning: $white20;
+$ui_form_white_warning_border: $system_warning;
+$ui_form_white_success: $white20;
+$ui_form_white_success_border: $system_success;
+$ui_form_white_informational: $white20;
+$ui_form_white_informational_border: $system_info;
+$ui_form_white_disabled: $white20;
+
+// Font
+$ui_text_01: $gray900;
+$ui_text_02: $gray700;
+$ui_text_03: $gray500;
+$ui_text_04: $gray400;
+$ui_text_brand: $orange500;
+$ui_text_gray: $gray900;
+$ui_text_white_01: $white;
+$ui_text_white_02: $white60;
+$ui_text_error: $system_error;
+$ui_text_warning: $system_warning;
+$ui_text_success: $system_success;
+$ui_text_informational: $system_info;
+$ui_text_link: $system_link;
+$ui_text_link_visited: $system_link_visited;
+$ui_text_placeholder: $gray200;
+$ui_text_disabled: $gray300;
+$ui_text_disabled_surface: $gray300;
+
+// Divider_black
+$ui_divider_black_01: $black15;
+$ui_divider_black_02: $black10;
+$ui_divider_black_03: $black05;
+
+// Divider_White
+$ui_divider_white_01: $white15;
+$ui_divider_white_02: $white10;
+$ui_divider_white_03: $white05;
+
+// Shadow
+$ui_shadow_01: $black05;
+$ui_shadow_02: $black10;
+$ui_shadow_03: $black15;
+$ui_shadow_04: $black20;
+
+// Overlays _ Black
+$ui_overlay_b_d01: $black75;
+$ui_overlay_b_d02: $black50;
+$ui_overlay_b_d03: $black15;
+$ui_overlay_b_b10_01: $black75;
+$ui_overlay_b_b10_02: $black50;
+$ui_overlay_b_b10_03: $black15;
+$ui_overlay_b_b20_01: $black75;
+$ui_overlay_b_b20_02: $black50;
+$ui_overlay_b_b20_03: $black15;
+$ui_overlay_b_b40_01: $black75;
+$ui_overlay_b_b40_02: $black50;
+$ui_overlay_b_b40_03: $black15;
+
+// Overlays _ White
+$ui_overlay_w_d01: $white75;
+$ui_overlay_w_d02: $white50;
+$ui_overlay_w_d03: $white15;
+$ui_overlay_w_b10_01: $white75;
+$ui_overlay_w_b10_02: $white50;
+$ui_overlay_w_b10_03: $white15;
+$ui_overlay_w_b20_01: $white75;
+$ui_overlay_w_b20_02: $white50;
+$ui_overlay_w_b20_03: $white15;
+$ui_overlay_w_b40_01: $white75;
+$ui_overlay_w_b40_02: $white50;
+$ui_overlay_w_b40_03: $white15;
+
+// Gradients _ Black
+// $ui_gradients_b_b01: linear_gradient(to bottom, transparent 80%, #000000);
+// $ui_gradients_b_b02: linear_gradient(to bottom, transparent 60%, #000000);
+// $ui_gradients_b_b03: linear_gradient(to bottom, transparent 40%, #000000);
+// $ui_gradients_b_b04: linear_gradient(to bottom, transparent 20%, #000000);
+// $ui_gradients_b_b05: linear_gradient(to bottom, transparent 0, #000000);
+
+// Skeleton
+$ui_skeleton_white: $white;
+$ui_skeleton_gray: $black05;
+
+/* ColorVariable > InteractiveColor */
+// Primary Color
+$interactive_01_highlight: $orange50;
+$interactive_01_enabled: $orange500;
+$interactive_01_hover: $orange400;
+$interactive_01_pressed: $orange700;
+$interactive_01_focus: $orange500;
+$interactive_01_selected: $orange600;
+$interactive_01_disabled: $gray150;
+
+// Secondary Color
+$interactive_02_highlight: $gray25;
+$interactive_02_enabled: $gray300;
+$interactive_02_hover: $gray200;
+$interactive_02_pressed: $gray500;
+$interactive_02_focus: $gray300;
+$interactive_02_selected: $gray400;
+$interactive_02_disabled: $gray200;
+
+// Gray
+$interactive_03_hover: $black05;
+$interactive_03_pressed: $black10;
+$interactive_03_focused: $black08;
+$interactive_03_selected: $black10;
+
+// state
+$elementState: (
+    error: $system_error,
+    warning: $system_warning,
+    success: $system_success,
+    informational: $system_info,
+);
+
+/* color database */
+/* colorDatabase > UI */
+// Background
+$colorDatabaseBackground: (
+    ui_bg_base_white: $ui_bg_base_white,
+    ui_bg_base_gray50: $ui_bg_base_gray50,
+    ui_bg_navigation_white: $ui_bg_navigation_white,
+    ui_bg_navigation_gray: $ui_bg_navigation_gray,
+    ui_bg_surface_white: $ui_bg_surface_white,
+    ui_bg_surface_white_inverse: $ui_bg_surface_white_inverse,
+    ui_bg_surface_gray25: $ui_bg_surface_gray25,
+    ui_bg_surface_navy: $ui_bg_surface_navy,
+    ui_bg_surface_elevated: $ui_bg_surface_elevated,
+    ui_bg_highlight_gray25: $ui_bg_highlight_gray25,
+    ui_bg_highlight: $ui_bg_highlight,
+);
+
+// Border
+$colorDatabaseBorder: (
+    ui_border_thumbnail: $ui_border_thumbnail,
+    ui_border_contents: $ui_border_contents,
+);
+
+$colorDatabaseBrand: (
+    ui_icon_brand_enabled: $ui_icon_brand_enabled,
+    ui_icon_brand_hover: $ui_icon_brand_hover,
+    ui_icon_brand_pressed: $ui_icon_brand_pressed,
+    ui_icon_brand_focused: $ui_icon_brand_focused,
+    ui_icon_brand_selected: $ui_icon_brand_selected,
+    ui_icon_brand_disabled: $ui_icon_brand_disabled,
+);
+
+// Icon_Primary
+$colorDatabaseIconPrimary: (
+    ui_icon_01_enabled: $ui_icon_01_enabled,
+    ui_icon_01_hover: $ui_icon_01_hover,
+    ui_icon_01_pressed: $ui_icon_01_pressed,
+    ui_icon_01_focused: $ui_icon_01_focused,
+    ui_icon_01_selected: $ui_icon_01_selected,
+    ui_icon_01_disabled: $ui_icon_01_disabled,
+);
+
+// Icon_Secondary
+$colorDatabaseIconSecondary: (
+    ui_icon_02_enabled: $ui_icon_02_enabled,
+    ui_icon_02_hover: $ui_icon_02_hover,
+    ui_icon_02_pressed: $ui_icon_02_pressed,
+    ui_icon_02_focused: $ui_icon_02_focused,
+    ui_icon_02_selected: $ui_icon_02_selected,
+    ui_icon_02_disabled: $ui_icon_02_disabled,
+);
+
+// Icon_Tertiary
+$colorDatabaseIconTertiary: (
+    ui_icon_03_enabled: $ui_icon_03_enabled,
+    ui_icon_03_hover: $ui_icon_03_hover,
+    ui_icon_03_pressed: $ui_icon_03_pressed,
+    ui_icon_03_focused: $ui_icon_03_focused,
+    ui_icon_03_selected: $ui_icon_03_selected,
+    ui_icon_03_disabled: $ui_icon_03_disabled,
+);
+
+// Icon_Quaternary
+$colorDatabaseIconQuaternary: (
+    ui_icon_04_enabled: $ui_icon_04_enabled,
+    ui_icon_04_hover: $ui_icon_04_hover,
+    ui_icon_04_pressed: $ui_icon_04_pressed,
+    ui_icon_04_focused: $ui_icon_04_focused,
+    ui_icon_04_selected: $ui_icon_04_selected,
+    ui_icon_04_disabled: $ui_icon_04_disabled,
+);
+
+// Icon_Quinary
+$colorDatabaseIconQuinary: (
+    ui_icon_05_enabled: $ui_icon_05_enabled,
+    ui_icon_05_hover: $ui_icon_05_hover,
+    ui_icon_05_pressed: $ui_icon_05_pressed,
+    ui_icon_05_focused: $ui_icon_05_focused,
+    ui_icon_05_selected: $ui_icon_05_selected,
+    ui_icon_05_disabled: $ui_icon_05_disabled,
+);
+
+// Icon_Black
+$colorDatabaseIconBlack: (
+    ui_icon_gray_enabled: $ui_icon_gray_enabled,
+    ui_icon_gray_hover: $ui_icon_gray_hover,
+    ui_icon_gray_pressed: $ui_icon_gray_pressed,
+    ui_icon_gray_focused: $ui_icon_gray_focused,
+    ui_icon_gray_selected: $ui_icon_gray_selected,
+    ui_icon_gray_disabled: $ui_icon_gray_disabled,
+);
+
+// Icon_White
+$colorDatabaseIconWhite: (
+    ui_icon_white_enabled: $ui_icon_white_enabled,
+    ui_icon_white_hover: $ui_icon_white_hover,
+    ui_icon_white_pressed: $ui_icon_white_pressed,
+    ui_icon_white_focused: $ui_icon_white_focused,
+    ui_icon_white_selected: $ui_icon_white_selected,
+    ui_icon_white_disabled: $ui_icon_white_disabled,
+);
+
+// Icon_System
+$colorDatabaseIconSystem: (
+    ui_icon_error: $ui_icon_error,
+    ui_icon_warning: $ui_icon_warning,
+    ui_icon_success: $ui_icon_success,
+    ui_icon_information: $ui_icon_information,
+);
+
+// Button_Primary
+$colorDatabaseButtonPrimary: (
+    ui_button_01_enabled: $ui_button_01_enabled,
+    ui_button_01_hover: $ui_button_01_hover,
+    ui_button_01_pressed: $ui_button_01_pressed,
+    ui_button_01_focused: $ui_button_01_focused,
+    ui_button_01_focused_border1: $ui_button_01_focused_border1,
+    ui_button_01_focused_border2: $ui_button_01_focused_border2,
+    ui_button_01_disabled: $ui_button_01_disabled,
+);
+
+// Button_Secondary
+$colorDatabaseButtonSecondary: (
+    ui_button_02_enabled: $ui_button_02_enabled,
+    ui_button_02_hover: $ui_button_02_hover,
+    ui_button_02_pressed: $ui_button_02_pressed,
+    ui_button_02_focused: $ui_button_02_focused,
+    ui_button_02_focused_border1: $ui_button_02_focused_border1,
+    ui_button_02_focused_border2: $ui_button_02_focused_border2,
+    ui_button_02_disabled: $ui_button_02_disabled,
+);
+
+// Button_Tertiary
+$colorDatabaseButtonTertiary: (
+    ui_button_03_enabled: $ui_button_03_enabled,
+    ui_button_03_hover: $ui_button_03_hover,
+    ui_button_03_pressed: $ui_button_03_pressed,
+    ui_button_03_focused: $ui_button_03_focused,
+    ui_button_03_focused_border1: $ui_button_03_focused_border1,
+    ui_button_03_focused_border2: $ui_button_03_focused_border2,
+    ui_button_03_disabled: $ui_button_03_disabled,
+);
+
+// Button_Quaternary
+$colorDatabaseButtonQuaternary: (
+    ui_button_04_enabled: $ui_button_04_enabled,
+    ui_button_04_hover: $ui_button_04_hover,
+    ui_button_04_pressed: $ui_button_04_pressed,
+    ui_button_04_focused: $ui_button_04_focused,
+    ui_button_04_focused_border1: $ui_button_04_focused_border1,
+    ui_button_04_focused_border2: $ui_button_04_focused_border2,
+    ui_button_04_disabled: $ui_button_04_disabled,
+);
+
+// Button_Outline
+$colorDatabaseButtonOutline: (
+    ui_button_05_enabled: $ui_button_05_enabled,
+    ui_button_05_enabled_border: $ui_button_05_enabled_border,
+    ui_button_05_hover: $ui_button_05_hover,
+    ui_button_05_hover_border: $ui_button_05_hover_border,
+    ui_button_05_pressed: $ui_button_05_pressed,
+    ui_button_05_pressed_border: $ui_button_05_pressed_border,
+    ui_button_05_focused: $ui_button_05_focused,
+    ui_button_05_focused_border: $ui_button_05_focused_border,
+    ui_button_05_disabled: $ui_button_05_disabled,
+    ui_button_05_disabled_border: $ui_button_05_disabled_border,
+);
+
+// Button_White(fill)
+$colorDatabaseButtonWhiteFill: (
+    ui_button_white_f_enabled: $ui_button_white_f_enabled,
+    ui_button_white_f_hover: $ui_button_white_f_hover,
+    ui_button_white_f_pressed: $ui_button_white_f_pressed,
+    ui_button_white_f_focused: $ui_button_white_f_focused,
+    ui_button_white_f_focused_border1: $ui_button_white_f_focused_border1,
+    ui_button_white_f_focused_border2: $ui_button_white_f_focused_border2,
+    ui_button_white_f_disabled: $ui_button_white_f_disabled,
+);
+
+// Button_White(ghost)
+$colorDatabaseButtonWhiteGhost: (
+    ui_button_white_g_enabled: $ui_button_white_g_enabled,
+    ui_button_white_g_enabled_border: $ui_button_white_g_enabled_border,
+    ui_button_white_g_hover: $ui_button_white_g_hover,
+    ui_button_white_g_hover_border: $ui_button_white_g_hover_border,
+    ui_button_white_g_pressed: $ui_button_white_g_pressed,
+    ui_button_white_g_pressed_border: $ui_button_white_g_pressed_border,
+    ui_button_white_g_focused: $ui_button_white_g_focused,
+    ui_button_white_g_focused_border: $ui_button_white_g_focused_border,
+    ui_button_white_g_disabled: $ui_button_white_g_disabled,
+    ui_button_white_g_disabled_border: $ui_button_white_g_disabled_border,
+);
+
+// Form_Line
+$colorDatabaseFormLine: (
+    ui_form_line_enabled: $ui_form_line_enabled,
+    ui_form_line_enabled_border: $ui_form_line_enabled_border,
+    ui_form_line_hover: $ui_form_line_hover,
+    ui_form_line_hover_border: $ui_form_line_hover_border,
+    ui_form_line_focused: $ui_form_line_focused,
+    ui_form_line_focused_border: $ui_form_line_focused_border,
+    ui_form_line_error: $ui_form_line_error,
+    ui_form_line_error_border: $ui_form_line_error_border,
+    ui_form_line_warning: $ui_form_line_warning,
+    ui_form_line_warning_border: $ui_form_line_warning_border,
+    ui_form_line_success: $ui_form_line_success,
+    ui_form_line_success_border: $ui_form_line_success_border,
+    ui_form_line_informational: $ui_form_line_informational,
+    ui_form_line_informational_border: $ui_form_line_informational_border,
+    ui_form_line_disabled: $ui_form_line_disabled,
+    ui_form_line_disabled_border: $ui_form_line_disabled_border,
+);
+
+// Form_Fill
+$colorDatabaseFormFill: (
+    ui_form_fill_enabled: $ui_form_fill_enabled,
+    ui_form_fill_hover: $ui_form_fill_hover,
+    ui_form_fill_focused: $ui_form_fill_focused,
+    ui_form_fill_error: $ui_form_fill_error,
+    ui_form_fill_error_border: $ui_form_fill_error_border,
+    ui_form_fill_warning: $ui_form_fill_warning,
+    ui_form_fill_warning_border: $ui_form_fill_warning_border,
+    ui_form_fill_success: $ui_form_fill_success,
+    ui_form_fill_success_border: $ui_form_fill_success_border,
+    ui_form_fill_informational: $ui_form_fill_informational,
+    ui_form_fill_informational_border: $ui_form_fill_informational_border,
+    ui_form_fill_disabled: $ui_form_fill_disabled,
+);
+
+// Form_White
+$colorDatabaseFormWhite: (
+    ui_form_white_enabled: $ui_form_white_enabled,
+    ui_form_white_hover: $ui_form_white_hover,
+    ui_form_white_focused: $ui_form_white_focused,
+    ui_form_white_error: $ui_form_white_error,
+    ui_form_white_error_border: $ui_form_white_error_border,
+    ui_form_white_warning: $ui_form_white_warning,
+    ui_form_white_warning_border: $ui_form_white_warning_border,
+    ui_form_white_success: $ui_form_white_success,
+    ui_form_white_success_border: $ui_form_white_success_border,
+    ui_form_white_informational: $ui_form_white_informational,
+    ui_form_white_informational_border: $ui_form_white_informational_border,
+    ui_form_white_disabled: $ui_form_white_disabled,
+);
+
+// Font
+$colorDatabaseFont: (
+    ui_text_01: $ui_text_01,
+    ui_text_02: $ui_text_02,
+    ui_text_03: $ui_text_03,
+    ui_text_04: $ui_text_04,
+    ui_text_brand: $ui_text_brand,
+    ui_text_gray: $ui_text_gray,
+    ui_text_white_01: $ui_text_white_01,
+    ui_text_white_02: $ui_text_white_02,
+    ui_text_error: $ui_text_error,
+    ui_text_warning: $ui_text_warning,
+    ui_text_success: $ui_text_success,
+    ui_text_informational: $ui_text_informational,
+    ui_text_link: $ui_text_link,
+    ui_text_link_visited: $ui_text_link_visited,
+    ui_text_placeholder: $ui_text_placeholder,
+    ui_text_disabled: $ui_text_disabled,
+    ui_text_disabled_surface: $ui_text_disabled_surface,
+);
+
+// Divider
+$colorDatabaseDivider: (
+    ui_divider_black_01: $ui_divider_black_01,
+    ui_divider_black_02: $ui_divider_black_02,
+    ui_divider_black_03: $ui_divider_black_03,
+);
+// Divider_White
+$colorDatabaseDividerWhite: (
+    ui_divider_white_01: $white15,
+    ui_divider_white_02: $white10,
+    ui_divider_white_03: $white05,
+);
+
+// Shadow
+$colorDatabaseShadow: (
+    ui_shadow_01: $ui_shadow_01,
+    ui_shadow_02: $ui_shadow_02,
+    ui_shadow_03: $ui_shadow_03,
+    ui_shadow_04: $ui_shadow_04,
+);
+
+// Overlays _ Black
+$colorDatabaseOverlaysBlack: (
+    ui_overlay_b_d01: $ui_overlay_b_d01,
+    ui_overlay_b_d02: $ui_overlay_b_d02,
+    ui_overlay_b_d03: $ui_overlay_b_d03,
+    ui_overlay_b_b10_01: $ui_overlay_b_b10_01,
+    ui_overlay_b_b10_02: $ui_overlay_b_b10_02,
+    ui_overlay_b_b10_03: $ui_overlay_b_b10_03,
+    ui_overlay_b_b20_01: $ui_overlay_b_b20_01,
+    ui_overlay_b_b20_02: $ui_overlay_b_b20_02,
+    ui_overlay_b_b20_03: $ui_overlay_b_b20_03,
+    ui_overlay_b_b40_01: $ui_overlay_b_b40_01,
+    ui_overlay_b_b40_02: $ui_overlay_b_b40_02,
+    ui_overlay_b_b40_03: $ui_overlay_b_b40_03,
+);
+// Overlays _ White
+$colorDatabaseOverlaysWhite: (
+    ui_overlay_w_d01: $ui_overlay_w_d01,
+    ui_overlay_w_d02: $ui_overlay_w_d02,
+    ui_overlay_w_d03: $ui_overlay_w_d03,
+    ui_overlay_w_b10_01: $ui_overlay_w_b10_01,
+    ui_overlay_w_b10_02: $ui_overlay_w_b10_02,
+    ui_overlay_w_b10_03: $ui_overlay_w_b10_03,
+    ui_overlay_w_b20_01: $ui_overlay_w_b20_01,
+    ui_overlay_w_b20_02: $ui_overlay_w_b20_02,
+    ui_overlay_w_b20_03: $ui_overlay_w_b20_03,
+    ui_overlay_w_b40_01: $ui_overlay_w_b40_01,
+    ui_overlay_w_b40_02: $ui_overlay_w_b40_02,
+    ui_overlay_w_b40_03: $ui_overlay_w_b40_03,
+);
+
+// Skeleton
+$colorDatabaseSkeleton: (
+    ui_skeleton_white: $ui_skeleton_white,
+    ui_skeleton_gray: $ui_skeleton_gray,
+);
+
+/* colorDatabase >  InteractiveColor */
+// Primary Color
+$colorDatabasePrimaryColor: (
+    interactive_01_highlight: $interactive_01_highlight,
+    interactive_01_enabled: $interactive_01_enabled,
+    interactive_01_hover: $interactive_01_hover,
+    interactive_01_pressed: $interactive_01_pressed,
+    interactive_01_focus: $interactive_01_focus,
+    interactive_01_selected: $interactive_01_selected,
+    interactive_01_disabled: $interactive_01_disabled,
+);
+
+// Secondary Color
+$colorDatabaseSecondaryColor: (
+    interactive_02_highlight: $interactive_02_highlight,
+    interactive_02_enabled: $interactive_02_enabled,
+    interactive_02_hover: $interactive_02_hover,
+    interactive_02_pressed: $interactive_02_pressed,
+    interactive_02_focus: $interactive_02_focus,
+    interactive_02_selected: $interactive_02_selected,
+    interactive_02_disabled: $interactive_02_disabled,
+);
+
+// Gray Color
+$colorDatabaseGrayColor: (
+    interactive_03_hover: $interactive_03_hover,
+    interactive_03_pressed: $interactive_03_pressed,
+    interactive_03_focused: $interactive_03_focused,
+    interactive_03_selected: $interactive_03_selected,
+);
+
+$colorList: (
+    $colorDatabaseBackground,
+    $colorDatabaseBorder,
+    $colorDatabaseBrand,
+    $colorDatabaseIconPrimary,
+    $colorDatabaseIconSecondary,
+    $colorDatabaseIconTertiary,
+    $colorDatabaseIconQuaternary,
+    $colorDatabaseIconQuinary,
+    $colorDatabaseIconBlack,
+    $colorDatabaseIconWhite,
+    $colorDatabaseIconSystem,
+    $colorDatabaseButtonPrimary,
+    $colorDatabaseButtonSecondary,
+    $colorDatabaseButtonTertiary,
+    $colorDatabaseButtonQuaternary,
+    $colorDatabaseButtonOutline,
+    $colorDatabaseButtonWhiteFill,
+    $colorDatabaseButtonWhiteGhost,
+    $colorDatabaseFormLine,
+    $colorDatabaseFormFill,
+    $colorDatabaseFormWhite,
+    $colorDatabaseFont,
+    $colorDatabaseDivider,
+    $colorDatabaseDividerWhite,
+    $colorDatabaseShadow,
+    $colorDatabaseOverlaysBlack,
+    $colorDatabaseOverlaysWhite,
+    $colorDatabaseSkeleton,
+    $colorDatabasePrimaryColor,
+    $colorDatabaseSecondaryColor,
+    $colorDatabaseGrayColor
+);
+
+/* Color palette Database */
+$colorDatabasePalettePrimary: (
+    orange50: $orange50,
+    orange100: $orange100,
+    orange200: $orange200,
+    orange300: $orange300,
+    orange400: $orange400,
+    orange500: $orange500,
+    orange600: $orange600,
+    orange700: $orange700,
+    orange800: $orange800,
+    orange900: $orange900,
+);
+
+$colorDatabasePalette: (
+    navy50: $navy50,
+    navy100: $navy100,
+    navy200: $navy200,
+    navy300: $navy300,
+    navy400: $navy400,
+    navy500: $navy500,
+    navy600: $navy600,
+    navy700: $navy700,
+    navy800: $navy800,
+    navy900: $navy900,
+    white5: $white05,
+    white8: $white08,
+    white10: $white10,
+    white15: $white15,
+    white20: $white20,
+    white25: $white25,
+    white30: $white30,
+    white40: $white40,
+    white50: $white50,
+    white60: $white60,
+    white70: $white70,
+    white75: $white75,
+    white80: $white80,
+    white90: $white90,
+    white: $white,
+    gray25: $gray25,
+    gray50: $gray50,
+    gray75: $gray75,
+    gray100: $gray100,
+    gray150: $gray150,
+    gray200: $gray200,
+    gray300: $gray300,
+    gray400: $gray400,
+    gray500: $gray500,
+    gray600: $gray600,
+    gray700: $gray700,
+    gray800: $gray800,
+    gray900: $gray900,
+    bluegray50: $bluegray50,
+    bluegray100: $bluegray100,
+    bluegray200: $bluegray200,
+    bluegray300: $bluegray300,
+    bluegray400: $bluegray400,
+    bluegray500: $bluegray500,
+    bluegray600: $bluegray600,
+    bluegray650: $bluegray650,
+    bluegray700: $bluegray700,
+    bluegray750: $bluegray750,
+    bluegray800: $bluegray800,
+    bluegray850: $bluegray850,
+    bluegray900: $bluegray900,
+    black5: $black05,
+    black8: $black08,
+    black10: $black10,
+    black15: $black15,
+    black20: $black20,
+    black25: $black25,
+    black30: $black30,
+    black40: $black40,
+    black50: $black50,
+    black60: $black60,
+    black70: $black70,
+    black75: $black75,
+    black80: $black80,
+    black90: $black90,
+    black: $black,
+    system_error: $system_error,
+    system_warning: $system_warning,
+    system_success: $system_success,
+    system_info: $system_info,
+    system_link: $system_link,
+    system_link_visited: $system_link_visited,
+    tint_red50: $tint_red50,
+    tint_red100: $tint_red100,
+    tint_red200: $tint_red200,
+    tint_red300: $tint_red300,
+    tint_red400: $tint_red400,
+    tint_red500: $tint_red500,
+    tint_red600: $tint_red600,
+    tint_red700: $tint_red700,
+    tint_red800: $tint_red800,
+    tint_red900: $tint_red900,
+    tint_reda50: $tint_reda50,
+    tint_reda100: $tint_reda100,
+    tint_reda200: $tint_reda200,
+    tint_reda400: $tint_reda400,
+    tint_reda700: $tint_reda700,
+    tint_orange50: $tint_orange50,
+    tint_orange100: $tint_orange100,
+    tint_orange200: $tint_orange200,
+    tint_orange300: $tint_orange300,
+    tint_orange400: $tint_orange400,
+    tint_orange500: $tint_orange500,
+    tint_orange600: $tint_orange600,
+    tint_orange700: $tint_orange700,
+    tint_orange800: $tint_orange800,
+    tint_orange900: $tint_orange900,
+    tint_orangea50: $tint_orangea50,
+    tint_orangea100: $tint_orangea100,
+    tint_orangea200: $tint_orangea200,
+    tint_orangea400: $tint_orangea400,
+    tint_orangea700: $tint_orangea700,
+    tint_yellow50: $tint_yellow50,
+    tint_yellow100: $tint_yellow100,
+    tint_yellow200: $tint_yellow200,
+    tint_yellow300: $tint_yellow300,
+    tint_yellow400: $tint_yellow400,
+    tint_yellow500: $tint_yellow500,
+    tint_yellow600: $tint_yellow600,
+    tint_yellow700: $tint_yellow700,
+    tint_yellow800: $tint_yellow800,
+    tint_yellow900: $tint_yellow900,
+    tint_yellowa50: $tint_yellowa50,
+    tint_yellowa100: $tint_yellowa100,
+    tint_yellowa200: $tint_yellowa200,
+    tint_yellowa400: $tint_yellowa400,
+    tint_yellowa700: $tint_yellowa700,
+    tint_lime50: $tint_lime50,
+    tint_lime100: $tint_lime100,
+    tint_lime200: $tint_lime200,
+    tint_lime300: $tint_lime300,
+    tint_lime400: $tint_lime400,
+    tint_lime500: $tint_lime500,
+    tint_lime600: $tint_lime600,
+    tint_lime700: $tint_lime700,
+    tint_lime800: $tint_lime800,
+    tint_lime900: $tint_lime900,
+    tint_limea50: $tint_limea50,
+    tint_limea100: $tint_limea100,
+    tint_limea200: $tint_limea200,
+    tint_limea400: $tint_limea400,
+    tint_limea700: $tint_limea700,
+    tint_green50: $tint_green50,
+    tint_green100: $tint_green100,
+    tint_green200: $tint_green200,
+    tint_green300: $tint_green300,
+    tint_green400: $tint_green400,
+    tint_green500: $tint_green500,
+    tint_green600: $tint_green600,
+    tint_green700: $tint_green700,
+    tint_green800: $tint_green800,
+    tint_green900: $tint_green900,
+    tint_greena50: $tint_greena50,
+    tint_greena100: $tint_greena100,
+    tint_greena200: $tint_greena200,
+    tint_greena400: $tint_greena400,
+    tint_greena700: $tint_greena700,
+    tint_teal50: $tint_teal50,
+    tint_teal100: $tint_teal100,
+    tint_teal200: $tint_teal200,
+    tint_teal300: $tint_teal300,
+    tint_teal400: $tint_teal400,
+    tint_teal500: $tint_teal500,
+    tint_teal600: $tint_teal600,
+    tint_teal700: $tint_teal700,
+    tint_teal800: $tint_teal800,
+    tint_teal900: $tint_teal900,
+    tint_teala50: $tint_teala50,
+    tint_teala100: $tint_teala100,
+    tint_teala200: $tint_teala200,
+    tint_teala400: $tint_teala400,
+    tint_teala700: $tint_teala700,
+    tint_blue50: $tint_blue50,
+    tint_blue100: $tint_blue100,
+    tint_blue200: $tint_blue200,
+    tint_blue300: $tint_blue300,
+    tint_blue400: $tint_blue400,
+    tint_blue500: $tint_blue500,
+    tint_blue600: $tint_blue600,
+    tint_blue700: $tint_blue700,
+    tint_blue800: $tint_blue800,
+    tint_blue900: $tint_blue900,
+    tint_bluea50: $tint_bluea50,
+    tint_bluea100: $tint_bluea100,
+    tint_bluea200: $tint_bluea200,
+    tint_bluea400: $tint_bluea400,
+    tint_bluea700: $tint_bluea700,
+    tint_indigo50: $tint_indigo50,
+    tint_indigo100: $tint_indigo100,
+    tint_indigo200: $tint_indigo200,
+    tint_indigo300: $tint_indigo300,
+    tint_indigo400: $tint_indigo400,
+    tint_indigo500: $tint_indigo500,
+    tint_indigo600: $tint_indigo600,
+    tint_indigo700: $tint_indigo700,
+    tint_indigo800: $tint_indigo800,
+    tint_indigo900: $tint_indigo900,
+    tint_indigoa50: $tint_indigoa50,
+    tint_indigoa100: $tint_indigoa100,
+    tint_indigoa200: $tint_indigoa200,
+    tint_indigoa400: $tint_indigoa400,
+    tint_indigoa700: $tint_indigoa700,
+    tint_dazzlingblue50: $tint_dazzlingblue50,
+    tint_dazzlingblue100: $tint_dazzlingblue100,
+    tint_dazzlingblue200: $tint_dazzlingblue200,
+    tint_dazzlingblue300: $tint_dazzlingblue300,
+    tint_dazzlingblue400: $tint_dazzlingblue400,
+    tint_dazzlingblue500: $tint_dazzlingblue500,
+    tint_dazzlingblue600: $tint_dazzlingblue600,
+    tint_dazzlingblue700: $tint_dazzlingblue700,
+    tint_dazzlingblue800: $tint_dazzlingblue800,
+    tint_dazzlingblue900: $tint_dazzlingblue900,
+    tint_dazzlingbluea50: $tint_dazzlingbluea50,
+    tint_dazzlingbluea100: $tint_dazzlingbluea100,
+    tint_dazzlingbluea200: $tint_dazzlingbluea200,
+    tint_dazzlingbluea400: $tint_dazzlingbluea400,
+    tint_dazzlingbluea700: $tint_dazzlingbluea700,
+    tint_purple50: $tint_purple50,
+    tint_purple100: $tint_purple100,
+    tint_purple200: $tint_purple200,
+    tint_purple300: $tint_purple300,
+    tint_purple400: $tint_purple400,
+    tint_purple500: $tint_purple500,
+    tint_purple600: $tint_purple600,
+    tint_purple700: $tint_purple700,
+    tint_purple800: $tint_purple800,
+    tint_purple900: $tint_purple900,
+    tint_purplea50: $tint_purplea50,
+    tint_purplea100: $tint_purplea100,
+    tint_purplea200: $tint_purplea200,
+    tint_purplea400: $tint_purplea400,
+    tint_purplea700: $tint_purplea700,
+    tint_magenta50: $tint_magenta50,
+    tint_magenta100: $tint_magenta100,
+    tint_magenta200: $tint_magenta200,
+    tint_magenta300: $tint_magenta300,
+    tint_magenta400: $tint_magenta400,
+    tint_magenta500: $tint_magenta500,
+    tint_magenta600: $tint_magenta600,
+    tint_magenta700: $tint_magenta700,
+    tint_magenta800: $tint_magenta800,
+    tint_magenta900: $tint_magenta900,
+    tint_magentaa50: $tint_magentaa50,
+    tint_magentaa100: $tint_magentaa100,
+    tint_magentaa200: $tint_magentaa200,
+    tint_magentaa400: $tint_magentaa400,
+    tint_magentaa700: $tint_magentaa700,
+    tint_pink50: $tint_pink50,
+    tint_pink100: $tint_pink100,
+    tint_pink200: $tint_pink200,
+    tint_pink300: $tint_pink300,
+    tint_pink400: $tint_pink400,
+    tint_pink500: $tint_pink500,
+    tint_pink600: $tint_pink600,
+    tint_pink700: $tint_pink700,
+    tint_pink800: $tint_pink800,
+    tint_pink900: $tint_pink900,
+    tint_pinka50: $tint_pinka50,
+    tint_pinka100: $tint_pinka100,
+    tint_pinka200: $tint_pinka200,
+    tint_pinka400: $tint_pinka400,
+    tint_pinka700: $tint_pinka700,
+);
+
+/*
+    -------------------------------------------------------
+    -------------------------------------------------------
+
+        ♧ColorCssType
+            ┣━━━ background	(button, overlay, gradient, hover, pressed, focused, disabled)
+            ┣━━━ border	(Thumbnail, hover, pressed, focused, disabled)
+            ┣━━━ color (icon, hover, pressed, focused, disabled)
+            ┗━━━ box-shadow (shadow)
+
+    -------------------------------------------------------
+    -------------------------------------------------------
+*/
+
+/* mixin */
+@mixin cssGnerator($data, $css) {
+    @each $name, $color in $data {
+        .#{"" + $name + ""} {
+            #{$css}: $color;
+            @content;
+        }
     }
 }
-
-// :root {
-//     --stoveTitle1: calc(5.4rem + 1.2vw);
-//     --stoveTitle2: calc(4.2rem + 1.2vw);
-//     --stoveTitle3: calc(3.2rem + 1.2vw);
-//     --stoveTitle4: calc(2.4rem + 1.2vw);
-//     --stoveTitle5: calc(1.8rem + 1.2vw);
-//     --stoveTitle6: calc(1.4rem + 1.2vw);
-// }
+@mixin dataCssGnerator($data, $css) {
+    @each $type in $data {
+        @each $name, $color in $type {
+            .#{"" + $name + ""} {
+                #{$css}: $color;
+                @content;
+            }
+        }
+    }
+}

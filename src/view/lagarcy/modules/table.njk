@@ -1,0 +1,165 @@
+{% import "lagarcy/elements/input.njk" as input %}
+
+{% macro tableList(isPurchase) %}
+    <table class="lagarcy-module-table">
+        <colgroup>
+            {% if isPurchase %}
+                <col width="20%"/>
+                <col width="40%"/>
+                <col width="40%"/>
+            {% else %}
+                <col width="166"/>
+                <col width=""/>
+            {% endif %}
+        </colgroup>
+        <thead>
+            <tr>
+                <th>항목</th>
+                <th>최소사양</th>
+                {% if isPurchase %}
+                    <th>권장사양</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>os</td>
+                <td>Window7</td>
+                {% if isPurchase %}
+                    <td>Window7</td>
+                {% endif %}
+            </tr>
+            <tr>
+                <td>Processor</td>
+                <td>2GHz Dual Core Processor</td>
+                {% if isPurchase %}
+                    <td>2GHz Dual Core Processor</td>
+                {% endif %}
+            </tr>
+            <tr>
+                <td>Memory</td>
+                <td>4GBRAM</td>
+                {% if isPurchase %}
+                    <td>4GBRAM</td>
+                {% endif %}
+            </tr>
+            <tr>
+                <td>Graphics</td>
+                <td>Nvidia & AMD (512MB VRAM)</td>
+                {% if isPurchase %}
+                    <td>Nvidia & AMD (512MB VRAM)</td>
+                {% endif %}
+            </tr>
+            <tr>
+                <td>DirectX</td>
+                <td>9.0c</td>
+                {% if isPurchase %}
+                    <td>9.0c</td>
+                {% endif %}
+            </tr>
+            <tr>
+                <td>Hard Drive</td>
+                <td>31GB HD space</td>
+                {% if isPurchase %}
+                    <td>31GB HD space</td>
+                {% endif %}
+            </tr>
+            <tr>
+                <td>Sound</td>
+                <td>DirectX compatible soundcard</td>
+                {% if isPurchase %}
+                    <td>DirectX compatible soundcard</td>
+                {% endif %}
+            </tr>
+        </tbody>
+    </table>
+{% endmacro %}
+
+{% macro tablePayment() %}
+    <table class="lagarcy-module-table type-payment">
+        <colgroup>
+            <col width="166"/>
+            <col width=""/>
+        </colgroup>
+        <tbody>
+            <tr>
+                <th>주문일자</th>
+                <td>2020.06.06<span class="detail">17.32</span></td>
+            </tr>
+            <tr>
+                <th>주문번호</th>
+                <td>2020.06.06</td>
+            </tr>
+            <tr>
+                <th>상품정보</th>
+                <td>아라하: 이은도의 저주 외 3건</td>
+            </tr>
+            <tr>
+                <th>결제금액</th>
+                <td>₩ 30,000</td>
+            </tr>
+            <tr>
+                <th>STOVE 캐시 사용</th>
+                <td>5,000캐시<span class="detail">(₩ 5,000)</span></td>
+            </tr>
+            <tr>
+                <th>최종 결제 금액</th>
+                <td>
+                    <span class="emphs">₩ 25,000</span></td>
+            </tr>
+        </tbody>
+    </table>
+{% endmacro %}
+
+{% macro tableCoupon(isMore) %}
+    <table class="lagarcy-module-table type-coupon">
+        <colgroup>
+            <col width="64"/>
+            <col width=""/>
+            <col width="167"/>
+            <col width="124"/>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>선택</th>
+                <th>쿠폰명</th>
+                <th>할인금액</th>
+                <th>유효기간</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tac">{{ input.checkbox(noTxt=true,id="check5", txt="MMORPG", name="checkbox2", sizeClass="size-16", shapeClass="rounded") }}</td>
+                <td>패키지게임 오픈 기념 30% 우대 쿠폰</td>
+                <td class="tac">₩ 5,000</td>
+                <td class="tac">2020.06.25 12:30</td>
+            </tr>
+            <tr>
+                <td class="tac">{{ input.checkbox(noTxt=true,id="check6", txt="MMORPG", name="checkbox2", sizeClass="size-16", shapeClass="rounded") }}</td>
+                <td>패키지게임 오픈 기념 30% 우대 쿠폰</td>
+                <td class="tac">VND 5,000,000,00 (50%)</td>
+                <td class="tac">2020.06.25 12:30</td>
+            </tr>
+            <tr>
+                <td class="tac">{{ input.checkbox(noTxt=true,id="check7", txt="MMORPG", name="checkbox2", sizeClass="size-16", shapeClass="rounded", state="checked") }}</td>
+                <td>패키지게임 오픈 기념 30% 우대 쿠폰을 드리려고합니다. 쿠폰명 길어지면</td>
+                <td class="tac">₩ 5,000</td>
+                <td class="tac">2020.06.25 12:30</td>
+            </tr>
+            {% if isMore %}
+                <tr>
+                    <td class="tac">{{ input.checkbox(noTxt=true,id="check8", txt="MMORPG", name="checkbox2", sizeClass="size-16", shapeClass="rounded") }}</td>
+                    <td>패키지게임 오픈 기념 30% 우대 쿠폰</td>
+                    <td class="tac">VND 5,000,000,00 (50%)</td>
+                    <td class="tac">2020.06.25 12:30</td>
+                </tr>
+                <tr>
+                    <td class="tac">{{ input.checkbox(noTxt=true,id="check9", txt="MMORPG", name="checkbox2", sizeClass="size-16", shapeClass="rounded", state="checked") }}</td>
+                    <td>패키지게임 오픈 기념 30% 우대 쿠폰을 드리려고합니다. 쿠폰명 길어지면</td>
+                    <td class="tac">₩ 5,000</td>
+                    <td class="tac">2020.06.25 12:30</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+{% endmacro %}

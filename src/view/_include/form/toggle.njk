@@ -1,0 +1,6 @@
+{% macro base(width, height, styleClass, styleText, statusClass, state) %}
+<label class="element-switch {{ width }} {{ height }} {{ styleClass }} {{ styleText }} {{ statusClass }}">
+  <input class="switch-input" type="checkbox" {{ state }}>
+  <span class="switch-round"></span>
+</label>
+{% endmacro %}

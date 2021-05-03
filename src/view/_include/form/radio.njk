@@ -1,0 +1,6 @@
+{% macro base(width, height, styleClass, styleText, statusClass, id, name, value, state, label) %}
+<span class="element-radio {{ width }} {{ height }} {{ styleClass }} {{ styleText }} {{ statusClass }}">
+  <input class="radio-input" type="radio" id="{{ id }}" name="{{ name }}" value="{{ value }}" {{state}}>
+  <label class="radio-label" for="{{ id }}">{{ label }}</label>
+</span>
+{% endmacro %}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>5A5D675A-9EFC-4666-ACC1-D27AFABCEE6F</title>
+    <g id="STDS_Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="media" transform="translate(-784.000000, -2285.000000)" fill="#000000">
+            <g id="ic_media_av_mic_fill" transform="translate(720.000000, 2245.000000)">
+                <g id="ic/media/av/mic/fill" transform="translate(64.000000, 40.000000)">
+                    <g id="ic_media_av_mic_fill" transform="translate(5.000000, 2.000000)">
+                        <path d="M21,11 C21.5522847,11 22,11.4477153 22,12 C22,17.7388175 17.6053132,22.4512009 11.9977284,22.9553615 L12,23 L12,27 C12,27.5522847 11.5522847,28 11,28 C10.4871642,28 10.0644928,27.6139598 10.0067277,27.1166211 L10,27 L10,23 L10.0022716,22.9553615 C4.3946868,22.4512009 0,17.7388175 0,12 C0,11.4477153 0.44771525,11 1,11 C1.55228475,11 2,11.4477153 2,12 C2,16.9705627 6.02943725,21 11,21 C15.9705627,21 20,16.9705627 20,12 C20,11.4477153 20.4477153,11 21,11 Z M11,0 C14.8659932,0 18,3.13400675 18,7 L18,12 C18,15.8659932 14.8659932,19 11,19 C7.13400675,19 4,15.8659932 4,12 L4,7 C4,3.13400675 7.13400675,0 11,0 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

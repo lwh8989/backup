@@ -1,0 +1,34 @@
+{% import "_include/layout/head/head.njk" as headLink %}
+{% import "_include/layout/scroll/scroll.njk" as scroll %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  {{ headLink.base(tit="Stove Core UI") }}
+  {% block styles %}{% endblock %}
+</head>
+<!-- STOVE Layout System -->
+<!-- [D] basic / information / s-one-rail / b-one-rail /two-rail /side-rail -->
+<!-- [D] layout에 아래 class를 적용하면 다음과 같은 Size가 적용 됩니다. -->
+<!-- scroll =  is-scroll -->
+<body>
+  {% block gnb %}{% endblock %}
+  <div class="layout-container">
+      {% block navigation %}{% endblock %}
+      {% block content %}{% endblock %}
+  </div>
+
+  {% block footer %}{% endblock %}
+
+  {% block dialog %}{% endblock %}
+
+  {% block lnbSide %}{% endblock %}
+
+  {% block gnbSide %}{% endblock %}
+
+  {% block scripts %}{% endblock %}
+
+</body>
+<!-- [D] 공통으로 사용하는 scroll -->
+{{ scroll.scrollBase() }}
+</html>

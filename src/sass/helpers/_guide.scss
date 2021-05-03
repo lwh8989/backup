@@ -3,7 +3,7 @@
     width: 80rem;
     margin: 0 auto;
     padding: 6rem 0;
-
+    font-size: 0;
     .tit {
         font-size: 2.8rem;
         color: #333;
@@ -97,8 +97,21 @@
 
     /* Icon */
     .ex-icon {
-        font-size: 0;
+        .item {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
 
+            &.full {
+                width: 100%;
+            }
+
+            .style-title {
+                font-size: 2.4rem;
+                font-weight: bold;
+                margin-bottom: 1.6em;
+            }
+        }
         .view {
             display: inline-block;
             width: 33%;
@@ -110,7 +123,6 @@
                 text-align: center;
                 margin-bottom: 0.8rem;
             }
-
             .name {
                 font-size: 1.2rem;
                 display: block;
@@ -118,9 +130,10 @@
                 height: 4rem;
             }
         }
-
         .desc {
-            padding: 1.6rem 0;
+            margin-bottom: 0.8em;
+            padding: 1.6rem 0.8em;
+            background: #ddd;
         }
     }
 
@@ -191,33 +204,29 @@
         position: relative;
         min-height: 40rem;
     }
-
     .guide-desc-wrap {
         @include flex;
         margin-bottom: 0.8rem;
         padding-left: 20%;
         color: #666;
         gap: 4rem;
-
         &.space-none {
             padding: 0;
         }
-
         & > div {
             flex: 1;
         }
     }
-
     .guide-state-wrap {
         @include flex;
         padding: 1rem 0;
-
         .guide-state {
             width: 20%;
             padding: 0.8rem 0;
             color: #1e88e5;
         }
     }
+    
 
     /* navigation */
     .layout-navigation {

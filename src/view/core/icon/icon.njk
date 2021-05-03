@@ -8,8 +8,35 @@
 {% block content %}
 <div class="guide">
     <p class="tit"><b>Stove Font Icon</b></p>
+    <p class="desc">
+        icomoon 을 이용해서 Font-icon으로 사용중입니다. <br />
+        icomoon 업데이트 및 최신화 = 디자인팀<br />
+        font-icon 개발 적용 및 가이드 업데이트 = 마크업개발<br />
+        <br />
+        <a href="https://icomoon.io/">icomoon 바로가기</a> <br />
+        아이디: syeonkim@smilegate.com <br />
+        비밀번호: tmakdlf!@#4 <br />
+    </p>
 
-    <p class="desc">Line Icon</p>
+<script type="text/plain" class="language-css">
+    [D] ::before ::after 에 적용 할 경우 다음과 같이 사용합니다.
+
+    <i class="ic-badge-cm-line"></i>
+    
+</script>
+
+<script type="text/plain" class="language-markup">
+    [D] ::before ::after 에 적용 할 경우 다음과 같이 사용합니다.
+    font-family에 'StoveFontIcon'를 정의 해주세요.
+    content 에 가이드페이지에 나오는 
+
+    .example:before {
+        content: "\e96d"; // 사용할 font-icon content 명을 넣어 주세요
+        font-family: 'StoveFontIcon' !important;
+    }
+
+</script>
+
     <div class="ex-icon">
         <p class="desc">Badge</p>
         <div class="view">

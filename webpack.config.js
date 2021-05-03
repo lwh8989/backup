@@ -4,10 +4,10 @@ const glob = require("glob");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 const isProd = process.env.NODE_ENV === "production";
-
 const ROOT_VIEW_DIR = "src/view";
+const marked = require("marked");
+const renderer = new marked.Renderer();
 
 function getTemplates() {
   return new Promise(function (resolve, reject) {

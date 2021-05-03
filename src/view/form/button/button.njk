@@ -93,6 +93,16 @@
                 {{ btn.base(colorClass='bg-primary', sizeClass='size-chips32', txt='chips32', shapeClass='btn-round') }}
                 {{ btn.base(colorClass='bg-primary', sizeClass='size-chips28', txt='chips28', shapeClass='btn-round') }}
             </li>
+
+<script type="text/plain" class="language-markup">
+    xlarge:56px, large:48px, medium:44px, small:40px, xsmall:36px, chips32:32px, chips28:28px
+    size-xlarge
+    <button class="element-btn btn-round bg-primary size-xlarge">
+        <span class="btn-txt">X-large</span>
+    </button>
+
+</script>
+
             <li>
                 <p class="list-tit">버튼 크기별 (xlarge:56px, large:48px, medium:44px, small:40px, xsmall:36px, chips32:32px, chips28:28px)</p>
             </li>
@@ -114,6 +124,22 @@
                 {{ btn.base(colorClass='bg-secondary', sizeClass='size-chips32', txt='chips32') }}
                 {{ btn.base(colorClass='bg-secondary', sizeClass='size-chips28', txt='chips28') }}
             </li>
+
+<script type="text/plain" class="language-markup">
+    bg-primary Style
+    xlarge:56px, large:48px, medium:44px, small:40px, xsmall:36px, chips32:32px, chips28:28px
+    <button class="element-btn bg-primary size-xlarge">
+        <span class="btn-txt">X-large</span>
+    </button> 
+
+    bg-secondary Style
+    xlarge:56px, large:48px, medium:44px, small:40px, xsmall:36px, chips32:32px, chips28:28px
+    <button class="element-btn bg-secondary size-xlarge">
+        <span class="btn-txt">X-large</span>
+    </button>
+
+</script>
+
             <li>
                 <p class="list-tit">버튼 아이콘 (아이콘 + 텍스트 : .with-icon ,아이콘 하나일 때: .only-icon 클래스)</p>
             </li>
@@ -153,7 +179,7 @@
                 {{ btn.withIcon(colorClass='bg-gray', sizeClass='size-chips32', txt='chips32', withIcon='with-icon', iconClass='ic-community-write-fill') }}
                 {{ btn.withIcon(colorClass='bg-gray', sizeClass='size-chips28', txt='chips28', withIcon='with-icon', iconClass='ic-community-write-fill') }}
             </li>
-            <li>
+            <li style="background: #f5f2f0;">
                 {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-xlarge', txt='X-large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
                 {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-large', txt='large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
                 {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-medium', txt='Medium Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
@@ -162,6 +188,38 @@
                 {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-chips32', txt='chips32', withIcon='with-icon', iconClass='ic-community-write-fill') }}
                 {{ btn.withIcon(colorClass='bg-inverse', sizeClass='size-chips28', txt='chips28', withIcon='with-icon', iconClass='ic-community-write-fill') }}
             </li>
+
+<script type="text/plain" class="language-markup">
+    with-icon
+    xlarge:56px, large:48px, medium:44px, small:40px, xsmall:36px, chips32:32px, chips28:28px
+
+    <button class="element-btn btn-round bg-secondary size-xlarge with-icon">
+        <span class="btn-txt">X-large Button</span>
+        <span class="stove-icon ic-community-write-fill" style=""></span>
+    </button>
+
+    <button class="element-btn bg-secondary size-xlarge with-icon">
+        <span class="btn-txt">X-large Button</span>
+        <span class="stove-icon ic-community-write-fill" style=""></span>
+    </button>
+
+    <button class="element-btn bg-secondary size-xlarge with-icon">
+        <span class="stove-icon ic-community-write-fill" style=""></span>
+        <span class="btn-txt">X-large Button</span>
+    </button>
+
+    <button class="element-btn bg-gray size-xlarge with-icon">
+        <span class="stove-icon ic-community-write-fill" style=""></span>
+        <span class="btn-txt">X-large Button</span>
+    </button>
+
+    <button class="element-btn bg-inverse size-xlarge with-icon">
+        <span class="stove-icon ic-community-write-fill" style=""></span>
+        <span class="btn-txt">X-large Button</span>
+    </button>
+
+</script>
+
             <li>
                 <div style="background-color:#373e8a;padding:10px;display:inline-block">
                 {{ btn.withIcon(colorClass='bg-ghost', sizeClass='size-xlarge', txt='X-large Button', withIcon='with-icon', iconClass='ic-community-write-fill') }}
@@ -191,6 +249,21 @@
                 {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-chips32', txt='chips32', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
                 {{ btn.onlyIcon(colorClass='bg-secondary', sizeClass='size-chips28', txt='chips28', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
             </li>
+
+<script type="text/plain" class="language-markup">
+    only-icon
+    xlarge:56px, large:48px, medium:44px, small:40px, xsmall:36px, chips32:32px, chips28:28px
+
+    <button class="element-btn btn-round bg-secondary size-xlarge only-icon">
+        <span class="stove-icon ic-community-write-fill" style=""></span>
+    </button>
+
+    <button class="element-btn bg-secondary size-xlarge only-icon">
+        <span class="stove-icon ic-community-write-fill" style=""></span>
+    </button>
+
+</script>
+
             <li>
                 {{ btn.onlyIcon(colorClass='bg-inverse', sizeClass='size-xlarge', txt='X-large', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}
                 {{ btn.onlyIcon(colorClass='bg-inverse', sizeClass='size-large', txt='large', onlyIcon='only-icon', iconClass='ic-community-write-fill') }}

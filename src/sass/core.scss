@@ -1,5 +1,4 @@
 /* core */
-@import "./font";
 @import "./color";
 @import "./space";
 @import "./motion";
@@ -34,7 +33,6 @@
 @import "./src/sass/dialog";
 
 /* mixin */
-@import "./mixin/font";
 @import "./mixin/mixin";
 @import "./mixin/responsive";
 @import "./mixin/layout";
@@ -47,4 +45,7 @@
 @import "./floara/fr-view";
 
 /* font */
+@import "./font";
+@import "./fonts/stds-font-mixin";
 @import "./fonts/stds-font";
+@import "./fonts/stds-font-reset";

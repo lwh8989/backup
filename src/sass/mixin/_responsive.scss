@@ -1,5 +1,11 @@
 @use "./../responsive";
 
+@mixin mobile-end {
+    @media (min-width: 0px) and (max-width: #{responsive.$stds-breakpoint-xs - 1px}) {
+        @content;
+    }
+}
+
 @mixin mobile {
     @media (min-width: #{responsive.$stds-breakpoint-xs}) and (max-width: #{responsive.$stds-breakpoint-s - 1px}) {
         @content;
@@ -11,6 +17,13 @@
         @content;
     }
 }
+
+@mixin desktopSM {
+    @media (min-width: #{responsive.$stds-breakpoint-sm}) and (max-width: #{responsive.$stds-breakpoint-m - 1px}) {
+        @content;
+    }
+}
+
 
 @mixin desktopM {
     @media (min-width: #{responsive.$stds-breakpoint-m}) and (max-width: #{responsive.$stds-breakpoint-l - 1px}) {

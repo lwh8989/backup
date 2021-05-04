@@ -166,28 +166,28 @@ html {
 }
 
 /* [D] 브라우저 정책 추가 시 .is-gnb-banner 클래스를 추가 해 주세요. */
-body.is-gnb-banner {
-    margin-top: 100px;
-}
+// body.is-gnb-banner {
+//     margin-top: 100px;
+// }
 
 /* [D] display: none; 같이 감추는 기능을 가진 CSS*/
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
+// .sr-only {
+//     position: absolute;
+//     width: 1px;
+//     height: 1px;
+//     padding: 0;
+//     margin: -1px;
+//     overflow: hidden;
+//     clip: rect(0, 0, 0, 0);
+//     border: 0;
+// }
 
-.sr-only-focusable:active,
-.sr-only-focusable:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-}
+// .sr-only-focusable:active,
+// .sr-only-focusable:focus {
+//     position: static;
+//     width: auto;
+//     height: auto;
+//     margin: 0;
+//     overflow: visible;
+//     clip: auto;
+// }

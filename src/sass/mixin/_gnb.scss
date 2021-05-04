@@ -47,11 +47,37 @@ $stds-gnbDepth2: 9.6rem;
         margin-top: $stds-gnbDepth1;
     }
 }
-
+/* mobile 0 */
+@include mobile-end {}
 /* mobile 360 */
 @include mobile {}
 /* tablet 768 */
 @include tablet {}
+/* desktopSM 1024 */
+@include desktopSM {
+    .layout-header {
+        height: 6.8rem !important;
+        &.depth2 {
+            height: 13.6rem !important;
+            &+ .layout-navigation{
+                &.navigation-default-fixed {
+                    top: 13.6rem !important;
+                }
+            }
+            &+.layout-container {
+                margin-top: 13.6rem !important;
+            }
+            &+.layout-container {
+                & .layout-navigation {
+                    top: 13.6rem !important;
+                }
+            }
+        }
+        &+.layout-container {
+            margin-top: 6.8rem;
+        }
+    }
+}
 /* desktopM 1280 */
 @include desktopM {
     .layout-header {

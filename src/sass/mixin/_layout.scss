@@ -66,14 +66,11 @@
     }
 }
 
-// nav {
-//   order:2;
-//   flex: 0 1 200px;
-// }
-// aside {
-//   order:4;
-//   flex:0 1 200px;
-// }
+@include mobile-end {
+    .layout-footer {
+        @include layoutFooter($top: space.$stds-spacing-80);
+    }
+}
 
 /* mobile 360 */
 @include mobile {
@@ -86,6 +83,26 @@
 @include tablet {  
     .layout-footer {
         @include layoutFooter($top: space.$stds-spacing-120);
+    }
+}
+
+/* desktopM 1024 */
+@include desktopSM {
+    .layout-header {
+        + .layout-container {
+            margin-top: 6.8rem !important;
+        }
+    } 
+    .layout-container {
+        @include layoutContainer($width: null, $margin: 0 space.$stds-spacing-48);
+        .layout-navigation {
+            + .layout-basic {
+                margin-top: 6.8rem !important;
+            }
+        }
+    }
+    .layout-footer {
+        @include layoutFooter($top: space.$stds-spacing-200);
     }
 }
 

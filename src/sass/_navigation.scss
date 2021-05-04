@@ -80,10 +80,22 @@
     }
 }
 
+/* mobile 0 */
+@include mobile-end {}
 /* mobile 360 */
 @include mobile {}
 /* tablet 768 */
 @include tablet {}
+/* desktopSM 768 */
+@include desktopSM {
+    .layout-navigation {
+        height: 6.8rem;
+        padding: 2.2rem 1.6rem;
+        &.navigation-default-fixed {
+            top: 6.8rem
+        }
+    }
+}
 /* desktopM 1280 */
 @include desktopM {
     .layout-navigation {

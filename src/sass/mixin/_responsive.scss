@@ -24,7 +24,6 @@
     }
 }
 
-
 @mixin desktopM {
     @media (min-width: #{responsive.$stds-breakpoint-m}) and (max-width: #{responsive.$stds-breakpoint-l - 1px}) {
         @content;

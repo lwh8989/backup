@@ -1,0 +1,15 @@
+/* Font */
+/* otf 확장자 공유 받지 못함 */
+$font-cdn: "https://static-cdn-dev.onstove.com/0.0.1/font";
+/* 한국어 */
+@import url("#{$font-cdn}/kr/StoveFont-KR.css");
+/* 영어 */
+@import url("#{$font-cdn}/intel/StoveFont-Global.css");
+/* 일본어 */
+@import url("#{$font-cdn}/jp/StoveFont-JP.css");
+/* 중국어(간체) */
+@import url("#{$font-cdn}/sc/StoveFont-SC.css");
+/* 중국어(번체) */
+@import url("#{$font-cdn}/tc/StoveFont-TC.css");
+/* 태국어 */
+@import url("#{$font-cdn}/thai/StoveFont-Thai.css");

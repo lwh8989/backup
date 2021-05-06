@@ -1,7 +1,6 @@
 {% extends "_include/layout/guide/guide.njk" %}
 
 {% import "_include/element/badge.njk" as badge %}
-{% import "_include/element/tooltip.njk" as tooltip %}
 
 <!-- styles -->
 {% block styles %}{% endblock %}
@@ -10,7 +9,7 @@
 {% block content %}
     <!-- [D]   -->
     <div class="guide full">
-        <h1 class="guide-tit">Badge &apm; Tooltip</h1>
+        <h1 class="guide-tit">Badge</h1>
 
         <!-- dropdown -->
         <div class="guide-layer">
@@ -128,75 +127,6 @@
                                 <div class="guide-flex ratio gap">
                                     <div>
                                         {{ badge.base(height="h4", round="round", txt="", bgColor="orange") }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="guide-section-tit">Tooltip</h2>
-
-                <div>
-                    <div class="guide-flex ratio gap">
-                        <div>
-                            {# <h3 class="guide-section-stit">Tooltip</h3> #}
-
-                            <div class="guide-desc-wrap">
-                                <div class="guide-desc">가운데</div>
-                                <div class="guide-desc">왼쪽</div>
-                                <div class="guide-desc">오른쪽</div>
-                            </div>
-
-                            <div class="guide-state-wrap">
-                                <div class="guide-state">말꼬리 위쪽</div>
-                                <div class="guide-flex ratio gap">
-                                    <div>
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-tc") }}
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-tc") }}
-                                    </div>
-                                    <div>
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-tl") }}
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-tl") }}
-                                    </div>
-                                    <div>
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-tr") }}
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-tr") }}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="guide-state-wrap">
-                                <div class="guide-state">말꼬리 아래쪽</div>
-                                <div class="guide-flex ratio gap">
-                                    <div>
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-bc") }}
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-bc") }}
-                                    </div>
-                                    <div>
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-bl") }}
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-bl") }}
-                                    </div>
-                                    <div>
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-br") }}
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-br") }}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="guide-state-wrap">
-                                <div class="guide-state">말꼬리 왼쪽</div>
-                                <div class="guide-flex ratio gap">
-                                    <div>
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-lc") }}
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-lc") }}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="guide-state-wrap">
-                                <div class="guide-state">말꼬리 오른쪽</div>
-                                <div class="guide-flex ratio gap">
-                                    <div>
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="gray600", color="white", axis="arrow-rc") }}
-                                        {{ tooltip.base(txt="예시 툴팁 정렬", bgColor="orange", color="white", axis="arrow-rc") }}
                                     </div>
                                 </div>
                             </div>

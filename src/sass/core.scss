@@ -16,6 +16,7 @@
 
 /* element */
 @import "./badge";
+@import "./tooltip";
 
 /* form */
 @import "./button";
@@ -40,6 +41,9 @@
 /* Layout */
 @import "./index";
 @import "./responsive";
+@import "./layout";
+@import "./navigation";
+@import "./footer";
 
 /* legarcy */
 @import "./floara/fr-view";

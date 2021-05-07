@@ -143,9 +143,6 @@ $bg_trans_btn_focus: transparent;
     font-weight: normal;
     vertical-align: middle;
 }
-.element-btn .btn-txt:hover {
-    text-decoration: underline;
-}
 .element-btn.disabled .btn-txt:hover,
 .element-btn:disabled .btn-txt:hover {
     text-decoration: none;
@@ -430,7 +427,7 @@ $bg_trans_btn_focus: transparent;
     &:disabled,
     &.disabled {
         background: $ui_button_05_disabled;
-        border-color: $ui_button_05_disabled_border;
+        border: 0;
     }
 }
 // Button_White(ghost)
@@ -457,7 +454,7 @@ $bg_trans_btn_focus: transparent;
         background: $ui_button_white_g_disabled;
         border-color: $ui_button_white_g_disabled_border;
         & .btn-txt {
-            color: #cacaca;
+            color: $ui_text_white_02;
         }
     }
 }

@@ -11,7 +11,7 @@ $ui-button-pagination-hover : #fc6020;
     justify-content: center;
     align-content: center;
     padding: 2.8rem 0 4rem;
-    background-color: #28282c;
+    background-color: #1a1a1a;
     color: #fff;
 }
 .footer .footer-top.element-btn{
@@ -49,7 +49,7 @@ $ui-button-pagination-hover : #fc6020;
 .footer .footer-notice-link{
     display: flex;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: #fff;
 }
 .footer .footer-notice-link span {
@@ -58,6 +58,7 @@ $ui-button-pagination-hover : #fc6020;
 .footer .footer-notice-link span:first-child {
     flex-shrink: 0;
     width: 8.2rem;
+    font-weight: bold;
 }
 .footer .footer-notice-link span:last-child {
     overflow: hidden;
@@ -104,7 +105,7 @@ $ui-button-pagination-hover : #fc6020;
 .footer-nav .rating-game {
     visibility: hidden;
     position: absolute;
-    top: 3.5rem;
+    top: 4rem;
     left: 50%;
     width: auto;
     height: 0;
@@ -128,11 +129,11 @@ $ui-button-pagination-hover : #fc6020;
 }
 .footer-nav .rating-img {
     float: left;
-    padding: 1.8rem 2rem;
+    padding: 2rem;
 }
 .footer-nav .rating-info {
     float: left;
-    padding: 0.5rem 2rem 0 0;
+    padding: 2rem 2rem 2rem 0;
 }
 .footer-nav .rating-info table {
     border-collapse: collapse;
@@ -157,14 +158,14 @@ $ui-button-pagination-hover : #fc6020;
 }
 .footer-nav .rating-info th,
 .footer-nav .rating-info td {
-    padding: 0.8rem 1rem;
+    padding: 0.8rem;
     text-align: left;
     color: #3a3a3a;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1;
 }
 .footer-nav .rating-info th {
-    opacity: 0.6;
+    font-weight: bold;
 }
 .footer .footer-address > p > span {
     margin-right: 1rem;
@@ -246,12 +247,10 @@ $ui-button-pagination-hover : #fc6020;
     /*background-color: #ccc; /*스타일 따라 변경 가능*/
 }
 .module-tab.tab-vertical .tab-content {
-    display: none;
     float: left;
     width: auto; /*스타일 따라 변경 가능*/
-    height: 9.6rem; /*스타일 따라 변경 가능*/
-    border-top-right-radius: 4px; /*스타일 따라 변경 가능*/
-    border-bottom-right-radius: 4px; /*스타일 따라 변경 가능*/
+    height: 13rem; /*스타일 따라 변경 가능*/
+    border-radius: 4px; /*스타일 따라 변경 가능*/
     /*border-left: none; /*스타일 따라 변경 가능*/
     /*color: #fff; /*스타일 따라 변경 가능*/
     /*background: #ccc; /*스타일 따라 변경 가능*/

@@ -142,55 +142,11 @@
         <!-- [D] 개발시엔 인라인 스타일 제거해 주세요. -->
         <div class="rating-game" style="visibility:visible;">
             <div class="module-tab tab-vertical">
-                <!-- [D] 탭 매뉴 -->
-                <div class="tab-nav">
-                    <button class="tab-links color-gray active" onclick="openContent(event, 'tab1')" id="verticalOpen">15</button>
-                    <button class="tab-links color-gray" onclick="openContent(event, 'tab2')">18</button>
-                </div>
-                
-                <!-- [D] 탭 내용 -->
-                <div id="tab1" class="tab-content color-gray" style="width: 626px;">
-                    <div class="rating-img">
-                      <img src="{{ staticUrl }}/static/image/svg/ic-grade-15.svg" alt="grade image">
-                      <img src="{{ staticUrl }}/static/image/svg/ic-grade-all.svg" alt="grade image">
-                    </div>
-                    <div class="rating-info">
-                      <table style="width:100%">
-                        <tbody>
-                          <tr>
-                            <th>제명</th>
-                            <td>로스트아크</td>
-                          </tr>
-                          <tr>
-                            <th>신청등급</th>
-                            <td>청소년이용불가</td>
-                          </tr>
-                          <tr>
-                            <th>등급분류일자</th>
-                            <td>2019. 01. 03</td>
-                          </tr>
-                        </tbody>
-                        <tbody>
-                          <tr>
-                            <th>상호</th>
-                            <td>(주) 스마일게이트 알피지</td>
-                          </tr>
-                          <tr>
-                            <th>등급분류번호</th>
-                            <td>CC-NP-190103-003</td>
-                          </tr>
-                          <tr>
-                            <th>제작업자 신고번호</th>
-                            <td>제 2014-000005호</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                </div>
                 <!-- tab-content 길이가 긴 경우 width값 넣어주세요  -->
-                <div id="tab2" class="tab-content color-gray" style="width: 970px;">
+                <div class="tab-content color-gray" style="width: 534px;">
                     <div class="rating-img">
                       <img src="{{ staticUrl }}/static/image/svg/ic-grade-18.svg" alt="grade image">
+                      <!-- 
                       <img src="{{ staticUrl }}/static/image/svg/ic-grade-violence.svg" alt="grade image">
                       <img src="{{ staticUrl }}/static/image/svg/ic-grade-speculation.svg" alt="grade image">
                       <img src="{{ staticUrl }}/static/image/svg/ic-grade-crime.svg" alt="grade image">
@@ -198,6 +154,7 @@
                       <img src="{{ staticUrl }}/static/image/svg/ic-grade-impertinence.svg" alt="grade image">
                       <img src="{{ staticUrl }}/static/image/svg/ic-grade-fear.svg" alt="grade image">
                       <img src="{{ staticUrl }}/static/image/svg/ic-grade-sexual.svg" alt="grade image">
+                      -->
                     </div>
                     <div class="rating-info">
                       <table style="width:100%">
@@ -211,7 +168,7 @@
                             <td>청소년이용불가</td>
                           </tr>
                           <tr>
-                            <th>등급분류일자</th>
+                            <th>신청등급</th>
                             <td>2019. 01. 03</td>
                           </tr>
                         </tbody>
@@ -225,15 +182,14 @@
                             <td>CC-NP-190103-003</td>
                           </tr>
                           <tr>
-                            <th>제작업자 신고번호</th>
+                            <th>신청등급</th>
                             <td>제 2014-000005호</td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
                 </div>
-                
-                <script>
+                {# <script>
                     function openContent(evt, tabName) {
                         var i, tabcontent, tablinks;
                         tabcontent = document.getElementsByClassName("tab-content");
@@ -248,7 +204,7 @@
                         evt.currentTarget.className += " active";
                     }
                     document.getElementById("verticalOpen").click();
-                </script>
+                </script> #}
             </div>
         </div>
       </div>

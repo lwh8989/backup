@@ -21,29 +21,44 @@
 @mixin desktopSM {
     @media (min-width: #{responsive.$stds-breakpoint-sm}) and (max-width: #{responsive.$stds-breakpoint-m - 1px}) {
         @content;
+        $stds-fixed-default: 0;
+        $stds-fixed-depth1: 6.8rem;
+        $stds-fixed-depth2: 13.6rem;
     }
 }
 
 @mixin desktopM {
     @media (min-width: #{responsive.$stds-breakpoint-m}) and (max-width: #{responsive.$stds-breakpoint-l - 1px}) {
         @content;
+        $stds-fixed-default: 0;
+        $stds-fixed-depth1: 6.8rem;
+        $stds-fixed-depth2: 13.6rem;
     }
 }
 
 @mixin desktopL {
     @media (min-width: #{responsive.$stds-breakpoint-l}) and (max-width: #{responsive.$stds-breakpoint-xl - 1px}) {
         @content;
+        $stds-fixed-default: 0;
+        $stds-fixed-depth1: 6.8rem;
+        $stds-fixed-depth2: 13.6rem;
     }
 }
 
 @mixin desktopXL {
     @media (min-width: #{responsive.$stds-breakpoint-xl}) and (max-width: #{responsive.$stds-breakpoint-2xl - 1px}) {
         @content;
+        $stds-fixed-default: 0;
+        $stds-fixed-depth1: 6.8rem;
+        $stds-fixed-depth2: 13.6rem;
     }
 }
 
 @mixin desktop2XL {
     @media (min-width: #{responsive.$stds-breakpoint-2xl}) {
         @content;
+        $stds-fixed-default: 0;
+        $stds-fixed-depth1: 6.8rem;
+        $stds-fixed-depth2: 13.6rem;
     }
 }

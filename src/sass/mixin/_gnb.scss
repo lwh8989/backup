@@ -2,13 +2,9 @@
 @import "./responsive";
 @import "./../responsive";
 
-/* layout Header order 1 */
-$stds-gnbDepth1: 4.8rem;
-$stds-gnbDepth2: 9.6rem;
-
 @mixin layoutHeader(
     $order: 1,
-    $height: $stds-gnbDepth1,
+    $height: $stds-fixed-depth1,
     $flex: 0 1 100%,
     $background: #ddd
     ) {
@@ -20,31 +16,23 @@ $stds-gnbDepth2: 9.6rem;
 
 .layout-header {
     @include layoutHeader($background:#ddd);
-    &.depth2 {
-        height: $stds-gnbDepth2;
-        &+ .layout-navigation{
-            &.navigation-default-fixed {
-                top: $stds-gnbDepth2;
-            }
-        }
-        &+.layout-container {
-            margin-top: $stds-gnbDepth2;
-        }
-        &+.layout-container {
-            & .layout-navigation {
-                top: $stds-gnbDepth2;
-            }
-        }
-    }
-    &.gnb-default-fixed {
+    &.is-default {
         position: fixed;
-        left: 0;
-        top: 0;
+        top: $stds-fixed-default;
         width: 100%;
         z-index: $zindex-fixed;
     }
-    &+.layout-container {
-        margin-top: $stds-gnbDepth1;
+    &.is-depth1 {
+        position: fixed;
+        top: $stds-fixed-depth1;
+        width: 100%;
+        z-index: $zindex-fixed;
+    }
+    &.is-depth2 {
+        position: fixed;
+        top: $stds-fixed-depth2;
+        width: 100%;
+        z-index: $zindex-fixed;
     }
 }
 /* mobile 0 */
@@ -55,117 +43,46 @@ $stds-gnbDepth2: 9.6rem;
 @include tablet {}
 /* desktopSM 1024 */
 @include desktopSM {
+    $stds-fixed-depth1: 6.8rem;
+    $stds-fixed-depth2: 13.6rem;
+
     .layout-header {
-        height: 6.8rem !important;
-        &.depth2 {
-            height: 13.6rem !important;
-            &+ .layout-navigation{
-                &.navigation-default-fixed {
-                    top: 13.6rem !important;
-                }
-            }
-            &+.layout-container {
-                margin-top: 13.6rem !important;
-            }
-            &+.layout-container {
-                & .layout-navigation {
-                    top: 13.6rem !important;
-                }
-            }
-        }
-        &+.layout-container {
-            margin-top: 6.8rem;
-        }
+        height: $stds-fixed-depth1;
     }
 }
 /* desktopM 1280 */
 @include desktopM {
+    $stds-fixed-depth1: 6.8rem;
+    $stds-fixed-depth2: 13.6rem;
+
     .layout-header {
-        height: 6.8rem !important;
-        &.depth2 {
-            height: 13.6rem !important;
-            &+ .layout-navigation{
-                &.navigation-default-fixed {
-                    top: 13.6rem !important;
-                }
-            }
-            &+.layout-container {
-                margin-top: 13.6rem !important;
-            }
-            &+.layout-container {
-                & .layout-navigation {
-                    top: 13.6rem !important;
-                }
-            }
-        }
-        &+.layout-container {
-            margin-top: 6.8rem;
-        }
+        height: $stds-fixed-depth1;
     }
 }
 /* desktopL 1440 */
 @include desktopL {
+    $stds-fixed-depth1: 6.8rem;
+    $stds-fixed-depth2: 13.6rem;
+
     .layout-header {
-        height: 6.8rem !important;
-        &.depth2 {
-            height: 13.6rem !important;
-            &+ .layout-navigation{
-                &.navigation-default-fixed {
-                    top: 13.6rem !important;
-                }
-            }
-            &+.layout-container {
-                margin-top: 13.6rem !important;
-            }
-            &+.layout-container {
-                & .layout-navigation {
-                    top: 13.6rem !important;
-                }
-            }
-        }
+        height: $stds-fixed-depth1;
     }
 }
 /* desktopXL 1600 */
 @include desktopXL {
+    $stds-fixed-depth1: 6.8rem;
+    $stds-fixed-depth2: 13.6rem;
+
     .layout-header {
-        height: 6.8rem !important;
-        &.depth2 {
-            height: 13.6rem !important;
-            &+ .layout-navigation{
-                &.navigation-default-fixed {
-                    top: 13.6rem !important;
-                }
-            }
-            &+.layout-container {
-                margin-top: 13.6rem !important;
-            }
-            &+.layout-container {
-                & .layout-navigation {
-                    top: 13.6rem !important;
-                }
-            }
-        }
+        height: $stds-fixed-depth1;
     }
 }
 /* desktop2XL 1920 */
 @include desktop2XL {
+    $stds-fixed-depth1: 6.8rem;
+    $stds-fixed-depth2: 13.6rem;
+
     .layout-header {
-        height: 6.8rem !important;
-        &.depth2 {
-            height: 13.6rem !important;
-            &+ .layout-navigation{
-                &.navigation-default-fixed {
-                    top: 13.6rem !important;
-                }
-            }
-            &+.layout-container {
-                margin-top: 13.6rem !important;
-            }
-            &+.layout-container {
-                & .layout-navigation {
-                    top: 13.6rem !important;
-                }
-            }
-        }
+        height: $stds-fixed-depth1;
     }
 }  

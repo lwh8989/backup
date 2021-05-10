@@ -6,7 +6,7 @@
 @import "./color";
 @import "./space";
 
-.layout-navigation {
+.layout-tab {
     display: none;
     order: 2;
     height: 4.8rem;
@@ -31,67 +31,14 @@
     &.is-depth2 {
         display: block;
         position: fixed;
-        top: $stds-fixed-depth2;
-        width: 100%;;
+        top: $stds-fixed-depth1;
+        width: 100%;
         z-index: $zindex-fixed;
     }
     .container {
         display: flex;
         max-width: 100%;
         height: 2.4rem;
-        .nav-btn {
-            width: 2.4rem;
-            height: 2.4rem;
-            i {
-                font-size: 2.4rem;
-                // color: $ui_icon_primary_enabled;
-            }
-            &.align-left {
-                margin-right: 2rem;
-            }
-            &.align-right {
-                margin-left: 2rem;
-            }
-        }
-        .nav-text-btn {
-            font-size: 1.5rem;
-            color: $ui-text-03;
-            flex: none;
-            &.align-left {
-                margin-right: 2rem;
-            }
-            &.align-right {
-                margin-left: 2rem;
-            }
-            &.is-active {
-                color: $ui_text_brand;
-                font-weight: $stdsWeightBold;
-            }
-        }
-        .contents {
-            width: 100%;
-            line-height: 2.4rem;
-            flex-wrap: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            flex-basis: auto;
-            .item {
-                font-size: 1.5rem;
-                color: $ui-text-03;
-                margin-left: $stds-spacing-8;
-                &:first-child {
-                    margin-left: 0;
-                }
-                &.is-active {
-                    color: $ui-text-02;
-                    font-weight: $stdsWeightBold;
-                }
-                .ic-control-arrow-right-line {
-                    color: #cacaca;
-                }
-            }
-        }
     }
 }
 
@@ -106,7 +53,7 @@
     $stds-fixed-depth1: 6.8rem;
     $stds-fixed-depth2: 13.6rem;
 
-    .layout-navigation {
+    .layout-tab {
         height: $stds-fixed-depth1;
         &.is-default {
             top: $stds-fixed-default;
@@ -127,7 +74,7 @@
     $stds-fixed-depth1: 6.8rem;
     $stds-fixed-depth2: 13.6rem;
 
-    .layout-navigation {
+    .layout-tab {
         height: $stds-fixed-depth1;
         &.is-default {
             top: $stds-fixed-default;
@@ -147,8 +94,8 @@
 @include desktopL {
     $stds-fixed-depth1: 6.8rem;
     $stds-fixed-depth2: 13.6rem;
-    
-    .layout-navigation {
+
+    .layout-tab {
         height: $stds-fixed-depth1;
         &.is-default {
             top: $stds-fixed-default;
@@ -168,8 +115,8 @@
 @include desktopXL {
     $stds-fixed-depth1: 6.8rem;
     $stds-fixed-depth2: 13.6rem;
-    
-    .layout-navigation {
+
+    .layout-tab {
         height: $stds-fixed-depth1;
         &.is-default {
             top: $stds-fixed-default;
@@ -189,8 +136,8 @@
 @include desktop2XL {
     $stds-fixed-depth1: 6.8rem;
     $stds-fixed-depth2: 13.6rem;
-    
-    .layout-navigation {
+
+    .layout-tab {
         height: $stds-fixed-depth1;
         &.is-default {
             top: $stds-fixed-default;

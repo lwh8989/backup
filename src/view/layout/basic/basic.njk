@@ -11,15 +11,23 @@
 
 <!-- gnb -->
 {% block gnb %}
-<!-- [D] GNB가 두줄로 나올 경우 depth2 를 추가 해 주세요.   -->
-<header class="layout-header gnb-default-fixed">
-    % 여기에 마크업을 해 주세요. %
+<header class="layout-header ">
+    % GNB 여기에 마크업을 해 주세요. %
 </header>
 {% endblock %}
 
-<!-- navigation -->
-{% block navigation %}
-    {{ navigation.base() }}
+<!-- navSection -->
+{% block navSection %}
+<div class="layout-navigation ">
+   % Navigation 여기에 마크업을 해 주세요. %
+</div>
+{% endblock %}
+
+<!-- tabSection -->
+{% block tabSection %}
+<div class="layout-tab">
+   % Tab 여기에 마크업을 해 주세요. %
+</div>
 {% endblock %}
 
 <!-- content -->

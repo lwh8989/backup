@@ -90,6 +90,7 @@ $elementHeight: (4, 16, 20, 24, 28, 32, 36, 40, 44, 48, 56);
     @if $h <= 16 {
         .#{"h" + $h + ""} {
             &.element-badge {
+                min-width: 1.6rem;
                 padding: 0 0.4rem;
             }
         }

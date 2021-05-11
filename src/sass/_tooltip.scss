@@ -64,6 +64,11 @@
                 bottom: $bottom;
                 transform: translateX($center) rotate(180deg);
             }
+            @if $axisY == bottomCenter {
+                $center: -50%;
+                bottom: $bottom;
+                transform: translateX($center) rotate(180deg);
+            }
             @if $axisY == leftSideCenter {
                 transform: translateY($center) rotate(-90deg);
             }
@@ -74,7 +79,7 @@
 
         &.arrow-tc {
             &::before {
-                @include axis($left: 50%);
+                @include axis($left: 50%, $axisX: center);
             }
         }
         &.arrow-tl {
@@ -90,7 +95,7 @@
 
         &.arrow-bc {
             &::before {
-                @include axis($left: 50%, $axisY: bottom);
+                @include axis($left: 50%, $axisY: bottomCenter);
             }
         }
         &.arrow-bl {

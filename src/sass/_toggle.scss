@@ -53,60 +53,60 @@
     }
     input:checked + .switch-round:before {}
     &.h24 {
-        width: 44px;
-        height: 24px;
+        width: 4.4rem;
+        height: 2.4rem;
         .switch-round {
-            border-radius: 14px;
+            border-radius: 1.4rem;
             &:before {
-                top: 4px;
-                left: 4px;
-                width: 16px;
-                height: 16px;
+                top: 0.4rem;
+                left: 0.4rem;
+                width: 1.6rem;
+                height: 1.6rem;
                 border-radius: radius.$Radius-50;
             }
         }
         input:checked + .switch-round:before {
-            -webkit-transform: translateX(18px);
-            -ms-transform: translateX(18px);
-            transform: translateX(18px);
+            -webkit-transform: translateX(2rem);
+            -ms-transform: translateX(2rem);
+            transform: translateX(2rem);
         }
     }
     &.h28 {
-        width: 52px;
-        height: 28px;
+        width: 5.2rem;
+        height: 2.8rem;
         .switch-round {
-            border-radius: 14px;
+            border-radius: 1.4rem;
             &:before {
-                top: 4px;
-                left: 4px;
-                width: 20px;
-                height: 20px;
+                top: 0.4rem;
+                left: 0.4rem;
+                width: 2rem;
+                height: 2rem;
                 border-radius: radius.$Radius-50;
             }
         }
         input:checked + .switch-round:before {
-            -webkit-transform: translateX(22px);
-            -ms-transform: translateX(22px);
-            transform: translateX(22px);
+            -webkit-transform: translateX(2.4rem);
+            -ms-transform: translateX(2.4rem);
+            transform: translateX(2.4rem);
         }
     }
     &.h32 {
-        width: 60px;
-        height: 32px;
+        width: 6rem;
+        height: 3.2rem;
         .switch-round {
-            border-radius: 16px;
+            border-radius: 1.6rem;
             &:before {
-                top: 4px;
-                left: 4px;
-                width: 24px;
-                height: 24px;
+                top: 0.4rem;
+                left: 0.4rem;
+                width: 2.4rem;
+                height: 2.4rem;
                 border-radius: radius.$Radius-50;
             }
         }
         input:checked + .switch-round:before {
-            -webkit-transform: translateX(22px);
-            -ms-transform: translateX(22px);
-            transform: translateX(22px);
+            -webkit-transform: translateX(2.8rem);
+            -ms-transform: translateX(2.8rem);
+            transform: translateX(2.8rem);
         }
     }
 }

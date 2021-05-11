@@ -155,7 +155,7 @@
     }
     .module-dialog-btns {
         @include mixin.flexCenter;
-        padding-bottom: space.$stds-spacing-32;
+        padding-bottom: space.$stds-spacing-40;
 
         button {
             margin-right: space.$stds-spacing-8;
@@ -176,7 +176,7 @@
     .module-dialog-footer {
         border-top: 1px solid color.$ui_divider_black_02;
         padding: space.$stds-spacing-16 space.$stds-spacing-24
-            space.$stds-spacing-32;
+            space.$stds-spacing-24;
         color: color.$ui_text_03;
     }
     .module-dialog-close {

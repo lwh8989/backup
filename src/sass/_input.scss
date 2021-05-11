@@ -40,7 +40,7 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         }
     }
     & > button {
-        color: color.$gray500;
+        color: color.$ui_icon_03_enabled;
         margin-right: 0.8rem;
 
         &.ic-control-close-circle-fill {
@@ -48,7 +48,7 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
             display: none;
         }
         &.ic-navigation-search-line {
-            color: color.$ui_text_03;
+            color: color.$ui_icon_03_enabled;
         }
 
         &:last-of-type {
@@ -73,13 +73,13 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     &:focus-within {
         button {
             &.ic-navigation-search-line {
-                color: color.$ui_text_02;
+                color: color.$ui_icon_03_pressed;
             }
         }
     }
     &.active {
         button {
-            color: color.$ui_icon_02_focused;
+            color: color.$ui_icon_03_pressed;
 
             &.ic-control-close-circle-fill {
                 display: block;

@@ -26,7 +26,7 @@
                     {{ color.box(cssType='Background', category='Surface', className='ui_bg_surface_white_inverse') }}
                     {{ color.box(cssType='Background', category='Surface', className='ui_bg_surface_gray25') }}
                     {{ color.box(cssType='Background', category='Surface', className='ui_bg_surface_navy', color="txt_white") }}
-                    {{ color.box(cssType='Background', category='Surface', className='ui_bg_surface_Elevated') }}
+                    {{ color.box(cssType='Background', category='Surface', className='ui_bg_surface_elevated') }}
                     {{ color.box(cssType='Background', category='Highlight', className='ui_bg_highlight_gray25') }}
                     {{ color.box(cssType='Background', category='Highlight', className='ui_bg_highlight') }}
                 </div>
@@ -126,17 +126,17 @@
         </div>
 
         <p class="tit2">
-            <b>UI Color &gt; Icon-Black</b>
+            <b>UI Color &gt; Icon-Gray</b>
         </p>
         <div class="demo-color-wrap">
             <div class="demo-color-bx">
                 <div>
-                    {{ color.box(cssType='color(icon)', category='Enabled', className='ui_icon_black_enabled', color="txt_white")}}
-                    {{ color.box(cssType='color(icon)', category='Hover', className='ui_icon_black_hover', color="txt_white")}}
-                    {{ color.box(cssType='color(icon)', category='Pressed', className='ui_icon_black_pressed', color="txt_white")}}
-                    {{ color.box(cssType='color(icon)', category='Focused', className='ui_icon_black_focused', color="txt_white")}}
-                    {{ color.box(cssType='color(icon)', category='Selected', className='ui_icon_black_selected', color="txt_white")}}
-                    {{ color.box(cssType='color(icon)', category='Disabled', className='ui_icon_black_disabled', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Enabled', className='ui_icon_gray_enabled', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Hover', className='ui_icon_gray_hover', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Pressed', className='ui_icon_gray_pressed', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Focused', className='ui_icon_gray_focused', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Selected', className='ui_icon_gray_selected', color="txt_white")}}
+                    {{ color.box(cssType='color(icon)', category='Disabled', className='ui_icon_gray_disabled', color="txt_white")}}
                 </div>
             </div>
         </div>
@@ -331,6 +331,7 @@
                     {{ color.box(cssType='form', category='Enabled', className='ui_form_fill_enabled')}}
                     {{ color.box(cssType='form', category='Hover', className='ui_form_fill_hover')}}
                     {{ color.box(cssType='form', category='Focused', className='ui_form_fill_focused')}}
+                    {{ color.box(cssType='form', category='Focused', className='ui_form_fill_focused_border')}}
                     {{ color.box(cssType='form', category='Error', className='ui_form_fill_error', color="txt_white")}}
                     {{ color.box(cssType='form', category='Error', className='ui_form_fill_error_border')}}
                     {{ color.box(cssType='form', category='Warning', className='ui_form_fill_warning', color="txt_white")}}
@@ -377,9 +378,9 @@
                     {{ color.box(cssType='Color', category='Tertiary', className='ui_text_03', color="txt_white")}}
                     {{ color.box(cssType='Color', category='Quarternary', className='ui_text_04', color="txt_white")}}
                     {{ color.box(cssType='Color', category='Brand', className='ui_text_brand', color="txt_white")}}
-                    {{ color.box(cssType='Color', category='text', className='ui_text_black', color="txt_white")}}
-                    {{ color.box(cssType='Color', category='Inverse - Primary', className='ui_text_inverse_01', color="txt_black")}}
-                    {{ color.box(cssType='Color', category='Inverse - Secondary', className='ui_text_inverse_02', color="txt_black")}}
+                    {{ color.box(cssType='Color', category='text', className='ui_text_gray', color="txt_white")}}
+                    {{ color.box(cssType='Color', category='Inverse - Primary', className='ui_text_white_01', color="txt_black")}}
+                    {{ color.box(cssType='Color', category='Inverse - Secondary', className='ui_text_white_02', color="txt_black")}}
                     {{ color.box(cssType='Color', category='text', className='ui_text_error', color="txt_white")}}
                     {{ color.box(cssType='Color', category='text', className='ui_text_warning', color="txt_white")}}
                     {{ color.box(cssType='Color', category='text', className='ui_text_success', color="txt_white")}}
@@ -388,11 +389,12 @@
                     {{ color.box(cssType='Color', category='text', className='ui_text_link_visited', color="txt_white")}}
                     {{ color.box(cssType='Color', category='text', className='ui_text_placeholder', color="txt_white")}}
                     {{ color.box(cssType='Color', category='text', className='ui_text_disabled', color="txt_white")}}
+                    {{ color.box(cssType='Color', category='text', className='ui_text_disabled_surface', color="txt_white")}}
                 </div>
             </div>
         </div>
 
-        <p class="tit2">
+        {# <p class="tit2">
             <b>UI Color &gt; Font</b>
         </p>
         <div class="demo-color-wrap">
@@ -408,7 +410,7 @@
                     {{ color.box(cssType='Color', category='Disabled', className='ui_text_disabled', color="txt_white")}}
                 </div>
             </div>
-        </div>
+        </div> #}
 
         <p class="tit2">
             <b>UI Color &gt; Divider-Black</b>
@@ -524,7 +526,7 @@
         </div>
 
         <p class="tit2">
-            <b>Interactive Color &gt; Brand Color &gt; Secondary Color(Navy)</b>
+            <b>Interactive Color &gt; Gray Color &gt; Status</b>
         </p>
         <div class="demo-color-wrap">
             <div class="demo-color-bx">
@@ -592,20 +594,20 @@
             'navy700',
             'navy800',
             'navy900',
-            'white_alpha5',
-            'white_alpha8',
-            'white_alpha10',
-            'white_alpha15',
-            'white_alpha20',
-            'white_alpha25',
-            'white_alpha30',
-            'white_alpha40',
-            'white_alpha50',
-            'white_alpha60',
-            'white_alpha70',
-            'white_alpha75',
-            'white_alpha80',
-            'white_alpha90',
+            'white05',
+            'white08',
+            'white10',
+            'white15',
+            'white20',
+            'white25',
+            'white30',
+            'white40',
+            'white50',
+            'white60',
+            'white70',
+            'white75',
+            'white80',
+            'white90',
             'white',
             'gray25',
             'gray50',
@@ -633,20 +635,20 @@
             'bluegray800',
             'bluegray850',
             'bluegray900',
-            'black_alpha5',
-            'black_alpha8',
-            'black_alpha10',
-            'black_alpha15',
-            'black_alpha20',
-            'black_alpha25',
-            'black_alpha30',
-            'black_alpha40',
-            'black_alpha50',
-            'black_alpha60',
-            'black_alpha70',
-            'black_alpha75',
-            'black_alpha80',
-            'black_alpha90',
+            'black05',
+            'black08',
+            'black10',
+            'black15',
+            'black20',
+            'black25',
+            'black30',
+            'black40',
+            'black50',
+            'black60',
+            'black70',
+            'black75',
+            'black80',
+            'black90',
             'black',
             'system_error',
             'system_warning',
@@ -654,6 +656,21 @@
             'system_info',
             'system_link',
             'system_link_visited',
+            'tint_red50',
+            'tint_red100',
+            'tint_red200',
+            'tint_red300',
+            'tint_red400',
+            'tint_red500',
+            'tint_red600',
+            'tint_red700',
+            'tint_red800',
+            'tint_red900',
+            'tint_reda50',
+            'tint_reda100',
+            'tint_reda200',
+            'tint_reda400',
+            'tint_reda700',
             'tint_orange50',
             'tint_orange100',
             'tint_orange200',

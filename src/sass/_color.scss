@@ -201,8 +201,8 @@ $bluegray600: #545763 !default;
 $bluegray650: #40434c !default;
 $bluegray700: #33363d !default;
 $bluegray750: #26282f !default;
-$bluegray800: #18191f !default;
-$bluegray850: #1f2128 !default;
+$bluegray800: #1f2128 !default;
+$bluegray850: #18191f !default;
 $bluegray900: #14151a !default;
 $black05: rgba(#000000, $alpha: 0.05) !default;
 $black08: rgba(#000000, $alpha: 0.08) !default;
@@ -453,7 +453,7 @@ $ui_icon_03_enabled: $gray500;
 $ui_icon_03_hover: $gray300;
 $ui_icon_03_pressed: $gray700;
 $ui_icon_03_focused: $brand500;
-$ui_icon_03_selected: $gray500;
+$ui_icon_03_selected: $gray600;
 $ui_icon_03_disabled: $gray300;
 
 // Icon_Quaternary
@@ -461,15 +461,15 @@ $ui_icon_04_enabled: $gray400;
 $ui_icon_04_hover: $gray200;
 $ui_icon_04_pressed: $gray600;
 $ui_icon_04_focused: $brand500;
-$ui_icon_04_selected: $gray300;
+$ui_icon_04_selected: $gray500;
 $ui_icon_04_disabled: $gray200;
 
 // Icon_Quinary
 $ui_icon_05_enabled: $gray200;
 $ui_icon_05_hover: $gray100;
 $ui_icon_05_pressed: $gray400;
-$ui_icon_05_focused: $gray200;
-$ui_icon_05_selected: $orange500;
+$ui_icon_05_focused: $brand500;
+$ui_icon_05_selected: $gray300;
 $ui_icon_05_disabled: $gray100;
 
 // Icon_Black
@@ -500,7 +500,7 @@ $ui_button_01_enabled: $orange500;
 $ui_button_01_hover: $orange400;
 $ui_button_01_pressed: $orange700;
 $ui_button_01_focused: $orange500;
-$ui_button_01_focused_border1: $bluegray800;
+$ui_button_01_focused_border1: $white;
 $ui_button_01_focused_border2: $orange500;
 $ui_button_01_disabled: $gray75;
 
@@ -586,6 +586,7 @@ $ui_form_line_disabled_border: $gray200;
 $ui_form_fill_enabled: $gray50;
 $ui_form_fill_hover: $gray75;
 $ui_form_fill_focused: $gray50;
+$ui_form_fill_focused_border: $gray500;
 $ui_form_fill_error: $gray50;
 $ui_form_fill_error_border: $system_error;
 $ui_form_fill_warning: $gray50;
@@ -693,7 +694,7 @@ $interactive_01_hover: $orange400;
 $interactive_01_pressed: $orange700;
 $interactive_01_focus: $orange500;
 $interactive_01_selected: $orange600;
-$interactive_01_disabled: $gray150;
+$interactive_01_disabled: $gray200;
 
 // Secondary Color
 $interactive_02_highlight: $gray25;
@@ -936,6 +937,7 @@ $colorDatabaseFormFill: (
     ui_form_fill_enabled: $ui_form_fill_enabled,
     ui_form_fill_hover: $ui_form_fill_hover,
     ui_form_fill_focused: $ui_form_fill_focused,
+    ui_form_fill_focused_border: $ui_form_fill_focused_border,
     ui_form_fill_error: $ui_form_fill_error,
     ui_form_fill_error_border: $ui_form_fill_error_border,
     ui_form_fill_warning: $ui_form_fill_warning,
@@ -1132,8 +1134,8 @@ $colorDatabasePalette: (
     navy700: $navy700,
     navy800: $navy800,
     navy900: $navy900,
-    white5: $white05,
-    white8: $white08,
+    white05: $white05,
+    white08: $white08,
     white10: $white10,
     white15: $white15,
     white20: $white20,
@@ -1173,8 +1175,8 @@ $colorDatabasePalette: (
     bluegray800: $bluegray800,
     bluegray850: $bluegray850,
     bluegray900: $bluegray900,
-    black5: $black05,
-    black8: $black08,
+    black05: $black05,
+    black08: $black08,
     black10: $black10,
     black15: $black15,
     black20: $black20,

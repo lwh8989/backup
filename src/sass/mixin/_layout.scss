@@ -1,9 +1,7 @@
 @use "./../space";
-@use "./../responsive";
+@import "./../responsive";
 @import "./responsive";
-@import "./gnb";
 @import "./footer";
-
 
 /* layout */
 @mixin layoutContainer (
@@ -14,7 +12,7 @@
     $align-items: center,
     $width: 100%,
     $height: 100%,
-    $margin: 0 space.$stds-spacing-16,
+    $margin: 0 $stds-spacing-16,
 ) {
     position: $position;
     display: $display;
@@ -50,138 +48,162 @@
 }
 
 .layout-container {
-    @include layoutContainer($width: null); 
-    .layout-navigation {
-        + .layout-basic {
-            margin-top: 48px;
-        }
-    }
+    @include layoutContainer($width: null);     
     .layout-basic {
         @include layoutBasic(
             $max-width: null, 
             $min-width: null, 
             $min-height: null, 
         );
-        background: #fafafa;
+        // [D] .is-fixed-depth1 / .is-fixed-depth2 / is-fixed-depth3 
+        &.is-fixed-depth1 {
+            margin-top: $stds-fixed-depth1;
+        }
+        &.is-fixed-depth2 {
+            margin-top: $stds-fixed-depth2;
+        }
+        &.is-fixed-depth3 {
+            margin-top: $stds-fixed-depth3;
+        }
     }
 }
 
-@include mobile-end {
+@include mobile-end {    
     .layout-footer {
-        @include layoutFooter($top: space.$stds-spacing-80);
+        @include layoutFooter($top: $stds-spacing-80);
     }
 }
 
 /* mobile 360 */
 @include mobile {
     .layout-footer {
-        @include layoutFooter($top: space.$stds-spacing-80);
+        @include layoutFooter($top: $stds-spacing-80);
     }
 }
 
 /* tablet 768 */
 @include tablet {  
     .layout-footer {
-        @include layoutFooter($top: space.$stds-spacing-120);
+        @include layoutFooter($top: $stds-spacing-120);
     }
 }
 
 /* desktopM 1024 */
 @include desktopSM {
-    .layout-header {
-        + .layout-container {
-            margin-top: 6.8rem !important;
-        }
-    } 
     .layout-container {
-        @include layoutContainer($width: null, $margin: 0 space.$stds-spacing-48);
-        .layout-navigation {
-            + .layout-basic {
-                margin-top: 6.8rem !important;
+        @include layoutContainer($width: null, $margin: 0 $stds-spacing-48);
+        .layout-basic {
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
+
+            &.is-fixed-depth1 {
+                margin-top: $stds-fixed-depth1;
+            }
+            &.is-fixed-depth2 {
+                margin-top: $stds-fixed-depth2;
+            }
+            &.is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
             }
         }
     }
     .layout-footer {
-        @include layoutFooter($top: space.$stds-spacing-200);
+        @include layoutFooter($top: $stds-spacing-200);
     }
 }
 
 /* desktopM 1280 */
 @include desktopM {
-    .layout-header {
-        + .layout-container {
-            margin-top: 6.8rem !important;
-        }
-    } 
     .layout-container {
-        @include layoutContainer($width: null, $margin: 0 space.$stds-spacing-48);
-        .layout-navigation {
-            + .layout-basic {
-                margin-top: 6.8rem !important;
+        @include layoutContainer($width: null, $margin: 0 $stds-spacing-48);
+        .layout-basic {
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
+
+            &.is-fixed-depth1 {
+                margin-top: $stds-fixed-depth1;
+            }
+            &.is-fixed-depth2 {
+                margin-top: $stds-fixed-depth2;
+            }
+            &.is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
             }
         }
     }
     .layout-footer {
-        @include layoutFooter($top: space.$stds-spacing-200);
+        @include layoutFooter($top: $stds-spacing-200);
     }
 }
 
 /* desktopL 1440 */
 @include desktopL {
-    .layout-header {
-        + .layout-container {
-            margin-top: 6.8rem !important;
-        }
-    } 
     .layout-container {
-        @include layoutContainer($width: null, $margin: 0 space.$stds-spacing-52);
-        .layout-navigation {
-            + .layout-basic {
-                margin-top: 6.8rem;
+        @include layoutContainer($width: null, $margin: 0 $stds-spacing-52);
+        .layout-basic {
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
+
+            &.is-fixed-depth1 {
+                margin-top: $stds-fixed-depth1;
+            }
+            &.is-fixed-depth2 {
+                margin-top: $stds-fixed-depth2;
+            }
+            &.is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
             }
         }
     }
     .layout-footer {
-        @include layoutFooter($top: space.$stds-spacing-200);
+        @include layoutFooter($top: $stds-spacing-200);
     }
 }
 
 /* desktopXL 1600 */
 @include desktopXL {
-    .layout-header {
-        + .layout-container {
-            margin-top: 6.8rem !important;
-        }
-    } 
     .layout-container {
-        @include layoutContainer($width: null, $margin: 0 space.$stds-spacing-52);
-        .layout-navigation {
-            + .layout-basic {
-                margin-top: 6.8rem;
+        @include layoutContainer($width: null, $margin: 0 $stds-spacing-52);
+        .layout-basic {
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
+
+            &.is-fixed-depth1 {
+                margin-top: $stds-fixed-depth1;
             }
-        }        
+            &.is-fixed-depth2 {
+                margin-top: $stds-fixed-depth2;
+            }
+            &.is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
+            }
+        }
     }
     .layout-footer {
-        @include layoutFooter($top: space.$stds-spacing-200);
+        @include layoutFooter($top: $stds-spacing-200);
     }
 }
 
 /* desktop2XL 1920 */
 @include desktop2XL {
-    .layout-header {
-        + .layout-container {
-            margin-top: 6.8rem !important;
-        }
-    } 
     .layout-container {
-        @include layoutContainer($width: null, $margin: 0 space.$stds-spacing-52);
-        .layout-navigation {
-            + .layout-basic {
-                margin-top: 6.8rem !important;
+        @include layoutContainer($width: null, $margin: 0 $stds-spacing-52);
+        .layout-basic {
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
+
+            &.is-fixed-depth1 {
+                margin-top: $stds-fixed-depth1;
             }
-        }        
+            &.is-fixed-depth2 {
+                margin-top: $stds-fixed-depth2;
+            }
+            &.is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
+            }
+        }
     }
     .layout-footer {
-        @include layoutFooter($top: space.$stds-spacing-200);
+        @include layoutFooter($top: $stds-spacing-200);
     }
 }

@@ -10,12 +10,20 @@
 <!-- STOVE Layout System -->
 <!-- [D] basic / information / s-one-rail / b-one-rail /two-rail /side-rail -->
 <!-- [D] layout에 아래 class를 적용하면 다음과 같은 Size가 적용 됩니다. -->
-<!-- scroll =  is-scroll -->
 <body>
+  <!-- [D] GNB  -->
   {% block gnb %}{% endblock %}
+
+  <!-- [D] layout-navigation .is-active / .is-fixed-depth1 / .is-fixed-depth2 / .is-fixed-depth3 -->
+  {% block navSection %}{% endblock %}
+
+  <!-- [D] layout-tab .is-active / .is-fixed-depth1 / .is-fixed-depth2 / .is-fixed-depth3 -->
+  {% block tabSection %}{% endblock %}
+
+  <!-- [D] Layout Container  -->
   <div class="layout-container">
-      {% block navigation %}{% endblock %}
-      {% block content %}{% endblock %}
+    <!-- [D] layout-Style .is-fixed-depth1 / .is-fixed-depth2 / .is-fixed-depth3 -->
+    {% block content %}{% endblock %}
   </div>
 
   {% block footer %}{% endblock %}

@@ -1,106 +1,94 @@
 <!-- [D] Tablet Mobile 에서 나오는 UI Size -->
 <!-- 기본형 -->
 {% macro base( state, iconLeft1, menudepth1, menudepth2, itemActive1, itemActive2 ) %}
-<div class="layout-navigation {{state}}">
-    <div class="container">
-        <button class="nav-btn align-left">
-            <i class="{{ iconLeft1 }}"></i>
-        </button>
-        <div class="contents">
-            <span class="item {{ itemActive1 }}">{{ menudepth1 }}</span>
-            <span class="item"><i class="ic-control-arrow-right-line"></i></span>
-            <span class="item {{ itemActive2 }}">{{ menudepth2 }}</span>
-        </div>
+<div class="container">
+    <button class="nav-btn align-left">
+        <i class="{{ iconLeft1 }}"></i>
+    </button>
+    <div class="contents">
+        <span class="item {{ itemActive1 }}">{{ menudepth1 }}</span>
+        <span class="item"><i class="ic-control-arrow-right-line"></i></span>
+        <span class="item {{ itemActive2 }}">{{ menudepth2 }}</span>
     </div>
 </div>
 {% endmacro %}
 
 <!-- 기본형 좌우버튼 -->
 {% macro baseStyle2( state, iconLeft1, menudepth1, menudepth2, itemActive1, itemActive2, iconRight1 ) %}
-<div class="layout-navigation {{state}}">
-    <div class="container">
-        <button class="nav-btn align-left">
-            <i class="{{ iconLeft1 }}"></i>
-        </button>
-        <div class="contents">
-            <span class="item {{ itemActive1 }}">{{ menudepth1 }}</span>
-            <span class="item"><i class="ic-control-arrow-right-line"></i></span>
-            <span class="item {{ itemActive2 }}">{{ menudepth2 }}</span>
-        </div>
-        <button class="nav-btn align-right">
-            <i class="{{ iconRight1 }}"></i>
-        </button>
+<div class="container">
+    <button class="nav-btn align-left">
+        <i class="{{ iconLeft1 }}"></i>
+    </button>
+    <div class="contents">
+        <span class="item {{ itemActive1 }}">{{ menudepth1 }}</span>
+        <span class="item"><i class="ic-control-arrow-right-line"></i></span>
+        <span class="item {{ itemActive2 }}">{{ menudepth2 }}</span>
     </div>
+    <button class="nav-btn align-right">
+        <i class="{{ iconRight1 }}"></i>
+    </button>
 </div>
 {% endmacro %}
 
 <!-- 리스트 Case -->
 {% macro listStyle( state, iconLeft1, menudepth1, itemActive1, iconRight1, iconRight2, iconRight3 ) %}
-<div class="layout-navigation {{state}}">
-    <div class="container">
-        <button class="nav-btn align-left">
-            <i class="{{ iconLeft1 }}"></i>
-        </button>
-        <div class="contents">
-            <span class="item {{ itemActive1 }}">{{ menudepth1 }}</span>
-        </div>
-        <button class="nav-btn align-right">
-            <i class="{{ iconRight1 }}"></i>
-        </button>
-        <button class="nav-btn align-right">
-            <i class="{{ iconRight2 }}"></i>
-        </button>
-        <button class="nav-btn align-right">
-            <i class="{{ iconRight3 }}"></i>
-        </button>
+<div class="container">
+    <button class="nav-btn align-left">
+        <i class="{{ iconLeft1 }}"></i>
+    </button>
+    <div class="contents">
+        <span class="item {{ itemActive1 }}">{{ menudepth1 }}</span>
     </div>
+    <button class="nav-btn align-right">
+        <i class="{{ iconRight1 }}"></i>
+    </button>
+    <button class="nav-btn align-right">
+        <i class="{{ iconRight2 }}"></i>
+    </button>
+    <button class="nav-btn align-right">
+        <i class="{{ iconRight3 }}"></i>
+    </button>
 </div>
 {% endmacro %}
 
 <!-- 상세보기 Case -->
 {% macro detailStyle( state, iconLeft1, menudepth1, itemActive1, iconRight1 ) %}
-<div class="layout-navigation {{state}}">
-    <div class="container">
-        <button class="nav-btn align-left">
-            <i class="{{ iconLeft1 }}"></i>
-        </button>
-        <div class="contents">
-            <span class="item {{ itemActive1 }}">{{ menudepth1 }}</span>
-        </div>
-        <button class="nav-btn align-right">
-            <i class="{{ iconRight1 }}"></i>
-        </button>
+<div class="container">
+    <button class="nav-btn align-left">
+        <i class="{{ iconLeft1 }}"></i>
+    </button>
+    <div class="contents">
+        <span class="item {{ itemActive1 }}">{{ menudepth1 }}</span>
     </div>
+    <button class="nav-btn align-right">
+        <i class="{{ iconRight1 }}"></i>
+    </button>
 </div>
 {% endmacro %}
 
 <!-- 글쓰기 Case -->
 {% macro writeStyle( state, iconLeft1, navTextBtnState ) %}
-<div class="layout-navigation {{state}}">
-    <div class="container">
-        <button class="nav-btn align-left">
-            <i class="{{ iconLeft1 }}"></i>
-        </button>
-        <div class="contents"></div>
-        <button class="nav-text-btn align-right">임시(3)</button>
-        <button class="nav-text-btn align-right">임시저장</button>
-        <button class="nav-text-btn align-right {{ navTextBtnState }}">등록</button>
-    </div>
+<div class="container">
+    <button class="nav-btn align-left">
+        <i class="{{ iconLeft1 }}"></i>
+    </button>
+    <div class="contents"></div>
+    <button class="nav-text-btn align-right">임시(3)</button>
+    <button class="nav-text-btn align-right">임시저장</button>
+    <button class="nav-text-btn align-right {{ navTextBtnState }}">등록</button>
 </div>
 {% endmacro %}
 
 <!-- 닉네임 검색 Case -->
 {% macro nameSearchStyle( state, iconLeft1, menudepth1, menudepth2, itemActive1, itemActive2 ) %}
-<div class="layout-navigation {{state}}">
-    <div class="container">
-        <button class="nav-btn align-left">
-            <i class="{{ iconLeft1 }}"></i>
-        </button>
-        <div class="contents">
-            <span class="item {{ itemActive1 }}">{{ menudepth1 }}</span>
-            <span class="item"><i class="ic-control-arrow-right-line"></i></span>
-            <span class="item {{ itemActive2 }}">{{ menudepth2 }}</span>
-        </div>
+<div class="container">
+    <button class="nav-btn align-left">
+        <i class="{{ iconLeft1 }}"></i>
+    </button>
+    <div class="contents">
+        <span class="item {{ itemActive1 }}">{{ menudepth1 }}</span>
+        <span class="item"><i class="ic-control-arrow-right-line"></i></span>
+        <span class="item {{ itemActive2 }}">{{ menudepth2 }}</span>
     </div>
 </div>
 {% endmacro %}

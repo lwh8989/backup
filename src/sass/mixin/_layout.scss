@@ -57,13 +57,13 @@
         );
         // [D] .is-fixed-depth1 / .is-fixed-depth2 / is-fixed-depth3 
         &.is-fixed-depth1 {
-            margin-top: $stds-fixed-depth1;
+            margin-top: $stds-fixed-depth1; // 0
         }
         &.is-fixed-depth2 {
-            margin-top: $stds-fixed-depth2;
+            margin-top: $stds-fixed-depth2; // 1depth
         }
         &.is-fixed-depth3 {
-            margin-top: $stds-fixed-depth3;
+            margin-top: $stds-fixed-depth3; // 2depth
         }
     }
 }

@@ -28,7 +28,7 @@
         width: 100%;
         z-index: $zindex-fixed;
     }
-    &is-fixed-depth3 {
+    &.is-fixed-depth3 {
         position: fixed;
         top: $stds-fixed-depth3;
         width: 100%;

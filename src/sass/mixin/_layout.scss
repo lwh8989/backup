@@ -55,16 +55,15 @@
             $min-width: null, 
             $min-height: null, 
         );
-        background: red;
-        // [D] .is-default / .is-depth1 / .is-depth2 
-        &.is-default {
-            margin-top: $stds-fixed-default;
-        }
-        &.is-depth1 {
+        // [D] .is-fixed-depth1 / .is-fixed-depth2 / is-fixed-depth3 
+        &.is-fixed-depth1 {
             margin-top: $stds-fixed-depth1;
         }
-        &.is-depth2 {
+        &.is-fixed-depth2 {
             margin-top: $stds-fixed-depth2;
+        }
+        &.is-fixed-depth3 {
+            margin-top: $stds-fixed-depth3;
         }
     }
 }
@@ -94,17 +93,17 @@
     .layout-container {
         @include layoutContainer($width: null, $margin: 0 $stds-spacing-48);
         .layout-basic {
-            $stds-fixed-depth1: 6.8rem;
-            $stds-fixed-depth2: 13.6rem;
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
 
-            &.is-default {
-                margin-top: $stds-fixed-default;
-            }
-            &.is-depth1 {
+            &.is-fixed-depth1 {
                 margin-top: $stds-fixed-depth1;
             }
-            &.is-depth2 {
+            &.is-fixed-depth2 {
                 margin-top: $stds-fixed-depth2;
+            }
+            &.is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
             }
         }
     }
@@ -118,17 +117,17 @@
     .layout-container {
         @include layoutContainer($width: null, $margin: 0 $stds-spacing-48);
         .layout-basic {
-            $stds-fixed-depth1: 6.8rem;
-            $stds-fixed-depth2: 13.6rem;
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
 
-            &.is-default {
-                margin-top: $stds-fixed-default;
-            }
-            &.is-depth1 {
+            &.is-fixed-depth1 {
                 margin-top: $stds-fixed-depth1;
             }
-            &.is-depth2 {
+            &.is-fixed-depth2 {
                 margin-top: $stds-fixed-depth2;
+            }
+            &.is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
             }
         }
     }
@@ -142,17 +141,17 @@
     .layout-container {
         @include layoutContainer($width: null, $margin: 0 $stds-spacing-52);
         .layout-basic {
-            $stds-fixed-depth1: 6.8rem;
-            $stds-fixed-depth2: 13.6rem;
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
 
-            &.is-default {
-                margin-top: $stds-fixed-default;
-            }
-            &.is-depth1 {
+            &.is-fixed-depth1 {
                 margin-top: $stds-fixed-depth1;
             }
-            &.is-depth2 {
+            &.is-fixed-depth2 {
                 margin-top: $stds-fixed-depth2;
+            }
+            &is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
             }
         }
     }
@@ -166,17 +165,17 @@
     .layout-container {
         @include layoutContainer($width: null, $margin: 0 $stds-spacing-52);
         .layout-basic {
-            $stds-fixed-depth1: 6.8rem;
-            $stds-fixed-depth2: 13.6rem;
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
 
-            &.is-default {
-                margin-top: $stds-fixed-default;
-            }
-            &.is-depth1 {
+            &.is-fixed-depth1 {
                 margin-top: $stds-fixed-depth1;
             }
-            &.is-depth2 {
+            &.is-fixed-depth2 {
                 margin-top: $stds-fixed-depth2;
+            }
+            &is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
             }
         }
     }
@@ -190,17 +189,17 @@
     .layout-container {
         @include layoutContainer($width: null, $margin: 0 $stds-spacing-52);
         .layout-basic {
-            $stds-fixed-depth1: 6.8rem;
-            $stds-fixed-depth2: 13.6rem;
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
 
-            &.is-default {
-                margin-top: $stds-fixed-default;
-            }
-            &.is-depth1 {
+            &.is-fixed-depth1 {
                 margin-top: $stds-fixed-depth1;
             }
-            &.is-depth2 {
+            &.is-fixed-depth2 {
                 margin-top: $stds-fixed-depth2;
+            }
+            &is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
             }
         }
     }

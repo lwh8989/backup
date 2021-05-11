@@ -32,6 +32,7 @@ $ui-button-pagination-hover : #fc6020;
 .pagination .pagination-num .num-last span:first-child {
     padding-left: 10.5px;
 }
+/* a Tag */
 .pagination a {
     position: relative;
     display: inline-block;
@@ -103,6 +104,86 @@ $ui-button-pagination-hover : #fc6020;
     pointer-events: none;
 }
 .pagination a.active:after{
+    content: '';
+    width: 100%;
+    height: 3.2rem;
+    border-radius: 1.6rem;
+    display: block;
+    background-color: #fc6020;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* button tag */
+.pagination button {
+    position: relative;
+    display: inline-block;
+    min-width: 3.2rem;
+    height: 3.2rem;
+    line-height: 3.2rem;
+    padding: 0 0.7rem;
+    color: $ui-button-pagination-enabled;
+    border-radius: 1.8rem;
+    box-sizing: border-box;
+}
+.pagination button.stove-icon{
+    padding: 0;
+}
+.pagination-num button.num-last span:first-child{
+    padding-right:17.5px;
+}
+.pagination-num button.num-first span:last-child{
+    padding-left:17.5px;
+}
+.pagination-num button.num-first:hover,
+.pagination-num button.num-last:hover{
+    background-color: transparent;
+}
+.pagination button:hover::after {
+    content: '';
+    width: 100%;
+    height: 3.2rem;
+    border-radius: 1.6rem;
+    display: block;
+    background-color: #eaeaea;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pagination button:hover::after,
+.pagination button:active::after{
+    z-index: 2;
+}
+.pagination button:hover span,
+.pagination button:active span,
+.pagination button.active span{
+    position: relative;
+    z-index: 3;
+}
+.pagination button.stove-icon:hover::before {
+    color: #b3b3b3;
+}
+.pagination button.stove-icon:active::before {
+    color: #3a3a3a;
+}
+.pagination button.stove-icon::before{
+    position: relative;
+    z-index: 3;
+}
+.pagination button.stove-icon .text-hidden{
+    @include text-hidden;
+}
+.pagination button.active{
+    color: #fff;
+    font-weight: 700;
+}
+.pagination button.active {
+    pointer-events: none;
+}
+.pagination button.active:after{
     content: '';
     width: 100%;
     height: 3.2rem;

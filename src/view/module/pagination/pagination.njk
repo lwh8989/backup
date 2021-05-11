@@ -37,10 +37,18 @@
             </tr>
             <tr>
                 <td>
-                    페이지네이션
+                    페이지네이션<br />a tag
                 </td>
                 <td>
-                    {{ pagination.base() }}
+                    {{ pagination.base( isATag=true ) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    페이지네이션<br />button tag
+                </td>
+                <td>
+                    {{ pagination.base( isATag=false ) }}
                 </td>
             </tr>
             <tr>

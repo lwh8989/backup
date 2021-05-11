@@ -1,18 +1,34 @@
-{% macro base() %}
+{% macro base( isATag=true ) %}
 <div class="pagination">
-  <a href="#" class="stove-icon ic-control-double-arrow-left-line" style=""><span class="text-hidden">처음</span></a>
-  <a href="#" class="stove-icon ic-control-arrow-left-line" style=""><span class="text-hidden">이전</span></a>
-  <span class="pagination-num">
-      <a class="num-first" href="#"><span>1</span> <span>...</span> </a>
-      <a href="#"><span>1</span></a>
-      <a href="#"><span>2</span></a>
-      <a href="#"><span>3</span></a>
-      <a href="#"><span>4</span></a>
-      <a class="active"><span>5</span></a>
-      <a class="num-last" href="#"><span>...</span> <span>999</span></a>
-  </span>
-  <a href="#" class="stove-icon ic-control-arrow-right-line" style=""><span class="text-hidden">다음</span></a>
-  <a href="#" class="stove-icon ic-control-double-arrow-right-line" style=""><span class="text-hidden">마지막</span></a>
+  {% if isATag %}
+    <a href="#" class="stove-icon ic-control-double-arrow-left-line" style=""><span class="text-hidden">처음</span></a>
+    <a href="#" class="stove-icon ic-control-arrow-left-line" style=""><span class="text-hidden">이전</span></a>
+    <span class="pagination-num">
+        <a class="num-first" href="#"><span>1</span> <span>...</span> </a>
+        <a href="#"><span>1</span></a>
+        <a href="#"><span>2</span></a>
+        <a href="#"><span>3</span></a>
+        <a href="#"><span>4</span></a>
+        <a class="active"><span>5</span></a>
+        <a class="num-last" href="#"><span>...</span> <span>999</span></a>
+    </span>
+    <a href="#" class="stove-icon ic-control-arrow-right-line" style=""><span class="text-hidden">다음</span></a>
+    <a href="#" class="stove-icon ic-control-double-arrow-right-line" style=""><span class="text-hidden">마지막</span></a>
+  {% else %}
+    <button class="stove-icon ic-control-double-arrow-left-line" style=""><span class="text-hidden">처음</span></button>
+    <button class="stove-icon ic-control-arrow-left-line" style=""><span class="text-hidden">이전</span></button>
+    <span class="pagination-num">
+        <button class="num-first"><span>1</span> <span>...</span> </button>
+        <button><span>1</span></button>
+        <button><span>2</span></button>
+        <button><span>3</span></button>
+        <button><span>4</span></button>
+        <button><span>5</span></button>
+        <button class="num-last"><span>...</span> <span>999</span></button>
+    </span>
+    <button class="stove-icon ic-control-arrow-right-line" style=""><span class="text-hidden">다음</span></button>
+    <button class="stove-icon ic-control-double-arrow-right-line" style=""><span class="text-hidden">마지막</span></button>
+  {% endif %}
 </div>    
 {% endmacro %}
 

@@ -111,7 +111,7 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         &.#{"" + $name + ""} {
             border-color: $color;
             border-width: 2px;
-
+            pointer-events: none;
             button {
                 color: $color !important;
             }

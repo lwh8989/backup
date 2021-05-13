@@ -1,0 +1,392 @@
+@use "./font";
+
+.list-wrap {
+    max-width: 55.2rem;
+
+    .list-thumb {
+        @include flexCenter;
+
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: $Radius-L;
+        box-shadow: inset 0px 0px 0px 1px $ui_border_thumbnail;
+        background: $ui_border_thumbnail
+            url("~/static/image/ci/ic-stovelogo-thumb.png") no-repeat center
+            center;
+
+        [class^="ic-"],
+        [class*=" ic-"] {
+            position: absolute;
+            left: $stds-spacing-8;
+            bottom: $stds-spacing-8;
+            color: $white;
+            font-size: font.$stdsTitle4;
+        }
+
+        .thum-num {
+            @include flexCenter;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 3rem;
+            min-height: 2.8rem;
+            color: $white;
+            background-color: $black70;
+        }
+
+        .inner {
+            @include ratio; // 16:9
+        }
+    }
+    .list-tit {
+        @include flex($y: center);
+        margin: $stds-spacing-12 0 $stds-spacing-8;
+        color: $ui_text_02;
+        font-size: font.$stdsTitle4;
+        font-weight: bold;
+
+        a {
+            color: inherit;
+        }
+
+        & > strong {
+            @include ellipsis($w: auto);
+        }
+
+        .new {
+            color: $orange500;
+            margin-left: $stds-spacing-8;
+        }
+        .search-keyword {
+            font-size: font.$stdsTitle5;
+            color: $orange500;
+        }
+        .comment-num {
+            color: $orange500;
+            margin-left: $stds-spacing-4;
+        }
+
+        i {
+            margin-right: $stds-spacing-8;
+            color: $ui_text_03;
+            font-size: 2rem;
+        }
+        .element-checkbox {
+            margin-right: $stds-spacing-12;
+        }
+    }
+    .list-txt {
+        @include ellipsis($line: 2);
+        margin-bottom: $stds-spacing-16;
+        color: $ui_text_03;
+        font-size: font.$stdsBody2;
+    }
+    .list-info {
+        @include flexBetweenCenter;
+        font-size: font.$stdsBody3;
+        color: $ui_text_04;
+
+        .front {
+            @include ellipsis;
+            margin-right: $stds-spacing-24;
+        }
+        .back {
+            @include flex($y: center);
+            line-height: 1;
+
+            i {
+                margin-right: $stds-spacing-4;
+            }
+        }
+
+        .list-top {
+            margin: 0;
+        }
+    }
+
+    &.list-type-horizontal {
+        @include flex;
+
+        .list-thumb {
+            flex: none;
+            width: 28%; // 15.5rem
+            background: $ui_border_thumbnail
+                url("~/static/image/ci/ic-stovelogo-thumb-small.png") no-repeat
+                center center;
+            margin-left: $stds-spacing-24;
+
+            .inner {
+                @include ratio($ratio-4-3); // 16:9
+            }
+        }
+        .list-tit {
+            margin: 0 0 $stds-spacing-8;
+            font-size: font.$stdsTitle6;
+        }
+
+        &.reverse {
+            flex-direction: row-reverse;
+
+            .list-thumb {
+                margin-left: 0;
+                margin-right: $stds-spacing-24;
+            }
+        }
+    }
+
+    &.list-type-small {
+        max-width: 26.4rem;
+
+        .list-thumb {
+            @include flexCenter;
+
+            .inner {
+                @include ratio($ratio-4-3);
+            }
+        }
+        .list-tit {
+            @include ellipsis($line: 2);
+            margin: $stds-spacing-16 0;
+            font-size: font.$stdsBody1;
+            font-weight: normal;
+        }
+        .list-info {
+            .front {
+                margin-right: $stds-spacing-16;
+            }
+        }
+    }
+
+    &.list-type-mini {
+        width: 16rem;
+        text-align: center;
+
+        .list-thumb {
+            height: 16rem;
+        }
+
+        .list-tit {
+            justify-content: center;
+            margin-bottom: $stds-spacing-4;
+            font-size: font.$stdsTitle7;
+        }
+        .list-info {
+            color: $ui_text_03;
+
+            .front {
+                margin: 0;
+            }
+        }
+    }
+}
+
+// 게시판 리스트
+.board-list-wrap {
+    .list-type-board {
+        width: 100%;
+        flex-direction: column;
+        border-bottom: 1px solid $ui_divider_black_02;
+    }
+    .list-type-search {
+        margin-bottom: $stds-spacing-24;
+
+        .list-thumb {
+            width: 17rem;
+            height: 12.7rem;
+            margin-bottom: $stds-spacing-24;
+        }
+
+        .list-info {
+            @include flex($y: center);
+
+            .back {
+                margin-left: $stds-spacing-16;
+            }
+        }
+        .list-txt {
+            font-size: font.$stdsBody1;
+
+            .tag-wrap {
+                @include ellipsis;
+            }
+            .tag {
+                &.active {
+                    color: $orange500;
+                }
+            }
+        }
+    }
+    .indie-horizontal-list:first-child {
+        .list-type-search {
+            padding-top: $stds-spacing-24;
+            border-top: 1px solid $ui_divider_black_02;
+        }
+    }
+    .indie-horizontal-list:last-child {
+        .list-type-search {
+            margin-bottom: 0;
+        }
+    }
+    .list-cont-wrap {
+        @include flex;
+        width: 100%;
+
+        .list-cont {
+            flex: 1;
+        }
+        .list-thumb {
+            margin-left: $stds-spacing-40;
+        }
+        .list-txt {
+            min-height: 4.4rem;
+            margin-bottom: $stds-spacing-20;
+        }
+    }
+
+    .list-top {
+        @include flex($y: center);
+        margin: $stds-spacing-24 0 $stds-spacing-16;
+
+        .profile-img {
+            width: 2rem;
+            height: 2rem;
+            box-shadow: inset 0px 0px 0px 1px $ui_border_thumbnail;
+            background-color: $ui_skeleton_gray;
+            overflow: hidden;
+            border-radius: 2rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .info {
+            @include flexCenter;
+            margin-left: $stds-spacing-8;
+            font-size: font.$stdsBody3;
+            color: $ui_text_04;
+
+            .element-select-button {
+                font-size: font.$stdsBody3;
+                color: $ui_text_04;
+
+                span {
+                    margin-right: $stds-spacing-8;
+                }
+            }
+        }
+        .time,
+        i {
+            line-height: 1;
+        }
+        .time {
+            position: relative;
+            cursor: pointer;
+
+            .element-tooltip {
+                position: absolute;
+                left: 0;
+                top: calc(100% + #{$stds-spacing-12});
+                font-size: font.$stdsChips2;
+            }
+        }
+        i {
+            margin: 0 $stds-spacing-4;
+        }
+    }
+
+    .list-thumb {
+        margin-bottom: $stds-spacing-24;
+    }
+
+    .list-info-detail {
+        @include flex($y: center);
+
+        a,
+        button {
+            @include flex($y: center);
+            font-size: font.$stdsCaption1;
+            color: $ui_text_03;
+            line-height: 1;
+
+            &::before {
+                font-size: font.$stdsTitle5;
+                margin-right: $stds-spacing-4;
+            }
+
+            &:nth-child(1) {
+                margin-right: 7.2rem;
+            }
+            &:nth-child(2) {
+                margin-right: $stds-spacing-32;
+            }
+
+            &.ic-community-thumbs-up-line {
+                &.active {
+                    color: $tint_reda400;
+                }
+            }
+            &.ic-community-thumbs-down-line {
+                &.active {
+                    color: $tint_blue500;
+                }
+            }
+        }
+    }
+}
+.list-empty {
+    @include flexCenter {
+        flex-direction: column;
+    }
+    min-height: 60rem;
+    border-bottom: 1px solid $ui_divider_black_02;
+    font-size: font.$stdsBody1;
+    color: $ui_text_04;
+
+    &.border-none {
+        border: 0;
+    }
+
+    &::before {
+        content: "";
+        width: 16rem;
+        height: 16rem;
+        margin-bottom: $stds-spacing-12;
+        background: url("~/static/image/list/ic-post-w-180.png") no-repeat center
+            center;
+    }
+}
+.list-inacces-empty {
+    @include flexCenter {
+        flex-direction: column;
+    }
+    min-height: 60rem;
+    border-bottom: 1px solid $ui_divider_black_02;
+    font-size: font.$stdsBody1;
+    color: $ui_text_04;
+
+    &.border-none {
+        border: 0;
+    }
+
+    &::before {
+        content: "";
+        width: 16rem;
+        height: 16rem;
+        margin-bottom: $stds-spacing-12;
+        background: url("~/static/image/list/ic-limit-w-180.png") no-repeat center
+            center;
+    }
+
+    .btn-back {
+        @include flexCenter;
+        margin-top: $stds-spacing-24;
+        padding: 1rem $stds-spacing-24;
+        border-radius: 2rem;
+        border: 1px solid $gray150;
+        font-size: font.$stdsButton2;
+        color: $ui_text_02;
+    }
+}

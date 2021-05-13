@@ -121,7 +121,10 @@ module.exports = async function () {
           test: /\.(jpe?g|png|gif|svg)$/,
           use : [
             {
-              loader: 'file-loader'
+              loader: 'file-loader',
+              options: {
+                name: 'static/image/[contenthash].[ext]'
+              }
             } 
           ]
         }

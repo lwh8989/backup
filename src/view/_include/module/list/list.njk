@@ -1,0 +1,437 @@
+{% macro base(style, img, listTitle, listTxt, listFront) %}
+    <div class="list-wrap" style="{{ style }}">
+        <div class="list-thumb">
+            <div class="inner">
+                {% if img %}
+                    <img src="/static/image/list/{{ img }}" alt="">
+                {% endif %}
+            </div>
+        </div>
+        <div class="list-cont">
+            <div class="list-tit">
+                <strong>
+                    {{ listTitle }}
+                </strong>
+            </div>
+            <div class="list-txt">
+                {{ listTxt}}
+            </div>
+            <div class="list-info">
+                <div class="front">{{ listFront }}</div>
+                <div class="back">
+                    <i class="ic-community-number-of-view-line"></i>
+                    999
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro horizontal(style, img, reverse, listTitle, listTxt, listFront) %}
+    <div class="list-wrap list-type-horizontal {{ reverse }}" style="{{ style }}">
+        <div class="list-cont">
+            <div class="list-tit">
+                <strong>
+                    {{ listTitle }}
+                </strong>
+            </div>
+            <div class="list-txt">
+                {{ listTxt}}
+            </div>
+            <div class="list-info">
+                <div class="front">{{ listFront }}</div>
+                <div class="back">
+                    <i class="ic-community-number-of-view-line"></i>
+                    999
+                </div>
+            </div>
+        </div>
+
+        <div class="list-thumb">
+            <div class="inner">
+                {% if img %}
+                    <img src="/static/image/list/{{ img }}" alt="">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro small(style, img, listTitle, listFront) %}
+    <div class="list-wrap list-type-small" style="{{ style }}">
+        <div class="list-thumb">
+            <div class="inner">
+                {% if img %}
+                    <img src="/static/image/list/{{ img }}" alt="">
+                {% endif %}
+            </div>
+        </div>
+        <div class="list-cont">
+            <div class="list-tit">
+                <strong>
+                    {{ listTitle }}
+                </strong>
+            </div>
+            <div class="list-info">
+                <div class="front">{{ listFront }}</div>
+                <div class="back">
+                    <i class="ic-community-number-of-view-line"></i>
+                    999
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro mini(style, img, listTitle, listFront) %}
+    <div class="list-wrap list-type-mini" style="{{ style }}">
+        <div class="list-thumb">
+            <div class="inner">
+                {% if img %}
+                    <img src="/static/image/list/{{ img }}" alt="">
+                {% endif %}
+            </div>
+        </div>
+        <div class="list-cont">
+            <div class="list-tit">
+                <strong>
+                    {{ listTitle }}
+                </strong>
+            </div>
+            <div class="list-info">
+                <div class="front">{{ listFront }}</div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro horizontalBoard(style, img, listTitle, listTxt, listFront, class, nickActive, timeActive, fileType, state) %}
+    <div class="list-wrap list-type-horizontal list-type-board" style="{{ style }}">
+        <div class="list-top">
+            <div class="info">
+                <strong class="nick">
+                    <div class="element-dropdown h40 active">
+                        <button class="element-select-button">
+                            <div class="profile-img">
+                                <img src="/static/image/list/profile_demo.png" alt="">
+                            </div>
+                            {% if class == "CM" %}
+                                <span class="system-sucess">{{ class }}</span>
+                            {% elif class %}
+                                <span class="system-info">{{ class }}</span>
+                            {% endif %}
+
+                            {{ listFront }}
+                        </button>
+
+                        {% if nickActive %}
+                            <div class="element-dropdown-layer absolute top left">
+                                <div class="element-dropdown-layer-inner">
+                                    <select hidden="">
+                                        <option value="1">인디 타임라인 보기</option>
+                                        <option value="2">작성글 보기</option>
+                                    </select>
+                                    <button class="element-dropdown-button">
+                                        인디 타임라인 보기
+                                    </button>
+                                    <button class="element-dropdown-button">
+                                        작성글 보기
+                                    </button>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </strong>
+                <i>·</i>
+
+                {% if timeActive %}
+                    <span class="time">
+                        2021.03.12
+                        <span class="element-tooltip">
+                            <span class="tooltip-txt arrow-tl gray600 white">
+                            2020.06.25 23:04(UTC+9)
+                        </span>
+                        </span>
+                    </span>
+                {% else %}
+                    <span class="time">방금전</span>
+                {% endif %}
+            </div>
+        </div>
+        <div class="list-cont-wrap">
+            <div class="list-cont">
+                <a href="#">
+                    <div class="list-tit">
+                        <strong>
+                            {{ listTitle }}
+                        </strong>
+                        <i class="new ic-badge-new-fill"></i>
+                    </div>
+                    <div class="list-txt">
+                        {{ listTxt }}
+                    </div>
+                </a>
+
+                <div class="list-info">
+                    <div class="list-info-detail">
+                        <a href="#" class="ic-community-reply-line">999+</a>
+                        <button class="ic-community-thumbs-up-line {{ state.like }}">999+</button>
+                        <button class="ic-community-thumbs-down-line {{ state.hate }}">0</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-thumb">
+                <div class="inner">
+                    {% if img %}
+                        <a href="#">
+                            <img src="/static/image/list/{{ img }}" alt="">
+
+                            <i class="{{ fileType }}"></i>
+                            <!--
+                                <i class="ic-media-av-play-circle-line"></i>
+                                <i class="ic-community-thumbnail-survey-line"></i>
+                                <i class="ic-community-thumbnail-music-line"></i>
+                                <i class="ic-community-attach-image-line"></i>
+                                <i class="ic-community-link-line"></i>
+                            -->
+
+                            <div class="thum-num">+10</div>
+                        </a>
+                    {% endif %}
+                    <a href="#"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro horizontalSearch(style, img, listTitle, listTxt, listFront, class, nickActive, timeActive, fileType, tag) %}
+    <div class="list-wrap list-type-horizontal list-type-board list-type-search" style="{{ style }}">
+        <div class="list-cont-wrap">
+            <div class="list-cont">
+                <a href="#">
+                    <div class="list-tit">
+                        <strong>
+                            <span class="search-keyword">네버송</span>
+                            {{ listTitle }}
+                        </strong>
+
+                        <span class="comment-num">[999]</span>
+                        <i class="new ic-badge-new-fill"></i>
+                    </div>
+                    <div class="list-txt">
+                        {{ listTxt }}
+
+                        {% if tag %}
+                            <div class="tag-wrap">
+                                {% for item in tag %}
+                                    <span class="tag {{ item.active }}">#{{ item.txt }}</span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </a>
+
+                <div class="list-info">
+                    <div class="list-top">
+                        <div class="info">
+                            <strong class="nick">
+                                <div class="element-dropdown h40 active">
+                                    <button class="element-select-button">
+                                        <div class="profile-img">
+                                            <img src="/static/image/list/profile_demo.png" alt="">
+                                        </div>
+                                        {% if class == "CM" %}
+                                            <span class="system-success">{{ class }}</span>
+                                        {% elif class %}
+                                            <span class="system-info">{{ class }}</span>
+                                        {% endif %}
+
+                                        {{ listFront }}
+                                    </button>
+
+                                    {% if nickActive %}
+                                        <div class="element-dropdown-layer absolute top left">
+                                            <div class="element-dropdown-layer-inner">
+                                                <select hidden="">
+                                                    <option value="1">인디 타임라인 보기</option>
+                                                    <option value="2">작성글 보기</option>
+                                                </select>
+                                                <button class="element-dropdown-button">
+                                                    인디 타임라인 보기
+                                                </button>
+                                                <button class="element-dropdown-button">
+                                                    작성글 보기
+                                                </button>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </strong>
+                            <i>·</i>
+
+                            {% if timeActive %}
+                                <span class="time">
+                                    2021.03.12
+                                    <span class="element-tooltip">
+                                        <span class="tooltip-txt arrow-tl gray600 white">
+                                            2020.06.25 23:04(UTC+9)
+                                        </span>
+                                    </span>
+                                </span>
+                            {% else %}
+                                <span class="time">방금전</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="back">
+                        <i class="ic-community-number-of-view-line"></i>
+                        999
+                    </div>
+                </div>
+            </div>
+
+            {% if img %}
+                <div class="list-thumb">
+                    <div class="inner">
+                        <a href="#">
+                            <img src="/static/image/list/{{ img }}" alt="">
+
+                            <i class="{{ fileType }}"></i>
+                            <!--
+                                <i class="ic-media-av-play-circle-line"></i>
+                                <i class="ic-community-thumbnail-survey-line"></i>
+                                <i class="ic-community-thumbnail-music-line"></i>
+                                <i class="ic-community-attach-image-line"></i>
+                                <i class="ic-community-link-line"></i>
+                            -->
+
+                            <div class="thum-num">+10</div>
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro horizontalActivity(style, img, listTitle, listTxt, listFront, class, nickActive, timeActive, fileType, listType, comment, check) %}
+    <div class="list-wrap list-type-horizontal list-type-board list-type-search" style="{{ style }}">
+        <div class="list-cont-wrap">
+            <div class="list-cont">
+                <div class="list-tit">
+                    {% if check %}
+                        <div class="element-checkbox h20 checkbox-square checkbox-text">
+                            <input class="checkbox-input" type="checkbox" name="" value="">
+                        </div>
+                    {% endif %}
+                    {% if listType %}
+                        {% if listType == "ic-object-clock-line" %}
+                            <i class="{{ listType }}" title="임시저장된 게시물입니다."></i>
+                        {% elif listType == "ic-community-write-line" %}
+                            <i class="{{ listType }}" title="편집 중인 게시물입니다."></i>
+                        {% endif %}
+
+                    {% endif %}
+
+                    <a href="#">
+                        <strong>
+                            {{ listTitle }}
+                        </strong>
+
+                        {% if comment %}
+                            <span class="comment-num">[999]</span>
+                        {% endif %}
+                        <i class="new ic-badge-new-fill"></i>
+                    </a>
+                </div>
+                <div class="list-txt">
+                    <a href="#">
+                        {{ listTxt }}
+                    </a>
+                </div>
+                <div class="list-info">
+                    <div class="list-top">
+                        <div class="info">
+                            <strong class="nick">
+                                <div class="element-dropdown h40 active">
+                                    <button class="element-select-button">
+                                        <div class="profile-img">
+                                            <img src="/static/image/list/profile_demo.png" alt="">
+                                        </div>
+                                        {% if class == "CM" %}
+                                            <span class="system-success">{{ class }}</span>
+                                        {% elif class %}
+                                            <span class="system-info">{{ class }}</span>
+                                        {% endif %}
+
+                                        {{ listFront }}
+                                    </button>
+
+                                    {% if nickActive %}
+                                        <div class="element-dropdown-layer absolute top left">
+                                            <div class="element-dropdown-layer-inner">
+                                                <select hidden="">
+                                                    <option value="1">인디 타임라인 보기</option>
+                                                    <option value="2">작성글 보기</option>
+                                                </select>
+                                                <button class="element-dropdown-button">
+                                                    인디 타임라인 보기
+                                                </button>
+                                                <button class="element-dropdown-button">
+                                                    작성글 보기
+                                                </button>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </strong>
+                            <i>·</i>
+
+                            {% if timeActive %}
+                                <span class="time">
+                                    2021.03.12
+                                    <span class="element-tooltip">
+                                        <span class="tooltip-txt arrow-tl gray600 white">
+                                            2020.06.25 23:04(UTC+9)
+                                        </span>
+                                    </span>
+                                </span>
+                            {% else %}
+                                <span class="time">방금전</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if listType != "ic-community-write-line" %}
+                        <div class="back">
+                            <i class="ic-community-number-of-view-line"></i>
+                            999
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            {% if img %}
+                <div class="list-thumb">
+                    <div class="inner">
+                        <a href="#">
+                            <img src="/static/image/list/{{ img }}" alt="">
+
+                            <i class="{{ fileType }}"></i>
+                            <!--
+                                <i class="ic-media-av-play-circle-line"></i>
+                                <i class="ic-community-thumbnail-survey-line"></i>
+                                <i class="ic-community-thumbnail-music-line"></i>
+                                <i class="ic-community-attach-image-line"></i>
+                                <i class="ic-community-link-line"></i>
+                            -->
+
+                            <div class="thum-num">+10</div>
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endmacro %}

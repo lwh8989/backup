@@ -1,3 +1,5 @@
+{% import "_include/module/list/list.njk" as list %}
+
 {% macro base(style, img, boardTitle, noti, boardList) %}
     <div class="board-wrap" style="{{ style }}">
         <div class="board-top">
@@ -205,15 +207,26 @@
             </div>
 
             <div class="board-list-wrap">
-                {# {% if boardList %}
+                {% if boardList %}
                     {% for item in boardList %}
                         <div class="indie-horizontal-list">
-                            리스트가 나와야 하는데
+                            {{ list.horizontalBoard(
+                                img= item.img,
+                                listTitle= item.listTitle,
+                                listTxt= item.listTxt,
+                                listFront= item.listFront,
+                                class= item.class,
+                                nickActive= item.nickActive,
+                                timeActive= item.timeActive,
+                                fileType= item.fileType,
+                                state= item.state
+                            ) }}
+
                         </div>
                     {% endfor %}
                 {% else %}
                     <div class="list-empty">가장 먼저 게시물을 등록해보세요.</div>
-                {% endif %} #}
+                {% endif %}
             </div>
         </div>
     </div>

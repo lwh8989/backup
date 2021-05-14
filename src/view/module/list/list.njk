@@ -1,0 +1,151 @@
+{% extends "_include/layout/guide/guide.njk" %}
+
+{% import "_include/module/list/list.njk" as list %}
+
+<!-- styles -->
+{% block styles %}
+{% endblock %}
+
+<!-- styles -->
+{% block content %}
+<!-- [D]   -->
+<div class="guide full">
+    <h1 class="guide-tit">List</h1>
+
+    <!-- dropdown -->
+    <div class="guide-layer">
+        <div class="guide-section">
+            <h2 class="guide-section-tit">List</h2>
+
+            <div>
+                <div class="guide-flex ratio gap">
+                    <div>
+                        <h3 class="guide-section-stit">섬네일 - 디폴트(노출할 이미지 없을 경우)</h3>
+
+                        <div class="guide-state-wrap">
+                            <div class="guide-flex ratio">
+                                <div>
+                                    {{ list.base(
+                                        listTitle="[TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다!",
+                                        listTxt="내용 노출됩니다. 최대 2줄까지만 노출하고 말줄임 처리합니다. 한줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해주세요.",
+                                        listFront="닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다. 우측과 24px, 영역보다 길어지면 말줄임처리해주세요"
+                                    ) }}
+                                </div>
+                                <div>
+                                    <div>
+                                        {{ list.horizontal(
+                                            listTitle="[TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다!",
+                                            listTxt="내용 노출됩니다. 최대 2줄까지만 노출하고 말줄임 처리합니다. 한줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해주세요.",
+                                            listFront="닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다. 우측과 24px, 영역보다 길어지면 말줄임처리해주세요"
+                                        ) }}
+                                    </div>
+
+                                    <div style="margin-top: 40px;">
+                                        {{ list.horizontal(
+                                            reverse="reverse",
+                                            listTitle="[TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다!",
+                                            listTxt="내용 노출됩니다. 최대 2줄까지만 노출하고 말줄임 처리합니다. 한줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해주세요.",
+                                            listFront="닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다. 우측과 24px, 영역보다 길어지면 말줄임처리해주세요"
+                                        ) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="guide-section-stit">섬네일</h3>
+
+                        <div class="guide-state-wrap">
+                            <div class="guide-flex ratio">
+                                <div>
+                                    {{ list.base(
+                                        img="thumb_large.jpg",
+                                        listTitle="[TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다!",
+                                        listTxt="내용 노출됩니다. 최대 2줄까지만 노출하고 말줄임 처리합니다. 한줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해주세요.",
+                                        listFront="닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다. 우측과 24px, 영역보다 길어지면 말줄임처리해주세요"
+                                    ) }}
+                                </div>
+                                <div>
+                                    <div>
+                                        {{ list.horizontal(
+                                            img="thumb_small.jpg",
+                                            listTitle="[TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다!",
+                                            listTxt="내용 노출됩니다. 최대 2줄까지만 노출하고 말줄임 처리합니다. 한줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해주세요.",
+                                            listFront="닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다. 우측과 24px, 영역보다 길어지면 말줄임처리해주세요"
+                                        ) }}
+                                    </div>
+
+                                    <div style="margin-top: 40px;">
+                                        {{ list.horizontal(
+                                            img="thumb_small.jpg",
+                                            reverse="reverse",
+                                            listTitle="[TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다!",
+                                            listTxt="내용 노출됩니다. 최대 2줄까지만 노출하고 말줄임 처리합니다. 한줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해줄일 경우에도 컨텐츠 높이는 유지해주세요.",
+                                            listFront="닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다. 우측과 24px, 영역보다 길어지면 말줄임처리해주세요"
+                                        ) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="guide-section-stit">Small 섬네일</h3>
+
+                        <div class="guide-desc-wrap space-none">
+                            <div class="guide-desc">디폴트(노출할 이미지 없을 경우)</div>
+                            <div class="guide-desc">이미지</div>
+                        </div>
+                        <div class="guide-state-wrap">
+                            <div class="guide-flex ratio gap">
+                                <div>
+                                    {{ list.small(
+                                        listTitle="[TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다!",
+                                        listFront="닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다. 우측과 24px, 영역보다 길어지면 말줄임처리해주세요"
+                                    ) }}
+                                </div>
+                                <div>
+                                    {{ list.small(
+                                        img="thumb_medium.jpg",
+                                        listTitle="[TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다!",
+                                        listFront="닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다. 우측과 24px, 영역보다 길어지면 말줄임처리해주세요"
+                                    ) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="guide-section-stit">mini 섬네일</h3>
+
+                        <div class="guide-desc-wrap space-none">
+                            <div class="guide-desc">디폴트(노출할 이미지 없을 경우)</div>
+                            <div class="guide-desc">이미지</div>
+                        </div>
+                        <div class="guide-state-wrap">
+                            <div class="guide-flex ratio gap">
+                                <div>
+                                    {{ list.mini(
+                                        listTitle="[TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다!",
+                                        listFront="닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다. 우측과 24px, 영역보다 길어지면 말줄임처리해주세요"
+                                    ) }}
+                                </div>
+                                <div>
+                                    {{ list.mini(
+                                        img="thumb_medium.jpg",
+                                        listTitle="[TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다![TIG 퍼스트룩] 짧지만 무겁고, 심플하지만 길다!",
+                                        listFront="닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다.닉네임 최대 20자까지입니다. 우측과 24px, 영역보다 길어지면 말줄임처리해주세요"
+                                    ) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %} 
+{% endblock %}

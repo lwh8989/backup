@@ -217,15 +217,25 @@
             }
         }
     }
-    .indie-horizontal-list:first-child {
-        .list-type-search {
-            padding-top: $stds-spacing-24;
-            border-top: 1px solid $ui_divider_black_02;
+    .indie-horizontal-list {
+        &:first-child {
+            .list-type-search {
+                padding-top: $stds-spacing-24;
+                border-top: 1px solid $ui_divider_black_02;
+            }
         }
-    }
-    .indie-horizontal-list:last-child {
-        .list-type-search {
-            margin-bottom: 0;
+        &:last-child {
+            .list-type-search {
+                margin-bottom: 0;
+            }
+        }
+        .list-wrap {
+            max-width: inherit;
+            &.list-type-horizontal {
+                .list-thumb {
+                    width: 12%;
+                }
+            }        
         }
     }
     .list-cont-wrap {

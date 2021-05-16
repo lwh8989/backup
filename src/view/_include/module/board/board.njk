@@ -311,13 +311,13 @@
     </div>
 {% endmacro %}
 
-{% macro baseBoardTitle(style, boardTitle, noti) %}
+{% macro baseBoardTitle(style, boardTitle, titleBtn, listOption, noti) %}
     <div class="board-tit">
         <div>
             <strong>
                 {{ boardTitle }}
             </strong>
-            <button>
+            <button style="{{ titleBtn }}">
                 {% if noti %}
                     <i class="ic-navigation-alarm-line"></i>
                     <span class="element-tooltip">
@@ -335,8 +335,7 @@
                 {% endif %}
             </button>
         </div>
-
-        <div class="list-control-wrap">
+        <div class="list-control-wrap" style="{{ listOption }}">
             <div class="line">
                 <div class="element-checkbox h20 checkbox-square checkbox-text">
                     <input class="checkbox-input" type="checkbox" id="checkbox-01" name="" value="">

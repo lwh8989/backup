@@ -46,7 +46,7 @@ $elementHeight: (4, 16, 20, 24, 28, 32, 36, 40, 44, 48, 56);
     } @else {
         .#{"h" + $h + ""} {
             .element-select-txt {
-                margin-right: $stds-spacing-16;
+                margin-right: $stds-spacing-12;
             }
             .element-input-wrap {
                 padding-left: $stds-spacing-12;

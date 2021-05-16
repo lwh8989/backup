@@ -44,6 +44,7 @@
             }
             @if $axisX == center {
                 $center: -50%;
+                left: $left;
             }
             @if $axisX == leftSide {
                 left: -#{$formSizeL + 0.2rem};

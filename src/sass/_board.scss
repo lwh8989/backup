@@ -86,7 +86,7 @@
         @include flexBetweenCenter;
         font-size: font.$stdsBody3;
         color: $ui_text_04;
-
+        margin-bottom: $stds-spacing-24;
         .front {
             @include ellipsis;
             margin-right: $stds-spacing-24;
@@ -274,6 +274,7 @@
         }
         .info {
             @include flexCenter;
+            height: 2rem;
             margin-left: $stds-spacing-8;
             font-size: font.$stdsBody3;
             color: $ui_text_04;

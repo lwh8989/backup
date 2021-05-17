@@ -17,13 +17,13 @@
       {% if close %}
         <button class="module-dialog-close ic-control-close-line"></button>
       {% endif %}
+      {% if btns %}
+        <div class="module-dialog-btns">
+          {{ btn.base(colorClass='bg-outline', sizeClass='size-small', txt='취소') }}
+          {{ btn.base(colorClass='bg-primary', sizeClass='size-small', txt='확인') }}
+        </div>
+      {% endif %}
     </div>
-    {% if btns %}
-      <div class="module-dialog-btns">
-        {{ btn.base(colorClass='bg-outline', sizeClass='size-small', txt='취소') }}
-        {{ btn.base(colorClass='bg-primary', sizeClass='size-small', txt='확인') }}
-      </div>
-    {% endif %}
     {% if footer %}
       <div class="module-dialog-footer">
         {{ footer }}

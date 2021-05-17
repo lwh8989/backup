@@ -1,0 +1,22 @@
+{% import "_include/form/dropdown.njk" as dropdown %}
+{% import "_include/form/input.njk" as input %}
+{% import "_include/form/button.njk" as btn %}
+{% import "_include/form/checkbox.njk" as checkbox %}
+
+{% macro base( attachItem, cbDefault ) %}
+    {% for i in attachItem %}
+        <div class="attach-image">
+            {% if cbDefault %}
+                {{ checkbox.base( height="h20", styleClass="checkbox-square", label="Checkbox", state="" ) }}
+                {% else %}
+                {{ checkbox.base( height="h20", styleClass="checkbox-square", label="Checkbox", state="checked" ) }}
+            {% endif %}
+            <div class="image-content">
+                <img src="https://dummyimage.com/84x84/0099ff/fff" alt="attach image">
+            </div>
+            <div class="image-btn">
+                {{ btn.base(colorClass='bg-outline', sizeClass='size-chips28', txt='삭제', shapeClass='btn-round') }}
+            </div>
+        </div>
+    {% endfor %}
+{% endmacro %}

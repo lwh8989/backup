@@ -44,8 +44,11 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         margin-right: 0.8rem;
 
         &.ic-control-close-circle-fill {
-            color: color.$ui_text_04;
+            color: color.$ui_icon_04_enabled;
             display: none;
+            &:hover {
+                color: color.$ui_icon_04_hover;
+            }
         }
         &.ic-navigation-search-line {
             color: color.$ui_icon_03_enabled;

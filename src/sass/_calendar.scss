@@ -10,7 +10,7 @@
     }
 }
 .module-calendar {
-    min-width: 31.6rem;
+    width: 31.6rem;
     padding-bottom: space.$stds-spacing-8;
     box-shadow: -1px 0 0 color.$ui_border_contents;
 
@@ -20,7 +20,7 @@
 
     .module-calendar-header {
         @include mixin.flexCenter;
-        padding: space.$stds-spacing-20 0;
+        padding: 1.7rem 0;
 
         button {
             font-size: font.$stdsTitle4;

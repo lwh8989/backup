@@ -311,7 +311,7 @@
     </div>
 {% endmacro %}
 
-{% macro baseBoardTitle(style, boardTitle, titleBtn, listOption, noti) %}
+{% macro baseBoardTitle(style, boardTitle, titleBtn, listOption, writeOption, noti) %}
     <div class="board-tit">
         <div>
             <strong>
@@ -372,6 +372,9 @@
                 <span class="stove-icon ic-community-write-fill"></span>
                 <span class="btn-txt">글쓰기</span>
             </button>
+        </div>
+        <div class="write-type" style="{{ writeOption }}">
+            <p>임시 저장된 글 (NN)</p>
         </div>
     </div>
 {% endmacro %}

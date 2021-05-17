@@ -306,7 +306,7 @@
   display: block;
 }
 .lagarcy-module-inputset.submit-vote-cell .submit-input-wrap .input-wrap {
-  width: 74%;
+  width: calc(100% - 94px);
 }
 .lagarcy-module-inputset.submit-vote-cell .submit-input-wrap img {
   width: 100%;

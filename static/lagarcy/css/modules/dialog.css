@@ -948,7 +948,7 @@
   box-sizing: border-box;
 }
 .lagarcy-module-dialog .lagarcy-module-myindie-form .lagarcy-module-myindie-profile {
-  display: table;
+  display: block;
   margin-bottom: 20px;
 }
 .lagarcy-module-dialog .lagarcy-module-myindie-form .profile-thumb {
@@ -1448,7 +1448,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 984px;
-  height: 624px;
+  /* height: 624px; */
   background-color: #fff;
   border: solid 1px #999;
   border-radius: 4px;

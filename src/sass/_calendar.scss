@@ -62,7 +62,8 @@
         }
 
         & + .module-calendar-day {
-            margin-top: space.$stds-spacing-8;
+            margin: space.$stds-spacing-8 space.$stds-spacing-4 0;
+
         }
     }
     .module-calendar-day {

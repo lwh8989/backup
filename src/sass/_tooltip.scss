@@ -2,16 +2,18 @@
 @use "./color";
 @use "./space";
 @use "./radius";
+@use "./font";
 
 .element-tooltip {
     .tooltip-txt {
         @include flex($type: inline-flex, $x: center, $y: center);
         position: relative;
         white-space: nowrap;
-        padding: space.$stds-spacing-4;
+        padding: space.$stds-spacing-8;
         border-radius: radius.$radius-XS;
         background-color: color.$gray600;
-        font-weight: bold;
+        font-size: font.$stdsChips1;
+        font-weight: font.$stdsWeightBold;
 
         &.white {
             color: color.$white;

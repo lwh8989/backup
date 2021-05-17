@@ -92,6 +92,14 @@
         }
     }
 
+    // 글쓰기 보기 타입
+    .write-type {
+        p {
+            font-size: font.$stdsBody2;
+            color: $ui_text_03;
+        }
+    }
+
     // 게시판 공지사항
     .board-notice {
         .board-notice-list {

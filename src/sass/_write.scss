@@ -26,6 +26,7 @@
             color: $ui_text_disabled;
         }
         .write-contents-area {
+            min-height: 5.6rem;
             padding: 1.2rem 2.4rem;
             border: 0.1px solid $ui_divider_black_02;
             border-top: 0;
@@ -40,6 +41,19 @@
                     padding-right: $stds-spacing-8;
                 }
             }
+            .write-tag-area {
+                text-align: left;
+                p {
+                    display: inline-block;
+                    font-size: font.$stdsBody2;
+                    color: $ui_text_04;
+                    padding-right: $stds-spacing-8;
+                    line-height: $stds-spacing-32;
+                }
+                .element-btn {
+                    margin: 0 $stds-spacing-8 $stds-spacing-8 0;
+                }
+            }
         }
         .write-setting-area {
             position: relative;
@@ -51,12 +65,53 @@
             .write-setting-section {
                 .setting-area-header {
                     position: relative;
-                    padding-bottom: $stds-spacing-12;
-                    .setting-tit {
-                        font-size: font.$stdsBody2;
-                        font-weight: font.$stdsWeightBold;
-                        color: $ui_text_02;
+                    padding: $stds-spacing-12 0;                    
+                    &:first-of-type {
+                        padding-top: 0;
                     }
+                }
+                .setting-area-body {
+                    position: relative;
+                    .element-checkbox {}
+                    .flex-wrap {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: $stds-spacing-16;
+                        &:first-of-type {
+                            margin-top: 0;
+                        }
+                        .element-checkbox {
+                            margin: $stds-spacing-6 $stds-spacing-24 $stds-spacing-6 0;
+                        }
+                        .element-input-icon.calendar {
+                            width: 20%;
+                            margin-right: $stds-spacing-8;
+                            &:first-of-type {
+                                margin-right: 0;
+                            }
+                        }
+                        .element-dropdown {
+                            width: 20%;
+                            margin-right: $stds-spacing-8;
+                            &:first-of-type {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+                .setting-tit {
+                    font-size: font.$stdsBody2;
+                    font-weight: font.$stdsWeightBold;
+                    color: $ui_text_02;  
+                    & span {
+                        color: $ui_text_brand;  
+                    }                  
+                }
+                .setting-desc {
+                    font-size: font.$stdsBody4;
+                    font-weight: font.$stdsWeightNormal;
+                    color: $ui_text_04;
+                    margin-top: $stds-spacing-12;
                 }
             }
             .byte {
@@ -73,6 +128,24 @@
         }
     }
     .write-footer {
-        
+        display: flex;
+        margin-top: $stds-spacing-20;
+        justify-content: space-between;
+        .footer-align-left {
+            .element-btn {
+                margin-left: $stds-spacing-12;
+                &:first-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
+        .footer-align-right {
+            .element-btn {
+                margin-left: $stds-spacing-12;
+                &:first-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
     }
 }

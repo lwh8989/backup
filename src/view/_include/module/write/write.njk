@@ -2,9 +2,12 @@
 {% import "_include/form/dropdown.njk" as dropdown %}
 {% import "_include/form/input.njk" as input %}
 {% import "_include/form/button.njk" as btn %}
+{% import "_include/form/checkbox.njk" as checkbox %}
+{% import "_include/module/write/attach.njk" as attach %}
 
 {% macro base(  ) %}
-<div class="module-write">
+<div class="module-write" style="margin-bottom: 400px;">
+  <!-- Header -->
   <div class="write-header">
     {{ dropdown.select(
       width="full", 
@@ -30,6 +33,7 @@
       ) 
     }}
   </div>
+  <!-- Contents -->
   <div class="write-contents">
     <!-- [D] 에디터를 넣어서 개발 해 주세요. style값은 제거 해 주세요. -->
     <div class="write-edit-area" style="border: 1px solid #dbdbdb; box-sizing: border-box;">에디터 삽입 영역</div>
@@ -40,22 +44,24 @@
         {{ btn.base(colorClass='bg-outline', sizeClass='size-chips32', txt='이미지 선택', shapeClass='btn-round') }}
       </div>
     </div>
-    <!-- [D] 글쓰기 설정 영역 -->
+    <!-- [D] 글쓰기 이미지 설정 영역 -->
     <div class="write-setting-area">
+      <!-- 대표이미지 등록  -->
       <div class="write-setting-section">
         <div class="setting-area-header">
           <p class="setting-tit">대표이미지 별도 등록</p>
         </div>
         <div class="setting-area-body">
-          <div class="attach-image">
-            <button class="image-area">
-              <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
-            </button>
-            {{ btn.base(colorClass='bg-primary', sizeClass='size-chips28', txt='삭제', shapeClass='btn-round') }}
-          </div>
+          {{ attach.base( attachItem=['attachItem'], cbDefault="" ) }}
+        </div>
+        <div class="setting-area-header">
+          <p class="setting-tit">첨부된 이미지 / 동영상 <span>%N%개</span></p>
+        </div>
+        <div class="setting-area-body">
+          {{ attach.base( attachItem=['attachItem', 'attachItem', 'attachItem', 'attachItem'], cbDefault="false" ) }}
+          <p class="setting-desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
         </div>
       </div>
-
       {# <div class="write-setting-section">
           <div class="setting-section-header">
           <p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p>
@@ -237,11 +243,152 @@
         <span class="byte-count">119KB</span>
         <span class="byte-total">/ 1024MB</span>
       </div>
+    </div>
+    <!-- [D] 글쓰기 추천 대상 설정 영역 -->
+    <div class="write-setting-area">
+      <div class="write-setting-section">
+        <div class="setting-area-header">
+          <p class="setting-tit">추천 대상 설정</p>
+        </div>
+        <div class="setting-area-body">
+          {{ checkbox.base( height="h20", id="checkbox-05", styleClass="checkbox-square", styleText="checkbox-text", label="추천 게시물 대상 제외", state="" ) }}
+          <p class="setting-desc">위 항목에 체크하면 운영자가 이 게시물을 추천 게시물 대상에서 제외합니다. 설정이 반영되는 시간까지 최대 30분이 소요될 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+    <!-- [D] 글쓰기 공지사항 설명 및 예약 게시 설정 -->
+    <div class="write-setting-area">
+      <div class="write-setting-section">
+        <div class="setting-area-header">
+          <p class="setting-tit">공지사항 설정</p>
+        </div>
+        <div class="setting-area-body">
+          <div class="flex-wrap">
+            {{ checkbox.base( 
+              height="h20", 
+              id="checkbox-05", 
+              styleClass="checkbox-square", 
+              styleText="checkbox-text", 
+              label="메인 및 전체 게시판", state="" )
+            }}
+            {{ checkbox.base( 
+              height="h20", 
+              id="checkbox-05", 
+              styleClass="checkbox-square", 
+              styleText="checkbox-text", 
+              label="메인만", state="" )
+            }}
+            {{ checkbox.base( 
+              height="h20", 
+              id="checkbox-05", 
+              styleClass="checkbox-square", 
+              styleText="checkbox-text", 
+              label="현재 선택된 게시판만", state="" )
+            }}
+            {{ dropdown.select(
+              width="", 
+              height="h32", 
+              addClass="box-type", 
+              selectButtonTxt="공지", 
+              selectIcon="ic-community-oppose-fill") 
+            }}
+          </div>
+          <div class="flex-wrap">
+            {{ checkbox.base( 
+              height="h20", 
+              id="checkbox-05", 
+              styleClass="checkbox-square", 
+              styleText="checkbox-text", 
+              label="공지 해제 예약 사용", state="disabled" )
+            }}
+            {{ input.icon(
+              height="h32", 
+              type="text", 
+              addClass="box-type box-reverse calendar", 
+              place="input placeholder", 
+              txt="YYYY.MM.DD", 
+              icon={first: "ic-community-calendar-line"}, 
+              state="readonly") 
+            }}
+            {{ dropdown.select(
+              width="", 
+              height="h32", 
+              addClass="box-type", 
+              selectButtonTxt="00시", 
+              selectIcon="ic-community-oppose-fill") 
+            }}
+            {{ dropdown.select(
+              width="", 
+              height="h32", 
+              addClass="box-type", 
+              selectButtonTxt="00분", 
+              selectIcon="ic-community-oppose-fill") 
+            }}
+          </div>
+        </div>
+        <div class="setting-area-header">
+          <p class="setting-tit">예약 게시 설정</p>
+        </div>
+        <div class="setting-area-body">
+          <div class="flex-wrap">
+            {{ checkbox.base( 
+              height="h20", 
+              id="checkbox-05", 
+              styleClass="checkbox-square", 
+              styleText="checkbox-text", 
+              label="공지 해제 예약 사용", state="" )
+            }}
+            {{ input.icon(
+              height="h32", 
+              type="text", 
+              addClass="box-type box-reverse calendar", 
+              place="input placeholder", 
+              txt="YYYY.MM.DD", 
+              icon={first: "ic-community-calendar-line"}, 
+              state="readonly") 
+            }}
+            {{ dropdown.select(
+              width="", 
+              height="h32", 
+              addClass="box-type", 
+              selectButtonTxt="00시", 
+              selectIcon="ic-community-oppose-fill") 
+            }}
+            {{ dropdown.select(
+              width="", 
+              height="h32", 
+              addClass="box-type", 
+              selectButtonTxt="00분", 
+              selectIcon="ic-community-oppose-fill") 
+            }}
+          </div>
+          <p class="setting-desc">예약 설정한 카드는 내활동 > 작성한 카드 > 편집중인 카드 탭에서 확인할 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+    <!-- [D] 글쓰기 Tag 영역 -->
+    <div class="write-contents-area">
+      <div class="write-tag-area">
+        <p># 입력한 태그</p>
+        {{ btn.base(colorClass='bg-outline', sizeClass='size-chips32', txt='# 턴택', shapeClass='btn-round') }}
+        {{ btn.base(colorClass='bg-outline', sizeClass='size-chips32', txt='# 심심할때좋은게임', shapeClass='btn-round') }}
+        {{ btn.base(colorClass='bg-outline', sizeClass='size-chips32', txt='# 등록한태그가많으면아래로 태그 내용이 보여집니다. 간격은 8px', shapeClass='btn-round') }}
+        {{ btn.base(colorClass='bg-outline', sizeClass='size-chips32', txt='# 태그 글자수 제한이없을까요?', shapeClass='btn-round') }}
+        {{ btn.base(colorClass='bg-outline', sizeClass='size-chips32', txt='# 시물레이션', shapeClass='btn-round') }}
+        {{ btn.base(colorClass='bg-outline', sizeClass='size-chips32', txt='# 초보자추천게임', shapeClass='btn-round') }}
+      </div>
+    </div>
   </div>
-
-  </div>
-  <div class="write-footer">
   
+  <div class="write-footer">
+    <div class="footer-align-left">
+      {{ btn.base(colorClass='bg-outline', sizeClass='size-medium', txt='임시저장', shapeClass='') }}
+      {{ btn.base(colorClass='bg-outline', sizeClass='size-medium', txt='미리보기', shapeClass='') }}
+    </div>
+    <div class="footer-align-right">
+      {{ btn.base(colorClass='bg-outline', sizeClass='size-medium', txt='취소', shapeClass='') }}
+      {{ btn.base(colorClass='bg-primary', sizeClass='size-medium', txt='등록', shapeClass='') }}
+    </div>
   </div>
 </div>
 {% endmacro %}

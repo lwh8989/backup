@@ -1,0 +1,24 @@
+@use "./space";
+
+.attach-image {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0 $stds-spacing-12 $stds-spacing-12 0;
+    .element-checkbox {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+    }
+    .image-content {
+        width: 8.4rem;
+        height: 8.4rem;
+        img {
+            width: 100%;
+        }
+    }
+    .image-btn {
+        margin-top: $stds-spacing-8;
+        text-align: center;
+    }
+}

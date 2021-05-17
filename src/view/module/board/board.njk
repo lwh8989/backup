@@ -22,18 +22,28 @@
         ┗ Board Select <br />
         순으로 정리했습니다. <br />
     </p>
-    {{ board.base(
+    <p class="tit"><b>Board All</b></p>
+    {{ board.baseSeparate(
         boardTitle="게시판 이름",
-        noti=true
+        noti=true,
+        titView=true, 
+        noticeView=true, 
+        selectView=true, 
+        listView=false
     ) }}
+
     <p class="tit"><b>Board Title</b></p>
     <p class="desc">
         Board Title
     </p>
-    {{ board.baseBoardTitle(
-        boardTitle="게시판 이름",
-        noti=false
-    ) }}
+    <div class="board-wrap">
+        <div class="board-top">
+            {{ board.baseBoardTitle(
+                boardTitle="게시판 이름",
+                noti=false
+            ) }}
+        </div>
+    </div>
 <script type="text/plain" class="language-markup">
     [D] Board Title markup
     반응형은 아직 미구현입니다.
@@ -106,7 +116,11 @@
     <p class="desc">
         Board Notice
     </p>
-    {{ board.baseBoardNotice() }}
+    <div class="board-wrap">
+        <div class="board-top">
+            {{ board.baseBoardNotice() }}
+        </div>
+    </div>
 <script type="text/plain" class="language-markup">
     [D] Board Notice markup
     반응형은 아직 미구현입니다.
@@ -238,7 +252,11 @@
     <p class="desc">
         Board Select
     </p>
-    {{ board.baseBoardSelect() }}
+    <div class="board-wrap">
+        <div class="board-top">
+            {{ board.baseBoardSelect() }}
+        </div>
+    </div>
 <script type="text/plain" class="language-markup">
     [D] Board Select markup
     반응형은 아직 미구현입니다.

@@ -79,8 +79,6 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     }
     &.active {
         button {
-            color: color.$ui_icon_03_pressed;
-
             &.ic-control-close-circle-fill {
                 display: block;
             }

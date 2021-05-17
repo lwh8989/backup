@@ -800,11 +800,6 @@
   background: url(../../images/svgnew/ic-direction-down-s16-c666.svg) no-repeat;
 }
 
-/* text orange */
-.lagarcy-element-btn.btn-orange-txt .btn-txt {
-  color: #ff5000;
-}
-
 /* animation iconmove */
 .ani-iconmove .lagarcy-element-btn {
 }

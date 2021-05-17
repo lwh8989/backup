@@ -11,7 +11,7 @@
                 @include flex($y: center);
                 font-size: font.$stdsTitle4;
                 margin-right: $stds-spacing-40;
-
+                height: 4rem;
                 strong {
                     @include ellipsis;
                     font-weight: bold;

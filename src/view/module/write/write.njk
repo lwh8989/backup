@@ -1,0 +1,36 @@
+{% extends "_include/layout/guide/guide.njk" %}
+
+{% import "_include/module/board/board.njk" as board %}
+{% import "_include/module/write/write.njk" as write %}
+
+
+<!-- styles -->
+{% block styles %}
+{% endblock %}
+
+<!-- styles -->
+{% block content %}
+<!-- [D]   -->
+<div class="guide">
+    <h1 class="guide-tit">Write</h1>
+    <p class="tit"><b>Stove Write Guide</b></p>
+    <p class="desc">
+    </p>
+    
+    <div class="board-wrap">
+        <div class="board-top">
+            {{ board.baseBoardTitle(boardTitle="글쓰기", titleBtn="display: none;", listOption="display: none;") }}
+            {{ write.base() }}
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %} 
+{% endblock %}

@@ -159,80 +159,53 @@
                     </article>
                     <article class="article-feed">
                         {{ title.base(h4="보유 게임") }}
-                        <!-- [D] Swiper 제어 버튼입니다. -->
-                        <span class="lagarcy-element-page-btn">
-                            <button class="swiper-board swiper-button-prev">
-                                {{ icon.base(class="ic-direction-left-circle-s24-c999", txt="ic-direction-left-circle-s24-c999", width="24px", height="24px") }}
-                            </button>
-                            <button class="swiper-board swiper-button-next">
-                                {{ icon.base(class="ic-direction-right-circle-s24-c999", txt="ic-direction-right-circle-s24-c999", width="24px", height="24px") }}
-                            </button>
-                        </span>
                         <div class="feed-contents">
                             {% if isEmpty %}
                                 <div class="item-empty">
                                     <p class="sub-txt">정식 게임을 구매하시면<br/>게임 커뮤니티의 새로운 소식을 받아볼 수 있어요.</p>
                                 </div>
                             {% else %}
-                                <!-- [D] dialog를 감싸는 영역이 flex 라서 inline으로  -->
-                                <ul class="lagarcy-module-slider swiper-wrapper">
-                                    <li class="">
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
-                                        {{ input.checkbox(isShowTooltip=true,hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="게임명이 길어지면 최대 두줄까지 나오고 마우스 오버시 레이어가") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="오버패스") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="창작놀이터") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="리뷰") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
-                                        {{ input.checkbox(isShowTooltip=true,hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="게임명이 길어지면 최대 두줄까지 나오고 마우스 오버시 레이어가") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="오버패스") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="창작놀이터") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="리뷰") }}
-                                    </li>
-                                </ul>
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="게임명이 길어지면 최대 두줄까지 나오고 마우스 오버시 레이어가") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="오버패스") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="창작놀이터") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="리뷰") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="게임명이 길어지면 최대 두줄까지 나오고 마우스 오버시 레이어가") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="오버패스") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="창작놀이터") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="리뷰") }}
                             {% endif %}
                         </div>
                     </article>
                     <article class="article-feed width-614">
                         {{ title.base(h4="찜한 게임") }}
-                        <span class="lagarcy-element-page-btn">
-                            <button class="swiper-board swiper-button-prev">
-                                {{ icon.base(class="ic-direction-left-circle-s24-c999", txt="ic-direction-left-circle-s24-c999", width="24px", height="24px") }}
-                            </button>
-                            <button class="swiper-board swiper-button-next">
-                                {{ icon.base(class="ic-direction-right-circle-s24-c999", txt="ic-direction-right-circle-s24-c999", width="24px", height="24px") }}
-                            </button>
-                        </span>
                         <div class="feed-contents">
                             {% if isEmpty %}
                                 <div class="item-empty">
                                     <p class="sub-txt">정식 게임을 구매하시면<br/>게임 커뮤니티의 새로운 소식을 받아볼 수 있어요.</p>
                                 </div>
                             {% else %}
-                                <!-- [D] dialog를 감싸는 영역이 flex 라서 inline으로  -->
-                                <ul class="lagarcy-module-slider swiper-wrapper">
-                                    <li class="">
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
-                                        {{ input.checkbox(isShowTooltip=true,hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="게임명이 길어지면 최대 두줄까지 나오고 마우스 오버시 레이어가") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="오버패스") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="창작놀이터") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="리뷰") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
-                                        {{ input.checkbox(isShowTooltip=true,hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="게임명이 길어지면 최대 두줄까지 나오고 마우스 오버시 레이어가") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="오버패스") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="창작놀이터") }}
-                                        {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="리뷰") }}
-                                    </li>
-                                </ul>
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="게임명이 길어지면 최대 두줄까지 나오고 마우스 오버시 레이어가") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="오버패스") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="창작놀이터") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="리뷰") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="게임명이 길어지면 최대 두줄까지 나오고 마우스 오버시 레이어가") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="오버패스") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="창작놀이터") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="리뷰") }}
                             {% endif %}
                         </div>
                     </article>

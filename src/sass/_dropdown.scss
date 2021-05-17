@@ -1,5 +1,6 @@
 @use "./mixin/mixin";
 @use "./color";
+@use "./font";
 @use "./space";
 @use "./radius";
 @use "./helpers/z-index";
@@ -93,7 +94,7 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     }
 
     &.selected {
-        font-weight: bold;
-        color: $ui_text_brand;
+        font-weight: font.$stdsWeightBold;
+        color: color.$ui_text_brand;
     }
 }

@@ -55,6 +55,9 @@ $stds-checkbox-size-L: 2.4rem;
     input[type='checkbox']:hover {
         background: color.$ui_form_line_hover;
         border: solid 1px color.$ui_form_line_hover_border;
+        + .checkbox-label {
+            color: color.$ui_text_02;
+        }
     }
     input[type='checkbox']:disabled {
         background: color.$ui_form_line_disabled;
@@ -63,14 +66,23 @@ $stds-checkbox-size-L: 2.4rem;
         + label {
             cursor: not-allowed;
         }
+        + .checkbox-label {
+            color: color.$ui_text_disabled;
+        }
     }
     input[type='checkbox']:checked {
         background: color.$ui_icon_brand_enabled;
         border: solid 1px color.$ui_icon_brand_enabled;
+        + .checkbox-label {
+            color: color.$ui_text_02;
+        }
     }
     input[type='checkbox']:checked:hover {
         background: color.$ui_icon_brand_hover;
         border: solid 1px color.$ui_icon_brand_hover;
+        + .checkbox-label {
+            color: color.$ui_text_03;
+        }
     }
     input[type='checkbox']:checked:disabled {
         background: color.$ui_icon_brand_disabled;
@@ -79,6 +91,9 @@ $stds-checkbox-size-L: 2.4rem;
         + label {
             cursor: not-allowed;
         }
+        + .checkbox-label {
+            color: color.$ui_text_disabled;
+        }
     }
     label {
         display: none;
@@ -86,7 +101,7 @@ $stds-checkbox-size-L: 2.4rem;
     &.checkbox-text {
         label {
             display: inline-flex;
-            color: color.$ui_text_02;
+            color: color.$ui_text_03;
             cursor: pointer;
         }
     }

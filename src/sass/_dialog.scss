@@ -134,10 +134,6 @@
         color: color.$ui_text_01;
         line-height: font.$stdsLineHeightM;
         letter-spacing: -0.45px;
-
-        & + .module-dialog-inner {
-            padding: space.$stds-spacing-24;
-        }
     }
     .module-dialog-title {
         padding-bottom: space.$stds-spacing-16;
@@ -154,7 +150,7 @@
     }
     .module-dialog-btns {
         @include mixin.flexCenter;
-        padding-bottom: space.$stds-spacing-40;
+        padding-top: space.$stds-spacing-32;
 
         button {
             margin-right: space.$stds-spacing-8;

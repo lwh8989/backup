@@ -27,7 +27,7 @@
         }
         .calendar-tit {
             padding: 0 space.$stds-spacing-16;
-            font-weight: bold;
+            font-weight: font.$stdsWeightBold;
             font-size: font.$stdsTitle5;
             letter-spacing: font.$letterSpacing_5;
         }
@@ -99,15 +99,16 @@
                 height: 3.2rem;
             }
             &.selected {
-                font-weight: bold;
+                font-weight: font.$stdsWeightBold;
+                color: color.$ui_text_white_01;
                 &::after {
                     @include iconSize;
-                    background-color: color.$interactive_03_selected;
+                    background-color: color.$interactive_01_enabled;
                 }
             }
             
             &:hover {
-                font-weight: bold;
+                font-weight: font.$stdsWeightBold;
 
                 &::after {
                     @include iconSize;
@@ -117,7 +118,7 @@
             &.first,
             &.last,
             &:active {
-                font-weight: bold;
+                font-weight: font.$stdsWeightBold;
 
                 & > span {
                     color: color.$ui_text_white_01;
@@ -177,7 +178,7 @@
             }
 
             &:hover {
-                font-weight: bold;
+                font-weight: font.$stdsWeightBold;
 
                 &::after {
                     @include iconSize;
@@ -185,7 +186,7 @@
             }
             &.selected:active,
             &:active {
-                font-weight: bold;
+                font-weight: font.$stdsWeightBold;
 
                 & > span {
                     color: color.$ui_text_white_01;
@@ -196,7 +197,7 @@
                 }
             }
             &.selected {
-                font-weight: bold;
+                font-weight: font.$stdsWeightBold;
 
                 &::after {
                     @include iconSize;

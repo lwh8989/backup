@@ -18,11 +18,13 @@ $ui-button-pagination-hover : #fc6020;
 .pagination .stove-icon {
     vertical-align: middle;
 }
-.pagination .pagination-num {
-    display: inline-block;
+.pagination .stove-icon.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: $ui_icon_03_disabled;
 }
 .pagination .pagination-num {
-
+    display: inline-block;
 }
 /* a Tag */
 .pagination a {
@@ -49,7 +51,7 @@ $ui-button-pagination-hover : #fc6020;
     height: 3.2rem;
     border-radius: 1.6rem;
     display: block;
-    background-color: #eaeaea;
+    background-color: $interactive_03_hover;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -58,6 +60,10 @@ $ui-button-pagination-hover : #fc6020;
 .pagination a:hover::after,
 .pagination a:active::after{
     z-index: 2;
+}
+.pagination a:active::after,
+.pagination a:focus::after {
+    background-color: $interactive_03_focused;
 }
 .pagination a:hover span,
 .pagination a:active span,
@@ -77,10 +83,6 @@ $ui-button-pagination-hover : #fc6020;
 }
 .pagination a.stove-icon .text-hidden{
     @include text-hidden;
-}
-.pagination .num-first:hover::after,
-.pagination .num-last:hover::after{
-    content: none!important;
 }
 .pagination a.active{
     color: #fff;
@@ -136,6 +138,10 @@ $ui-button-pagination-hover : #fc6020;
 .pagination button:hover::after,
 .pagination button:active::after{
     z-index: 2;
+}
+.pagination button:active::after,
+.pagination button:focus::after {
+    background-color: $interactive_03_focused;
 }
 .pagination button:hover span,
 .pagination button:active span,

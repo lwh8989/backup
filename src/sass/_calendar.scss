@@ -20,7 +20,7 @@
 
     .module-calendar-header {
         @include mixin.flexCenter;
-        padding: space.$stds-spacing-20 0;
+        padding: 1.7rem 0;
 
         button {
             font-size: font.$stdsTitle4;

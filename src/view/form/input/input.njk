@@ -887,7 +887,23 @@
                                 <div class="guide-state">Focus</div>
                                 <div class="guide-flex ratio gap">
                                     <div>
-                                        {{ input.icon(height="h48", type="text", addClass="box-type box-reverse calendar", active="active", place="input placeholder", txt="2021-01-12 ~ 2022-03-10", icon={first: "ic-community-calendar-line"}, state="readonly", dialogLayer="dialog", year=["2021", "2022"], month=["01", "03"], dialogNum=2, firstNum=12, lastNum=10) }}
+                                        {{ input.icon(
+                                            height="h48", 
+                                            type="text", 
+                                            addClass="box-type box-reverse calendar", 
+                                            active="active", 
+                                            place="input placeholder", 
+                                            txt="2021-01-12 ~ 2022-03-10", 
+                                            icon={first: "ic-community-calendar-line"}, 
+                                            state="readonly", 
+                                            dialogLayer="dialog", 
+                                            year=["2021", "2022"], 
+                                            month=["01", "03"], 
+                                            dialogNum=2,
+                                            widthClass="depth-2",
+                                            firstNum=12, 
+                                            lastNum=10) 
+                                        }}
                                     </div>
                                 </div>
                             </div>

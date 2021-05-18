@@ -65,11 +65,11 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
 
     &.disabled,
     &:hover {
-        button {
-            &.ic-navigation-search-line {
-                color: color.$gray300;
-            }
-        }
+        // button {
+        //     &.ic-navigation-search-line {
+        //         color: color.$gray300;
+        //     }
+        // }
     }
 
     &.active,

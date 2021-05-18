@@ -3,6 +3,7 @@
 @use "./helpers/z-index";
 @use "./space";
 @use "./font";
+@use "./radius";
 
 .module-dialog-calendar-wrap {
     @include mixin.flex {
@@ -13,7 +14,9 @@
     width: 31.6rem;
     padding-bottom: space.$stds-spacing-8;
     box-shadow: -1px 0 0 color.$ui_border_contents;
-
+    border: 1px solid color.$ui_border_contents;
+    border-radius: radius.$radius-S;
+    box-sizing: border-box;
     &:first-child {
         box-shadow: none;
     }

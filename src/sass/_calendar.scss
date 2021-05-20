@@ -3,6 +3,7 @@
 @use "./helpers/z-index";
 @use "./space";
 @use "./font";
+@use "./radius";
 
 .module-dialog-calendar-wrap {
     @include mixin.flex {
@@ -13,11 +14,24 @@
     width: 31.6rem;
     padding-bottom: space.$stds-spacing-8;
     box-shadow: -1px 0 0 color.$ui_border_contents;
-
+    border: 1px solid color.$ui_border_contents;
+    border-radius: radius.$radius-S;
+    box-sizing: initial;
     &:first-child {
         box-shadow: none;
     }
-
+    &.depth-2 {
+        width: 63.2rem;
+    }
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .calendar-inner {
+        float: left;
+        width: 31.6rem;
+    }
     .module-calendar-header {
         @include mixin.flexCenter;
         padding: 1.7rem 0;
@@ -156,7 +170,7 @@
     }
 
     .module-calendar-tile {
-        padding: 0 space.$stds-spacing-4;
+        padding: 0 $stds-spacing-4;
         .box {
             width: 7.7rem;
             height: 7.2rem;

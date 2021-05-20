@@ -1,18 +1,64 @@
 @use "./mixin/mixin";
 @use "./color";
 @use "./space";
+@use "./font";
 
 $dropdown-default-space: 0 space.$stds-spacing-16;
 
 .element-input {
     padding: $dropdown-default-space;
-    color: color.$gray500;
+    color: color.$ui_text_03;
+    &.filled {
+        border: 1px solid transparent;
+        background-color: color.$ui_form_fill_enabled;
+        &::placeholder {
+            color: color.$ui_text_04;
+        }
+        &:hover {
+            background-color: color.$ui_form_fill_hover;
+        }
+        &.active {
+            background-color: color.$ui_form_fill_focused;
+            border-color: color.$ui_form_fill_focused_border;
+            
+        }
+        &:focus {
+            background-color: color.$ui_form_fill_focused;
+            border-color: color.$ui_form_fill_focused_border;
+        }
+    }
+    &.inverse-filled {
+        border: 1px solid transparent;
+        background-color: color.$ui_form_white_enabled;
+        color: color.$ui_text_white_01;
+        &::placeholder {
+            color: color.$ui_text_white_02;
+        }
+
+        &:hover {
+            background-color: color.$ui_form_white_hover;
+        }
+
+        &.active {
+            background-color: color.$ui_form_white_focused;
+            border-color: color.$ui_form_white_focused_border;
+            color: color.$ui_text_white_01;
+        }
+
+        &:focus {
+            background-color: color.$ui_form_white_focused;
+            border-color: color.$ui_form_white_focused_border;
+        }
+        &:disabled {
+            color: color.$ui_text_white_02;
+        }
+    }
 }
 
 .element-input.active,
 .element-input-icon.active .element-input,
 .element-input:focus {
-    color: color.$gray700;
+    color: color.$ui_text_02;
 }
 
 .element-input-icon {
@@ -65,11 +111,11 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
 
     &.disabled,
     &:hover {
-        button {
-            &.ic-navigation-search-line {
-                color: color.$gray300;
-            }
-        }
+        // button {
+        //     &.ic-navigation-search-line {
+        //         color: color.$gray300;
+        //     }
+        // }
     }
 
     &.active,
@@ -105,12 +151,61 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         &:focus-within {
             border: 1px solid color.$gray500;
         }
+
+        &.error,
+        &.warning,
+        &.success,
+        &.informational {
+            .element-input {
+                color: color.$ui_text_03;
+            }
+        }
+    }
+
+    &.inverse-filled {
+        background-color: color.$ui_form_white_enabled;
+        border: 1px solid transparent;
+        .element-input {
+            color: color.$ui_text_white_02;
+        }
+        .ic-navigation-search-line {
+            color: color.$ui_icon_white_enabled;
+        }
+        &:hover {
+            background-color: color.$ui_form_white_hover;
+        }
+        &.active {
+            background-color: color.$ui_form_white_focused;
+            border-color: color.$ui_form_white_focused_border;
+        }
+        &:focus {
+            background-color: color.$ui_form_fill_focused;
+            border-color: color.$ui_form_fill_focused_border;
+        }
+        &.error,
+        &.warning,
+        &.success,
+        &.informational {
+            background-color: color.$ui_form_white_error;
+            .element-input {
+                color: color.$ui_text_white_01;
+            }
+        }
+    }
+
+    &.error,
+    &.warning,
+    &.success,
+    &.informational {
+        .element-input {
+            color: color.$ui_text_03;
+        }
     }
 
     // state colors
     @each $name, $color in color.$elementState {
         &.#{"" + $name + ""} {
-            border-color: $color;
+            border-color: $color !important;
             border-width: 2px;
             pointer-events: none;
             button {

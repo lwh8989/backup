@@ -67,3 +67,22 @@
 .stds-chips2 {
     @include chips2;
 }
+
+.stds-lineHeightL {
+    line-height: $stdsLineHeightL;
+}
+.stds-lineHeightM {
+    line-height: $stdsLineHeightM;
+}
+.stds-lineHeightS {
+    line-height: $stdsLineHeightS;
+}
+
+ul {
+    li {
+        width: 30%;
+        display: inline-block;
+        margin: 0 16px 32px 0;
+        vertical-align: top;
+    }
+}

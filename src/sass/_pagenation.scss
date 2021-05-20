@@ -51,18 +51,18 @@ $ui-button-pagination-hover : #fc6020;
     height: 3.2rem;
     border-radius: 1.6rem;
     display: block;
-    background-color: $interactive_03_hover;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.pagination a:hover::after,
-.pagination a:active::after{
+.pagination a:hover::after {
     z-index: 2;
+    background-color: $interactive_03_hover;
 }
-.pagination a:active::after,
-.pagination a:focus::after {
+.pagination a:active::after {
+    z-index: 2;
+    color: $ui_icon_03_pressed;
     background-color: $interactive_03_focused;
 }
 .pagination a:hover span,
@@ -75,7 +75,7 @@ $ui-button-pagination-hover : #fc6020;
     color: #b3b3b3;
 }
 .pagination a.stove-icon:active::before {
-    color: #3a3a3a;
+    color: $ui_icon_03_pressed;
 }
 .pagination a.stove-icon::before{
     position: relative;
@@ -129,7 +129,6 @@ $ui-button-pagination-hover : #fc6020;
     height: 3.2rem;
     border-radius: 1.6rem;
     display: block;
-    background-color: #eaeaea;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -152,8 +151,14 @@ $ui-button-pagination-hover : #fc6020;
 .pagination button.stove-icon:hover::before {
     color: #b3b3b3;
 }
+.pagination button.stove-icon:hover::after {
+    background-color: $interactive_03_hover;
+}
 .pagination button.stove-icon:active::before {
     color: #3a3a3a;
+}
+.pagination button.stove-icon:active::after {
+    background-color: $interactive_03_focused;
 }
 .pagination button.stove-icon::before{
     position: relative;

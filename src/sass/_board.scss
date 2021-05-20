@@ -11,18 +11,18 @@
         overflow: hidden;
         border-radius: $Radius-L;
         box-shadow: inset 0px 0px 0px 1px $ui_border_thumbnail;
-        background: $ui_border_thumbnail
-            url("./../../static/image/ci/ic-stovelogo-thumb.png") no-repeat center
-            center;
+        // background: $ui_border_thumbnail
+        //     url("./../../static/image/ci/ic-stovelogo-thumb.png") no-repeat center
+        //     center;
 
-        [class^="ic-"],
-        [class*=" ic-"] {
-            position: absolute;
-            left: $stds-spacing-8;
-            bottom: $stds-spacing-8;
-            color: $white;
-            font-size: font.$stdsTitle4;
-        }
+        // [class^="ic-"],
+        // [class*=" ic-"] {
+        //     position: absolute;
+        //     left: $stds-spacing-8;
+        //     bottom: $stds-spacing-8;
+        //     color: $white;
+        //     font-size: font.$stdsTitle4;
+        // }
 
         .thum-num {
             @include flexCenter;
@@ -111,10 +111,10 @@
         .list-thumb {
             flex: none;
             width: 28%; // 15.5rem
-            background: $ui_border_thumbnail
-                url("./../../static/image/ci/ic-stovelogo-thumb-small.png") no-repeat
-                center center;
-            margin-left: $stds-spacing-24;
+            // background: $ui_border_thumbnail
+            //     url("./../../static/image/ci/ic-stovelogo-thumb-small.png") no-repeat
+            //     center center;
+            // margin-left: $stds-spacing-24;
 
             .inner {
                 @include ratio($ratio-4-3); // 16:9
@@ -365,8 +365,8 @@
         width: 16rem;
         height: 16rem;
         margin-bottom: $stds-spacing-12;
-        background: url("./../../static/image/list/ic-post-w-180.png") no-repeat center
-            center;
+        // background: url("./../../static/image/list/ic-post-w-180.png") no-repeat center
+        //     center;
     }
 }
 .list-inacces-empty {
@@ -387,8 +387,8 @@
         width: 16rem;
         height: 16rem;
         margin-bottom: $stds-spacing-12;
-        background: url("./../../static/image/list/ic-limit-w-180.png") no-repeat center
-            center;
+        // background: url("./../../static/image/list/ic-limit-w-180.png") no-repeat center
+        //     center;
     }
 
     .btn-back {

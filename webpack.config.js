@@ -123,9 +123,10 @@ module.exports = async function () {
             {
               loader: 'file-loader',
               options: {
-                name: 'static/image/[contenthash].[ext]'
+                name: '[path][name].[ext]',
+                publicPath: '../'
               }
-            } 
+            }
           ]
         }
       ],

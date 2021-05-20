@@ -43,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include stds-font-mixin.sdtxFamily($inter: "Intel KR", $noto: "Noto Sans KR");
+    @include stds-font-mixin.sdtxFamily($inter: "inter KR", $noto: "Noto Sans KR");
 }
 
 /* Chinese zh */
@@ -58,7 +58,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include stds-font-mixin.sdtxFamily($inter: "Intel SC", $noto: "Noto Sans SC");
+    @include stds-font-mixin.sdtxFamily($inter: "inter SC", $noto: "Noto Sans SC");
 }
 
 /* Chinese zh-tw  */
@@ -73,7 +73,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include stds-font-mixin.sdtxFamily($inter: "Intel TC", $noto: "Noto Sans TC");
+    @include stds-font-mixin.sdtxFamily($inter: "inter TC", $noto: "Noto Sans TC");
 }
 
 /* Japan */
@@ -88,7 +88,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include stds-font-mixin.sdtxFamily($inter: "Intel JP", $noto: "Noto Sans JP");
+    @include stds-font-mixin.sdtxFamily($inter: "inter JP", $noto: "Noto Sans JP");
 }
 
 /* English */
@@ -103,7 +103,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include stds-font-mixin.sdtxFamily($inter: "Intel Global", $noto: null);
+    @include stds-font-mixin.sdtxFamily($inter: "inter Global", $noto: null);
 }
 
 /* French  */
@@ -118,7 +118,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include stds-font-mixin.sdtxFamily($inter: "Intel Global", $noto: null);
+    @include stds-font-mixin.sdtxFamily($inter: "inter Global", $noto: null);
 }
 
 /* Portugal */
@@ -133,7 +133,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include stds-font-mixin.sdtxFamily($inter: "Intel Global", $noto: null);
+    @include stds-font-mixin.sdtxFamily($inter: "inter Global", $noto: null);
 }
 
 /* Spanish */
@@ -148,7 +148,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include stds-font-mixin.sdtxFamily($inter: "Intel Global", $noto: null);
+    @include stds-font-mixin.sdtxFamily($inter: "inter Global", $noto: null);
 }
 
 /* German */
@@ -163,7 +163,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include stds-font-mixin.sdtxFamily($inter: "Intel Global", $noto: null);
+    @include stds-font-mixin.sdtxFamily($inter: "inter Global", $noto: null);
 }
 
 /* Thailand */
@@ -178,5 +178,5 @@ h3,
 h4,
 h5,
 h6 {
-    @include stds-font-mixin.sdtxFamily($inter: "Intel Thai", $noto: "Noto Sans Thai");
+    @include stds-font-mixin.sdtxFamily($inter: "inter Thai", $noto: "Noto Sans Thai");
 }

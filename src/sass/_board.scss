@@ -12,7 +12,7 @@
         border-radius: $Radius-L;
         box-shadow: inset 0px 0px 0px 1px $ui_border_thumbnail;
         background: $ui_border_thumbnail
-            url("~/static/image/ci/ic-stovelogo-thumb.png") no-repeat center
+            url("./../../static/image/ci/ic-stovelogo-thumb.png") no-repeat center
             center;
 
         [class^="ic-"],
@@ -112,7 +112,7 @@
             flex: none;
             width: 28%; // 15.5rem
             background: $ui_border_thumbnail
-                url("~/static/image/ci/ic-stovelogo-thumb-small.png") no-repeat
+                url("./../../static/image/ci/ic-stovelogo-thumb-small.png") no-repeat
                 center center;
             margin-left: $stds-spacing-24;
 
@@ -365,7 +365,7 @@
         width: 16rem;
         height: 16rem;
         margin-bottom: $stds-spacing-12;
-        background: url("~/static/image/list/ic-post-w-180.png") no-repeat center
+        background: url("./../../static/image/list/ic-post-w-180.png") no-repeat center
             center;
     }
 }
@@ -387,7 +387,7 @@
         width: 16rem;
         height: 16rem;
         margin-bottom: $stds-spacing-12;
-        background: url("~/static/image/list/ic-limit-w-180.png") no-repeat center
+        background: url("./../../static/image/list/ic-limit-w-180.png") no-repeat center
             center;
     }
 

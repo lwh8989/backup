@@ -33,17 +33,14 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         &::placeholder {
             color: color.$ui_text_white_02;
         }
-
         &:hover {
             background-color: color.$ui_form_white_hover;
         }
-
         &.active {
             background-color: color.$ui_form_white_focused;
             border-color: color.$ui_form_white_focused_border;
             color: color.$ui_text_white_01;
         }
-
         &:focus {
             background-color: color.$ui_form_white_focused;
             border-color: color.$ui_form_white_focused_border;
@@ -70,11 +67,9 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         position: relative;
         flex: 1 100%;
         height: 100%;
-
         input {
             width: 100%;
             height: 100%;
-
             @at-root .element-input-icon {
                 &.box-reverse {
                     input {
@@ -87,7 +82,6 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     & > button {
         color: color.$ui_icon_03_enabled;
         margin-right: 0.8rem;
-
         &.ic-control-close-circle-fill {
             color: color.$ui_icon_04_enabled;
             display: none;
@@ -98,14 +92,9 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         &.ic-navigation-search-line {
             color: color.$ui_icon_03_enabled;
         }
-
         &:last-of-type {
             margin-right: 0;
         }
-
-        // &:hover {
-        //     color: color.$gray200;
-        // }
     }
     &.disabled,
     &:hover {
@@ -117,6 +106,11 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     }
     &.round {
         border-radius: 99.9rem;
+    }
+    &.active {
+        .ic-control-close-circle-fill {
+            display: block;
+        }
     }
     &.filled {
         border: 1px solid transparent;

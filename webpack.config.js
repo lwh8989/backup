@@ -123,8 +123,7 @@ module.exports = async function () {
             {
               loader: 'file-loader',
               options: {
-                name: '[path][name].[ext]',
-                publicPath: './'
+                name: '[path][name].[ext]'
               }
             }
           ]

@@ -20,7 +20,6 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         &.active {
             background-color: color.$ui_form_fill_focused;
             border-color: color.$ui_form_fill_focused_border;
-            
         }
         &:focus {
             background-color: color.$ui_form_fill_focused;
@@ -34,20 +33,18 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         &::placeholder {
             color: color.$ui_text_white_02;
         }
-
         &:hover {
             background-color: color.$ui_form_white_hover;
         }
-
         &.active {
             background-color: color.$ui_form_white_focused;
             border-color: color.$ui_form_white_focused_border;
             color: color.$ui_text_white_01;
         }
-
         &:focus {
             background-color: color.$ui_form_white_focused;
             border-color: color.$ui_form_white_focused_border;
+            color: color.$ui_text_white_01;
         }
         &:disabled {
             color: color.$ui_text_white_02;
@@ -65,17 +62,14 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     @include mixin.flex($type: inline-flex, $y: center);
     position: relative;
     padding-right: space.$stds-spacing-16;
-
     .element-input-wrap {
         @include mixin.flex($y: center);
         position: relative;
         flex: 1 100%;
         height: 100%;
-
         input {
             width: 100%;
             height: 100%;
-
             @at-root .element-input-icon {
                 &.box-reverse {
                     input {
@@ -88,7 +82,6 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     & > button {
         color: color.$ui_icon_03_enabled;
         margin-right: 0.8rem;
-
         &.ic-control-close-circle-fill {
             color: color.$ui_icon_04_enabled;
             display: none;
@@ -99,59 +92,44 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         &.ic-navigation-search-line {
             color: color.$ui_icon_03_enabled;
         }
-
         &:last-of-type {
             margin-right: 0;
         }
-
-        // &:hover {
-        //     color: color.$gray200;
-        // }
     }
-
     &.disabled,
     &:hover {
-        // button {
-        //     &.ic-navigation-search-line {
-        //         color: color.$gray300;
-        //     }
-        // }
-    }
-
-    &.active,
-    &:focus-within {
         button {
             &.ic-navigation-search-line {
-                color: color.$ui_icon_03_pressed;
+                color: color.$gray300;
             }
         }
     }
-    &.active {
-        button {
-            &.ic-control-close-circle-fill {
-                display: block;
-            }
-        }
-    }
-
     &.round {
         border-radius: 99.9rem;
     }
-
+    &.active {
+        .ic-control-close-circle-fill {
+            display: block;
+        }
+    }
     &.filled {
         border: 1px solid transparent;
         background-color: color.$ui_form_fill_enabled;
-
         &.active,
         &:focus-within,
         &:hover {
             background-color: color.$ui_form_fill_hover;
+            // .ic-control-close-circle-fill {
+            //     color: red;
+            // }
+            .ic-navigation-search-line {
+                color: color.$ui_icon_03_pressed;
+            }
         }
         &.active,
         &:focus-within {
             border: 1px solid color.$gray500;
         }
-
         &.error,
         &.warning,
         &.success,
@@ -161,26 +139,55 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
             }
         }
     }
-
     &.inverse-filled {
         background-color: color.$ui_form_white_enabled;
         border: 1px solid transparent;
         .element-input {
             color: color.$ui_text_white_02;
-        }
-        .ic-navigation-search-line {
-            color: color.$ui_icon_white_enabled;
+            &:focus,
+            &:active,
+            &:focus-within {
+                color: color.$ui_text_white_01;
+                ::placeholder {
+                    color: color.$ui_text_white_01;
+                }
+                .ic-navigation-search-line {
+                    color: color.$ui_icon_white_enabled !important;
+                }
+            }
         }
         &:hover {
             background-color: color.$ui_form_white_hover;
+            .ic-navigation-search-line {
+                color: color.$ui_icon_white_enabled;
+            }
         }
         &.active {
             background-color: color.$ui_form_white_focused;
             border-color: color.$ui_form_white_focused_border;
+            .element-input {
+                color: color.$ui_text_white_01;
+            }
+            .ic-navigation-search-line {
+                color: color.$ui_icon_white_enabled;
+            }
         }
         &:focus {
-            background-color: color.$ui_form_fill_focused;
-            border-color: color.$ui_form_fill_focused_border;
+            background-color: color.$ui_form_white_focused;
+            border-color: color.$ui_form_white_focused_border;
+            color: color.$ui_text_white_01;
+            .ic-navigation-search-line {
+                color: color.$ui_icon_white_enabled !important;
+            }
+        }
+        &:focus-within {
+            border: 1px solid color.$ui_form_white_focused_border;
+            ::placeholder {
+                color: color.$ui_text_white_01;
+            }
+            .element-input {
+                color: color.$ui_text_white_01;
+            }
         }
         &.error,
         &.warning,
@@ -191,8 +198,10 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
                 color: color.$ui_text_white_01;
             }
         }
+        .ic-navigation-search-line {
+            color: color.$ui_icon_white_enabled;
+        }
     }
-
     &.error,
     &.warning,
     &.success,
@@ -201,7 +210,6 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
             color: color.$ui_text_03;
         }
     }
-
     // state colors
     @each $name, $color in color.$elementState {
         &.#{"" + $name + ""} {
@@ -213,7 +221,6 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
             }
         }
     }
-
     &.box-reverse {
         padding-left: space.$stds-spacing-16;
     }

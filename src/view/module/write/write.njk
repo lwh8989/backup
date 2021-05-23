@@ -2,10 +2,13 @@
 
 {% import "_include/module/board/board.njk" as board %}
 {% import "_include/module/write/write.njk" as write %}
-
-
+{% import "_include/module/write/write-ui.njk" as writeUi %}
+   
 <!-- styles -->
 {% block styles %}
+    <!-- [D] Swiper Library -->
+    <link rel="stylesheet" href="/static/lagarcy/vendors/swiper/swiper.min.css"/>
+    <script src="/static/lagarcy/vendors/swiper/swiper.min.js"></script>
 {% endblock %}
 
 <!-- styles -->
@@ -23,6 +26,10 @@
             {{ write.base() }}
         </div>
     </div>
+
+    <p class="tit"><b>Stove Write UI</b></p>
+    <p class="desc">Emoji</p>
+    {{ writeUi.baseEmoji() }}
 
 </div>
 

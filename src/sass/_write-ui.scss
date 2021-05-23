@@ -184,6 +184,8 @@
                 position: relative;
                 display: flex;
                 flex-direction: column;
+                margin: 0;
+                padding: 0;
                 li {
                     position: relative;
                     display: flex;
@@ -234,6 +236,50 @@
                 color: color.$ui_text_03;
                 i {
                     margin-left: space.$stds-spacing-8;
+                }
+            }
+        }
+    }
+    &.reply-write {
+        position: relative;
+        border: 0.1rem solid color.$ui_button_05_enabled_border;
+        border-bottom: 0;
+        box-sizing: border-box;
+        .reply-write-edit {
+            min-height: 12rem;
+            font-size: font.$stdsBody3;
+            color: color.$ui_text_02;
+            padding: space.$stds-spacing-12 space.$stds-spacing-16;
+            outline: none;
+            background-color: color.$ui_button_05_enabled;
+            &[contentEditable='true']:empty:not(:focus):before {
+                content: attr(data-text);
+                font-size: font.$stdsBody3;
+                color: color.$ui_text_disabled;
+                cursor: pointer;
+            }
+
+        }
+        .reply-write-tool {
+            display: flex;
+            .tool-icon-btn {
+                flex: 1;
+                border-top: 0.1rem solid color.$ui_button_05_enabled_border;
+                border-bottom: 0.1rem solid color.$ui_button_05_enabled_border;
+                box-sizing: border-box;
+                button {
+                    width: 3.8rem;
+                    height: 3.8rem;
+                    i {
+                        font-size: 2.4rem;
+                        color: color.$ui_icon_03_enabled;
+                    }
+                }
+            }
+            .tool-btn {
+                .element-btn {
+                    border-radius: 0;
+                    margin-right: -0.1rem;
                 }
             }
         }

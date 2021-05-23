@@ -1,0 +1,81 @@
+@use "./color";
+@use "./font";
+@use "./space";
+
+.module-reply {
+    position: relative;
+    padding: space.$stds-spacing-20 0;
+    border-bottom: 0.1px solid color.$ui_divider_black_02;
+    &:first-of-type {
+        border-top: 0.1px solid color.$ui_divider_black_02;
+    }
+    .reply-header {
+        display: flex;
+        margin-bottom: space.$stds-spacing-20;
+        .module-profile {
+            flex: 1;
+            .profile-img {
+                width: 3.6rem;
+                height: 3.6rem;
+            }
+            .profile-contents {
+                .profile-nickname {
+                    font-size: font.$stdsBody4;
+                }
+            }
+            .time {
+                font-size: 1.2rem;
+            }
+        }
+        .info-btn {
+            display: flex;
+            align-items: flex-start;
+            button {
+                i {
+                    font-size: 2rem;
+                    color: color.$ui_icon_05_enabled;
+                    &:hover {
+                        color: color.$ui_icon_05_hover;                        
+                    }
+                }
+            }
+            .ic-object-reply {
+                font-size: 1.3rem;
+            }
+            .profile-img {
+                display: flex;
+                width: 2rem;
+                height: 2rem;
+                margin-right: 1.2rem;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .reply-contents {
+        margin-left: space.$stds-spacing-44;
+        .reply-fr-view {
+            font-size: font.$stdsBody3;
+            color: color.$ui_text_02;
+        }
+    }
+    .reply-footer {
+        display: flex;
+        margin-left: space.$stds-spacing-44;
+        margin-top: space.$stds-spacing-16;
+        .footer-left {
+            display: flex;
+            flex: 1;
+        }
+        .footer-right {
+            display: flex;
+        }
+        .element-btn {
+            margin-left: space.$stds-spacing-8;
+            &:first-of-type {
+                margin-left: 0;
+            }
+        }
+    }
+}

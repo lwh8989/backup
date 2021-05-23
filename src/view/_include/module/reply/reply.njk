@@ -1,0 +1,83 @@
+{% import "_include/module/profile/profile.njk" as profile %}
+{% import "_include/form/button.njk" as btn %}
+
+{% macro reply( option, report, forword, replyS, replyM, replyL ) %}
+<div class="module-reply">
+    <div class="reply-header">
+        {{ profile.profileHorizontal ( viewOption="display: none;" ) }}
+        {% if option %}
+        <div class="info-btn">
+            <button><i class="ic-navigation-option-vertical-fill"></i></button>
+        </div>
+        {% elif report %}
+        <div class="info-btn">
+            <button><i class="ic-object-report-line"></i></button>
+        </div>
+        {% elif forword %}
+        <div class="info-btn">
+            <div class="profile-img">
+                <img src="/static/image/list/profile_demo.png" alt="">
+            </div>
+            <button><i class="ic-object-report-line"></i></button>
+        </div>
+        {% endif %}
+    </div>
+    <div class="reply-contents">
+        {% if replyS %}
+        <div class="fr-view">
+            <p>다키스트 던전의 캐주얼 버전이라고 생각하시면될듯? 근데 버그가 좀 있긴하네여 장비 드래그로 껴주다가</p>
+        </div>
+        {% elif replyM %}
+        <div class="fr-view">
+            <p>다키스트 던전의 캐주얼 버전이라고 생각하시면될듯? 근데 버그가 좀 있긴하네여 장비 드래그로 껴주다가</p>
+            <p>
+                <img class="emoji-wrap" src="https://dummyimage.com/100x100/0099ff/fff" alt="emoji">
+                요놈 이상해
+            </p>
+            <p>
+                <span class="img-wrap">
+                    <img src="https://dummyimage.com/250x375/0099ff/fff" alt="image">
+                </span>
+            </p>
+        </div>
+        {% elif replyL %}
+        <div class="fr-view">
+            <p>
+                <img class="emoji-wrap" src="https://dummyimage.com/100x100/0099ff/fff" alt="emoji">
+                <img class="emoji-wrap" src="https://dummyimage.com/100x100/0099ff/fff" alt="emoji">
+                요놈 이상해
+                <img class="emoji-wrap" src="https://dummyimage.com/100x100/0099ff/fff" alt="emoji">
+                요놈 이상해
+            </p>
+            <p>
+                <span class="img-wrap">
+                    <img src="https://dummyimage.com/250x375/0099ff/fff" alt="image">
+                </span>
+                <span class="img-wrap">
+                    <img src="https://dummyimage.com/250x600/0099ff/fff" alt="image">
+                </span>
+                <span class="img-wrap">
+                    <img src="https://dummyimage.com/600x250/0099ff/fff" alt="image">
+                </span>
+            </p>
+            <p class="video-wrap">
+                <span class="fr-video fr-dvi">
+                <iframe src="https://www.youtube.com/embed/qMZtvvONN6s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                </span>
+            </p>
+            <p>다키스트 던전의 캐주얼 버전이라고 생각하시면될듯? 근데 버그가 좀 있긴하네여 장비 드래그로 껴주다가 다키스트 던전의 캐주얼 버전이라고 생각하시면될듯? 근데 버그가 좀 있긴하네여 장비 드래그로 껴주다가 다키스트 던전의 캐주얼 버전이라고 생각하시면될듯? 근데 버그가 좀 있긴하네여 장비 드래그로 껴주다가</p>
+        </div>
+        {% endif %}
+    </div>
+    <div class="reply-footer">
+        <div class="footer-left">
+            {{ btn.withIcon(colorClass='bg-outline', sizeClass='size-chips32', txt='999+', withIcon='with-icon', iconClass='ic-community-reply-line') }}
+            {{ btn.base(colorClass='bg-outline', sizeClass='size-chips32', txt='댓글쓰기') }}
+        </div>
+        <div class="footer-right">
+            {{ btn.withIcon(colorClass='bg-outline', sizeClass='size-chips32', txt='999+', withIcon='with-icon', iconClass='ic-community-thumbs-up-line') }}
+            {{ btn.withIcon(colorClass='bg-outline', sizeClass='size-chips32', txt='999+', withIcon='with-icon', iconClass='ic-community-thumbs-down-line') }}
+        </div>
+    </div>
+</div>
+{% endmacro %}

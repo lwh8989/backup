@@ -1,0 +1,62 @@
+@use "./font";
+@use "./color";
+@use "./space";
+
+.module-profile {
+    display: flex;
+    .profile-img {
+        display: flex;
+        width: 4rem;
+        height: 4rem;
+        margin-right: space.$stds-spacing-8;
+    }
+    .profile-contents {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: left;
+        .profile-nickname {
+            font-size: font.$stdsBody3;
+            font-weight: font.$stdsWeightBold;
+            color: color.$ui_text_02;
+        }
+        .profile-info {
+            display: inline-flex;
+        }
+    }
+    .profile-mark {
+        font-size: font.$stdsBody3;
+        font-weight: font.$stdsWeightBold;
+        color: color.$ui_text_02;
+        &.gm {
+            color: color.$system_info;
+        }
+    }
+    .time {
+        display: inline-flex;
+        font-size: font.$stdsCaption1;
+        color: color.$ui_text_04;
+    }
+    .info-option {
+        display: inline-flex;
+    }
+    .midd-dot {
+        display: inline-flex;
+        vertical-align: middle;
+        font-size: font.$stdsCaption1;
+        padding: 0 space.$stds-spacing-4;
+    }
+    .view {
+        display: inline-flex;
+        font-size: font.$stdsCaption1;
+        color: color.$ui_text_04;
+        i {
+            display: inline-flex;
+            vertical-align: middle;
+            font-size: 1.6rem;
+            color: color.$ui_icon_01_enabled;
+            margin-top: 0.2rem;
+            margin-right: space.$stds-spacing-4;
+        }
+    }
+}

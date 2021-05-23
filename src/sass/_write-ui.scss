@@ -9,10 +9,9 @@
         position: relative;
         width: 33.4rem;
         height: auto;
-        border: 1px solid #999999;
+        border: 1px solid #6e6e6e;
         box-sizing: border-box;
         background-color: #fff;
-        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
         .swiper-nav-container {
             position: relative;
             width: 100%;
@@ -43,11 +42,19 @@
             }
             .swiper-button-prev {
                 left: 0;
-                border-right: 1px solid #efefef;
+                border-right: 1px solid color.$ui_divider_black_02;
+                &.swiper-button-disabled {
+                    opacity: 1;
+                    color: color.$ui_icon_03_disabled;
+                }
             }
             .swiper-button-next {
                 right: 0;
-                border-left: 1px solid #efefef;
+                border-left: 1px solid color.$ui_divider_black_02;
+                &.swiper-button-disabled {
+                    opacity: 1;
+                    color: color.$ui_icon_03_disabled;
+                }
             }
             .swiper-slide {
                 overflow: hidden;
@@ -128,6 +135,105 @@
                         top: unset;
                         left: unset;
                     }
+                }
+            }
+        }
+    }
+    &.attached-file {
+        position: relative;
+        border: 0.1rem solid color.$ui_border_contents;
+        .attached-file-header {
+            position: relative;
+            padding: 2rem 2.4rem;
+            background-color: color.$ui_bg_base_gray50;
+            .attach-file-title {
+                font-size: font.$stdsBody2;
+                color: color.$ui_text_02;
+                strong {
+                    color: color.$ui_text_brand;
+                    margin-left: 0.4rem;
+                }
+            }
+            .attach-file-size {
+                position: absolute;
+                right: 2rem;
+                top: 2rem;
+                font-size: font.$stdsBody4;
+                text-align: right;
+                .counter {
+                    color: color.$ui_text_brand;
+                }
+                .total {
+                    position: relative;
+                    padding-left: 0.8rem;
+                    color: color.$ui_text_04;
+                    &::before {
+                        content: '/';
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top: -0.1px;
+                        color: color.$ui_text_04;
+                    }
+                }
+            }
+        }
+        .attached-file-contents {
+            position: relative;
+            ul {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                li {
+                    position: relative;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    padding: 1.6rem 2.4rem;
+                    border-top: 0.1rem solid color.$ui_divider_black_02;
+                    :first-of-type {
+                        border-top: 0;
+                    }
+                    .file-name {
+                        flex: 1;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-size: font.$stdsBody3;
+                        color: color.$ui_text_03;
+                        margin-right: space.$stds-spacing-24;
+                    }
+                    .file-info {
+                        display: flex;
+                    }
+                    .file-size {
+                        font-size: font.$stdsBody4;
+                        color: color.$ui_text_03;
+                        margin-right: space.$stds-spacing-8;
+                    }
+                    .file-btn {
+                        i {
+                            font-size: 16px;
+                            color: color.$ui_icon_01_enabled;
+                        }
+                    }
+                }
+            }
+        } 
+        .attached-file-footer {
+            display: flex;
+            position: relative;
+            padding: 1.6rem 2.4rem;
+            border-top: 0.1rem solid color.$ui_divider_black_02;
+            .size {
+                flex: 1;
+                font-size: font.$stdsBody4;
+                color: color.$ui_text_04;
+            }
+            .delete {
+                font-size: font.$stdsBody4;
+                color: color.$ui_text_03;
+                i {
+                    margin-left: space.$stds-spacing-8;
                 }
             }
         }

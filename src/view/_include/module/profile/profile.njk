@@ -1,18 +1,52 @@
-{% macro profileHorizontal( profileInfo, viewOption ) %}
+{% macro profileHorizontal( profileInfo, viewOption, profileInfo, height ) %}
+    <div class="module-profile">
+        <!-- [D] active 추가하면 메뉴가 나옵니다.  -->
+        <div class="element-dropdown {{ height }}">
+            <button class="element-select-button ">
+                <div class="profile-img">
+                    <img src="/static/image/list/profile_demo.png" alt="">
+                </div>
+                <div class="profile-contents">
+                    <span class="profile-nickname">
+                        <span class="profile-mark gm">GM</span>
+                        <span class="profile-mark cm">CM</span>
+                        <span class="profile-mark official">Official</span>
+                        STOVE 인디
+                    </span>
+                    <span class="profile-info" style="{{ profileInfo }}">
+                        <span class="time">2020.06.25 23:04 (UTC+9)</span>
+                        <span class="info-option" style="{{ viewOption }}">
+                            <i class="midd-dot">·</i>
+                            <span class="view"><i class="ic-community-number-of-view-line"></i>999</span>
+                        </span>
+                    </span>
+                </div>
+            </button>
+            <div class="element-dropdown-layer absolute top">
+                <div class="element-dropdown-layer-inner">
+                    <select hidden="">
+                        <option value="1">인디 타임라인 보기</option>
+                        <option value="2">작성글 보기</option>
+                    </select>
+                    <button class="element-dropdown-button selected">인디 타임라인 보기</button>
+                    <button class="element-dropdown-button">작성글 보기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro profileHorizontalMin(  ) %}
     <div class="module-profile">
         <div class="profile-img">
             <img src="/static/image/list/profile_demo.png" alt="">
         </div>
         <div class="profile-contents">
             <span class="profile-nickname">
-                <span class="profile-mark gm">GN</span> STOVE 인디
-            </span>
-            <span class="profile-info">
-                <span class="time">2020.06.25 23:04 (UTC+9)</span>
-                <span class="info-option" style="{{ viewOption }}">
-                    <i class="midd-dot">·</i>
-                    <span class="view"><i class="ic-community-number-of-view-line"></i>999</span>
-                </span>
+                {# <span class="profile-mark gm">GM</span>
+                <span class="profile-mark cm">CM</span>
+                <span class="profile-mark official">Official</span> #}
+                STOVE 인디
             </span>
         </div>
     </div>

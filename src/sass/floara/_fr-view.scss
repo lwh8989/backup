@@ -1,4 +1,5 @@
 @use "./../space";
+@use "./../color";
 @use "./../font";
 
 /* Base S */
@@ -29,6 +30,13 @@
     font-size: 1.6rem;
     p {
         font-size: 1.6rem;
+    }
+
+    a {
+        &.name-link {
+            color: color.$tint_indigo500;
+            font-weight: font.$stdsWeightBold;
+        }
     }
 
     ul {

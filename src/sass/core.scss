@@ -31,10 +31,16 @@
 @import "./pagenation";
 @import "./board";
 @import "./list";
+@import "./profile";
 
 /* write */
 @import "./write";
+@import "./write-ui";
 @import "./attach";
+
+/* detail */
+@import "./detail";
+@import "./reply";
 
 /* partial */
 @import "./dialog";

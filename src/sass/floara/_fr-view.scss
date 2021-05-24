@@ -1,3 +1,7 @@
+@use "./../space";
+@use "./../color";
+@use "./../font";
+
 /* Base S */
 .fr-element {
     position: relative;
@@ -10,7 +14,7 @@
             -webkit-user-select: none;
             user-select: none;
         }
-        & p {
+        p {
             word-break: break-all;
             word-break: break-word;
             word-wrap: break-word;
@@ -23,11 +27,22 @@
 .fr-view {
     overflow-x: auto;
     overflow-y: hidden;
+    font-size: 1.6rem;
+    p {
+        font-size: 1.6rem;
+    }
+
+    a {
+        &.name-link {
+            color: color.$tint_indigo500;
+            font-weight: font.$stdsWeightBold;
+        }
+    }
 
     ul {
-        padding-left: 32px;
-        margin-top: 16px;
-        margin-bottom: 16px;
+        padding-left: 3.2rem;
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
         list-style: inherit;
 
         li {
@@ -36,9 +51,9 @@
     }
 
     ol {
-        padding-left: 32px;
-        margin-top: 16px;
-        margin-bottom: 16px;
+        padding-left: 3.2rem;
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
 
         li {
             list-style: decimal;
@@ -46,25 +61,33 @@
     }
 
     strong {
-        font-weight: 700;
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
+        font-weight: font.$stdsWeightBold;
     }
 
     em {
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
         font-style: italic;
     }
 
     u {
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
         text-decoration: underline;
     }
 
     s {
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
         text-decoration: line-through;
     }
 
     blockquote {
-        border-left: solid 2px #5e35b1;
+        border-left: solid 0.5rem #5e35b1;
         margin-left: 0;
-        padding-left: 5px;
+        padding-left: 0.5rem;
         color: #5e35b1;
     }
 
@@ -80,6 +103,7 @@
     }
 
     img {
+        width: 100%;
         vertical-align: bottom !important;
     }
 

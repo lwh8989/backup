@@ -6,7 +6,7 @@
 {% import "_include/module/write/attach.njk" as attach %}
 
 {% macro base(  ) %}
-<div class="module-write" style="margin-bottom: 400px;">
+<div class="module-write">
   <!-- Header -->
   <div class="write-header">
     {{ dropdown.select(
@@ -379,7 +379,7 @@
       </div>
     </div>
   </div>
-  
+  <!-- footer -->
   <div class="write-footer">
     <div class="footer-align-left">
       {{ btn.base(colorClass='bg-outline', sizeClass='size-medium', txt='임시저장', shapeClass='') }}

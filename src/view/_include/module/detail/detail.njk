@@ -1,0 +1,14 @@
+{% import "_include/module/detail/detail-part.njk" as detailPart %}
+{% import "_include/module/pagination/pagination.njk" as pagination %}
+
+{% macro detail( title, profileInfo ) %}
+<div class="module-detail">
+    {{ detailPart.detailHeader( title, profileInfo ) }}
+    {{ detailPart.detailContents( ) }}
+    {{ detailPart.detailBanner( ) }}
+    {{ detailPart.detailFooter( dataText="포스트를 입력해주세요.", viewOption="display: none;" ) }}
+    {{ pagination.base( isATag=false ) }}
+</div>
+{% endmacro %}
+
+

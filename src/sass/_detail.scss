@@ -51,6 +51,10 @@
                     &:hover {
                         color: color.$ui_icon_05_hover;
                     }
+                    &:focus,
+                    &:focus-within {
+                        color: color.$ui_icon_05_focused;
+                    }
                     &.active {
                         color: color.$ui_icon_05_focused;
                     }

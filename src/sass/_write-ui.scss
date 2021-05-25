@@ -144,11 +144,21 @@
         border: 0.1rem solid color.$ui_border_contents;
         .attached-file-header {
             position: relative;
-            padding: 2rem 2.4rem;
+            padding: 1.2rem 2.4rem;
             background-color: color.$ui_bg_base_gray50;
             .attach-file-title {
+                display: flex;
                 font-size: font.$stdsBody2;
                 color: color.$ui_text_02;
+                align-items: center;
+                i {
+                    padding: space.$stds-spacing-8;
+                    font-size: 2rem;
+                    border-radius: 50%;
+                    color: color.$white;
+                    background-color: color.$tint_dazzlingbluea400;
+                    margin-right: space.$stds-spacing-12;
+                }
                 strong {
                     color: color.$ui_text_brand;
                     margin-left: 0.4rem;

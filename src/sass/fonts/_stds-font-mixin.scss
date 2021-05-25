@@ -107,8 +107,20 @@
 }
 
 /* Mixin */
-@mixin sdtxFamily($inter, $noto) {
-    font-family: $inter,
+/* Family-lang */
+@mixin stdsLang($lang, $inter, $noto) {
+    :lang(#{$lang}) body,
+    :lang(#{$lang}) a,
+    :lang(#{$lang}) button,
+    :lang(#{$lang}) input,
+    :lang(#{$lang}) textarea,
+    :lang(#{$lang}) h1,
+    :lang(#{$lang}) h2,
+    :lang(#{$lang}) h3,
+    :lang(#{$lang}) h4,
+    :lang(#{$lang}) h5,
+    :lang(#{$lang}) h6 {
+        font-family: $inter,
         $noto,
         -apple-system,
         Segoe UI,
@@ -117,4 +129,5 @@
         sans-serif,
         Apple Color Emoji,
         Segoe UI Emoji
+    }
 }

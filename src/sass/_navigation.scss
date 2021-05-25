@@ -4,6 +4,7 @@
 @import "./font";
 @import "./color";
 @import "./space";
+@import "./mixin/mixin";
 
 .layout-navigation {
     display: none;
@@ -74,10 +75,9 @@
             width: 100%;
             line-height: 2.4rem;
             flex-wrap: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
             flex-basis: auto;
+            @include ellipsis($line: 1);
+            word-break: break-word;
             .item {
                 font-size: 1.5rem;
                 color: $ui-text-03;

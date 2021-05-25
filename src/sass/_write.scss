@@ -1,4 +1,5 @@
 @use "./font";
+@use "./mixin/mixin";
 
 .module-write {
     .write-header {
@@ -207,11 +208,10 @@
                     }
                     .element-btn {
                         max-width: 12rem;
-                        margin: 0 $stds-spacing-8 $stds-spacing-8 0;
                         .btn-txt {
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
+                            @include ellipsis($line: 1);
+                            display: inline-block;
+                            word-break: break-word;
                         }
                     }
                 }

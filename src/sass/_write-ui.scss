@@ -1,6 +1,7 @@
 @use "./font";
 @use "./color";
 @use "./space";
+@use "./mixin/mixin";
 
 /* emoji */
 /* reset */
@@ -105,9 +106,8 @@
             }
         }
         .emoji-tit {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            @include ellipsis($line: 1);
+            word-break: break-word;
             font-size: 12px;
             font-weight: font.$stdsWeightNormal;
             color: #666;
@@ -207,9 +207,8 @@
                     }
                     .file-name {
                         flex: 1;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
+                        @include ellipsis($line: 1);
+                        word-break: break-word;
                         font-size: font.$stdsBody3;
                         color: color.$ui_text_03;
                         margin-right: space.$stds-spacing-24;

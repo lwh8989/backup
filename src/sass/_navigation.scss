@@ -11,27 +11,33 @@
     order: 2;
     height: 4.8rem;
     flex: 0 1 100%;
-    padding: $stds-spacing-12 $stds-spacing-16;
-    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
     background: $white;
     &.is-active {
         display: block;
     }
-    .is-fixed-depth1 {
+}
+
+.mobule-navigation {
+    height: 4.8rem;
+    flex: 0 1 100%;
+    padding: $stds-spacing-12 $stds-spacing-16;
+    background: $white;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
+    &.is-fixed-depth1 {
         display: block;
         position: fixed;
         top: $stds-fixed-depth1;
         width: 100%;
         z-index: $zindex-fixed;
     }
-    .is-fixed-depth2 {
+    &.is-fixed-depth2 {
         display: block;
         position: fixed;
         top: $stds-fixed-depth2;
         width: 100%;
         z-index: $zindex-fixed;
     }
-    .is-fixed-depth3 {
+    &.is-fixed-depth3 {
         display: block;
         position: fixed;
         top: $stds-fixed-depth3;

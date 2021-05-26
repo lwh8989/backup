@@ -16,19 +16,19 @@
 
 .layout-header {
     @include layoutHeader($background:#ddd);
-    &.is-fixed-depth1 {
+    .is-fixed-depth1 {
         position: fixed;
         top: $stds-fixed-depth1;
         width: 100%;
         z-index: $zindex-fixed;
     }
-    &.is-fixed-depth2 {
+    .is-fixed-depth2 {
         position: fixed;
         top: $stds-fixed-depth2;
         width: 100%;
         z-index: $zindex-fixed;
     }
-    &.is-fixed-depth3 {
+    .is-fixed-depth3 {
         position: fixed;
         top: $stds-fixed-depth3;
         width: 100%;

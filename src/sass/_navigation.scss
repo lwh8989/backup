@@ -17,21 +17,21 @@
     &.is-active {
         display: block;
     }
-    &.is-fixed-depth1 {
+    .is-fixed-depth1 {
         display: block;
         position: fixed;
         top: $stds-fixed-depth1;
         width: 100%;
         z-index: $zindex-fixed;
     }
-    &.is-fixed-depth2 {
+    .is-fixed-depth2 {
         display: block;
         position: fixed;
         top: $stds-fixed-depth2;
         width: 100%;
         z-index: $zindex-fixed;
     }
-    &.is-fixed-depth3 {
+    .is-fixed-depth3 {
         display: block;
         position: fixed;
         top: $stds-fixed-depth3;

@@ -13,6 +13,21 @@
 </div>
 {% endmacro %}
 
+<!-- 메뉴령 -->
+{% macro baseMenu( state, iconLeft1, menudepth1, menudepth2, menudepth3, menudepth4, itemActive1, itemActive2, itemActive3, itemActive4 ) %}
+<div class="container">
+    <button class="nav-btn align-left">
+        <i class="{{ iconLeft1 }}"></i>
+    </button>
+    <div class="contents menu">
+        <button class="item {{ itemActive1 }}">{{ menudepth1 }}</button>
+        <button class="item {{ itemActive2 }}">{{ menudepth2 }}</button>
+        <button class="item {{ itemActive3 }}">{{ menudepth3 }}</button>
+        <button class="item {{ itemActive4 }}">{{ menudepth4 }}</button>
+    </div>
+</div>
+{% endmacro %}
+
 <!-- 기본형 좌우버튼 -->
 {% macro baseStyle2( state, iconLeft1, menudepth1, menudepth2, itemActive1, itemActive2, iconRight1 ) %}
 <div class="container">

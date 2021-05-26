@@ -1,403 +1,374 @@
-@use "./font";
+@import "./font";
 
-.list-wrap {
-    max-width: 55.2rem;
-
-    .list-thumb {
-        @include flexCenter;
-
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        border-radius: $Radius-L;
-        box-shadow: inset 0px 0px 0px 1px $ui_border_thumbnail;
-        background: $ui_border_thumbnail
-            url("~/static/image/ci/ic-stovelogo-thumb.png") no-repeat center
-            center;
-
-        [class^="ic-"],
-        [class*=" ic-"] {
-            position: absolute;
-            left: $stds-spacing-8;
-            bottom: $stds-spacing-8;
-            color: $white;
-            font-size: font.$stdsTitle4;
-        }
-
-        .thum-num {
-            @include flexCenter;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            min-width: 3rem;
-            min-height: 2.8rem;
-            color: $white;
-            background-color: $black70;
-        }
-
-        .inner {
-            @include ratio; // 16:9
-        }
-    }
-    .list-tit {
-        @include flex($y: center);
-        margin: $stds-spacing-12 0 $stds-spacing-8;
-        color: $ui_text_02;
-        font-size: font.$stdsTitle4;
-        font-weight: bold;
-
-        a {
-            color: inherit;
-        }
-
-        & > strong {
-            @include ellipsis($w: auto);
-        }
-
-        .new {
-            color: $orange500;
-            margin-left: $stds-spacing-8;
-        }
-        .search-keyword {
-            font-size: font.$stdsTitle5;
-            color: $orange500;
-        }
-        .comment-num {
-            color: $orange500;
-            margin-left: $stds-spacing-4;
-        }
-
-        i {
-            margin-right: $stds-spacing-8;
-            color: $ui_text_03;
-            font-size: 2rem;
-        }
-        .element-checkbox {
-            margin-right: $stds-spacing-12;
-        }
-    }
-    .list-txt {
-        @include ellipsis($line: 2);
-        margin-bottom: $stds-spacing-16;
-        color: $ui_text_03;
-        font-size: font.$stdsBody2;
-    }
-    .list-info {
+.board-wrap {
+    .board-tit {
         @include flexBetweenCenter;
-        font-size: font.$stdsBody3;
-        color: $ui_text_04;
-        margin-bottom: $stds-spacing-24;
-        .front {
-            @include ellipsis;
-            margin-right: $stds-spacing-24;
+        padding-bottom: $stds-spacing-16;
+        border-bottom: 1px solid $gray900;
+
+        &>div {
+            &:first-child {
+                @include flex($y: center);
+                font-size: $stdsTitle4;
+                margin-right: $stds-spacing-40;
+
+                strong {
+                    @include ellipsis;
+                    font-weight: bold;
+                }
+
+                button {
+                    position: relative;
+                    color: $gray200;
+                    margin: $stds-spacing-4 0 0 $stds-spacing-12;
+
+                    .ic-navigation-alarm-line {
+                        color: $orange500;
+                    }
+                }
+            }
         }
-        .back {
+
+        .list-control-wrap {
+            flex: none;
+        }
+
+        .element-tooltip .tooltip-txt {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            min-width: 23.4rem;
+            height: 4.8rem;
+            font-size: $stdsBody1;
+            font-weight: normal;
+            border-radius: 0.4rem;
+        }
+    }
+
+    &.board-wrap-simple {
+        border-bottom: 1px solid $ui_divider_black_02;
+
+        .board-tit {
+            margin-bottom: $stds-spacing-16;
+            padding-bottom: $stds-spacing-16;
+            border-bottom: 1px solid $ui_divider_black_02;
+
+            &>div {
+                &:first-child {
+                    font-size: $stdsTitle6;
+                    height: auto;
+                }
+            }
+
+            .btn-list {
+                @include flexCenter;
+                line-height: 1;
+                border: 1px solid $ui_divider_black_02;
+                border-radius: $radius-XS;
+                width: 5.6rem;
+                height: 3.4rem;
+                font-weight: bold;
+                font-size: $stdsButton2;
+            }
+        }
+
+        .board-list-wrap {
+            padding: 0 $stds-spacing-24;
+        }
+    }
+
+    // 게시판 보기 타입
+    .list-control-wrap {
+        @include flex($y: center);
+        color: $ui_text_03;
+        line-height: 1;
+
+        &,
+        .element-select-button {
+            font-size: $stdsBody2;
+        }
+
+        .element-btn {
+            height: 4rem;
+            padding: 0 $stds-spacing-24;
+            margin-left: $stds-spacing-20;
+            border-radius: $radius-S;
+
+            .btn-txt {
+                padding-left: $stds-spacing-4;
+            }
+        }
+
+        .element-dropdown {
+            margin-right: $stds-spacing-16;
+        }
+    }
+
+    .line {
+        @include flex($y: center);
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 1.2rem;
+            margin: 0 $stds-spacing-12;
+            background-color: $black10;
+        }
+    }
+
+    .list-read-type {
+        @include flex($y: center);
+        font-size: $stdsTitle4;
+
+        a,
+        button {
+            margin-left: $stds-spacing-4;
+            color: $gray200;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        .active {
+            color: $orange500;
+        }
+    }
+
+    // 게시판 공지사항
+    .board-notice {
+        .board-notice-list {
+            @include flexBetweenCenter;
+            padding: $stds-spacing-24;
+            background-color: $gray50;
+            border-bottom: 1px solid $black10;
+
+            .element-dropdown {
+                height: auto;
+                display: block;
+
+                .element-dropdown-layer {
+                    padding-top: $stds-spacing-16;
+                }
+            }
+
+            .link {
+                @include flex($y: center);
+                margin-right: $stds-spacing-40;
+                font-size: $stdsBody2;
+                color: $ui_text_02;
+
+                strong {
+                    white-space: nowrap;
+                    font-weight: bold;
+                    margin-right: $stds-spacing-4;
+                }
+
+                .txt {
+                    @include ellipsis;
+                }
+            }
+
+            .comment-num {
+                color: $orange500;
+                margin-left: $stds-spacing-4;
+            }
+
+            .new {
+                margin-left: $stds-spacing-8;
+                color: $orange500;
+            }
+        }
+
+        // 공지사항 더 보기
+        .btn-board-more {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: $stds-spacing-12 0;
+            font-size: $stdsBody2;
+            color: $gray400;
+
+            i {
+                font-size: $stdsBody1;
+                margin-left: $stds-spacing-4;
+            }
+        }
+    }
+
+    .list-info-wrap {
+        @include flex($y: center);
+        white-space: nowrap;
+
+        .nick,
+        .date {
+            margin-right: $stds-spacing-24;
+            font-size: $stdsBody4;
+        }
+
+        .nick {
+            position: relative;
+            color: $ui_text_03;
+
+            .element-select-button {
+                font-size: $stdsBody4;
+
+                strong {
+                    margin-right: $stds-spacing-4;
+                }
+            }
+        }
+
+        .date,
+        .view-num {
+            color: $ui_text_04;
+        }
+
+        .view-num {
             @include flex($y: center);
-            line-height: 1;
 
             i {
                 margin-right: $stds-spacing-4;
             }
         }
-
-        .list-top {
-            margin: 0;
-        }
     }
 
-    &.list-type-horizontal {
-        @include flex;
+    // 게시물 종류 선택
+    .board-type-wrap {
+        padding-bottom: $stds-spacing-16;
+        border-bottom: 1px solid $ui_divider_black_02;
 
-        .list-thumb {
-            flex: none;
-            width: 28%; // 15.5rem
-            background: $ui_border_thumbnail
-                url("~/static/image/ci/ic-stovelogo-thumb-small.png") no-repeat
-                center center;
-            margin-left: $stds-spacing-24;
+        .board-type-inner {
+            @include flexBetweenCenter;
+            margin-top: $stds-spacing-16;
 
-            .inner {
-                @include ratio($ratio-4-3); // 16:9
+            &>div:first-child {
+                width: 15%;
+                min-width: 150px;
+
+                .element-dropdown {
+                    width: 100%;
+                }
             }
-        }
-        .list-tit {
-            margin: 0 0 $stds-spacing-8;
-            font-size: font.$stdsTitle6;
-        }
 
-        &.reverse {
-            flex-direction: row-reverse;
-
-            .list-thumb {
-                margin-left: 0;
-                margin-right: $stds-spacing-24;
+            &>div:last-child {
+                @include flex($y: center);
             }
         }
     }
 
-    &.list-type-small {
-        max-width: 26.4rem;
+    // board common
+    .system-link {
+        color: $system_link;
+    }
 
-        .list-thumb {
-            @include flexCenter;
+    .system-success {
+        color: $system_success;
+    }
 
-            .inner {
-                @include ratio($ratio-4-3);
-            }
-        }
+    .system-link-visited {
+        color: $system_link_visited;
+    }
+
+    .system-info {
+        color: $system_info;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .list-type-horizontal {
         .list-tit {
-            @include ellipsis($line: 2);
-            margin: $stds-spacing-16 0;
-            font-size: font.$stdsBody1;
+            font-size: $stdsTitle5;
+        }
+    }
+
+    .list-type-simple {
+        .list-tit {
+            font-size: $stdsBody2;
             font-weight: normal;
         }
-        .list-info {
-            .front {
-                margin-right: $stds-spacing-16;
+    }
+}
+
+// 반응형
+@media (max-width: 1024px) {
+    .board-wrap {
+        &.board-wrap-simple {
+            .list-info-wrap {
+                display: none;
+            }
+
+            .list-control-wrap {
+                .list-cont {
+                    padding-bottom: 0;
+                }
             }
         }
     }
+}
 
-    &.list-type-mini {
-        width: 16rem;
-        text-align: center;
+/* tablet 768 - size S */
+@media (max-width: 768px) {
+    .board-wrap {
+        .board-top {
+            .board-tit:not(.mobile-show) {
+                display: none;
+            }
 
-        .list-thumb {
-            height: 16rem;
+            .board-notice {
+                padding: 0 $stds-spacing-32;
+                border-bottom: $stds-spacing-12 solid $gray50;
+
+                .board-notice-list {
+                    background-color: transparent;
+                    padding: $stds-spacing-12 0 $stds-spacing-12;
+
+                    &:first-of-type {
+                        padding-top: 0;
+                    }
+
+                    .link {
+                        position: relative;
+                        margin: 0;
+
+                        .new {
+                            position: absolute;
+                            left: -#{$stds-spacing-8};
+                            top: $stds-spacing-2;
+                            margin: 0;
+                            width: $stds-spacing-4;
+                            height: $stds-spacing-4;
+                            background-color: $orange500;
+                            border-radius: 999rem;
+
+                            &::before {
+                                content: "";
+                            }
+                        }
+                    }
+
+                    .list-info-wrap {
+                        display: none;
+                    }
+                }
+            }
         }
 
-        .list-tit {
-            justify-content: center;
-            margin-bottom: $stds-spacing-4;
-            font-size: font.$stdsTitle7;
-        }
-        .list-info {
-            color: $ui_text_03;
+        .board-type-wrap {
+            padding: $stds-spacing-12 $stds-spacing-32;
 
-            .front {
+            .board-type-inner {
                 margin: 0;
             }
         }
-    }
-}
 
-// 게시판 리스트
-.board-list-wrap {
-    .list-type-board {
-        width: 100%;
-        flex-direction: column;
-        border-bottom: 1px solid $ui_divider_black_02;
-    }
-    .list-type-search {
-        margin-bottom: $stds-spacing-24;
-
-        .list-thumb {
-            width: 17rem;
-            height: 12.7rem;
-            margin-bottom: $stds-spacing-24;
-        }
-
-        .list-info {
-            @include flex($y: center);
-
-            .back {
-                margin-left: $stds-spacing-16;
-            }
-        }
-        .list-txt {
-            font-size: font.$stdsBody1;
-
-            .tag-wrap {
-                @include ellipsis;
-            }
-            .tag {
-                &.active {
-                    color: $orange500;
-                }
-            }
-        }
-    }
-    .indie-horizontal-list {
-        &:first-child {
-            .list-type-search {
-                padding-top: $stds-spacing-24;
-                border-top: 1px solid $ui_divider_black_02;
-            }
-        }
-        &:last-child {
-            .list-type-search {
-                margin-bottom: 0;
-            }
-        }
-        .list-wrap {
-            max-width: inherit;
-            &.list-type-horizontal {
-                .list-thumb {
-                    width: 12%;
-                }
-            }        
-        }
-    }
-    .list-cont-wrap {
-        @include flex;
-        width: 100%;
-
-        .list-cont {
-            flex: 1;
-        }
-        .list-thumb {
-            margin-left: $stds-spacing-40;
-        }
-        .list-txt {
-            min-height: 4.4rem;
-            margin-bottom: $stds-spacing-20;
-        }
-    }
-
-    .list-top {
-        @include flex($y: center);
-        margin: $stds-spacing-24 0 $stds-spacing-16;
-
-        .profile-img {
-            width: 2rem;
-            height: 2rem;
-            box-shadow: inset 0px 0px 0px 1px $ui_border_thumbnail;
-            background-color: $ui_skeleton_gray;
-            overflow: hidden;
-            border-radius: 2rem;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-        .info {
-            @include flexCenter;
-            height: 2rem;
-            margin-left: $stds-spacing-8;
-            font-size: font.$stdsBody3;
-            color: $ui_text_04;
-
-            .element-select-button {
-                font-size: font.$stdsBody3;
-                color: $ui_text_04;
-
-                span {
-                    margin-right: $stds-spacing-8;
-                }
-            }
-        }
-        .time,
-        i {
-            line-height: 1;
-        }
-        .time {
-            position: relative;
-            cursor: pointer;
-
-            .element-tooltip {
-                position: absolute;
-                left: 0;
-                top: calc(100% + #{$stds-spacing-12});
-                font-size: font.$stdsChips2;
-            }
-        }
-        i {
-            margin: 0 $stds-spacing-4;
-        }
-    }
-
-    .list-thumb {
-        margin-bottom: $stds-spacing-24;
-    }
-
-    .list-info-detail {
-        @include flex($y: center);
-
-        a,
-        button {
-            @include flex($y: center);
-            font-size: font.$stdsCaption1;
-            color: $ui_text_03;
-            line-height: 1;
-
-            &::before {
-                font-size: font.$stdsTitle5;
-                margin-right: $stds-spacing-4;
-            }
-
-            &:nth-child(1) {
-                margin-right: 7.2rem;
-            }
-            &:nth-child(2) {
-                margin-right: $stds-spacing-32;
-            }
-
-            &.ic-community-thumbs-up-line {
-                &.active {
-                    color: $tint_reda400;
-                }
-            }
-            &.ic-community-thumbs-down-line {
-                &.active {
-                    color: $tint_blue500;
-                }
-            }
+        .board-list-wrap {
+            padding: 0 $stds-spacing-32;
         }
     }
 }
-.list-empty {
-    @include flexCenter {
-        flex-direction: column;
-    }
-    min-height: 60rem;
-    border-bottom: 1px solid $ui_divider_black_02;
-    font-size: font.$stdsBody1;
-    color: $ui_text_04;
 
-    &.border-none {
-        border: 0;
-    }
-
-    &::before {
-        content: "";
-        width: 16rem;
-        height: 16rem;
-        margin-bottom: $stds-spacing-12;
-        background: url("~/static/image/list/ic-post-w-180.png") no-repeat center
-            center;
-    }
-}
-.list-inacces-empty {
-    @include flexCenter {
-        flex-direction: column;
-    }
-    min-height: 60rem;
-    border-bottom: 1px solid $ui_divider_black_02;
-    font-size: font.$stdsBody1;
-    color: $ui_text_04;
-
-    &.border-none {
-        border: 0;
-    }
-
-    &::before {
-        content: "";
-        width: 16rem;
-        height: 16rem;
-        margin-bottom: $stds-spacing-12;
-        background: url("~/static/image/list/ic-limit-w-180.png") no-repeat center
-            center;
-    }
-
-    .btn-back {
-        @include flexCenter;
-        margin-top: $stds-spacing-24;
-        padding: 1rem $stds-spacing-24;
-        border-radius: 2rem;
-        border: 1px solid $gray150;
-        font-size: font.$stdsButton2;
-        color: $ui_text_02;
-    }
-}
+/* mobile 360 - XS */

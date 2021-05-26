@@ -1,7 +1,7 @@
 {% import "_include/partial/gnb-side/gnb-side.njk" as gnbSide %}
 
-{% macro base(stateClass) %}
-<div class="module-dimmed {{ stateClass }}">
+{% macro base(stateClass, style) %}
+<div class="module-dimmed {{ stateClass }}" style="{{ style }}">
  {{ gnbSide.base(posClass="pos-right", sidebarAlign="sidebar-right") }}
  <div class="dimmed"></div>
 </div>

@@ -1,6 +1,7 @@
 @use "./color";
 @use "./font";
 @use "./space";
+@use "./mixin/mixin";
 
 .module-reply {
     position: relative;
@@ -156,9 +157,8 @@
         &.quote-close {
             .fr-view {
                 p {
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
+                    @include ellipsis($line: 1);
+                    word-break: break-word;
                 }
             }
         }
@@ -360,9 +360,8 @@
             &.quote-close {
                 .fr-view {
                     p {
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
+                        @include ellipsis($line: 1);
+                        word-break: break-word;
                     }
                 }
             }

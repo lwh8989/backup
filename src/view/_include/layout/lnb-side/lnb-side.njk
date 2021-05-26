@@ -1,7 +1,7 @@
 {% import "_include/partial/lnb-side/lnb-side.njk" as lnbSide %}
 
-{% macro base(stateClass) %}
-<div class="module-dimmed {{ stateClass }}">
+{% macro base(stateClass, style) %}
+<div class="module-dimmed {{ stateClass }}" style="{{ style }}">
  {{ lnbSide.base(posClass="pos-left", sidebarAlign="sidebar-left") }}
  <div class="dimmed"></div>
 </div>

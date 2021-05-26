@@ -3,6 +3,11 @@
 
 <!-- styles -->
 {% block styles %}
+<style type="text/css">
+    body {
+        background: #ddd;
+    }
+</style>
 {% endblock %}
 
 <!-- styles -->
@@ -24,11 +29,25 @@
             ) 
         }}
     </div>
+
     <div class="layout-navigation is-active">
         {{ navigation.base(
             iconLeft1="ic-navigation-menu-line", 
             menudepth1="커뮤니티", 
             menudepth2="내 활동", 
+            itemActive2="is-active"
+            ) 
+        }}
+    </div>
+
+    <p class="desc">메뉴형</p>
+    <div class="layout-navigation is-active">
+        {{ navigation.baseMenu(
+            iconLeft1="ic-navigation-menu-line", 
+            menudepth1="%텍스트%", 
+            menudepth2="%텍스트%", 
+            menudepth3="%텍스트%", 
+            menudepth4="%텍스트%", 
             itemActive2="is-active"
             ) 
         }}

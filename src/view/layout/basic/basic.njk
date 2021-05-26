@@ -24,11 +24,11 @@
 {% endblock %}
 
 <!-- tabSection -->
-{% block tabSection %}
+{# {% block tabSection %}
 <div class="layout-tab is-active">
    % Tab 여기에 마크업을 해 주세요. %
 </div>
-{% endblock %}
+{% endblock %} #}
 
 <!-- content -->
 {% block content %}
@@ -50,19 +50,19 @@
 <!-- dialog -->
 {% block dialog %}
     <!-- [D] .is-opened 누르면 활성화됩니다.  -->
-    {{ dialog.base(stateClass="") }}
+    {{ dialog.base(stateClass="", style="display: none;") }}
 {% endblock %}
 
 <!-- lnb side -->
 {% block lnbSide %}
     <!-- [D] .is-opened 누르면 활성화됩니다.  -->
-    {{ lnbSide.base(stateClass="") }}
+    {{ lnbSide.base(stateClass="", style="display: none;") }}
 {% endblock %}
 
 <!-- gnb side -->
 {% block gnbSide %}
     <!-- [D] .is-opened 누르면 활성화됩니다.  -->
-    {{ gnbSide.base(stateClass="") }}
+    {{ gnbSide.base(stateClass="", style="display: none;") }}
 {% endblock %}
 
 <!-- scripts -->

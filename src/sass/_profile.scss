@@ -1,6 +1,7 @@
 @use "./font";
 @use "./color";
 @use "./space";
+@use "./mixin/mixin";
 
 .module-profile {
     display: flex;
@@ -23,11 +24,8 @@
             font-weight: font.$stdsWeightBold;
             color: color.$ui_text_02;
             display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 1;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            text-decoration: none;
+            @include ellipsis($line: 1);
+            word-break: break-word;
         }
         .profile-info {
             display: flex;

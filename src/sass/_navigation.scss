@@ -4,18 +4,25 @@
 @import "./font";
 @import "./color";
 @import "./space";
+@import "./mixin/mixin";
 
 .layout-navigation {
     display: none;
     order: 2;
     height: 4.8rem;
     flex: 0 1 100%;
-    padding: $stds-spacing-12 $stds-spacing-16;
-    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
     background: $white;
     &.is-active {
         display: block;
     }
+}
+
+.mobule-navigation {
+    height: 4.8rem;
+    flex: 0 1 100%;
+    padding: $stds-spacing-12 $stds-spacing-16;
+    background: $white;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
     &.is-fixed-depth1 {
         display: block;
         position: fixed;
@@ -74,10 +81,25 @@
             width: 100%;
             line-height: 2.4rem;
             flex-wrap: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
             flex-basis: auto;
+            @include ellipsis($line: 1);
+            word-break: break-word;
+            &.menu {
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            button {
+                &.item {
+                    @include ellipsis($w: auto, $line: 1);
+                    margin-left: 2.8rem;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &.is-active {
+                        border-bottom: 2px solid $gray900;
+                    }
+                }
+            }
             .item {
                 font-size: 1.5rem;
                 color: $ui-text-03;
@@ -104,112 +126,112 @@
 /* tablet 768 */
 @include tablet {}
 /* desktopSM 768 */
-@include desktopSM {
-    $stds-fixed-depth2: 6.8rem;
-    $stds-fixed-depth3: 13.6rem;
+// @include desktopSM {
+//     $stds-fixed-depth2: 6.8rem;
+//     $stds-fixed-depth3: 13.6rem;
 
-    .layout-navigation {
-        height: $stds-fixed-depth2;
-        padding: 2.2rem 1.6rem;
-        &.is-fixed-depth1 {
-            top: $stds-fixed-depth1;
-            z-index: $zindex-fixed;
-        }
-        &.is-fixed-depth2 {
-            top: $stds-fixed-depth2;
-            z-index: $zindex-fixed;
-        }
-        &.is-fixed-depth3 {
-            top: $stds-fixed-depth3;
-            z-index: $zindex-fixed;
-        }
-    }
-}
+//     .layout-navigation {
+//         height: $stds-fixed-depth2;
+//         padding: 2.2rem 1.6rem;
+//         &.is-fixed-depth1 {
+//             top: $stds-fixed-depth1;
+//             z-index: $zindex-fixed;
+//         }
+//         &.is-fixed-depth2 {
+//             top: $stds-fixed-depth2;
+//             z-index: $zindex-fixed;
+//         }
+//         &.is-fixed-depth3 {
+//             top: $stds-fixed-depth3;
+//             z-index: $zindex-fixed;
+//         }
+//     }
+// }
 /* desktopM 1280 */
-@include desktopM {
-    $stds-fixed-depth2: 6.8rem;
-    $stds-fixed-depth3: 13.6rem;
+// @include desktopM {
+//     $stds-fixed-depth2: 6.8rem;
+//     $stds-fixed-depth3: 13.6rem;
 
-    .layout-navigation {
-        height: $stds-fixed-depth2;
-        padding: 2.2rem 1.6rem;
-        &.is-fixed-depth1 {
-            top: $stds-fixed-depth1;
-            z-index: $zindex-fixed;
-        }
-        &.is-fixed-depth2 {
-            top: $stds-fixed-depth2;
-            z-index: $zindex-fixed;
-        }
-        &.is-fixed-depth3 {
-            top: $stds-fixed-depth3;
-            z-index: $zindex-fixed;
-        }
-    }
-}
+//     .layout-navigation {
+//         height: $stds-fixed-depth2;
+//         padding: 2.2rem 1.6rem;
+//         &.is-fixed-depth1 {
+//             top: $stds-fixed-depth1;
+//             z-index: $zindex-fixed;
+//         }
+//         &.is-fixed-depth2 {
+//             top: $stds-fixed-depth2;
+//             z-index: $zindex-fixed;
+//         }
+//         &.is-fixed-depth3 {
+//             top: $stds-fixed-depth3;
+//             z-index: $zindex-fixed;
+//         }
+//     }
+// }
 /* desktopL 1440 */
-@include desktopL {
-    $stds-fixed-depth2: 6.8rem;
-    $stds-fixed-depth3: 13.6rem;
+// @include desktopL {
+//     $stds-fixed-depth2: 6.8rem;
+//     $stds-fixed-depth3: 13.6rem;
     
-    .layout-navigation {
-        height: $stds-fixed-depth2;
-        padding: 2.2rem 1.6rem;
-        &.is-fixed-depth1 {
-            top: $stds-fixed-depth1;
-            z-index: $zindex-fixed;
-        }
-        &.is-fixed-depth2 {
-            top: $stds-fixed-depth2;
-            z-index: $zindex-fixed;
-        }
-        &.is-fixed-depth3 {
-            top: $stds-fixed-depth3;
-            z-index: $zindex-fixed;
-        }
-    }
-}
+//     .layout-navigation {
+//         height: $stds-fixed-depth2;
+//         padding: 2.2rem 1.6rem;
+//         &.is-fixed-depth1 {
+//             top: $stds-fixed-depth1;
+//             z-index: $zindex-fixed;
+//         }
+//         &.is-fixed-depth2 {
+//             top: $stds-fixed-depth2;
+//             z-index: $zindex-fixed;
+//         }
+//         &.is-fixed-depth3 {
+//             top: $stds-fixed-depth3;
+//             z-index: $zindex-fixed;
+//         }
+//     }
+// }
 /* desktopXL 1600 */
-@include desktopXL {
-    $stds-fixed-depth2: 6.8rem;
-    $stds-fixed-depth3: 13.6rem;
+// @include desktopXL {
+//     $stds-fixed-depth2: 6.8rem;
+//     $stds-fixed-depth3: 13.6rem;
     
-    .layout-navigation {
-        height: $stds-fixed-depth2;
-        padding: 2.2rem 1.6rem;
-        &.is-fixed-depth1 {
-            top: $stds-fixed-depth1;
-            z-index: $zindex-fixed;
-        }
-        &.is-fixed-depth2 {
-            top: $stds-fixed-depth2;
-            z-index: $zindex-fixed;
-        }
-        &.is-fixed-depth3 {
-            top: $stds-fixed-depth3;
-            z-index: $zindex-fixed;
-        }
-    }
-}
+//     .layout-navigation {
+//         height: $stds-fixed-depth2;
+//         padding: 2.2rem 1.6rem;
+//         &.is-fixed-depth1 {
+//             top: $stds-fixed-depth1;
+//             z-index: $zindex-fixed;
+//         }
+//         &.is-fixed-depth2 {
+//             top: $stds-fixed-depth2;
+//             z-index: $zindex-fixed;
+//         }
+//         &.is-fixed-depth3 {
+//             top: $stds-fixed-depth3;
+//             z-index: $zindex-fixed;
+//         }
+//     }
+// }
 /* desktop2XL 1920 */
-@include desktop2XL {
-    $stds-fixed-depth2: 6.8rem;
-    $stds-fixed-depth3: 13.6rem;
+// @include desktop2XL {
+//     $stds-fixed-depth2: 6.8rem;
+//     $stds-fixed-depth3: 13.6rem;
     
-    .layout-navigation {
-        height: $stds-fixed-depth2;
-        padding: 2.2rem 1.6rem;
-        &.is-fixed-depth1 {
-            top: $stds-fixed-depth1;
-            z-index: $zindex-fixed;
-        }
-        &.is-fixed-depth2 {
-            top: $stds-fixed-depth2;
-            z-index: $zindex-fixed;
-        }
-        &.is-fixed-depth3 {
-            top: $stds-fixed-depth3;
-            z-index: $zindex-fixed;
-        }
-    }
-}  
+//     .layout-navigation {
+//         height: $stds-fixed-depth2;
+//         padding: 2.2rem 1.6rem;
+//         &.is-fixed-depth1 {
+//             top: $stds-fixed-depth1;
+//             z-index: $zindex-fixed;
+//         }
+//         &.is-fixed-depth2 {
+//             top: $stds-fixed-depth2;
+//             z-index: $zindex-fixed;
+//         }
+//         &.is-fixed-depth3 {
+//             top: $stds-fixed-depth3;
+//             z-index: $zindex-fixed;
+//         }
+//     }
+// }  

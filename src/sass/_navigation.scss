@@ -23,7 +23,7 @@
     padding: $stds-spacing-12 $stds-spacing-16;
     background: $white;
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
-    &.is-fixed-depth1 {
+    &  {
         display: block;
         position: fixed;
         top: $stds-fixed-depth1;

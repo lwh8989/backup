@@ -37,6 +37,24 @@
     </div>
 {% endmacro %}
 
+{% macro profileHorizontalHidden( ) %}
+    <div class="module-profile profile-hidden">
+        <div class="profile-img">
+            <img src="/static/image/list/profile_demo.png" alt="">
+        </div>
+        <div class="profile-contents">
+            <span class="profile-nickname">알수없음</span>
+            <span class="profile-info" style="{{ profileInfo }}">
+                <span class="time">2020.06.25 23:04 (UTC+9)</span>
+                <span class="info-option" style="{{ viewOption }}">
+                    <i class="midd-dot">·</i>
+                    <span class="view"><i class="ic-community-number-of-view-line"></i>999</span>
+                </span>
+            </span>
+        </div>
+    </div>
+{% endmacro %}
+
 {% macro profileHorizontalMin(  ) %}
     <div class="module-profile">
         <div class="profile-img">

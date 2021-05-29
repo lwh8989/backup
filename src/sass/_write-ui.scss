@@ -269,6 +269,76 @@
             }
 
         }
+        .write-setting-area {
+            position: relative;
+            padding: $stds-spacing-20 $stds-spacing-24;
+            border-top: 1px solid $ui_divider_black_02;
+            box-sizing: border-box;
+            background: $ui_bg_surface_gray25;
+            .write-setting-section {
+                .setting-area-header {
+                    position: relative;
+                    padding: $stds-spacing-12 0;                    
+                    &:first-of-type {
+                        padding-top: 0;
+                    }
+                }
+                .setting-area-body {
+                    position: relative;
+                    .element-checkbox {}
+                    .flex-wrap {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: $stds-spacing-16;
+                        &:first-of-type {
+                            margin-top: 0;
+                        }
+                        .element-checkbox {
+                            margin: $stds-spacing-6 $stds-spacing-24 $stds-spacing-6 0;
+                        }
+                        .element-input-icon.calendar {
+                            width: 20%;
+                            margin-right: $stds-spacing-8;
+                            &:first-of-type {
+                                margin-right: 0;
+                            }
+                        }
+                        .element-dropdown {
+                            width: 20%;
+                            margin-right: $stds-spacing-8;
+                            &:first-of-type {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+                .setting-tit {
+                    font-size: font.$stdsBody2;
+                    font-weight: font.$stdsWeightBold;
+                    color: $ui_text_02;  
+                    & span {
+                        color: $ui_text_brand;  
+                    }                  
+                }
+                .setting-desc {
+                    font-size: font.$stdsBody4;
+                    font-weight: font.$stdsWeightNormal;
+                    color: $ui_text_04;
+                    margin-top: $stds-spacing-12;
+                }
+            }
+            .byte {
+                position: absolute;
+                top: 2.4rem;
+                right: 2.4rem;
+                font-size: font.$stdsBody4;
+                font-weight: font.$stdsWeightNormal;
+                color: $ui_text_04;
+                .byte-count {
+                    color: $ui_text_brand; 
+                }
+            }
+        }
         .reply-write-tool {
             display: flex;
             .tool-icon-btn {
@@ -279,11 +349,18 @@
                 box-sizing: border-box;
                 background-color: color.$white;
                 button {
+                    position: relative;
                     width: 3.8rem;
                     height: 3.8rem;
                     i {
                         font-size: 2.4rem;
                         color: color.$ui_icon_03_enabled;
+                    }
+                    .emoji-pos {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
                     }
                 }
                 .byte {

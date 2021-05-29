@@ -667,93 +667,51 @@
 <!-- Reply Write -->
 {% macro baseReplyWrite( dataText ) %}
 <div class="module-write-ui reply-write">
-  <div class="reply-write-edit" contenteditable="true" data-text="{{ dataText }}"></div>
-  <!-- [D] 김미경 과장님 추가 가이드 필요 -->
-  {# <div class="module-editor">
-      <div class="write-setting-area">
-          <div class="write-setting-section">
-              <div class="setting-section-header">
-                  <p class="tit">첨부된 이미지 / 동영상 <span class="orange">%N%개</span></p>
-                  <p class="desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
-                  <span class="byte">
-                      <span class="byte-count">119KB</span>
-                      <span class="byte-total">/ 1024MB</span>
-                  </span>
-              </div>
-              <div class="setting-section-body">
-                  <div class="attach-image">
-                      <span class="element-icon ic-select" style="">pick</span>
-                      <button class="image-area">
-                          <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
-                      </button>
-                      <button class="image-close">
-                          <span class="element-icon ic-close-square" style="">pick</span>
-                      </button>
-                  </div>
-                  <div class="attach-image">
-                      <span class="element-icon ic-select" style="">pick</span>
-                      <button class="image-area">
-                          <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
-                      </button>
-                      <button class="image-close">
-                          <span class="element-icon ic-close-square" style="">pick</span>
-                      </button>
-                  </div>
-                  <div class="attach-image">
-                      <span class="element-icon ic-select" style="">pick</span>
-                      <button class="image-area">
-                          <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
-                      </button>
-                      <button class="image-close">
-                          <span class="element-icon ic-close-square" style="">pick</span>
-                      </button>
-                  </div>
-                  <div class="attach-image">
-                      <span class="element-icon ic-select" style="">pick</span>
-                      <button class="image-area">
-                          <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
-                      </button>
-                      <button class="image-close">
-                          <span class="element-icon ic-close-square" style="">pick</span>
-                      </button>
-                  </div>
-                  <div class="attach-image">
-                      <span class="element-icon ic-select" style="">pick</span>
-                      <button class="image-area">
-                          <img src="https://dummyimage.com/60x60/0099ff/fff" alt="attach image">
-                      </button>
-                      <button class="image-close">
-                          <span class="element-icon ic-close-square" style="">pick</span>
-                      </button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div> #}
-  <div class="reply-write-tool">
-    <div class="tool-icon-btn">
-        <button>
-            <i class="ic-community-attach-emoji-line"></i>
-        </button>
-        <button>
-            <i class="ic-media-image-image-line"></i>
-        </button>
-        <button>
-            <i class="ic-community-attach-video-line"></i>
-        </button>
-        <button>
-            <i class="ic-community-attach-quotation-line"></i>
-        </button>
+    <div class="reply-write-edit" contenteditable="true" data-text="{{ dataText }}"></div>
+    <!-- [D] 글쓰기 이미지 설정 영역 -->
+    <div class="write-setting-area">
+        <!-- 대표이미지 등록  -->
+        <div class="write-setting-section">
+            <div class="setting-area-header">
+                <p class="setting-tit">첨부된 이미지 / 동영상 <span>%N%개</span></p>
+            </div>
+            <div class="setting-area-body">
+                {{ attach.base( attachItem=['attachItem', 'attachItem', 'attachItem', 'attachItem'], cbDefault="false" ) }}
+                <p class="setting-desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
+            </div>
+        </div>
         <div class="byte">
-            <span class="byte-count">1000</span>
-            <span class="byte-total">/	1000</span>
+            <span class="byte-count">119KB</span>
+            <span class="byte-total">/ 1024MB</span>
         </div>
     </div>
-    <div class="tool-btn">
-      {{ btn.base(colorClass='bg-outline', sizeClass='size-small', txt='취소') }}
-      {{ btn.base(colorClass='bg-outline', sizeClass='size-small', txt='등록', state='disabled' ) }}
+    <div class="reply-write-tool">
+        <div class="tool-icon-btn">
+            <button>
+                <i class="ic-community-attach-emoji-line"></i>
+                <div class="emoji-pos">
+                    <!-- emoji UI를 넣어주세요. -->
+                </div>
+            </button>
+            <button>
+                <i class="ic-media-image-image-line"></i>
+            </button>
+            <button>
+                <i class="ic-community-attach-video-line"></i>
+            </button>
+            <button>
+                <i class="ic-community-attach-quotation-line"></i>
+            </button>
+            <div class="byte">
+                <span class="byte-count">1000</span>
+                <span class="byte-total">/	1000</span>
+            </div>
+        </div>
+        <div class="tool-btn">
+            {{ btn.base(colorClass='bg-outline', sizeClass='size-small', txt='취소') }}
+            {{ btn.base(colorClass='bg-outline', sizeClass='size-small', txt='등록', state='disabled' ) }}
+        </div>
     </div>
-  </div>
 </div>
 {% endmacro %}
 

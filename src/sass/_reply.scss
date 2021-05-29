@@ -10,6 +10,14 @@
     &:first-of-type {
         border-top: 0.1px solid color.$ui_divider_black_02;
     }
+    .reply-prev-btn {
+        font-size: font.$stdsBody3;
+        color: color.$ui_text_03;
+        margin-bottom: 2rem;
+        i {
+            margin-left: 0.4rem;
+        }
+    }
     .reply-header {
         display: flex;
         margin-bottom: space.$stds-spacing-12;
@@ -62,6 +70,14 @@
                     right: 0;
                 }
             }
+        }
+        /* 아이콘 적용 시 변경 */
+        .ic-sample {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            color: color.$ui_icon_01_enabled;
+            margin-right: 1.4rem;
         }
     }
     .reply-contents {
@@ -128,7 +144,12 @@
             }
         }
     }
-    &.comments {
+    &.comments-base {
+        padding-left: 5.2rem;
+        padding-right: 2.4rem;
+        background-color: color.$gray25;
+    }
+    &.comments-thread {
         padding-left: 3.2rem;
         &::after {
             content: '';
@@ -306,6 +327,7 @@
                 height: 2rem;
                 border: 0;
                 padding: 0;
+                background-color: inherit;
                 &:first-of-type {
                     margin-left: 0;
                 }
@@ -334,7 +356,7 @@
                 }
             }
         }
-        &.comments {
+        &.comments-thread {
             padding-left: 3.2rem;
             &::after {
                 content: '';
@@ -405,6 +427,10 @@
                     }
                 }
             }
+        }
+        .reply-write {
+            margin: space.$stds-spacing-16 0 0 space.$stds-spacing-44;
+            background: red;
         }
     }
 }

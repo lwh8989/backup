@@ -668,6 +668,7 @@
 {% macro baseReplyWrite( dataText ) %}
 <div class="module-write-ui reply-write">
   <div class="reply-write-edit" contenteditable="true" data-text="{{ dataText }}"></div>
+  <!-- [D] 김미경 과장님 추가 가이드 필요 -->
   {# <div class="module-editor">
       <div class="write-setting-area">
           <div class="write-setting-section">
@@ -731,23 +732,34 @@
   </div> #}
   <div class="reply-write-tool">
     <div class="tool-icon-btn">
-      <button>
-        <i class="ic-community-attach-emoji-line"></i>
-      </button>
-      <button>
-        <i class="ic-media-image-image-line"></i>
-      </button>
-      <button>
-        <i class="ic-community-attach-video-line"></i>
-      </button>
-      <button>
-        <i class="ic-community-attach-quotation-line"></i>
-      </button>
+        <button>
+            <i class="ic-community-attach-emoji-line"></i>
+        </button>
+        <button>
+            <i class="ic-media-image-image-line"></i>
+        </button>
+        <button>
+            <i class="ic-community-attach-video-line"></i>
+        </button>
+        <button>
+            <i class="ic-community-attach-quotation-line"></i>
+        </button>
+        <div class="byte">
+            <span class="byte-count">1000</span>
+            <span class="byte-total">/	1000</span>
+        </div>
     </div>
     <div class="tool-btn">
       {{ btn.base(colorClass='bg-outline', sizeClass='size-small', txt='취소') }}
       {{ btn.base(colorClass='bg-outline', sizeClass='size-small', txt='등록', state='disabled' ) }}
     </div>
   </div>
+</div>
+{% endmacro %}
+
+<!-- Reply WriteNone -->
+{% macro baseReplyWriteNone( ) %}
+<div class="module-write-ui reply-write write-none">
+    <p>댓글을 작성하시려면 <a href="">로그인</a> 해주세요.</p>
 </div>
 {% endmacro %}

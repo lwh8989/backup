@@ -161,7 +161,7 @@
                 }
                 strong {
                     color: color.$ui_text_brand;
-                    margin-left: 0.4rem;
+                    margin: 0 0.4rem 0 0;
                 }
             }
             .attach-file-size {
@@ -272,10 +272,12 @@
         .reply-write-tool {
             display: flex;
             .tool-icon-btn {
+                position: relative;
                 flex: 1;
                 border-top: 0.1rem solid color.$ui_button_05_enabled_border;
                 border-bottom: 0.1rem solid color.$ui_button_05_enabled_border;
                 box-sizing: border-box;
+                background-color: color.$white;
                 button {
                     width: 3.8rem;
                     height: 3.8rem;
@@ -284,11 +286,37 @@
                         color: color.$ui_icon_03_enabled;
                     }
                 }
+                .byte {
+                    position: absolute;
+                    top: space.$stds-spacing-8;
+                    right: space.$stds-spacing-12;
+                    font-size: font.$stdsBody3;
+                    color: color.$ui_text_disabled;
+                }
             }
             .tool-btn {
                 .element-btn {
                     border-radius: 0;
                     margin-right: -0.1rem;
+                }
+            }
+        }
+        &.write-none {
+            display: flex;
+            background-color: color.$ui_form_line_enabled;
+            border: 1px solid color.$ui_form_line_enabled_border;
+            box-sizing: border-box;
+            width: 100%;
+            height: 16rem;
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+                font-size: font.$stdsBody2;
+                color: color.$ui_text_03;
+                a {
+                    color: color.$ui_text_brand;
                 }
             }
         }

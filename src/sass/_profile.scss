@@ -45,6 +45,13 @@
         &.official {
             color: color.$system_info;
         }
+        &.writer {
+            font-size: 1.1rem !important;
+            color: color.$orange500;
+            border: 0.1rem solid color.$orange500;
+            border-radius: 1rem;
+            padding: 0 0.8rem;
+        }
     }
     .time {
         display: inline-flex;

@@ -1,4 +1,5 @@
 {% import "_include/module/profile/profile.njk" as profile %}
+{% import "_include/module/write/write-ui.njk" as writeUi %}
 {% import "_include/form/button.njk" as btn %}
 
 {% macro reply( option, report, forword, quotePurple, quotePurpleOpen, quoteBlue, quoteBlueOpen, replyS, replyM, replyL ) %}
@@ -296,6 +297,7 @@
             {{ btn.withIcon(colorClass='bg-outline', sizeClass='size-chips32', txt='999+', withIcon='with-icon', iconClass='ic-community-thumbs-down-line') }}
         </div>
     </div>
+    {{ writeUi.baseReplyWrite( dataText ) }}
 </div>
 {% endmacro %}
 
@@ -563,6 +565,7 @@
             {{ btn.withIcon(colorClass='bg-outline', sizeClass='size-chips32 active', txt='999+', withIcon='with-icon', iconClass='ic-community-thumbs-down-line') }}
         </div>
     </div>
+    {{ writeUi.baseReplyWrite( dataText ) }}
     <div class="reply-btn">
         {{ btn.withIconInverse(colorClass='bg-outline', sizeClass='size-small', txt='더보기', withIcon='with-icon', iconClass='ic-control-arrow-down-line') }}
     </div>

@@ -148,6 +148,20 @@
         padding-left: 5.2rem;
         padding-right: 2.4rem;
         background-color: color.$gray25;
+        &.reply-hidden {
+            .reply-header {
+                margin-bottom: 0;
+                i {
+                    font-size: 24px;
+                    color: color.$ui_icon_05_enabled;
+                    margin-right: 1.2rem;
+                }
+                p {
+                    font-size: font.$stdsBody1;
+                    color: color.$ui_text_04;
+                }
+            }
+        }
     }
     &.comments-thread {
         padding-left: 3.2rem;
@@ -223,6 +237,19 @@
     }
     .reply-write {
         margin: space.$stds-spacing-16 0 0 space.$stds-spacing-52;
+    }
+    &.reply-hidden {
+        .reply-header {
+            i {
+                font-size: 24px;
+                color: color.$ui_icon_05_enabled;
+                margin-right: 1.2rem;
+            }
+            p {
+                font-size: font.$stdsBody1;
+                color: color.$ui_text_04;
+            }
+        }
     }
 }
 

@@ -64,7 +64,7 @@
     </div>
 {% endmacro %}
 
-{% macro detailContents(  ) %}
+{% macro detailContents( ) %}
     <div class="detail-contents">
         <div class="fr-view">
             <p class="sub-tit">부제목 입력란이 이곳에 노출됩니다.</p>
@@ -112,7 +112,7 @@
     </div>
 {% endmacro %}
 
-{% macro detailBanner(  ) %}
+{% macro detailBanner( ) %}
     <div class="detail-banner">
         <img src="https://dummyimage.com/1200x140/61d2ff/fff" alt="banner image" />
     </div>
@@ -133,9 +133,14 @@
             {{ reply.replyBase( option="false", replyS="false" ) }}
             {{ reply.replyBase( report="false", replyM="false" ) }}
             {{ reply.replyBase( option="false", replyL="false" ) }}
+            {{ reply.replyBaseHidden( text="신고에 의해 댓글이 숨겨졌습니다." ) }}
+            {{ reply.replyBaseHidden( text="작성자에 의해 삭제된 댓글입니다." ) }}
             {{ reply.replyBaseComments( replyPrev="false", option="false", replyS="false" ) }}
             {{ reply.replyBaseComments( option="false", replyM="false" ) }}
             {{ reply.replyBaseComments( option="false", replyL="false" ) }}
+            {{ reply.replyBaseComments( option="false", replyL="false" ) }}
+            {{ reply.replyBaseCommentsHidden( text="신고에 의해 댓글이 숨겨졌습니다." ) }}
+            {{ reply.replyBaseCommentsHidden( text="작성자에 의해 삭제된 댓글입니다." ) }}
         </div>
         <div class="reply-write">
             {{ writeUi.baseReplyWrite( dataText ) }}
@@ -163,6 +168,8 @@
             {{ reply.replyThread( option="false", replyS="false") }}
             {{ reply.replyThread( report="false", replyM="false", quotePurple="false" ) }}
             {{ reply.replyThread( forword="false", replyL="false", quotePurpleOpen="false" ) }}
+            {{ reply.replyBaseHidden( text="신고에 의해 댓글이 숨겨졌습니다." ) }}
+            {{ reply.replyBaseHidden( text="작성자에 의해 삭제된 댓글입니다." ) }}
             {{ reply.replyThreadComments( option="false", replyS="false" ) }}
             {{ reply.replyThreadComments( option="false", replyS="false", quoteBlue="false" ) }}
             {{ reply.replyThreadComments( option="false", replyS="false", quoteBlueOpen="false" ) }}

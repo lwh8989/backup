@@ -2,6 +2,7 @@
 {% import "_include/module/write/write-ui.njk" as writeUi %}
 {% import "_include/form/button.njk" as btn %}
 
+<!-- 일반형 댓글 -->
 {% macro replyBase( option, report, forword, replyS, replyM, replyL ) %}
 <div class="module-reply">
     <div class="reply-header">
@@ -140,7 +141,7 @@
     {{ writeUi.baseReplyWrite( dataText="댓글을 입력 해 주세요." ) }}
 </div>
 {% endmacro %}
-
+<!-- 일반형 댓글 - 댓글 -->
 {% macro replyBaseComments( replyPrev, option, report, forword, replyS, replyM, replyL ) %}
 <div class="module-reply comments-base">
     {% if replyPrev %}
@@ -253,6 +254,7 @@
 </div>
 {% endmacro %}
 
+<!-- 스레드형 댓글 -->
 {% macro replyThread( option, report, forword, quotePurple, quotePurpleOpen, quoteBlue, quoteBlueOpen, replyS, replyM, replyL ) %}
 <div class="module-reply">
     <div class="reply-header">
@@ -551,7 +553,7 @@
     {{ writeUi.baseReplyWrite( dataText="댓글을 입력 해 주세요." ) }}
 </div>
 {% endmacro %}
-
+<!-- 스레드형 댓글 - 댓글 -->
 {% macro replyThreadComments( option, report, forword, quotePurple, quotePurpleOpen, quoteBlue, quoteBlueOpen, replyS, replyM, replyL ) %}
 <div class="module-reply comments-thread">
     <div class="reply-header">
@@ -819,6 +821,33 @@
     {{ writeUi.baseReplyWrite( dataText="댓글을 입력 해 주세요." ) }}
     <div class="reply-btn">
         {{ btn.withIconInverse(colorClass='bg-outline', sizeClass='size-small', txt='더보기', withIcon='with-icon', iconClass='ic-control-arrow-down-line') }}
+    </div>
+</div>
+{% endmacro %}
+
+<!-- 댓글 - 숨김, 삭제 -->
+{% macro replyBaseHidden( text ) %}
+<div class="module-reply reply-hidden">
+    <div class="reply-header">
+        <i class="ic-sample"></i><p>{{ text }}</p>
+    </div>
+    <div class="reply-footer">
+        <div class="footer-left">
+            {{ btn.withIcon(colorClass='bg-outline', sizeClass='size-chips32', txt='999+', withIcon='with-icon', iconClass='ic-community-reply-line') }}
+        </div>
+        <div class="footer-right">
+        </div>
+    </div>
+</div>
+{% endmacro %}
+<!-- 댓글 - 댓글 - 삭제 -->
+{% macro replyBaseCommentsHidden( replyPrev, text ) %}
+<div class="module-reply comments-base reply-hidden">
+    {% if replyPrev %}
+    <button class="reply-prev-btn">이전 댓글 보기<i class="ic-sample"></i></button>
+    {% endif %}
+    <div class="reply-header">
+        <i class="ic-sample"></i><p>{{ text }}</p>
     </div>
 </div>
 {% endmacro %}

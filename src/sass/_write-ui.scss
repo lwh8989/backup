@@ -161,7 +161,7 @@
                 }
                 strong {
                     color: color.$ui_text_brand;
-                    margin-left: 0.4rem;
+                    margin: 0 0.4rem 0 0;
                 }
             }
             .attach-file-size {
@@ -269,26 +269,131 @@
             }
 
         }
+        .write-setting-area {
+            position: relative;
+            padding: $stds-spacing-20 $stds-spacing-24;
+            border-top: 1px solid $ui_divider_black_02;
+            box-sizing: border-box;
+            background: $ui_bg_surface_gray25;
+            .write-setting-section {
+                .setting-area-header {
+                    position: relative;
+                    padding: $stds-spacing-12 0;                    
+                    &:first-of-type {
+                        padding-top: 0;
+                    }
+                }
+                .setting-area-body {
+                    position: relative;
+                    .element-checkbox {}
+                    .flex-wrap {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: $stds-spacing-16;
+                        &:first-of-type {
+                            margin-top: 0;
+                        }
+                        .element-checkbox {
+                            margin: $stds-spacing-6 $stds-spacing-24 $stds-spacing-6 0;
+                        }
+                        .element-input-icon.calendar {
+                            width: 20%;
+                            margin-right: $stds-spacing-8;
+                            &:first-of-type {
+                                margin-right: 0;
+                            }
+                        }
+                        .element-dropdown {
+                            width: 20%;
+                            margin-right: $stds-spacing-8;
+                            &:first-of-type {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+                .setting-tit {
+                    font-size: font.$stdsBody2;
+                    font-weight: font.$stdsWeightBold;
+                    color: $ui_text_02;  
+                    & span {
+                        color: $ui_text_brand;  
+                    }                  
+                }
+                .setting-desc {
+                    font-size: font.$stdsBody4;
+                    font-weight: font.$stdsWeightNormal;
+                    color: $ui_text_04;
+                    margin-top: $stds-spacing-12;
+                }
+            }
+            .byte {
+                position: absolute;
+                top: 2.4rem;
+                right: 2.4rem;
+                font-size: font.$stdsBody4;
+                font-weight: font.$stdsWeightNormal;
+                color: $ui_text_04;
+                .byte-count {
+                    color: $ui_text_brand; 
+                }
+            }
+        }
         .reply-write-tool {
             display: flex;
             .tool-icon-btn {
+                position: relative;
                 flex: 1;
                 border-top: 0.1rem solid color.$ui_button_05_enabled_border;
                 border-bottom: 0.1rem solid color.$ui_button_05_enabled_border;
                 box-sizing: border-box;
+                background-color: color.$white;
                 button {
+                    position: relative;
                     width: 3.8rem;
                     height: 3.8rem;
                     i {
                         font-size: 2.4rem;
                         color: color.$ui_icon_03_enabled;
                     }
+                    .emoji-pos {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
+                    }
+                }
+                .byte {
+                    position: absolute;
+                    top: space.$stds-spacing-8;
+                    right: space.$stds-spacing-12;
+                    font-size: font.$stdsBody3;
+                    color: color.$ui_text_disabled;
                 }
             }
             .tool-btn {
                 .element-btn {
                     border-radius: 0;
                     margin-right: -0.1rem;
+                }
+            }
+        }
+        &.write-none {
+            display: flex;
+            background-color: color.$ui_form_line_enabled;
+            border: 1px solid color.$ui_form_line_enabled_border;
+            box-sizing: border-box;
+            width: 100%;
+            height: 16rem;
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+                font-size: font.$stdsBody2;
+                color: color.$ui_text_03;
+                a {
+                    color: color.$ui_text_brand;
                 }
             }
         }

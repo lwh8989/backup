@@ -1,12 +1,22 @@
 {% import "_include/module/detail/detail-part.njk" as detailPart %}
 {% import "_include/module/pagination/pagination.njk" as pagination %}
 
-{% macro detail( title, profileInfo ) %}
+{% macro detailBase( title, profileInfo ) %}
 <div class="module-detail">
-    {{ detailPart.detailHeader( title, profileInfo ) }}
+    {{ detailPart.detailHeader( title, profileInfo, titleOption="false" ) }}
     {{ detailPart.detailContents( ) }}
     {{ detailPart.detailBanner( ) }}
-    {{ detailPart.detailFooter( dataText="포스트를 입력해주세요.", viewOption="display: none;" ) }}
+    {{ detailPart.detailFooterBase( dataText="포스트를 입력해주세요.", viewOption="display: none;" ) }}
+    {{ pagination.base( isATag=false ) }}
+</div>
+{% endmacro %}
+
+{% macro detailThread( title, profileInfo ) %}
+<div class="module-detail">
+    {{ detailPart.detailHeader( title, profileInfo, boardLink="false" ) }}
+    {{ detailPart.detailContents( ) }}
+    {{ detailPart.detailBanner( ) }}
+    {{ detailPart.detailFooterThread( dataText="댓글을 입력 해주세요.", viewOption="display: none;" ) }}
     {{ pagination.base( isATag=false ) }}
 </div>
 {% endmacro %}

@@ -19,11 +19,20 @@
                 color: color.$ui_icon_01_enabled;
             }
         }
+        .title-location {
+            font-size: font.$stdsBody2;
+            color: color.$ui_text_03;
+            margin-bottom: space.$stds-spacing-12;
+            .midd-dot {
+                    padding: 0 space.$stds-spacing-8;
+            }
+        }
         .title {
             font-size: font.$stdsTitle3;
             font-weight: font.$stdsWeightBold;
             color: color.$ui_text_01;
-            margin-bottom: space.$stds-spacing-48;
+            margin-bottom: space.$stds-spacing-40;
+            flex: 1;
             strong {
                 color: color.$ui_text_brand;
                 margin-left: space.$stds-spacing-8;
@@ -45,6 +54,7 @@
             }
             .info-btn {
                 display: flex;
+                align-items: center;
                 i {
                     font-size: 2rem;
                     color: color.$ui_icon_05_enabled;
@@ -126,7 +136,7 @@
                 button {
                     .ic-navigation-alarm-disabled-line {
                         font-size: 2rem;
-                        color: color.$ui_icon_01_enabled;
+                        color: color.$ui_icon_05_enabled;
                         margin: 0.3rem 0 0 space.$stds-spacing-8;
                     }
                     &:hover {
@@ -142,6 +152,9 @@
                     }
                 }
             }
+            &+.contents {
+                padding-top: 0;
+            }
         }
         .reply-write {
             position: relative;
@@ -149,6 +162,9 @@
         .contents {
             position: relative;
             padding-top: space.$stds-spacing-20;
+            &+.reply-write {
+                margin-top: space.$stds-spacing-20;
+            }
         }
     }
     .pagination {
@@ -175,11 +191,19 @@
                     color: color.$ui_icon_01_enabled;
                 }
             }
+            .title-location {
+                font-size: font.$stdsBody3;
+                color: color.$ui_text_03;
+                margin-bottom: space.$stds-spacing-8;
+                .midd-dot {
+                        padding: 0 space.$stds-spacing-4;
+                }
+            }
             .title {
                 font-size: font.$stdsTitle4;
                 font-weight: font.$stdsWeightBold;
                 color: color.$ui_text_01;
-                margin-bottom: space.$stds-spacing-36;
+                margin-bottom: space.$stds-spacing-28;
                 strong {
                     color: color.$ui_text_brand;
                     margin-left: space.$stds-spacing-8;
@@ -275,7 +299,7 @@
                     button {
                         .ic-navigation-alarm-disabled-line {
                             font-size: 2rem;
-                            color: color.$ui_icon_01_enabled;
+                            color: color.$ui_icon_05_enabled;
                             margin: 0.3rem 0 0 space.$stds-spacing-8;
                         }
                         &:hover {
@@ -292,12 +316,18 @@
                     }
                 }
             }
+            &+.contents {
+                padding-top: 0;
+            }
             .reply-write {
                 position: relative;
             }
             .contents {
                 position: relative;
                 padding-top: space.$stds-spacing-20;
+                &+.reply-write {
+                    margin-top: space.$stds-spacing-20;
+                }
             }
         }
         .pagination {

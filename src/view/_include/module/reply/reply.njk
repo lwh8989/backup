@@ -145,10 +145,10 @@
 {% macro replyBaseComments( replyPrev, option, report, forword, replyS, replyM, replyL ) %}
 <div class="module-reply comments-base">
     {% if replyPrev %}
-    <button class="reply-prev-btn">이전 댓글 보기<i class="ic-sample"></i></button>
+    <button class="reply-prev-btn">이전 댓글 보기<i class="ic-control-arrow-down-line"></i></button>
     {% endif %}
     <div class="reply-header">
-        <i class="ic-sample"></i>
+        <i class="ic-navigation-sub-menu-line"></i>
         {{ profile.profileHorizontal ( viewOption="display: none;" ) }}
         {% if option %}
         <div class="info-btn">

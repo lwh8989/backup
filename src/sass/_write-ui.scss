@@ -267,7 +267,6 @@
                 color: color.$ui_text_disabled;
                 cursor: pointer;
             }
-
         }
         .write-setting-area {
             position: relative;
@@ -396,6 +395,9 @@
                     color: color.$ui_text_brand;
                 }
             }
+        }
+        &:focus {
+            border-color: red;
         }
     }
 }

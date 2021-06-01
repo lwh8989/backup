@@ -66,9 +66,21 @@
             .write-setting-section {
                 .setting-area-header {
                     position: relative;
-                    padding: $stds-spacing-12 0;                    
+                    padding: $stds-spacing-12 0;
+                    display: flex;
+                    flex: 1;
                     &:first-of-type {
                         padding-top: 0;
+                    }
+                    .byte {
+                        display: flex;
+                        align-items: center;
+                        font-size: font.$stdsBody4;
+                        font-weight: font.$stdsWeightNormal;
+                        color: $ui_text_04;
+                        .byte-count {
+                            color: $ui_text_brand;
+                        }
                     }
                 }
                 .setting-area-body {
@@ -101,6 +113,7 @@
                     }
                 }
                 .setting-tit {
+                    flex: 1;
                     font-size: font.$stdsBody2;
                     font-weight: font.$stdsWeightBold;
                     color: $ui_text_02;  
@@ -113,17 +126,6 @@
                     font-weight: font.$stdsWeightNormal;
                     color: $ui_text_04;
                     margin-top: $stds-spacing-12;
-                }
-            }
-            .byte {
-                position: absolute;
-                top: 2.4rem;
-                right: 2.4rem;
-                font-size: font.$stdsBody4;
-                font-weight: font.$stdsWeightNormal;
-                color: $ui_text_04;
-                .byte-count {
-                    color: $ui_text_brand; 
                 }
             }
         }
@@ -159,7 +161,7 @@
             padding: 1.6rem;
             .element-dropdown {
                 display: inline-flex;
-                width: 100%;            
+                width: 100%;
                 margin-left: 0;
                 margin-top: 0.8rem;
                 &:first-of-type {
@@ -174,38 +176,15 @@
         }
         .write-contents {
             margin-top: 0;
-            // 글쓰기 영역
-            .write-edit-area {
-                min-height: 42rem;
-                padding: 1.6rem;
-                font-size: font.$stdsBody2;
-                color: $ui_text_disabled;
-            }
+            .write-edit-area {}
             .write-contents-area {
-                min-height: 5.6rem;
-                padding: 1.2rem 2.4rem;
-                border: 0.1px solid $ui_divider_black_02;
-                border-top: 0;
-                box-sizing: border-box;
-                // 이미지 등록 영역
                 .write-image-area {
-                    text-align: right;
                     p {
-                        display: inline-block;
-                        font-size: font.$stdsBody3;
-                        color: $ui_text_03;
-                        padding-right: $stds-spacing-8;
+
                     }
                 }
                 .write-tag-area {
-                    text-align: left;
-                    p {
-                        display: inline-block;
-                        font-size: font.$stdsBody2;
-                        color: $ui_text_04;
-                        padding-right: $stds-spacing-8;
-                        line-height: $stds-spacing-32;
-                    }
+                    p {}
                     .element-btn {
                         max-width: 12rem;
                         .btn-txt {
@@ -217,27 +196,17 @@
                 }
             }
             .write-setting-area {
-                position: relative;
-                padding: $stds-spacing-20 $stds-spacing-16;
-                border: 1px solid $ui_divider_black_02;
-                border-top: 0;
-                box-sizing: border-box;
-                background: $ui_bg_surface_gray25;
                 .write-setting-section {
                     .setting-area-header {
                         position: relative;
-                        padding: $stds-spacing-12 0;                    
+                        padding: $stds-spacing-12 0;
                         &:first-of-type {
                             padding-top: 0;
                         }
                     }
                     .setting-area-body {
-                        position: relative;
                         .element-checkbox {}
                         .flex-wrap {
-                            display: flex;
-                            flex-wrap: wrap;
-                            margin-top: $stds-spacing-16;
                             &:first-of-type {
                                 margin-top: 0;
                             }
@@ -264,30 +233,9 @@
                         }
                     }
                     .setting-tit {
-                        font-size: font.$stdsBody2;
-                        font-weight: font.$stdsWeightBold;
-                        color: $ui_text_02;  
-                        & span {
-                            color: $ui_text_brand;  
-                        }                  
+                        & span {}
                     }
-                    .setting-desc {
-                        font-size: font.$stdsBody4;
-                        font-weight: font.$stdsWeightNormal;
-                        color: $ui_text_04;
-                        margin-top: $stds-spacing-12;
-                    }
-                }
-                .byte {
-                    position: absolute;
-                    top: 2.4rem;
-                    right: 2.4rem;
-                    font-size: font.$stdsBody4;
-                    font-weight: font.$stdsWeightNormal;
-                    color: $ui_text_04;
-                    .byte-count {
-                        color: $ui_text_brand; 
-                    }
+                    .setting-desc {}
                 }
             }
         }

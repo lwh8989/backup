@@ -50,6 +50,9 @@
       <div class="write-setting-section">
         <div class="setting-area-header">
           <p class="setting-tit">대표이미지 별도 등록</p>
+          <div class="byte">
+            <span class="byte-count">119KB</span><span class="byte-total">/ 1024MB</span>
+          </div>
         </div>
         <div class="setting-area-body">
           {{ attach.base( attachItem=['attachItem'], cbDefault="" ) }}
@@ -61,10 +64,6 @@
           {{ attach.base( attachItem=['attachItem', 'attachItem', 'attachItem', 'attachItem'], cbDefault="false" ) }}
           <p class="setting-desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
         </div>
-      </div>
-      <div class="byte">
-        <span class="byte-count">119KB</span>
-        <span class="byte-total">/ 1024MB</span>
       </div>
     </div>
     <!-- [D] 글쓰기 추천 대상 설정 영역 -->

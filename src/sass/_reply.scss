@@ -473,7 +473,12 @@
                 .section-hashtag {
                     margin-top: 1.6rem;
                     .element-btn {
+                        max-width: 12rem;
                         margin: 0 0.8rem 0.8rem 0;
+                        .btn-txt {
+                            @include ellipsis($line: 1);
+                            display: block;
+                        }
                     }
                 }
             }

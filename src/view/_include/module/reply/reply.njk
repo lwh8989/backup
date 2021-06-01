@@ -3,10 +3,14 @@
 {% import "_include/form/button.njk" as btn %}
 
 <!-- 일반형 댓글 -->
-{% macro replyBase( option, report, forword, replyS, replyM, replyL ) %}
+{% macro replyBase( userLeave, userLive, option, report, forword, replyS, replyM, replyL ) %}
 <div class="module-reply">
     <div class="reply-header">
-        {{ profile.profileHorizontal ( viewOption="display: none;", height="h36" ) }}
+        {% if userLeave %}
+            {{ profile.profileHorizontalHidden ( ) }}
+        {% elif userLive  %}
+            {{ profile.profileHorizontal ( viewOption="display: none;", height="h36" ) }}
+        {% endif %}
         {% if option %}
         <div class="info-btn">
             <!-- [D] active 추가하면 메뉴가 나옵니다.  -->
@@ -142,14 +146,18 @@
 </div>
 {% endmacro %}
 <!-- 일반형 댓글 - 댓글 -->
-{% macro replyBaseComments( replyPrev, option, report, forword, replyS, replyM, replyL ) %}
+{% macro replyBaseComments( replyPrev, userLeave, userLive, option, report, forword, replyS, replyM, replyL ) %}
 <div class="module-reply comments-base">
     {% if replyPrev %}
     <button class="reply-prev-btn">이전 댓글 보기<i class="ic-control-arrow-down-line"></i></button>
     {% endif %}
     <div class="reply-header">
         <i class="ic-navigation-sub-menu-line"></i>
-        {{ profile.profileHorizontal ( viewOption="display: none;" ) }}
+        {% if userLeave %}
+            {{ profile.profileHorizontalHidden ( ) }}
+        {% elif userLive  %}
+            {{ profile.profileHorizontal ( viewOption="display: none;", height="h36" ) }}
+        {% endif %}
         {% if option %}
         <div class="info-btn">
             <button><i class="ic-navigation-option-vertical-fill"></i></button>
@@ -255,10 +263,14 @@
 {% endmacro %}
 
 <!-- 스레드형 댓글 -->
-{% macro replyThread( option, report, forword, quotePurple, quotePurpleOpen, quoteBlue, quoteBlueOpen, replyS, replyM, replyL ) %}
+{% macro replyThread( userLeave, userLive, option, report, forword, quotePurple, quotePurpleOpen, quoteBlue, quoteBlueOpen, replyS, replyM, replyL ) %}
 <div class="module-reply">
     <div class="reply-header">
-        {{ profile.profileHorizontal ( viewOption="display: none;", height="h36") }}
+        {% if userLeave %}
+            {{ profile.profileHorizontalHidden ( ) }}
+        {% elif userLive  %}
+            {{ profile.profileHorizontal ( viewOption="display: none;", height="h36" ) }}
+        {% endif %}
         {% if option %}
         <div class="info-btn">
             <!-- [D] active 추가하면 메뉴가 나옵니다.  -->
@@ -555,10 +567,14 @@
 </div>
 {% endmacro %}
 <!-- 스레드형 댓글 - 댓글 -->
-{% macro replyThreadComments( option, report, forword, quotePurple, quotePurpleOpen, quoteBlue, quoteBlueOpen, replyS, replyM, replyL ) %}
+{% macro replyThreadComments( userLeave, userLive, option, report, forword, quotePurple, quotePurpleOpen, quoteBlue, quoteBlueOpen, replyS, replyM, replyL ) %}
 <div class="module-reply comments-thread">
     <div class="reply-header">
-        {{ profile.profileHorizontal ( viewOption="display: none;" ) }}
+        {% if userLeave %}
+            {{ profile.profileHorizontalHidden ( ) }}
+        {% elif userLive  %}
+            {{ profile.profileHorizontal ( viewOption="display: none;", height="h36" ) }}
+        {% endif %}
         {% if option %}
         <div class="info-btn">
             <button><i class="ic-navigation-option-vertical-fill"></i></button>
@@ -830,7 +846,7 @@
 {% macro replyBaseHidden( text ) %}
 <div class="module-reply reply-hidden">
     <div class="reply-header">
-        <i class="ic-sample"></i><p>{{ text }}</p>
+        <i class="ic-state-info-circle-line"></i><p>{{ text }}</p>
     </div>
     <div class="reply-footer">
         <div class="footer-left">
@@ -841,14 +857,14 @@
     </div>
 </div>
 {% endmacro %}
-<!-- 댓글 - 댓글 - 삭제 -->
+<!-- 댓글 > 댓글 - 삭제 -->
 {% macro replyBaseCommentsHidden( replyPrev, text ) %}
 <div class="module-reply comments-base reply-hidden">
     {% if replyPrev %}
-    <button class="reply-prev-btn">이전 댓글 보기<i class="ic-sample"></i></button>
+    <button class="reply-prev-btn">이전 댓글 보기<i class="ic-control-arrow-down-line"></i></button>
     {% endif %}
     <div class="reply-header">
-        <i class="ic-sample"></i><p>{{ text }}</p>
+        <i class="ic-state-info-circle-line"></i><p>{{ text }}</p>
     </div>
 </div>
 {% endmacro %}

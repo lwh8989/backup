@@ -674,15 +674,14 @@
         <div class="write-setting-section">
             <div class="setting-area-header">
                 <p class="setting-tit">첨부된 이미지 / 동영상 <span>%N%개</span></p>
+                <div class="byte">
+                    <span class="byte-count">119KB</span><span class="byte-total">/ 1024MB</span>
+                </div>
             </div>
             <div class="setting-area-body">
                 {{ attach.base( attachItem=['attachItem', 'attachItem', 'attachItem', 'attachItem'], cbDefault="false" ) }}
                 <p class="setting-desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
             </div>
-        </div>
-        <div class="byte">
-            <span class="byte-count">119KB</span>
-            <span class="byte-total">/ 1024MB</span>
         </div>
     </div>
     <div class="reply-write-tool">
@@ -709,7 +708,8 @@
         </div>
         <div class="tool-btn">
             {{ btn.base(colorClass='bg-outline', sizeClass='size-small', txt='취소') }}
-            {{ btn.base(colorClass='bg-outline', sizeClass='size-small', txt='등록', state='disabled' ) }}
+            <!-- [D] disabled 속성을 넣으면 비활성화 됩니다. -->
+            {{ btn.base(colorClass='bg-secondary', sizeClass='size-small', txt='등록', state='' ) }}
         </div>
     </div>
 </div>

@@ -24,7 +24,7 @@
             color: color.$ui_text_03;
             margin-bottom: space.$stds-spacing-12;
             .midd-dot {
-                    padding: 0 space.$stds-spacing-8;
+                padding: 0 space.$stds-spacing-8;
             }
         }
         .title {
@@ -175,45 +175,27 @@
 /* Desktop (max-width: 768px) */
 @media (max-width: 768px) {
     .module-detail {
-        position: relative;
         padding: 2.4rem 1.6rem;
-        background: color.$white;
         .detail-header {
-            border-bottom: 1px solid color.$ui_divider_black_02;
             .title-btn {
-                display: flex;
-                align-items: center;
                 font-size: font.$stdsBody3;
-                color: color.$ui_text_03;
                 margin-bottom: space.$stds-spacing-8;
-                i {
-                    font-size: 1.6rem;
-                    color: color.$ui_icon_01_enabled;
-                }
+                i {}
             }
             .title-location {
                 font-size: font.$stdsBody3;
-                color: color.$ui_text_03;
                 margin-bottom: space.$stds-spacing-8;
                 .midd-dot {
-                        padding: 0 space.$stds-spacing-4;
+                    padding: 0 space.$stds-spacing-4;
                 }
             }
             .title {
                 font-size: font.$stdsTitle4;
-                font-weight: font.$stdsWeightBold;
-                color: color.$ui_text_01;
                 margin-bottom: space.$stds-spacing-28;
-                strong {
-                    color: color.$ui_text_brand;
-                    margin-left: space.$stds-spacing-8;
-                }
+                strong {}
             }
             .info-wrap {
-                display: flex;
-                margin-bottom: space.$stds-spacing-24;
                 .info {
-                    flex: 1;
                     .nick {
                         .profile-link {
                             .profile-img {
@@ -224,19 +206,11 @@
                     }
                 }
                 .info-btn {
-                    display: flex;
                     i {
-                        font-size: 2rem;
-                        color: color.$ui_icon_05_enabled;
-                        &:hover {
-                            color: color.$ui_icon_05_hover;
-                        }
+                        &:hover {}
                     }
                     .element-dropdown {
-                        margin-left: 1.2rem;
-                        .element-dropdown-layer {
-                            right: 0;
-                        }
+                        .element-dropdown-layer {}
                     }
                 }
             }
@@ -244,94 +218,53 @@
         .detail-contents {
             padding: space.$stds-spacing-32 0 space.$stds-spacing-48;
             .sub-tit {
-                font-size: font.$stdsTitle5;
-                font-weight: font.$stdsWeightBold;
-                color: color.$ui_text_01;
                 padding-bottom: space.$stds-spacing-24;
             }
             .module-write-ui {
-                margin-top: space.$stds-spacing-24;
             }
             .section-hashtag {
                 margin-top: space.$stds-spacing-24;
-                font-size: 0;
                 .element-btn {
-                    margin: 0 space.$stds-spacing-8 space.$stds-spacing-8 0;
-                    .btn-txt {
-                        line-height: 2rem;
-                    }
+                    .btn-txt {}
                 }
             }
             .section-share {
-                text-align: center;
-                font-size: 0;
-                margin-top: space.$stds-spacing-64;
                 .element-btn {
-                    margin-left: 8px;
-                    &:first-of-type {
-                        margin-left: 0;
-                    }
+                    &:first-of-type {}
                 }
             }
         }
         .detail-banner {
-            img {
-                max-width: 100%;
-            }
+            img {}
         }
         .detail-footer {
-            margin-top: space.$stds-spacing-48;
             .header {
-                position: relative;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex-direction: row;
-                flex-wrap: nowrap;
                 padding-bottom: 1.2rem;
                 .container {
-                    display: flex;
                     strong {
                         font-size: font.$stdsTitle6;
-                        font-weight: font.$stdsWeightBold;
-                        color: color.$ui_text_01;
                     }
                     button {
                         .ic-navigation-alarm-disabled-line {
-                            font-size: 2rem;
-                            color: color.$ui_icon_05_enabled;
-                            margin: 0.3rem 0 0 space.$stds-spacing-8;
                         }
                         &:hover {
-                            .ic-navigation-alarm-disabled-line {
-                                color: color.$ui_icon_01_hover;
-                            }
+                            .ic-navigation-alarm-disabled-line {}
                         }
                         &:focus,
                         &:focus-within {
-                            .ic-navigation-alarm-disabled-line {
-                                color: color.$ui_icon_01_focused;
-                            }
+                            .ic-navigation-alarm-disabled-line {}
                         }
                     }
                 }
+                &+.contents {}
             }
-            &+.contents {
-                padding-top: 0;
-            }
-            .reply-write {
-                position: relative;
-            }
+            .reply-write {}
             .contents {
-                position: relative;
                 padding-top: space.$stds-spacing-20;
                 &+.reply-write {
-                    margin-top: space.$stds-spacing-20;
                 }
             }
         }
-        .pagination {
-            padding: space.$stds-spacing-36 0;
-        }
+        .pagination {}
     }
 }

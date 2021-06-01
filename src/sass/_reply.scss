@@ -21,6 +21,7 @@
     }
     .reply-header {
         display: flex;
+        align-items: center;
         margin-bottom: space.$stds-spacing-12;
         .module-profile {
             flex: 1;
@@ -110,11 +111,6 @@
         .footer-left {
             display: flex;
             flex: 1;
-            // .element-btn {
-            //     &.with-icon {
-            //         display: none;
-            //     }
-            // }
         }
         .footer-right {
             display: flex;
@@ -277,7 +273,7 @@
                     height: 3.6rem;
                 }
                 .profile-contents {
-                        line-height: 1.8rem;
+                    line-height: 1.8rem;
                     .profile-nickname {
                         font-size: font.$stdsBody4;
                     }
@@ -389,6 +385,27 @@
                 }
             }
         }
+        &.comments-base {
+            padding-left: 1.6rem;
+            padding-right: 1.6rem;
+            background-color: color.$gray25;
+            &.reply-hidden {
+                .reply-header {
+                    margin-bottom: 0;
+
+                    i {
+                        font-size: 24px;
+                        color: color.$ui_icon_05_enabled;
+                        margin-right: 1.2rem;
+                    }
+
+                    p {
+                        font-size: font.$stdsBody1;
+                        color: color.$ui_text_04;
+                    }
+                }
+            }
+        }
         &.comments-thread {
             padding-left: 3.2rem;
             &::after {
@@ -463,7 +480,6 @@
         }
         .reply-write {
             margin: space.$stds-spacing-16 0 0 space.$stds-spacing-44;
-            background: red;
         }
     }
 }

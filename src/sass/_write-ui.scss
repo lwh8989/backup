@@ -251,7 +251,6 @@
     }
     &.reply-write {
         position: relative;
-        border: 0.1rem solid color.$ui_button_05_enabled_border;
         border-bottom: 0;
         box-sizing: border-box;
         .reply-write-edit {
@@ -261,25 +260,48 @@
             padding: space.$stds-spacing-12 space.$stds-spacing-16;
             outline: none;
             background-color: color.$ui_button_05_enabled;
+            border: 0.1rem solid color.$ui_button_05_enabled_border;
             &[contentEditable='true']:empty:not(:focus):before {
                 content: attr(data-text);
                 font-size: font.$stdsBody3;
                 color: color.$ui_text_disabled;
                 cursor: pointer;
             }
+            &:focus,
+            &:focus-within {
+                border: 0.1rem solid color.$ui_button_05_focused_border;
+            }
+            &:hover {
+                border: 0.1rem solid color.$ui_button_05_hover_border;
+            }
         }
         .write-setting-area {
             position: relative;
             padding: $stds-spacing-20 $stds-spacing-24;
-            border-top: 1px solid $ui_divider_black_02;
+            border-left: 1px solid $ui_divider_black_02;
+            border-right: 1px solid $ui_divider_black_02;
+            border-bottom: 0.1rem solid color.$ui_button_05_enabled_border;
             box-sizing: border-box;
             background: $ui_bg_surface_gray25;
             .write-setting-section {
                 .setting-area-header {
                     position: relative;
-                    padding: $stds-spacing-12 0;                    
+                    padding: $stds-spacing-12 0;
+                    display: flex;
+                    flex: 1;
                     &:first-of-type {
                         padding-top: 0;
+                    }
+                    .byte {
+                        display: flex;
+                        align-items: center;
+                        font-size: font.$stdsBody4;
+                        font-weight: font.$stdsWeightNormal;
+                        color: $ui_text_04;
+
+                        .byte-count {
+                            color: $ui_text_brand;
+                        }
                     }
                 }
                 .setting-area-body {
@@ -312,12 +334,13 @@
                     }
                 }
                 .setting-tit {
+                    flex: 1;
                     font-size: font.$stdsBody2;
                     font-weight: font.$stdsWeightBold;
-                    color: $ui_text_02;  
+                    color: $ui_text_02;
                     & span {
-                        color: $ui_text_brand;  
-                    }                  
+                        color: $ui_text_brand;
+                    }
                 }
                 .setting-desc {
                     font-size: font.$stdsBody4;
@@ -326,31 +349,25 @@
                     margin-top: $stds-spacing-12;
                 }
             }
-            .byte {
-                position: absolute;
-                top: 2.4rem;
-                right: 2.4rem;
-                font-size: font.$stdsBody4;
-                font-weight: font.$stdsWeightNormal;
-                color: $ui_text_04;
-                .byte-count {
-                    color: $ui_text_brand; 
-                }
-            }
         }
         .reply-write-tool {
             display: flex;
+            //border: 0.1rem solid color.$ui_button_05_enabled_border;
+            //border-top: 0;
             .tool-icon-btn {
                 position: relative;
                 flex: 1;
-                border-top: 0.1rem solid color.$ui_button_05_enabled_border;
-                border-bottom: 0.1rem solid color.$ui_button_05_enabled_border;
+                height: 3.9rem;
+                border: 0.1rem solid color.$ui_button_05_enabled_border;
+                border-top: 0;
+                // border-left: 0.1rem solid color.$ui_button_05_enabled_border;
+                // border-bottom: 0.1rem solid color.$ui_button_05_enabled_border;
                 box-sizing: border-box;
                 background-color: color.$white;
                 button {
                     position: relative;
-                    width: 3.8rem;
-                    height: 3.8rem;
+                    width: 3.9rem;
+                    height: 3.9rem;
                     i {
                         font-size: 2.4rem;
                         color: color.$ui_icon_03_enabled;
@@ -364,16 +381,21 @@
                 }
                 .byte {
                     position: absolute;
-                    top: space.$stds-spacing-8;
+                    top: 1rem;
                     right: space.$stds-spacing-12;
                     font-size: font.$stdsBody3;
                     color: color.$ui_text_disabled;
                 }
             }
             .tool-btn {
+                margin-top: -0.1rem;
+                margin-left: -0.1rem;
                 .element-btn {
                     border-radius: 0;
-                    margin-right: -0.1rem;
+                    //margin-right: -0.1rem;
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
                 }
             }
         }
@@ -396,8 +418,37 @@
                 }
             }
         }
-        &:focus {
-            border-color: red;
+    }
+}
+
+/* Desktop (max-width: 768px) */
+@media (max-width: 768px) {
+    .module-write-ui {
+        &.reply-write {
+            .reply-write-tool {
+                display: block;
+                border-bottom: 1px solid $ui_divider_black_02;
+                .tool-icon-btn {}
+                .tool-btn {
+                    margin-top: 0;
+                    margin-left: 0;
+                    border-left: 0.1rem solid #d5d5d5;
+                    border-right: 0.1rem solid #d5d5d5;
+                    .element-btn {
+                        width: 50%;
+                        margin: 0;
+                        border: 0;
+                        border-right: 1px solid $ui_divider_black_02;
+                        .btn-txt {
+                            @include ellipsis($line: 1);
+                            display: block;
+                        }
+                        &:last-of-type {
+                            border-right: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }

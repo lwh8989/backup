@@ -16,11 +16,11 @@
             {% if titleOption %}
                 <div class="info-wrap">
                     <div class="info-btn">
-                        <button><i class="ic-sample"></i></button>
+                        <button><i class="ic-object-lock-fill"></i></button>
                         <!-- [D] active 추가하면 메뉴가 나옵니다.  -->
                         <div class="element-dropdown {{ height }}">
                             <button class="element-select-button ">
-                                <i class="ic-sample"></i>
+                                <i class="ic-control-arrow-down-line"></i>
                             </button>
                             <div class="element-dropdown-layer absolute top">
                                 <div class="element-dropdown-layer-inner">
@@ -130,15 +130,16 @@
             {{ dropdown.select(height="h40", selectButtonTxt="최신순", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="", selected="selected") }}
         </div>
         <div class="contents">
-            {{ reply.replyBase( option="false", replyS="false" ) }}
-            {{ reply.replyBase( report="false", replyM="false" ) }}
-            {{ reply.replyBase( option="false", replyL="false" ) }}
+            {{ reply.replyBase( userLive="false", option="false", replyS="false" ) }}
+            {{ reply.replyBase( userLive="false", report="false", replyM="false" ) }}
+            {{ reply.replyBase( userLive="false", option="false", replyL="false" ) }}
+            {{ reply.replyBase( userLeave="false", report="false", replyS="false" ) }}
             {{ reply.replyBaseHidden( text="신고에 의해 댓글이 숨겨졌습니다." ) }}
             {{ reply.replyBaseHidden( text="작성자에 의해 삭제된 댓글입니다." ) }}
-            {{ reply.replyBaseComments( replyPrev="false", option="false", replyS="false" ) }}
-            {{ reply.replyBaseComments( option="false", replyM="false" ) }}
-            {{ reply.replyBaseComments( option="false", replyL="false" ) }}
-            {{ reply.replyBaseComments( option="false", replyL="false" ) }}
+            {{ reply.replyBaseComments( userLive="false", replyPrev="false", option="false", replyS="false" ) }}
+            {{ reply.replyBaseComments( userLive="false", option="false", replyM="false" ) }}
+            {{ reply.replyBaseComments( userLive="false", option="false", replyL="false" ) }}
+            {{ reply.replyBaseComments( userLeave="false", report="false", replyS="false" ) }}
             {{ reply.replyBaseCommentsHidden( text="신고에 의해 댓글이 숨겨졌습니다." ) }}
             {{ reply.replyBaseCommentsHidden( text="작성자에 의해 삭제된 댓글입니다." ) }}
         </div>
@@ -165,14 +166,15 @@
             {{ writeUi.baseReplyWriteNone( ) }}
         </div>
         <div class="contents">
-            {{ reply.replyThread( option="false", replyS="false") }}
-            {{ reply.replyThread( report="false", replyM="false", quotePurple="false" ) }}
-            {{ reply.replyThread( forword="false", replyL="false", quotePurpleOpen="false" ) }}
+            {{ reply.replyThread( userLive="false", option="false", replyS="false") }}
+            {{ reply.replyThread( userLive="false", report="false", replyM="false", quotePurple="false" ) }}
+            {{ reply.replyThread( userLive="false", forword="false", replyL="false", quotePurpleOpen="false" ) }}
+            {{ reply.replyThread( userLeave="false", report="false", replyS="false") }}
             {{ reply.replyBaseHidden( text="신고에 의해 댓글이 숨겨졌습니다." ) }}
             {{ reply.replyBaseHidden( text="작성자에 의해 삭제된 댓글입니다." ) }}
-            {{ reply.replyThreadComments( option="false", replyS="false" ) }}
-            {{ reply.replyThreadComments( option="false", replyS="false", quoteBlue="false" ) }}
-            {{ reply.replyThreadComments( option="false", replyS="false", quoteBlueOpen="false" ) }}
+            {{ reply.replyThreadComments( userLive="false", option="false", replyS="false" ) }}
+            {{ reply.replyThreadComments( userLive="false", option="false", replyS="false", quoteBlue="false" ) }}
+            {{ reply.replyThreadComments( userLive="false", option="false", replyS="false", quoteBlueOpen="false" ) }}
         </div>
     </div>
 {% endmacro %}

@@ -1,0 +1,175 @@
+{% import "legacy/elements/icon.njk" as icon %}
+{% import "legacy/elements/btn.njk" as btn %}
+
+{% macro footer() %}
+  <div class="footer">
+    <div class="footer-contents">
+      <div class="footer-container">
+        <p class="footer-logo">
+          <img class="ci-logo" src="/static/images/ci/ci-sgs.png" alt="Smilegate Stove">
+          <img class="ci-logo" src="/static/images/ci/ci-naver.png" alt="NAVER">
+          <img class="ci-logo" src="/static/images/ci/ci-hangame.png" alt="HANGAME">
+        </p>
+        <nav class="footer-nav">
+          <a href="">회사소개</a>
+          <a href="">이용약관</a>
+          <a href="">
+            <strong>개인정보처리방침</strong>
+          </a>
+          <a href="">청소년보호정책</a>
+          <a href="">운영정책</a>
+          <a href="">게임시간선택제</a>
+          <div class="footer-nav-rating">
+            <a href="#">게임이용등급 안내</a>
+            <!-- [D] 개발시엔 인라인 스타일 제거해 주세요. -->
+            <div class="rating-game" style="visibility:visible;">
+              <div class="legacy-module-tab tab-vertical">
+                <!-- [D] 탭 매뉴 -->
+                <div class="tab-nav">
+                  <button class="tab-links color-yellow active" onclick="openContent(event, 'tab1')" id="verticalOpen">15</button>
+                  <button class="tab-links color-red" onclick="openContent(event, 'tab2')">18</button>
+                </div>
+
+                <!-- [D] 탭 내용 -->
+                <div id="tab1" class="tab-content color-yellow" style="display:block;">
+                  <div class="rating-img">
+                    <img src="{{ staticUrl }}/static/images/svg/ic-grade-15.svg" alt="grade image">
+                    <img src="{{ staticUrl }}/static/images/svg/ic-grade-all.svg" alt="grade image">
+                  </div>
+                  <div class="rating-info">
+                    <table style="width:100%">
+                      <tbody>
+                        <tr>
+                          <th>제명</th>
+                          <td>로스트아크</td>
+                        </tr>
+                        <tr>
+                          <th>신청등급</th>
+                          <td>청소년이용불가</td>
+                        </tr>
+                        <tr>
+                          <th>등급분류일자</th>
+                          <td>2019. 01. 03</td>
+                        </tr>
+                      </tbody>
+                      <tbody>
+                        <tr>
+                          <th>상호</th>
+                          <td>(주) 스마일게이트 알피지</td>
+                        </tr>
+                        <tr>
+                          <th>등급분류번호</th>
+                          <td>CC-NP-190103-003</td>
+                        </tr>
+                        <tr>
+                          <th>제작업자 신고번호</th>
+                          <td>제 2014-000005호</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div id="tab2" class="tab-content color-red">
+                  <div class="rating-img">
+                    <img src="{{ staticUrl }}/static/images/svg/ic-grade-18.svg" alt="grade image">
+                    <img src="{{ staticUrl }}/static/images/svg/ic-grade-violence.svg" alt="grade image">
+                    <img src="{{ staticUrl }}/static/images/svg/ic-grade-speculation.svg" alt="grade image">
+                    <img src="{{ staticUrl }}/static/images/svg/ic-grade-crime.svg" alt="grade image">
+                    <img src="{{ staticUrl }}/static/images/svg/ic-grade-drug.svg" alt="grade image">
+                    <img src="{{ staticUrl }}/static/images/svg/ic-grade-impertinence.svg" alt="grade image">
+                    <img src="{{ staticUrl }}/static/images/svg/ic-grade-fear.svg" alt="grade image">
+                    <img src="{{ staticUrl }}/static/images/svg/ic-grade-sexual.svg" alt="grade image">
+                  </div>
+                  <div class="rating-info">
+                    <table style="width:100%">
+                      <tbody>
+                        <tr>
+                          <th>제명</th>
+                          <td>로스트아크</td>
+                        </tr>
+                        <tr>
+                          <th>신청등급</th>
+                          <td>청소년이용불가</td>
+                        </tr>
+                        <tr>
+                          <th>등급분류일자</th>
+                          <td>2019. 01. 03</td>
+                        </tr>
+                      </tbody>
+                      <tbody>
+                        <tr>
+                          <th>상호</th>
+                          <td>(주) 스마일게이트 알피지</td>
+                        </tr>
+                        <tr>
+                          <th>등급분류번호</th>
+                          <td>CC-NP-190103-003</td>
+                        </tr>
+                        <tr>
+                          <th>제작업자 신고번호</th>
+                          <td>제 2014-000005호</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <script>
+                  function openContent(evt, tabName) {
+                    var i,
+                      tabcontent,
+                      tablinks;
+                    tabcontent = document.getElementsByClassName("tab-content");
+                    for (i = 0; i < tabcontent.length; i++) {
+                      tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tab-links");
+                    for (i = 0; i < tablinks.length; i++) {
+                      tablinks[i].className = tablinks[i]
+                        .className
+                        .replace(" active", "");
+                    }
+                    document
+                      .getElementById(tabName)
+                      .style
+                      .display = "block";
+                    evt.currentTarget.className += " active";
+                  }
+                  document
+                    .getElementById("verticalOpen")
+                    .click();
+                </script>
+              </div>
+            </div>
+          </div>
+          <a href="">고객센터</a>
+        </nav>
+        <div class="footer-address">
+          <p>
+            <span>(주)스마일게이트 스토브</span>
+            <span>대표이사 : 한영운</span>
+            <span>경기도 성남시 분당구 판교로 344, 스마일게이트 캠퍼스 10층</span>
+          </p>
+          <p>
+            <span>사업자등록번호 : 423-81-00537</span>
+            <span>통신판매업 신고번호 : 제2016-경기성남-0367호</span>
+            <a href="" title="사업자정보확인">사업자정보확인</a>
+          </p>
+          <p>
+            <span>대표번호 : <a href="tel:1670-0399">1670-0399</a>
+            </span>
+            <span>팩스 : <a href="tel:02-6021-4480">02-6021-4480</a>
+            </span>
+            <span>이메일 : <a href="mailto:stove@smilgate.com">stove@smilgate.com</a>
+            </span>
+          </p>
+          {# <a href="#" class="nav-top">
+          <i class="legacy-element-icon ic-top"></i><span>TOP</span>
+        </a> #}
+        </div>
+        <p class="copy">&copy; Smilegate Stove. All Rights Reserved.</p>
+        <p class="channing-info">네이버㈜는 통신판매중개자로서 게임의 거래에 대한 의무와 책임은 각 제공자에게 있으며, 이와 관련하여 발생하는 문제에 대해서는 당사는 법적 책임을 부담하지 않습니다.</p>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

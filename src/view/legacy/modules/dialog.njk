@@ -1,0 +1,559 @@
+{% import "legacy/elements/btn.njk" as btn %}
+{% import "legacy/elements/title.njk" as title %}
+{% import "legacy/elements/input-checkbox.njk" as inputCheckbox %}
+{% import "legacy/elements/input-radio.njk" as inputRadio %}
+{% import "legacy/elements/icon.njk" as icon %}
+{% import "legacy/elements/input.njk" as input %}
+{% import "legacy/modules/pagination.njk" as pagination %}
+{% import "legacy/modules/amount.njk" as amount %}
+{% import "legacy/modules/table.njk" as table %}
+<!-- DIALOG -->
+
+{% macro common(isDimmed, isCentered, titTxt, dialogTxt, gameTit, dialogSize, dialogSizeClass, btnTxt1, btnTxt2, oneBtn, isRestriction, unAuthenticated, hasRecomm) %}
+    {% if isDimmed %}
+        <div class="legacy-module-dialog-flex type-comm {{ dialogSizeClass }}"{% if dialogSize %} style="{{ dialogSize }}"{% endif %}>
+            <div class="legacy-dialog-contents">
+                {% if titTxt %}
+                    {{ title.base(h4=titTxt,alignCenter=true) }}
+                {% endif %}
+                {% if isRestriction %}
+                    <p class="item-txt">
+                        회원님의 연령에 적합하지 않은 콘텐츠를<br/>
+                        포함하고 있으므로 본 게임에 대한<br/>
+                        <span class="emphs">서비스 이용이 제한</span>되었습니다.
+                    </p>
+                {% elseif unAuthenticated %}
+                    <p class="item-txt">
+                        본 게임은 <span class="emphs">청소년 이용 불가 게임</span>으로 <br/>
+                        만 18세 미만의 이용자가 이용하기에<br/>
+                        부적절한 콘텐츠를 포함하고 있습니다.<br/><br/>
+                        <span class="emphs">본인 인증</span>절차를 거친 후 만 18세 이상인 경우에만 게임을 이용할 수 있습니다.
+                    </p>
+                {% else %}
+                    <p class="item-txt">{{ dialogTxt }}</p>
+                {% endif %}
+                {% if gameTit %}
+                    <p class="item-txt game">{{ gameTit }}</p>
+                {% endif %}
+                {% if hasRecomm %}
+                    <div class="item-recommend">
+                        {{ input.radioImg(id="radio55",name="recomm",contTxt="추천",iconClass="ic-img-like-s50",iconTxt="추천",state="checked") }}
+                        {{ input.radioImg(id="radio56",name="recomm",contTxt="비추천",iconClass="ic-img-dislike-s50",iconTxt="비추천",nonRecomm=true) }}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="legacy-dialog-footer">
+                <div class="item-center">
+                    {% if oneBtn %}
+                        {{ btn.base(sizeClass="size-32",colorClass="btn-orange",txt=btnTxt1) }}
+                    {% else %}
+                        {{ btn.base(sizeClass="size-32",colorClass="btn-gray-line",txt=btnTxt1) }}
+                        {{ btn.base(sizeClass="size-32",colorClass="btn-orange",txt=btnTxt2) }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="legacy-module-dialog-flex type-comm{% if isCentered %} centerd{% endif %}">
+            {{ title.base(h4=titTxt) }}
+        </div>
+    {% endif %}
+{% endmacro %}
+{% macro base(isDimmed, hasBirth, dialogSize, oneBtn, btnSize1, btnSize2, btnTxt1, btnTxt2, titTxt, hasIconPath, dialogTxt, isCertification) %}
+    {% if isDimmed %}
+        <div class="legacy-module-dialog-flex type-base"{% if dialogSize %} style="{{ dialogSize }}"{% endif %}>
+            <div class="legacy-dialog-contents">
+                {% if hasIconPath %}
+                    {{ icon.base(class=hasIconPath) }}
+                {% endif %}
+                {% if titTxt %}
+                    {{ title.base(h2=titTxt,alignCenter=true) }}
+                {% endif %}
+                <p class="item-txt">
+                    {% if dialogTxt %}
+                        {{ dialogTxt }}
+                    {% elseif isCertification %}
+                        본 게임은 <span class="emphs">청소년 이용불가</span>게임으로 만18세 미만의 이용자가 이용하기에 부적절한 콘텐츠를 포함하고 있습니다.<br/>
+                        <span class="emphs">본인 인증</span>절차를 거친 후, 만 18세 이상인 경우에만 게임을 이용할 수 있습니다.
+                    {% elseif hasBirth %}
+                        본 게임에는 모든 연령에 적합하지 않은 콘텐츠를 포함하고 있습니다.<br/>
+                        생년월일 입력 후 연령에 따라 일부 게임 조회 및 구매가 제한될 수 있습니다.
+                    {% else %}
+                    개발사의 요청에 의해 해당 게임의 서비스가 중지되었습니다.<br/>
+                    게임을 이미 구매하신 경우 <a href="#" class="emphs">STOVE 클라이언트</a>를 통해 계속 플레이하실 수 있습니다.
+                {% endif %}
+                </p>
+                {% if hasBirth %}
+                    <div class="legacy-module-flex">
+                        <label class="txt-tit">생년월일</label>
+                        {{ input.select(txt="Month",btnColorClass="btn-gray-line") }}
+                        {{ input.select(txt="Day",btnColorClass="btn-gray-line") }}
+                        {{ input.select(txt="Year",btnColorClass="btn-gray-line") }}
+                    </div>
+                    <div class="txt-desc">- 입력하신 생년월일은 임의로 변경할 수 없으며, 연령 정보와 관련된 모든 책임은 본인에게 있습니다.</div>
+                {% endif %}
+            </div>
+            <div class="legacy-dialog-footer">
+                <div class="item-center">
+                    {% if oneBtn %}
+                        {{ btn.base(sizeClass=btnSize1,colorClass="btn-orange",txt=btnTxt1) }}
+                    {% else %}
+                        {{ btn.base(sizeClass=btnSize1,colorClass="btn-gray-line",txt=btnTxt1) }}
+                        {{ btn.base(sizeClass=btnSize2,colorClass="btn-orange",txt=btnTxt2) }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endmacro %}
+
+{% macro default(isDimmed, titTxt, dialogSize, isOverflow, noFooter, isEmpty, isCoupon, isCaution, isAgreement, isShare, isCouponEmpty, isPrivacy, isReport, isFeed, isVote, twoBtn, btnTxt1, btnTxt2, btnSize, btnTypeClass, btnFullWidth) %}
+    <style>
+        .scroll {
+            position: relative;
+            max-height: 632px;
+        }
+        .ps--active-x > .ps__rail-x,
+        .ps--active-y > .ps__rail-y {
+            margin: 0 8px;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            const container = document.querySelectorAll('.scroll')
+            Array
+                .from(container)
+                .map(function (item) {
+                    const ps2 = new PerfectScrollbar(item, {
+                        wheelSpeed: 0.4,
+                        wheelPropagation: false,
+                        minScrollbarLength: 20
+                    })
+                })
+        }
+    </script>
+
+    {% if isDimmed %}
+        <div class="legacy-module-dialog-flex {{ dialogSize }}">
+            <div class="legacy-dialog-header">
+                {{ title.base(h3=titTxt) }}
+                {{ btn.onlyIcon(iconClass="ic-close-s20-c333",txt="닫기") }}
+            </div>
+            <!-- [D] 예제로 보여드리기 위한 scroll class명입니다. 위에 style값을 인라은으로 추가 해 주세요.-->
+            <div class="legacy-dialog-contents scroll">
+                {% if isFeed %}
+                    <article class="article-feed">
+                        <p class="item-notice">
+                    게임을 찜 또는 구매하시면 자동으로 구독 설정됩니다.
+                    <span class="sub-txt">소식을 더 이상 받지 않으시려면 아래에서 체크 해제해주세요.</span>
+                        </p>
+                        {{ title.base(h4="인디 공식") }}
+                        <div class="feed-contents">
+                            {{ input.checkbox(hasFrame=true,shapeClass="circle",txt="공지",state="checked") }}
+                            {{ input.checkbox(hasFrame=true,shapeClass="circle",txt="뉴스/기사",state="checked") }}
+                            {{ input.checkbox(hasFrame=true,shapeClass="circle",txt="자유게시판",state="checked") }}
+                            {{ input.checkbox(hasFrame=true,shapeClass="circle",txt="창작놀이터",state="checked") }}
+                            {{ input.checkbox(hasFrame=true,shapeClass="circle",txt="리뷰") }}
+                        </div>
+                    </article>
+                    <article class="article-feed">
+                        {{ title.base(h4="보유 게임") }}
+                        <div class="feed-contents">
+                            {% if isEmpty %}
+                                <div class="item-empty">
+                                    <p class="sub-txt">정식 게임을 구매하시면<br/>게임 커뮤니티의 새로운 소식을 받아볼 수 있어요.</p>
+                                </div>
+                            {% else %}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="게임명이 길어지면 최대 두줄까지 나오고 마우스 오버시 레이어가") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="오버패스") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="창작놀이터") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="리뷰") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="게임명이 길어지면 최대 두줄까지 나오고 마우스 오버시 레이어가") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="오버패스") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="창작놀이터") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="리뷰") }}
+                            {% endif %}
+                        </div>
+                    </article>
+                    <article class="article-feed width-614">
+                        {{ title.base(h4="찜한 게임") }}
+                        <div class="feed-contents">
+                            {% if isEmpty %}
+                                <div class="item-empty">
+                                    <p class="sub-txt">정식 게임을 구매하시면<br/>게임 커뮤니티의 새로운 소식을 받아볼 수 있어요.</p>
+                                </div>
+                            {% else %}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="게임명이 길어지면 최대 두줄까지 나오고 마우스 오버시 레이어가") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="오버패스") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="창작놀이터") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="리뷰") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="아라하 이은도의 저주") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="턴택") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="게임명이 길어지면 최대 두줄까지 나오고 마우스 오버시 레이어가") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="오버패스") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="창작놀이터") }}
+                                {{ input.checkbox(hasFrame=true,shapeClass="circle",etcClass="swiper-item",txt="리뷰") }}
+                            {% endif %}
+                        </div>
+                    </article>
+                {% elseif isVote %}
+                    <article class="article-vote">
+                        {{ title.base(h4="이 게임과 어울리는 태그를 최대 5개 선택해주세요",hasItem=true,iconBtn=true,iconClass="ic-help-circle-s20-c999") }}
+                        <div class="vote-content">
+                            {{ input.checkbox(id="check1", name="vote",typeTag=true,txt="인큐베이터") }}
+                            {{ input.checkbox(id="check2", name="vote",typeTag=true,txt="RPG") }}
+                            {{ input.checkbox(id="check3", name="vote",typeTag=true,txt="전략") }}
+                            {{ input.checkbox(id="check4", name="vote",typeTag=true,txt="로그라이트") }}
+                            {{ input.checkbox(id="check5", name="vote",typeTag=true,txt="일러스트") }}
+                            {{ input.checkbox(id="check6", name="vote",typeTag=true,txt="파티플레이") }}
+                            {{ input.checkbox(id="check7", name="vote",typeTag=true,txt="멀티플레이") }}
+                            {{ input.checkbox(id="check8", name="vote",typeTag=true,txt="디펜드") }}
+                            {{ input.checkbox(id="check9", name="vote",typeTag=true,txt="생존",state="checked") }}
+                            {{ input.checkbox(id="check10", name="vote",typeTag=true,txt="로그라이트") }}
+                            {{ input.checkbox(id="check11", name="vote",typeTag=true,txt="퍼즐") }}
+                            {{ input.checkbox(id="check12", name="vote",typeTag=true,txt="조작중심") }}
+                            {{ input.checkbox(id="check13", name="vote",typeTag=true,txt="감동적인 서사") }}
+                            {{ input.checkbox(id="check14", name="vote",typeTag=true,txt="카드수집") }}
+                            {{ input.checkbox(id="check15", name="vote",typeTag=true,txt="캐주얼") }}
+                            {{ input.checkbox(id="check16", name="vote",typeTag=true,txt="인큐베이터") }}
+                            {{ input.checkbox(id="check17", name="vote",typeTag=true,txt="RPG") }}
+                            {{ input.checkbox(id="check18", name="vote",typeTag=true,txt="전략") }}
+                            {{ input.checkbox(id="check19", name="vote",typeTag=true,txt="로그라이트") }}
+                            {{ input.checkbox(id="check20", name="vote",typeTag=true,txt="일러스트") }}
+                            {{ input.checkbox(id="check21", name="vote",typeTag=true,txt="파티플레이") }}
+                            {{ input.checkbox(id="check22", name="vote",typeTag=true,txt="멀티플레이") }}
+                            {{ input.checkbox(id="check23", name="vote",typeTag=true,txt="디펜드") }}
+                            {{ input.checkbox(id="check24", name="vote",typeTag=true,txt="생존") }}
+                            {{ input.checkbox(id="check25", name="vote",typeTag=true,txt="로그라이크") }}
+                            {{ input.checkbox(id="check26", name="vote",typeTag=true,txt="퍼즐") }}
+                            {{ input.checkbox(id="check27", name="vote",typeTag=true,txt="RPG") }}
+                            {{ input.checkbox(id="check28", name="vote",typeTag=true,txt="전략") }}
+                            {{ input.checkbox(id="check29", name="vote",typeTag=true,txt="로그라이트") }}
+                            {{ input.checkbox(id="check30", name="vote",typeTag=true,txt="일러스트") }}
+                            {{ input.checkbox(id="check31", name="vote",typeTag=true,txt="파티플레이") }}
+                            {{ input.checkbox(id="check32", name="vote",typeTag=true,txt="멀티플레이") }}
+                            {{ input.checkbox(id="check33", name="vote",typeTag=true,txt="디펜드") }}
+                            {{ input.checkbox(id="check34", name="vote",typeTag=true,txt="생존",state="checked") }}
+                            {{ input.checkbox(id="check35", name="vote",typeTag=true,txt="로그라이트") }}
+                            {{ input.checkbox(id="check36", name="vote",typeTag=true,txt="퍼즐") }}
+                            {{ input.checkbox(id="check37", name="vote",typeTag=true,txt="조작중심") }}
+                            {{ input.checkbox(id="check38", name="vote",typeTag=true,txt="감동적인 서사") }}
+                            {{ input.checkbox(id="check39", name="vote",typeTag=true,txt="카드수집") }}
+                            {{ input.checkbox(id="check40", name="vote",typeTag=true,txt="캐주얼") }}
+                            {{ input.checkbox(id="check41", name="vote",typeTag=true,txt="인큐베이터") }}
+                            {{ input.checkbox(id="check42", name="vote",typeTag=true,txt="RPG") }}
+                            {{ input.checkbox(id="check43", name="vote",typeTag=true,txt="전략") }}
+                            {{ input.checkbox(id="check44", name="vote",typeTag=true,txt="로그라이트") }}
+                            {{ input.checkbox(id="check45", name="vote",typeTag=true,txt="일러스트") }}
+                            {{ input.checkbox(id="check46", name="vote",typeTag=true,txt="파티플레이") }}
+                            {{ input.checkbox(id="check47", name="vote",typeTag=true,txt="멀티플레이") }}
+                            {{ input.checkbox(id="check48", name="vote",typeTag=true,txt="디펜드") }}
+                            {{ input.checkbox(id="check49", name="vote",typeTag=true,txt="생존") }}
+                            {{ input.checkbox(id="check50", name="vote",typeTag=true,txt="로그라이크") }}
+                            {{ input.checkbox(id="check51", name="vote",typeTag=true,txt="퍼즐") }}
+                        </div>
+                    </article>
+                {% elseif isReport %}
+                    <article class="article-report">
+                        <dl class="item-report">
+                            <dt>신고할 게임</dt>
+                            <dd class="emphs">%게임명%</dd>
+                            <dt>신고 유저</dt>
+                            <dd>%신고유저닉네임%</dd>
+                        </dl>
+                        <dl class="item-report">
+                            <dt class="sub-tit">신고 사유</dt>
+                            <dd>{{ input.radio(id="radio31", txt="불쾌한 표현이 있습니다.", sizeClass="size-16", name="radio2", state="checked") }}</dd>
+                            <dd>{{ input.radio(id="radio32", txt="법을 위반한 내용이 있습니다.", sizeClass="size-16", name="radio2", state="checked") }}</dd>
+                            <dd>{{ input.radio(id="radio33", txt="스팸입니다.", sizeClass="size-16", name="radio2", state="checked") }}</dd>
+                            <dd>{{ input.radio(id="radio34", txt="기타", sizeClass="size-16", name="radio2", state="checked") }}</dd>
+                        </dl>
+                        <dl class="item-report">
+                            <dt class="sub-tit">신고 내용에 대해 추가 설명이 필요할 경우 입력해주세요.</dt>
+                            <dd>
+                                <textarea class="legacy-element-txtarea"></textarea>
+                            </dd>
+                        </dl>
+                    </article>
+                {% elseif isPrivacy %}
+                    <article class="article-privacy">
+                        <p class="item-notice">
+                    마이인디를 방문한 유저에게 작성한 글을<br/>
+                    공개할 지 설정해주세요.<br/>
+                    공개 범위 설정 후 작성한 글부터 적용됩니다.
+                </p>
+                        <ul class="item-list">
+                            <li>
+                                <label class="tit-txt">인디 타임라인에서 작성한 글</label>
+                                {{ input.select(txt="전체 공개",btnColorClass="btn-gray-line",sizeClass="size-32") }}
+                            </li>
+                            <li>
+                                <label class="tit-txt">인디 커뮤니티에서 작성한 글</label>
+                                {{ input.select(txt="전체 공개",btnColorClass="btn-gray-line",sizeClass="size-32") }}
+                            </li>
+                        </ul>
+                    </article>
+                {% elseif isAgreement %}
+                    <article class="article-agreement">
+                        <div class="item-pre">
+                            <dl class="pre-list">
+                                <dt>제공 대상</dt>
+                                <dd>%구매 게임의 개발사명%</dd>
+                                <dd>%구매 게임의 개발사명%</dd>
+                            </dl>
+                            <dl class="pre-list">
+                                <dt>제공 목적</dt>
+                                <dd>구매 내역 확인</dd>
+                                <dd>정산 처리</dd>
+                                <dd>구매 취소 처리</dd>
+                                <dd>문의 및 고충(CS)처리</dd>
+                            </dl>
+                            <dl class="pre-list">
+                                <dt>제공하는 개인정보 항목</dt>
+                                <dd>STOVE 계정 이메일</dd>
+                                <dd>국적</dd>
+                            </dl>
+                            <dl class="pre-list">
+                                <dt>제공 정보의 보유 및 이용기간</dt>
+                                <dd>회원 탈퇴 또는 서비스 종료 시 까지 <br/>(관련 법령에 별도 규정이 명시되어 있는 경우 그 기간에 따름)</dd>
+                            </dl>
+                        </div>
+                        <ul class="item-desc">
+                            <li>쿠폰을 통해 이미 지급받는 혜택은 환불이 불가능합니다.</li>
+                            <li>쿠폰 할인 금액은 상품금액을 초과하여 적용할 수 없습니다.</li>
+                        </ul>
+                    </article>
+                {% elseif isCaution %}
+                    <article class="article-caution">
+                        <div class="item-pre">
+                            <ul class="pre-list">
+                                <li>공급자 : (주)스마일게이트 스토브</li>
+                                <li>구매하신 정식게임 및 DLC는 아이디(계정)로 지급되며, 다운로드 및
+                                설치를 통해 사용 가능합니다.</li>
+                                <li>구매하신 정식게임 및 DLC는 STOVE 회원 탈퇴 또는 서비스 종료
+                                시까지 이용하실 수 있습니다.</li>
+                                <li>정식게임은 구매일로부터 14일 이내, 누적 플레이 시간이 2시간 이내인 경우 환불이 가능하며 환불 시 STOVE 캐시로 반환됩니다.</li>
+                                <li>DLC는 구매일로부터 14일 이내, 구매한 DLC를 설치 또는 실행하지
+                                않은 경우 환불이 가능하며 환불 시 STOVE 캐시로 반환됩니다.</li>
+                                <li>청약철회 및 환불과 관련된 자세한 사항은 유료 서비스 약관을 참고하
+                                여 주십시오.</li>
+                                <li>정식게임 및 DLC를 구매하고 이용하기 위해서는 인터넷 연결이 필요
+                                하며, Internet, Explorer11, Chrome 최신 버전 이용을 권장합니다.</li>
+                                <li>정식게임 및 DLC 구매 후 각 게임 또는 서비스를 구동하기 위해서는
+                                별도의 기술 사양이 요구될 수 있으니, 구매 전 각 게임의 ‘시스템
+                                요구사양’을 확인하시기 바랍니다.</li>
+                                <li>정식게임은 구매일로부터 14일 이내, 누적 플레이 시간이 2시간 이내인 경우 환불이 가능하며 환불 시 STOVE 캐시로 반환됩니다.</li>
+                                <li>DLC는 구매일로부터 14일 이내, 구매한 DLC를 설치 또는 실행하지
+                                않은 경우 환불이 가능하며 환불 시 STOVE 캐시로 반환됩니다.</li>
+                                <li>청약철회 및 환불과 관련된 자세한 사항은 유료 서비스 약관을 참고하
+                                여 주십시오.</li>
+                                <li>정식게임 및 DLC를 구매하고 이용하기 위해서는 인터넷 연결이 필요
+                                하며, Internet, Explorer11, Chrome 최신 버전 이용을 권장합니다.</li>
+                                <li>정식게임 및 DLC 구매 후 각 게임 또는 서비스를 구동하기 위해서는
+                                별도의 기술 사양이 요구될 수 있으니, 구매 전 각 게임의 ‘시스템
+                                요구사양’을 확인하시기 바랍니다.</li>
+                            </ul>
+                        </div>
+                    </article>
+                {% elseif isCoupon %}
+                    <article class="article-coupon">
+                        <div class="item-input">
+                            {{ input.text(placeholder="새로 등록할 쿠폰 번호를 입력해주세요.") }}
+                            {% if isCouponEmpty %}
+                                {{ btn.base(txt="등록",colorClass="btn-gray-line",sizeClass="size-40",state="disabled") }}
+                            {% else %}
+                                {{ btn.base(txt="등록",colorClass="btn-gray-line",sizeClass="size-40") }}
+                            {% endif %}
+                        </div>
+                        {% if isCouponEmpty %}
+                            <div class="item-empty">
+                                <div class="txt-item">
+                                    {{ icon.base(class="ic-coupon-null-s50") }}
+                                    <p>등록된 쿠폰이 없습니다.</p>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="item-grid">
+                                {% if isOverflow %}
+                                    {{ table.tableCoupon(isMore=true) }}
+                                {% else %}
+                                    {{ table.tableCoupon() }}
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                        {{ amount.base(isDialog=true) }}
+                        <div class="item-btn">
+                            {% if isCouponEmpty %}
+                                {{ btn.base(txt="선택 쿠폰 적용",sizeClass="size-40",colorClass="btn-orange" ,state="disabled") }}
+                            {% else %}
+                                {{ btn.base(txt="선택 쿠폰 적용",sizeClass="size-40",colorClass="btn-orange") }}
+                            {% endif %}
+                        </div>
+                        <ul class="item-desc">
+                            <li>쿠폰을 통해 이미 지급받는 혜택은 환불이 불가능합니다.</li>
+                            <li>쿠폰 할인 금액은 상품금액을 초과하여 적용할 수 없습니다.</li>
+                        </ul>
+                    </article>
+                {% elseif isShare %}
+                    <article class="article-share">
+                        <ul class="dialog-sns-list">
+                            <li>
+                                <span class="legacy-element-icon ic-facebook"></span>
+                                <p class="sns-list-txt">Facebook</p>
+                            </li>
+                            <li>
+                                <span class="legacy-element-icon ic-twitter"></span>
+                                <p class="sns-list-txt">Twitter</p>
+                            </li>
+                        </ul>
+                    </article>
+                {% endif %}
+            </div>
+            {% if noFooter %}
+            {% else %}
+                <div class="legacy-dialog-footer">
+                    {% if twoBtn %}
+                        <div class="item-center">
+                            {{ btn.base(sizeClass=btnSize,typeClass="btn-gray-line",txt=btnTxt1) }}
+                            {{ btn.base(sizeClass=btnSize,typeClass="btn-orange",txt=btnTxt2) }}
+                        </div>
+                    {% else %}
+                        <div class="item-center">
+                            {% if btnType %}
+                                {{ btn.base(sizeClass=btnSize,typeClass=btnTypeClass,txt=btnTxt1) }}
+                            {% elseif btnFullWidth %}
+                                {{ btn.base(sizeClass=btnSize,typeClass=btnTypeClass,txt=btnTxt1,fullWidth=true) }}
+                            {% else %}
+                                {{ btn.base(sizeClass=btnSize,typeClass="btn-orange",txt=btnTxt1) }}
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    {% else %}
+        <div class="legacy-module-dialog-flex {{ dialogSize }}"></div>
+    {% endif %}
+
+{% endmacro %}
+
+{% macro extends(titTxt="제목 입력",dialogSize="",btnTxt1="취소",btnTxt2="확인", selectType=false, game=false, declaration=false, noFooter=false)%}
+    <div class="legacy-module-dialog-flex {{ dialogSize }}">
+        <div class="legacy-dialog-header">
+            {{ title.base(h3=titTxt) }}
+            {{ btn.onlyIcon(iconClass="ic-close-s20-c333",txt="닫기") }}
+        </div>
+        <div class="legacy-dialog-contents">
+            <article class="article-feed">
+                {% if game %}
+                    <dl class="legacy-dialog-game-head">
+                        <dt>신고할게임</dt>
+                        <dd>%게임명%</dd>
+                    </dl>
+                {% elif declaration %}
+                    <p class="item-notice">
+                        신고하기는 하루에 20회만 가능합니다.
+                    </p>
+                    <div class="declaration-box">
+                        <dl class="legacy-dialog-game-head">
+                            <dt>신고 대상자</dt>
+                            <dd>%신고자 대상자%</dd>
+                        </dl>
+                        <dl class="legacy-dialog-game-head">
+                            <dt>남은 신고 횟수</dt>
+                            <dd class="ft-black">%남은 신고횟수%</dd>
+                        </dl>
+                    </div>
+                {% else %}
+                    <div class="empty-img">
+                        {{ icon.base(class="ic-img-no-post", txt="ic-no-img-post", width="130px", height="130px") }}
+                    </div>
+                {% endif %}
+            </article>
+        </div>
+        {% if selectType%}
+            <div class="article-direction">
+                <p class="tit">
+                    <span class="list-item">1.</span> 인디 게임에 대한 나만의 자유로운 생각을 타임라인에 남겨보세요!</p>
+                <p class="desc">인디 타임라인에 쓴 글도 타임라인에 자동 게시됩니다.</p>
+                {# {{ btn.withIconText(shapeClass='btn-small-round no-icon', sizeClass='size-28', colorClass='btn-gray-line', txt='STOVE 타임라인 바로가기') }} #}
+            </div>
+            <div class="article-direction">
+                <p class="tit">
+                    <span class="list-item">2.</span> 내가 쓴 글은 내 타임라인을 방문한 유저들이 볼 수 있어요.</p>
+                <p class="desc">작성한 글은 ‘전체 공개’로 기본 설정되며, ‘나만 보기’로 설정을 변경하여 다른 유저에게 노출되지 않게 할 수 있습니다.</p>
+                {# {{ btn.withIconText(shapeClass='btn-small-round no-icon', sizeClass='size-28', colorClass='btn-gray-line', txt='공개범위 설정 바로가기') }} #}
+            </div>
+        {% elif game %}
+            <div class="legacy-dialog-game-box">
+                <p class="game-title">신고사유</p>
+                <div class="legacy-element-radio-item">
+                    {{ inputRadio.baseWithTxt(id="radio1", txt="법률 위반 - 사용자의 관할지역 법률을 위반하는 콘텐츠를 포함하고 있음", name="radio1") }}
+                </div>
+                <div class="legacy-element-radio-item">
+                    {{ inputRadio.baseWithTxt(id="radio1", txt="성인용 콘텐츠 - 표시 및 등급에 맞지 않는 성인용 콘텐츠를 포함하고 있음", state="checked", name="radio1") }}
+                </div>
+                <div class="legacy-element-radio-item">
+                    {{ inputRadio.baseWithTxt(id="radio1", txt="명예 훼손 -  비방 또는 명예를 훼손하는 내용을 포함하고 있음", name="radio1") }}
+                </div>
+                <div class="legacy-element-radio-item">
+                    {{ inputRadio.baseWithTxt(id="radio1", txt="저작권 침해 - 타인의 창작물에 대한 저작권을 침해하고 있음", name="radio1") }}
+                </div>
+                <div class="legacy-element-radio-item">
+                    {{ inputRadio.baseWithTxt(id="radio1", txt="아동 학대 - 방식과 무관하게 아동을 학대하는 콘텐츠를 포함하고 있음", name="radio1") }}
+                </div>
+                <div class="legacy-element-radio-item">
+                    {{ inputRadio.baseWithTxt(id="radio1", txt="동작 오류 - 최소 시스템 요구사항을 만족한 기기에서 정상적으로 다운로드 또는 실행이 되지 않음", name="radio1") }}
+                </div>
+                <div class="legacy-element-radio-item">
+                    {{ inputRadio.baseWithTxt(id="radio1", txt="악성 코드 - 이 소프트웨어가 민감한 정보를 비정상적으로 획득하고 있음", name="radio1") }}
+                </div>
+            </div>
+            <div class="legacy-dialog-game-box game-form">
+                <p class="game-title">신고 내용에 대해 추가 설명이 필요할 경우 입력해주세요.</p>
+                <textarea class="legacy-dialog-game-textarea"></textarea>
+            </div>
+        {% elif declaration %}
+            <div class="legacy-dialog-game-box">
+                <p class="game-title">아래에서 신고 사유를 선택해주세요.</p>
+                <div class="legacy-element-radio-item">
+                    {{ inputRadio.baseWithTxt(id="radio1", txt="불쾌한 표현이 있습니다.", name="radio1") }}
+                </div>
+                <div class="legacy-element-radio-item">
+                    {{ inputRadio.baseWithTxt(id="radio1", txt="법을 위반한 내용이 있습니다.", state="checked", name="radio1") }}
+                </div>
+                <div class="legacy-element-radio-item">
+                    {{ inputRadio.baseWithTxt(id="radio1", txt="스팸입니다.", name="radio1") }}
+                </div>
+                <div class="legacy-element-radio-item">
+                    {{ inputRadio.baseWithTxt(id="radio1", txt="기타", name="radio1") }}
+                </div>
+            </div>
+            <div class="legacy-dialog-game-box game-form">
+                <textarea class="legacy-dialog-game-textarea"></textarea>
+            </div>
+        {% endif %}
+        {% if noFooter %}
+        {% else %}
+            <div class="legacy-dialog-footer">
+                <div class="item-center">
+                    {{ btn.base(sizeClass="size-32",typeClass="btn-gray-line",txt=btnTxt1) }}
+                    {{ btn.base(sizeClass="size-32",typeClass="btn-orange",txt=btnTxt2) }}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endmacro %}

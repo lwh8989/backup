@@ -1,0 +1,39 @@
+{% macro base(placeholder, value, stateClass) %}
+<input type="text" value="{{ value }}" class="legacy-element-input input-base {{ stateClass }}" placeholder="{{ placeholder }}">
+{% endmacro %}
+
+<!-- -->
+{% macro baseReaction(placeholder, value, stateClass) %}
+<input type="text" value="{{ value }}" class="legacy-element-input input-base {{ stateClass }}" placeholder="{{ placeholder }}">
+{% endmacro %}
+
+
+{% macro baseSquare(placeholder, value, stateClass) %}
+<input type="text" value="{{ value }}" class="legacy-element-input input-base base-square {{ stateClass }}" placeholder="{{ placeholder }}">
+{% endmacro %}
+
+{% macro baseSm(placeholder, value, stateClass) %}
+<input type="text" value="{{ value }}" class="legacy-element-input input-base base-sm {{ stateClass }}" placeholder="{{ placeholder }}">
+{% endmacro %}
+
+{% macro baseXs(placeholder, value, stateClass) %}
+<input type="text" value="{{ value }}" class="legacy-element-input input-base base-xs {{ stateClass }}" placeholder="{{ placeholder }}">
+{% endmacro %}
+
+{% macro baseSquareSm(placeholder, value, stateClass) %}
+<input type="text" class="legacy-element-input input-base base-sm base-square {{ stateClass }}" placeholder="{{ placeholder }}">
+{% endmacro %}
+
+{% macro baseSquareLg(placeholder, value, stateClass) %}
+<input type="text" class="legacy-element-input input-base base-lg base-square input-tit-color {{ stateClass }}" placeholder="{{ placeholder }}">
+{% endmacro %}
+
+<!-- [D] input용 datepicker  -->
+{% macro baseDatepicker(placeholder, value, stateClass) %}
+<div class="legacy-element-input input-datepicker">
+    <div>  
+        <input type="text" value="{{ value }}" class="legacy-element-input input-base {{ stateClass }}" placeholder="{{ placeholder }}">
+        <span class="legacy-element-icon ic-calendar" style="">calendar</span>
+    </div>
+</div>
+{% endmacro %}

@@ -1,0 +1,178 @@
+/*legacy-pagination*/
+.legacy-pagination {
+  display: table;
+  padding: 14px 0;
+  width: 100%;
+  line-height: normal;
+  font-size: 14px;
+  text-align: center;
+}
+.legacy-pagination .legacy-element-icon {
+  vertical-align: middle;
+  margin: 0 2px;
+}
+.legacy-pagination .legacy-pagination-num {
+  display: inline-block;
+  padding: 0 14px;
+  margin-top: -2px;
+  vertical-align: middle;
+}
+.legacy-pagination .legacy-pagination-num .num-first span {
+  padding-left: 4px;
+}
+.legacy-pagination .legacy-pagination-num .num-last span {
+  padding-right: 4px;
+}
+
+.legacy-pagination a,
+.legacy-pagination i {
+  display: inline-block;
+  padding: 3px 4px 4px;
+}
+.legacy-pagination a.active,
+.legacy-pagination i.active {
+  min-width: 24px;
+  color: #ff5000;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.legacy-pagination .legacy-element-icon::after {
+  content: none !important;
+}
+.legacy-pagination a {
+  display: inline-block;
+  min-width: 24px;
+  color: #333;
+  border-radius: 18px;
+  position: relative;
+}
+.legacy-pagination a span {
+  position: inherit;
+  z-index: 1;
+}
+.legacy-pagination a:hover::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  display: block;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.legacy-pagination a.num-first:hover::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  display: block;
+  background: #f5f5f5;
+  position: absolute;
+  top: 50%;
+  left: -4px;
+  transform: translate(0, -50%);
+  z-index: 0;
+}
+.legacy-pagination a.num-last:hover::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  display: block;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 50%;
+  left: initial;
+  right: 4px;
+  transform: translate(0, -50%);
+  z-index: 0;
+}
+
+/* btnMore-legacy-pagination */
+.btn-more-legacy-pagination {
+  display: table;
+  padding: 16px 0;
+  width: 100%;
+  line-height: normal;
+  font-size: 14px;
+  text-align: center;
+}
+.btn-more-legacy-pagination .legacy-element-icon.ic-arrow-down-16 {
+  margin-right: 0;
+  margin-left: 4px;
+}
+
+/* loading-legacy-pagination  */
+.loaging-legacy-pagination {
+  display: table;
+  padding: 14px 0;
+  width: 100%;
+  line-height: normal;
+  font-size: 14px;
+  text-align: center;
+}
+.icon-loading-spin {
+  -webkit-animation-name: loading;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+/* calendar-legacy-pagination */
+.calendar-legacy-pagination {
+  display: table;
+  width: 100%;
+  line-height: normal;
+  font-size: 14px;
+  text-align: center;
+}
+.calendar-legacy-pagination .dissable {
+  background-color: #efefef;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0.4;
+}
+.calendar-legacy-pagination .calendar {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 8px;
+  vertical-align: top;
+  outline: none;
+}
+.calendar-legacy-pagination .calendar input {
+  width: 80px;
+  height: 20px;
+  font-size: 15px;
+  line-height: 20px;
+  outline: none;
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+}
+.calendar-legacy-pagination .calendar input::placeholder {
+  color: #333;
+}
+.calendar-legacy-pagination .calendar .legacy-element-icon {
+  margin: 2px 0 0 0;
+}
+.calendar-legacy-pagination .legacy-element-icon.ic-direction-left-s20-c666:hover {
+  background: url(../../images/svgnew/ic-direction-left-s20-cddd.svg) no-repeat;
+}
+.calendar-legacy-pagination .legacy-element-icon.ic-direction-right-s20-c666:hover {
+  background: url(../../images/svgnew/ic-direction-right-s20-cddd.svg) no-repeat;
+}

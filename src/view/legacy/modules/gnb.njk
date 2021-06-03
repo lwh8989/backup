@@ -1,0 +1,115 @@
+{% import "legacy/elements/btn.njk" as btn %}
+{% import "legacy/elements/profile.njk" as profile %}
+
+{% macro base(isLogin) %}
+    <div class="legacy-module-gnb">
+        <div class="item-left">
+            <h1 class="gnb-title">
+                <a href="#" class="gnb-bi">
+                    <img src="{{ staticUrl }}/static/images/bi/ic-bi-header.svg">
+                </a>
+                <a href="#" class="gnb-bi-indie">
+                    <img src="{{ staticUrl }}/static/images/bi/ic-bi-indie-header.svg">
+                </a>
+            </h1>
+            <div class="gnb-menu">
+                <a href="#" class="menu-item">홈</a>
+                <a href="#" class="menu-item">게임</a>
+                <a href="#" class="menu-item">커뮤니티</a>
+                <a href="#" class="menu-item">마이인디</a>
+            </div>
+        </div>
+        <div class="item-right">
+            {% if isLogin %}
+                <div class="personal-area">
+                    {{ btn.onlyIcon(linkType=true,iconClass="ic-basket-s24-cfff",txt="장바구니") }}
+                    {{ btn.baseLink(txt="스튜디오",sizeClass="size-24",shapeClass="btn-gnb") }}
+                </div>
+            {% endif %}
+            <div class="util-area">
+                {% if isLogin %}
+                    {{ btn.onlyIcon(linkType=true,iconClass="ic-bell-s24-cfff",txt="알림") }}
+                {% endif %}
+                {{ btn.onlyIcon(linkType=true,iconClass="ic-lang-s24-cfff",txt="언어")  }}
+                {{ btn.onlyIcon(linkType=true,iconClass="ic-fill-menu-s24-cfff",txt="메뉴") }}
+                {% if isLogin %}
+                    {{ profile.gnb() }}
+                {% else %}
+                    {{ btn.baseLink(txt="로그인",shapeClass="btn-list") }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro global() %}
+    <div id="stoveGnb" class="gnb-stove gnb-indie">
+        <div class="gnb-inner auto">
+            <div class="gnb-col col-left">
+                <h1 class="gnb-title">
+                    <a href="#" class="logo-stove">
+                        <img class="gnb-bi-img" src="https://static-cdn.onstove.com/0.0.9/img/gnb/bi.svg" alt="스토브">
+                    </a>
+                </h1>
+                <h2 class="gnb-title-service">
+                    <a href="#" class="logo-service">
+                        <img class="gnb-bi-img" src="{{ staticUrl }}/static/images/bi/ic-bi-indie-header.svg" alt="스토브">
+                    </a>
+                </h2>
+            </div>
+            <div class="gnb-col col-center">
+                <!--[S] custom GNB-->
+                <div class="legacy-module-gnb">
+                    <div class="item-left">
+                        <div class="gnb-menu">
+                            <a href="#" class="menu-item">홈</a>
+                            <a href="#" class="menu-item">게임</a>
+                            <a href="#" class="menu-item">커뮤니티</a>
+                            <a href="#" class="menu-item">마이인디</a>
+                        </div>
+                    </div>
+                    <div class="item-right">
+                        <div class="personal-area">
+                            {{ btn.onlyIcon(linkType=true,hasQuantity="99+",iconClass="ic-basket-s24-cfff",txt="장바구니") }}
+                            {{ btn.baseLink(txt="스튜디오",sizeClass="size-24",shapeClass="btn-gnb") }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gnb-col col-right">
+                <div class="gnb-dropdown is-right">
+                    <div class="gnb-dropdown-toggle">
+                        <a class="gnb-icon is-bell">
+                            <span class="gnb-tooltip">알림</span>
+                            <span class="gnb-badge">2</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="gnb-dropdown is-right">
+                    <div class="gnb-dropdown-toggle">
+                        <a class="gnb-icon is-globe">
+                            <span class="gnb-tooltip">한국어</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="gnb-dropdown is-game-menu game-all">
+                    <span class="gnb-dropdown-toggle">
+                        <a class="gnb-icon is-menu-all">
+                            <span class="gnb-tooltip">전체메뉴</span>
+                        </a>
+                    </span>
+                </div>
+                <div class="gnb-dropdown user-wrap is-right">
+                    <div class="gnb-dropdown-toggle">
+                        <a class="btn-user">
+                            <span class="user-img">
+                                <img src="https://d3kxs6kpbh59hp.cloudfront.net/pine/PROFILE/20/66/32/100/10326620_1472795482_135_135.jpg?1472795482" alt="">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="gnb-text is-underline">로그인</a>
+            </div>
+        </div>
+    </div>
+{% endmacro %}

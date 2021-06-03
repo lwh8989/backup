@@ -1,0 +1,711 @@
+/* module-profile */
+.legacy-module-profile {
+  position: relative;
+  line-height: inherit;
+  display: inline-block;
+  vertical-align: top;
+}
+.legacy-module-profile * {
+  /* vertical-align: middle; */
+}
+.legacy-module-profile .profile-thumb {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+.legacy-module-profile .profile-thumb img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 1px solid rgba(0, 0, 0, 0.04); */
+  box-sizing: border-box;
+}
+.legacy-module-profile .profile-thumb .legacy-element-icon {
+  position: absolute;
+  top: -2px;
+  left: -6px;
+}
+.legacy-module-profile .profile-content {
+  display: inline-block;
+  line-height: 30px;
+  vertical-align: top;
+}
+.legacy-module-profile .profile-content .mark {
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 6px;
+  float: left;
+  line-height: inherit;
+  vertical-align: top;
+}
+.legacy-module-profile .profile-content .mark.official {
+  color: #05a2f1;
+}
+.legacy-module-profile .profile-content .mark.gm {
+  color: #05a2f1;
+}
+.legacy-module-profile .profile-content .mark.cm {
+  color: #00b94e;
+}
+.legacy-module-profile .profile-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #666;
+  text-align: left;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  width: 96px;
+  overflow: hidden;
+  display: block;
+}
+.legacy-module-profile .profile-nick {
+  color: #999;
+}
+.legacy-module-profile .write-time {
+  position: relative;
+  padding-left: 12px;
+  margin-left: 4px;
+  color: #999;
+}
+.legacy-module-profile .write-time:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+.legacy-module-profile .profile-tools {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.legacy-module-profile .write-time-tooltip {
+  display: none;
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  padding: 5px 12px;
+  white-space: nowrap;
+  line-height: 18px;
+  color: #fff;
+  background-color: #111;
+  font-size: 12px;
+  z-index: 11;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+}
+.legacy-module-profile .write-time-tooltip:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  margin-left: -2px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid #111;
+}
+.legacy-module-profile .write-time-tooltip:after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  margin-left: -1px;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid #111;
+}
+.legacy-module-profile .write-time:hover .write-time-tooltip {
+  display: block;
+}
+.legacy-module-profile .legacy-module-dropdown {
+  max-width: 172px;
+  position: absolute;
+  top: 24px;
+  left: 32px;
+}
+.profile-tools .tools-item {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 26px;
+  padding: 10px 12px;
+  border: 1px solid #c2c2c2;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+.profile-tools .tools-item .legacy-element-btn {
+  display: block;
+  width: 100%;
+  height: 24px;
+  font-size: 12px;
+  text-align: left;
+  color: #666;
+  white-space: nowrap;
+}
+.profile-tools .tools-item .legacy-element-btn:hover {
+  font-weight: 600;
+  color: #111;
+}
+.profile-tools .btn-listinfo-more.active ~ .tools-item {
+  display: block;
+}
+/* 날짜 */
+.time-date {
+  position: relative;
+  padding-left: 0;
+  /* margin: 13px 0; */
+  font-size: 13px;
+  color: #a0a0a0;
+  display: inline-block;
+  cursor: default;
+  text-align: center;
+  line-height: 20px;
+  vertical-align: top;
+}
+.time-date .legacy-module-tooltip .write-time-tooltip {
+  display: none;
+}
+.time-date:hover .legacy-module-tooltip .write-time-tooltip {
+  display: block;
+  top: 24px;
+}
+
+/* 카드형 작성자 프로필 */
+.legacy-module-profile.card {
+}
+.legacy-module-profile.card .profile-name {
+  font-size: 12px;
+  font-weight: normal;
+  color: #333;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  width: 154px;
+  overflow: hidden;
+  display: block;
+}
+
+/* 스레드형 작성자 프로필 */
+.legacy-module-profile.threaduser {
+}
+.legacy-module-profile.threaduser .profile-content {
+}
+.legacy-module-profile.threaduser .profile-content:hover .profile-name {
+  text-decoration: underline;
+}
+.legacy-module-profile.threaduser .profile-content .profile-name {
+  color: #627bba;
+  line-height: 24px;
+  text-overflow: unset;
+  white-space: unset;
+  word-wrap: unset;
+  width: auto;
+  overflow: unset;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+}
+.legacy-module-profile.threaduser .time-date {
+  line-height: 24px;
+  margin-left: 16px;
+}
+.legacy-module-profile.threaduser .time-date::before {
+  content: '';
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: #999;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  transform: translateX(-50%);
+}
+.legacy-module-profile.threaduser .legacy-module-dropdown {
+  top: 22px;
+  left: 0;
+}
+
+/* 스레드형 댓글 프로필 */
+.legacy-module-profile.threadreply {
+}
+.legacy-module-profile.threadreply .profile-content {
+  display: block;
+}
+.legacy-module-profile.threadreply .profile-content:hover .profile-name {
+  text-decoration: underline;
+}
+.legacy-module-profile.threadreply .profile-content .profile-name {
+  color: #627bba;
+  width: 118px;
+  line-height: 24px;
+  font-size: 13px;
+}
+.legacy-module-profile.threadreply .time-date {
+  display: block;
+  text-align: left;
+}
+.legacy-module-profile.threadreply .legacy-module-dropdown {
+  top: 40px;
+  left: 16px;
+}
+
+/* 웹진형 작성자 프로필 */
+.legacy-module-profile.webzine {
+  line-height: inherit;
+}
+.legacy-module-profile.webzine a {
+  display: inline-block !important;
+}
+.legacy-module-profile.webzine .profile-thumb {
+  width: 24px;
+  height: 24px;
+}
+.legacy-module-profile.webzine .profile-content {
+  line-height: inherit;
+}
+.legacy-module-profile.webzine .profile-content .profile-name {
+  display: inline-block;
+  font-size: 12px;
+  color: #666;
+  font-weight: normal;
+  line-height: 24px;
+  text-overflow: unset;
+  white-space: unset;
+  word-wrap: unset;
+  width: auto;
+  overflow: unset;
+}
+.legacy-module-profile.webzine .time-date {
+  line-height: 24px;
+  margin-left: 16px;
+  font-size: 12px;
+}
+.legacy-module-profile.webzine .time-date::before {
+  content: '';
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: #999;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  transform: translateX(-50%);
+}
+.legacy-module-profile.webzine .legacy-module-dropdown {
+  top: 22px;
+  left: 32px;
+}
+.legacy-module-profile.webzine .profile-content .mark {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+/* 비동기톡 작성자 프로필 */
+.legacy-module-profile.talk {
+}
+.legacy-module-profile.talk a {
+  display: inline-block !important;
+}
+.legacy-module-profile.talk .profile-thumb {
+  width: 28px;
+  height: 28px;
+}
+.legacy-module-profile.talk .profile-content {
+  line-height: 28px;
+}
+.legacy-module-profile.talk .profile-content .profile-name {
+  font-size: 13px;
+  font-weight: normal;
+  color: #333;
+  text-overflow: unset;
+  white-space: unset;
+  word-wrap: unset;
+  width: auto;
+  overflow: unset;
+  line-height: 28px;
+}
+.legacy-module-profile.talk .time-date {
+  font-size: 13px;
+  color: #999;
+  margin-left: 8px;
+  line-height: 28px;
+}
+.legacy-module-profile.talk .legacy-module-dropdown {
+  top: 22px;
+  left: 32px;
+}
+
+/* 상세보기 프로필 */
+.legacy-module-profile.detail {
+  line-height: normal;
+}
+.legacy-module-profile.detail .profile-content {
+  line-height: normal;
+}
+.legacy-module-profile.detail .profile-content .profile-name {
+  line-height: normal;
+  width: inherit;
+}
+.legacy-module-profile.detail .legacy-module-dropdown {
+  display: block;
+  padding: 0;
+  font-size: 0;
+  left: 0;
+  color: unset;
+}
+.legacy-module-profile.detail .legacy-module-dropdown li {
+  padding: 0;
+  position: initial;
+  display: inherit;
+}
+
+/* visual 영역 작성자 프로필 */
+.legacy-module-profile.visual {
+}
+.legacy-module-profile.visual a {
+  display: inline-block !important;
+}
+.legacy-module-profile.visual .profile-thumb {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.legacy-module-profile.visual .profile-content {
+  vertical-align: middle;
+}
+/*
+.legacy-module-profile.visual .profile-content > a {
+  height: 36px;
+  margin-top: 10px;
+  display: block !important;
+}
+*/
+.legacy-module-profile.visual .profile-content .profile-name {
+  width: 356px;
+  height: auto;
+  min-height: 36px;
+  margin-top: 0;
+  display: block !important;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  text-overflow: unset;
+  white-space: unset;
+  word-wrap: unset;
+  overflow: unset;
+}
+.legacy-module-profile.visual .profile-content .profile-status {
+  margin-top: 8px;
+}
+.legacy-module-profile.visual .profile-content .profile-status span,
+.legacy-module-profile.visual .profile-content .profile-status a {
+  font-size: 15px;
+  color: #fff;
+  position: relative;
+  margin-left: 14px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.legacy-module-profile.visual .profile-content .profile-status span::before,
+.legacy-module-profile.visual .profile-content .profile-status a::before {
+  content: '';
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: #999;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -7px;
+  transform: translateX(-50%);
+}
+.legacy-module-profile.visual .profile-content .profile-status span:first-of-type,
+.legacy-module-profile.visual .profile-content .profile-status a:first-of-type {
+  margin-left: 0;
+}
+.legacy-module-profile.visual .profile-content .profile-status span:first-of-type::before,
+.legacy-module-profile.visual .profile-content .profile-status a:first-of-type::before {
+  content: none;
+}
+.legacy-module-profile.visual .profile-content .profile-status span em,
+.legacy-module-profile.visual .profile-content .profile-status a em {
+  font-weight: 700;
+  margin-left: 2px;
+}
+.legacy-module-profile.visual .time-date {
+  line-height: 24px;
+  margin-left: 14px;
+  font-size: 12px;
+  color: #999;
+}
+.legacy-module-profile.visual .time-date::after {
+  content: '';
+  width: 1px;
+  height: 4px;
+  background: #d8d8d8;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateX(-50%);
+}
+.legacy-module-profile.visual .legacy-module-dropdown {
+  top: 22px;
+  left: 32px;
+}
+
+/* basic44 작성자 프로필 */
+.legacy-module-profile.basic44 {
+}
+.legacy-module-profile.basic44 a {
+  display: inline-block !important;
+}
+.legacy-module-profile.basic44 .profile-thumb {
+  width: 44px;
+  height: 44px;
+  margin-right: 8px;
+}
+.legacy-module-profile.basic44 .profile-content {
+}
+.legacy-module-profile.basic44 .profile-content .profile-name {
+  color: #333;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 44px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+}
+.legacy-module-profile.basic44 .time-date {
+  line-height: 24px;
+  margin-left: 14px;
+  font-size: 12px;
+  color: #999;
+}
+.legacy-module-profile.basic44 .time-date::after {
+  content: '';
+  width: 1px;
+  height: 4px;
+  background: #d8d8d8;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateX(-50%);
+}
+.legacy-module-profile.basic44 .legacy-module-dropdown {
+  top: 22px;
+  left: 32px;
+}
+
+/* basic44Inof 작성자 프로필 */
+.legacy-module-profile.profile-info {
+}
+.legacy-module-profile.profile-info .profile-content {
+}
+.legacy-module-profile.profile-info .profile-content .profile-name {
+  margin-top: 2px;
+  font-size: 14px;
+  line-height: normal;
+}
+.legacy-module-profile.profile-info .profile-content .profile-title {
+  font-size: 13px;
+  color: #333;
+}
+.legacy-module-profile.profile-info .profile-content .profile-status {
+  font-size: 12px;
+  color: #999;
+  line-height: normal;
+}
+.legacy-module-profile.profile-info .profile-content .profile-status span em {
+  font-weight: normal;
+  margin-left: 6px;
+}
+
+/* vertical 작성자 프로필 */
+.legacy-module-profile.vertical {
+}
+.legacy-module-profile.vertical a {
+  display: inline-block;
+  width: 100%;
+}
+.legacy-module-profile.vertical .profile-thumb {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+}
+.legacy-module-profile.vertical .profile-content {
+  display: block;
+  line-height: normal;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0;
+}
+.legacy-module-profile.vertical .profile-content .profile-name {
+  width: 110px;
+  color: #333;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 auto;
+}
+.legacy-module-profile.vertical .profile-content .profile-status {
+  text-align: center;
+  line-height: normal;
+}
+.legacy-module-profile.vertical .profile-content .profile-status span {
+  font-size: 12px;
+  color: #999;
+  position: relative;
+  margin-left: 14px;
+}
+.legacy-module-profile.vertical .profile-content .profile-status span::before {
+  content: '';
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: #999;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -7px;
+  transform: translateX(-50%);
+}
+.legacy-module-profile.vertical .profile-content .profile-status span:first-of-type {
+  margin-left: 0;
+}
+.legacy-module-profile.vertical .profile-content .profile-status span:first-of-type::before {
+  content: none;
+}
+.legacy-module-profile.vertical .profile-content .profile-status span em {
+  font-weight: normal;
+  margin-left: 6px;
+}
+.legacy-module-profile.vertical .time-date {
+  line-height: 24px;
+  margin-left: 14px;
+  font-size: 12px;
+  color: #999;
+}
+.legacy-module-profile.vertical .time-date::after {
+  content: '';
+  width: 1px;
+  height: 4px;
+  background: #d8d8d8;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateX(-50%);
+}
+.legacy-module-profile.vertical .legacy-module-dropdown {
+  top: 22px;
+  left: 32px;
+}
+.legacy-module-profile.vertical .legacy-element-btn.btn-round {
+  display: block;
+  margin: 8px auto 0;
+  padding: 0 20px;
+}
+.legacy-module-profile.vertical .legacy-element-btn.btn-round.active {
+  background: #f7f7f7;
+}
+
+/* 게임 프로필 */
+.legacy-module-profile.game {
+  display: flex;
+  align-items: center;
+}
+.legacy-module-profile.game .profile-thumb {
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
+}
+/*GNB 프로필 */
+.legacy-module-profile.gnb {
+  display: inline-flex;
+  align-items: center;
+}
+.legacy-module-profile.gnb .profile-thumb {
+  width: 36px;
+  height: 36px;
+}
+/* thumbnail size*/
+.legacy-module-profile.game.size-60 .profile-thumb {
+  width: 60px;
+  height: 60px;
+}
+.legacy-module-profile.game.size-60 .profile-content .profile-title {
+  font-size: 16px;
+  line-height: 17px;
+  color: #333;
+  font-weight: 700;
+}
+.legacy-module-profile.game.size-100 .profile-thumb {
+  width: 100px;
+  height: 100px;
+}
+.legacy-module-profile.game.size-100 .profile-content .profile-title {
+  font-size: 16px;
+  line-height: 17px;
+  color: #333;
+  font-weight: 700;
+}
+.legacy-module-profile.game.size-100 .profile-content .profile-desc {
+  font-size: 12px;
+  color: #999;
+  line-height: 18px;
+  margin-top: 5px;
+}
+.legacy-module-profile.game .profile-thumb a {
+}
+.legacy-module-profile.game .profile-thumb a img {
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+.legacy-module-profile.game .profile-content {
+  flex: 1;
+  max-width: calc(100% - 50px);
+}
+.legacy-module-profile.game .profile-content .profile-title {
+  max-height: 40px;
+  font-size: 14px;
+  color: #666;
+  line-height: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.legacy-module-profile.game .profile-content .profile-genre {
+  font-size: 12px;
+  color: #999;
+  line-height: normal;
+}

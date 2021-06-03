@@ -1,0 +1,113 @@
+{% import "legacy/elements/btn.njk" as btn %}
+{% import "legacy/elements/dropdown.njk" as dropdown %}
+
+{% macro base(txt, state, disabled, sizeClass) %}
+  <div class="legacy-element-select select-base {{ state }}">
+    {{ btn.base(sizeClass=sizeClass, shapeClass='btn-select', colorClass='btn-gray-line', txt=txt, state=disabled) }}
+    <select name="">
+      <option value="">type1</option>
+      <option value="">type2</option>
+      <option value="">type3</option>
+    </select>
+    {{ dropdown.base(isVisible=true) }}
+  </div>
+{% endmacro %}
+
+<!-- -->
+{% macro baseReaction(txt, state, disabled, sizeClass) %}
+  <div class="legacy-element-select select-base base-justified {{ state }}">
+    {{ btn.base(sizeClass=sizeClass, shapeClass='btn-select', colorClass='btn-gray-line', txt=txt, state=disabled) }}
+    <select name="">
+      <option value="">type1</option>
+      <option value="">type2</option>
+      <option value="">type3</option>
+    </select>
+    {{ dropdown.base() }}
+  </div>
+{% endmacro %}
+
+{% macro baseSquare(txt, state, disabled, sizeClass) %}
+  <div class="legacy-element-select select-base base-square {{ state }}">
+    {{ btn.base(sizeClass=sizeClass, shapeClass='btn-select', colorClass='btn-gray-line', txt=txt, state=disabled) }}
+    <select name="">
+      <option value="">type1</option>
+      <option value="">type2</option>
+      <option value="">type3</option>
+    </select>
+    {{ dropdown.base() }}
+  </div>
+{% endmacro %}
+
+{% macro baseSm(txt, state, disabled, sizeClass) %}
+  <div class="legacy-element-select select-base base-sm {{ state }}">
+    {{ btn.base(sizeClass=sizeClass, shapeClass='btn-select', colorClass='btn-gray-line', txt=txt, state=disabled) }}
+    <select name="">
+      <option value="">type1</option>
+      <option value="">type2</option>
+      <option value="">type3</option>
+    </select>
+    {{ dropdown.base() }}
+  </div>
+{% endmacro %}
+
+{% macro baseTxtSm(txt, state, disabled, sizeClass) %}
+  <!-- [D] left: arr-left / right: arr-right -->
+  <div class="legacy-element-select select-base base-sm select-txt arr-right {{ state }}">
+    {{ btn.base(sizeClass=sizeClass, shapeClass='btn-select', txt=txt, state=disabled) }}
+    <select name="">
+      <option value="">type1</option>
+      <option value="">type2</option>
+      <option value="">type3</option>
+    </select>
+    {{ dropdown.status(isVisible = true) }}
+  </div>
+{% endmacro %}
+
+{% macro play(txt, state, disabled) %}
+  <div class="legacy-element-select select-base {{ state }}">
+    {{ btn.withIcon(sizeClass='size-48', colorClass='btn-orange-gd', txt=txt, state=disabled, iconClass='ic-download-wh') }}
+    <select name="">
+      <option value="">type1</option>
+      <option value="">type2</option>
+      <option value="">type3type3type3type3type3</option>
+    </select>
+    {{ dropdown.store() }}
+  </div>
+{% endmacro %}
+
+{% macro install(txt, state, disabled) %}
+  <div class="legacy-element-select select-base {{ state }}">
+    {{ btn.withIcon(sizeClass='size-48', colorClass='btn-orange-gd', shadowClass="btn-shadow", txt=txt, state=disabled, iconClass='ic-download-wh') }}
+    <div class="legacy-module-dialog dialog-basic dialog-size-install" style="display: none;">
+      <div class="dialog-container">
+        <div class="dialog-header"></div>
+        <div class="dialog-body">
+          <div class="dialog-content none-header-tit">
+            <p class="dialog-confim-text">게임을 시작하기 위해<br>STOVE 클라이언트 설치가 필요합니다.</p>
+          </div>
+        </div>
+        <div class="dialog-footer">
+          {{ btn.withIcon(sizeClass='size-40', colorClass='btn-orange', txt='STOVE 클라이언트 설치', iconClass='ic-download-install') }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro baseCalendar(txt, state, disabled, sizeClass) %}
+  <div class="legacy-element-select select-base select-calendar {{ state }}">
+    <input type="text" value="2019.03.20" class="legacy-element-input input-base base-xs" readonly>
+  </div>
+{% endmacro %}
+
+{% macro baseTime(txt, state, disabled, sizeClass) %}
+  <div class="legacy-element-select select-base select-time {{ state }}">
+    {{ btn.base(sizeClass=sizeClass, shapeClass='btn-select', colorClass='btn-gray-line', txt=txt, state=disabled) }}
+    <select name="">
+      <option value="">type1</option>
+      <option value="">type2</option>
+      <option value="">type3</option>
+    </select>
+    {{ dropdown.base() }}
+  </div>
+{% endmacro %}

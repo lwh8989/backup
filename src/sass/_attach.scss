@@ -24,6 +24,7 @@
             max-width: 8.4rem;
             .btn-txt {
                 @include ellipsis($line: 1);
+                line-height: inherit;
                 display: block;
             }
         }

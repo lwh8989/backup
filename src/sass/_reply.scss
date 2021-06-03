@@ -326,7 +326,13 @@
                 .section-hashtag {
                     margin-top: 1.6rem;
                     .element-btn {
+                        max-width: 44%;
                         margin: 0 0.8rem 0.8rem 0;
+                        .btn-txt {
+                            @include ellipsis($line: 1);
+                            display: block;
+                            word-break: break-word;
+                        }
                     }
                 }
             }
@@ -473,11 +479,12 @@
                 .section-hashtag {
                     margin-top: 1.6rem;
                     .element-btn {
-                        max-width: 12rem;
+                        max-width: 44%;
                         margin: 0 0.8rem 0.8rem 0;
                         .btn-txt {
                             @include ellipsis($line: 1);
                             display: block;
+                            word-break: break-word;
                         }
                     }
                 }

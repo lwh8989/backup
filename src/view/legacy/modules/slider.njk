@@ -1,0 +1,42 @@
+{% import "legacy/elements/icon.njk" as icon %}
+{% import "legacy/elements/profile.njk" as profile %}
+{% import "legacy/modules/list.njk" as list %}
+
+{% macro sliderList() %}
+  <!-- Slider main container -->
+  <div class="slider-header gradation">
+    <p>관심받고 있는 글</p>
+  </div>
+  <div class="legacy-module-slider slider-list">
+    {{ list.listSlider() }}
+  </div>
+  <!-- Add Arrows -->
+  <button class="swiper-board swiper-button-prev">
+    <span class="legacy-element-icon ic-direction-left-s20-cddd" style="">ic-direction-left-s20-cddd</span>
+  </button>
+  <button class="swiper-board swiper-button-next">
+    <span class="legacy-element-icon ic-direction-right-s20-cddd" style="">ic-direction-left-s20-cddd</span>
+  </button>
+{% endmacro %}
+
+{% macro sliderFollower() %}
+  <!-- Slider main container -->
+  <div class="slider-header">
+    <p>내글에 관심 있는 사람들</p>
+  </div>
+  <div class="legacy-module-slider slider-follower" style="margin: 0 auto;">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">{{ profile.verticalNoStatus(status="active", text="팔로우") }}</div>
+      <div class="swiper-slide">{{ profile.verticalNoStatus(status="", text="팔로잉") }}</div>
+      <div class="swiper-slide">{{ profile.verticalNoStatus(status="active", text="팔로우") }}</div>
+      <div class="swiper-slide">{{ profile.verticalNoStatus(status="active", text="팔로우") }}</div>
+    </div>
+  </div>
+  <!-- Add Arrows -->
+  <button class="swiper-follower swiper-button-prev">
+    <span class="legacy-element-icon ic-direction-left-s20-cddd" style="">ic-direction-left-s20-cddd</span>
+  </button>
+  <button class="swiper-follower swiper-button-next">
+    <span class="legacy-element-icon ic-direction-right-s20-cddd" style="">ic-direction-left-s20-cddd</span>
+  </button>
+{% endmacro %}

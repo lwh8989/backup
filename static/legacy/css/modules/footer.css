@@ -1,0 +1,211 @@
+.footer {
+  margin-top: 0 !important;
+  background-color: #28282c;
+  font-size: 12px;
+}
+.footer a {
+  text-decoration: none;
+}
+.footer p {
+  padding: 0;
+  margin: 0;
+}
+.footer-container {
+  max-width: 1184px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+}
+.footer-logo::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.footer-logo .ci-logo {
+  display: block;
+  float: left;
+  width: auto;
+  height: 38px;
+  margin-right: 20px;
+  font-size: 0;
+  text-indent: -9999px;
+  color: transparent;
+  vertical-align: top;
+  background-repeat: no-repeat !important;
+}
+
+
+.footer-logo .ci-stove {
+  width: 118px;
+  margin-right: 20px;
+  background: url(../../images/ci/ci-sgs.png) 0 0 no-repeat;
+}
+.footer-logo .ci-megaport {
+  width: 140px;
+  margin-right: 20px;
+  background: url(../../images/ci/ci-sgp.png) 0 0 no-repeat;
+}
+.footer-logo .ci-rpg {
+  width: 140px;
+  margin-right: 20px;
+  background: url(../../images/ci/ci-sgr.png) 0 0 no-repeat;
+}
+.footer-logo .ci-naver {
+  width: 96px;
+  background: url(../../images/ci/ci-naver.png) 0 0 no-repeat;
+}
+.footer-logo .ci-hangame {
+  width: 86px;
+  background: url(../../images/ci/ci-hangame.png) 0 0 no-repeat;
+}
+
+
+.footer-contents .footer-container {
+  padding: 36px 0 48px;
+  color: #cecece;
+  overflow: hidden;
+}
+.footer-nav {
+  position: relative;
+  line-height: 1;
+  margin-top: 25px;
+  padding-bottom: 11px;
+  z-index: 1;
+}
+.footer-nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-nav a {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  color: #fff;
+  height: 32px;
+  line-height: 32px;
+  opacity: 0.8;
+}
+.footer-nav a ~ a {
+  padding-left: 12px;
+  margin-left: 12px;
+}
+.footer-nav .footer-nav-rating {
+  /*  position: relative;*/
+  display: inline-block;
+  padding-left: 12px;
+  margin-left: 12px;
+}
+.footer-nav .footer-nav-rating:hover .rating-game {
+  visibility: visible;
+}
+.footer-nav .rating-game {
+  visibility: hidden;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  width: 100%;
+  height: 0;
+  margin: 0 auto;
+  z-index: 1;
+  transform: translate(-50%, 0%);
+  /*  white-space: nowrap;*/
+}
+.footer-nav .rating-game .legacy-module-tab.tab-vertical {
+  height: 0;
+  display: flex;
+  justify-content: center;
+}
+.footer-nav .rating-game .tab-content::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.footer-nav .rating-img {
+  float: left;
+  padding: 18px 16px;
+  margin-right: -28px;
+}
+.footer-nav .rating-info {
+  float: left;
+  padding: 5px 28px 0 28px;
+}
+.footer-nav .rating-info table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.footer-nav .rating-info table::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.footer-nav .rating-info tbody {
+  float: left;
+}
+.footer-nav .rating-info tr {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer-nav .rating-info tr:first-child {
+  border-top: none;
+}
+.footer-nav .rating-info th,
+.footer-nav .rating-info td {
+  padding: 8px;
+  text-align: left;
+  color: #fff;
+  font-size: 12px;
+}
+.footer-nav .rating-info th {
+  opacity: 0.6;
+}
+.footer-address {
+  position: relative;
+  margin-top: 12px;
+}
+.footer-address p {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  opacity: 0.6;
+}
+.footer-address p a {
+  display: inline-block;
+  padding-left: 12px;
+  color: #fff;
+  text-decoration: underline;
+}
+.footer-address p span {
+  position: relative;
+  display: inline-block;
+}
+.footer-address p span > a {
+  padding: 0;
+}
+.footer-address p span ~ span {
+  padding-left: 12px;
+}
+.footer-address .nav-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  text-align: center;
+}
+.footer-address .nav-top span {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #999;
+}
+.footer .copy {
+  margin-top: 32px;
+}
+.footer .channing-info {
+  margin-top: 18px;
+}

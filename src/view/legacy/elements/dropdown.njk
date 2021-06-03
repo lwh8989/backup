@@ -1,0 +1,152 @@
+{% macro base(isVisible) %}
+<ul class="legacy-module-dropdown" {% if isVisible %}style="display:none"{% endif %} >
+  <li><button type="button" class="legacy-element-btn btn-square">
+        <span class="btn-txt">type1</span>
+  </button></li>
+  <li><button type="button" class="legacy-element-btn btn-square">
+        <span class="btn-txt">type2</span>
+  </button></li>
+</ul>
+{% endmacro %}
+
+{% macro store(isVisible) %}
+<ul class="legacy-module-dropdown" {% if isVisible %}style="display:block"{% endif %} >
+  <li><button type="button" class="legacy-element-btn btn-square">
+        <span class="btn-txt"><span class="legacy-element-icon ic-app-googleplay" style="">ic-app-googleplay</span><span class="">Google Play</span></span>
+  </button></li>
+  <li><button type="button" class="legacy-element-btn btn-square">
+        <span class="btn-txt"><span class="legacy-element-icon ic-app-appstore" style="">ic-app-appstore</span><span class="">App Store</span></span>
+  </button></li>
+</ul>
+{% endmacro %}
+
+{% macro baseicon(isVisible) %}
+<ul class="legacy-module-dropdown" {% if isVisible %}style="display:block"{% endif %} >
+  <li><button type="button" class="legacy-element-btn btn-square">
+        <span class="btn-txt">Google Play</span>
+  </button></li>
+  <li><button type="button" class="legacy-element-btn btn-square">
+        <span class="btn-txt">App Store</span>
+  </button></li>
+</ul>
+{% endmacro %}
+
+{% macro username(isVisible) %}
+<ul class="legacy-module-dropdown username" {% if isVisible %}style="display:block"{% endif %} >
+  <li>
+      <button type="button" class="legacy-element-btn btn-square">
+            <span class="legacy-element-icon ic-profile-default-01" style="">default image</span>
+            <span class="btn-txt">스토브아이디12자아이디</span>
+      </button>
+  </li>
+  <li>
+      <button type="button" class="legacy-element-btn btn-square">
+            <span class="legacy-element-icon ic-profile-default-02" style="">default image</span>
+            <span class="btn-txt">스토브닉네임</span>
+      </button>
+  </li>
+  <li>
+      <button type="button" class="legacy-element-btn btn-square">
+            <span class="legacy-element-icon ic-profile-default-03" style="">default image</span>
+            <span class="btn-txt">스토브아이디12자아이디</span>
+      </button>
+  </li>
+  <li>
+      <button type="button" class="legacy-element-btn btn-square">
+            <span class="legacy-element-icon ic-profile-default-04" style="">default image</span>
+            <span class="btn-txt">스토브닉네임</span>
+      </button>
+  </li>
+</ul>
+{% endmacro %}
+
+{% macro status(isVisible) %}
+<ul class="legacy-module-dropdown status" {% if isVisible %}style="display:block"{% endif %} >
+      <li class="active">
+            <button type="button" class="legacy-element-btn btn-square">
+                  <span class="btn-txt">나만 보기</span>
+            </button>
+      </li>
+      <li>
+            <button type="button" class="legacy-element-btn btn-square">
+                  <span class="btn-txt">친구 공개</span>
+            </button>
+      </li>
+      <li>
+            <button type="button" class="legacy-element-btn btn-square">
+                  <span class="btn-txt">전체공개</span>
+            </button>
+      </li>
+</ul>
+{% endmacro %}
+
+{% macro statusRight(isVisible) %}
+<ul class="legacy-module-dropdown status right" {% if isVisible %}style="display:block"{% endif %} >
+      <li class="active">
+            <button type="button" class="legacy-element-btn btn-square">
+                  <span class="btn-txt">친구</span>
+                  <span class="legacy-element-icon ic-check-s14-c666" style="">ic-check-s14-c666</span>
+            </button>
+      </li>
+      <li>
+            <button type="button" class="legacy-element-btn btn-square">
+                  <span class="btn-txt">친구</span>
+                  <span class="legacy-element-icon ic-check-s14-c666" style="">ic-check-s14-c666</span>
+            </button>
+      </li>
+      <li>
+            <button type="button" class="legacy-element-btn btn-square">
+                  <span class="btn-txt">팔로우</span>
+                  <span class="legacy-element-icon ic-plus-s14-c666" style="">ic-plus-s14-c666</span>
+            </button>
+      </li>
+</ul>
+{% endmacro %}
+
+{% macro froaladropdown(isVisible) %}
+<div class="tribute-container">
+      <ul>
+            <li data-index="0" class="">
+                  <button>
+                        <span class="legacy-element-icon ic-profile-default-01" style="">default image</span> 스토브아이디12자아이디
+                  </button>
+            </li>
+            <li data-index="1" class="">
+                  <button>
+                        <span class="legacy-element-icon ic-profile-default-02" style="">default image</span> 스토브아이디12자아이디
+                  </button>
+            </li>
+            <li data-index="2" class="">
+                  <button>
+                        <span class="legacy-element-icon ic-profile-default-03" style="">default image</span> 스토브아이디12자아이디
+                  </button>
+            </li>
+            <li data-index="3" class="">
+                  <button>
+                        <span class="legacy-element-icon ic-profile-default-04" style="">default image</span> 스토브아이디12자아이디
+                  </button>
+            </li>
+            <li data-index="4" class="">
+                  <button>
+                        <span class="legacy-element-icon ic-profile-default-01" style="">default image</span> 스토브아이디12자아이디
+                  </button>
+            </li>
+            <li data-index="5" class="">
+                  <button>
+                        <span class="legacy-element-icon ic-profile-default-02" style="">default image</span> 스토브아이디12자아이디
+                  </button>
+            </li>
+            <li data-index="5" class="">
+                  <button>
+                        <span class="legacy-element-icon ic-profile-default-03" style="">default image</span> 스토브아이디12자아이디
+                  </button>
+            </li>
+            <li data-index="5" class="">
+                  <button>
+                        <span class="legacy-element-icon ic-profile-default-04" style="">default image</span> 스토브아이디12자아이디
+                  </button>
+            </li>
+      </ul>
+</div>
+{% endmacro %}
+

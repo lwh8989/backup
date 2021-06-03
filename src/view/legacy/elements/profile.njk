@@ -1,0 +1,452 @@
+{% macro basic() %}
+<div class="legacy-module-profile">
+    <a href="#">
+        <div class="profile-thumb">
+            <img src="https://dummyimage.com/600x600/00eaff/040b6b" alt="images">
+            <!--
+                <span class="legacy-element-icon ic-badge-cm-s16" style="">cm</span> 
+                <span class="legacy-element-icon ic-badge-official-s16" style="">official</span>
+            -->
+        </div>
+        <div class="profile-content">
+            <span class="mark official">OFFICIAL</span>
+            <span class="mark gm">GM</span>
+            <span class="mark cm">CM</span>
+            <span href="#" class="profile-name">아이디노출최대20자아이디노출최대20자</span>
+        </div>
+    </a>
+    <!-- [D] 아이디를 클릭하면 등장,숨김을 해주세요. -->
+    <!-- [D] style값을 제거하고 사용 해 주세요. -->
+    <ul class="legacy-module-dropdown" style="display:none; width: 120px;">
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">작성글 보기</span>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">타임라인 보기</span>
+            </button>
+        </li>
+    </ul>
+</div>
+{% endmacro %}
+
+{% macro card() %}
+<div class="legacy-module-profile card">
+    <a href="#">
+        <div class="profile-thumb">
+            <img src="https://dummyimage.com/600x600/00eaff/040b6b" alt="images">
+            <!-- [D] CM아이콘 = <span class="legacy-element-icon ic-badge-cm-s16" style="">cm</span> -->
+            <span class="legacy-element-icon ic-badge-official-s16" style="">official</span>
+        </div>
+        <div class="profile-content">
+            <span href="#" class="profile-name">작성자아이디8자작성자아이디8자</span>
+        </div>
+    </a>
+    <!-- [D] 아이디를 클릭하면 등장,숨김을 해주세요. -->
+    <!-- [D] style값을 제거하고 사용 해 주세요. -->
+    <ul class="legacy-module-dropdown" style="display:none; width: 120px;">
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">작성글 보기</span>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">타임라인 보기</span>
+            </button>
+        </li>
+    </ul>
+</div>
+{% endmacro %}
+
+{% macro threaduser() %}
+<div class="legacy-module-profile threaduser">
+    <a href="#">
+        <div class="profile-content">
+            <span class="mark official">OFFICIAL</span><span class="mark gm">GM</span><span class="mark cm">CM</span><span href="#" class="profile-name">작성자아이디8자</span>
+        </div>
+    </a>
+    <!-- [D] 아이디를 클릭하면 등장,숨김을 해주세요. -->
+    <ul class="legacy-module-dropdown" style="display:none;">
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">작성글 보기</span>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">타임라인 보기</span>
+            </button>
+        </li>
+    </ul><span class="time-date">Hace 59 minutos<span class="legacy-module-tooltip"><span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span></span></span>
+</div>
+{% endmacro %}
+
+{% macro threadreply() %}
+<div class="legacy-module-profile threadreply">
+    <a href="#">
+        <div class="profile-content">
+            <span class="mark official">OFFICIAL</span><span href="#" class="profile-name">일이삼사오육칠팔구십십일</span>
+        </div>
+    </a>
+    <!-- [D] 아이디를 클릭하면 등장,숨김을 해주세요. -->
+    <!-- [D] style값을 제거하고 사용 해 주세요. -->
+    <ul class="legacy-module-dropdown" style="display:none;">
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">작성글 보기</span>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">타임라인 보기</span>
+            </button>
+        </li>
+    </ul>
+    <span class="time-date">Hace 59 minutos
+        <span class="legacy-module-tooltip">
+            <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+        </span>
+    </span>
+</div>
+{% endmacro %}
+
+{% macro webzine() %}
+<div class="legacy-module-profile webzine">
+    <a href="#">
+        <div class="profile-thumb">
+            <img src="https://dummyimage.com/600x600/00eaff/040b6b" alt="images">
+            <!-- 
+                <span class="legacy-element-icon ic-badge-cm-s16" style="width:16px;height:16px">ic-badge-cm-s16</span>
+                <span class="legacy-element-icon ic-badge-gm-s16" style="width:16px;height:16px">ic-badge-gm-s16</span>
+                <span class="legacy-element-icon ic-badge-official-s16" style="width:16px;height:16px">ic-badge-official-s16</span>
+             -->
+        </div>
+        <div class="profile-content">
+            <span class="mark official">OFFICIAL</span>
+            <span class="mark gm">GM</span>
+            <span class="mark cm">CM</span>
+            <span href="#" class="profile-name">닉네임</span>
+        </div>
+    </a>
+    <!-- [D] 아이디를 클릭하면 등장,숨김을 해주세요. -->
+    <ul class="legacy-module-dropdown" style="display:none;">
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">작성글 보기</span>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">타임라인 보기</span>
+            </button>
+        </li>
+    </ul>
+    <span class="time-date">Hace 59 minutos
+        <span class="legacy-module-tooltip">
+            <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+        </span>
+    </span>
+</div>
+{% endmacro %}
+
+{% macro talk() %}
+<div class="legacy-module-profile talk">
+    <a href="#">
+        <div class="profile-thumb">
+            <img src="https://dummyimage.com/600x600/00eaff/040b6b" alt="images">
+            <!-- [D] CM아이콘 = <span class="legacy-element-icon ic-badge-cm-s16" style="">cm</span> -->
+            <span class="legacy-element-icon ic-badge-official-s16" style="">official</span>
+        </div>
+        <div class="profile-content">
+            <span href="#" class="profile-name">작성자아이디8자</span>
+        </div>
+    </a>
+    <!-- [D] 아이디를 클릭하면 등장,숨김을 해주세요. -->
+    <ul class="legacy-module-dropdown" style="display:none;">
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">작성글 보기</span>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">타임라인 보기</span>
+            </button>
+        </li>
+    </ul>
+    <span class="time-date">Hace 59 minutos
+        <span class="legacy-module-tooltip">
+            <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+        </span>
+    </span>
+</div>
+{% endmacro %}
+
+{% macro detail() %}
+<div class="legacy-module-profile detail">
+    <a href="#">
+        <!-- 
+        <div class="profile-thumb">
+            <img src="https://dummyimage.com/600x600/00eaff/040b6b" alt="images">
+            <span class="legacy-element-icon ic-badge-official-s16" style="">official</span>
+        </div>
+        -->
+        <div class="profile-content">
+            <span href="#" class="profile-name">작성자아이디8자</span>
+        </div>
+    </a>
+    <!-- [D] 아이디를 클릭하면 등장,숨김을 해주세요. -->
+    <ul class="legacy-module-dropdown" style="display:none;">
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">작성글 보기</span>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">타임라인 보기</span>
+            </button>
+        </li>
+    </ul>
+    <!-- 
+    <span class="time-date">Hace 59 minutos
+        <span class="legacy-module-tooltip">
+            <span class="write-time-tooltip">2019-03-14 15:24(UTC +9)</span>
+        </span>
+    </span>
+    -->
+</div>
+{% endmacro %}
+
+{% macro visual() %}
+<div class="legacy-module-profile visual">
+    <div class="profile-thumb">
+        <img src="https://dummyimage.com/600x600/00eaff/040b6b" alt="images">
+        <!-- [D] CM아이콘 = <span class="legacy-element-icon ic-badge-cm-s16" style="">cm</span> -->
+        <!-- <span class="legacy-element-icon ic-badge-official-s16" style="">official</span> -->
+    </div>
+    <div class="profile-content">
+        <span class="profile-name">닉네임은열두자다음부터두줄처리됩니다</span>
+        <!-- 
+        <div class="profile-status">
+            <a href="#">친구<em>999</em></a><a href="#">팔로워<em>999</em></a><a href="#">팔로잉<em>999</em></a>
+        </div>
+        -->
+    </div>
+</div>
+{% endmacro %}
+
+{% macro basic44() %}
+<div class="legacy-module-profile basic44">
+    <a href="#">
+        <div class="profile-thumb">
+            <img src="https://dummyimage.com/600x600/00eaff/040b6b" alt="images">
+            <!-- [D] CM아이콘 = <span class="legacy-element-icon ic-badge-cm-s16" style="">cm</span> -->
+            <!-- <span class="legacy-element-icon ic-badge-official-s16" style="">official</span> -->
+        </div>
+        <div class="profile-content">
+            <span href="#" class="profile-name">아이디노출최대20자아이디노출최대20자</span>
+        </div>
+    </a>
+    <!-- [D] 아이디를 클릭하면 등장,숨김을 해주세요. -->
+    <!-- [D] style값을 제거하고 사용 해 주세요. -->
+    <ul class="legacy-module-dropdown" style="display:none; width: 120px;">
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">작성글 보기</span>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">타임라인 보기</span>
+            </button>
+        </li>
+    </ul>
+</div>
+{% endmacro %}
+
+{% macro basic44Info() %}
+<div class="legacy-module-profile basic44 profile-info">
+    <a href="#">
+        <div class="profile-thumb">
+            <img src="https://dummyimage.com/600x600/00eaff/040b6b" alt="images">
+            <!-- [D] CM아이콘 = <span class="legacy-element-icon ic-badge-cm-s16" style="">cm</span> -->
+            <!-- <span class="legacy-element-icon ic-badge-official-s16" style="">official</span> -->
+        </div>
+        <div class="profile-content">
+            <span href="#" class="profile-name">작성자아이디8자</span>
+            <div class="profile-status"><span>팔로워<em>999</em></span></div>
+        </div>
+    </a>
+    <!-- [D] 아이디를 클릭하면 등장,숨김을 해주세요. -->
+    <!-- [D] style값을 제거하고 사용 해 주세요. -->
+    <ul class="legacy-module-dropdown" style="display:none; width: 120px;">
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">작성글 보기</span>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">타임라인 보기</span>
+            </button>
+        </li>
+    </ul>
+</div>
+{% endmacro %}
+
+{% macro vertical(status, text) %}
+<div class="legacy-module-profile vertical">
+    <div class="profile-thumb">
+        <a href="#">
+            <img src="https://dummyimage.com/600x600/00eaff/040b6b" alt="images">
+            <!-- [D] CM아이콘 = <span class="legacy-element-icon ic-badge-cm-s16" style="">cm</span> -->
+            <!-- <span class="legacy-element-icon ic-badge-official-s16" style="">official</span> -->
+        </a>
+    </div>
+    <div class="profile-content">
+        <a href="#">
+            <span href="#" class="profile-name">작성자아이디8자</span>
+        </a>
+        <div class="profile-status">
+            <span>팔로워<em>999</em></span>
+            <!-- 
+                <span>친구<em>999</em></span><span>팔로잉<em>999</em></span>
+            -->
+        </div>
+    </div>
+    <!-- [D] 아이디를 클릭하면 등장,숨김을 해주세요. -->
+    <!-- [D] style값을 제거하고 사용 해 주세요. -->
+    <ul class="legacy-module-dropdown" style="display:none; width: 120px;">
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">작성글 보기</span>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">타임라인 보기</span>
+            </button>
+        </li>
+    </ul>
+    <button class="legacy-element-btn btn-round btn-gray-line size-32 {{ status }}">
+        <span class="btn-txt"> {{ text }} </span>
+    </button>
+</div>
+{% endmacro %}
+
+{% macro verticalNoStatus(status, text) %}
+<div class="legacy-module-profile vertical">
+    <div class="profile-thumb">
+        <a href="#">
+            <img src="https://dummyimage.com/600x600/00eaff/040b6b" alt="images">
+            <!-- [D] CM아이콘 = <span class="legacy-element-icon ic-badge-cm-s16" style="">cm</span> -->
+            <!-- <span class="legacy-element-icon ic-badge-official-s16" style="">official</span> -->
+        </a>
+    </div>
+    <div class="profile-content">
+        <a href="#">
+            <span href="#" class="profile-name">작성자아이디8자</span>
+        </a>
+    </div>
+    <!-- [D] 아이디를 클릭하면 등장,숨김을 해주세요. -->
+    <!-- [D] style값을 제거하고 사용 해 주세요. -->
+    <ul class="legacy-module-dropdown" style="display:none; width: 120px;">
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">작성글 보기</span>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">타임라인 보기</span>
+            </button>
+        </li>
+    </ul>
+    <button class="legacy-element-btn btn-round btn-gray-line size-32 {{ status }} ">
+        <span class="btn-txt"> {{ text }} </span>
+    </button>
+</div>
+{% endmacro %}
+
+{% macro verticalNoBtn() %}
+<div class="legacy-module-profile vertical">
+    <div class="profile-thumb">
+        <a href="#">
+            <img src="https://dummyimage.com/600x600/00eaff/040b6b" alt="images">
+            <!-- [D] CM아이콘 = <span class="legacy-element-icon ic-badge-cm-s16" style="">cm</span> -->
+            <!-- <span class="legacy-element-icon ic-badge-official-s16" style="">official</span> -->
+        </a>
+    </div>
+    <div class="profile-content">
+        <a href="#">
+            <span href="#" class="profile-name">작성자아이디8자</span>
+        </a>
+        <div class="profile-status">
+            <span>팔로워<em>999</em></span>
+            <!-- 
+                <span>친구<em>999</em></span><span>팔로잉<em>999</em></span>
+            -->
+        </div>
+    </div>
+    <!-- [D] 아이디를 클릭하면 등장,숨김을 해주세요. -->
+    <!-- [D] style값을 제거하고 사용 해 주세요. -->
+    <ul class="legacy-module-dropdown" style="display:none; width: 120px;">
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">작성글 보기</span>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="legacy-element-btn btn-square size-40">
+                <span class="btn-txt">타임라인 보기</span>
+            </button>
+        </li>
+    </ul>
+</div>
+{% endmacro %}
+
+{% macro gnb(imgPath,sizeClass) %}
+    <div class="legacy-module-profile gnb {{ sizeClass }}">
+        <div class="profile-thumb">
+            <a href="#">
+                {% if imgPath %}
+                    <img src="{{ staticUrl }}/static/images/profile/{{ imgPath }}" alt="images">
+                {% else %}
+                    <img src="https://dummyimage.com/600x600/00eaff/040b6b" alt="images">
+                {% endif %}
+            </a>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro game(hasDesc,titTxt,imgPath,sizeClass) %}
+<div class="legacy-module-profile game {{ sizeClass }}">
+    <div class="profile-thumb">
+        <a href="#">
+            {% if imgPath %}
+                <img src="{{ staticUrl }}/static/images/profile/{{ imgPath }}" alt="images">
+                {% else %}
+                    <img src="https://dummyimage.com/600x600/00eaff/040b6b" alt="images">
+            {% endif %}
+        </a>
+    </div>
+    <div class="profile-content">
+        <a href="#">
+            {% if titTxt %}
+                <span class="profile-title">{{ titTxt }}</span>
+                {% else %}
+                    <span class="profile-title">%게임타이틀%</span>
+            {% endif %}
+        </a>
+        {% if hasDesc %}
+        <div class="profile-desc">
+            <span>{{ hasDesc }}</span>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endmacro %}

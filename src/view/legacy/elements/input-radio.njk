@@ -1,0 +1,15 @@
+{% import "legacy/elements/icon.njk" as icon %}
+
+{% macro base(id, txt, state, sizeClass, name) %}
+  <span class="legacy-element-radio {{ sizeClass }}">
+    <input type="radio" name="{{ name }}" id="{{ id }}" class="radio-input" {{state}}>
+    <label class="blind" for="{{ id }}">{{ txt }}</label>
+  </span>
+{% endmacro %}
+
+{% macro baseWithTxt(id, txt, state, sizeClass, name) %}
+  <span class="legacy-element-radio {{ sizeClass }}">
+    <input type="radio" name="{{ name }}" id="{{ id }}" class="radio-input" {{state}}>
+    <label for="{{ id }}">{{ txt }}</label>
+  </span>
+{% endmacro %}

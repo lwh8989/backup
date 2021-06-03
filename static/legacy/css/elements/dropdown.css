@@ -1,0 +1,184 @@
+/* dropdown */
+.legacy-module-dropdown {
+  position: absolute;
+  display: block;
+  padding: 8px 0;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  background: #fff;
+  box-shadow: 0 6px 20px 0 rgba(85, 92, 107, 0.3), 0 1px 4px 0 rgba(0, 0, 0, 0.18), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+  z-index: 21;
+}
+.legacy-module-dropdown .legacy-element-btn {
+  display: block;
+  text-align: left;
+  width: 100%;
+  white-space: nowrap;
+}
+.legacy-module-dropdown .legacy-element-btn.btn-square {
+  line-height: 40px;
+}
+.legacy-module-dropdown .legacy-element-btn .btn-txt {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+.legacy-module-dropdown .legacy-element-btn .btn-txt .legacy-element-icon.ic-app-googleplay + span {
+  display: inline-block;
+  line-height: 24px;
+}
+.legacy-module-dropdown .legacy-element-btn .btn-txt .legacy-element-icon.ic-app-appstore + span {
+  display: inline-block;
+  line-height: 24px;
+}
+.legacy-module-dropdown.username {
+  white-space: nowrap;
+}
+.legacy-module-dropdown.username .legacy-element-btn .legacy-element-icon {
+  width: 28px;
+  height: 28px;
+  background-size: 28px !important;
+  border-radius: 14px;
+  margin-top: 2px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.legacy-module-dropdown.username .legacy-element-btn:hover .btn-txt {
+  text-decoration: underline;
+}
+.legacy-module-dropdown li.active {
+  font-weight: 700;
+  color: #000;
+}
+
+/* status */
+.legacy-module-dropdown.status {
+  min-width: 128px;
+  padding: 0;
+}
+.legacy-module-dropdown.status li {
+  position: relative;
+}
+.legacy-module-dropdown.status li.active::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  display: block;
+  background: url(../../images/svg/ic-check-orange.svg) no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+}
+.legacy-module-dropdown.status li.active .legacy-element-btn .btn-txt {
+  font-weight: 700;
+  color: #000;
+}
+.legacy-module-dropdown.status .legacy-element-btn .btn-txt {
+  margin-left: 12px;
+  color: #666;
+}
+
+.legacy-module-dropdown.status.right {
+  min-width: 86px;
+  padding: 0;
+  right: 0;
+}
+.legacy-module-dropdown.status.right li {
+  display: block;
+  vertical-align: middle;
+  padding: 0;
+  border-bottom: 0;
+}
+.legacy-module-dropdown.status.right li .legacy-element-btn .legacy-element-icon {
+  vertical-align: middle;
+  margin-left: 4px;
+  margin-right: 0;
+}
+.legacy-module-dropdown.status.right li.active .legacy-element-btn .legacy-element-icon {
+  background: url(../../images/svg/ic-check-orange.svg) no-repeat;
+}
+.legacy-module-dropdown.status.right li.active::before {
+  content: none;
+}
+.legacy-module-dropdown.status.right .legacy-element-btn .btn-txt {
+  margin-left: 0;
+}
+
+/* flolal 에디터 유저네임 드랍다운 */
+/* 원본 */
+/*
+.tribute-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  max-height: 300px;
+  max-width: 500px;
+  overflow: auto;
+  display: block;
+  z-index: 999999;
+}
+.tribute-container ul {
+  margin: 0;
+  margin-top: 2px;
+  padding: 0;
+  list-style: none;
+  background: #efefef;
+}
+.tribute-container li {
+  padding: 5px 5px;
+  cursor: pointer;
+}
+.tribute-container li.highlight,
+.tribute-container li:hover {
+  background: #ddd;
+}
+*/
+
+/* 오버라이딩 CSS */
+.tribute-container {
+  max-width: inherit;
+  max-height: inherit;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 20px 0 rgba(85, 92, 107, 0.3), 0 1px 4px 0 rgba(0, 0, 0, 0.18), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+}
+.tribute-container ul {
+  margin-top: 0 !important;
+  padding: 8px 0;
+  background: #fff !important;
+}
+.tribute-container ul li {
+  padding: 0;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+}
+.tribute-container ul li:hover {
+  background: #ebebeb;
+}
+.tribute-container ul li:hover button {
+  text-decoration: underline;
+}
+.tribute-container ul li button {
+  height: 40px;
+  padding: 1px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  vertical-align: middle;
+}
+.tribute-container ul li button .legacy-element-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  background-size: 28px !important;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}

@@ -49,29 +49,28 @@
       <!-- 대표이미지 등록  -->
       <div class="write-setting-section">
         <div class="setting-area-header">
-          <p class="setting-tit">대표이미지 별도 등록</p>
+          <p class="setting-title">대표이미지 별도 등록</p>
+          <div class="byte">
+            <span class="byte-count">119KB</span><span class="byte-total">/ 1024MB</span>
+          </div>
         </div>
         <div class="setting-area-body">
           {{ attach.base( attachItem=['attachItem'], cbDefault="" ) }}
         </div>
         <div class="setting-area-header">
-          <p class="setting-tit">첨부된 이미지 / 동영상 <span>%N%개</span></p>
+          <p class="setting-title">첨부된 이미지 / 동영상 <span>%N%개</span></p>
         </div>
         <div class="setting-area-body">
           {{ attach.base( attachItem=['attachItem', 'attachItem', 'attachItem', 'attachItem'], cbDefault="false" ) }}
           <p class="setting-desc">체크된 이미지는 대표 이미지로 보여집니다.</p>
         </div>
       </div>
-      <div class="byte">
-        <span class="byte-count">119KB</span>
-        <span class="byte-total">/ 1024MB</span>
-      </div>
     </div>
     <!-- [D] 글쓰기 추천 대상 설정 영역 -->
     <div class="write-setting-area">
       <div class="write-setting-section">
         <div class="setting-area-header">
-          <p class="setting-tit">추천 대상 설정</p>
+          <p class="setting-title">추천 대상 설정</p>
         </div>
         <div class="setting-area-body">
           {{ checkbox.base( height="h20", id="checkbox-05", styleClass="checkbox-square", styleText="checkbox-text", label="추천 게시물 대상 제외", state="" ) }}
@@ -83,7 +82,7 @@
     <div class="write-setting-area">
       <div class="write-setting-section">
         <div class="setting-area-header">
-          <p class="setting-tit">공지사항 설정</p>
+          <p class="setting-title">공지사항 설정</p>
         </div>
         <div class="setting-area-body">
           <div class="flex-wrap">
@@ -150,7 +149,7 @@
           </div>
         </div>
         <div class="setting-area-header">
-          <p class="setting-tit">예약 게시 설정</p>
+          <p class="setting-title">예약 게시 설정</p>
         </div>
         <div class="setting-area-body">
           <div class="flex-wrap">

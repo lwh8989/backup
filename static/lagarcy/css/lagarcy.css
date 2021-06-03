@@ -5,14 +5,17 @@
 @import "./elements/community-common.css";
 @import "./elements/datepicker-custom.css";
 @import "./elements/datepicker.css";
+/* 신규 UI 적용
+
+*/
 @import "./elements/dropdown.css";
 @import "./elements/form.css";
 @import "./elements/fr-view.css";
 @import "./elements/icon.css";
-@import "./elements/input.css";
+/* @import "./elements/input.css"; */
 @import "./elements/list.css";
-@import "./elements/lnb.css";
-@import "./elements/media-view.css";
+/* @import "./elements/lnb.css"; */
+/* @import "./elements/media-view.css"; */
 @import "./elements/pagination.css";
 @import "./elements/profile.css";
 @import "./elements/title.css";
@@ -21,20 +24,22 @@
 @import "./elements/write.css";
 
 /* layout */
+/* 
 @import "./layouts/base.css";
 @import "./layouts/guide.css";
-@import "./layouts/reset.css";
+@import "./layouts/reset.css"; 
+*/
 
 /* modules */
 @import "./modules/dialog.css";
-@import "./modules/footer.css";
-@import "./modules/gnb.css";
+/* @import "./modules/footer.css"; */
+/* @import "./modules/gnb.css"; */
 @import "./modules/input-set.css";
-@import "./modules/new-gnb.css";
-@import "./modules/reply.css";
-@import "./modules/section.css";
-@import "./modules/skeleton.css";
-@import "./modules/slider.css";
+/* @import "./modules/new-gnb.css"; */
+/* @import "./modules/reply.css"; */
+/* @import "./modules/section.css"; */
+/* @import "./modules/skeleton.css"; */
+/* @import "./modules/slider.css"; */
 @import "./modules/tab.css";
 @import "./modules/toolbar.css";
 

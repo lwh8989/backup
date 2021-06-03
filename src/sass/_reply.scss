@@ -16,10 +16,12 @@
         margin-bottom: 2rem;
         i {
             margin-left: 0.4rem;
+            color: color.$ui_icon_01_enabled;
         }
     }
     .reply-header {
         display: flex;
+        align-items: center;
         margin-bottom: space.$stds-spacing-12;
         .module-profile {
             flex: 1;
@@ -76,8 +78,7 @@
                 }
             }
         }
-        /* 아이콘 적용 시 변경 */
-        .ic-sample {
+        .ic-navigation-sub-menu-line {
             display: flex;
             align-items: center;
             font-size: 1.2rem;
@@ -110,11 +111,6 @@
         .footer-left {
             display: flex;
             flex: 1;
-            // .element-btn {
-            //     &.with-icon {
-            //         display: none;
-            //     }
-            // }
         }
         .footer-right {
             display: flex;
@@ -277,6 +273,7 @@
                     height: 3.6rem;
                 }
                 .profile-contents {
+                    line-height: 1.8rem;
                     .profile-nickname {
                         font-size: font.$stdsBody4;
                     }
@@ -329,7 +326,13 @@
                 .section-hashtag {
                     margin-top: 1.6rem;
                     .element-btn {
+                        max-width: 44%;
                         margin: 0 0.8rem 0.8rem 0;
+                        .btn-txt {
+                            @include ellipsis($line: 1);
+                            display: block;
+                            word-break: break-word;
+                        }
                     }
                 }
             }
@@ -384,6 +387,27 @@
                     font-size: 1.6rem;
                     &::before {
                         font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+        &.comments-base {
+            padding-left: 1.6rem;
+            padding-right: 1.6rem;
+            background-color: color.$gray25;
+            &.reply-hidden {
+                .reply-header {
+                    margin-bottom: 0;
+
+                    i {
+                        font-size: 24px;
+                        color: color.$ui_icon_05_enabled;
+                        margin-right: 1.2rem;
+                    }
+
+                    p {
+                        font-size: font.$stdsBody1;
+                        color: color.$ui_text_04;
                     }
                 }
             }
@@ -455,14 +479,19 @@
                 .section-hashtag {
                     margin-top: 1.6rem;
                     .element-btn {
+                        max-width: 44%;
                         margin: 0 0.8rem 0.8rem 0;
+                        .btn-txt {
+                            @include ellipsis($line: 1);
+                            display: block;
+                            word-break: break-word;
+                        }
                     }
                 }
             }
         }
         .reply-write {
             margin: space.$stds-spacing-16 0 0 space.$stds-spacing-44;
-            background: red;
         }
     }
 }

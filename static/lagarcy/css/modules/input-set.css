@@ -362,6 +362,7 @@
 
 /*vote*/
 .lagarcy-module-vote .create-vote-item {
+  position: relative;
   margin-top: 12px;
 }
 .lagarcy-module-vote .create-vote-item:first-of-type {
@@ -370,6 +371,10 @@
 .lagarcy-module-vote .create-vote-item label {
   font-size: 12px;
   color: #666;
+}
+.lagarcy-module-vote .create-vote-item .swung-dash {
+  display: inline-block;
+  margin: 8px 2px 0;
 }
 .lagarcy-module-vote .create-vote-item .submit-vote-cell-link {
   position: relative;

@@ -20,5 +20,12 @@
     .image-btn {
         margin-top: $stds-spacing-8;
         text-align: center;
+        .element-btn {
+            max-width: 8.4rem;
+            .btn-txt {
+                @include ellipsis($line: 1);
+                display: block;
+            }
+        }
     }
 }

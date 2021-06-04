@@ -11,12 +11,39 @@
     right: 0;
     bottom: 0;
     left: 0;
-    overflow-y: hidden;
+    overflow-y: auto;
     z-index: z-index.$zindex-modal-backdrop;
     background: color.$black50;
     &.absolute {
         position: absolute;
     }
+    /* legacy dialog를 감싸는 위치 class입니다. 신규 dialog 적용 후 제거 */
+    .dimmed-pos {
+        position: absolute;
+        &.pos-left {
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+        &.pos-center {
+            top: 6rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &.pos-right {
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        .legacy-module-dialog {
+            margin-bottom: 6rem;
+        }
+    }
+}
+
+/* [D] dialog 등장 시 body에 .scroll-fixed 추가 */
+.is-scroll-fixed {
+    overflow-y: hidden;
 }
 
 .module-dialog {
@@ -63,11 +90,9 @@
         top: calc(100% + #{space.$stds-spacing-8});
         left: 0;
         cursor: default;
-
         %center {
             transform: translateX(-50%, -50%);
         }
-
         &.pos-center {
             @extend %center;
             left: 50%;
@@ -80,7 +105,6 @@
             top: initial;
             bottom: calc(100% + #{space.$stds-spacing-8});
         }
-
         .module-dialog-inner {
             padding: 0;
         }

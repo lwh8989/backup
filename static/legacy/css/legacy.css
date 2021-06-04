@@ -52,7 +52,7 @@
 /* legacy dialog */
 /* legacy dialog - md */
 .legacy-module-dialog.legacy-dialog-size-md,
-.legacy-module-dialog-flex.legacy-dialog-size-md{
+.legacy-module-dialog-flex.legacy-dialog-size-md {
     width: 440px;
 }
 
@@ -415,4 +415,17 @@
 .legacy-dialog-size-mobile .legacy-module-ranking.ranking-list tbody tr td:first-of-type,
 .legacy-dialog-size-sm .legacy-module-ranking.ranking-list tbody tr td:first-of-type {
     padding-left: 24px;
+}
+
+/* Desktop (max-width: 768px) */
+@media (max-width: 768px) {
+    .legacy-module-dialog.legacy-dialog-size-md,
+    .legacy-module-dialog-flex.legacy-dialog-size-md {
+        width: 310px;
+    }
+    .legacy-module-dialog.legacy-dialog-basic .legacy-dialog-body {
+        max-height: 380px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
 }

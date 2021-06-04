@@ -25,10 +25,15 @@
             top: 0;
             bottom: 0;
         }
-        &.pos-center {
+        &.pos-top {
             top: 6rem;
             left: 50%;
             transform: translateX(-50%);
+        }
+        &.pos-center {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         &.pos-right {
             right: 0;

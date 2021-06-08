@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
-    <defs>
-        <path id="a" d="M11.179 1.553l-1.153 1.249-1.153-1.249c-1.91-2.07-5.005-2.07-6.915 0-1.91 2.07-1.91 5.426 0 7.496l7.394 8.031c.372.405.98.4 1.348 0l7.394-8.03c1.91-2.071 1.91-5.427 0-7.497-1.91-2.07-5.006-2.07-6.915 0z"/>
-    </defs>
-    <g fill="none" fill-rule="evenodd">
-        <circle cx="20" cy="20" r="19.5" fill="#FFEFEE" stroke="#FFE5E3"/>
-        <use fill="#FF5000" transform="translate(10 12.5)" xlink:href="#a"/>
-    </g>
-</svg>

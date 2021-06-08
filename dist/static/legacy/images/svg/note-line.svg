@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-    <g fill="none" fill-rule="evenodd" transform="translate(1 -1)">
-        <circle cx="7" cy="9" r="7" stroke="#999"/>
-        <text fill="#999" font-family="NotoSansCJKkr-700, Noto Sans CJK KR" font-size="11" font-weight="700" letter-spacing="-.508">
-            <tspan x="4" y="13">?</tspan>
-        </text>
-    </g>
-</svg>

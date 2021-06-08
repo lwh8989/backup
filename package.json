@@ -14,7 +14,24 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "private": true,
+  "browserslist": [
+    "defaults",
+    "last 2 versions",
+    "ie >= 10",
+    "Safari >= 12",
+    "ios_saf >= 10",
+    "iOS >= 10"
+  ],
   "devDependencies": {
+    "@babel/cli": "7.14.3",
+    "@babel/core": "7.14.3",
+    "@babel/plugin-proposal-class-properties": "7.13.0",
+    "@babel/plugin-transform-runtime": "7.14.3",
+    "@babel/polyfill": "7.12.1",
+    "@babel/preset-env": "7.14.4",
+    "@babel/runtime": "7.14.0",
+    "core-js": "2.6.12",
     "cross-env": "7.0.3",
     "css-loader": "5.0.2",
     "file-loader": "6.2.0",
@@ -36,6 +53,7 @@
   },
   "dependencies": {
     "autoprefixer": "9.8.6",
+    "babel-loader": "^8.2.2",
     "markdown": "0.5.0",
     "markdown-loader": "6.0.0",
     "postcss-cli": "8.3.1"

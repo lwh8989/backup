@@ -1,0 +1,157 @@
+@import "./mixin/mixin";
+
+/* width = wNN */
+.w100 {
+    width: 100%;
+}
+.w50 {
+    width: 50%;
+}
+
+/* height = hNN */
+$elementHeight: (4, 16, 20, 24, 28, 32, 36, 40, 44, 48, 56);
+
+@each $h in $elementHeight {
+    // element height
+    .#{"h" + $h + ""} {
+        height: $h + px;
+    }
+
+    @if $h < 40 {
+        .#{"h" + $h + ""} {
+            .element-select-txt {
+                margin-right: $stds-spacing-8;
+            }
+            .element-input-wrap {
+                padding-left: $stds-spacing-8;
+            }
+
+            .element-select-button,
+            .element-dropdown-button,
+            &.element-input,
+            .element-input {
+                font-size: 1.3rem;
+            }
+
+            .element-dropdown-button {
+                height: 3.6rem;
+            }
+
+            &.box-type {
+                button {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    } @else {
+        .#{"h" + $h + ""} {
+            .element-select-txt {
+                margin-right: $stds-spacing-12;
+            }
+            .element-input-wrap {
+                padding-left: $stds-spacing-12;
+            }
+
+            .element-select-button,
+            .element-dropdown-button,
+            &.element-input,
+            .element-input {
+                font-size: 1.5rem;
+            }
+
+            .element-dropdown-button {
+                height: 4rem;
+            }
+
+            &.box-type {
+                button {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    @if $h >= 24 {
+        .#{"h" + $h + ""} {
+            &.element-badge {
+                padding: 0 0.8rem;
+                font-size: 1.3rem;
+            }
+        }
+    }
+    @if $h <= 20 {
+        .#{"h" + $h + ""} {
+            &.element-badge {
+                padding: 0 0.6rem;
+                font-size: 1.1rem;
+            }
+        }
+    }
+    @if $h <= 16 {
+        .#{"h" + $h + ""} {
+            &.element-badge {
+                min-width: 1.6rem;
+                padding: 0 0.4rem;
+            }
+        }
+    }
+    @if $h <= 4 {
+        .#{"h" + $h + ""} {
+            &.element-badge {
+                padding: 0 0.2rem;
+            }
+        }
+    }
+}
+
+/* common */
+/* font-size */
+.common-bx-size {
+    font-size: 1.5rem;
+}
+.common-bx-size-s {
+    font-size: 1.3rem;
+}
+
+/* element */
+[class^="element-"] {
+    &.full {
+        display: flex;
+        width: 100%;
+        flex: 1 100%;
+    }
+}
+
+.box-type {
+    @include boxType {
+        &::placeholder {
+            color: $ui_text_placeholder;
+        }
+    }
+    &.disabled,
+    &:disabled {
+        background-color: $ui_form_fill_disabled;
+    }
+
+    &.box-reverse {
+        flex-direction: row-reverse;
+    }
+}
+.element-input:disabled,
+.element-dropdown button:disabled,
+.element-input-icon.disabled {
+    &,
+    * {
+        color: $gray300;
+        cursor: default;
+        pointer-events: none;
+    }
+}
+.h56 {
+    height: 5.6rem;
+}
+
+/* option Class */
+.is-hidden {
+    display: none;
+}

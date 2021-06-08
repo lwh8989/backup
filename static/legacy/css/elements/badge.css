@@ -1,0 +1,25 @@
+.legacy-element-badge {
+  display: inline-block;
+  height: 18px;
+  border-radius: 2px;
+  padding: 0 4px;
+  background-color: #ff5000;
+  text-align: center;
+  line-height: 18px;
+  font-size: 11px;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+}
+.legacy-element-badge.status-demo {
+  background-color: #333;
+}
+.legacy-element-badge.status-new {
+  background-color: #ff5000;
+}
+.legacy-element-badge.status-update {
+  background-color: #784dff;
+}
+.legacy-element-badge.status-dlc {
+  background-color: #333;
+}

@@ -1,0 +1,244 @@
+@use "./mixin/mixin";
+@use "./color";
+@use "./space";
+@use "./font";
+
+$dropdown-default-space: 0 space.$stds-spacing-16;
+
+.element-input {
+    padding: $dropdown-default-space;
+    color: color.$ui_text_03;
+    &.filled {
+        border: 1px solid transparent;
+        background-color: color.$ui_form_fill_enabled;
+        &::placeholder {
+            color: color.$ui_text_04;
+        }
+        &:hover {
+            background-color: color.$ui_form_fill_hover;
+        }
+        &.active {
+            background-color: color.$ui_form_fill_focused;
+            border-color: color.$ui_form_fill_focused_border;
+        }
+        &:focus {
+            background-color: color.$ui_form_fill_focused;
+            border-color: color.$ui_form_fill_focused_border;
+        }
+    }
+    &.inverse-filled {
+        border: 1px solid transparent;
+        background-color: color.$ui_form_white_enabled;
+        color: color.$ui_text_white_01;
+        &::placeholder {
+            color: color.$ui_text_white_02;
+        }
+        &:hover {
+            background-color: color.$ui_form_white_hover;
+        }
+        &.active {
+            background-color: color.$ui_form_white_focused;
+            border-color: color.$ui_form_white_focused_border;
+            color: color.$ui_text_white_01;
+        }
+        &:focus {
+            background-color: color.$ui_form_white_focused;
+            border-color: color.$ui_form_white_focused_border;
+            color: color.$ui_text_white_01;
+        }
+        &:disabled {
+            color: color.$ui_text_white_02;
+        }
+    }
+}
+
+.element-input.active,
+.element-input-icon.active .element-input,
+.element-input:focus {
+    color: color.$ui_text_02;
+}
+
+.element-input-icon {
+    @include mixin.flex($type: inline-flex, $y: center);
+    position: relative;
+    padding-right: space.$stds-spacing-16;
+    .element-input-wrap {
+        @include mixin.flex($y: center);
+        position: relative;
+        flex: 1 100%;
+        height: 100%;
+        input {
+            width: 100%;
+            height: 100%;
+            @at-root .element-input-icon {
+                &.box-reverse {
+                    input {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+    & > button {
+        color: color.$ui_icon_03_enabled;
+        margin-right: 0.8rem;
+        &.ic-control-close-circle-fill {
+            color: color.$ui_icon_04_enabled;
+            display: none;
+            &:hover {
+                color: color.$ui_icon_04_hover;
+            }
+        }
+        &.ic-navigation-search-line {
+            color: color.$ui_icon_03_enabled;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    &.disabled,
+    &:hover {
+        button {
+            &.ic-navigation-search-line {
+                color: color.$gray300;
+            }
+        }
+    }
+    &.round {
+        border-radius: 99.9rem;
+    }
+    &.active {
+        .ic-control-close-circle-fill {
+            display: block;
+        }
+    }
+    &.filled {
+        border: 1px solid transparent;
+        background-color: color.$ui_form_fill_enabled;
+        &.active,
+        &:focus-within,
+        &:hover {
+            background-color: color.$ui_form_fill_hover;
+            // .ic-control-close-circle-fill {
+            //     color: red;
+            // }
+            .ic-navigation-search-line {
+                color: color.$ui_icon_03_pressed;
+            }
+        }
+        &.active,
+        &:focus-within {
+            border: 1px solid color.$gray500;
+        }
+        &.error,
+        &.warning,
+        &.success,
+        &.informational {
+            .element-input {
+                color: color.$ui_text_03;
+            }
+        }
+    }
+    &.inverse-filled {
+        background-color: color.$ui_form_white_enabled;
+        border: 1px solid transparent;
+        .element-input {
+            color: color.$ui_text_white_02;
+            &:focus,
+            &:active,
+            &:focus-within {
+                color: color.$ui_text_white_01;
+                ::placeholder {
+                    color: color.$ui_text_white_01;
+                }
+                .ic-navigation-search-line {
+                    color: color.$ui_icon_white_enabled !important;
+                }
+            }
+        }
+        &:hover {
+            background-color: color.$ui_form_white_hover;
+            .ic-navigation-search-line {
+                color: color.$ui_icon_white_enabled;
+            }
+        }
+        &.active {
+            background-color: color.$ui_form_white_focused;
+            border-color: color.$ui_form_white_focused_border;
+            .element-input {
+                color: color.$ui_text_white_01;
+            }
+            .ic-navigation-search-line {
+                color: color.$ui_icon_white_enabled;
+            }
+        }
+        &:focus {
+            background-color: color.$ui_form_white_focused;
+            border-color: color.$ui_form_white_focused_border;
+            color: color.$ui_text_white_01;
+            .ic-navigation-search-line {
+                color: color.$ui_icon_white_enabled !important;
+            }
+        }
+        &:focus-within {
+            border: 1px solid color.$ui_form_white_focused_border;
+            ::placeholder {
+                color: color.$ui_text_white_01;
+            }
+            .element-input {
+                color: color.$ui_text_white_01;
+            }
+        }
+        &.error,
+        &.warning,
+        &.success,
+        &.informational {
+            background-color: color.$ui_form_white_error;
+            .element-input {
+                color: color.$ui_text_white_01;
+            }
+        }
+        .ic-navigation-search-line {
+            color: color.$ui_icon_white_enabled;
+        }
+    }
+    &.error,
+    &.warning,
+    &.success,
+    &.informational {
+        .element-input {
+            color: color.$ui_text_03;
+        }
+    }
+    // state colors
+    @each $name, $color in color.$elementState {
+        &.#{"" + $name + ""} {
+            border-color: $color !important;
+            border-width: 2px;
+            pointer-events: none;
+            button {
+                color: $color !important;
+            }
+        }
+    }
+    &.box-reverse {
+        padding-left: space.$stds-spacing-16;
+    }
+    &.readonly {
+        &,
+        * {
+            &::selection {
+                user-select: none;
+            }
+        }
+    }
+    &.calendar {
+        &,
+        input {
+            cursor: pointer;
+        }
+    }
+    .ic-community-calendar-line {
+        margin-top: 1px;
+    }
+}

@@ -1,0 +1,189 @@
+@use "./radius";
+@use "./color";
+@use "./font";
+@use "./space";
+
+$stds-radio-size-S: 1.6rem;
+$stds-radio-size-M: 2rem;
+$stds-radio-size-L: 2.4rem;
+
+.element-radio {
+    position: relative;
+    display: inline-flex;
+    &.radio-round {
+        input[type='radio'] {
+            position: relative;
+            background: color.$ui_form_line_enabled;
+            border: solid 1px color.$ui_form_line_enabled_border;
+            border-radius: radius.$Radius-50;
+            cursor: pointer;
+        }
+    }
+    input[type='radio']:after {
+        content: "";
+        position: absolute;
+        display: none;
+        background: color.$white;
+        border-radius: radius.$Radius-50;
+    }
+    input[type='radio']:checked:after {
+        content: "";    
+        position: absolute;
+        display: block;
+        background: color.$white;
+        border-radius: radius.$Radius-50;
+    }
+    input[type='radio']:hover {
+        background: color.$ui_form_line_hover;
+        border: solid 1px color.$ui_form_line_hover_border;
+        + .radio-label {
+            color: color.$ui_text_02;
+        }
+    }
+    input[type='radio']:disabled {
+        background: color.$ui_form_line_disabled;
+        border: solid 1px color.$ui_form_line_disabled_border;
+        cursor: not-allowed;
+        pointer-events: none;
+        + label {
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        + .radio-label {
+            color: color.$ui_text_disabled;
+        }
+    }
+    input[type='radio']:checked {
+        background: color.$ui_icon_brand_enabled;
+        border: solid 1px color.$ui_icon_brand_enabled;
+        + .radio-label {
+            color: color.$ui_text_02;
+        }
+    }
+    input[type='radio']:checked:hover {
+        background: color.$ui_icon_brand_hover;
+        border: solid 1px color.$ui_icon_brand_hover;
+        + .radio-label {
+            color: color.$ui_text_03;
+        }
+    }
+    input[type='radio']:checked:disabled {
+        background: color.$ui_icon_brand_disabled;
+        border: solid 1px color.$ui_icon_brand_disabled;
+        cursor: not-allowed;
+        pointer-events: none;
+        + label {
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        + .radio-label {
+            color: color.$ui_text_disabled;
+        }
+    }
+    label {
+        display: none;
+    }
+    &.radio-text {
+        label {
+            display: inline-flex;
+            color: color.$ui_text_03;
+            cursor: pointer;
+        }
+    }
+    &.h16 {
+        &.radio-round {
+            input[type='radio'] {                
+                width: $stds-radio-size-S;
+                height: $stds-radio-size-S;
+                border-radius: radius.$Radius-50;
+            }
+        }
+        &.radio-text {
+            label {
+                font-size: 1.3rem;
+                margin-left: space.$stds-spacing-8;
+                line-height: 1.6rem;
+            }
+        }
+        input[type='radio']:after {
+            width: 8px;
+            height: 8px;
+            top: 0.3rem;
+            right: 0.3rem;
+            bottom: 0.3rem;
+            left: 0.3rem;
+        }
+        input[type='radio']:checked:after {
+            width: 8px;
+            height: 8px;
+            top: 0.3rem;
+            right: 0.3rem;
+            bottom: 0.3rem;
+            left: 0.3rem;
+        }
+    }
+    &.h20 {
+        &.radio-round {
+            input[type='radio'] {
+                width: $stds-radio-size-M;
+                height: $stds-radio-size-M;
+                border-radius: radius.$Radius-50;
+            }
+        }
+        &.radio-text {
+            label {
+                font-size: 1.5rem;
+                margin-left: space.$stds-spacing-12;
+                line-height: 2rem;
+            }
+        }
+        input[type='radio']:after {
+            width: 10px;
+            height: 10px;
+            top: 0.4rem;
+            right: 0.4rem;
+            bottom: 0.4rem;
+            left: 0.4rem;
+        }
+        input[type='radio']:checked:after {
+            width: 10px;
+            height: 10px;
+            top: 0.4rem;
+            right: 0.4rem;
+            bottom: 0.4rem;
+            left: 0.4rem;
+        }
+    }
+    &.h24 {
+        &.radio-round {
+            input[type='radio'] {
+                width: $stds-radio-size-L;
+                height: $stds-radio-size-L ;
+                border-radius: radius.$Radius-50;
+            }
+        }
+        &.radio-text {
+            label {
+                font-size: 1.6rem;
+                margin-left: space.$stds-spacing-12;
+                line-height: 2.4rem;
+            }
+        }
+        input[type='radio']:after {
+            width: 12px;
+            height: 12px;
+            top: 0.5rem;
+            right: 0.5rem;
+            bottom: 0.5rem;
+            left: 0.5rem;
+        }
+        input[type='radio']:checked:after {
+            width: 12px;
+            height: 12px;
+            top: 0.5rem;
+            right: 0.5rem;
+            bottom: 0.5rem;
+            left: 0.5rem;
+        }
+    }
+}

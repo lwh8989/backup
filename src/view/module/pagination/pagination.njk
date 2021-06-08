@@ -1,0 +1,83 @@
+{% extends "_include/layout/guide/guide.njk" %}
+
+{% import "_include/module/pagination/pagination.njk" as pagination %}
+
+<!-- styles -->
+{% block styles %}
+{% endblock %}
+
+<!-- styles -->
+{% block content %}
+<!-- [D]   -->
+<div class="guide">
+    <h1 class="guide-tit">Pagination</h1>
+    <p class="tit"><b>Stove Pagination Guide</b></p>
+    <p class="desc">
+    </p>
+    
+    <table class="table table-col2 pagination-sample">
+        <caption>Lorem</caption>
+        <thead>
+            <tr>
+                <th>Case</th>
+                <th>Sample</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                   1개 노출시에는 Mouse over 효과 없음
+                </td>
+                <td>
+                    <div class="pagination">
+                        <span class="pagination-num">
+                            <a class="active"><span>1</span></a>
+                        </span>
+                    </div>    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    페이지네이션<br />a tag
+                </td>
+                <td>
+                    {{ pagination.base( isATag=true ) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    페이지네이션<br />button tag
+                </td>
+                <td>
+                    {{ pagination.base( isATag=false ) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    bullet - SM/XL
+                </td>
+                <td>
+                    {{ pagination.bullet( sizeClass = 'size-m') }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    bullet - S/XS
+                </td>
+                <td>
+                    {{ pagination.bullet( sizeClass = 'size-s') }}
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %} 
+{% endblock %}

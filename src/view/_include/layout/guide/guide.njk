@@ -1,0 +1,17 @@
+{% import "_include/layout/head/head.njk" as headLink %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  {{ headLink.base(tit="Guide Page") }}
+  {% block styles %}{% endblock %}
+</head>
+<!-- Guide Layout -->
+<body>
+  {% block content %}{% endblock %}
+
+  {% block dialog %}{% endblock %}
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>

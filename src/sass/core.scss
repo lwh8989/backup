@@ -1,12 +1,69 @@
-/* Base */
-@import "./_font.scss";
-@import "./_space.scss";
+/* core */
+@import "./color";
+@import "./space";
+@import "./motion";
+@import "./radius";
+@import "./shadow";
+@import "./common";
+
+/* helpers */
+@import "./helpers/reset";
+@import "./helpers/clearfix";
+@import "./helpers/guide";
+@import "./helpers/hidden";
+@import "./helpers/ratio";
+@import "./helpers/z-index";
+
+/* element */
+@import "./badge";
+@import "./tooltip";
+
+/* form */
+@import "./button";
+@import "./dropdown";
+@import "./input";
+@import "./checkbox";
+@import "./radio";
+@import "./toggle";
+
+/* module */
+@import "./calendar";
+@import "./pagenation";
+@import "./board";
+@import "./list";
+@import "./profile";
+
+/* write */
+@import "./write";
+@import "./write-ui";
+@import "./attach";
+
+/* detail */
+@import "./detail";
+@import "./reply";
+
+/* partial */
+@import "./dialog";
 
 /* mixin */
-@import "./_mixin.scss";
+@import "./mixin/mixin";
+@import "./mixin/responsive";
+@import "./mixin/layout";
 
 /* Layout */
-@import "./_layout.scss";
-@import "./_guide.scss";
-@import "./_index.scss";
-@import "./_responsive.scss";
+@import "./index";
+@import "./responsive";
+@import "./mixin/gnb";
+@import "./navigation";
+@import "./tab";
+@import "./footer";
+
+/* legacy */
+@import "./floara/fr-view";
+@import url(./../../static/legacy/css/legacy.css);
+
+/* font */
+@import "./font";
+@import "./fonts/stds-font-mixin";
+@import "./fonts/stds-font";
+@import "./fonts/stds-font-reset";

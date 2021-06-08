@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="14" cy="14" r="14" fill="#9CAFEA" fill-rule="nonzero"/>
+        <path fill="#FFF" d="M10.481 12.903v-1.676h1.73l.5-3.227h1.515l-.517 3.227h1.747L15.991 8h1.498l-.517 3.227h1.284v1.676h-1.534l-.339 2.033h1.409v1.658h-1.658L15.58 20h-1.498l.553-3.406h-1.765L12.318 20H10.82l.517-3.406H10v-1.658h1.623l.32-2.033h-1.462zm2.978 0l-.356 2.033h1.765l.356-2.033H13.46z"/>
+    </g>
+</svg>

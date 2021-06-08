@@ -1,0 +1,223 @@
+@import "./helpers/hidden";
+
+$ui-button-pagination-enabled: #6e6e6e;
+$ui-button-pagination-hover : #fc6020;
+
+/* pagenation */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4rem 0;
+    width: 100%;
+    line-height: normal;
+    font-size: 1.4rem;
+    color: #3a3a3a;
+    text-align: center;
+}
+.pagination .stove-icon {
+    vertical-align: middle;
+}
+.pagination .stove-icon.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: $ui_icon_03_disabled;
+}
+.pagination .pagination-num {
+    display: inline-block;
+}
+/* a Tag */
+.pagination a {
+    position: relative;
+    display: inline-block;
+    min-width: 3.2rem;
+    height: 3.2rem;
+    line-height: 3.2rem;
+    padding: 0 0.7rem;
+    color: $ui-button-pagination-enabled;
+    border-radius: 1.8rem;
+    box-sizing: border-box;
+}
+.pagination a.stove-icon{
+    padding: 0;
+}
+.pagination-num a.num-first:hover,
+.pagination-num a.num-last:hover{
+    background-color: transparent;
+}
+.pagination a:hover::after {
+    content: '';
+    width: 100%;
+    height: 3.2rem;
+    border-radius: 1.6rem;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pagination a:hover::after {
+    z-index: 2;
+    background-color: $interactive_03_hover;
+}
+.pagination a:active::after {
+    z-index: 2;
+    color: $ui_icon_03_pressed;
+    background-color: $interactive_03_focused;
+}
+.pagination a:hover span,
+.pagination a:active span,
+.pagination a.active span{
+    position: relative;
+    z-index: 3;
+}
+.pagination a.stove-icon:hover::before {
+    color: #b3b3b3;
+}
+.pagination a.stove-icon:active::before {
+    color: $ui_icon_03_pressed;
+}
+.pagination a.stove-icon::before{
+    position: relative;
+    z-index: 3;
+}
+.pagination a.stove-icon .text-hidden{
+    @include text-hidden;
+}
+.pagination a.active{
+    color: #fff;
+    font-weight: 700;
+}
+.pagination a.active {
+    pointer-events: none;
+}
+.pagination a.active:after{
+    content: '';
+    width: 100%;
+    height: 3.2rem;
+    border-radius: 1.6rem;
+    display: block;
+    background-color: #fc6020;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* button tag */
+.pagination button {
+    position: relative;
+    display: inline-block;
+    min-width: 3.2rem;
+    height: 3.2rem;
+    line-height: 3.2rem;
+    padding: 0 0.7rem;
+    color: $ui-button-pagination-enabled;
+    border-radius: 1.8rem;
+    box-sizing: border-box;
+}
+.pagination button.stove-icon{
+    padding: 0;
+}
+.pagination-num button.num-first:hover,
+.pagination-num button.num-last:hover{
+    background-color: transparent;
+}
+.pagination button:hover::after {
+    content: '';
+    width: 100%;
+    height: 3.2rem;
+    border-radius: 1.6rem;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pagination button:hover::after,
+.pagination button:active::after{
+    z-index: 2;
+}
+.pagination button:active::after,
+.pagination button:focus::after {
+    background-color: $interactive_03_focused;
+}
+.pagination button:hover span,
+.pagination button:active span,
+.pagination button.active span{
+    position: relative;
+    z-index: 3;
+}
+.pagination button.stove-icon:hover::before {
+    color: #b3b3b3;
+}
+.pagination button.stove-icon:hover::after {
+    background-color: $interactive_03_hover;
+}
+.pagination button.stove-icon:active::before {
+    color: #3a3a3a;
+}
+.pagination button.stove-icon:active::after {
+    background-color: $interactive_03_focused;
+}
+.pagination button.stove-icon::before{
+    position: relative;
+    z-index: 3;
+}
+.pagination button.stove-icon .text-hidden{
+    @include text-hidden;
+}
+.pagination button.active{
+    color: #fff;
+    font-weight: 700;
+}
+.pagination button.active {
+    pointer-events: none;
+}
+.pagination button.active:after{
+    content: '';
+    width: 100%;
+    height: 3.2rem;
+    border-radius: 1.6rem;
+    display: block;
+    background-color: #fc6020;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*pagination-bullet*/
+.pagination-bullet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination-bullet .bullet-list{
+    display: inline-block;
+    background-color: #cacaca;    
+}
+.pagination-bullet.size-m .bullet-list{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    margin: 0 0.6rem;
+}
+.pagination-bullet.size-m .bullet-list.bullet-active{
+    width: 2.6rem;
+    background-color: $ui-button-pagination-hover;
+}
+.pagination-bullet.size-s .bullet-list{
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 0.3rem;
+    margin: 0 0.4rem;
+}
+.pagination-bullet.size-s .bullet-list.bullet-active{
+    width: 1.6rem;
+    background-color: $ui-button-pagination-hover;
+}
+.pagination-bullet .bullet-list span{
+    @include text-hidden;
+}
+

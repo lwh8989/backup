@@ -1,6 +1,17 @@
+// Desktop
 $stds-breakpoint-2xl: 1920px;
 $stds-breakpoint-xl: 1600px;
 $stds-breakpoint-l: 1440px;
 $stds-breakpoint-m: 1280px;
+$stds-breakpoint-sm: 1024px;
+
+// Tablet
 $stds-breakpoint-s: 768px;
-$stds-breakpoint-xs: 360px
+
+// Mobile
+$stds-breakpoint-xs: 360px;
+
+// header fixed
+$stds-fixed-depth1: 0;
+$stds-fixed-depth2: 4.8rem;
+$stds-fixed-depth3: 9.6rem;

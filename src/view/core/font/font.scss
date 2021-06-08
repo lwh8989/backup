@@ -1,0 +1,95 @@
+/* view 에서 Guide 하기 위한 Css */
+@import "./src/sass/fonts/stds-font-mixin";
+@import "./src/sass/font";
+
+/* [D] 가이드용 SCSS입니다. */
+/* 영향도 : 가이드 페이지의 font-style */
+/* title */
+.stds-title1 {
+    @include stdsTitle1;
+}
+.stds-title2 {
+    @include stdsTitle2;
+}
+.stds-title3 {
+    @include stdsTitle3;
+}
+.stds-title4 {
+    @include stdsTitle4;
+}
+.stds-title5 {
+    @include stdsTitle5;
+}
+.stds-title6 {
+    @include stdsTitle6;
+}
+.stds-title7 {
+    @include stdsTitle7;
+}
+.stds-title8 {
+    @include stdsTitle8;
+}
+
+/* Body */
+.stds-body1 {
+    @include stdsBody1($weight: normal);
+}
+.stds-body2 {
+    @include stdsBody2($weight: normal);
+}
+.stds-body3 {
+    @include stdsBody3($weight: normal);
+}
+.stds-body4 {
+    @include stdsBody4($weight: normal);
+}
+
+/* Button */
+.stds-button1 {
+    @include stdsButton1($weight: normal);
+}
+.stds-button2 {
+    @include stdsButton2($weight: normal);
+}
+
+/* Caption */
+.stds-caption1 {
+    @include caption1;
+}
+.stds-caption2 {
+    @include caption2;
+}
+
+/* Chips */
+.stds-chips1 {
+    @include chips1;
+}
+.stds-chips2 {
+    @include chips2;
+}
+
+.stds-lineHeightL {
+    line-height: $stdsLineHeightL;
+}
+.stds-lineHeightM {
+    line-height: $stdsLineHeightM;
+}
+.stds-lineHeightS {
+    line-height: $stdsLineHeightS;
+}
+
+.stds-inter {
+    font-family: "inter KR";
+}
+.stds-notnoSans {
+    font-family: "Noto Sans KR";
+}
+
+ul {
+    li {
+        width: 30%;
+        display: inline-block;
+        margin: 0 16px 32px 0;
+        vertical-align: top;
+    }
+}

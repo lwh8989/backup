@@ -1,0 +1,40 @@
+{% import "legacy/elements/icon.njk" as icon %}
+{% import "legacy/elements/profile.njk" as profile %}
+{% import "legacy/elements/btn.njk" as btn %}
+{% import "legacy/modules/list.njk" as list %}
+
+{% macro visualBasic(isChecked) %}
+  <div class="visual-img">
+    <img src="../../../static/images/example/indie-default.png" alt="Cover Image"/>
+  </div>
+  <div class="layout-container">
+    {{ profile.visual() }}
+    <div class="visual-btn-wrapper">
+      {{ btn.base(shapeClass="btn-list",txt="보유 게임",subtxt="3") }}
+      {{ btn.base(shapeClass="btn-list",txt="찜한 게임",subtxt="3") }}
+      {{ btn.base(shapeClass="btn-list",txt="장바구니",subtxt="0") }}
+      {{ btn.base(shapeClass="btn-list",txt="인디쿠폰",subtxt="7") }}
+    </div>
+    <!--
+    <div class="visual-btn-wrapper">
+      {% if isChecked %}
+        {{ btn.withIconText(shapeClass='btn-round', sizeClass='size-44', colorClass='btn-white-line', txt='다국어시내용이길어진다면', iconClass='ic-check-s16-cfff') }}
+        {{ btn.withIconText(shapeClass='btn-round', sizeClass='size-44', colorClass='btn-white-line', txt='다국어시내용이길어진다면', iconClass='ic-check-s16-cfff') }}
+      {% else %}
+        {{ btn.withIconText(shapeClass='btn-round', sizeClass='size-44', colorClass='btn-white-line', txt='다국어시내용이길어진다면', iconClass='ic-plus-s16-cfff') }}
+        {{ btn.withIconText(shapeClass='btn-round', sizeClass='size-44', colorClass='btn-white-line', txt='다국어시내용이길어진다면', iconClass='ic-plus-s16-cfff') }}
+      {% endif %}
+    </div>
+    -->
+  </div>
+{% endmacro %}
+
+{% macro visualMyHome() %}
+  <div class="visual-img" style="background-image: url(../../../static/images/example/indie-default.png)"></div>
+  <div class="layout-container">
+    {{ profile.visual() }}
+    <div class="visual-btn-wrapper">
+      {{ btn.withIconText(shapeClass='btn-round', sizeClass='size-44', colorClass='btn-white-bg', txt='글쓰기', iconClass='ic-write-s24-active') }}{{ btn.withIconText(shapeClass='btn-cycle44', sizeClass='size-44', colorClass='btn-white-line', iconClass='ic-set-s24-cfff') }}
+    </div>
+  </div>
+{% endmacro %}

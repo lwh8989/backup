@@ -1,0 +1,35 @@
+{% extends "_include/layout/guide/guide.njk" %}
+{% import "_include/partial/footer/footer.njk" as footer %}
+
+<!-- styles -->
+{% block styles %}
+{% endblock %}
+
+<!-- styles -->
+{% block content %}
+<!-- [D]   -->
+<div class="guide">
+    <h1 class="guide-tit">Footer</h1>
+    <p class="tit"><b>Stove Footer Guide</b></p>
+    <p class="desc">
+        base, notice, channeling, rating
+    </p>
+</div>
+<div class="guide-footer">
+    {{ footer.base() }}
+    <br>
+    {{ footer.notice() }}
+    <br>
+    {{ footer.channeling() }}
+    <br>
+    {{ footer.rating() }}
+</div>
+
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %} 
+{% endblock %}

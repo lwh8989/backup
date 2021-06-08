@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <path id="a" d="M8.703 8l4.243 4.243a.5.5 0 0 1-.707.707L7.996 8.707 3.754 12.95a.5.5 0 1 1-.708-.707L7.29 8 3.046 3.758a.5.5 0 1 1 .708-.707l4.242 4.242 4.243-4.242a.5.5 0 0 1 .707.707L8.703 8z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FFF" d="M-1170-10890H270V5736h-1440z"/>
+        <g transform="translate(-111 -16)">
+            <rect width="351" height="47" x=".5" y=".5" fill="#F7FBFF" stroke="#DEEBF8" rx="4"/>
+            <use fill="#FF5000" fill-rule="nonzero" transform="rotate(-45 82.81 -117.989)" xlink:href="#a"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,189 @@
+{% extends "_include/layout/guide/guide.njk" %}
+{% import "_include/form/radio.njk" as radio %}
+
+<!-- styles -->
+{% block styles %}{% endblock %}
+
+<!-- styles -->
+{% block content %}
+    <!-- [D]   -->
+    <div class="guide full">
+        <h1 class="guide-tit">Radio</h1>
+
+        <!-- dropdown -->
+        <div class="guide-layer">
+            <div class="guide-section">
+                <h2 class="guide-section-tit">Radio</h2>
+
+                <div>
+                    <div class="guide-flex ratio gap">
+                        <div>
+                            <h3 class="guide-section-stit">Base</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 16</div>
+                                <div class="guide-desc">H 20</div>
+                                <div class="guide-desc">H 24</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">selected_enabled / selected_hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ radio.base( height="h16", name="radio-01", styleClass="radio-round", label="Radio", state="checked", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h20", name="radio-02", styleClass="radio-round", label="Radio", state="checked", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h24", name="radio-03", styleClass="radio-round", label="Radio", state="checked", value="submit" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">selected_disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ radio.base( height="h16", name="radio-011", styleClass="radio-round", label="Radio", state="checked disabled", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h20", name="radio-022", styleClass="radio-round", label="Radio", state="checked disabled", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h24", name="radio-033", styleClass="radio-round", label="Radio", state="checked disabled", value="submit" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">unselected_enabled / unselected_hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ radio.base( height="h16", name="radio-01", styleClass="radio-round", label="Radio", state="", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h20", name="radio-02", styleClass="radio-round", label="Radio", state="", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h24", name="radio-03", styleClass="radio-round", label="Radio", state="", value="submit" ) }}
+                                    </div>
+                                </div>
+                            </div>                            
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">unselected_disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ radio.base( height="h16", name="radio-01", styleClass="radio-round", label="Radio", state="disabled", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h20", name="radio-02", styleClass="radio-round", label="Radio", state="disabled", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h24", name="radio-03", styleClass="radio-round", label="Radio", state="disabled", value="submit" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+<script type="text/plain" class="language-markup">
+    h16 / h20 / h24
+
+    <span class="element-radio h16 radio-round">
+        <input class="radio-input" type="radio" id="" name="radio-01" value="submit">
+        <label class="radio-label" for="">Radio</label>
+    </span>
+
+</script>
+
+                            <h3 class="guide-section-stit">Base + Text</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 16</div>
+                                <div class="guide-desc">H 20</div>
+                                <div class="guide-desc">H 24</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">selected_enabled / selected_hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ radio.base( height="h16", name="radio-04", styleText="radio-text", styleClass="radio-round", label="Radio", state="checked", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h20", name="radio-05", styleText="radio-text", styleClass="radio-round", label="Radio", state="checked", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h24", name="radio-06", styleText="radio-text", styleClass="radio-round", label="Radio", state="checked", value="submit" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">selected_disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ radio.base( height="h16", name="radio-044", styleText="radio-text", styleClass="radio-round", label="Radio", state="checked disabled", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h20", name="radio-055", styleText="radio-text", styleClass="radio-round", label="Radio", state="checked disabled", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h24", name="radio-066", styleText="radio-text", styleClass="radio-round", label="Radio", state="checked disabled", value="submit" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">unselected_enabled / unselected_hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ radio.base( height="h16", name="radio-04", styleText="radio-text", styleClass="radio-round", label="Radio", state="", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h20", name="radio-05", styleText="radio-text", styleClass="radio-round", label="Radio", state="", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h24", name="radio-06", styleText="radio-text", styleClass="radio-round", label="Radio", state="", value="submit" ) }}
+                                    </div>
+                                </div>
+                            </div>                            
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">unselected_disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ radio.base( height="h16", name="radio-04", styleText="radio-text", styleClass="radio-round", label="Radio", state="disabled", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h20", name="radio-05", styleText="radio-text", styleClass="radio-round", label="Radio", state="disabled", value="submit" ) }}
+                                    </div>
+                                    <div>
+                                        {{ radio.base( height="h24", name="radio-06", styleText="radio-text", styleClass="radio-round", label="Radio", state="disabled", value="submit" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+<script type="text/plain" class="language-markup">
+    h16 / h20 / h24
+
+    <span class="element-radio h16 radio-round radio-text">
+        <input class="radio-input" type="radio" id="" name="radio-02" value="submit">
+        <label class="radio-label" for="">Radio</label>
+    </span>
+
+</script>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %}{% endblock %}

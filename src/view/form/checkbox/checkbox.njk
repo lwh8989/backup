@@ -1,0 +1,408 @@
+{% extends "_include/layout/guide/guide.njk" %}
+{% import "_include/form/checkbox.njk" as checkbox %}
+
+<!-- styles -->
+{% block styles %}{% endblock %}
+<!-- styles -->
+
+{% block content %}
+    <!-- [D]   -->
+    <div class="guide full">
+        <h1 class="guide-tit">Form - Checkbox</h1>
+
+        <!-- dropdown -->
+        <div class="guide-layer">
+            <div class="guide-section">
+                <h2 class="guide-section-tit">Checkbox</h2>
+
+                <div>
+                    <div class="guide-flex ratio gap">
+                        <div>
+                            <h3 class="guide-section-stit">Square</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 16</div>
+                                <div class="guide-desc">H 20</div>
+                                <div class="guide-desc">H 24</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">selected_enabled / selected_hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", label="Checkbox", state="checked" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", label="Checkbox", state="checked" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", label="Checkbox", state="checked" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">selected_disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", label="Checkbox", state="checked disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", label="Checkbox", state="checked disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", label="Checkbox", state="checked disabled" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">unselected_enabled / unselected_hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", label="Checkbox", state="" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", label="Checkbox", state="" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", label="Checkbox", state="" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">unselected_disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", label="Checkbox", state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", label="Checkbox", state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", label="Checkbox", state="disabled" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+<script type="text/plain" class="language-markup">
+    .element-checkbox = checkbox 정의
+    .h16 / .h20 / .h24  = checkbox의 높이값
+    .checkbox-square = checkbox Shape Style
+    state = checked / disabled / checked disabled
+
+    Size : 16px
+    <div class="element-checkbox h16 checkbox-square">
+        <input class="checkbox-input" type="checkbox" id="checkbox-01" name="" value="">
+        <label class="checkbox-label" for="">Checkbox</label>
+    </div>
+
+    Size : 20px
+    <div class="element-checkbox h16 checkbox-square">
+        <input class="checkbox-input" type="checkbox" id="checkbox-01" name="" value="">
+        <label class="checkbox-label" for="">Checkbox</label>
+    </div>
+
+    Size : 24px
+    <div class="element-checkbox h16 checkbox-square">
+        <input class="checkbox-input" type="checkbox" id="checkbox-01" name="" value="">
+        <label class="checkbox-label" for="">Checkbox</label>
+    </div>
+</script>
+
+                            <h3 class="guide-section-stit">Square + Text</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 16</div>
+                                <div class="guide-desc">H 20</div>
+                                <div class="guide-desc">H 24</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">selected_enabled / selected_hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square ", state="checked" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square ", state="checked" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square ", state="checked" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">selected_disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square ", state="checked disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square ", state="checked disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square ", state="checked disabled" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">unselected_enabled / unselected_hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square ", state="" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square ", state="" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square ", state="" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">unselected_disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square ", state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square ", state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-square", styleText="checkbox-text", label="Checkbox Square ", state="disabled" ) }}
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+<script type="text/plain" class="language-markup">
+    .element-checkbox = checkbox 정의
+    .h16 / .h20 / .h24  = checkbox의 높이값
+    .checkbox-square = checkbox Shape Style
+    .checkbox-text = checkbox + text 설정
+    state = checked / disabled / checked disabled
+
+    Size : 16px
+    <div class="element-checkbox h16 checkbox-square checkbox-text">
+        <input class="checkbox-input" type="checkbox" id="checkbox-02" name="" value="">
+        <label class="checkbox-label" for="checkbox-01">Checkbox Square</label>
+    </div> 
+
+    Size : 20px 
+    <div class="element-checkbox h20 checkbox-square checkbox-text">
+        <input class="checkbox-input" type="checkbox" id="checkbox-02" name="" value="">
+        <label class="checkbox-label" for="checkbox-01">Checkbox Square</label>
+    </div> 
+
+    Size : 24px
+    <div class="element-checkbox h24 checkbox-square checkbox-text">
+        <input class="checkbox-input" type="checkbox" id="checkbox-02" name="" value="">
+        <label class="checkbox-label" for="checkbox-01">Checkbox Square</label>
+    </div> 
+</script>
+
+                            <h3 class="guide-section-stit">Round</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 16</div>
+                                <div class="guide-desc">H 20</div>
+                                <div class="guide-desc">H 24</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">selected_enabled / selected_hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", label="Checkbox", state="checked" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", label="Checkbox", state="checked" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", label="Checkbox", state="checked" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">selected_disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", label="Checkbox", state="checked disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", label="Checkbox", state="checked disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", label="Checkbox", state="checked disabled" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">unselected_enabled / unselected_hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", label="Checkbox", state="" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", label="Checkbox", state="" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", label="Checkbox", state="" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">unselected_disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", label="Checkbox", state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", label="Checkbox", state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", label="Checkbox", state="disabled" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+<script type="text/plain" class="language-markup">
+    .element-checkbox = checkbox 정의
+    .h16 / .h20 / .h24  = checkbox의 높이값
+    .checkbox-round = checkbox Shape Style
+    state = checked / disabled / checked disabled
+
+    Size : 16px
+    <div class="element-checkbox h16 checkbox-round">
+        <input class="checkbox-input" type="checkbox" id="checkbox-03" name="" value="">
+        <label class="checkbox-label" for="">Checkbox Round</label>
+    </div>
+
+    Size : 20px
+    <div class="element-checkbox h16 checkbox-round">
+        <input class="checkbox-input" type="checkbox" id="checkbox-03" name="" value="">
+        <label class="checkbox-label" for="">Checkbox Round</label>
+    </div>
+
+    Size : 24px
+    <div class="element-checkbox h16 checkbox-round">
+        <input class="checkbox-input" type="checkbox" id="checkbox-03" name="" value="">
+        <label class="checkbox-label" for="">Checkbox Round</label>
+    </div>
+</script>                            
+
+                            <h3 class="guide-section-stit">Round + Text</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 16</div>
+                                <div class="guide-desc">H 20</div>
+                                <div class="guide-desc">H 24</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">selected_enabled / selected_hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="checked" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="checked" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="checked" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">selected_disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="checked disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="checked disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="checked disabled" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">unselected_enabled / unselected_hover</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="" ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">unselected_disabled</div>
+                                <div class="guide-flex ratio gap">
+                                    <div>
+                                        {{ checkbox.base( height="h16", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h20", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="disabled" ) }}
+                                    </div>
+                                    <div>
+                                        {{ checkbox.base( height="h24", styleClass="checkbox-round", styleText="checkbox-text", label="Checkbox Round", state="disabled" ) }}
+                                    </div>
+                                </div>
+                            </div>
+                            
+<script type="text/plain" class="language-markup">
+    .element-checkbox = checkbox 정의
+    .h16 / .h20 / .h24  = checkbox의 높이값
+    .checkbox-round = checkbox Shape Style
+    .checkbox-text = checkbox + text 설정
+    state = checked / disabled / checked disabled
+
+    Size : 16px
+    <div class="element-checkbox h16 checkbox-round">
+        <input class="checkbox-input" type="checkbox" id="checkbox-04" name="" value="">
+        <label class="checkbox-label" for="">Checkbox Round</label>
+    </div>
+
+    Size : 20px
+    <div class="element-checkbox h16 checkbox-round">
+        <input class="checkbox-input" type="checkbox" id="checkbox-04" name="" value="">
+        <label class="checkbox-label" for="">Checkbox Round</label>
+    </div>
+
+    Size : 24px
+    <div class="element-checkbox h16 checkbox-round">
+        <input class="checkbox-input" type="checkbox" id="checkbox-04" name="" value="">
+        <label class="checkbox-label" for="">Checkbox Round</label>
+    </div>
+</script>   
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %}{% endblock %}

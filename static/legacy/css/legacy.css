@@ -1,0 +1,431 @@
+/* element */
+@import "./elements/badge.css";
+@import "./elements/btn.css";
+@import "./elements/card.css";
+@import "./elements/community-common.css";
+@import "./elements/datepicker-custom.css";
+@import "./elements/datepicker.css";
+/* 신규 UI 적용
+
+*/
+@import "./elements/dropdown.css";
+@import "./elements/form.css";
+@import "./elements/fr-view.css";
+@import "./elements/icon.css";
+/* @import "./elements/input.css"; */
+@import "./elements/list.css";
+/* @import "./elements/lnb.css"; */
+/* @import "./elements/media-view.css"; */
+@import "./elements/pagination.css";
+@import "./elements/profile.css";
+@import "./elements/title.css";
+@import "./elements/tooltip.css";
+@import "./elements/view.css";
+@import "./elements/write.css";
+
+/* layout */
+/* 
+@import "./layouts/base.css";
+@import "./layouts/guide.css";
+@import "./layouts/reset.css"; 
+*/
+
+/* modules */
+@import "./modules/dialog.css";
+/* @import "./modules/footer.css"; */
+/* @import "./modules/gnb.css"; */
+@import "./modules/input-set.css";
+/* @import "./modules/new-gnb.css"; */
+/* @import "./modules/reply.css"; */
+/* @import "./modules/section.css"; */
+/* @import "./modules/skeleton.css"; */
+/* @import "./modules/slider.css"; */
+@import "./modules/tab.css";
+@import "./modules/toolbar.css";
+
+/* scroll */
+@import "./scroll/perfect-scrollbar.css";
+
+
+/* [D] legacy */
+
+/* legacy dialog */
+/* legacy dialog - md */
+.legacy-module-dialog.legacy-dialog-size-md,
+.legacy-module-dialog-flex.legacy-dialog-size-md {
+    width: 440px;
+}
+
+/* legacy dialog - space */
+.legacy-dialog-body .legacy-dialog-content,
+.legacy-module-dialog.legacy-dialog-basic .legacy-dialog-header .header-tit,
+.legacy-module-dialog .legacy-module-myindie-form,
+.legacy-module-tab.tab-underline.video-attach .tab-content,
+.legacy-module-dialog-flex.type-comm,
+.legacy-module-dialog-flex > [class*='dialog-']{
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+/* legacy dialog - title */
+.legacy-dialog-body .legacy-dialog-confim-text.legacy-dialog-title-text{
+    font-size: 13px;
+}
+.legacy-dialog-body .legacy-dialog-content.header-tit{
+    padding-top: 40px;
+}
+/* legacy dialog - title none */
+.legacy-dialog-body .legacy-dialog-content.none-header-tit{
+    padding-top: 50px;
+}
+
+/* legacy dialog - list */
+.legacy-dialog-body .legacy-dialog-list-desc li{
+    letter-spacing: -1.2px;
+    word-spacing: -1px;
+}
+
+/* legacy dialog - form */
+.legacy-dialog-body .legacy-dialog-list-form .textarea-form-item textarea{
+    width: 100%;
+    box-sizing: border-box;
+}
+.legacy-dialog-body .legacy-dialog-list-form .image-upload-item-img{
+    margin-right: 12px;
+}
+.legacy-dialog-body .legacy-dialog-list-form .image-upload-desc{
+    letter-spacing: -0.5px;
+}
+
+/* legacy dialog - survery */
+.editor-survey .survey-body .tit{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.editor-survey .survey-body ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.legacy-module-dialog .legacy-module-myindie-form .myindie-item .editor-survey .survey-body ul li .legacy-element-radio .radio-input ~ label{
+    width: 174px;
+}
+.editor-survey .survey-body ul li .legacy-element-radio.image-img ~ .progress-status{
+    top: 24px;
+}
+.editor-survey .survey-body ul li .progress-bar{
+    margin-top: 12px;
+}
+.editor-survey .survey-body ul li .progress-status .status-percent::before{
+    margin: 0;
+}
+
+/* legacy dialog - tab */
+.legacy-element-icon.ic-character{
+    width: 100%;
+    background-position: 50% 50%;
+}
+.legacy-dialog-body .tab-content .profile-list{
+    margin-top: 0;
+}
+
+/* legacy dialog - img */
+.legacy-module-dialog .img-container,
+.legacy-dialog-body .cover-image{
+    width: 100%;
+    height: auto;
+}
+.legacy-module-dialog .img-container img,
+.legacy-dialog-body .cover-image img{
+    width: 100%;
+    max-width: 100%;
+}
+.legacy-dialog-body .cover-image{
+    margin: 0;
+    padding: 24px 24px 0;
+}
+
+/* legacy dialog - img list */
+.legacy-dialog-body .img-list li,
+.legacy-dialog-body .img-list li:nth-child(5n),
+.legacy-dialog-body .profile-list li,
+.legacy-dialog-body .profile-list li:nth-child(6n){
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+.legacy-dialog-body .img-list ul,
+.legacy-dialog-body .profile-list ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.legacy-dialog-body .img-list ul li,
+.legacy-dialog-body .profile-list ul li {
+    width: calc(33.3% - 2px) !important;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.legacy-dialog-body .profile-list ul li {
+    width: calc(25% - 2px) !important;
+}
+.legacy-dialog-body .img-list li img,
+.legacy-dialog-body .profile-list li img{
+    position: relative;
+    left: inherit;
+    top: inherit;
+    transform: translateY(0);
+}
+.legacy-dialog-body .img-list li::after{
+    display: none;
+}
+.legacy-dialog-body .profile-list{
+    margin: 24px 12px 0;
+    padding: 0;
+}
+
+/* legacy dialog - vote */
+.legacy-module-vote .vote-content{
+    padding: 0 24px;
+    overflow-y: auto;
+}
+.legacy-module-vote .create-vote-item .submit-vote-cell-link{
+    width: auto;
+}
+.legacy-module-vote .create-vote-item .submit-vote-cell-link .input-wrap{
+    width: 100%;
+    padding-right: 2px;
+}
+.legacy-module-vote .create-vote-item .legacy-element-icon.ic-close-round{
+    margin-right: 2px;
+}
+.legacy-module-vote .vote-option-input .input-base{
+    width: 150px;
+}
+
+.legacy-dialog-body .legacy-dialog-list .list-item .ic-close-round{
+    right: 0;
+}
+
+/* legacy dialog - file */
+.legacy-dialog-body .legacy-dialog-list .list-item .group .group-subject.group-load-state{
+    width: 240px;
+}
+
+.legacy-dialog-body .legacy-dialog-inspect-text.legacy-dialog-title-text{
+    font-size: 18px;
+}
+.legacy-dialog-confim-text,
+.legacy-dialog-body .toast-header-tit .legacy-dialog-confirm-text{
+    font-size: 16px;
+}
+
+/* legacy dialog - table  */
+.legacy-module-table.table-list tbody tr td .legacy-element-radio{
+    margin: 0;
+    display: block;
+    padding-left: 10px;
+    text-align: left;
+}
+
+/* legacy dialog - profile */
+.legacy-dialog-body .profile-upload .load-wrap{
+    width: 100%;
+    padding: 0 14px;
+}
+
+/* legacy dialog - slide range */
+.legacy-dialog-body .cover-sizing{
+    width: auto;
+    margin: 32px 14px 0;
+}
+.slide-range-container .range-custom{
+    padding-top: 4px;
+}
+.slide-range-container:before,
+.slide-range-container:after{
+    display: none;
+}
+
+/* legacy dialog - checkbox */
+.list-checkbox{
+    width: calc(50% - 4px);
+}
+.list-checkbox,
+.legacy-module-dialog-flex .article-feed .feed-contents .list-checkbox:nth-of-type(3n){
+    margin: 2px;
+}
+
+/* legacy dialog - list */
+.legacy-dialog-body .legacy-dialog-list-desc li{
+    position: relative;
+    padding-left: 8px;
+}
+.legacy-dialog-body .legacy-dialog-list-desc li:before{
+    content: "∙";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.legacy-dialog-body .legacy-dialog-list .list-item .group .group-col{
+    padding: 0 30px 0 10px;
+}
+.legacy-dialog-body .legacy-dialog-list .list-item .group .group-col.align-right{
+    padding: 0 10px;
+}
+
+/* legacy dialog - pagination */
+.legacy-pagination .legacy-pagination-num{
+    padding: 0 5px;
+}
+
+/* legacy dialog - table */
+.legacy-module-ranking.ranking-list tbody tr td img{
+    margin-right: 2px;
+}
+
+/* legacy dialog - text */
+.legacy-dialog-body .legacy-dialog-content.visible .legacy-dialog-text{
+    letter-spacing: -1.2px;
+}
+
+/* legacy dialog - btn */
+.legacy-module-dialog-flex .article-feed .legacy-element-page-btn{
+    z-index: 0;
+}
+
+.legacy-dialog-game-box .legacy-element-radio-item .legacy-element-radio{
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+.legacy-dialog-game-box .legacy-element-radio-item .legacy-element-radio .radio-input ~ label{
+    overflow: visible;
+    height: auto;
+    padding: 0 20px 0 30px;
+    font-size: 13px;
+}
+
+.legacy-module-dialog-flex .article-direction .tit{
+    position: relative;
+    padding-left: 20px;
+}
+.legacy-module-dialog-flex .article-direction .tit .list-item{
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+.legacy-module-dialog-flex .article-direction .desc{
+    padding: 8px 24px 0;
+}
+
+.legacy-module-dialog.legacy-dialog-basic .file-upload-caution .empty{
+    width: 90%;
+}
+
+
+/* legacy dialog - sm, mobile */
+.legacy-module-dialog.legacy-dialog-size-mobile,
+.legacy-module-dialog-flex.legacy-dialog-size-mobile{
+    width: 310px;
+}
+
+.legacy-dialog-size-mobile .legacy-module-profile .profile-name,
+.legacy-dialog-size-sm .legacy-module-profile .profile-name {
+    font-size: 11px;
+}
+.legacy-dialog-size-mobile .legacy-dialog-list .list-item .group .group-subject .profile-thumb,
+.legacy-dialog-size-sm .legacy-dialog-list .list-item .group .group-subject .profile-thumb {
+    margin-right: 2px;
+}
+
+.legacy-dialog-size-mobile .legacy-dialog-body .legacy-dialog-confim-text.legacy-dialog-title-text,
+.legacy-dialog-size-sm .legacy-dialog-body .legacy-dialog-confim-text.legacy-dialog-title-text{
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+
+/* legacy dialog - sm - survey */
+.legacy-dialog-size-mobile .editor-survey .survey-body ul li .progress-status,
+.legacy-dialog-size-sm .editor-survey .survey-body ul li .progress-status {
+    right: 10px;
+    font-size: 11px;
+    text-align: right;
+    line-height: 1.2;
+}
+.legacy-dialog-size-mobile .editor-survey .survey-body ul li .progress-status .status-percent,
+.legacy-dialog-size-sm .editor-survey .survey-body ul li .progress-status .status-percent {
+    display: block;
+}
+.legacy-dialog-size-mobile .editor-survey .survey-header p,
+.legacy-dialog-size-sm .editor-survey .survey-header p {
+    padding-left: 48px;
+}
+.legacy-dialog-size-mobile .editor-survey .survey-header .legacy-element-icon.ic-survey,
+.legacy-dialog-size-sm .editor-survey .survey-header .legacy-element-icon.ic-survey {
+    left: 8px;
+}
+.legacy-dialog-size-mobile .editor-survey .survey-header,
+.legacy-dialog-size-sm .editor-survey .survey-header {
+    padding: 15px 5px
+}
+.legacy-dialog-size-mobile .legacy-element-icon.ic-survey,
+.legacy-dialog-size-sm .legacy-element-icon.ic-survey {
+    width: 38px;
+    height: 38px;
+}
+
+/* legacy dialog - sm - size  */
+.legacy-dialog-size-mobile .legacy-dialog-body .legacy-dialog-content,
+.legacy-dialog-size-sm .legacy-dialog-body .legacy-dialog-content,
+.legacy-dialog-size-mobile.legacy-dialog-basic .legacy-dialog-footer .footer-contents .desc,
+.legacy-dialog-size-sm.legacy-dialog-basic .legacy-dialog-footer .footer-contents .desc,
+.legacy-dialog-size-mobile.legacy-dialog-basic .link-info p,
+.legacy-dialog-size-sm.legacy-dialog-basic .link-info p{
+    font-size: 12px;
+}
+
+.legacy-dialog-size-mobile .legacy-dialog-body .legacy-dialog-list .list-item .group .group-subject.group-load-state,
+.legacy-dialog-size-sm .legacy-dialog-body .legacy-dialog-list .list-item .group .group-subject.group-load-state {
+    width: 190px;
+    font-size: 11px;
+}
+.legacy-dialog-size-mobile .group-load-state .legacy-element-icon,
+.legacy-dialog-size-sm .group-load-state .legacy-element-icon {
+    margin-left: 28px !important;
+}
+
+/* legacy dialog - sm - btn */
+.legacy-dialog-size-mobile .legacy-element-btn.btn-select.size-32 .btn-txt,
+.legacy-dialog-size-sm .legacy-element-btn.btn-select.size-32 .btn-txt {
+    font-size: 12px;
+}
+
+/* legacy dialog - sm - table */
+.legacy-dialog-size-mobile .legacy-module-table.table-list thead tr th,
+.legacy-dialog-size-sm .legacy-module-table.table-list thead tr th {
+    font-size: 12px;
+    letter-spacing: -0.5px;
+}
+.legacy-dialog-size-mobile .legacy-module-ranking.ranking-list tbody tr td,
+.legacy-dialog-size-sm .legacy-module-ranking.ranking-list tbody tr td {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.legacy-dialog-size-mobile .legacy-module-ranking.ranking-list tbody tr td:first-of-type,
+.legacy-dialog-size-sm .legacy-module-ranking.ranking-list tbody tr td:first-of-type {
+    padding-left: 24px;
+}
+
+/* Desktop (max-width: 768px) */
+@media (max-width: 768px) {
+    .legacy-module-dialog.legacy-dialog-size-md,
+    .legacy-module-dialog-flex.legacy-dialog-size-md {
+        width: 310px;
+    }
+    .legacy-module-dialog.legacy-dialog-basic .legacy-dialog-body {
+        max-height: 380px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}

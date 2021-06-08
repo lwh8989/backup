@@ -12,7 +12,7 @@
             ┃    ┣━━━ Button-Primary
             ┃    ┣━━━ Button-Secondary
             ┃    ┣━━━ Button-Gray
-            ┃    ┣━━━ Button-Ghost
+            ┃    ┣━━━ Button-Outline
             ┃    ┣━━━ Button-Inverse
             ┃    ┣━━━ Input field
             ┃    ┣━━━ Font
@@ -46,7 +46,7 @@
             ┃    ┗━━━ Disabled
             ┣━━━ Icon-Inverse
             ┃    ┗━━━ Enabled
-            ┣━━━ Button-Primary, Button-Secondary, Button-Gray, Button-Ghost, Button-Inverse
+            ┣━━━ Button-Primary, Button-Secondary, Button-Gray, Button-Outline, Button-Inverse
             ┃    ┣━━━ Enabled
             ┃    ┣━━━ Hover
             ┃    ┣━━━ Pressed
@@ -129,1067 +129,977 @@
     -------------------------------------------------------
 */
 
-/* ColorVariable > UI */
+/* color palette */
+// primary
+$orange50: #fff9f0 !default;
+$orange100: #ffe0c9 !default;
+$orange200: #ffc298 !default;
+$orange300: #fe9d6c !default;
+$orange400: #fe763c !default;
+$orange500: #fc6020 !default;
+$orange600: #f05417 !default;
+$orange700: #e14b12 !default;
+$orange800: #d2450f !default;
+$orange900: #b63a0a !default;
+
+$brand50: #fff9f0 !default;
+$brand100: #ffe0c9 !default;
+$brand200: #ffc298 !default;
+$brand300: #fe9d6c !default;
+$brand400: #fe763c !default;
+$brand500: #fc6020 !default;
+$brand600: #f05417 !default;
+$brand700: #e14b12 !default;
+$brand800: #d2450f !default;
+$brand900: #b63a0a !default;
+
+$navy50: #e8f0ff !default;
+$navy100: #ccd8ee !default;
+$navy200: #abb9d2 !default;
+$navy300: #8c9dba !default;
+$navy400: #7588a8 !default;
+$navy500: #5f7496 !default;
+$navy600: #506585 !default;
+$navy700: #40526e !default;
+$navy800: #314058 !default;
+$navy900: #1e2c40 !default;
+$white05: rgba(#ffffff, $alpha: 0.05) !default;
+$white08: rgba(#ffffff, $alpha: 0.08) !default;
+$white10: rgba(#ffffff, $alpha: 0.1) !default;
+$white15: rgba(#ffffff, $alpha: 0.15) !default;
+$white20: rgba(#ffffff, $alpha: 0.2) !default;
+$white25: rgba(#ffffff, $alpha: 0.25) !default;
+$white30: rgba(#ffffff, $alpha: 0.3) !default;
+$white40: rgba(#ffffff, $alpha: 0.4) !default;
+$white50: rgba(#ffffff, $alpha: 0.5) !default;
+$white60: rgba(#ffffff, $alpha: 0.6) !default;
+$white70: rgba(#ffffff, $alpha: 0.7) !default;
+$white75: rgba(#ffffff, $alpha: 0.75) !default;
+$white80: rgba(#ffffff, $alpha: 0.8) !default;
+$white90: rgba(#ffffff, $alpha: 0.9) !default;
+$white: #ffffff !default;
+$gray25: #fafafa !default;
+$gray50: #f3f3f3 !default;
+$gray75: #eaeaea !default;
+$gray100: #e0e0e0 !default;
+$gray150: #d5d5d5 !default;
+$gray200: #cacaca !default;
+$gray300: #b3b3b3 !default;
+$gray400: #999999 !default;
+$gray500: #6e6e6e !default;
+$gray600: #4c4c4c !default;
+$gray700: #3a3a3a !default;
+$gray800: #292929 !default;
+$gray900: #1a1a1a !default;
+$bluegray50: #e4e6ec !default;
+$bluegray100: #c1c4cd !default;
+$bluegray200: #a0a4b1 !default;
+$bluegray300: #8b8f9c !default;
+$bluegray400: #777b89 !default;
+$bluegray500: #656976 !default;
+$bluegray600: #545763 !default;
+$bluegray650: #40434c !default;
+$bluegray700: #33363d !default;
+$bluegray750: #26282f !default;
+$bluegray800: #1f2128 !default;
+$bluegray850: #18191f !default;
+$bluegray900: #14151a !default;
+$black05: rgba(#000000, $alpha: 0.05) !default;
+$black08: rgba(#000000, $alpha: 0.08) !default;
+$black10: rgba(#000000, $alpha: 0.1) !default;
+$black15: rgba(#000000, $alpha: 0.15) !default;
+$black20: rgba(#000000, $alpha: 0.2) !default;
+$black25: rgba(#000000, $alpha: 0.25) !default;
+$black30: rgba(#000000, $alpha: 0.3) !default;
+$black40: rgba(#000000, $alpha: 0.4) !default;
+$black50: rgba(#000000, $alpha: 0.5) !default;
+$black60: rgba(#000000, $alpha: 0.6) !default;
+$black70: rgba(#000000, $alpha: 0.7) !default;
+$black75: rgba(#000000, $alpha: 0.75) !default;
+$black80: rgba(#000000, $alpha: 0.8) !default;
+$black90: rgba(#000000, $alpha: 0.9) !default;
+$black: #000000 !default;
+$system_error: #d53430 !default;
+$system_warning: #ef9500 !default;
+$system_success: #37a458 !default;
+$system_info: #1e88e5 !default;
+$system_link: #457bef !default;
+$system_link_visited: #9b54f6 !default;
+$tint_red50: #f9f1f2 !default;
+$tint_red100: #f1d2d1 !default;
+$tint_red200: #e8b4b6 !default;
+$tint_red300: #e19598 !default;
+$tint_red400: #da787f !default;
+$tint_red500: #cb5967 !default;
+$tint_red600: #ae4855 !default;
+$tint_red700: #8e3846 !default;
+$tint_red800: #6f2a39 !default;
+$tint_red900: #52212d !default;
+$tint_reda50: #fdf0f1 !default;
+$tint_reda100: #f6bab8 !default;
+$tint_reda200: #f2878a !default;
+$tint_reda400: #ec3b47 !default;
+$tint_reda700: #ac0822 !default;
+$tint_orange50: #f6f0e7 !default;
+$tint_orange100: #f1dbc3 !default;
+$tint_orange200: #ecc7a5 !default;
+$tint_orange300: #e6b285 !default;
+$tint_orange400: #e09964 !default;
+$tint_orange500: #d77e45 !default;
+$tint_orange600: #b96436 !default;
+$tint_orange700: #984b2b !default;
+$tint_orange800: #793b24 !default;
+$tint_orange900: #5b2d1c !default;
+$tint_orangea50: #faf2e6 !default;
+$tint_orangea100: #f6d1aa !default;
+$tint_orangea200: #f9b677 !default;
+$tint_orangea400: #f27d23 !default;
+$tint_orangea700: #b73700 !default;
+$tint_yellow50: #f8f5e8 !default;
+$tint_yellow100: #f1e9c3 !default;
+$tint_yellow200: #ecdea3 !default;
+$tint_yellow300: #e6d084 !default;
+$tint_yellow400: #e2bd65 !default;
+$tint_yellow500: #d9ab48 !default;
+$tint_yellow600: #b88c39 !default;
+$tint_yellow700: #986f2d !default;
+$tint_yellow800: #7b5726 !default;
+$tint_yellow900: #5b3e1e !default;
+$tint_yellowa50: #fcf8e7 !default;
+$tint_yellowa100: #f6e79d !default;
+$tint_yellowa200: #f6dd79 !default;
+$tint_yellowa400: #ffb412 !default;
+$tint_yellowa700: #b77408 !default;
+$tint_lime50: #f3f6e7 !default;
+$tint_lime100: #e6f1c5 !default;
+$tint_lime200: #daeba6 !default;
+$tint_lime300: #c1da80 !default;
+$tint_lime400: #aaca60 !default;
+$tint_lime500: #93bc46 !default;
+$tint_lime600: #739e36 !default;
+$tint_lime700: #597c2b !default;
+$tint_lime800: #425f22 !default;
+$tint_lime900: #2f411a !default;
+$tint_limea50: #f6fae6 !default;
+$tint_limea100: #ddf1a1 !default;
+$tint_limea200: #d1eb83 !default;
+$tint_limea400: #9bca2e !default;
+$tint_limea700: #4f8409 !default;
+$tint_green50: #eef6f1 !default;
+$tint_green100: #d6e9dc !default;
+$tint_green200: #b3d7c2 !default;
+$tint_green300: #8bc3a2 !default;
+$tint_green400: #65ab7e !default;
+$tint_green500: #4b9663 !default;
+$tint_green600: #3d7d4d !default;
+$tint_green700: #306339 !default;
+$tint_green800: #244c2b !default;
+$tint_green900: #17361f !default;
+$tint_greena50: #edfaf2 !default;
+$tint_greena100: #beeecd !default;
+$tint_greena200: #9ddcb7 !default;
+$tint_greena400: #2b9450 !default;
+$tint_greena700: #0f7021 !default;
+$tint_teal50: #ecf5f6 !default;
+$tint_teal100: #cae7e6 !default;
+$tint_teal200: #a3d2d6 !default;
+$tint_teal300: #7dbec3 !default;
+$tint_teal400: #5caab0 !default;
+$tint_teal500: #44949e !default;
+$tint_teal600: #36777f !default;
+$tint_teal700: #295d63 !default;
+$tint_teal800: #1d4448 !default;
+$tint_teal900: #152c2f !default;
+$tint_teala50: #ebf9fa !default;
+$tint_teala100: #b2ecea !default;
+$tint_teala200: #64d8e3 !default;
+$tint_teala400: #2bb8c2 !default;
+$tint_teala700: #087582 !default;
+$tint_blue50: #eaf3f7 !default;
+$tint_blue100: #cae3f2 !default;
+$tint_blue200: #abd0eb !default;
+$tint_blue300: #8dbce5 !default;
+$tint_blue400: #70a7de !default;
+$tint_blue500: #5793d8 !default;
+$tint_blue600: #4474b8 !default;
+$tint_blue700: #355b9a !default;
+$tint_blue800: #2c477a !default;
+$tint_blue900: #22355c !default;
+$tint_bluea50: #e9f6fb !default;
+$tint_bluea100: #b1dcf7 !default;
+$tint_bluea200: #7ec5f8 !default;
+$tint_bluea400: #3191f0 !default;
+$tint_bluea700: #0047b9 !default;
+$tint_indigo50: #f1f4fa !default;
+$tint_indigo100: #dde5f5 !default;
+$tint_indigo200: #bfcbee !default;
+$tint_indigo300: #a0afe7 !default;
+$tint_indigo400: #7d8fd9 !default;
+$tint_indigo500: #5c6cc9 !default;
+$tint_indigo600: #4853a8 !default;
+$tint_indigo700: #373e8a !default;
+$tint_indigo800: #282c6b !default;
+$tint_indigo900: #20204d !default;
+$tint_indigoa50: #f0f4fe !default;
+$tint_indigoa100: #c4d6fa !default;
+$tint_indigoa200: #92acfb !default;
+$tint_indigoa400: #4163eb !default;
+$tint_indigoa700: #0816a9 !default;
+$tint_dazzlingblue50: #f5f5fa !default;
+$tint_dazzlingblue100: #e4e1f7 !default;
+$tint_dazzlingblue200: #cdc8ee !default;
+$tint_dazzlingblue300: #b0adea !default;
+$tint_dazzlingblue400: #9090de !default;
+$tint_dazzlingblue500: #7175d0 !default;
+$tint_dazzlingblue600: #575fb1 !default;
+$tint_dazzlingblue700: #424b90 !default;
+$tint_dazzlingblue800: #313b71 !default;
+$tint_dazzlingblue900: #242d52 !default;
+$tint_dazzlingbluea50: #f4f4fe !default;
+$tint_dazzlingbluea100: #cfc7fc !default;
+$tint_dazzlingbluea200: #a89bfb !default;
+$tint_dazzlingbluea400: #5252eb !default;
+$tint_dazzlingbluea700: #1325af !default;
+$tint_purple50: #f6f4f9 !default;
+$tint_purple100: #ebdff5 !default;
+$tint_purple200: #dac4eb !default;
+$tint_purple300: #c7a6e6 !default;
+$tint_purple400: #ad88da !default;
+$tint_purple500: #946bcd !default;
+$tint_purple600: #7656af !default;
+$tint_purple700: #5d4390 !default;
+$tint_purple800: #473472 !default;
+$tint_purple900: #332853 !default;
+$tint_purplea50: #f7f3fd !default;
+$tint_purplea100: #dbbaf5 !default;
+$tint_purplea200: #ce9cf5 !default;
+$tint_purplea400: #944cec !default;
+$tint_purplea700: #4814af !default;
+$tint_magenta50: #f9f1f5 !default;
+$tint_magenta100: #f5dce9 !default;
+$tint_magenta200: #ebbed5 !default;
+$tint_magenta300: #e29dc6 !default;
+$tint_magenta400: #d27ab2 !default;
+$tint_magenta500: #c45da0 !default;
+$tint_magenta600: #a24987 !default;
+$tint_magenta700: #83386e !default;
+$tint_magenta800: #662a58 !default;
+$tint_magenta900: #492141 !default;
+$tint_magentaa50: #fdf0f6 !default;
+$tint_magentaa100: #f5b7d7 !default;
+$tint_magentaa200: #f595c7 !default;
+$tint_magentaa400: #e440a8 !default;
+$tint_magentaa700: #a20c77 !default;
+$tint_pink50: #f9f0f3 !default;
+$tint_pink100: #f6dce2 !default;
+$tint_pink200: #edbfc9 !default;
+$tint_pink300: #e79db4 !default;
+$tint_pink400: #d97a9b !default;
+$tint_pink500: #cd5d84 !default;
+$tint_pink600: #ab496f !default;
+$tint_pink700: #8c385a !default;
+$tint_pink800: #6e2948 !default;
+$tint_pink900: #4e2036 !default;
+$tint_pinka50: #fdf0f6 !default;
+$tint_pinka100: #fbc2d0 !default;
+$tint_pinka200: #fa92a9 !default;
+$tint_pinka400: #eb3e7a !default;
+$tint_pinka700: #ab0949 !default;
+
+/* ColorVariable > Sementic color */
 // Background
-$ui-bg-base-white: #ffffff;
-$ui-bg-base-gray: #f5f5f5;
-$ui-bg-navigation: #ffffff;
-$ui-bg-surface-white: #ffffff;
-$ui-bg-surface-gray: #f5f5f5;
-$ui-bg-highlight: #fff9f0;
-// Background(dark)
-$dark-ui-bg-base-white: #14151a;
-$dark-ui-bg-base-gray: #1f2128;
-$dark-ui-bg-navigation: #1f2128;
-$dark-ui-bg-surface-white: #2a2c33;
-$dark-ui-bg-surface-gray: #1f2128;
-$dark-ui-bg-highlight: rgba(#ffffff, $alpha: 0.1);
+$ui_bg_base_white: $white;
+$ui_bg_base_gray50: $gray50;
+$ui_bg_navigation_white: $white;
+$ui_bg_navigation_gray: $gray900;
+$ui_bg_surface_white: $white;
+$ui_bg_surface_white_inverse: $white;
+$ui_bg_surface_gray25: $gray25;
+$ui_bg_surface_navy: $navy800;
+$ui_bg_surface_elevated: $white;
+$ui_bg_highlight_gray25: $gray25;
+$ui_bg_highlight: $orange50;
 
 // Border
-$ui-border-thumbnail: rgba(#000000, $alpha: 0.15);
-// Border(dark)
-$dark-ui-border-thumbnail: rgba(#000000, $alpha: 0.15);
+$ui_border_thumbnail: $black05;
+$ui_border_contents: $black15;
 
-// Icon-Primary
-$ui-icon-primary-enabled: #1a1a1a;
-$ui-icon-primary-hover: #4c4c4c;
-$ui-icon-primary-pressed: #000000;
-$ui-icon-primary-focused: #1a1a1a;
-$ui-icon-primary-selected: #fc6020;
-$ui-icon-primary-disabled: #cacaca;
-// Icon-Primary(dark)
-$dark-ui-icon-primary-enabled: #e4e6ec;
-$dark-ui-icon-primary-hover: #ffffff;
-$dark-ui-icon-primary-pressed: #a0a4b1;
-$dark-ui-icon-primary-focused: #e4e6ec;
-$dark-ui-icon-primary-selected: #f86126;
-$dark-ui-icon-primary-disabled: #3c3f48;
+// Icon_Brand
+$ui_icon_brand_enabled: $orange500;
+$ui_icon_brand_hover: $orange400;
+$ui_icon_brand_pressed: $orange700;
+$ui_icon_brand_focused: $orange500;
+$ui_icon_brand_selected: $orange700;
+$ui_icon_brand_disabled: $gray300;
 
-// Icon-Secondary
-$ui-icon-secondary-enabled: #3a3a3a;
-$ui-icon-secondary-hover: #6e6e6e;
-$ui-icon-secondary-pressed: #1a1a1a;
-$ui-icon-secondary-focused: #3a3a3a;
-$ui-icon-secondary-selected: #fc6020;
-$ui-icon-secondary-disabled: #cacaca;
-// Icon-Secondary(dark)
-$dark-ui-icon-secondary-enabled: #a0a4b1;
-$dark-ui-icon-secondary-hover: #e4e6ec;
-$dark-ui-icon-secondary-pressed: #777b89;
-$dark-ui-icon-secondary-focused: #a0a4b1;
-$dark-ui-icon-secondary-selected: #f86126;
-$dark-ui-icon-secondary-disabled: #3c3f48;
+// Icon_Primary
+$ui_icon_01_enabled: $gray900;
+$ui_icon_01_hover: $gray600;
+$ui_icon_01_pressed: $black;
+$ui_icon_01_focused: $brand500;
+$ui_icon_01_selected: $black;
+$ui_icon_01_disabled: $gray300;
 
-// Icon-Tertiary
-$ui-icon-tertiary-enabled: #6e6e6e;
-$ui-icon-tertiary-hover: #b3b3b3;
-$ui-icon-tertiary-pressed: #3a3a3a;
-$ui-icon-tertiary-focused: #6e6e6e;
-$ui-icon-tertiary-selected: #fc6020;
-$ui-icon-tertiary-disabled: #cacaca;
-// Icon-Tertiary(dark)
-$dark-ui-icon-tertiary-enabled: #777b89;
-$dark-ui-icon-tertiary-hover: #a0a4b1;
-$dark-ui-icon-tertiary-pressed: #545763;
-$dark-ui-icon-tertiary-focused: #777b89;
-$dark-ui-icon-tertiary-selected: #f86126;
-$dark-ui-icon-tertiary-disabled: #3c3f48;
+// Icon_Secondary
+$ui_icon_02_enabled: $gray700;
+$ui_icon_02_hover: $gray500;
+$ui_icon_02_pressed: $gray900;
+$ui_icon_02_focused: $brand500;
+$ui_icon_02_selected: $gray800;
+$ui_icon_02_disabled: $gray300;
 
-// Icon-Quaternary
-$ui-icon-quaternary-enabled: #999999;
-$ui-icon-quaternary-hover: #cacaca;
-$ui-icon-quaternary-pressed: #4c4c4c;
-$ui-icon-quaternary-focused: #999999;
-$ui-icon-quaternary-selected: #fc6020;
-$ui-icon-quaternary-disabled: #e0e0e0;
-// Icon-Quaternary(dark)
-$dark-ui-icon-quaternary-enabled: #545763;
-$dark-ui-icon-quaternary-hover: #777b89;
-$dark-ui-icon-quaternary-pressed: #464953;
-$dark-ui-icon-quaternary-focused: #545763;
-$dark-ui-icon-quaternary-selected: #f86126;
-$dark-ui-icon-quaternary-disabled: #3c3f48;
+// Icon_Tertiary
+$ui_icon_03_enabled: $gray500;
+$ui_icon_03_hover: $gray300;
+$ui_icon_03_pressed: $gray700;
+$ui_icon_03_focused: $brand500;
+$ui_icon_03_selected: $gray600;
+$ui_icon_03_disabled: $gray300;
 
-// Icon-Inverse
-$ui-icon-inverse-enabled: #ffffff;
-// Icon-Inverse(dark)
-$dark-ui-icon-inverse-enabled: #ffffff;
+// Icon_Quaternary
+$ui_icon_04_enabled: $gray400;
+$ui_icon_04_hover: $gray200;
+$ui_icon_04_pressed: $gray600;
+$ui_icon_04_focused: $brand500;
+$ui_icon_04_selected: $gray500;
+$ui_icon_04_disabled: $gray200;
 
-// Button-Primary
-$ui-button-primary-enabled: #fc6020;
-$ui-button-primary-hover: #fe763c;
-$ui-button-primary-pressed: #e14b12;
-$ui-button-primary-bg-focused: #fc6020;
-$ui-button-primary-border1-focused: #ffffff;
-$ui-button-primary-border2-focused: #fc6020;
-$ui-button-primary-disabled: #eaeaea;
-// Button-Primary(dark)
-$dark-ui-button-primary-enabled: #f86126;
-$dark-ui-button-primary-hover: #f76d37;
-$dark-ui-button-primary-pressed: #de511b;
-$dark-ui-button-primary-bg-focused: #f86126;
-$dark-ui-button-primary-border1-focused: #ffffff;
-$dark-ui-button-primary-border2-focused: #f86126;
-$dark-ui-button-primary-disabled: #3c3f48;
+// Icon_Quinary
+$ui_icon_05_enabled: $gray200;
+$ui_icon_05_hover: $gray100;
+$ui_icon_05_pressed: $gray400;
+$ui_icon_05_focused: $brand500;
+$ui_icon_05_selected: $gray300;
+$ui_icon_05_disabled: $gray100;
 
-// Button-Secondary
-$ui-button-secondary-enabled: #314058;
-$ui-button-secondary-hover: #40526e;
-$ui-button-secondary-pressed: #1e2c40;
-$ui-button-secondary-bg-focused: #314058;
-$ui-button-secondary-border1-focused: #ffffff;
-$ui-button-secondary-border2-focused: #314058;
-$ui-button-secondary-disabled: #eaeaea;
-// Button-Secondary(dark)
-$dark-ui-button-secondary-enabled: #506585;
-$dark-ui-button-secondary-hover: #40526e;
-$dark-ui-button-secondary-pressed: #314058;
-$dark-ui-button-secondary-bg-focused: #506585;
-$dark-ui-button-secondary-border1-focused: #ffffff;
-$dark-ui-button-secondary-border2-focused: #506585;
-$dark-ui-button-secondary-disabled: #3c3f48;
+// Icon_Black
+$ui_icon_gray_enabled: $gray700;
+$ui_icon_gray_hover: $gray500;
+$ui_icon_gray_pressed: $gray900;
+$ui_icon_gray_focused: $brand500;
+$ui_icon_gray_selected: $gray800;
+$ui_icon_gray_disabled: $gray300;
 
-// Button-Gray
-$ui-button-gray-enabled: #eaeaea;
-$ui-button-gray-hover: #fafafa;
-$ui-button-gray-pressed: #d5d5d5;
-$ui-button-gray-bg-focused: #eaeaea;
-$ui-button-gray-border1-focused: #ffffff;
-$ui-button-gray-border2-focused: #6e6e6e;
-$ui-button-gray-disabled: #eaeaea;
-// Button-Gray(dark)
-$dark-ui-button-gray-enabled: #33363d;
-$dark-ui-button-gray-hover: #3c3f48;
-$dark-ui-button-gray-pressed: #2a2c33;
-$dark-ui-button-gray-bg-focused: #33363d;
-$dark-ui-button-gray-border1-focused: #1f2128;
-$dark-ui-button-gray-border2-focused: #c7cad1;
-$dark-ui-button-gray-disabled: #3c3f48;
+// Icon_White
+$ui_icon_white_enabled: $white;
+$ui_icon_white_hover: $white80;
+$ui_icon_white_pressed: $white60;
+$ui_icon_white_focused: $orange500;
+$ui_icon_white_selected: $white90;
+$ui_icon_white_disabled: $gray300;
+$ui_icon_white_disabled_white: $white40;
 
-// Button-Ghost
-$ui-button-ghost-bg-enabled: transparent;
-$ui-button-ghost-border-enabled: #cacaca;
-$ui-button-ghost-bg-hover: rgba(#000000, $alpha: 0.05);
-$ui-button-ghost-border-hover: #cacaca;
-$ui-button-ghost-bg-pressed: rgba(#000000, $alpha: 0.1);
-$ui-button-ghost-border-pressed: #cacaca;
-$ui-button-ghost-bg-focused: rgba(#000000, $alpha: 0.08);
-$ui-button-ghost-border-focused: #6e6e6e;
-$ui-button-ghost-bg-disabled: transparent;
-$ui-button-ghost-border-disabled: #e0e0e0;
-// Button-Ghost(dark)
-$dark-ui-button-ghost-bg-enabled: transparent;
-$dark-ui-button-ghost-border-enabled: #545763;
-$dark-ui-button-ghost-bg-hover: rgba(#ffffff, $alpha: 0.05);
-$dark-ui-button-ghost-border-hover: #545763;
-$dark-ui-button-ghost-bg-pressed: rgba(#ffffff, $alpha: 0.1);
-$dark-ui-button-ghost-border-pressed: #545763;
-$dark-ui-button-ghost-bg-focused: rgba(#ffffff, $alpha: 0.08);
-$dark-ui-button-ghost-border-focused: #c7cad1;
-$dark-ui-button-ghost-bg-disabled: transparent;
-$dark-ui-button-ghost-border-disabled: #3c3f48;
+// Icon_System
+$ui_icon_error: $system_error;
+$ui_icon_warning: $system_warning;
+$ui_icon_success: $system_success;
+$ui_icon_information: $system_info;
 
-// Button-Inverse
-$ui-button-inverse-enabled: #ffffff;
-$ui-button-inverse-hover: #fafafa;
-$ui-button-inverse-pressed: #e0e0e0;
-$ui-button-inverse-bg-focused: #ffffff;
-$ui-button-inverse-border-focused: rgba(#ffffff, $alpha: 0.25);
-$ui-button-inverse-disabled: #eaeaea;
-// Button-Inverse(dark)
-$dark-ui-button-inverse-enabled: #ffffff;
-$dark-ui-button-inverse-hover: #fafafa;
-$dark-ui-button-inverse-pressed: #e0e0e0;
-$dark-ui-button-inverse-bg-focused: #ffffff;
-$dark-ui-button-inverse-border-focused: rgba(#ffffff, $alpha: 0.25);
-$dark-ui-button-inverse-disabled: #eaeaea;
+// Button_Primary
+$ui_button_01_enabled: $orange500;
+$ui_button_01_hover: $orange400;
+$ui_button_01_pressed: $orange700;
+$ui_button_01_focused: $orange500;
+$ui_button_01_focused_border1: $white;
+$ui_button_01_focused_border2: $orange500;
+$ui_button_01_disabled: $gray75;
 
-// Input-Field
-$ui-input-bg-enabled: #ffffff;
-$ui-input-border-enabled: #cacaca;
-$ui-input-bg-focused: #ffffff;
-$ui-input-border-focused: #6e6e6e;
-$ui-input-bg-activated: #ffffff;
-$ui-input-border-activated: #6e6e6e;
-$ui-input-bg-error: #ffffff;
-$ui-input-border-error: #e53935;
-$ui-input-bg-warning: #ffffff;
-$ui-input-border-warning: #ef9500;
-$ui-input-bg-success: #ffffff;
-$ui-input-border-success: #43a047;
-$ui-input-bg-informational: #ffffff;
-$ui-input-border-informational: #1e88e5;
-$ui-input-bg-disabled: #f5f5f5;
-$ui-input-border-disabled: #cacaca;
-// Input-Field(dark)
-$dark-ui-input-bg-enabled: transparent;
-$dark-ui-input-border-enabled: #545763;
-$dark-ui-input-bg-focused: transparent;
-$dark-ui-input-border-focused: #c7cad1;
-$dark-ui-input-bg-activated: transparent;
-$dark-ui-input-border-activated: #c7cad1;
-$dark-ui-input-bg-error: transparent;
-$dark-ui-input-border-error: #e53935;
-$dark-ui-input-bg-warning: transparent;
-$dark-ui-input-border-warning: #ef9500;
-$dark-ui-input-bg-success: transparent;
-$dark-ui-input-border-success: #43a047;
-$dark-ui-input-bg-informational: transparent;
-$dark-ui-input-border-informational: #1e88e5;
-$dark-ui-input-bg-disabled: transparent;
-$dark-ui-input-border-disabled: #3c3f48;
+// Button_Secondary
+$ui_button_02_enabled: $gray600;
+$ui_button_02_hover: $gray500;
+$ui_button_02_pressed: $gray700;
+$ui_button_02_focused: $gray600;
+$ui_button_02_focused_border1: $white;
+$ui_button_02_focused_border2: $gray600;
+$ui_button_02_disabled: $gray75;
+
+// Button_Tertiary
+$ui_button_03_enabled: $gray75;
+$ui_button_03_hover: $gray100;
+$ui_button_03_pressed: $gray200;
+$ui_button_03_focused: $gray75;
+$ui_button_03_focused_border1: $white;
+$ui_button_03_focused_border2: $gray500;
+$ui_button_03_disabled: $gray75;
+
+// Button_Quaternary
+$ui_button_04_enabled: $gray50;
+$ui_button_04_hover: $gray75;
+$ui_button_04_pressed: $gray150;
+$ui_button_04_focused: $gray50;
+$ui_button_04_focused_border1: $white;
+$ui_button_04_focused_border2: $gray500;
+$ui_button_04_disabled: $gray50;
+
+// Button_Outline
+$ui_button_05_enabled: $white;
+$ui_button_05_enabled_border: $gray150;
+$ui_button_05_hover: $gray50;
+$ui_button_05_hover_border: $gray400;
+$ui_button_05_pressed: $gray100;
+$ui_button_05_pressed_border: $gray200;
+$ui_button_05_focused: $white;
+$ui_button_05_focused_border: $gray500;
+$ui_button_05_disabled: $gray75;
+$ui_button_05_disabled_border: $gray150;
+
+// Button_White(fill)
+$ui_button_white_f_enabled: $white;
+$ui_button_white_f_hover: $gray50;
+$ui_button_white_f_pressed: $gray100;
+$ui_button_white_f_focused: $white;
+$ui_button_white_f_focused_border1: $white;
+$ui_button_white_f_focused_border2: $black25;
+$ui_button_white_f_disabled: $gray75;
+
+// Button_White(ghost)
+$ui_button_white_g_enabled: transparent;
+$ui_button_white_g_enabled_border: $white;
+$ui_button_white_g_hover: $white20;
+$ui_button_white_g_hover_border: $white;
+$ui_button_white_g_pressed: $white10;
+$ui_button_white_g_pressed_border: $white;
+$ui_button_white_g_focused: $white20;
+$ui_button_white_g_focused_border: $white;
+$ui_button_white_g_disabled: transparent;
+$ui_button_white_g_disabled_border: $white20;
+
+// Form_Line
+$ui_form_line_enabled: $white;
+$ui_form_line_enabled_border: $gray150;
+$ui_form_line_hover: $white;
+$ui_form_line_hover_border: $gray500;
+$ui_form_line_focused: $white;
+$ui_form_line_focused_border: $gray500;
+$ui_form_line_error: $white;
+$ui_form_line_error_border: $system_error;
+$ui_form_line_warning: $white;
+$ui_form_line_warning_border: $system_warning;
+$ui_form_line_success: $white;
+$ui_form_line_success_border: $system_success;
+$ui_form_line_informational: $white;
+$ui_form_line_informational_border: $system_info;
+$ui_form_line_disabled: $gray50;
+$ui_form_line_disabled_border: $gray200;
+
+// Form_Fill
+$ui_form_fill_enabled: $gray50;
+$ui_form_fill_hover: $gray75;
+$ui_form_fill_focused: $gray50;
+$ui_form_fill_focused_border: $gray500;
+$ui_form_fill_error: $gray50;
+$ui_form_fill_error_border: $system_error;
+$ui_form_fill_warning: $gray50;
+$ui_form_fill_warning_border: $system_warning;
+$ui_form_fill_success: $gray50;
+$ui_form_fill_success_border: $system_success;
+$ui_form_fill_informational: $gray50;
+$ui_form_fill_informational_border: $system_info;
+$ui_form_fill_disabled: $gray50;
+
+// Form_White
+$ui_form_white_enabled: $white20;
+$ui_form_white_hover: $white30;
+$ui_form_white_focused: $white20;
+$ui_form_white_focused_border: $white;
+$ui_form_white_error: $white20;
+$ui_form_white_error_border: $system_error;
+$ui_form_white_warning: $white20;
+$ui_form_white_warning_border: $system_warning;
+$ui_form_white_success: $white20;
+$ui_form_white_success_border: $system_success;
+$ui_form_white_informational: $white20;
+$ui_form_white_informational_border: $system_info;
+$ui_form_white_disabled: $white20;
 
 // Font
-$ui-text-01: #1a1a1a;
-$ui-text-02: #3a3a3a;
-$ui-text-03: #6e6e6e;
-$ui-text-04: #999999;
-$ui-text-brand: #fc6020;
-$ui-text-inverse-01: #ffffff;
-$ui-text-inverse-02: rgba(#ffffff, $alpha: 0.6);
-$ui-text-error: #e53935;
-$ui-text-warning: #ef9500;
-$ui-text-success: #43a047;
-$ui-text-informational: #1e88e5;
-$ui-text-link: #457bef;
-$ui-text-link-visited: #9b54f6;
-$ui-text-placeholder: #cacaca;
-$ui-text-disabled: #cacaca;
-// Font(dark)
-$dark-ui-text-01: #f1f2f4;
-$dark-ui-text-02: #e3e5e8;
-$dark-ui-text-03: #a9afba;
-$dark-ui-text-04: #8b8f9c;
-$dark-ui-text-brand: #f86126;
-$dark-ui-text-inverse-01: #ffffff;
-$dark-ui-text-inverse-02: rgba(#ffffff, $alpha: 0.6);
-$dark-ui-text-error: #e53935;
-$dark-ui-text-warning: #ef9500;
-$dark-ui-text-success: #43a047;
-$dark-ui-text-informational: #1e88e5;
-$dark-ui-text-link: #457bef;
-$dark-ui-text-link-visited: #9b54f6;
-$dark-ui-text-placeholder: #545763;
-$dark-ui-text-disabled: #3c3f48;
+$ui_text_01: $gray900;
+$ui_text_02: $gray700;
+$ui_text_03: $gray500;
+$ui_text_04: $gray400;
+$ui_text_brand: $orange500;
+$ui_text_gray: $gray900;
+$ui_text_white_01: $white;
+$ui_text_white_02: $white60;
+$ui_text_error: $system_error;
+$ui_text_warning: $system_warning;
+$ui_text_success: $system_success;
+$ui_text_informational: $system_info;
+$ui_text_link: $system_link;
+$ui_text_link_visited: $system_link_visited;
+$ui_text_placeholder: $gray200;
+$ui_text_disabled: $gray300;
+$ui_text_disabled_surface: $gray300;
 
-// Divider
-$ui-divider-01: rgba(#000000, $alpha: 0.2);
-$ui-divider-02: rgba(#000000, $alpha: 0.1);
-$ui-divider-03: rgba(#000000, $alpha: 0.05);
-// Divider(dark)
-$dark-ui-divider-01: rgba(#ffffff, $alpha: 0.2);
-$dark-ui-divider-02: rgba(#ffffff, $alpha: 0.1);
-$dark-ui-divider-03: rgba(#ffffff, $alpha: 0.05);
+// Divider_black
+$ui_divider_black_01: $black15;
+$ui_divider_black_02: $black10;
+$ui_divider_black_03: $black05;
+
+// Divider_White
+$ui_divider_white_01: $white15;
+$ui_divider_white_02: $white10;
+$ui_divider_white_03: $white05;
 
 // Shadow
-$ui-shadow-01: rgba(#000000, $alpha: 0.5);
-$ui-shadow-02: rgba(#000000, $alpha: 0.1);
-$ui-shadow-03: rgba(#000000, $alpha: 0.15);
-$ui-shadow-04: rgba(#000000, $alpha: 0.2);
+$ui_shadow_01: $black05;
+$ui_shadow_02: $black10;
+$ui_shadow_03: $black15;
+$ui_shadow_04: $black20;
 
-// Overlays - Black
-$ui-overlay-b-d01: rgba(#000000, $alpha: 0.75);
-$ui-overlay-b-d02: rgba(#000000, $alpha: 0.5);
-$ui-overlay-b-d03: rgba(#000000, $alpha: 0.15);
-$ui-overlay-b-b10-01: rgba(#000000, $alpha: 0.75);
-$ui-overlay-b-b10-02: rgba(#000000, $alpha: 0.5);
-$ui-overlay-b-b10-03: rgba(#000000, $alpha: 0.15);
-$ui-overlay-b-b20-01: rgba(#000000, $alpha: 0.75);
-$ui-overlay-b-b20-02: rgba(#000000, $alpha: 0.5);
-$ui-overlay-b-b20-03: rgba(#000000, $alpha: 0.15);
-$ui-overlay-b-b40-01: rgba(#000000, $alpha: 0.75);
-$ui-overlay-b-b40-02: rgba(#000000, $alpha: 0.5);
-$ui-overlay-b-b40-03: rgba(#000000, $alpha: 0.15);
-// Overlays - White
-$ui-overlay-w-d01: rgba(#ffffff, $alpha: 0.75);
-$ui-overlay-w-d02: rgba(#ffffff, $alpha: 0.5);
-$ui-overlay-w-d03: rgba(#ffffff, $alpha: 0.15);
-$ui-overlay-w-b10-01: rgba(#ffffff, $alpha: 0.75);
-$ui-overlay-w-b10-02: rgba(#ffffff, $alpha: 0.5);
-$ui-overlay-w-b10-03: rgba(#ffffff, $alpha: 0.15);
-$ui-overlay-w-b20-01: rgba(#ffffff, $alpha: 0.75);
-$ui-overlay-w-b20-02: rgba(#ffffff, $alpha: 0.5);
-$ui-overlay-w-b20-03: rgba(#ffffff, $alpha: 0.15);
-$ui-overlay-w-b40-01: rgba(#ffffff, $alpha: 0.75);
-$ui-overlay-w-b40-02: rgba(#ffffff, $alpha: 0.5);
-$ui-overlay-w-b40-03: rgba(#ffffff, $alpha: 0.15);
+// Overlays _ Black
+$ui_overlay_b_d01: $black75;
+$ui_overlay_b_d02: $black50;
+$ui_overlay_b_d03: $black15;
+$ui_overlay_b_b10_01: $black75;
+$ui_overlay_b_b10_02: $black50;
+$ui_overlay_b_b10_03: $black15;
+$ui_overlay_b_b20_01: $black75;
+$ui_overlay_b_b20_02: $black50;
+$ui_overlay_b_b20_03: $black15;
+$ui_overlay_b_b40_01: $black75;
+$ui_overlay_b_b40_02: $black50;
+$ui_overlay_b_b40_03: $black15;
 
-// Gradients - Black
-// $ui-gradients-b-b01: linear-gradient(to bottom, transparent 80%, #000000);
-// $ui-gradients-b-b02: linear-gradient(to bottom, transparent 60%, #000000);
-// $ui-gradients-b-b03: linear-gradient(to bottom, transparent 40%, #000000);
-// $ui-gradients-b-b04: linear-gradient(to bottom, transparent 20%, #000000);
-// $ui-gradients-b-b05: linear-gradient(to bottom, transparent 0, #000000);
+// Overlays _ White
+$ui_overlay_w_d01: $white75;
+$ui_overlay_w_d02: $white50;
+$ui_overlay_w_d03: $white15;
+$ui_overlay_w_b10_01: $white75;
+$ui_overlay_w_b10_02: $white50;
+$ui_overlay_w_b10_03: $white15;
+$ui_overlay_w_b20_01: $white75;
+$ui_overlay_w_b20_02: $white50;
+$ui_overlay_w_b20_03: $white15;
+$ui_overlay_w_b40_01: $white75;
+$ui_overlay_w_b40_02: $white50;
+$ui_overlay_w_b40_03: $white15;
+
+// Gradients _ Black
+// $ui_gradients_b_b01: linear_gradient(to bottom, transparent 80%, #000000);
+// $ui_gradients_b_b02: linear_gradient(to bottom, transparent 60%, #000000);
+// $ui_gradients_b_b03: linear_gradient(to bottom, transparent 40%, #000000);
+// $ui_gradients_b_b04: linear_gradient(to bottom, transparent 20%, #000000);
+// $ui_gradients_b_b05: linear_gradient(to bottom, transparent 0, #000000);
 
 // Skeleton
-$ui-skeleton-01: rgba(#000000, $alpha: 0.05);
-$ui-skeleton-02: rgba(#000000, $alpha: 0.05);
-// Skeleton(dark)
-$dark-ui-skeleton-01: rgba(#ffffff, $alpha: 0.05);
-$dark-ui-skeleton-02: rgba(#ffffff, $alpha: 0.05);
+$ui_skeleton_white: $white;
+$ui_skeleton_gray: $black05;
 
 /* ColorVariable > InteractiveColor */
 // Primary Color
-$interactive-primary-highlight: #fff9f0;
-$interactive-primary-enabled: #fc6020;
-$interactive-primary-hover: #fe763c;
-$interactive-primary-pressed: #e14b12;
-$interactive-primary-focus: #fc6020;
-$interactive-primary-selected: #f05417;
-$interactive-primary-disabled: #cacaca;
-// Primary Color(dark)
-$dark-interactive-primary-highlight: rgba(#ffffff, $alpha: 0.05);
-$dark-interactive-primary-enabled: #f86126;
-$dark-interactive-primary-hover: #f76d37;
-$dark-interactive-primary-pressed: #de511b;
-$dark-interactive-primary-focus: #f86126;
-$dark-interactive-primary-selected: #ee5a20;
-$dark-interactive-primary-disabled: #3c3f48;
+$interactive_01_highlight: $orange50;
+$interactive_01_enabled: $orange500;
+$interactive_01_hover: $orange400;
+$interactive_01_pressed: $orange700;
+$interactive_01_focus: $orange500;
+$interactive_01_selected: $orange600;
+$interactive_01_disabled: $gray200;
 
 // Secondary Color
-$interactive-secondary-highlight: #e8f0ff;
-$interactive-secondary-enabled: #314058;
-$interactive-secondary-hover: #40526e;
-$interactive-secondary-pressed: #1e2c40;
-$interactive-secondary-focus: #314058;
-$interactive-secondary-selected: #1e2c40;
-$interactive-secondary-disabled: #cacaca;
-// Secondary Color(dark)
-$dark-interactive-secondary-highlight: rgba(#ffffff, $alpha: 0.05);
-$dark-interactive-secondary-enabled: #506585;
-$dark-interactive-secondary-hover: #40526e;
-$dark-interactive-secondary-pressed: #314058;
-$dark-interactive-secondary-focus: #506585;
-$dark-interactive-secondary-selected: #40526e;
-$dark-interactive-secondary-disabled: #3c3f48;
+$interactive_02_highlight: $gray25;
+$interactive_02_enabled: $gray300;
+$interactive_02_hover: $gray200;
+$interactive_02_pressed: $gray500;
+$interactive_02_focus: $gray300;
+$interactive_02_selected: $gray400;
+$interactive_02_disabled: $gray200;
 
 // Gray
-$interactive-gray-hover: rgba(#000000, $alpha: 0.05);
-$interactive-gray-pressed: rgba(#000000, $alpha: 0.1);
-$interactive-gray-focused: rgba(#000000, $alpha: 0.08);
-$interactive-gray-selected: rgba(#000000, $alpha: 0.1);
-// Gray(dark)
-$dark-interactive-gray-hover: rgba(#000000, $alpha: 0.05);
-$dark-interactive-gray-pressed: rgba(#000000, $alpha: 0.1);
-$dark-interactive-gray-focused: rgba(#000000, $alpha: 0.08);
-$dark-interactive-gray-selected: rgba(#000000, $alpha: 0.1);
+$interactive_03_hover: $black05;
+$interactive_03_pressed: $black10;
+$interactive_03_focused: $black08;
+$interactive_03_selected: $black10;
 
-/* color palette */
-// primary
-$orange-50: #fff9f0;
-$orange-100: #ffe0c9;
-$orange-200: #ffc298;
-$orange-300: #fe9d6c;
-$orange-400: #fe763c;
-$orange-500: #fc6020;
-$orange-600: #f05417;
-$orange-700: #e14b12;
-$orange-800: #d2450f;
-$orange-900: #b63a0a;
-// primary dark
-$orange-50-dark: #fde5ce;
-$orange-100-dark: #fcc69a;
-$orange-200-dark: #faa06f;
-$orange-300-dark: #f78955;
-$orange-400-dark: #f76d37;
-$orange-500-dark: #f86126;
-$orange-600-dark: #ee5a20;
-$orange-700-dark: #de511b;
-$orange-800-dark: #cf4b17;
-$orange-900-dark: #b53e11;
-
-$navy-50: #e8f0ff;
-$navy-100: #ccd8ee;
-$navy-200: #abb9d2;
-$navy-300: #8c9dba;
-$navy-400: #7588a8;
-$navy-500: #5f7496;
-$navy-600: #506585;
-$navy-700: #40526e;
-$navy-800: #314058;
-$navy-900: #1e2c40;
-$white-alpha5: rgba(#ffffff, $alpha: 0.05);
-$white-alpha8: rgba(#ffffff, $alpha: 0.08);
-$white-alpha10: rgba(#ffffff, $alpha: 0.1);
-$white-alpha15: rgba(#ffffff, $alpha: 0.15);
-$white-alpha20: rgba(#ffffff, $alpha: 0.2);
-$white-alpha25: rgba(#ffffff, $alpha: 0.25);
-$white-alpha30: rgba(#ffffff, $alpha: 0.3);
-$white-alpha40: rgba(#ffffff, $alpha: 0.4);
-$white-alpha50: rgba(#ffffff, $alpha: 0.5);
-$white-alpha60: rgba(#ffffff, $alpha: 0.6);
-$white-alpha70: rgba(#ffffff, $alpha: 0.7);
-$white-alpha75: rgba(#ffffff, $alpha: 0.75);
-$white-alpha80: rgba(#ffffff, $alpha: 0.8);
-$white-alpha90: rgba(#ffffff, $alpha: 0.9);
-$white: #ffffff;
-$gray-25: #fafafa;
-$gray-50: #f5f5f5;
-$gray-75: #eaeaea;
-$gray-100: #e0e0e0;
-$gray-150: #d5d5d5;
-$gray-200: #cacaca;
-$gray-300: #b3b3b3;
-$gray-400: #999999;
-$gray-500: #6e6e6e;
-$gray-600: #4c4c4c;
-$gray-700: #3a3a3a;
-$gray-800: #292929;
-$gray-900: #1a1a1a;
-$bluegray-50: #e4e6ec;
-$bluegray-100: #c1c4cd;
-$bluegray-200: #a0a4b1;
-$bluegray-300: #8b8f9c;
-$bluegray-400: #777b89;
-$bluegray-500: #656976;
-$bluegray-600: #545763;
-$bluegray-650: #464953;
-$bluegray-700: #3c3f48;
-$bluegray-750: #33363d;
-$bluegray-800: #2a2c33;
-$bluegray-850: #1f2128;
-$bluegray-900: #14151a;
-$black-alpha5: rgba(#ffffff, $alpha: 0.05);
-$black-alpha8: rgba(#ffffff, $alpha: 0.08);
-$black-alpha10: rgba(#ffffff, $alpha: 0.1);
-$black-alpha15: rgba(#ffffff, $alpha: 0.15);
-$black-alpha20: rgba(#ffffff, $alpha: 0.2);
-$black-alpha25: rgba(#ffffff, $alpha: 0.25);
-$black-alpha30: rgba(#ffffff, $alpha: 0.3);
-$black-alpha40: rgba(#ffffff, $alpha: 0.4);
-$black-alpha50: rgba(#ffffff, $alpha: 0.5);
-$black-alpha60: rgba(#ffffff, $alpha: 0.6);
-$black-alpha70: rgba(#ffffff, $alpha: 0.7);
-$black-alpha75: rgba(#ffffff, $alpha: 0.75);
-$black-alpha80: rgba(#ffffff, $alpha: 0.8);
-$black-alpha90: rgba(#ffffff, $alpha: 0.9);
-$black: #000000;
-$system-error: #e53935;
-$system-warning: #ef9500;
-$system-success: #43a047;
-$system-info: #1e88e5;
-$system-link: #457bef;
-$system-link-visited: #9b54f6;
-$tint-red-50: #f9f1f2;
-$tint-red-100: #f1d2d1;
-$tint-red-200: #e8b4b6;
-$tint-red-300: #e19598;
-$tint-red-400: #da787f;
-$tint-red-500: #cb5967;
-$tint-red-600: #ae4855;
-$tint-red-700: #8e3846;
-$tint-red-800: #6f2a39;
-$tint-red-900: #52212d;
-$tint-red-a50: #fdf0f1;
-$tint-red-a100: #f6bab8;
-$tint-red-a200: #f2878a;
-$tint-red-a400: #ec3b47;
-$tint-red-a700: #ac0822;
-$tint-orange-50: #f6f0e7;
-$tint-orange-100: #f1dbc3;
-$tint-orange-200: #ecc7a5;
-$tint-orange-300: #e6b285;
-$tint-orange-400: #e09964;
-$tint-orange-500: #d77e45;
-$tint-orange-600: #b96436;
-$tint-orange-700: #984b2b;
-$tint-orange-800: #793b24;
-$tint-orange-900: #5b2d1c;
-$tint-orange-a50: #faf2e6;
-$tint-orange-a100: #f6d1aa;
-$tint-orange-a200: #f9b677;
-$tint-orange-a400: #f27d23;
-$tint-orange-a700: #b73700;
-$tint-yellow-50: #f8f5e8;
-$tint-yellow-100: #f1e9c3;
-$tint-yellow-200: #ecdea3;
-$tint-yellow-300: #e6d084;
-$tint-yellow-400: #e2bd65;
-$tint-yellow-500: #d9ab48;
-$tint-yellow-600: #b88c39;
-$tint-yellow-700: #986f2d;
-$tint-yellow-800: #7b5726;
-$tint-yellow-900: #5b3e1e;
-$tint-yellow-a50: #fcf8e7;
-$tint-yellow-a100: #f6e79d;
-$tint-yellow-a200: #f6dd79;
-$tint-yellow-a400: #ffb412;
-$tint-yellow-a700: #b77408;
-$tint-lime-50: #f3f6e7;
-$tint-lime-100: #e6f1c5;
-$tint-lime-200: #daeba6;
-$tint-lime-300: #c1da80;
-$tint-lime-400: #aaca60;
-$tint-lime-500: #93bc46;
-$tint-lime-600: #739e36;
-$tint-lime-700: #597c2b;
-$tint-lime-800: #425f22;
-$tint-lime-900: #2f411a;
-$tint-lime-a50: #f6fae6;
-$tint-lime-a100: #ddf1a1;
-$tint-lime-a200: #d1eb83;
-$tint-lime-a400: #9bca2e;
-$tint-lime-a700: #4f8409;
-$tint-green-50: #eef6f1;
-$tint-green-100: #d6e9dc;
-$tint-green-200: #b3d7c2;
-$tint-green-300: #8bc3a2;
-$tint-green-400: #65ab7e;
-$tint-green-500: #4b9663;
-$tint-green-600: #3d7d4d;
-$tint-green-700: #306339;
-$tint-green-800: #244c2b;
-$tint-green-900: #17361f;
-$tint-green-a50: #edfaf2;
-$tint-green-a100: #beeecd;
-$tint-green-a200: #9ddcb7;
-$tint-green-a400: #2b9450;
-$tint-green-a700: #0f7021;
-$tint-teal-50: #ecf5f6;
-$tint-teal-100: #cae7e6;
-$tint-teal-200: #a3d2d6;
-$tint-teal-300: #7dbec3;
-$tint-teal-400: #5caab0;
-$tint-teal-500: #44949e;
-$tint-teal-600: #36777f;
-$tint-teal-700: #295d63;
-$tint-teal-800: #1d4448;
-$tint-teal-900: #152c2f;
-$tint-teal-a50: #ebf9fa;
-$tint-teal-a100: #b2ecea;
-$tint-teal-a200: #64d8e3;
-$tint-teal-a400: #2bb8c2;
-$tint-teal-a700: #087582;
-$tint-blue-50: #eaf3f7;
-$tint-blue-100: #cae3f2;
-$tint-blue-200: #abd0eb;
-$tint-blue-300: #8dbce5;
-$tint-blue-400: #70a7de;
-$tint-blue-500: #5793d8;
-$tint-blue-600: #4474b8;
-$tint-blue-700: #355b9a;
-$tint-blue-800: #2c477a;
-$tint-blue-900: #22355c;
-$tint-blue-a50: #e9f6fb;
-$tint-blue-a100: #b1dcf7;
-$tint-blue-a200: #7ec5f8;
-$tint-blue-a400: #3191f0;
-$tint-blue-a700: #0047b9;
-$tint-indigo-50: #f1f4fa;
-$tint-indigo-100: #dde5f5;
-$tint-indigo-200: #bfcbee;
-$tint-indigo-300: #a0afe7;
-$tint-indigo-400: #7d8fd9;
-$tint-indigo-500: #5c6cc9;
-$tint-indigo-600: #4853a8;
-$tint-indigo-700: #373e8a;
-$tint-indigo-800: #282c6b;
-$tint-indigo-900: #20204d;
-$tint-indigo-a50: #f0f4fe;
-$tint-indigo-a100: #c4d6fa;
-$tint-indigo-a200: #92acfb;
-$tint-indigo-a400: #4163eb;
-$tint-indigo-a700: #0816a9;
-$tint-dazzlingblue-50: #f5f5fa;
-$tint-dazzlingblue-100: #e4e1f7;
-$tint-dazzlingblue-200: #cdc8ee;
-$tint-dazzlingblue-300: #b0adea;
-$tint-dazzlingblue-400: #9090de;
-$tint-dazzlingblue-500: #7175d0;
-$tint-dazzlingblue-600: #575fb1;
-$tint-dazzlingblue-700: #424b90;
-$tint-dazzlingblue-800: #313b71;
-$tint-dazzlingblue-900: #242d52;
-$tint-dazzlingblue-a50: #f4f4fe;
-$tint-dazzlingblue-a100: #cfc7fc;
-$tint-dazzlingblue-a200: #a89bfb;
-$tint-dazzlingblue-a400: #5252eb;
-$tint-dazzlingblue-a700: #1325af;
-$tint-purple-50: #f6f4f9;
-$tint-purple-100: #ebdff5;
-$tint-purple-200: #dac4eb;
-$tint-purple-300: #c7a6e6;
-$tint-purple-400: #ad88da;
-$tint-purple-500: #946bcd;
-$tint-purple-600: #7656af;
-$tint-purple-700: #5d4390;
-$tint-purple-800: #473472;
-$tint-purple-900: #332853;
-$tint-purple-a50: #f7f3fd;
-$tint-purple-a100: #dbbaf5;
-$tint-purple-a200: #ce9cf5;
-$tint-purple-a400: #944cec;
-$tint-purple-a700: #4814af;
-$tint-magenta-50: #f9f1f5;
-$tint-magenta-100: #f5dce9;
-$tint-magenta-200: #ebbed5;
-$tint-magenta-300: #e29dc6;
-$tint-magenta-400: #d27ab2;
-$tint-magenta-500: #c45da0;
-$tint-magenta-600: #a24987;
-$tint-magenta-700: #83386e;
-$tint-magenta-800: #662a58;
-$tint-magenta-900: #492141;
-$tint-magenta-a50: #fdf0f6;
-$tint-magenta-a100: #f5b7d7;
-$tint-magenta-a200: #f595c7;
-$tint-magenta-a400: #e440a8;
-$tint-magenta-a700: #a20c77;
-$tint-pink-50: #f9f0f3;
-$tint-pink-100: #f6dce2;
-$tint-pink-200: #edbfc9;
-$tint-pink-300: #e79db4;
-$tint-pink-400: #d97a9b;
-$tint-pink-500: #cd5d84;
-$tint-pink-600: #ab496f;
-$tint-pink-700: #8c385a;
-$tint-pink-800: #6e2948;
-$tint-pink-900: #4e2036;
-$tint-pink-a50: #fdf0f6;
-$tint-pink-a100: #fbc2d0;
-$tint-pink-a200: #fa92a9;
-$tint-pink-a400: #eb3e7a;
-$tint-pink-a700: #ab0949;
+// state
+$elementState: (
+    error: $system_error,
+    warning: $system_warning,
+    success: $system_success,
+    informational: $system_info,
+);
 
 /* color database */
 /* colorDatabase > UI */
 // Background
 $colorDatabaseBackground: (
-    ui-bg-base-white: $ui-bg-base-white,
-    ui-bg-base-gray: $ui-bg-base-gray,
-    ui-bg-navigation: $ui-bg-navigation,
-    ui-bg-surface-white: $ui-bg-surface-white,
-    ui-bg-surface-gray: $ui-bg-surface-gray,
-    ui-bg-highlight: $ui-bg-highlight,
-);
-// Background(dark)
-$colorDatabaseDarkBackground: (
-    ui-bg-base-white: $dark-ui-bg-base-white,
-    ui-bg-base-gray: $dark-ui-bg-base-gray,
-    ui-bg-navigation: $dark-ui-bg-navigation,
-    ui-bg-surface-white: $dark-ui-bg-surface-white,
-    ui-bg-surface-gray: $dark-ui-bg-surface-gray,
-    ui-bg-highlight: $dark-ui-bg-highlight,
+    ui_bg_base_white: $ui_bg_base_white,
+    ui_bg_base_gray50: $ui_bg_base_gray50,
+    ui_bg_navigation_white: $ui_bg_navigation_white,
+    ui_bg_navigation_gray: $ui_bg_navigation_gray,
+    ui_bg_surface_white: $ui_bg_surface_white,
+    ui_bg_surface_white_inverse: $ui_bg_surface_white_inverse,
+    ui_bg_surface_gray25: $ui_bg_surface_gray25,
+    ui_bg_surface_navy: $ui_bg_surface_navy,
+    ui_bg_surface_elevated: $ui_bg_surface_elevated,
+    ui_bg_highlight_gray25: $ui_bg_highlight_gray25,
+    ui_bg_highlight: $ui_bg_highlight,
 );
 
 // Border
 $colorDatabaseBorder: (
-    ui-border-thumbnail: $ui-border-thumbnail,
-);
-// Border(dark)
-$colorDatabaseDarkBorder: (
-    ui-border-thumbnail: $dark-ui-border-thumbnail,
+    ui_border_thumbnail: $ui_border_thumbnail,
+    ui_border_contents: $ui_border_contents,
 );
 
-// Icon-Primary
+$colorDatabaseBrand: (
+    ui_icon_brand_enabled: $ui_icon_brand_enabled,
+    ui_icon_brand_hover: $ui_icon_brand_hover,
+    ui_icon_brand_pressed: $ui_icon_brand_pressed,
+    ui_icon_brand_focused: $ui_icon_brand_focused,
+    ui_icon_brand_selected: $ui_icon_brand_selected,
+    ui_icon_brand_disabled: $ui_icon_brand_disabled,
+);
+
+// Icon_Primary
 $colorDatabaseIconPrimary: (
-    ui-icon-primary-enabled: $ui-icon-primary-enabled,
-    ui-icon-primary-hover: $ui-icon-primary-hover,
-    ui-icon-primary-pressed: $ui-icon-primary-pressed,
-    ui-icon-primary-focused: $ui-icon-primary-focused,
-    ui-icon-primary-selected: $ui-icon-primary-selected,
-    ui-icon-primary-disabled: $ui-icon-primary-disabled,
-);
-// Icon-Primary(dark)
-$colorDatabaseDarkIconPrimary: (
-    ui-icon-primary-enabled: $dark-ui-icon-primary-enabled,
-    ui-icon-primary-hover: $dark-ui-icon-primary-hover,
-    ui-icon-primary-pressed: $dark-ui-icon-primary-pressed,
-    ui-icon-primary-focused: $dark-ui-icon-primary-focused,
-    ui-icon-primary-selected: $dark-ui-icon-primary-selected,
-    ui-icon-primary-disabled: $dark-ui-icon-primary-disabled,
+    ui_icon_01_enabled: $ui_icon_01_enabled,
+    ui_icon_01_hover: $ui_icon_01_hover,
+    ui_icon_01_pressed: $ui_icon_01_pressed,
+    ui_icon_01_focused: $ui_icon_01_focused,
+    ui_icon_01_selected: $ui_icon_01_selected,
+    ui_icon_01_disabled: $ui_icon_01_disabled,
 );
 
-// Icon-Secondary
+// Icon_Secondary
 $colorDatabaseIconSecondary: (
-    ui-icon-secondary-enabled: $ui-icon-secondary-enabled,
-    ui-icon-secondary-hover: $ui-icon-secondary-hover,
-    ui-icon-secondary-pressed: $ui-icon-secondary-pressed,
-    ui-icon-secondary-focused: $ui-icon-secondary-focused,
-    ui-icon-secondary-selected: $ui-icon-secondary-selected,
-    ui-icon-secondary-disabled: $ui-icon-secondary-disabled,
-);
-// Icon-Secondary(dark)
-$colorDatabaseDarkIconSecondary: (
-    ui-icon-secondary-enabled: $dark-ui-icon-secondary-enabled,
-    ui-icon-secondary-hover: $dark-ui-icon-secondary-hover,
-    ui-icon-secondary-pressed: $dark-ui-icon-secondary-pressed,
-    ui-icon-secondary-focused: $dark-ui-icon-secondary-focused,
-    ui-icon-secondary-selected: $dark-ui-icon-secondary-selected,
-    ui-icon-secondary-disabled: $dark-ui-icon-secondary-disabled,
+    ui_icon_02_enabled: $ui_icon_02_enabled,
+    ui_icon_02_hover: $ui_icon_02_hover,
+    ui_icon_02_pressed: $ui_icon_02_pressed,
+    ui_icon_02_focused: $ui_icon_02_focused,
+    ui_icon_02_selected: $ui_icon_02_selected,
+    ui_icon_02_disabled: $ui_icon_02_disabled,
 );
 
-// Icon-Tertiary
+// Icon_Tertiary
 $colorDatabaseIconTertiary: (
-    ui-icon-tertiary-enabled: $ui-icon-tertiary-enabled,
-    ui-icon-tertiary-hover: $ui-icon-tertiary-hover,
-    ui-icon-tertiary-pressed: $ui-icon-tertiary-pressed,
-    ui-icon-tertiary-focused: $ui-icon-tertiary-focused,
-    ui-icon-tertiary-selected: $ui-icon-tertiary-selected,
-    ui-icon-tertiary-disabled: $ui-icon-tertiary-disabled,
-);
-// Icon-Tertiary(dark)
-$colorDatabaseDarkIconTertiary: (
-    ui-icon-tertiary-enabled: $dark-ui-icon-tertiary-enabled,
-    ui-icon-tertiary-hover: $dark-ui-icon-tertiary-hover,
-    ui-icon-tertiary-pressed: $dark-ui-icon-tertiary-pressed,
-    ui-icon-tertiary-focused: $dark-ui-icon-tertiary-focused,
-    ui-icon-tertiary-selected: $dark-ui-icon-tertiary-selected,
-    ui-icon-tertiary-disabled: $dark-ui-icon-tertiary-disabled,
+    ui_icon_03_enabled: $ui_icon_03_enabled,
+    ui_icon_03_hover: $ui_icon_03_hover,
+    ui_icon_03_pressed: $ui_icon_03_pressed,
+    ui_icon_03_focused: $ui_icon_03_focused,
+    ui_icon_03_selected: $ui_icon_03_selected,
+    ui_icon_03_disabled: $ui_icon_03_disabled,
 );
 
-// Icon-Quaternary
+// Icon_Quaternary
 $colorDatabaseIconQuaternary: (
-    ui-icon-quaternary-enabled: $ui-icon-quaternary-enabled,
-    ui-icon-quaternary-hover: $ui-icon-quaternary-hover,
-    ui-icon-quaternary-pressed: $ui-icon-quaternary-pressed,
-    ui-icon-quaternary-focused: $ui-icon-quaternary-focused,
-    ui-icon-quaternary-selected: $ui-icon-quaternary-selected,
-    ui-icon-quaternary-disabled: $ui-icon-quaternary-disabled,
-);
-// Icon-Quaternary(dark)
-$colorDatabaseDarkIconQuaternary: (
-    ui-icon-quaternary-enabled: $dark-ui-icon-quaternary-enabled,
-    ui-icon-quaternary-hover: $dark-ui-icon-quaternary-hover,
-    ui-icon-quaternary-pressed: $dark-ui-icon-quaternary-pressed,
-    ui-icon-quaternary-focused: $dark-ui-icon-quaternary-focused,
-    ui-icon-quaternary-selected: $dark-ui-icon-quaternary-selected,
-    ui-icon-quaternary-disabled: $dark-ui-icon-quaternary-disabled,
+    ui_icon_04_enabled: $ui_icon_04_enabled,
+    ui_icon_04_hover: $ui_icon_04_hover,
+    ui_icon_04_pressed: $ui_icon_04_pressed,
+    ui_icon_04_focused: $ui_icon_04_focused,
+    ui_icon_04_selected: $ui_icon_04_selected,
+    ui_icon_04_disabled: $ui_icon_04_disabled,
 );
 
-// Icon-Inverse
-$colorDatabaseIconInverse: (
-    ui-icon-inverse-enabled: $ui-icon-inverse-enabled,
-);
-// Icon-Inverse(dark)
-$colorDatabaseDarkIconInverse: (
-    ui-icon-inverse-enabled: $dark-ui-icon-inverse-enabled,
+// Icon_Quinary
+$colorDatabaseIconQuinary: (
+    ui_icon_05_enabled: $ui_icon_05_enabled,
+    ui_icon_05_hover: $ui_icon_05_hover,
+    ui_icon_05_pressed: $ui_icon_05_pressed,
+    ui_icon_05_focused: $ui_icon_05_focused,
+    ui_icon_05_selected: $ui_icon_05_selected,
+    ui_icon_05_disabled: $ui_icon_05_disabled,
 );
 
-// Button-Primary
+// Icon_Black
+$colorDatabaseIconBlack: (
+    ui_icon_gray_enabled: $ui_icon_gray_enabled,
+    ui_icon_gray_hover: $ui_icon_gray_hover,
+    ui_icon_gray_pressed: $ui_icon_gray_pressed,
+    ui_icon_gray_focused: $ui_icon_gray_focused,
+    ui_icon_gray_selected: $ui_icon_gray_selected,
+    ui_icon_gray_disabled: $ui_icon_gray_disabled,
+);
+
+// Icon_White
+$colorDatabaseIconWhite: (
+    ui_icon_white_enabled: $ui_icon_white_enabled,
+    ui_icon_white_hover: $ui_icon_white_hover,
+    ui_icon_white_pressed: $ui_icon_white_pressed,
+    ui_icon_white_focused: $ui_icon_white_focused,
+    ui_icon_white_selected: $ui_icon_white_selected,
+    ui_icon_white_disabled: $ui_icon_white_disabled,
+);
+
+// Icon_System
+$colorDatabaseIconSystem: (
+    ui_icon_error: $ui_icon_error,
+    ui_icon_warning: $ui_icon_warning,
+    ui_icon_success: $ui_icon_success,
+    ui_icon_information: $ui_icon_information,
+);
+
+// Button_Primary
 $colorDatabaseButtonPrimary: (
-    ui-button-primary-enabled: $ui-button-primary-enabled,
-    ui-button-primary-hover: $ui-button-primary-hover,
-    ui-button-primary-pressed: $ui-button-primary-pressed,
-    ui-button-primary-bg-focused: $ui-button-primary-bg-focused,
-    ui-button-primary-border1-focused: $ui-button-primary-border1-focused,
-    ui-button-primary-border2-focused: $ui-button-primary-border2-focused,
-    ui-button-primary-disabled: $ui-button-primary-disabled,
-);
-// Button-Primary(dark)
-$colorDatabaseDarkButtonPrimary: (
-    ui-button-primary-enabled: $dark-ui-button-primary-enabled,
-    ui-button-primary-hover: $dark-ui-button-primary-hover,
-    ui-button-primary-pressed: $dark-ui-button-primary-pressed,
-    ui-button-primary-bg-focused: $dark-ui-button-primary-bg-focused,
-    ui-button-primary-border1-focused: $dark-ui-button-primary-border1-focused,
-    ui-button-primary-border2-focused: $dark-ui-button-primary-border2-focused,
-    ui-button-primary-disabled: $dark-ui-button-primary-disabled,
+    ui_button_01_enabled: $ui_button_01_enabled,
+    ui_button_01_hover: $ui_button_01_hover,
+    ui_button_01_pressed: $ui_button_01_pressed,
+    ui_button_01_focused: $ui_button_01_focused,
+    ui_button_01_focused_border1: $ui_button_01_focused_border1,
+    ui_button_01_focused_border2: $ui_button_01_focused_border2,
+    ui_button_01_disabled: $ui_button_01_disabled,
 );
 
-// Button-Secondary
+// Button_Secondary
 $colorDatabaseButtonSecondary: (
-    ui-button-secondary-enabled: $ui-button-primary-enabled,
-    ui-button-secondary-hover: $ui-button-secondary-hover,
-    ui-button-secondary-pressed: $ui-button-secondary-pressed,
-    ui-button-secondary-bg-focused: $ui-button-secondary-bg-focused,
-    ui-button-secondary-border1-focused: $ui-button-secondary-border1-focused,
-    ui-button-secondary-border2-focused: $ui-button-secondary-border2-focused,
-    ui-button-secondary-disabled: $ui-button-secondary-disabled,
-);
-// Button-Secondary(dark)
-$colorDatabaseDarkButtonSecondary: (
-    ui-button-secondary-enabled: $dark-ui-button-primary-enabled,
-    ui-button-secondary-hover: $dark-ui-button-secondary-hover,
-    ui-button-secondary-pressed: $dark-ui-button-secondary-pressed,
-    ui-button-secondary-bg-focused: $dark-ui-button-secondary-bg-focused,
-    ui-button-secondary-border1-focused:
-        $dark-ui-button-secondary-border1-focused,
-    ui-button-secondary-border2-focused:
-        $dark-ui-button-secondary-border2-focused,
-    ui-button-secondary-disabled: $dark-ui-button-secondary-disabled,
+    ui_button_02_enabled: $ui_button_02_enabled,
+    ui_button_02_hover: $ui_button_02_hover,
+    ui_button_02_pressed: $ui_button_02_pressed,
+    ui_button_02_focused: $ui_button_02_focused,
+    ui_button_02_focused_border1: $ui_button_02_focused_border1,
+    ui_button_02_focused_border2: $ui_button_02_focused_border2,
+    ui_button_02_disabled: $ui_button_02_disabled,
 );
 
-// Button-Gray
-$colorDatabaseButtonGray: (
-    ui-button-gray-enabled: $ui-button-gray-enabled,
-    ui-button-gray-hover: $ui-button-gray-hover,
-    ui-button-gray-pressed: $ui-button-gray-pressed,
-    ui-button-gray-bg-focused: $ui-button-gray-bg-focused,
-    ui-button-gray-border1-focused: $ui-button-gray-border1-focused,
-    ui-button-gray-border2-focused: $ui-button-gray-border2-focused,
-    ui-button-gray-disabled: $ui-button-gray-disabled,
-);
-// Button-Gray(dark)
-$colorDatabaseDarkButtonGray: (
-    ui-button-gray-enabled: $dark-ui-button-gray-enabled,
-    ui-button-gray-hover: $dark-ui-button-gray-hover,
-    ui-button-gray-pressed: $dark-ui-button-gray-pressed,
-    ui-button-gray-bg-focused: $dark-ui-button-gray-bg-focused,
-    ui-button-gray-border1-focused: $dark-ui-button-gray-border1-focused,
-    ui-button-gray-border2-focused: $dark-ui-button-gray-border2-focused,
-    ui-button-gray-disabled: $dark-ui-button-gray-disabled,
+// Button_Tertiary
+$colorDatabaseButtonTertiary: (
+    ui_button_03_enabled: $ui_button_03_enabled,
+    ui_button_03_hover: $ui_button_03_hover,
+    ui_button_03_pressed: $ui_button_03_pressed,
+    ui_button_03_focused: $ui_button_03_focused,
+    ui_button_03_focused_border1: $ui_button_03_focused_border1,
+    ui_button_03_focused_border2: $ui_button_03_focused_border2,
+    ui_button_03_disabled: $ui_button_03_disabled,
 );
 
-// Button-Ghost
-$colorDatabaseButtonGhost: (
-    ui-button-ghost-bg-enabled: $ui-button-ghost-bg-enabled,
-    ui-button-ghost-border-enabled: $ui-button-ghost-border-enabled,
-    ui-button-ghost-bg-hover: $ui-button-ghost-bg-hover,
-    ui-button-ghost-border-hover: $ui-button-ghost-border-hover,
-    ui-button-ghost-bg-pressed: $ui-button-ghost-bg-pressed,
-    ui-button-ghost-border-pressed: $ui-button-ghost-border-pressed,
-    ui-button-ghost-bg-focused: $ui-button-ghost-bg-focused,
-    ui-button-ghost-border-focused: $ui-button-ghost-border-focused,
-    ui-button-ghost-bg-disabled: $ui-button-ghost-bg-disabled,
-    ui-button-ghost-border-disabled: $ui-button-ghost-border-disabled,
-);
-// Button-Ghost(dark)
-$colorDatabaseDarkButtonGhost: (
-    ui-button-ghost-bg-enabled: $dark-ui-button-ghost-bg-enabled,
-    ui-button-ghost-border-enabled: $dark-ui-button-ghost-border-enabled,
-    ui-button-ghost-bg-hover: $dark-ui-button-ghost-bg-hover,
-    ui-button-ghost-border-hover: $dark-ui-button-ghost-border-hover,
-    ui-button-ghost-bg-pressed: $dark-ui-button-ghost-bg-pressed,
-    ui-button-ghost-border-pressed: $dark-ui-button-ghost-border-pressed,
-    ui-button-ghost-bg-focused: $dark-ui-button-ghost-bg-focused,
-    ui-button-ghost-border-focused: $dark-ui-button-ghost-border-focused,
-    ui-button-ghost-bg-disabled: $dark-ui-button-ghost-bg-disabled,
-    ui-button-ghost-border-disabled: $dark-ui-button-ghost-border-disabled,
+// Button_Quaternary
+$colorDatabaseButtonQuaternary: (
+    ui_button_04_enabled: $ui_button_04_enabled,
+    ui_button_04_hover: $ui_button_04_hover,
+    ui_button_04_pressed: $ui_button_04_pressed,
+    ui_button_04_focused: $ui_button_04_focused,
+    ui_button_04_focused_border1: $ui_button_04_focused_border1,
+    ui_button_04_focused_border2: $ui_button_04_focused_border2,
+    ui_button_04_disabled: $ui_button_04_disabled,
 );
 
-// Button-Inverse
-$colorDatabaseButtonInverse: (
-    ui-button-inverse-enabled: $ui-button-inverse-enabled,
-    ui-button-inverse-hover: $ui-button-inverse-hover,
-    ui-button-inverse-pressed: $ui-button-inverse-pressed,
-    ui-button-inverse-bg-focused: $ui-button-inverse-bg-focused,
-    ui-button-inverse-border-focused: $ui-button-inverse-border-focused,
-    ui-button-inverse-disabled: $ui-button-inverse-disabled,
-);
-// Button-Inverse(dark)
-$colorDatabaseDarkButtonInverse: (
-    ui-button-inverse-enabled: $dark-ui-button-inverse-enabled,
-    ui-button-inverse-hover: $dark-ui-button-inverse-hover,
-    ui-button-inverse-pressed: $dark-ui-button-inverse-pressed,
-    ui-button-inverse-bg-focused: $dark-ui-button-inverse-bg-focused,
-    ui-button-inverse-border-focused: $dark-ui-button-inverse-border-focused,
-    ui-button-inverse-disabled: $dark-ui-button-inverse-disabled,
+// Button_Outline
+$colorDatabaseButtonOutline: (
+    ui_button_05_enabled: $ui_button_05_enabled,
+    ui_button_05_enabled_border: $ui_button_05_enabled_border,
+    ui_button_05_hover: $ui_button_05_hover,
+    ui_button_05_hover_border: $ui_button_05_hover_border,
+    ui_button_05_pressed: $ui_button_05_pressed,
+    ui_button_05_pressed_border: $ui_button_05_pressed_border,
+    ui_button_05_focused: $ui_button_05_focused,
+    ui_button_05_focused_border: $ui_button_05_focused_border,
+    ui_button_05_disabled: $ui_button_05_disabled,
+    ui_button_05_disabled_border: $ui_button_05_disabled_border,
 );
 
-// Input-Field
-$colorDatabaseInputField: (
-    ui-input-bg-enabled: $ui-input-bg-enabled,
-    ui-input-border-enabled: $ui-input-border-enabled,
-    ui-input-bg-focused: $ui-input-bg-focused,
-    ui-input-border-focused: $ui-input-border-focused,
-    ui-input-bg-activated: $ui-input-bg-activated,
-    ui-input-border-activated: $ui-input-border-activated,
-    ui-input-bg-error: $ui-input-bg-error,
-    ui-input-border-error: $ui-input-border-error,
-    ui-input-bg-warning: $ui-input-bg-warning,
-    ui-input-border-warning: $ui-input-border-warning,
-    ui-input-bg-success: $ui-input-bg-success,
-    ui-input-border-success: $ui-input-border-success,
-    ui-input-bg-informational: $ui-input-bg-informational,
-    ui-input-border-informational: $ui-input-border-informational,
-    ui-input-bg-disabled: $ui-input-bg-disabled,
-    ui-input-border-disabled: $ui-input-border-disabled,
+// Button_White(fill)
+$colorDatabaseButtonWhiteFill: (
+    ui_button_white_f_enabled: $ui_button_white_f_enabled,
+    ui_button_white_f_hover: $ui_button_white_f_hover,
+    ui_button_white_f_pressed: $ui_button_white_f_pressed,
+    ui_button_white_f_focused: $ui_button_white_f_focused,
+    ui_button_white_f_focused_border1: $ui_button_white_f_focused_border1,
+    ui_button_white_f_focused_border2: $ui_button_white_f_focused_border2,
+    ui_button_white_f_disabled: $ui_button_white_f_disabled,
 );
-// Input-Field(dark)
-$colorDatabaseDarkInputField: (
-    ui-input-bg-enabled: $dark-ui-input-bg-enabled,
-    ui-input-border-enabled: $dark-ui-input-border-enabled,
-    ui-input-bg-focused: $dark-ui-input-bg-focused,
-    ui-input-border-focused: $dark-ui-input-border-focused,
-    ui-input-bg-activated: $dark-ui-input-bg-activated,
-    ui-input-border-activated: $dark-ui-input-border-activated,
-    ui-input-bg-error: $dark-ui-input-bg-error,
-    ui-input-border-error: $dark-ui-input-border-error,
-    ui-input-bg-warning: $dark-ui-input-bg-warning,
-    ui-input-border-warning: $dark-ui-input-border-warning,
-    ui-input-bg-success: $dark-ui-input-bg-success,
-    ui-input-border-success: $dark-ui-input-border-success,
-    ui-input-bg-informational: $dark-ui-input-bg-informational,
-    ui-input-border-informational: $dark-ui-input-border-informational,
-    ui-input-bg-disabled: $dark-ui-input-bg-disabled,
-    ui-input-border-disabled: $dark-ui-input-border-disabled,
+
+// Button_White(ghost)
+$colorDatabaseButtonWhiteGhost: (
+    ui_button_white_g_enabled: $ui_button_white_g_enabled,
+    ui_button_white_g_enabled_border: $ui_button_white_g_enabled_border,
+    ui_button_white_g_hover: $ui_button_white_g_hover,
+    ui_button_white_g_hover_border: $ui_button_white_g_hover_border,
+    ui_button_white_g_pressed: $ui_button_white_g_pressed,
+    ui_button_white_g_pressed_border: $ui_button_white_g_pressed_border,
+    ui_button_white_g_focused: $ui_button_white_g_focused,
+    ui_button_white_g_focused_border: $ui_button_white_g_focused_border,
+    ui_button_white_g_disabled: $ui_button_white_g_disabled,
+    ui_button_white_g_disabled_border: $ui_button_white_g_disabled_border,
+);
+
+// Form_Line
+$colorDatabaseFormLine: (
+    ui_form_line_enabled: $ui_form_line_enabled,
+    ui_form_line_enabled_border: $ui_form_line_enabled_border,
+    ui_form_line_hover: $ui_form_line_hover,
+    ui_form_line_hover_border: $ui_form_line_hover_border,
+    ui_form_line_focused: $ui_form_line_focused,
+    ui_form_line_focused_border: $ui_form_line_focused_border,
+    ui_form_line_error: $ui_form_line_error,
+    ui_form_line_error_border: $ui_form_line_error_border,
+    ui_form_line_warning: $ui_form_line_warning,
+    ui_form_line_warning_border: $ui_form_line_warning_border,
+    ui_form_line_success: $ui_form_line_success,
+    ui_form_line_success_border: $ui_form_line_success_border,
+    ui_form_line_informational: $ui_form_line_informational,
+    ui_form_line_informational_border: $ui_form_line_informational_border,
+    ui_form_line_disabled: $ui_form_line_disabled,
+    ui_form_line_disabled_border: $ui_form_line_disabled_border,
+);
+
+// Form_Fill
+$colorDatabaseFormFill: (
+    ui_form_fill_enabled: $ui_form_fill_enabled,
+    ui_form_fill_hover: $ui_form_fill_hover,
+    ui_form_fill_focused: $ui_form_fill_focused,
+    ui_form_fill_focused_border: $ui_form_fill_focused_border,
+    ui_form_fill_error: $ui_form_fill_error,
+    ui_form_fill_error_border: $ui_form_fill_error_border,
+    ui_form_fill_warning: $ui_form_fill_warning,
+    ui_form_fill_warning_border: $ui_form_fill_warning_border,
+    ui_form_fill_success: $ui_form_fill_success,
+    ui_form_fill_success_border: $ui_form_fill_success_border,
+    ui_form_fill_informational: $ui_form_fill_informational,
+    ui_form_fill_informational_border: $ui_form_fill_informational_border,
+    ui_form_fill_disabled: $ui_form_fill_disabled,
+);
+
+// Form_White
+$colorDatabaseFormWhite: (
+    ui_form_white_enabled: $ui_form_white_enabled,
+    ui_form_white_hover: $ui_form_white_hover,
+    ui_form_white_focused: $ui_form_white_focused,
+    ui_form_white_error: $ui_form_white_error,
+    ui_form_white_error_border: $ui_form_white_error_border,
+    ui_form_white_warning: $ui_form_white_warning,
+    ui_form_white_warning_border: $ui_form_white_warning_border,
+    ui_form_white_success: $ui_form_white_success,
+    ui_form_white_success_border: $ui_form_white_success_border,
+    ui_form_white_informational: $ui_form_white_informational,
+    ui_form_white_informational_border: $ui_form_white_informational_border,
+    ui_form_white_disabled: $ui_form_white_disabled,
 );
 
 // Font
 $colorDatabaseFont: (
-    ui-text-01: $ui-text-01,
-    ui-text-02: $ui-text-02,
-    ui-text-03: $ui-text-03,
-    ui-text-04: $ui-text-04,
-    ui-text-brand: $ui-text-brand,
-    ui-text-inverse-01: $ui-text-inverse-01,
-    ui-text-inverse-02: $ui-text-inverse-02,
-    ui-text-error: $ui-text-error,
-    ui-text-warning: $ui-text-warning,
-    ui-text-success: $ui-text-success,
-    ui-text-informational: $ui-text-informational,
-    ui-text-link: $ui-text-link,
-    ui-text-link-visited: $ui-text-link-visited,
-    ui-text-placeholder: $ui-text-placeholder,
-    ui-text-disabled: $ui-text-disabled,
-);
-// Font(dark)
-$colorDatabaseDarkFont: (
-    ui-text-01: $dark-ui-text-01,
-    ui-text-02: $dark-ui-text-02,
-    ui-text-03: $dark-ui-text-03,
-    ui-text-04: $dark-ui-text-04,
-    ui-text-brand: $dark-ui-text-brand,
-    ui-text-inverse-01: $dark-ui-text-inverse-01,
-    ui-text-inverse-02: $dark-ui-text-inverse-02,
-    ui-text-error: $dark-ui-text-error,
-    ui-text-warning: $dark-ui-text-warning,
-    ui-text-success: $dark-ui-text-success,
-    ui-text-informational: $dark-ui-text-informational,
-    ui-text-link: $dark-ui-text-link,
-    ui-text-link-visited: $dark-ui-text-link-visited,
-    ui-text-placeholder: $dark-ui-text-placeholder,
-    ui-text-disabled: $dark-ui-text-disabled,
+    ui_text_01: $ui_text_01,
+    ui_text_02: $ui_text_02,
+    ui_text_03: $ui_text_03,
+    ui_text_04: $ui_text_04,
+    ui_text_brand: $ui_text_brand,
+    ui_text_gray: $ui_text_gray,
+    ui_text_white_01: $ui_text_white_01,
+    ui_text_white_02: $ui_text_white_02,
+    ui_text_error: $ui_text_error,
+    ui_text_warning: $ui_text_warning,
+    ui_text_success: $ui_text_success,
+    ui_text_informational: $ui_text_informational,
+    ui_text_link: $ui_text_link,
+    ui_text_link_visited: $ui_text_link_visited,
+    ui_text_placeholder: $ui_text_placeholder,
+    ui_text_disabled: $ui_text_disabled,
+    ui_text_disabled_surface: $ui_text_disabled_surface,
 );
 
 // Divider
 $colorDatabaseDivider: (
-    ui-divider-01: $ui-divider-01,
-    ui-divider-02: $ui-divider-02,
-    ui-divider-03: $ui-divider-03,
+    ui_divider_black_01: $ui_divider_black_01,
+    ui_divider_black_02: $ui_divider_black_02,
+    ui_divider_black_03: $ui_divider_black_03,
 );
-// Divider(dark)
-$colorDatabaseDarkDivider: (
-    ui-divider-01: $dark-ui-divider-01,
-    ui-divider-02: $dark-ui-divider-02,
-    ui-divider-03: $dark-ui-divider-03,
+// Divider_White
+$colorDatabaseDividerWhite: (
+    ui_divider_white_01: $white15,
+    ui_divider_white_02: $white10,
+    ui_divider_white_03: $white05,
 );
 
 // Shadow
 $colorDatabaseShadow: (
-    ui-shadow-01: $ui-shadow-01,
-    ui-shadow-02: $ui-shadow-02,
-    ui-shadow-03: $ui-shadow-03,
-    ui-shadow-04: $ui-shadow-04,
+    ui_shadow_01: $ui_shadow_01,
+    ui_shadow_02: $ui_shadow_02,
+    ui_shadow_03: $ui_shadow_03,
+    ui_shadow_04: $ui_shadow_04,
 );
 
-// Overlays - Black
+// Overlays _ Black
 $colorDatabaseOverlaysBlack: (
-    ui-overlay-b-d01: $ui-overlay-b-d01,
-    ui-overlay-b-d02: $ui-overlay-b-d02,
-    ui-overlay-b-d03: $ui-overlay-b-d03,
-    ui-overlay-b-b10-01: $ui-overlay-b-b10-01,
-    ui-overlay-b-b10-02: $ui-overlay-b-b10-02,
-    ui-overlay-b-b10-03: $ui-overlay-b-b10-03,
-    ui-overlay-b-b20-01: $ui-overlay-b-b20-01,
-    ui-overlay-b-b20-02: $ui-overlay-b-b20-02,
-    ui-overlay-b-b20-03: $ui-overlay-b-b20-03,
-    ui-overlay-b-b40-01: $ui-overlay-b-b40-01,
-    ui-overlay-b-b40-02: $ui-overlay-b-b40-02,
-    ui-overlay-b-b40-03: $ui-overlay-b-b40-03,
+    ui_overlay_b_d01: $ui_overlay_b_d01,
+    ui_overlay_b_d02: $ui_overlay_b_d02,
+    ui_overlay_b_d03: $ui_overlay_b_d03,
+    ui_overlay_b_b10_01: $ui_overlay_b_b10_01,
+    ui_overlay_b_b10_02: $ui_overlay_b_b10_02,
+    ui_overlay_b_b10_03: $ui_overlay_b_b10_03,
+    ui_overlay_b_b20_01: $ui_overlay_b_b20_01,
+    ui_overlay_b_b20_02: $ui_overlay_b_b20_02,
+    ui_overlay_b_b20_03: $ui_overlay_b_b20_03,
+    ui_overlay_b_b40_01: $ui_overlay_b_b40_01,
+    ui_overlay_b_b40_02: $ui_overlay_b_b40_02,
+    ui_overlay_b_b40_03: $ui_overlay_b_b40_03,
 );
-// Overlays - White
+// Overlays _ White
 $colorDatabaseOverlaysWhite: (
-    ui-overlay-w-d01: $ui-overlay-w-d01,
-    ui-overlay-w-d02: $ui-overlay-w-d02,
-    ui-overlay-w-d03: $ui-overlay-w-d03,
-    ui-overlay-w-b10-01: $ui-overlay-w-b10-01,
-    ui-overlay-w-b10-02: $ui-overlay-w-b10-02,
-    ui-overlay-w-b10-03: $ui-overlay-w-b10-03,
-    ui-overlay-w-b20-01: $ui-overlay-w-b20-01,
-    ui-overlay-w-b20-02: $ui-overlay-w-b20-02,
-    ui-overlay-w-b20-03: $ui-overlay-w-b20-03,
-    ui-overlay-w-b40-01: $ui-overlay-w-b40-01,
-    ui-overlay-w-b40-02: $ui-overlay-w-b40-02,
-    ui-overlay-w-b40-03: $ui-overlay-w-b40-03,
+    ui_overlay_w_d01: $ui_overlay_w_d01,
+    ui_overlay_w_d02: $ui_overlay_w_d02,
+    ui_overlay_w_d03: $ui_overlay_w_d03,
+    ui_overlay_w_b10_01: $ui_overlay_w_b10_01,
+    ui_overlay_w_b10_02: $ui_overlay_w_b10_02,
+    ui_overlay_w_b10_03: $ui_overlay_w_b10_03,
+    ui_overlay_w_b20_01: $ui_overlay_w_b20_01,
+    ui_overlay_w_b20_02: $ui_overlay_w_b20_02,
+    ui_overlay_w_b20_03: $ui_overlay_w_b20_03,
+    ui_overlay_w_b40_01: $ui_overlay_w_b40_01,
+    ui_overlay_w_b40_02: $ui_overlay_w_b40_02,
+    ui_overlay_w_b40_03: $ui_overlay_w_b40_03,
 );
 
 // Skeleton
 $colorDatabaseSkeleton: (
-    ui-skeleton-01: $ui-skeleton-01,
-    ui-skeleton-02: $ui-skeleton-02,
-);
-// Skeleton(dark)
-$colorDatabaseDarkSkeleton: (
-    ui-skeleton-01: $dark-ui-skeleton-01,
-    ui-skeleton-02: $dark-ui-skeleton-02,
+    ui_skeleton_white: $ui_skeleton_white,
+    ui_skeleton_gray: $ui_skeleton_gray,
 );
 
 /* colorDatabase >  InteractiveColor */
 // Primary Color
 $colorDatabasePrimaryColor: (
-    interactive-primary-highlight: $interactive-primary-highlight,
-    interactive-primary-enabled: $interactive-primary-enabled,
-    interactive-primary-hover: $interactive-primary-hover,
-    interactive-primary-pressed: $interactive-primary-pressed,
-    interactive-primary-focus: $interactive-primary-focus,
-    interactive-primary-selected: $interactive-primary-selected,
-    interactive-primary-disabled: $interactive-primary-disabled,
-);
-// Primary Color(dark)
-$colorDatabaseDarkPrimaryColor: (
-    interactive-primary-highlight: $dark-interactive-primary-highlight,
-    interactive-primary-enabled: $dark-interactive-primary-enabled,
-    interactive-primary-hover: $dark-interactive-primary-hover,
-    interactive-primary-pressed: $dark-interactive-primary-pressed,
-    interactive-primary-focus: $dark-interactive-primary-focus,
-    interactive-primary-selected: $dark-interactive-primary-selected,
-    interactive-primary-disabled: $dark-interactive-primary-disabled,
+    interactive_01_highlight: $interactive_01_highlight,
+    interactive_01_enabled: $interactive_01_enabled,
+    interactive_01_hover: $interactive_01_hover,
+    interactive_01_pressed: $interactive_01_pressed,
+    interactive_01_focus: $interactive_01_focus,
+    interactive_01_selected: $interactive_01_selected,
+    interactive_01_disabled: $interactive_01_disabled,
 );
 
 // Secondary Color
 $colorDatabaseSecondaryColor: (
-    interactive-secondary-highlight: $interactive-secondary-highlight,
-    interactive-secondary-enabled: $interactive-secondary-enabled,
-    interactive-secondary-hover: $interactive-secondary-hover,
-    interactive-secondary-pressed: $interactive-secondary-pressed,
-    interactive-secondary-focus: $interactive-secondary-focus,
-    interactive-secondary-selected: $interactive-secondary-selected,
-    interactive-secondary-disabled: $interactive-secondary-disabled,
-);
-// Secondary Color(dark)
-$colorDatabaseDarkSecondaryColor: (
-    interactive-secondary-highlight: $dark-interactive-secondary-highlight,
-    interactive-secondary-enabled: $dark-interactive-secondary-enabled,
-    interactive-secondary-hover: $dark-interactive-secondary-hover,
-    interactive-secondary-pressed: $dark-interactive-secondary-pressed,
-    interactive-secondary-focus: $dark-interactive-secondary-focus,
-    interactive-secondary-selected: $dark-interactive-secondary-selected,
-    interactive-secondary-disabled: $dark-interactive-secondary-disabled,
+    interactive_02_highlight: $interactive_02_highlight,
+    interactive_02_enabled: $interactive_02_enabled,
+    interactive_02_hover: $interactive_02_hover,
+    interactive_02_pressed: $interactive_02_pressed,
+    interactive_02_focus: $interactive_02_focus,
+    interactive_02_selected: $interactive_02_selected,
+    interactive_02_disabled: $interactive_02_disabled,
 );
 
 // Gray Color
 $colorDatabaseGrayColor: (
-    interactive-gray-hover: $interactive-gray-hover,
-    interactive-gray-pressed: $interactive-gray-pressed,
-    interactive-gray-focused: $interactive-gray-focused,
-    interactive-gray-selected: $interactive-gray-selected,
-);
-// Gray Color(dark)
-$colorDatabaseDarkGrayColor: (
-    interactive-gray-hover: $dark-interactive-gray-hover,
-    interactive-gray-pressed: $dark-interactive-gray-pressed,
-    interactive-gray-focused: $dark-interactive-gray-focused,
-    interactive-gray-selected: $dark-interactive-gray-selected,
+    interactive_03_hover: $interactive_03_hover,
+    interactive_03_pressed: $interactive_03_pressed,
+    interactive_03_focused: $interactive_03_focused,
+    interactive_03_selected: $interactive_03_selected,
 );
 
 $colorList: (
     $colorDatabaseBackground,
     $colorDatabaseBorder,
+    $colorDatabaseBrand,
     $colorDatabaseIconPrimary,
     $colorDatabaseIconSecondary,
     $colorDatabaseIconTertiary,
     $colorDatabaseIconQuaternary,
-    $colorDatabaseIconInverse,
+    $colorDatabaseIconQuinary,
+    $colorDatabaseIconBlack,
+    $colorDatabaseIconWhite,
+    $colorDatabaseIconSystem,
     $colorDatabaseButtonPrimary,
     $colorDatabaseButtonSecondary,
-    $colorDatabaseButtonGray,
-    $colorDatabaseButtonGhost,
-    $colorDatabaseButtonInverse,
-    $colorDatabaseInputField,
+    $colorDatabaseButtonTertiary,
+    $colorDatabaseButtonQuaternary,
+    $colorDatabaseButtonOutline,
+    $colorDatabaseButtonWhiteFill,
+    $colorDatabaseButtonWhiteGhost,
+    $colorDatabaseFormLine,
+    $colorDatabaseFormFill,
+    $colorDatabaseFormWhite,
     $colorDatabaseFont,
     $colorDatabaseDivider,
+    $colorDatabaseDividerWhite,
     $colorDatabaseShadow,
     $colorDatabaseOverlaysBlack,
     $colorDatabaseOverlaysWhite,
@@ -1199,307 +1109,273 @@ $colorList: (
     $colorDatabaseGrayColor
 );
 
-$colorListDark: (
-    $colorDatabaseDarkBackground,
-    $colorDatabaseDarkBorder,
-    $colorDatabaseDarkIconPrimary,
-    $colorDatabaseDarkIconSecondary,
-    $colorDatabaseDarkIconTertiary,
-    $colorDatabaseDarkIconQuaternary,
-    $colorDatabaseDarkIconInverse,
-    $colorDatabaseDarkButtonPrimary,
-    $colorDatabaseDarkButtonSecondary,
-    $colorDatabaseDarkButtonGray,
-    $colorDatabaseDarkButtonGhost,
-    $colorDatabaseDarkButtonInverse,
-    $colorDatabaseDarkInputField,
-    $colorDatabaseDarkFont,
-    $colorDatabaseDarkDivider,
-    $colorDatabaseDarkSkeleton,
-    $colorDatabaseDarkPrimaryColor,
-    $colorDatabaseDarkSecondaryColor,
-    $colorDatabaseDarkGrayColor
-);
-
 /* Color palette Database */
 $colorDatabasePalettePrimary: (
-    orange-50: $orange-50,
-    orange-100: $orange-100,
-    orange-200: $orange-200,
-    orange-300: $orange-300,
-    orange-400: $orange-400,
-    orange-500: $orange-500,
-    orange-600: $orange-600,
-    orange-700: $orange-700,
-    orange-800: $orange-800,
-    orange-900: $orange-900,
-);
-$colorDatabasePalettePrimaryDark: (
-    orange-50-dark: $orange-50-dark,
-    orange-100-dark: $orange-100-dark,
-    orange-200-dark: $orange-200-dark,
-    orange-300-dark: $orange-300-dark,
-    orange-400-dark: $orange-400-dark,
-    orange-500-dark: $orange-500-dark,
-    orange-600-dark: $orange-600-dark,
-    orange-700-dark: $orange-700-dark,
-    orange-800-dark: $orange-800-dark,
-    orange-900-dark: $orange-900-dark,
+    orange50: $orange50,
+    orange100: $orange100,
+    orange200: $orange200,
+    orange300: $orange300,
+    orange400: $orange400,
+    orange500: $orange500,
+    orange600: $orange600,
+    orange700: $orange700,
+    orange800: $orange800,
+    orange900: $orange900,
 );
 
 $colorDatabasePalette: (
-    navy-50: $navy-50,
-    navy-100: $navy-100,
-    navy-200: $navy-200,
-    navy-300: $navy-300,
-    navy-400: $navy-400,
-    navy-500: $navy-500,
-    navy-600: $navy-600,
-    navy-700: $navy-700,
-    navy-800: $navy-800,
-    navy-900: $navy-900,
-    white-alpha5: $white-alpha5,
-    white-alpha8: $white-alpha8,
-    white-alpha10: $white-alpha10,
-    white-alpha15: $white-alpha15,
-    white-alpha20: $white-alpha20,
-    white-alpha25: $white-alpha25,
-    white-alpha30: $white-alpha30,
-    white-alpha40: $white-alpha40,
-    white-alpha50: $white-alpha50,
-    white-alpha60: $white-alpha60,
-    white-alpha70: $white-alpha70,
-    white-alpha75: $white-alpha75,
-    white-alpha80: $white-alpha80,
-    white-alpha90: $white-alpha90,
+    navy50: $navy50,
+    navy100: $navy100,
+    navy200: $navy200,
+    navy300: $navy300,
+    navy400: $navy400,
+    navy500: $navy500,
+    navy600: $navy600,
+    navy700: $navy700,
+    navy800: $navy800,
+    navy900: $navy900,
+    white05: $white05,
+    white08: $white08,
+    white10: $white10,
+    white15: $white15,
+    white20: $white20,
+    white25: $white25,
+    white30: $white30,
+    white40: $white40,
+    white50: $white50,
+    white60: $white60,
+    white70: $white70,
+    white75: $white75,
+    white80: $white80,
+    white90: $white90,
     white: $white,
-    gray-25: $gray-25,
-    gray-50: $gray-50,
-    gray-75: $gray-75,
-    gray-100: $gray-100,
-    gray-150: $gray-150,
-    gray-200: $gray-200,
-    gray-300: $gray-300,
-    gray-400: $gray-400,
-    gray-500: $gray-500,
-    gray-600: $gray-600,
-    gray-700: $gray-700,
-    gray-800: $gray-800,
-    gray-900: $gray-900,
-    bluegray-50: $bluegray-50,
-    bluegray-100: $bluegray-100,
-    bluegray-200: $bluegray-200,
-    bluegray-300: $bluegray-300,
-    bluegray-400: $bluegray-400,
-    bluegray-500: $bluegray-500,
-    bluegray-600: $bluegray-600,
-    bluegray-650: $bluegray-650,
-    bluegray-700: $bluegray-700,
-    bluegray-750: $bluegray-750,
-    bluegray-800: $bluegray-800,
-    bluegray-850: $bluegray-850,
-    bluegray-900: $bluegray-900,
-    black-alpha5: $black-alpha5,
-    black-alpha8: $black-alpha8,
-    black-alpha10: $black-alpha10,
-    black-alpha15: $black-alpha15,
-    black-alpha20: $black-alpha20,
-    black-alpha25: $black-alpha25,
-    black-alpha30: $black-alpha30,
-    black-alpha40: $black-alpha40,
-    black-alpha50: $black-alpha50,
-    black-alpha60: $black-alpha60,
-    black-alpha70: $black-alpha70,
-    black-alpha75: $black-alpha75,
-    black-alpha80: $black-alpha80,
-    black-alpha90: $black-alpha90,
+    gray25: $gray25,
+    gray50: $gray50,
+    gray75: $gray75,
+    gray100: $gray100,
+    gray150: $gray150,
+    gray200: $gray200,
+    gray300: $gray300,
+    gray400: $gray400,
+    gray500: $gray500,
+    gray600: $gray600,
+    gray700: $gray700,
+    gray800: $gray800,
+    gray900: $gray900,
+    bluegray50: $bluegray50,
+    bluegray100: $bluegray100,
+    bluegray200: $bluegray200,
+    bluegray300: $bluegray300,
+    bluegray400: $bluegray400,
+    bluegray500: $bluegray500,
+    bluegray600: $bluegray600,
+    bluegray650: $bluegray650,
+    bluegray700: $bluegray700,
+    bluegray750: $bluegray750,
+    bluegray800: $bluegray800,
+    bluegray850: $bluegray850,
+    bluegray900: $bluegray900,
+    black05: $black05,
+    black08: $black08,
+    black10: $black10,
+    black15: $black15,
+    black20: $black20,
+    black25: $black25,
+    black30: $black30,
+    black40: $black40,
+    black50: $black50,
+    black60: $black60,
+    black70: $black70,
+    black75: $black75,
+    black80: $black80,
+    black90: $black90,
     black: $black,
-    system-error: $system-error,
-    system-warning: $system-warning,
-    system-success: $system-success,
-    system-info: $system-info,
-    system-link: $system-link,
-    system-link-visited: $system-link-visited,
-    tint-red-50: $tint-red-50,
-    tint-red-100: $tint-red-100,
-    tint-red-200: $tint-red-200,
-    tint-red-300: $tint-red-300,
-    tint-red-400: $tint-red-400,
-    tint-red-500: $tint-red-500,
-    tint-red-600: $tint-red-600,
-    tint-red-700: $tint-red-700,
-    tint-red-800: $tint-red-800,
-    tint-red-900: $tint-red-900,
-    tint-red-a50: $tint-red-a50,
-    tint-red-a100: $tint-red-a100,
-    tint-red-a200: $tint-red-a200,
-    tint-red-a400: $tint-red-a400,
-    tint-red-a700: $tint-red-a700,
-    tint-orange-50: $tint-orange-50,
-    tint-orange-100: $tint-orange-100,
-    tint-orange-200: $tint-orange-200,
-    tint-orange-300: $tint-orange-300,
-    tint-orange-400: $tint-orange-400,
-    tint-orange-500: $tint-orange-500,
-    tint-orange-600: $tint-orange-600,
-    tint-orange-700: $tint-orange-700,
-    tint-orange-800: $tint-orange-800,
-    tint-orange-900: $tint-orange-900,
-    tint-orange-a50: $tint-orange-a50,
-    tint-orange-a100: $tint-orange-a100,
-    tint-orange-a200: $tint-orange-a200,
-    tint-orange-a400: $tint-orange-a400,
-    tint-orange-a700: $tint-orange-a700,
-    tint-yellow-50: $tint-yellow-50,
-    tint-yellow-100: $tint-yellow-100,
-    tint-yellow-200: $tint-yellow-200,
-    tint-yellow-300: $tint-yellow-300,
-    tint-yellow-400: $tint-yellow-400,
-    tint-yellow-500: $tint-yellow-500,
-    tint-yellow-600: $tint-yellow-600,
-    tint-yellow-700: $tint-yellow-700,
-    tint-yellow-800: $tint-yellow-800,
-    tint-yellow-900: $tint-yellow-900,
-    tint-yellow-a50: $tint-yellow-a50,
-    tint-yellow-a100: $tint-yellow-a100,
-    tint-yellow-a200: $tint-yellow-a200,
-    tint-yellow-a400: $tint-yellow-a400,
-    tint-yellow-a700: $tint-yellow-a700,
-    tint-lime-50: $tint-lime-50,
-    tint-lime-100: $tint-lime-100,
-    tint-lime-200: $tint-lime-200,
-    tint-lime-300: $tint-lime-300,
-    tint-lime-400: $tint-lime-400,
-    tint-lime-500: $tint-lime-500,
-    tint-lime-600: $tint-lime-600,
-    tint-lime-700: $tint-lime-700,
-    tint-lime-800: $tint-lime-800,
-    tint-lime-900: $tint-lime-900,
-    tint-lime-a50: $tint-lime-a50,
-    tint-lime-a100: $tint-lime-a100,
-    tint-lime-a200: $tint-lime-a200,
-    tint-lime-a400: $tint-lime-a400,
-    tint-lime-a700: $tint-lime-a700,
-    tint-green-50: $tint-green-50,
-    tint-green-100: $tint-green-100,
-    tint-green-200: $tint-green-200,
-    tint-green-300: $tint-green-300,
-    tint-green-400: $tint-green-400,
-    tint-green-500: $tint-green-500,
-    tint-green-600: $tint-green-600,
-    tint-green-700: $tint-green-700,
-    tint-green-800: $tint-green-800,
-    tint-green-900: $tint-green-900,
-    tint-green-a50: $tint-green-a50,
-    tint-green-a100: $tint-green-a100,
-    tint-green-a200: $tint-green-a200,
-    tint-green-a400: $tint-green-a400,
-    tint-green-a700: $tint-green-a700,
-    tint-teal-50: $tint-teal-50,
-    tint-teal-100: $tint-teal-100,
-    tint-teal-200: $tint-teal-200,
-    tint-teal-300: $tint-teal-300,
-    tint-teal-400: $tint-teal-400,
-    tint-teal-500: $tint-teal-500,
-    tint-teal-600: $tint-teal-600,
-    tint-teal-700: $tint-teal-700,
-    tint-teal-800: $tint-teal-800,
-    tint-teal-900: $tint-teal-900,
-    tint-teal-a50: $tint-teal-a50,
-    tint-teal-a100: $tint-teal-a100,
-    tint-teal-a200: $tint-teal-a200,
-    tint-teal-a400: $tint-teal-a400,
-    tint-teal-a700: $tint-teal-a700,
-    tint-blue-50: $tint-blue-50,
-    tint-blue-100: $tint-blue-100,
-    tint-blue-200: $tint-blue-200,
-    tint-blue-300: $tint-blue-300,
-    tint-blue-400: $tint-blue-400,
-    tint-blue-500: $tint-blue-500,
-    tint-blue-600: $tint-blue-600,
-    tint-blue-700: $tint-blue-700,
-    tint-blue-800: $tint-blue-800,
-    tint-blue-900: $tint-blue-900,
-    tint-blue-a50: $tint-blue-a50,
-    tint-blue-a100: $tint-blue-a100,
-    tint-blue-a200: $tint-blue-a200,
-    tint-blue-a400: $tint-blue-a400,
-    tint-blue-a700: $tint-blue-a700,
-    tint-indigo-50: $tint-indigo-50,
-    tint-indigo-100: $tint-indigo-100,
-    tint-indigo-200: $tint-indigo-200,
-    tint-indigo-300: $tint-indigo-300,
-    tint-indigo-400: $tint-indigo-400,
-    tint-indigo-500: $tint-indigo-500,
-    tint-indigo-600: $tint-indigo-600,
-    tint-indigo-700: $tint-indigo-700,
-    tint-indigo-800: $tint-indigo-800,
-    tint-indigo-900: $tint-indigo-900,
-    tint-indigo-a50: $tint-indigo-a50,
-    tint-indigo-a100: $tint-indigo-a100,
-    tint-indigo-a200: $tint-indigo-a200,
-    tint-indigo-a400: $tint-indigo-a400,
-    tint-indigo-a700: $tint-indigo-a700,
-    tint-dazzlingblue-50: $tint-dazzlingblue-50,
-    tint-dazzlingblue-100: $tint-dazzlingblue-100,
-    tint-dazzlingblue-200: $tint-dazzlingblue-200,
-    tint-dazzlingblue-300: $tint-dazzlingblue-300,
-    tint-dazzlingblue-400: $tint-dazzlingblue-400,
-    tint-dazzlingblue-500: $tint-dazzlingblue-500,
-    tint-dazzlingblue-600: $tint-dazzlingblue-600,
-    tint-dazzlingblue-700: $tint-dazzlingblue-700,
-    tint-dazzlingblue-800: $tint-dazzlingblue-800,
-    tint-dazzlingblue-900: $tint-dazzlingblue-900,
-    tint-dazzlingblue-a50: $tint-dazzlingblue-a50,
-    tint-dazzlingblue-a100: $tint-dazzlingblue-a100,
-    tint-dazzlingblue-a200: $tint-dazzlingblue-a200,
-    tint-dazzlingblue-a400: $tint-dazzlingblue-a400,
-    tint-dazzlingblue-a700: $tint-dazzlingblue-a700,
-    tint-purple-50: $tint-purple-50,
-    tint-purple-100: $tint-purple-100,
-    tint-purple-200: $tint-purple-200,
-    tint-purple-300: $tint-purple-300,
-    tint-purple-400: $tint-purple-400,
-    tint-purple-500: $tint-purple-500,
-    tint-purple-600: $tint-purple-600,
-    tint-purple-700: $tint-purple-700,
-    tint-purple-800: $tint-purple-800,
-    tint-purple-900: $tint-purple-900,
-    tint-purple-a50: $tint-purple-a50,
-    tint-purple-a100: $tint-purple-a100,
-    tint-purple-a200: $tint-purple-a200,
-    tint-purple-a400: $tint-purple-a400,
-    tint-purple-a700: $tint-purple-a700,
-    tint-magenta-50: $tint-magenta-50,
-    tint-magenta-100: $tint-magenta-100,
-    tint-magenta-200: $tint-magenta-200,
-    tint-magenta-300: $tint-magenta-300,
-    tint-magenta-400: $tint-magenta-400,
-    tint-magenta-500: $tint-magenta-500,
-    tint-magenta-600: $tint-magenta-600,
-    tint-magenta-700: $tint-magenta-700,
-    tint-magenta-800: $tint-magenta-800,
-    tint-magenta-900: $tint-magenta-900,
-    tint-magenta-a50: $tint-magenta-a50,
-    tint-magenta-a100: $tint-magenta-a100,
-    tint-magenta-a200: $tint-magenta-a200,
-    tint-magenta-a400: $tint-magenta-a400,
-    tint-magenta-a700: $tint-magenta-a700,
-    tint-pink-50: $tint-pink-50,
-    tint-pink-100: $tint-pink-100,
-    tint-pink-200: $tint-pink-200,
-    tint-pink-300: $tint-pink-300,
-    tint-pink-400: $tint-pink-400,
-    tint-pink-500: $tint-pink-500,
-    tint-pink-600: $tint-pink-600,
-    tint-pink-700: $tint-pink-700,
-    tint-pink-800: $tint-pink-800,
-    tint-pink-900: $tint-pink-900,
-    tint-pink-a50: $tint-pink-a50,
-    tint-pink-a100: $tint-pink-a100,
-    tint-pink-a200: $tint-pink-a200,
-    tint-pink-a400: $tint-pink-a400,
-    tint-pink-a700: $tint-pink-a700,
+    system_error: $system_error,
+    system_warning: $system_warning,
+    system_success: $system_success,
+    system_info: $system_info,
+    system_link: $system_link,
+    system_link_visited: $system_link_visited,
+    tint_red50: $tint_red50,
+    tint_red100: $tint_red100,
+    tint_red200: $tint_red200,
+    tint_red300: $tint_red300,
+    tint_red400: $tint_red400,
+    tint_red500: $tint_red500,
+    tint_red600: $tint_red600,
+    tint_red700: $tint_red700,
+    tint_red800: $tint_red800,
+    tint_red900: $tint_red900,
+    tint_reda50: $tint_reda50,
+    tint_reda100: $tint_reda100,
+    tint_reda200: $tint_reda200,
+    tint_reda400: $tint_reda400,
+    tint_reda700: $tint_reda700,
+    tint_orange50: $tint_orange50,
+    tint_orange100: $tint_orange100,
+    tint_orange200: $tint_orange200,
+    tint_orange300: $tint_orange300,
+    tint_orange400: $tint_orange400,
+    tint_orange500: $tint_orange500,
+    tint_orange600: $tint_orange600,
+    tint_orange700: $tint_orange700,
+    tint_orange800: $tint_orange800,
+    tint_orange900: $tint_orange900,
+    tint_orangea50: $tint_orangea50,
+    tint_orangea100: $tint_orangea100,
+    tint_orangea200: $tint_orangea200,
+    tint_orangea400: $tint_orangea400,
+    tint_orangea700: $tint_orangea700,
+    tint_yellow50: $tint_yellow50,
+    tint_yellow100: $tint_yellow100,
+    tint_yellow200: $tint_yellow200,
+    tint_yellow300: $tint_yellow300,
+    tint_yellow400: $tint_yellow400,
+    tint_yellow500: $tint_yellow500,
+    tint_yellow600: $tint_yellow600,
+    tint_yellow700: $tint_yellow700,
+    tint_yellow800: $tint_yellow800,
+    tint_yellow900: $tint_yellow900,
+    tint_yellowa50: $tint_yellowa50,
+    tint_yellowa100: $tint_yellowa100,
+    tint_yellowa200: $tint_yellowa200,
+    tint_yellowa400: $tint_yellowa400,
+    tint_yellowa700: $tint_yellowa700,
+    tint_lime50: $tint_lime50,
+    tint_lime100: $tint_lime100,
+    tint_lime200: $tint_lime200,
+    tint_lime300: $tint_lime300,
+    tint_lime400: $tint_lime400,
+    tint_lime500: $tint_lime500,
+    tint_lime600: $tint_lime600,
+    tint_lime700: $tint_lime700,
+    tint_lime800: $tint_lime800,
+    tint_lime900: $tint_lime900,
+    tint_limea50: $tint_limea50,
+    tint_limea100: $tint_limea100,
+    tint_limea200: $tint_limea200,
+    tint_limea400: $tint_limea400,
+    tint_limea700: $tint_limea700,
+    tint_green50: $tint_green50,
+    tint_green100: $tint_green100,
+    tint_green200: $tint_green200,
+    tint_green300: $tint_green300,
+    tint_green400: $tint_green400,
+    tint_green500: $tint_green500,
+    tint_green600: $tint_green600,
+    tint_green700: $tint_green700,
+    tint_green800: $tint_green800,
+    tint_green900: $tint_green900,
+    tint_greena50: $tint_greena50,
+    tint_greena100: $tint_greena100,
+    tint_greena200: $tint_greena200,
+    tint_greena400: $tint_greena400,
+    tint_greena700: $tint_greena700,
+    tint_teal50: $tint_teal50,
+    tint_teal100: $tint_teal100,
+    tint_teal200: $tint_teal200,
+    tint_teal300: $tint_teal300,
+    tint_teal400: $tint_teal400,
+    tint_teal500: $tint_teal500,
+    tint_teal600: $tint_teal600,
+    tint_teal700: $tint_teal700,
+    tint_teal800: $tint_teal800,
+    tint_teal900: $tint_teal900,
+    tint_teala50: $tint_teala50,
+    tint_teala100: $tint_teala100,
+    tint_teala200: $tint_teala200,
+    tint_teala400: $tint_teala400,
+    tint_teala700: $tint_teala700,
+    tint_blue50: $tint_blue50,
+    tint_blue100: $tint_blue100,
+    tint_blue200: $tint_blue200,
+    tint_blue300: $tint_blue300,
+    tint_blue400: $tint_blue400,
+    tint_blue500: $tint_blue500,
+    tint_blue600: $tint_blue600,
+    tint_blue700: $tint_blue700,
+    tint_blue800: $tint_blue800,
+    tint_blue900: $tint_blue900,
+    tint_bluea50: $tint_bluea50,
+    tint_bluea100: $tint_bluea100,
+    tint_bluea200: $tint_bluea200,
+    tint_bluea400: $tint_bluea400,
+    tint_bluea700: $tint_bluea700,
+    tint_indigo50: $tint_indigo50,
+    tint_indigo100: $tint_indigo100,
+    tint_indigo200: $tint_indigo200,
+    tint_indigo300: $tint_indigo300,
+    tint_indigo400: $tint_indigo400,
+    tint_indigo500: $tint_indigo500,
+    tint_indigo600: $tint_indigo600,
+    tint_indigo700: $tint_indigo700,
+    tint_indigo800: $tint_indigo800,
+    tint_indigo900: $tint_indigo900,
+    tint_indigoa50: $tint_indigoa50,
+    tint_indigoa100: $tint_indigoa100,
+    tint_indigoa200: $tint_indigoa200,
+    tint_indigoa400: $tint_indigoa400,
+    tint_indigoa700: $tint_indigoa700,
+    tint_dazzlingblue50: $tint_dazzlingblue50,
+    tint_dazzlingblue100: $tint_dazzlingblue100,
+    tint_dazzlingblue200: $tint_dazzlingblue200,
+    tint_dazzlingblue300: $tint_dazzlingblue300,
+    tint_dazzlingblue400: $tint_dazzlingblue400,
+    tint_dazzlingblue500: $tint_dazzlingblue500,
+    tint_dazzlingblue600: $tint_dazzlingblue600,
+    tint_dazzlingblue700: $tint_dazzlingblue700,
+    tint_dazzlingblue800: $tint_dazzlingblue800,
+    tint_dazzlingblue900: $tint_dazzlingblue900,
+    tint_dazzlingbluea50: $tint_dazzlingbluea50,
+    tint_dazzlingbluea100: $tint_dazzlingbluea100,
+    tint_dazzlingbluea200: $tint_dazzlingbluea200,
+    tint_dazzlingbluea400: $tint_dazzlingbluea400,
+    tint_dazzlingbluea700: $tint_dazzlingbluea700,
+    tint_purple50: $tint_purple50,
+    tint_purple100: $tint_purple100,
+    tint_purple200: $tint_purple200,
+    tint_purple300: $tint_purple300,
+    tint_purple400: $tint_purple400,
+    tint_purple500: $tint_purple500,
+    tint_purple600: $tint_purple600,
+    tint_purple700: $tint_purple700,
+    tint_purple800: $tint_purple800,
+    tint_purple900: $tint_purple900,
+    tint_purplea50: $tint_purplea50,
+    tint_purplea100: $tint_purplea100,
+    tint_purplea200: $tint_purplea200,
+    tint_purplea400: $tint_purplea400,
+    tint_purplea700: $tint_purplea700,
+    tint_magenta50: $tint_magenta50,
+    tint_magenta100: $tint_magenta100,
+    tint_magenta200: $tint_magenta200,
+    tint_magenta300: $tint_magenta300,
+    tint_magenta400: $tint_magenta400,
+    tint_magenta500: $tint_magenta500,
+    tint_magenta600: $tint_magenta600,
+    tint_magenta700: $tint_magenta700,
+    tint_magenta800: $tint_magenta800,
+    tint_magenta900: $tint_magenta900,
+    tint_magentaa50: $tint_magentaa50,
+    tint_magentaa100: $tint_magentaa100,
+    tint_magentaa200: $tint_magentaa200,
+    tint_magentaa400: $tint_magentaa400,
+    tint_magentaa700: $tint_magentaa700,
+    tint_pink50: $tint_pink50,
+    tint_pink100: $tint_pink100,
+    tint_pink200: $tint_pink200,
+    tint_pink300: $tint_pink300,
+    tint_pink400: $tint_pink400,
+    tint_pink500: $tint_pink500,
+    tint_pink600: $tint_pink600,
+    tint_pink700: $tint_pink700,
+    tint_pink800: $tint_pink800,
+    tint_pink900: $tint_pink900,
+    tint_pinka50: $tint_pinka50,
+    tint_pinka100: $tint_pinka100,
+    tint_pinka200: $tint_pinka200,
+    tint_pinka400: $tint_pinka400,
+    tint_pinka700: $tint_pinka700,
 );
 
 /*
@@ -1515,10 +1391,11 @@ $colorDatabasePalette: (
     -------------------------------------------------------
     -------------------------------------------------------
 */
+
 /* mixin */
 @mixin cssGnerator($data, $css) {
     @each $name, $color in $data {
-        .#{$name} {
+        .#{"" + $name + ""} {
             #{$css}: $color;
             @content;
         }
@@ -1527,46 +1404,10 @@ $colorDatabasePalette: (
 @mixin dataCssGnerator($data, $css) {
     @each $type in $data {
         @each $name, $color in $type {
-            .#{$name} {
+            .#{"" + $name + ""} {
                 #{$css}: $color;
                 @content;
             }
         }
-    }
-}
-
-html {
-    // UI > Background
-    // @include cssGnerator($colorDatabaseBackground, background-color);
-    // // UI > Border
-    // @include cssGnerator($colorDatabaseBorder, border-color){
-    //     border-width: 1px;
-    //     border-style: solid;
-    // };
-    // // UI > Color
-    // @include cssGnerator($colorDatabaseIconPrimary, color);
-
-    @include dataCssGnerator($colorList, background-color);
-    @include cssGnerator($colorDatabasePalette, background-color);
-    @include cssGnerator($colorDatabasePalettePrimary, background-color);
-
-    // dark mode
-    &.dark,
-    .demo-dark {
-        // UI > Background
-        // @include cssGnerator($colorDatabaseDarkBackground, background-color);
-        // // UI > Border
-        // @include cssGnerator($colorDatabaseDarkBorder, border-color){
-        //     border-width: 1px;
-        //     border-style: solid;
-        // };
-        // // UI > Color
-        // @include cssGnerator($colorDatabaseIconPrimary, color);
-
-        @include dataCssGnerator($colorListDark, background-color);
-        @include cssGnerator(
-            $colorDatabasePalettePrimaryDark,
-            background-color
-        );
     }
 }

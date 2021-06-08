@@ -1,0 +1,82 @@
+{% macro base(isLink,shapeClass,hasIconLeft,hasIconRight,typeClass, sizeClass, colorClass, shadowClass, txt, state, subtxt, fullWidth) %}
+  {% if isLink %}
+    <a href="#" class="legacy-element-btn{% if fullWidth %} btn-flex{% endif %}{{ shapeClass }} {{ colorClass }} {{ typeClass }} {{ sizeClass }} {{shadowClass}}" {{ state }}>
+      {% if hasIconLeft %}<span class="legacy-element-icon {{ hasIconLeft }}"></span>{% endif %}
+      <span class="btn-txt">
+        {{txt}}{% if subtxt %}<b>{{ subtxt }}</b>{% endif %}
+      </span>
+      {% if hasIconRight %}<span class="legacy-element-icon {{ hasIconRight }}"></span>{% endif %}
+    </a>
+    {% else %}
+      <button class="legacy-element-btn{% if fullWidth %} btn-flex{% endif %} {{ shapeClass }} {{ colorClass }} {{ typeClass }} {{ sizeClass }} {{shadowClass}}" {{ state }}>
+        {% if hasIconLeft %}<span class="legacy-element-icon {{ hasIconLeft }}"></span>{% endif %}
+        <span class="btn-txt">
+          {{txt}}{% if subtxt %}<b>{{ subtxt }}</b>{% endif %}
+        </span>
+        {% if hasIconRight %}<span class="legacy-element-icon {{ hasIconRight }}"></span>{% endif %}
+      </button>
+  {% endif %}
+{% endmacro %}
+
+{% macro baseLink(shapeClass, sizeClass, colorClass, shadowClass, txt, state) %}
+<a href="#" class="legacy-element-btn {{ shapeClass}} {{ colorClass }} {{ sizeClass }} {{shadowClass}}" {{ state }}>
+  <span class="btn-txt">{{txt}}</span>
+</a>
+{% endmacro%}
+
+{% macro withIcon(shapeClass, sizeClass, colorClass, shadowClass, txt, state, iconClass) %}
+<button class="legacy-element-btn {{ shapeClass}} {{ colorClass }} {{ sizeClass }} {{shadowClass}}" {{ state }}>
+  <span class="btn-txt"><span class="legacy-element-icon {{ iconClass }}"></span>{{txt}}</span>
+</button>
+{% endmacro %}
+
+{% macro withIconText(shapeClass, sizeClass, colorClass, shadowClass, txt, state, iconClass) %}
+<button class="legacy-element-btn {{ shapeClass}} {{ colorClass }} {{ sizeClass }} {{shadowClass}}" {{ state }}>
+  <span class="btn-txt">{{txt}}<span class="legacy-element-icon {{ iconClass }}"></span></span>
+</button>
+{% endmacro %}
+
+{% macro linkWithIcon(shapeClass, sizeClass, colorClass, shadowClass, txt, state, iconClass) %}
+<a href="#" class="legacy-element-btn {{ shapeClass}} {{ colorClass }} {{ sizeClass }} {{shadowClass}}" {{ state }}>
+  <span class="btn-txt"><span class="legacy-element-icon {{ iconClass }}"></span>{{txt}}</span>
+</a>
+{% endmacro %}
+
+{% macro textBtn16(shapeClass, sizeClass, colorClass, shadowClass, txt, state, iconClass) %}
+<a href="#" class="legacy-element-btn {{ shapeClass}} {{ colorClass }} {{ sizeClass }} {{shadowClass}}" {{ state }}>
+  <span class="btn-txt">{{txt}}<span class="legacy-element-icon {{ iconClass }}"></span></span>
+</a>
+{% endmacro %}
+
+{% macro textBtn12(shapeClass, sizeClass, colorClass, shadowClass, txt, state, iconClass) %}
+<a href="#" class="legacy-element-btn {{ shapeClass}} {{ colorClass }} {{ sizeClass }} {{shadowClass}}" {{ state }}>
+  <span class="btn-txt">{{txt}}<span class="legacy-element-icon {{ iconClass }}"></span></span>
+</a>
+{% endmacro %}
+
+{% macro switch(shapeClass, sizeClass, colorClass, shadowClass, txt, state, iconClass) %}
+<div class="btn-switch">
+  <button class="legacy-element-btn active {{ shapeClass}} {{ colorClass }} {{ sizeClass }} {{shadowClass}}" {{ state }}>
+    <span class="btn-txt">월간</span>
+  </button>
+  <button class="legacy-element-btn {{ shapeClass}} {{ colorClass }} {{ sizeClass }} {{shadowClass}}" {{ state }}>
+    <span class="btn-txt">일간</span>
+  </button>
+</div>
+{% endmacro %}
+
+{% macro onlyIcon(iconClass,txt,linkType,state,hasQuantity) %}
+  {% if linkType %}
+    <a href="#" class="legacy-element-icon{% if hasQuantity %} type-cart{% endif %} {{ iconClass }} {{ state }}" >{{ txt }}
+      {% if hasQuantity %}
+        <span class="cart-badge">{{ hasQuantity }}</span>
+      {% endif %}
+    </a>
+  {% else %}
+    <button type="button" class="legacy-element-icon{% if hasQuantity %} type-cart{% endif %} {{ iconClass }}" {{ state }}>{{ txt }}
+      {% if hasQuantity %}
+        <span class="cart-badge">{{ hasQuantity }}</span>
+      {% endif %}
+    </button>
+  {% endif %}
+{% endmacro %}

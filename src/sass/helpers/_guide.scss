@@ -1,0 +1,248 @@
+/* [D] 개발에 반영되면 안되는 Scss입니다. */
+.guide {
+    width: 80rem;
+    margin: 0 auto;
+    padding: 6rem 0;
+    font-size: 0;
+    .tit {
+        font-size: 2.8rem;
+        color: #333;
+        padding-bottom: 1.6rem;
+        margin-top: 6rem;
+        :first-of-type {
+            margin-top: 0;
+        }
+    }
+    .tit2 {
+        font-size: 2.2rem;
+        color: #333;
+        padding-bottom: 1.6rem;
+        margin-top: 5rem;
+        :first-of-type {
+            margin-top: 0;
+        }
+    }
+    .desc {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        color: #666;
+        padding-bottom: 1.6rem;
+    }
+    .line-through {
+        text-decoration: line-through;
+    }
+    .underline {
+        text-decoration: underline;
+    }
+
+    /* Example */
+    .example {
+        width: 100%;
+        margin: 4.8rem 0;
+    }
+
+    /* Guide table */
+    .table {
+        width: 100%;
+        caption {
+            display: none;
+        }
+        thead {
+            background-color: #f4f4f4;
+            font-size: 1.4rem;
+            color: #333;
+            font-weight: bold;
+            padding: 1.6rem 0;
+            tr th {
+                padding: 1.6rem 0;
+                vertical-align: middle;
+            }
+        }
+        tbody {
+            background: #fff;
+            tr {
+                border-bottom: 0.1rem solid #eff5fc;
+                td {
+                    font-size: 1.4rem;
+                    color: #333;
+                    padding: 2rem 0;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+            }
+        }
+        &.table-col1 thead tr th {
+            width: 100%;
+        }
+        &.table-col2 thead tr th {
+            width: 50%;
+        }
+        &.table-col3 thead tr th {
+            width: 33.33%;
+        }
+        &.table-col4 thead tr th {
+            width: 25%;
+        }
+        &.table-col5 thead tr th {
+            width: 20%;
+        }
+    }
+
+    /* Space */
+    .ex-space {
+        width: 100%;
+        opacity: 0.1;
+        background-color: #0f6eff;
+    }
+
+    /* Icon */
+    .ex-icon {
+        .item {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+
+            &.full {
+                width: 100%;
+            }
+
+            .style-title {
+                font-size: 2.4rem;
+                font-weight: bold;
+                margin-bottom: 1.6em;
+            }
+        }
+        .view {
+            display: inline-block;
+            width: 33%;
+            margin-bottom: 3.2rem;
+            vertical-align: top;
+            .stove-icon {
+                font-size: 3.2rem;
+                display: block;
+                text-align: center;
+                margin-bottom: 0.8rem;
+            }
+            .name {
+                font-size: 1.2rem;
+                display: block;
+                text-align: center;
+                height: 4rem;
+            }
+        }
+        .desc {
+            margin-bottom: 0.8em;
+            padding: 1.6rem 0.8em;
+            background: #ddd;
+        }
+    }
+
+    /* style */
+    &.full {
+        width: 90%;
+    }
+    .guide-tit {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 0.4rem solid #eaeaea;
+        font-size: 3rem;
+
+        &::before {
+            content: "📒";
+            margin-right: 0.8rem;
+        }
+    }
+    .guide-layer {
+        padding: 2rem;
+        font-size: small;
+    }
+    .guide-section {
+        margin-bottom: 5rem;
+
+        .guide-section-tit {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+
+            &::before {
+                content: "🌼";
+                margin-right: 0.5rem;
+            }
+
+            & + div {
+                padding: 0 2rem;
+            }
+        }
+
+        .guide-section-stit {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 0.1rem solid #eaeaea;
+            font-size: 1.4rem;
+
+            &::before {
+                content: "📌";
+                margin-right: 0.5rem;
+            }
+        }
+    }
+    .guide-flex {
+        @include flex;
+        flex: 1;
+        margin-bottom: 1rem;
+
+        &.gap {
+            gap: 4rem;
+        }
+
+        &.ratio {
+            & > * {
+                flex: 1;
+            }
+        }
+    }
+    .guide-flex-box {
+        position: relative;
+        min-height: 40rem;
+    }
+    .guide-desc-wrap {
+        @include flex;
+        margin-bottom: 0.8rem;
+        padding-left: 20%;
+        color: #666;
+        gap: 4rem;
+        &.space-none {
+            padding: 0;
+        }
+        & > div {
+            flex: 1;
+        }
+    }
+    .guide-state-wrap {
+        @include flex;
+        padding: 1rem 0;
+        .guide-state {
+            width: 20%;
+            padding: 0.8rem 0;
+            color: #1e88e5;
+        }
+    }
+    
+    /* navigation */
+    .layout-navigation {
+        margin-bottom: 4rem;
+    }
+
+    .element-checkbox {
+        display: flex;
+    }
+
+    pre {
+        font-size: 1.6rem;
+        padding: 0;
+        margin: 2rem 0;
+    }
+
+    hr {
+        margin: 3rem 0;
+    }
+}

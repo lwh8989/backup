@@ -1,0 +1,7 @@
+{% macro base(bgColor, color, axis, txt) %}
+  <span class="element-tooltip">
+    <span class="tooltip-txt {{ axis }} {{ bgColor }} {{ color }}">
+      {{ txt }}
+    </span>
+  </span>
+{% endmacro %}

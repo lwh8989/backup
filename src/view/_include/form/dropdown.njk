@@ -1,0 +1,31 @@
+{% macro select(width, height, addClass, selectButtonTxt, selectIcon, item, layer, pos, axis, active, state, selected) %}
+    <div class="element-dropdown {{ width }} {{ height }} {{ active }}">
+        <button class="element-select-button {{ addClass }}" {{ state }}>
+            <span class="element-select-txt">{{ selectButtonTxt }}</span>
+            <i class="element-select-icon {{ selectIcon }}"></i>
+        </button>
+
+        {% if layer %}
+            <div class="element-dropdown-layer {{ pos }} {{ axis }}">
+                <div class="element-dropdown-layer-inner">
+                    <select hidden>
+                        {% for i in item %}
+                            <option value="{{ loop.index }}">{{ i }}</option>
+                        {% endfor %}
+                    </select>
+                    {% for i in item %}
+                        {% if loop.index == 1 %}
+                            <button class="element-dropdown-button {{ selected }}">
+                                {{ i }}{{ loop.index }}
+                            </button>
+                        {% else %}
+                            <button class="element-dropdown-button">
+                                {{ i }}{{ loop.index }}
+                            </button>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endmacro %}

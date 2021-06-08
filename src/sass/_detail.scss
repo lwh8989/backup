@@ -1,0 +1,270 @@
+@use "./color";
+@use "./font";
+@use "./space";
+
+.module-detail {
+    position: relative;
+    padding: 4rem 5.6rem;
+    background: color.$white;
+    .detail-header {
+        border-bottom: 1px solid color.$ui_divider_black_02;
+        .title-btn {
+            display: flex;
+            align-items: center;
+            font-size: font.$stdsBody2;
+            color: color.$ui_text_03;
+            margin-bottom: space.$stds-spacing-12;
+            i {
+                font-size: 1.6rem;
+                color: color.$ui_icon_01_enabled;
+            }
+        }
+        .title-location {
+            font-size: font.$stdsBody2;
+            color: color.$ui_text_03;
+            margin-bottom: space.$stds-spacing-12;
+            .midd-dot {
+                padding: 0 space.$stds-spacing-8;
+            }
+        }
+        .title {
+            font-size: font.$stdsTitle3;
+            font-weight: font.$stdsWeightBold;
+            color: color.$ui_text_01;
+            margin-bottom: space.$stds-spacing-40;
+            flex: 1;
+            strong {
+                color: color.$ui_text_brand;
+                margin-left: space.$stds-spacing-8;
+            }
+        }
+        .info-wrap {
+            display: flex;
+            margin-bottom: space.$stds-spacing-24;
+            .info {
+                flex: 1;
+                .nick {
+                    .profile-link {
+                        .profile-img {
+                            width: 4rem;
+                            height: 4rem;
+                        }
+                    }
+                }
+            }
+            .info-btn {
+                display: flex;
+                align-items: center;
+                i {
+                    font-size: 2rem;
+                    color: color.$ui_icon_05_enabled;
+                    &:hover {
+                        color: color.$ui_icon_05_hover;
+                    }
+                    &:focus,
+                    &:focus-within {
+                        color: color.$ui_icon_05_focused;
+                    }
+                    &.active {
+                        color: color.$ui_icon_05_focused;
+                    }
+                }
+                .element-dropdown {
+                    margin-left: 1.2rem;
+                    .element-dropdown-layer {
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+    .detail-contents {
+        padding: space.$stds-spacing-40 0 space.$stds-spacing-48;
+        .sub-tit {
+            font-size: font.$stdsTitle5;
+            font-weight: font.$stdsWeightBold;
+            color: color.$ui_text_01;
+            padding-bottom: space.$stds-spacing-32;
+        }
+        .module-write-ui {
+            margin-top: space.$stds-spacing-24;
+        }
+        .section-hashtag {
+            margin-top: space.$stds-spacing-32;
+            font-size: 0;
+            .element-btn {
+                margin: 0 space.$stds-spacing-8 space.$stds-spacing-8 0;
+                .btn-txt {
+                    line-height: 2rem;
+                }
+            }
+        }
+        .section-share {
+            text-align: center;
+            font-size: 0;
+            margin-top: space.$stds-spacing-64;
+            .element-btn {
+                margin-left: 8px;
+                &:first-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    .detail-banner {
+        img {
+            max-width: 100%;
+        }
+    }
+    .detail-footer {
+        margin-top: space.$stds-spacing-48;
+        .header {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding-bottom: 1.6rem;
+            .container {
+                display: flex;
+                strong {
+                    font-size: font.$stdsTitle5;
+                    font-weight: font.$stdsWeightBold;
+                    color: color.$ui_text_01;
+                }
+                button {
+                    .ic-navigation-alarm-disabled-line {
+                        font-size: 2rem;
+                        color: color.$ui_icon_05_enabled;
+                        margin: 0.3rem 0 0 space.$stds-spacing-8;
+                    }
+                    &:hover {
+                        .ic-navigation-alarm-disabled-line {
+                            color: color.$ui_icon_01_hover;
+                        }
+                    }
+                    &:focus,
+                    &:focus-within {
+                        .ic-navigation-alarm-disabled-line {
+                            color: color.$ui_icon_01_focused;
+                        }
+                    }
+                }
+            }
+            &+.contents {
+                padding-top: 0;
+            }
+        }
+        .reply-write {
+            position: relative;
+        }
+        .contents {
+            position: relative;
+            padding-top: space.$stds-spacing-20;
+            &+.reply-write {
+                margin-top: space.$stds-spacing-20;
+            }
+        }
+    }
+    .pagination {
+        padding: space.$stds-spacing-36 0;
+    }
+}
+
+/* Desktop (max-width: 768px) */
+@media (max-width: 768px) {
+    .module-detail {
+        padding: 2.4rem 1.6rem;
+        .detail-header {
+            .title-btn {
+                font-size: font.$stdsBody3;
+                margin-bottom: space.$stds-spacing-8;
+                i {}
+            }
+            .title-location {
+                font-size: font.$stdsBody3;
+                margin-bottom: space.$stds-spacing-8;
+                .midd-dot {
+                    padding: 0 space.$stds-spacing-4;
+                }
+            }
+            .title {
+                font-size: font.$stdsTitle4;
+                margin-bottom: space.$stds-spacing-28;
+                strong {}
+            }
+            .info-wrap {
+                .info {
+                    .nick {
+                        .profile-link {
+                            .profile-img {
+                                width: 4rem;
+                                height: 4rem;
+                            }
+                        }
+                    }
+                }
+                .info-btn {
+                    i {
+                        &:hover {}
+                    }
+                    .element-dropdown {
+                        .element-dropdown-layer {}
+                    }
+                }
+            }
+        }
+        .detail-contents {
+            padding: space.$stds-spacing-32 0 space.$stds-spacing-48;
+            .sub-tit {
+                padding-bottom: space.$stds-spacing-24;
+            }
+            .module-write-ui {
+            }
+            .section-hashtag {
+                margin-top: space.$stds-spacing-24;
+                .element-btn {
+                    .btn-txt {}
+                }
+            }
+            .section-share {
+                .element-btn {
+                    &:first-of-type {}
+                }
+            }
+        }
+        .detail-banner {
+            img {}
+        }
+        .detail-footer {
+            .header {
+                padding-bottom: 1.2rem;
+                .container {
+                    strong {
+                        font-size: font.$stdsTitle6;
+                    }
+                    button {
+                        .ic-navigation-alarm-disabled-line {
+                        }
+                        &:hover {
+                            .ic-navigation-alarm-disabled-line {}
+                        }
+                        &:focus,
+                        &:focus-within {
+                            .ic-navigation-alarm-disabled-line {}
+                        }
+                    }
+                }
+                &+.contents {}
+            }
+            .reply-write {}
+            .contents {
+                padding-top: space.$stds-spacing-20;
+                &+.reply-write {
+                }
+            }
+        }
+        .pagination {}
+    }
+}

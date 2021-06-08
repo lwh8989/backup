@@ -1,0 +1,118 @@
+.slider-header {
+  padding: 16px 24px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.slider-header p {
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+}
+.slider-header.gradation {
+  padding: 12px 24px;
+  background-image: linear-gradient(to right, #921fde 1%, #5543fa);
+}
+.slider-header.gradation p {
+  font-size: 16px;
+  color: #fff;
+  line-height: 24px;
+}
+
+/* slider-list */
+.legacy-module-slider.slider-list {
+  position: relative;
+  height: 146px;
+  margin: 0 auto;
+  overflow: inherit;
+}
+.legacy-module-slider.slider-list .swiper-wrapper {
+  position: relative;
+  width: 496px;
+  height: 146px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.legacy-module-slider.slider-list .swiper-slide {
+  position: relative;
+  width: 496px;
+  height: 146px;
+}
+
+/* slider-follower */
+.legacy-module-slider.slider-follower {
+  width: 498px;
+  height: 182px;
+  overflow: hidden;
+}
+.legacy-module-slider.slider-follower .swiper-wrapper {
+  font-size: 0;
+}
+.legacy-module-slider.slider-follower .swiper-slide {
+  display: inline-block;
+  position: relative;
+  width: 166px;
+  height: 182px;
+}
+.legacy-module-slider.slider-follower .swiper-slide .legacy-module-profile.vertical {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swiper-follower.swiper-button-prev {
+  position: absolute;
+  left: 24px;
+  bottom: 94px;
+  top: inherit;
+  right: inherit;
+  background-image: none;
+}
+.swiper-follower.swiper-button-next {
+  position: absolute;
+  right: 24px;
+  bottom: 94px;
+  top: inherit;
+  left: inherit;
+  background-image: none;
+}
+
+/* slider-board */
+.legacy-module-slider.slider-board {
+  width: 496px;
+}
+.legacy-module-slider + .swiper-pagination {
+  width: auto;
+  height: 52px;
+  top: 0;
+  right: 20px;
+  font-size: 0;
+  line-height: 52px;
+}
+
+.swiper-board.swiper-button-next {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: inherit;
+  right: inherit;
+  background-image: none;
+}
+.swiper-board.swiper-button-prev {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: inherit;
+  left: inherit;
+  background-image: none;
+}
+
+.legacy-module-slider {
+  font-size: 0;
+}
+.legacy-module-slider.swiper-wrapper {
+  display: block;
+}

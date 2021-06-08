@@ -1,0 +1,11 @@
+@use "./../space";
+
+/* layout Footer order 5 */
+@mixin layoutFooter($height: auto,
+    $top: 0,
+    $right: 0,
+    $bottom: 0,
+    $left: 0) {
+    height: $height;
+    margin: $top $right $bottom $left;
+}

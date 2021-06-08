@@ -1,0 +1,233 @@
+@use "./mixin/mixin";
+@use "./mixin/dialog";
+@use "./helpers/z-index";
+@use "./color";
+@use "./font";
+@use "./space";
+
+.module-dimmed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: z-index.$zindex-modal-backdrop;
+    background: color.$black50;
+    &.absolute {
+        position: absolute;
+    }
+    /* legacy dialog를 감싸는 위치 class입니다. 신규 dialog 적용 후 제거 */
+    .dimmed-pos {
+        position: absolute;
+        &.pos-left {
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+        &.pos-top {
+            top: 6rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &.pos-center {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &.pos-right {
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        .legacy-module-dialog {
+            margin-bottom: 6rem;
+        }
+    }
+}
+
+/* [D] dialog 등장 시 body에 .scroll-fixed 추가 */
+.is-scroll-fixed {
+    overflow-y: hidden;
+}
+
+.module-dialog {
+    @include dialog.dialogLayer {
+        min-width: 20rem;
+    }
+    $dialogSize: (
+        dialog-size-s: 32.8rem,
+        dialog-size-m: 44rem,
+        dialog-size-l: 66.4rem,
+        dialog-size-full: 100%,
+    );
+    @each $name, $value in $dialogSize {
+        &.#{"" + $name + ""} {
+            @if $name == dialog-size-full {
+                min-width: map-get($dialogSize, dialog-size-l);
+                width: $value;
+            } @else {
+                width: $value;
+            }
+        }
+    }
+    z-index: z-index.$zindex-modal;
+    &.pos-center {
+        @include dialog.dialogPos(
+            $top: 50%,
+            $left: 50%,
+            $bottom: null,
+            $right: null
+        );
+    }
+    &.pos-top {
+        // @include dialog.dialogPos(
+        //     $top: 80px,
+        //     $left: 50%,
+        //     $bottom: null,
+        //     $right: null,
+        //     $y: 0
+        // );
+    }
+
+    // calendar
+    &.dialog-calendar {
+        top: calc(100% + #{space.$stds-spacing-8});
+        left: 0;
+        cursor: default;
+        %center {
+            transform: translateX(-50%, -50%);
+        }
+        &.pos-center {
+            @extend %center;
+            left: 50%;
+        }
+        &.pos-right {
+            left: initial;
+            right: 0;
+        }
+        &.pos-bottom {
+            top: initial;
+            bottom: calc(100% + #{space.$stds-spacing-8});
+        }
+        .module-dialog-inner {
+            padding: 0;
+        }
+    }
+
+    .module-dialog-inner {
+        padding: space.$stds-spacing-40 space.$stds-spacing-24;
+    }
+    .layer-flex {
+        @include mixin.flex($x: center);
+    }
+    // dialog align
+    $dialogAlign: (
+        align-left: left,
+        align-right: right,
+        align-center: center,
+    );
+    @each $name, $value in $dialogAlign {
+        .#{"" + $name + ""} {
+            text-align: $value;
+        }
+        &.pos-left {
+            // @include dialogPos(
+            //     $top: 0,
+            //     $left: 0,
+            //     $bottom: 0,
+            //     $right: null,
+            //     $x: 0,
+            //     $y: 0
+            // );
+        }
+        &.pos-right {
+            // @include dialogPos(
+            //     $top: 0,
+            //     $left: null,
+            //     $bottom: 0,
+            //     $right: 0,
+            //     $x: 0,
+            //     $y: 0
+            // );
+        }
+    }
+
+    .module-dialog-header {
+        @include mixin.flex($y: center);
+        min-height: 3.5rem;
+        border-bottom: 1px solid color.$ui_divider_black_02;
+        padding: 1.4rem 6.4rem 1.4rem space.$stds-spacing-24;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: color.$ui_text_01;
+        line-height: font.$stdsLineHeightM;
+        letter-spacing: -0.45px;
+    }
+    .module-dialog-title {
+        padding-bottom: space.$stds-spacing-16;
+        font-size: font.$stdsTitle7;
+        font-weight: bold;
+        color: color.$ui_text_01;
+        line-height: font.$stdsLineHeightL;
+        letter-spacing: -0.4px; // letter-spacing 적용 해 주세요.
+    }
+    .module-dialog-content {
+        font-size: font.$stdsBody2;
+        color: color.$ui_text_02;
+        line-height: font.$stdsLineHeightM;
+    }
+    .module-dialog-btns {
+        @include mixin.flexCenter;
+        padding-top: space.$stds-spacing-32;
+
+        button {
+            margin-right: space.$stds-spacing-8;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+        button .btn-txt {
+            font-weight: bold;
+            font-size: 1.3rem;
+
+            &:hover {
+                text-decoration: initial;
+            }
+        }
+    }
+    .module-dialog-footer {
+        border-top: 1px solid color.$ui_divider_black_02;
+        padding: space.$stds-spacing-16 space.$stds-spacing-24
+            space.$stds-spacing-24;
+        color: color.$ui_text_03;
+    }
+    .module-dialog-close {
+        position: absolute;
+        right: 2.4rem;
+        top: 1.6rem;
+        font-size: 2rem;
+        color: color.$ui_text_03;
+
+        &::after {
+            transition: all 0.3s;
+            transform: translate(-50%, -50%);
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 0;
+            height: 0;
+            background-color: color.$black05;
+            border-radius: 3.6rem;
+        }
+
+        &:hover {
+            &::after {
+                width: 3.6rem;
+                height: 3.6rem;
+            }
+        }
+    }
+}

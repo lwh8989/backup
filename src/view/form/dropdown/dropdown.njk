@@ -1,0 +1,231 @@
+{% extends "_include/layout/guide/guide.njk" %}
+{% import "_include/form/dropdown.njk" as dropdown %}
+
+<!-- styles -->
+{% block styles %}{% endblock %}
+
+<!-- styles -->
+{% block content %}
+    <!-- [D]   -->
+    <div class="guide full">
+        <h1 class="guide-tit">Form - Dropdown</h1>
+
+        <!-- dropdown -->
+        <div class="guide-layer">
+            <div class="guide-section">
+                <h2 class="guide-section-tit">dropdown - select</h2>
+
+                <div>
+                    <div class="guide-flex ratio gap">
+                        <div>
+                            <h3 class="guide-section-stit">unbox</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 32</div>
+                                <div class="guide-desc">H 40</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ dropdown.select(height="h32", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h40", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Focus ( active )</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ dropdown.select(height="h32", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active", selected="selected") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h40", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active", selected="selected") }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-state-wrap" style="padding-top: 170px">
+                                <div class="guide-state">Disabled</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ dropdown.select(height="h32", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h40", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="guide-section-stit">box</h3>
+
+                            <div class="guide-desc-wrap">
+                                <div class="guide-desc">H 32</div>
+                                <div class="guide-desc">H 36</div>
+                                <div class="guide-desc">H 40</div>
+                                <div class="guide-desc">H 44</div>
+                                <div class="guide-desc">H 48</div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Enabled / Hover</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ dropdown.select(height="h32", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h36", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h40", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h44", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h48", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap">
+                                <div class="guide-state">Focus ( active )</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ dropdown.select(height="h32", addClass="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active", selected="selected") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h36", addClass="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active", selected="selected") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h40", addClass="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active", selected="selected") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h44", addClass="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active", selected="selected") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h48", addClass="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active", selected="selected") }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-state-wrap" style="padding-top: 170px">
+                                <div class="guide-state">Disabled</div>
+                                <div class="guide-flex ratio">
+                                    <div>
+                                        {{ dropdown.select(height="h32", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h36", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h40", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h44", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                    </div>
+                                    <div>
+                                        {{ dropdown.select(height="h48", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="guide-section-stit">box ( display:block, width 100% )</h3>
+
+                        <div class="guide-desc-wrap">
+                            <div class="guide-desc">H 32</div>
+                            <div class="guide-desc">H 36</div>
+                            <div class="guide-desc">H 40</div>
+                            <div class="guide-desc">H 44</div>
+                            <div class="guide-desc">H 48</div>
+                        </div>
+
+                        <div class="guide-state-wrap">
+                            <div class="guide-state">Enabled / Hover</div>
+                            <div class="guide-flex ratio gap">
+                                <div>
+                                    {{ dropdown.select(width="full", height="h32", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h36", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h40", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h44", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h48", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guide-state-wrap">
+                            <div class="guide-state">Focus ( active )</div>
+                            <div class="guide-flex ratio gap">
+                                <div>
+                                    {{ dropdown.select(width="full", height="h32", addClass="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active", selected="selected") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h36", addClass="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active", selected="selected") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h40", addClass="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active", selected="selected") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h44", addClass="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active", selected="selected") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h48", addClass="box-type", selectButtonTxt="item", item=['item', 'item', 'item'], selectIcon="ic-community-oppose-fill", layer=true, pos="absolute", axis="top", active="active", selected="selected") }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guide-state-wrap" style="padding-top: 170px">
+                            <div class="guide-state">Disabled</div>
+                            <div class="guide-flex ratio gap">
+                                <div>
+                                    {{ dropdown.select(width="full", height="h32", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h36", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h40", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h44", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                </div>
+                                <div>
+                                    {{ dropdown.select(width="full", height="h48", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill", state="disabled") }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guide-state-wrap">
+                            <div class="guide-state">Enabled / Hover</div>
+                            <div class="guide-flex ratio">
+                                <div>
+                                    {{ dropdown.select(width="full", height="h32", addClass="box-type", selectButtonTxt="item", selectIcon="ic-community-oppose-fill") }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %}{% endblock %}

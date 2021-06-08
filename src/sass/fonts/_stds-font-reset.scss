@@ -1,0 +1,62 @@
+@use "./../fonts/stds-font-mixin";
+
+/* Font reset */
+html {
+    font-size: 10px;
+}
+
+body {
+    letter-spacing: $letterSpacing;
+    word-break: keep-all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $stdsWeightBold;
+    letter-spacing: $letterSpacing;
+}
+
+h1.is-hidden,
+h2.is-hidden,
+h3.is-hidden,
+h4.is-hidden,
+h5.is-hidden,
+h6.is-hidden {
+    font-size: 0;
+    text-indent: -99999rem;
+}
+
+/* fonts by lang */
+/* Korea */
+@include stds-font-mixin.stdsLang($lang: "ko", $inter: "inter KR", $noto: "Noto Sans KR");
+
+/* English */
+@include stds-font-mixin.stdsLang($lang: "en ", $inter: "inter Global", $noto: "null");
+
+/* Chinese zh */
+@include stds-font-mixin.stdsLang($lang: "zh ", $inter: "inter SC", $noto: "Noto Sans SC");
+
+/* Chinese zh-tw */
+@include stds-font-mixin.stdsLang($lang: "zh-tw ", $inter: "inter TC", $noto: "Noto Sans TC");
+
+/* Japan */
+@include stds-font-mixin.stdsLang($lang: "ja ", $inter: "inter JP", $noto: "Noto Sans JP");
+
+/* French */
+@include stds-font-mixin.stdsLang($lang: "fr ", $inter: "inter Global", $noto: "null");
+
+/* Portugal */
+@include stds-font-mixin.stdsLang($lang: "pt ", $inter: "inter Global", $noto: "null");
+
+/* Spanish */
+@include stds-font-mixin.stdsLang($lang: "es ", $inter: "inter Global", $noto: "null");
+
+/* German */
+@include stds-font-mixin.stdsLang($lang: "de ", $inter: "inter Global", $noto: "null");
+
+/* Thailand */
+@include stds-font-mixin.stdsLang($lang: "th ", $inter: "inter Thai", $noto: "Noto Sans Thai");

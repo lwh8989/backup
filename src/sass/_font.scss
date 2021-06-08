@@ -1,291 +1,43 @@
-/* Stove Title 1rem = 10px */
-$stoveTitle1: 5.4rem;
-$stoveTitle2: 4.2rem;
-$stoveTitle3: 3.2rem;
-$stoveTitle4: 2.4rem;
-$stoveTitle5: 1.8rem;
-$stoveTitle6: 1.4rem;
+@use "./fonts/stds-font-mixin";
 
-/* Stove letter-spacing */
+/* stds Title 1rem = 10px */
+/* Title */
+$stdsTitle1: 5.4rem;
+$stdsTitle2: 4.2rem;
+$stdsTitle3: 3.2rem;
+$stdsTitle4: 2.4rem;
+$stdsTitle5: 2rem;
+$stdsTitle6: 1.8rem;
+$stdsTitle7: 1.6rem;
+$stdsTitle8: 1.4rem;
+
+/* Body */
+$stdsBody1: 1.6rem;
+$stdsBody2: 1.5rem;
+$stdsBody3: 1.4rem;
+$stdsBody4: 1.3rem;
+
+/* Button */
+$stdsButton1: 1.5rem;
+$stdsButton2: 1.3rem;
+
+/* Caption */
+$stdsCaption1: 1.3rem;
+$stdsCaption2: 1.1rem;
+
+/* Chips */
+$stdsChips1: 1.3rem;
+$stdsChips2: 1.1rem;
+
+/* Font-weight */
+$stdsWeightBold: bold;
+$stdsWeightNormal: normal;
+
+/* stds letter-spacing */
 $letterSpacing: -0.025em;
+$letterSpacing_5: -0.05rem;
 
-/* Font reset */
-html {
-    font-size: 10px;
-}
-body {
-    letter-spacing: $letterSpacing;
-    word-break: keep-all;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: bold;
-    letter-spacing: $letterSpacing;
-}
-h1.is-hidden,
-h2.is-hidden,
-h3.is-hidden,
-h4.is-hidden,
-h5.is-hidden,
-h6.is-hidden {
-    font-size: 0;
-    text-indent: -99999px;
-}
-h1.s-title {
-    font-size: $stoveTitle1;
-}
-h2.s-title {
-    font-size: $stoveTitle2;
-}
-h3.s-title {
-    font-size: $stoveTitle3;
-}
-h4.s-title {
-    font-size: $stoveTitle4;
-}
-h5.s-title {
-    font-size: $stoveTitle5;
-}
-h6.s-title {
-    font-size: $stoveTitle6;
-}
-
-/* fonts by lang */
-/* Korea */
-:lang(ko) body,
-:lang(ko) a,
-:lang(ko) button,
-:lang(ko) input,
-:lang(ko) textarea,
-:lang(ko) h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family:
-        'Intel KR',
-        'Noto Sans KR',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
-}
-
-/* Chinese zh */
-:lang(zh) body,
-:lang(zh) a,
-:lang(zh) button,
-:lang(zh) input,
-:lang(zh) textarea,
-:lang(zh) h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family:
-        'Intel SC',
-        'Noto Sans SC',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
-}
-
-/* Chinese zh-tw  */
-:lang(zh-tw) body,
-:lang(zh-tw) a,
-:lang(zh-tw) button,
-:lang(zh-tw) input,
-:lang(zh-tw) textarea,
-:lang(zh-tw) h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family:
-        'Intel TC',
-        'Noto Sans TC',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
-}
-
-/* Japan */
-:lang(ja) body,
-:lang(ja) a,
-:lang(ja) button,
-:lang(ja) input,
-:lang(ja) textarea,
-:lang(ja) h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family:
-        'Intel JP',
-        'Noto Sans JP',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
-}
-
-/* English */
-:lang(en) body,
-:lang(en) a,
-:lang(en) button,
-:lang(en) input,
-:lang(en) textarea,
-:lang(en) h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family:
-        'Intel Global',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
-}
-
-/* French  */
-:lang(fr) body,
-:lang(fr) a,
-:lang(fr) button,
-:lang(fr) input,
-:lang(fr) textarea,
-:lang(fr) h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family:
-        'Intel Global',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
-}
-
-/* Portugal */
-:lang(pt) body,
-:lang(pt) a,
-:lang(pt) button,
-:lang(pt) input,
-:lang(pt) textarea,
-:lang(pt) h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family:
-        'Intel Global',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
-}
-
-/* Spanish */
-:lang(es) body,
-:lang(es) a,
-:lang(es) button,
-:lang(es) input,
-:lang(es) textarea,
-:lang(es) h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family:
-        'Intel Global',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
-}
-
-/* German */
-:lang(de) body,
-:lang(de) a,
-:lang(de) button,
-:lang(de) input,
-:lang(de) textarea,
-:lang(de) h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family:
-        'Intel Global',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
-}
-
-/* Thailand */
-:lang(ja) body,
-:lang(ja) a,
-:lang(ja) button,
-:lang(ja) input,
-:lang(ja) textarea,
-:lang(ja) h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family:
-        'Intel Thai',
-        'Noto Sans Thai',
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
-}
+/* line-height */
+$stdsLineHeightL: 1.6;
+$stdsLineHeightM: 1.5;
+$stdsLineHeightS: 1.4;

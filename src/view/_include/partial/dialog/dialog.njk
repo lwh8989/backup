@@ -1,0 +1,53 @@
+{% import "_include/form/button.njk" as btn %}
+{% import "_include/module/calendar/calendar.njk" as calendar %}
+
+{% macro dialogBase(dimmed, posClass, size, title, titleAlign, contentAlign, txt, btns, close, header, footer) %}
+  <!-- posClass = pos-center / pos-top -->
+  <div class="module-dialog {{ posClass }} {{ size }}">
+    {% if header %}
+      <div class="module-dialog-header">{{ header }}</div>
+    {% endif %}
+
+    <div class="module-dialog-inner">
+      {% if title %}
+        <div class="module-dialog-title {{ titleAlign }}">{{ title }}</div>
+      {% endif %}
+      <div class="module-dialog-content {{ contentAlign }}">{{ txt }}</div>
+
+      {% if close %}
+        <button class="module-dialog-close ic-control-close-line"></button>
+      {% endif %}
+      {% if btns %}
+        <div class="module-dialog-btns">
+          {{ btn.base(colorClass='bg-outline', sizeClass='size-small', txt='취소') }}
+          {{ btn.base(colorClass='bg-primary', sizeClass='size-small', txt='확인') }}
+        </div>
+      {% endif %}
+    </div>
+    {% if footer %}
+      <div class="module-dialog-footer">
+        {{ footer }}
+      </div>
+    {% endif %}
+  </div>
+  {% if dimmed %}
+    <div class="module-dimmed absolute"></div>
+  {% endif %}
+{% endmacro %}
+
+{% macro dialogCalendar(posClass, widthClass, year, month, dialogNum, firstNum, lastNum, yearMode, monthMode) %}
+  <!-- posClass = pos-center, pos-right, pos-bottom  -->
+  <div class="module-dialog dialog-calendar {{ posClass }}">
+    <div class="module-dialog-inner">
+      <div class="module-dialog-content">
+        <div class="module-dialog-calendar-wrap">
+            <div class="module-calendar {{ widthClass }}">
+              {% for item in range(0, dialogNum) %}
+                {{ calendar.base(year, month, dialogNum, firstNum, lastNum, item, yearMode, monthMode, period) }}
+              {% endfor %}
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

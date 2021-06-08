@@ -1,0 +1,100 @@
+@use "./mixin/mixin";
+@use "./color";
+@use "./font";
+@use "./space";
+@use "./radius";
+@use "./helpers/z-index";
+
+$dropdown-default-space: 0 space.$stds-spacing-16;
+
+.element-dropdown {
+    position: relative;
+    display: inline-block;
+
+    &.active .element-select-button,
+    .element-select-button:hover,
+    .element-select-button:focus {
+        color: color.$ui_text_02;
+    }
+
+    &.active {
+        .element-select-icon {
+            transform: rotate(-180deg);
+        }
+        .element-dropdown-layer {
+            display: block;
+        }
+    }
+}
+
+/* select */
+.element-select-icon {
+    font-size: 1.2rem;
+}
+
+.element-select-button {
+    @include mixin.flex($y: center);
+    width: 100%;
+    height: 100%;
+    color: color.$ui_text_03;
+    line-height: 0;
+
+    &.box-type {
+        @include mixin.flexBetweenCenter;
+        padding: $dropdown-default-space;
+    }
+}
+
+.element-dropdown-layer {
+    display: none;
+    padding-top: space.$stds-spacing-8;
+
+    .element-dropdown-layer-inner {
+        padding: space.$stds-spacing-8 0;
+        overflow: hidden;
+        overflow-y: auto;
+        background-color: $white;
+        border: 1px solid color.$ui_border_contents;
+        border-radius: radius.$radius-S;
+        box-shadow: 0 4px 10px color.$ui_shadow_02;
+    }
+
+    &.absolute {
+        position: absolute;
+        z-index: z-index.$zindex-dropdown;
+
+        &.top {
+            top: 100%;
+        }
+        &.bottom {
+            top: initial;
+            bottom: 100%;
+        }
+        &.right {
+            right: 0;
+        }
+    }
+
+    @at-root .box-type + & {
+        width: 100%;
+    }
+}
+
+.element-dropdown-button {
+    @include mixin.flex($y: center);
+    width: 100%;
+    padding: $dropdown-default-space;
+    color: color.$ui_text_03;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+        background-color: color.$interactive_03_hover;
+        color: color.$ui_text_02;
+    }
+
+    &.selected {
+        font-weight: font.$stdsWeightBold;
+        color: color.$ui_text_brand;
+    }
+}

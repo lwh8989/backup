@@ -1,64 +1,131 @@
+@import "./mixin/responsive";
+@import "./color";
 
 /* button */
-$bg-primary-btn : #fc6020;
-$bg-primary-btn-hover : #fe763c;
-$bg-primary-btn-active : #e14b12;
+/* 확인 후 삭제 예정
+secondary 컬러값 틀림 확인 필요
+
 $bg-secondary-btn: #353f54;
 $bg-secondary-btn-hover: #455169;
 $bg-secondary-btn-active: #222b3c;
 
+gray 컬러값   확인 필요
 $bg-gray-btn: #eaeaea;
 $bg-gray-btn-hover: #fafafa;
 $bg-gray-btn-active: #d5d5d5;
 $bg-gray-btn-focus: #6e6e6e;
-$bg-white-btn: #fff;
-$bg-white-btn-hover: #f5f5f5;
-$bg-white-btn-active: #e0e0e0;
-$bg-white-btn-focus: #fff;
-$bg-ghost-btn: transparent;
-$bg-ghost-btn-hover: transparent;
-$bg-ghost-btn-active: transparent;
-$bg-ghost-btn-focus: #d5d5d5;
+*/
 
-$bg-trans-btn: transparent;
-$bg-trans-btn-hover: transparent;
-$bg-trans-btn-active: transparent;
-$bg-trans-btn-focus: transparent;
+/* 메인에서 씌이는 custom 버튼 _color.scss에 추가된 후 삭제 예정 */
+$ui_button_gray_main_enabled: #f5f5f5;
+$ui_button_gray_main_hover: #eaeaea;
+$ui_button_gray_main_pressed: #d5d5d5;
+$ui_button_gray_main_bg_focused: #f5f5f5;
+$ui_button_gray_main_border1_focused: #6e6e6e;
+$ui_button_gray_main_border2_focused: #ffffff;
+$ui_button_gray_main_border3_focused: rgba(0, 0, 0, 0.015);
+$ui_button_gray_main_disabled: #eaeaea;
+
+$bg_trans_btn: transparent;
+$bg_trans_btn_hover: transparent;
+$bg_trans_btn_active: transparent;
+$bg_trans_btn_focus: transparent;
 
 .element-btn {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  color: #fff;
-  text-align: center;
-  overflow: hidden;
-  font-size: 0;
-  font-weight: 700;
-  padding: 1px 23px 1px 22px;
-  box-sizing: border-box;
-  white-space: nowrap;
-  -webkit-transition-duration: 0.15s;
-  transition-duration: 0.15s;
-  /*&:before {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    font-size: 0;
+    font-weight: 700;
+    padding: 1px 23px 1px 22px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+    /*&:before {
     content: '';
     display: inline-block;
     width: 1px;
     height: 100%;
     vertical-align: middle;
   }*/
-  &.disabled,
-  &:disabled {
-    background: #eaeaea!important;
-    border-color: #eaeaea!important;
-    color: #cacaca!important;
-  }
-  &.disabled:focus{
-    box-shadow: none!important;  
-  }
+    &.disabled,
+    &:disabled {
+        color: #cacaca !important;
+        pointer-events: unset;
+        cursor: no-drop;
+    }
+    &.disabled:focus,
+    &:disabled:focus {
+        box-shadow: none !important;
+    }
 }
-.element-btn .element-icon {
+.element-btn.btn-txt-b .btn-txt {
+    font-weight: bold;
+}
+.element-btn.bg-trans .btn-txt {
+    color: #3a3a3a;
+}
+
+.element-btn.size-xlarge.only-icon .stove-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+.element-btn.size-xlarge.only-icon .stove-icon::before {
+    font-size: 3.2rem;
+}
+.element-btn.size-xlarge.with-icon .stove-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+.element-btn.size-xlarge.with-icon .stove-icon::before {
+    font-size: 3.2rem;
+}
+.element-btn.size-large.only-icon .stove-icon,
+.element-btn.size-large.with-icon .stove-icon,
+.element-btn.size-medium.only-icon .stove-icon,
+.element-btn.size-medium.with-icon .stove-icon,
+.element-btn.size-small.only-icon .stove-icon,
+.element-btn.size-small.with-icon .stove-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.element-btn.size-large.only-icon .stove-icon::before,
+.element-btn.size-large.with-icon .stove-icon::before,
+.element-btn.size-medium.only-icon .stove-icon::before,
+.element-btn.size-medium.with-icon .stove-icon::before,
+.element-btn.size-small.only-icon .stove-icon::before,
+.element-btn.size-small.with-icon .stove-icon::before {
+    font-size: 2.4rem;
+}
+.element-btn.size-xsmall.only-icon .stove-icon,
+.element-btn.size-xsmall.with-icon .stove-icon {
+    width: 2rem;
+    height: 2rem;
+}
+.element-btn.size-xsmall.only-icon .stove-icon::before,
+.element-btn.size-xsmall.with-icon .stove-icon::before {
+    font-size: 2rem;
+}
+.element-btn.size-chips32.only-icon .stove-icon,
+.element-btn.size-chips32.with-icon .stove-icon,
+.element-btn.size-chips28.only-icon .stove-icon,
+.element-btn.size-chips28.with-icon .stove-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+.element-btn.size-chips32.only-icon .stove-icon::before,
+.element-btn.size-chips32.with-icon .stove-icon::before,
+.element-btn.size-chips28.only-icon .stove-icon::before,
+.element-btn.size-chips28.with-icon .stove-icon::before {
+    font-size: 1.6rem;
+}
+.element-btn .stove-icon {
     display: inline-block;
     overflow: hidden;
     font-size: 0;
@@ -67,220 +134,375 @@ $bg-trans-btn-focus: transparent;
     background-size: cover;
 }
 .element-btn .btn-txt {
-  display: inline-block;
-  color: inherit;
-  /* width: 100%;
+    display: inline-block;
+    color: inherit;
+    /* width: 100%;
   width: calc(100% - 1px); */
-  font-size: 15px;
-  line-height: 24px;
-  vertical-align: middle;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    font-weight: normal;
+    vertical-align: middle;
 }
-.element-btn.bg-gray .btn-txt {
-    color: #3a3a3a;
-}
-.element-btn.bg-white .btn-txt {
-    color: #3a3a3a;
-}
-.element-btn.bg-ghost .btn-txt {
-    color: #3a3a3a;
-}
-.element-btn.bg-trans .btn-txt {
-    color: #3a3a3a;
-}
-.element-btn.bg-gray.disabled .btn-txt,
-.element-btn.bg-gray:disabled .btn-txt {
-    color: #cacaca;
-}
-.element-btn.bg-white.disabled .btn-txt,
-.element-btn.bg-white:disabled .btn-txt {
-    color: #cacaca;
+.element-btn.disabled .btn-txt:hover,
+.element-btn:disabled .btn-txt:hover {
+    text-decoration: none;
 }
 
 /* shape */
 .element-btn.size-xlarge.btn-round {
-    border-radius: 27px;
+    border-radius: 2.8rem;
 }
 .element-btn.size-large.btn-round {
-    border-radius: 24px;
+    border-radius: 2.4rem;
 }
 .element-btn.size-medium.btn-round {
-    border-radius: 20px;
+    border-radius: 2.2rem;
 }
 .element-btn.size-small.btn-round {
-    border-radius: 18px;
+    border-radius: 2rem;
 }
 .element-btn.size-xsmall.btn-round {
-    border-radius: 16px;
+    border-radius: 1.8rem;
+}
+.element-btn.size-chips32.btn-round {
+    border-radius: 1.6rem;
+}
+.element-btn.size-chips28.btn-round {
+    border-radius: 1.4rem;
 }
 
 /* size */
 .element-btn.size-xlarge {
-    height: 56px;
+    height: 5.6rem;
+    padding: 0 3.2rem;
 }
 .element-btn.size-large {
-    height: 48px;
+    height: 4.8rem;
+    padding: 0 2.8rem;
+}
+.element-btn.size-medium,
+.element-btn.size-small {
+    padding: 0 2.4rem;
 }
 .element-btn.size-medium {
-    height: 40px;
+    height: 4.4rem;
 }
 .element-btn.size-small {
-    height: 36px;
+    height: 4rem;
 }
 .element-btn.size-xsmall {
-    height: 32px;
+    height: 3.6rem;
+    padding: 0 2rem;
+}
+.element-btn.size-chips32 {
+    height: 3.2rem;
+    padding: 0 1.6rem;
+    border-radius: 0.2rem;
+}
+.element-btn.size-chips28 {
+    height: 2.8rem;
+    padding: 0 1.2rem;
+    border-radius: 0.2rem;
 }
 .element-btn.size-xlarge .btn-txt,
-.element-btn.size-large .btn-txt {
-    font-size: 15px;
-    line-height: 24px;
+.element-btn.size-large .btn-txt,
+.element-btn.size-medium .btn-txt {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.033rem;
 }
-.element-btn.size-medium .btn-txt,
 .element-btn.size-small .btn-txt,
-.element-btn.size-xsmall .btn-txt {
-    font-size: 13px;
-    line-height: 20px;
+.element-btn.size-xsmall .btn-txt,
+.element-btn.size-chips32 .btn-txt,
+.element-btn.size-chips28 .btn-txt {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    letter-spacing: -0.33px; // letterspacing 값 적용 부탁드립니다.
 }
 
 /* only icon */
-.element-btn.size-xlarge.only-icon{
-    padding: 0;
-    min-width: 56px;
+.element-btn.only-icon {
+    padding: 0 !important;
 }
-.element-btn.size-large.only-icon{
-    padding: 0;
-    min-width: 48px;
+.element-btn.size-xlarge.only-icon {
+    min-width: 5.6rem;
 }
-.element-btn.size-medium.only-icon{
-    padding: 0;
-    min-width: 40px;
+.element-btn.size-large.only-icon {
+    min-width: 4.8rem;
 }
-.element-btn.size-small.only-icon{
-    padding: 0;
-    min-width: 36px;
+.element-btn.size-medium.only-icon {
+    min-width: 4.4rem;
 }
-.element-btn.size-xsmall.only-icon{
-    padding: 0;
-    min-width: 32px;
+.element-btn.size-small.only-icon {
+    min-width: 4rem;
 }
-.element-btn.only-icon .element-icon{
-    padding-left: 0;
+.element-btn.size-xsmall.only-icon {
+    min-width: 3.6rem;
+}
+.element-btn.size-chips32.only-icon {
+    min-width: 3.2rem;
+}
+.element-btn.size-chips28.only-icon {
+    min-width: 2.8rem;
 }
 
 /* with icon */
-.element-btn.size-xlarge.with-icon{
-    padding: 0 23px; 
+.element-btn.size-xlarge .stove-icon ~ .btn-txt,
+.element-btn.size-large .stove-icon ~ .btn-txt,
+.element-btn.size-medium .stove-icon ~ .btn-txt {
+    padding-left: 0.8rem;
 }
-.element-btn.size-large.with-icon{
-    padding: 0 23px; 
+.element-btn.size-xlarge .btn-txt ~ .stove-icon,
+.element-btn.size-large .btn-txt ~ .stove-icon,
+.element-btn.size-medium .btn-txt ~ .stove-icon {
+    margin-left: 0.8rem;
 }
-.element-btn.size-medium.with-icon{
-    padding: 0 21px; 
+.element-btn.size-small .stove-icon ~ .btn-txt,
+.element-btn.size-xsmall .stove-icon ~ .btn-txt,
+.element-btn.size-chips32 .stove-icon ~ .btn-txt {
+    padding-left: 0.4rem;
 }
-.element-btn.size-small.with-icon{
-    padding: 0 17px; 
+.element-btn.size-small .btn-txt ~ .stove-icon,
+.element-btn.size-xsmall .btn-txt ~ .stove-icon,
+.element-btn.size-chips32 .btn-txt ~ .stove-icon {
+    margin-left: 0.4rem;
 }
-.element-btn.size-xsmall.with-icon{
-   padding: 0 12px; 
+.element-btn.size-chips28 .stove-icon ~ .btn-txt {
+    padding-left: 0.2rem;
 }
-.element-btn.size-xlarge .element-icon ~ .btn-txt,
-.element-btn.size-large .element-icon  ~ .btn-txt{
-    padding-left: 11px;
-}
-.element-btn.size-medium .element-icon ~ .btn-txt,
-.element-btn.size-small .element-icon  ~ .btn-txt,
-.element-btn.size-xsmall .element-icon ~ .btn-txt{
-    padding-left: 7px;
+.element-btn.size-chips28 .btn-txt ~ .stove-icon {
+    margin-left: 0.2rem;
 }
 
 /* color */
-.element-btn.bg-primary{
-    background-color: $bg-primary-btn;
-    border: 2px solid $bg-primary-btn;
-    &:hover{
-        background-color: $bg-primary-btn-hover;    
-        border: 2px solid $bg-primary-btn-hover;
+// Button_Primary
+.element-btn.bg-primary {
+    background-color: $ui_button_01_enabled;
+    border: 2px solid $ui_button_01_enabled;
+    &:hover {
+        background-color: $ui_button_01_hover;
+        border: 2px solid $ui_button_01_hover;
     }
-    &:active{
-        background-color: $bg-primary-btn-active;    
-        border: 2px solid $bg-primary-btn-active;
+    &:active {
+        background-color: $ui_button_01_pressed;
+        border: 2px solid $ui_button_01_pressed;
     }
-    &:focus{
+    &:focus {
         outline: none;
-        border: 2px solid $bg-primary-btn-active;
+        border: 2px solid $ui_button_01_enabled;
         box-shadow: inset 0 0 0 2px #fff;
     }
+    &:disabled,
+    &.disabled {
+        background: $ui_button_01_disabled;
+        border: 2px solid $ui_button_01_disabled;
+    }
 }
-.element-btn.bg-secondary{
-    background-color: $bg-secondary-btn;
-    border: 2px solid $bg-secondary-btn;
-    &:hover{
-        background-color: $bg-secondary-btn-hover;    
-        border: 2px solid $bg-secondary-btn-hover;
+// Button_Secondary
+.element-btn.bg-secondary {
+    background-color: $ui_button_02_enabled;
+    border: 2px solid $ui_button_02_enabled;
+    &:hover {
+        background-color: $ui_button_02_hover;
+        border: 2px solid $ui_button_02_hover;
     }
-    &:active{
-        background-color: $bg-secondary-btn-active;    
-        border: 2px solid $bg-secondary-btn-active;
+    &:active {
+        background-color: $ui_button_02_pressed;
+        border: 2px solid $ui_button_02_pressed;
     }
-    &:focus{
+    &:focus {
         outline: none;
-        border: 2px solid $bg-secondary-btn-active;
+        border: 2px solid $ui_button_02_enabled;
         box-shadow: inset 0 0 0 2px #fff;
-    }    
+    }
+    &:disabled,
+    &.disabled {
+        background: $ui_button_02_disabled;
+        border: 1px solid $ui_button_02_disabled;
+    }
 }
-.element-btn.bg-gray{
-    background-color: $bg-gray-btn;
-    border: 2px solid $bg-gray-btn;
-    &:hover{
-        background-color: $bg-gray-btn-hover;    
-        border: 2px solid $bg-gray-btn-hover;
+// Button_Tertiary
+.element-btn.bg-gray {
+    background-color: $ui_button_03_enabled;
+    border: 2px solid $ui_button_03_enabled;
+    color: #3a3a3a;
+    &:hover {
+        background-color: $ui_button_03_hover;
+        border: 2px solid $ui_button_03_hover;
     }
-    &:active{
-        background-color: $bg-gray-btn-active;    
-        border: 2px solid $bg-gray-btn-active;
+    &:active {
+        background-color: $ui_button_03_pressed;
+        border: 2px solid $ui_button_03_pressed;
     }
-    &:focus{
+    &:active {
+        background-color: $ui_button_03_pressed;
+        border: 2px solid $ui_button_03_pressed;
+    }
+    &:focus {
         outline: none;
-        background-color: $bg-gray-btn-active;    
-        border: 2px solid $bg-gray-btn-focus;
+        background-color: $ui_button_03_hover;
+        border: 2px solid $ui_button_03_pressed;
+        box-shadow: inset 0 0 0 2px #fff; 
+    }
+    &:disabled,
+    &.disabled {
+        color: #cacaca;
+        background: $ui_button_03_disabled;
+        border-color: $ui_button_03_disabled;
+    }
+}
+// Button_Quaternary
+.element-btn.bg-gray-main {
+    background-color: $ui_button_04_enabled;
+    border: 1px solid $ui_button_04_enabled;
+    color: #3a3a3a;
+    &:hover {
+        background-color: $ui_button_04_hover;
+        border: 1px solid $ui_button_04_hover;
+    }
+    &:active {
+        background-color: $ui_button_04_pressed;
+        border: 1px solid $ui_button_04_pressed;
+    }
+    &:active {
+        background-color: $ui_button_white_f_pressed;
+        border: 2px solid $ui_button_white_f_pressed;
+    }
+    &:focus {
+        outline: none;
+        background-color: $ui_button_04_hover;
+        border: 1px solid $ui_button_04_pressed;
         box-shadow: inset 0 0 0 2px #fff;
-    }    
+    }
+    &:disabled,
+    &.disabled {
+        color: #cacaca;
+        background: $ui_button_04_disabled;
+        border-color: $ui_button_04_disabled;
+    }
 }
-.element-btn.bg-white{
-    background-color: $bg-white-btn;
-    border: 2px solid $bg-white-btn;
-    &:hover{
-        background-color: $bg-white-btn-hover;    
-        border: 2px solid $bg-white-btn-hover;
+// Button_Outline
+.element-btn.bg-outline {
+    background-color: $ui_button_05_enabled;
+    border: 1px solid $ui_button_05_enabled_border;
+    color: #3a3a3a;
+    &:hover {
+        background-color: $ui_button_05_hover;
+        border: 1px solid $ui_button_05_hover_border;
     }
-    &:active{
-        background-color: $bg-white-btn-active;    
-        border: 2px solid $bg-white-btn-active;
+    &:active {
+        background-color: $ui_button_05_pressed;
+        border: 1px solid $ui_button_05_pressed_border;
     }
-    &:focus{
+    &:focus {
         outline: none;
-        background-color: $bg-white-btn-active;    
-        border: 2px solid $bg-white-btn-focus;
-        box-shadow: inset 0 0 0 1px #000;
-    }    
+        background-color: $ui_button_05_focused;
+        border: 1px solid $ui_button_05_focused_border;
+        box-shadow: inset 0 0 0 2px #fff;
+    }
+    &:disabled,
+    &.disabled {
+        background: $ui_button_05_disabled;
+        border: 1px solid $ui_button_05_disabled_border;
+    }
 }
-.element-btn.bg-ghost{
-    background-color: $bg-ghost-btn;
-    border: 1px solid #cacaca;
-    &:hover{
-        background-color: $bg-ghost-btn-hover;    
-        border: 1px solid $bg-ghost-btn-hover;
+// Button_White(fill)
+.element-btn.bg-white {
+    background-color: $ui_button_white_f_enabled;
+    border: 1px solid $ui_button_white_f_enabled;
+    color: #3a3a3a;
+    &:hover {
+        background-color: $ui_button_white_f_hover;
+        border: 1px solid $ui_button_white_f_enabled;
     }
-    &:active{
-        background-color: $bg-ghost-btn-active;    
-        border: 1px solid $bg-ghost-btn-active;
+    &:active {
+        background-color: $ui_button_white_f_pressed;
+        border: 1px solid $ui_button_white_f_enabled;
     }
-    &:focus{
+    &:focus {
         outline: none;
-        background-color: $bg-ghost-btn-active;    
-        border: 1px solid $bg-ghost-btn-focus;
-        box-shadow: inset 0 0 0 1px #000;
-    }    
+        background-color: $ui_button_white_f_focused;
+        border-color: 1px solid $ui_button_05_disabled_border;
+        border: 1px solid $ui_button_white_f_enabled;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+    }
+    &:disabled,
+    &.disabled {
+        background: $ui_button_05_disabled;
+        border: 0;
+    }
 }
+// Button_White(ghost)
+.element-btn.bg-ghost {
+    background-color: $ui_button_white_g_enabled;
+    border: 1px solid $ui_button_white_g_enabled_border;
+    color: #fff;
+    &:hover {
+        background-color: $ui_button_white_g_hover;
+        border: 1px solid $ui_button_white_g_hover_border;
+    }
+    &:active {
+        background-color: $ui_button_white_g_pressed;
+        border: 1px solid $ui_button_white_g_pressed_border;
+    }
+    &:focus {
+        outline: none;
+        background-color: $ui_button_white_g_focused;
+        border: 1px solid $ui_button_white_g_focused_border;
+        box-shadow: inset 0 0 0 2px $ui_button_white_g_enabled_border;
+    }
+    &:disabled,
+    &.disabled {
+        background: $ui_button_white_g_disabled;
+        border-color: $ui_button_white_g_disabled_border;
+        & .btn-txt {
+            color: $ui_text_white_02;
+        }
+    }
+}
+/* inverse 삭제 예정
+.element-btn.bg-inverse {
+    background-color: $ui_button_inverse_enabled;
+    border: 2px solid $ui_button_inverse_enabled;
+    color: #3a3a3a;
+    &:hover {
+        background-color: $ui_button_inverse_hover;
+        border: 2px solid $ui_button_inverse_hover;
+    }
+    &:active {
+        background-color: $ui_button_inverse_pressed;
+        border: 2px solid $ui_button_inverse_pressed;
+    }
+    &:focus {
+        outline: none;
+        background-color: $ui_button_inverse_bg_focused;
+        border: 2px solid $ui_button_inverse_border_focused;
+        box-shadow: inset 0 0 0 1px #bfbfbf; // 그림자값 수정 부탁드립니다.
+    }
+    &:disabled,
+    &.disabled {
+        background: $ui_button_inverse_disabled;
+        border-color: $ui_button_inverse_disabled;
+    }
+}*/
 
+/* mobile */
 
-    
+/* mobile 360 */
+@include mobile {
+}
+/* tablet 768 */
+@include tablet {
+}
+/* desktopM 1280 */
+@include desktopM {
+}
+/* desktopL 1440 */
+@include desktopL {
+}
+/* desktopXL 1600 */
+@include desktopXL {
+}
+/* desktop2XL 1920 */
+@include desktop2XL {
+}

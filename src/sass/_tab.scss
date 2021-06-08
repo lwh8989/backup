@@ -1,0 +1,162 @@
+@import "./helpers/z-index";
+@import "./mixin/responsive";
+@import "./responsive";
+@import "./font";
+@import "./color";
+@import "./space";
+
+.layout-tab {
+    display: none;
+    order: 2;
+    height: 4.8rem;
+    flex: 0 1 100%;
+    padding: $stds-spacing-12 $stds-spacing-16;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
+    background: $white;
+    &.is-active {
+        display: block;
+    }
+    &.is-fixed-depth1 {
+        display: block;
+        position: fixed;
+        top: $stds-fixed-depth1;
+        width: 100%;
+        z-index: $zindex-fixed;
+    }
+    &.is-fixed-depth2 {
+        display: block;
+        position: fixed;
+        top: $stds-fixed-depth2;
+        width: 100%;
+        z-index: $zindex-fixed;
+    }
+    &.is-fixed-depth3 {
+        display: block;
+        position: fixed;
+        top: $stds-fixed-depth2;
+        width: 100%;
+        z-index: $zindex-fixed;
+    }
+    .container {
+        display: flex;
+        max-width: 100%;
+        height: 2.4rem;
+    }
+}
+
+/* mobile 0 */
+@include mobile-end {}
+/* mobile 360 */
+@include mobile {}
+/* tablet 768 */
+@include tablet {}
+/* desktopSM 768 */
+@include desktopSM {
+    $stds-fixed-depth2: 6.8rem;
+    $stds-fixed-depth3: 13.6rem;
+
+    .layout-tab {
+        height: $stds-fixed-depth2;
+        padding: 2.2rem 1.6rem;
+        &.is-fixed-depth1 {
+            top: $stds-fixed-depth1;
+            z-index: $zindex-fixed;
+        }
+        &.is-fixed-depth2 {
+            top: $stds-fixed-depth2;
+            z-index: $zindex-fixed;
+        }
+        &.is-fixed-depth3 {
+            top: $stds-fixed-depth3;
+            z-index: $zindex-fixed;
+        }
+    }
+}
+/* desktopM 1280 */
+@include desktopM {
+    $stds-fixed-depth2: 6.8rem;
+    $stds-fixed-depth3: 13.6rem;
+
+    .layout-tab {
+        height: $stds-fixed-depth2;
+        padding: 2.2rem 1.6rem;
+        &.is-fixed-depth1 {
+            top: $stds-fixed-depth1;
+            z-index: $zindex-fixed;
+        }
+        &.is-fixed-depth2 {
+            top: $stds-fixed-depth2;
+            z-index: $zindex-fixed;
+        }
+        &.is-fixed-depth3 {
+            top: $stds-fixed-depth3;
+            z-index: $zindex-fixed;
+        }
+    }
+}
+/* desktopL 1440 */
+@include desktopL {
+    $stds-fixed-depth2: 6.8rem;
+    $stds-fixed-depth3: 13.6rem;
+
+    .layout-tab {
+        height: $stds-fixed-depth2;
+        padding: 2.2rem 1.6rem;
+        &.is-fixed-depth1 {
+            top: $stds-fixed-depth1;
+            z-index: $zindex-fixed;
+        }
+        &.is-fixed-depth2 {
+            top: $stds-fixed-depth2;
+            z-index: $zindex-fixed;
+        }
+        &.is-fixed-depth3 {
+            top: $stds-fixed-depth3;
+            z-index: $zindex-fixed;
+        }
+    }
+}
+/* desktopXL 1600 */
+@include desktopXL {
+    $stds-fixed-depth2: 6.8rem;
+    $stds-fixed-depth3: 13.6rem;
+
+    .layout-tab {
+        height: $stds-fixed-depth2;
+        padding: 2.2rem 1.6rem;
+        &.is-fixed-depth1 {
+            top: $stds-fixed-depth1;
+            z-index: $zindex-fixed;
+        }
+        &.is-fixed-depth2 {
+            top: $stds-fixed-depth2;
+            z-index: $zindex-fixed;
+        }
+        &.is-fixed-depth3 {
+            top: $stds-fixed-depth3;
+            z-index: $zindex-fixed;
+        }
+    }
+}
+/* desktop2XL 1920 */
+@include desktop2XL {
+    $stds-fixed-depth2: 6.8rem;
+    $stds-fixed-depth3: 13.6rem;
+
+    .layout-tab {
+        height: $stds-fixed-depth2;
+        padding: 2.2rem 1.6rem;
+        &.is-fixed-depth1 {
+            top: $stds-fixed-depth1;
+            z-index: $zindex-fixed;
+        }
+        &.is-fixed-depth2 {
+            top: $stds-fixed-depth2;
+            z-index: $zindex-fixed;
+        }
+        &.is-fixed-depth3 {
+            top: $stds-fixed-depth3;
+            z-index: $zindex-fixed;
+        }
+    }
+}  

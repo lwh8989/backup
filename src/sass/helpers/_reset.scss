@@ -1,0 +1,193 @@
+/* reset */
+html,
+body,
+div,
+span,
+iframe,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+pre,
+a,
+address,
+button,
+em,
+img,
+strong,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+video,
+input,
+textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    word-break: normal;
+    word-wrap: break-word;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+select,
+input,
+textarea {
+    border: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: none;
+    outline: 0;
+}
+
+input[type='text']::-ms-clear {
+    display: none;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #999;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #999;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #999;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #999;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #999;
+}
+
+/* common */
+.blind {
+    overflow: hidden;
+    font-size: 0;
+    white-space: nowrap;
+}
+
+/* layout */
+body,
+html {
+    height: 100%;
+    position: relative;
+    // overflow-x: hidden;
+}
+
+/* [D] 브라우저 정책 추가 시 .is-gnb-banner 클래스를 추가 해 주세요. */
+// body.is-gnb-banner {
+//     margin-top: 100px;
+// }
+
+/* [D] display: none; 같이 감추는 기능을 가진 CSS*/
+// .sr-only {
+//     position: absolute;
+//     width: 1px;
+//     height: 1px;
+//     padding: 0;
+//     margin: -1px;
+//     overflow: hidden;
+//     clip: rect(0, 0, 0, 0);
+//     border: 0;
+// }
+
+// .sr-only-focusable:active,
+// .sr-only-focusable:focus {
+//     position: static;
+//     width: auto;
+//     height: auto;
+//     margin: 0;
+//     overflow: visible;
+//     clip: auto;
+// }

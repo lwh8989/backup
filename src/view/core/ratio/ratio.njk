@@ -1,0 +1,68 @@
+{% extends "_include/layout/guide/guide.njk" %}
+
+<!-- styles -->
+{% block styles %}{% endblock %}
+
+<!-- styles -->
+{% block content %}
+    <div class="guide">
+        <h1 class="guide-tit">Ratio</h1>
+        <div class="tit">
+            <b>Stove Ratio</b>            
+        </div>
+        <div class="desc">
+            스토브의 이미지 비율은 3가지 타입으로 나뉘어집니다. <br>
+            정비율 (1:1) , 포스터비율(3:4, 4:3) , 미디어비율(16:9, 9:16) 의 비율중 하나를 선택하여 컨텐츠 성격에 맞게 작업합니다.
+        </div>
+
+        <div class="demo-wrap">
+            <div class="resizable">
+                <dl class="dl-list">
+                    <dt>[ 정비율 (1:1 Ratio) ]</dt>
+                    <dd>정비율 이미지는 주로 유저가 직접 업로드한 성격의 컨텐츠 혹은 프로필 이미지 성격의 썸네일 이미지에 사용됩니다.</dd>
+                </dl>
+                <div class="resizers">
+                    <div class="col-1">
+                        <div class="thumb thumb-1-1"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resizable">
+                <dl class="dl-list">
+                    <dt>[ 포스터 비율 (3:4 / 4:3 Ratio) ]</dt>
+                    <dd>포스터 비율은 주로 게임 포스터 이미지 혹은, 게임 프로필 이미지 성격의 썸네일 및 이미지 성격의 컨텐츠에 사용됩니다.</dd>
+                </dl>
+                <div class="resizers">
+                    <div class="col-2">
+                        <div class="thumb thumb-3-4"></div>
+                    </div>
+                    <div class="col-2">
+                        <div class="thumb thumb-4-3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resizable">
+                <dl class="dl-list">
+                    <dt>[ 미디어 비율 (16:9 / 9:16 Ratio) ]</dt>
+                    <dd>미디어 비율은 주로 동영상 성격의 컨텐츠에 사용됩니다.</dd>
+                </dl>
+                <div class="resizers">
+                    <div class="col-2">
+                        <div class="thumb thumb-16-9"></div>
+                    </div>
+                    <div class="col-2">
+                        <div class="thumb thumb-9-16"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<!-- dialog -->
+{% block dialog %}{% endblock %}
+
+<!-- scripts -->
+{% block scripts %}{% endblock %}

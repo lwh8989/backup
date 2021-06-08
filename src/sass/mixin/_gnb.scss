@@ -1,0 +1,88 @@
+@import "./../helpers/z-index";
+@import "./responsive";
+@import "./../responsive";
+
+@mixin layoutHeader(
+    $order: 1,
+    $height: $stds-fixed-depth2,
+    $flex: 0 1 100%,
+    $background: #ddd
+    ) {
+    order: $order;
+    height: $height;
+    flex: $flex;
+    background: $background;
+}
+
+.layout-header {
+    @include layoutHeader($background:#ddd);
+    .is-fixed-depth1 {
+        position: fixed;
+        top: $stds-fixed-depth1;
+        width: 100%;
+        z-index: $zindex-fixed;
+    }
+    .is-fixed-depth2 {
+        position: fixed;
+        top: $stds-fixed-depth2;
+        width: 100%;
+        z-index: $zindex-fixed;
+    }
+    .is-fixed-depth3 {
+        position: fixed;
+        top: $stds-fixed-depth3;
+        width: 100%;
+        z-index: $zindex-fixed;
+    }
+}
+/* mobile 0 */
+@include mobile-end {}
+/* mobile 360 */
+@include mobile {}
+/* tablet 768 */
+@include tablet {}
+/* desktopSM 1024 */
+@include desktopSM {
+    $stds-fixed-depth2: 6.8rem;
+    $stds-fixed-depth3: 13.6rem;
+
+    .layout-header {
+        height: $stds-fixed-depth2;
+    }
+}
+/* desktopM 1280 */
+@include desktopM {
+    $stds-fixed-depth2: 6.8rem;
+    $stds-fixed-depth3: 13.6rem;
+
+    .layout-header {
+        height: $stds-fixed-depth2;
+    }
+}
+/* desktopL 1440 */
+@include desktopL {
+    $stds-fixed-depth2: 6.8rem;
+    $stds-fixed-depth3: 13.6rem;
+
+    .layout-header {
+        height: $stds-fixed-depth2;
+    }
+}
+/* desktopXL 1600 */
+@include desktopXL {
+    $stds-fixed-depth2: 6.8rem;
+    $stds-fixed-depth3: 13.6rem;
+
+    .layout-header {
+        height: $stds-fixed-depth2;
+    }
+}
+/* desktop2XL 1920 */
+@include desktop2XL {
+    $stds-fixed-depth2: 6.8rem;
+    $stds-fixed-depth3: 13.6rem;
+
+    .layout-header {
+        height: $stds-fixed-depth2;
+    }
+}  

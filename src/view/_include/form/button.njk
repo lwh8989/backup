@@ -1,0 +1,28 @@
+{% macro base(shapeClass, sizeClass, colorClass, fontClass, txt, state) %}
+    <button class="element-btn {{ shapeClass }} {{ fontClass }} {{ colorClass }} {{ sizeClass }}" {{ state }}>
+        <span class="btn-txt">{{txt}}</span>
+    </button>
+{% endmacro %}
+{% macro aLink(shapeClass, sizeClass, colorClass, fontClass, txt, state) %}
+    <a href="#" class="element-btn {{ shapeClass }} {{ fontClass }} {{ colorClass }} {{ sizeClass }} {{ state }}" >
+        <span class="btn-txt">{{txt}}</span>
+    </a>
+{% endmacro %}
+{% macro withIcon(shapeClass, sizeClass, colorClass, fontClass, txt, withIcon, iconClass ,state) %}
+    <button class="element-btn {{ shapeClass }} {{ fontClass }} {{ colorClass }} {{ sizeClass }} {{withIcon}} " {{ state }}>
+        <span class="stove-icon {{ iconClass }}" style=""></span>
+        <span class="btn-txt">{{txt}}</span>
+    </button>
+{% endmacro %}
+{% macro withIconInverse(shapeClass, sizeClass, colorClass, fontClass, txt, withIcon, iconClass ,state) %}
+    <button class="element-btn {{ shapeClass }} {{ fontClass }} {{ colorClass }} {{ sizeClass }} {{withIcon}} " {{ state }}>
+        <span class="btn-txt">{{txt}}</span>
+        <span class="stove-icon {{ iconClass }}" style=""></span>
+    </button>
+{% endmacro %}
+{% macro onlyIcon(shapeClass, sizeClass, colorClass, txt, fontClass, onlyIcon, iconClass, state) %}
+    <button class="element-btn {{ shapeClass }} {{ fontClass }} {{ colorClass }} {{ sizeClass }} {{onlyIcon}} " {{ state }}>
+        <span class="stove-icon {{ iconClass }}" style=""></span>
+    </button>
+{% endmacro %}
+

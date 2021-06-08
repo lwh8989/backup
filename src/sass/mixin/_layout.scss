@@ -1,0 +1,209 @@
+@use "./../space";
+@import "./../responsive";
+@import "./responsive";
+@import "./footer";
+
+/* layout */
+@mixin layoutContainer (
+    $position: relative,
+    $display: flex,
+    $flex-flow: row wrap,
+    $justify-content: space-around,
+    $align-items: center,
+    $width: 100%,
+    $height: 100%,
+    $margin: 0 $stds-spacing-16,
+) {
+    position: $position;
+    display: $display;
+    flex-flow: $flex-flow;
+    width: $width;
+    height: $height;
+    margin: $margin;
+    justify-content: $justify-content;
+    align-items: null;
+}
+
+/* layout Style order 2 */
+@mixin layoutBasic
+(
+    $position: relative,
+    $display: flex,
+    $max-width: auto,
+    $width: auto,
+    $min-width: auto,
+    $max-height: auto,
+    $height: auto,
+    $min-height: auto,
+    $flex: 1,
+    $order: 3
+) {
+    position: $position;
+    max-width: $max-width;
+    width: $width;
+    height: $height;
+    min-height: $min-height;
+    flex: $flex;
+    order: $order;
+}
+
+.layout-container {
+    @include layoutContainer($width: null);     
+    .layout-basic {
+        @include layoutBasic(
+            $max-width: null, 
+            $min-width: null, 
+            $min-height: null, 
+        );
+        // [D] .is-fixed-depth1 / .is-fixed-depth2 / is-fixed-depth3 
+        &.is-fixed-depth1 {
+            margin-top: $stds-fixed-depth1; // 0
+        }
+        &.is-fixed-depth2 {
+            margin-top: $stds-fixed-depth2; // 1depth
+        }
+        &.is-fixed-depth3 {
+            margin-top: $stds-fixed-depth3; // 2depth
+        }
+    }
+}
+
+@include mobile-end {    
+    .layout-footer {
+        @include layoutFooter($top: $stds-spacing-80);
+    }
+}
+
+/* mobile 360 */
+@include mobile {
+    .layout-footer {
+        @include layoutFooter($top: $stds-spacing-80);
+    }
+}
+
+/* tablet 768 */
+@include tablet {  
+    .layout-footer {
+        @include layoutFooter($top: $stds-spacing-120);
+    }
+}
+
+/* desktopM 1024 */
+@include desktopSM {
+    .layout-container {
+        @include layoutContainer($width: null, $margin: 0 $stds-spacing-48);
+        .layout-basic {
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
+
+            &.is-fixed-depth1 {
+                margin-top: $stds-fixed-depth1;
+            }
+            &.is-fixed-depth2 {
+                margin-top: $stds-fixed-depth2;
+            }
+            &.is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
+            }
+        }
+    }
+    .layout-footer {
+        @include layoutFooter($top: $stds-spacing-200);
+    }
+}
+
+/* desktopM 1280 */
+@include desktopM {
+    .layout-container {
+        @include layoutContainer($width: null, $margin: 0 $stds-spacing-48);
+        .layout-basic {
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
+
+            &.is-fixed-depth1 {
+                margin-top: $stds-fixed-depth1;
+            }
+            &.is-fixed-depth2 {
+                margin-top: $stds-fixed-depth2;
+            }
+            &.is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
+            }
+        }
+    }
+    .layout-footer {
+        @include layoutFooter($top: $stds-spacing-200);
+    }
+}
+
+/* desktopL 1440 */
+@include desktopL {
+    .layout-container {
+        @include layoutContainer($width: null, $margin: 0 $stds-spacing-52);
+        .layout-basic {
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
+
+            &.is-fixed-depth1 {
+                margin-top: $stds-fixed-depth1;
+            }
+            &.is-fixed-depth2 {
+                margin-top: $stds-fixed-depth2;
+            }
+            &.is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
+            }
+        }
+    }
+    .layout-footer {
+        @include layoutFooter($top: $stds-spacing-200);
+    }
+}
+
+/* desktopXL 1600 */
+@include desktopXL {
+    .layout-container {
+        @include layoutContainer($width: null, $margin: 0 $stds-spacing-52);
+        .layout-basic {
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
+
+            &.is-fixed-depth1 {
+                margin-top: $stds-fixed-depth1;
+            }
+            &.is-fixed-depth2 {
+                margin-top: $stds-fixed-depth2;
+            }
+            &.is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
+            }
+        }
+    }
+    .layout-footer {
+        @include layoutFooter($top: $stds-spacing-200);
+    }
+}
+
+/* desktop2XL 1920 */
+@include desktop2XL {
+    .layout-container {
+        @include layoutContainer($width: null, $margin: 0 $stds-spacing-52);
+        .layout-basic {
+            $stds-fixed-depth2: 6.8rem;
+            $stds-fixed-depth3: 13.6rem;
+
+            &.is-fixed-depth1 {
+                margin-top: $stds-fixed-depth1;
+            }
+            &.is-fixed-depth2 {
+                margin-top: $stds-fixed-depth2;
+            }
+            &.is-fixed-depth3 {
+                margin-top: $stds-fixed-depth3;
+            }
+        }
+    }
+    .layout-footer {
+        @include layoutFooter($top: $stds-spacing-200);
+    }
+}

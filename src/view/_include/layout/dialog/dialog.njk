@@ -1,0 +1,8 @@
+{% import "_include/partial/dialog/dialog.njk" as dialog %}
+
+{% macro base(stateClass, style) %}
+<div class="module-dimmed {{ stateClass }}" style="{{ style }}">
+ {{ dialog.dialogBase(posClass="pos-center") }}
+ {# <div class="dimmed"></div> #}
+</div>
+{% endmacro %} 

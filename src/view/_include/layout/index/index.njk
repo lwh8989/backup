@@ -1,0 +1,41 @@
+{% import "_include/layout/head/head.njk" as headLink %}
+{% import "_include/layout/scroll/scroll.njk" as scroll %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  {{ headLink.base(tit="Stove Core UI") }}
+  {% block styles %}{% endblock %}
+</head>
+<!-- STOVE Layout -->
+<!-- [D] Dialog 등장 시 body에 .is-scroll-fixed를 추가 해 주세요. -->
+<body>
+  <!-- [D] GNB  -->
+  {% block gnb %}{% endblock %}
+
+  <!-- [D] layout-navigation .is-active / .is-fixed-depth1 / .is-fixed-depth2 / .is-fixed-depth3 -->
+  {% block navSection %}{% endblock %}
+
+  <!-- [D] layout-tab .is-active / .is-fixed-depth1 / .is-fixed-depth2 / .is-fixed-depth3 -->
+  {% block tabSection %}{% endblock %}
+
+  <!-- [D] Layout Container  -->
+  <div class="layout-container">
+    <!-- [D] layout-Style .is-fixed-depth1 / .is-fixed-depth2 / .is-fixed-depth3 -->
+    {% block content %}{% endblock %}
+  </div>
+
+  {% block footer %}{% endblock %}
+
+  {% block dialog %}{% endblock %}
+
+  {% block lnbSide %}{% endblock %}
+
+  {% block gnbSide %}{% endblock %}
+
+  {% block scripts %}{% endblock %}
+
+</body>
+<!-- [D] 공통으로 사용하는 scroll -->
+{{ scroll.scrollBase() }}
+</html>

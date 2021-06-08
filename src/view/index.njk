@@ -188,7 +188,8 @@
           .innerHTML;
         var listHtml = "";
 
-        for (var item of data) {
+        for (var i = 0; i < data.length; i++) {
+          var item = data[i];
           filter = item
             .path
             .split('/')[0];

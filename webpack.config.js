@@ -65,10 +65,14 @@ module.exports = async function () {
 
   return {
     mode: isProd ? "production" : "development",
+    target: ['web', 'es5'],
     entry: {
       core: "./src/sass/core.scss",
       view: entryFiles.map((entry) => path.resolve(__dirname, entry)),
       ...guides,
+    },
+    output: {
+      publicPath: '/'
     },
     devServer: {
       port: 9009,

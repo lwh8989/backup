@@ -44,7 +44,11 @@ module.exports = async function () {
 
   return {
     mode: "development",
+    target: ['web', 'es5'],
     entry,
+    output: {
+      publicPath: '/'
+    },
     devServer: {
       port: 9009,
       hot: true,

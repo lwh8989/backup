@@ -1,0 +1,29 @@
+/* Font */
+/* otf 확장자 공유 받지 못함 */
+
+/* [S] TC */
+@font-face {
+  font-family: 'Inter TC';
+  font-style: normal;
+  font-weight: normal;
+  src: url(https://static-cdn-dev.onstove.com/0.0.1/font/tc/woff2/InterTC-Regular.woff2) format('woff2'), url(https://static-cdn-dev.onstove.com/0.0.1/font/tc/woff/InterTC-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Inter TC';
+  font-style: normal;
+  font-weight: bold;
+  src: url(https://static-cdn-dev.onstove.com/0.0.1/font/tc/woff2/InterTC-Bold.woff2) format('woff2'), url(https://static-cdn-dev.onstove.com/0.0.1/font/tc/woff/InterTC-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: normal;
+  src: url(https://static-cdn-dev.onstove.com/0.0.1/font/tc/woff2/NotoSansTC-Regular.woff2) format('woff2'), url(https://static-cdn-dev.onstove.com/0.0.1/font/tc/woff/NotoSansTC-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: bold;
+  src: url(https://static-cdn-dev.onstove.com/0.0.1/font/tc/woff2/NotoSansTC-Bold.woff2) format('woff2'), url(https://static-cdn-dev.onstove.com/0.0.1/font/tc/woff/NotoSansTC-Bold.woff) format('woff');
+}
+/* [E] TC */

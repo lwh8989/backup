@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Sarabun';
+    font-style: normal;
+    font-weight: normal;
+    src: url(woff2/Sarabun-Light.woff2) format('woff2'), url(woff/Sarabun-Light.woff) format('woff'), url(otf/Sarabun-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-style: normal;
+    font-weight: 700;
+    src: url(woff2/Sarabun-Medium.woff2) format('woff2'), url(woff/Sarabun-Medium.woff) format('woff'), url(otf/Sarabun-Medium.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-style: normal;
+    font-weight: 900;
+    src: url(woff2/Sarabun-Regular.woff2) format('woff2'), url(woff/Sarabun-Regular.woff) format('woff'),
+        url(otf/Sarabun-Regular.otf) format('opentype');
+}

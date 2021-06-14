@@ -1,0 +1,23 @@
+/* Font */
+/* otf 확장자 공유 받지 못함 */
+
+/* [S] Global */
+@font-face {
+  font-family: 'Inter Global';
+  font-style: normal;
+  font-weight: normal;
+  src: url(woff/InterGlobal-Regular.woff),
+  url(woff2/InterGlobal-Regular.woff2);
+  /* src: url(https://static-cdn-dev.onstove.com/0.0.1/font/inter/woff2/InterGlobal-Regular.woff2) format('woff2'), 
+    url(https://static-cdn-dev.onstove.com/0.0.1/font/inter/woff/InterGlobal-Regular.woff) format('woff'); */
+}
+@font-face {
+  font-family: 'Inter Global';
+  font-style: normal;
+  font-weight: bold;
+  src: url(woff/InterGlobal-Bold.woff),
+  url(woff2/InterGlobal-Bold.woff2);
+  /* src: url(https://static-cdn-dev.onstove.com/0.0.1/font/inter/woff2/InterGlobal-Bold.woff2) format('woff2'), 
+    url(https://static-cdn-dev.onstove.com/0.0.1/font/inter/woff/InterGlobal-Bold.woff) format('woff'); */
+}
+/* [E] Global */

@@ -32,31 +32,31 @@ h6.is-hidden {
 
 /* fonts by lang */
 /* Korea */
-@include stds-font-mixin.stdsLang($lang: "ko", $inter: "inter KR", $noto: "Noto Sans KR");
+@include stds-font-mixin.stdsLang($lang: "ko", $name: "Spoqa Han Sans Neo KR");
 
 /* English */
-@include stds-font-mixin.stdsLang($lang: "en ", $inter: "inter Global", $noto: "null");
+@include stds-font-mixin.stdsLang($lang: "en ", $name: "inter Global");
 
 /* Chinese zh */
-@include stds-font-mixin.stdsLang($lang: "zh ", $inter: "inter SC", $noto: "Noto Sans SC");
+@include stds-font-mixin.stdsLang($lang: "zh ", $name: "Microsoft YaHei UI");
 
 /* Chinese zh-tw */
-@include stds-font-mixin.stdsLang($lang: "zh-tw ", $inter: "inter TC", $noto: "Noto Sans TC");
+@include stds-font-mixin.stdsLang($lang: "zh-tw ", $name: "Microsoft JhengHei UI");
 
 /* Japan */
-@include stds-font-mixin.stdsLang($lang: "ja ", $inter: "inter JP", $noto: "Noto Sans JP");
+@include stds-font-mixin.stdsLang($lang: "ja ", $name: "Meiryo" "Yu Gothic UI");
 
 /* French */
-@include stds-font-mixin.stdsLang($lang: "fr ", $inter: "inter Global", $noto: "null");
+@include stds-font-mixin.stdsLang($lang: "fr ", $name: "inter Global");
 
 /* Portugal */
-@include stds-font-mixin.stdsLang($lang: "pt ", $inter: "inter Global", $noto: "null");
+@include stds-font-mixin.stdsLang($lang: "pt ", $name: "inter Global");
 
 /* Spanish */
-@include stds-font-mixin.stdsLang($lang: "es ", $inter: "inter Global", $noto: "null");
+@include stds-font-mixin.stdsLang($lang: "es ", $name: "inter Global");
 
 /* German */
-@include stds-font-mixin.stdsLang($lang: "de ", $inter: "inter Global", $noto: "null");
+@include stds-font-mixin.stdsLang($lang: "de ", $name: "inter Global");
 
 /* Thailand */
-@include stds-font-mixin.stdsLang($lang: "th ", $inter: "inter Thai", $noto: "Noto Sans Thai");
+@include stds-font-mixin.stdsLang($lang: "th ", $name: "Leelawadee UI");

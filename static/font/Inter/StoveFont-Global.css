@@ -9,6 +9,7 @@
   src: url(./otf/Inter-Regular.otf) format('otf'),
     url(./woff/Inter-Regular.woff) format('woff'),
     url(./woff2/Inter-Regular.woff2) format('woff2');
+  font-display: fallback;
   /* src: url(https://static-cdn-dev.onstove.com/0.0.1/font/inter/woff2/InterGlobal-Regular.woff2) format('woff2'), 
     url(https://static-cdn-dev.onstove.com/0.0.1/font/inter/woff/InterGlobal-Regular.woff) format('woff'); */
 }
@@ -19,6 +20,7 @@
   src: url(woff/InterGlobal-Bold.otf) format('otf'),
     url(woff2/InterGlobal-Bold.woff) format('woff'),
     url(woff2/InterGlobal-Bold.woff2) format('woff2');
+  font-display: fallback;
   /* src: url(https://static-cdn-dev.onstove.com/0.0.1/font/inter/woff2/InterGlobal-Bold.woff2) format('woff2'), 
     url(https://static-cdn-dev.onstove.com/0.0.1/font/inter/woff/InterGlobal-Bold.woff) format('woff'); */
 }

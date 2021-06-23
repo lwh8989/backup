@@ -1,18 +1,10 @@
 /* Font */
 /* otf 확장자 공유 받지 못함 */
-$font-cdn: "https://static-cdn.onstove.com/0.0.1";
+$font-cdn: "https://static-cdn-qa.onstove.com/0.0.3";
 // /* 한국어 */
-@import url("#{$font-cdn}/font/kr/StoveFont-KR.css");
+@import url("#{$font-cdn}/font/SpoqaSans/StoveFont-KR.css");
 // /* 영어 */
-@import url("#{$font-cdn}/font/inter/StoveFont-Global.css");
-// /* 일본어 */
-@import url("#{$font-cdn}/font/jp/StoveFont-JP.css");
-// /* 중국어(간체) */
-@import url("#{$font-cdn}/font/sc/StoveFont-SC.css");
-// /* 중국어(번체) */
-@import url("#{$font-cdn}/font/tc/StoveFont-TC.css");
-// /* 태국어 */
-@import url("#{$font-cdn}/font/thai/StoveFont-Thai.css");
+@import url("#{$font-cdn}/font/Inter/StoveFont-Global.css");
 
 /* Font Icon */
 @import url("#{$font-cdn}/font-icon/StoveFont-Icon.css");

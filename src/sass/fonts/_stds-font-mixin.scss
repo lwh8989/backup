@@ -108,7 +108,7 @@
 
 /* Mixin */
 /* Family-lang */
-@mixin stdsLang($lang, $inter, $noto) {
+@mixin stdsLang($lang, $name) {
     :lang(#{$lang}) body,
     :lang(#{$lang}) a,
     :lang(#{$lang}) button,
@@ -121,14 +121,13 @@
     :lang(#{$lang}) h5,
     :lang(#{$lang}) h6 {
         font-family: 
-        $inter,
-        $noto,
-        -apple-system,
-        Segoe UI,
-        Helvetica,
-        Arial,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji
+            "#{$name}",
+            -apple-system,
+            Segoe UI,
+            Helvetica,
+            Arial,
+            sans-serif,
+            Apple Color Emoji,
+            Segoe UI Emoji
     }
 }

@@ -1,72 +1,27 @@
 /* Font */
-/* otf 확장자 공유 받지 못함 */
-
 /* [S] KR */
 @font-face {
-  font-family: 'Inter KR';
+  font-family: 'Spoqa Han Sans Neo KR';
   font-style: normal;
   font-weight: normal;
-  src: url(./woff/InterKR-Regular.woff),
-  url(./woff2/InterKR-Regular.woff2);
-  /* unicode-range: U+0030-0039,
-  U+0041-005A,
-  U+0061-007A; */
+  src: url(./eot/SpoqaHanSansNeo-Regular.eot) format('eot'),
+    url(./otf/SpoqaHanSansNeo-Regular.otf) format('otf'),
+    url(./woff/SpoqaHanSansNeo-Regular.woff) format('woff'),
+    url(./woff2/SpoqaHanSansNeo-Regular.woff2) format('woff2');
   font-display: fallback;
   /* src: url(https://static-cdn-dev.onstove.com/0.0.1/font/kr/woff2/InterKR-Regular.woff2) format('woff2'), 
   url(https://static-cdn-dev.onstove.com/0.0.1/font/kr/woff/InterKR-Regular.woff) format('woff'); */
 }
 @font-face {
-  font-family: 'Inter KR';
+  font-family: 'Spoqa Han Sans Neo KR';
   font-style: normal;
   font-weight: bold;
-  src: url(./woff/InterKR-Bold.woff),
-  url(./woff2/InterKR-Bold.woff2);
-  /* unicode-range: U+0030-0039,
-  U+0041-005A,
-  U+0061-007A; */
-  font-display: fallback;
+  src: url(./eot/SpoqaHanSansNeo-Bold.eot) format('eot'),
+    url(./otf/SpoqaHanSansNeo-Bold.otf) format('otf'),
+    url(./woff/SpoqaHanSansNeo-Bold.woff) format('woff'),
+    url(./woff2/SpoqaHanSansNeo-Bold.woff2) format('woff2');
+  font-display: fallback;  
   /* src: url(https://static-cdn-dev.onstove.com/0.0.1/font/kr/woff2/InterKR-Bold.woff2) format('woff2'),
    url(https://static-cdn-dev.onstove.com/0.0.1/font/kr/woff/InterKR-Bold.woff) format('woff'); */
 }
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: normal;
-  src: url(./woff/NotoSansKR-Regular.woff),
-  url(./woff2/NotoSansKR-Regular.woff2);
-  font-display: fallback;
-  /* src: url(https://static-cdn-dev.onstove.com/0.0.1/font/kr/woff2/NotoSansKR-Regular.woff2) format('woff2'), 
-  url(https://static-cdn-dev.onstove.com/0.0.1/font/kr/woff/NotoSansKR-Regular.woff) format('woff'); */
-}
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: bold;
-  src: url(./woff/NotoSansKR-Bold.woff),
-  url(./woff2/NotoSansKR-Bold.woff2);
-  font-display: fallback;
-  /* src: url(https://static-cdn-dev.onstove.com/0.0.1/font/kr/woff2/NotoSansKR-Bold.woff2) format('woff2'),
-   url(https://static-cdn-dev.onstove.com/0.0.1/font/kr/woff/NotoSansKR-Bold.woff) format('woff'); */
-}
-
-@font-face {
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-  font-style: normal;
-  font-weight: normal;
-  src: url(./woff/SpoqaHanSansNeo-Regular.woff),
-  url(./woff2/SpoqaHanSansNeo-Regular.woff2);
-  font-display: fallback;
-}
-
-@font-face {
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-  font-style: normal;
-  font-weight: bold;
-  src: url(./woff/SpoqaHanSansNeo-Bold.woff),
-  url(./woff2/SpoqaHanSansNeo-Bold.woff2);
-  font-display: fallback;
-}
-
-
-
 /* [E] KR */

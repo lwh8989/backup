@@ -74,16 +74,14 @@ $elementHeight: (4, 16, 20, 24, 28, 32, 36, 40, 44, 48, 56);
     @if $h >= 24 {
         .#{"h" + $h + ""} {
             &.element-badge {
-                padding: 0 0.8rem;
-                font-size: 1.3rem;
+                padding: 0 $stds-spacing-8;
             }
         }
     }
     @if $h <= 20 {
         .#{"h" + $h + ""} {
             &.element-badge {
-                padding: 0 0.6rem;
-                font-size: 1.1rem;
+                padding: 0 $stds-spacing-4;
             }
         }
     }

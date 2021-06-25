@@ -73,7 +73,7 @@
 @mixin stdsButton1($weight: normal) {
     font-size: $stdsButton1;
     font-weight: $weight;
-    line-height: $stdsLineHeightL;
+    line-height: $stdsLineHeightM;
 }
 
 @mixin stdsButton2($weight: normal) {

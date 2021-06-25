@@ -14,15 +14,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "private": true,
-  "browserslist": [
-    "defaults",
-    "last 2 versions",
-    "ie >= 10",
-    "Safari >= 12",
-    "ios_saf >= 10",
-    "iOS >= 10"
-  ],
   "devDependencies": {
     "@babel/cli": "7.14.3",
     "@babel/core": "7.14.3",

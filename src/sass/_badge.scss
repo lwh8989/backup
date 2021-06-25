@@ -1,15 +1,16 @@
-@use "./mixin/mixin";
-@use "./color";
-@use "./space";
-@use "./radius";
-@use "./font";
+@import "./mixin/mixin";
+@import "./fonts/stds-font-mixin";
+@import "./color";
+@import "./space";
+@import "./radius";
+@import "./font";
 
 $elementBgcolor: (
-    orange: color.$orange500,
-    red: color.$tint_reda400,
-    purple: color.$tint_purplea400,
-    blue: color.$tint_bluea400,
-    gray: color.$gray700,
+    orange: $orange500,
+    red: $tint_reda400,
+    purple: $tint_purplea400,
+    blue: $tint_bluea400,
+    gray: $gray700,
 );
 
 @each $name, $color in $elementBgcolor {
@@ -22,9 +23,9 @@ $elementBgcolor: (
 
 .element-badge {
     @include flex($type: inline-flex, $x: center, $y: center);
-    color: color.$white;
-    border-radius: radius.$radius-XS;
-    font-weight: font.$stdsWeightBold;
+    color: $white;
+    border-radius: $radius-XS;
+    @include chips2;
     &.round {
         border-radius: 99.9rem;
     }

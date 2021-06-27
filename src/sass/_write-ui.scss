@@ -16,8 +16,8 @@
         .swiper-nav-container {
             position: relative;
             width: 100%;
-            height: 4.4rem;
-            padding: 0 4.4rem;
+            height: space.$stds-spacing-44;
+            padding: 0 space.$stds-spacing-44;
             background-color: color.$ui_bg_surface_gray25;
             border-bottom: 1px solid #efefef;
             overflow: hidden;
@@ -421,6 +421,7 @@
             }
         }
     }
+    /* 플로라에디터 Header 초기화 확인하기 */
 }
 
 /* Desktop (max-width: 768px) */

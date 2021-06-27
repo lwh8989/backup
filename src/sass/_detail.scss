@@ -42,6 +42,7 @@
             display: flex;
             .info {
                 flex: 1;
+                margin-bottom: space.$stds-spacing-24;
                 .nick {
                     .profile-link {
                         .profile-img {
@@ -53,9 +54,9 @@
             }
             .info-btn {
                 display: flex;
-                align-items: center;
+                align-items: baseline;
                 i {
-                    font-size: 2rem;
+                    font-size: 2rem; 
                     color: color.$ui_icon_05_enabled;
                     &:hover {
                         color: color.$ui_icon_05_hover;

@@ -40,9 +40,9 @@
     }
 
     ul {
-        padding-left: 3.2rem;
-        margin-top: 1.6rem;
-        margin-bottom: 1.6rem;
+        padding-left: space.$stds-spacing-32;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
         list-style: inherit;
 
         li {
@@ -51,9 +51,9 @@
     }
 
     ol {
-        padding-left: 3.2rem;
-        margin-top: 1.6rem;
-        margin-bottom: 1.6rem;
+        padding-left: space.$stds-spacing-32;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
 
         li {
             list-style: decimal;
@@ -61,26 +61,26 @@
     }
 
     strong {
-        margin-top: 1.6rem;
-        margin-bottom: 1.6rem;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
         font-weight: font.$stdsWeightBold;
     }
 
     em {
-        margin-top: 1.6rem;
-        margin-bottom: 1.6rem;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
         font-style: italic;
     }
 
     u {
-        margin-top: 1.6rem;
-        margin-bottom: 1.6rem;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
         text-decoration: underline;
     }
 
     s {
-        margin-top: 1.6rem;
-        margin-bottom: 1.6rem;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
         text-decoration: line-through;
     }
 
@@ -105,6 +105,7 @@
     img {
         width: 100%;
         vertical-align: bottom !important;
+        margin: space.$stds-spacing-4 0;
     }
 
     span[style~='font-size:'] a {
@@ -132,7 +133,7 @@
     }
 
     .module-editor {
-        margin: 20px 0 !important;
+        margin: space.$stds-spacing-20 0 !important;
     }
 
     .fr-video {
@@ -155,9 +156,9 @@
 /* Emoji S */
 .emoji-wrap {
     display: inline-block;
-    margin: 4px 0;
-    width: 100px !important;
-    height: 100px !important;
+    margin: space.$stds-spacing-4 0;
+    width: 10rem !important;
+    height: 10rem !important;
     img {
         max-width: 100%;
         height: auto;
@@ -165,18 +166,18 @@
 }
 .emoji__img {
     display: inline-block;
-    margin: 4px 0;
-    width: 100px;
-    height: 100px;
+    margin: space.$stds-spacing-4 0;
+    width: 10rem;
+    height: 10rem;
 }
 /* Emoji E */
 
 /* image S */
 .img-wrap {
     display: inline-block;
-    margin: 4px 0;
-    max-width: 250px;
-    max-height: 375px;
+    margin: space.$stds-spacing-4 0;
+    max-width: 25rem;
+    max-height: 37.5rem;
     overflow: hidden;
     vertical-align: top;
     img {
@@ -199,7 +200,7 @@
         left: 0;
         width: 100% !important;
         height: 100% !important;
-        padding: 4px 0;
+        padding: space.$stds-spacing-4 0;
     }
     // .fr-view {
     //     .fr-video {
@@ -215,7 +216,7 @@
         box-shadow: none !important;
         border-radius: 0 !important;
         .fr-element {
-            padding: 16px;
+            padding: space.$stds-spacing-16;
         }
     }
 }
@@ -260,7 +261,7 @@
 }
 .fr-view {
     .module-editor {
-        margin: 20px 0 !important;
+        margin: space.$stds-spacing-20 0 !important;
         ul {
             padding-left: 0;
             margin-top: 0;
@@ -281,25 +282,25 @@
         }
     }
     ul {
-        padding-left: 32px;
-        margin-top: 16px;
-        margin-bottom: 16px;
+        padding-left: space.$stds-spacing-32;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
         list-style: disc;
         li {
             list-style: disc;
         }
     }
     ol {
-        padding-left: 32px;
-        margin-top: 16px;
-        margin-bottom: 16px;
+        padding-left: space.$stds-spacing-32;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
         list-style-type: decimal;
         li {
             list-style: decimal;
         }
     }
     strong {
-        font-weight: 700;
+        font-weight: bold;
     }
     em {
         font-style: italic;
@@ -311,9 +312,9 @@
         text-decoration: line-through;
     }
     blockquote {
-        border-left: solid 2px #5e35b1;
+        border-left: solid space.$stds-spacing-2 #5e35b1;
         margin-left: 0;
-        padding-left: 5px;
+        padding-left: 0.5rem;
         color: #5e35b1;
     }
     hr {
@@ -358,16 +359,16 @@
                     }
                 }
                 &.editor-survey {
-                    width: 480px;
+                    width: 48rem;
                 }
             }
         }
     }
     .fr-view {
         ul {
-            padding-left: 32px;
-            margin-top: 16px;
-            margin-bottom: 16px;
+            padding-left: space.$stds-spacing-32;
+            margin-top: space.$stds-spacing-16;
+            margin-bottom: space.$stds-spacing-16;
             list-style: disc;
             li {
                 list-style: disc;
@@ -375,16 +376,16 @@
             }
         }
         ol {
-            padding-left: 32px;
-            margin-top: 16px;
-            margin-bottom: 16px;
+            padding-left: space.$stds-spacing-32;
+            margin-top: space.$stds-spacing-16;
+            margin-bottom: space.$stds-spacing-16;
             list-style-type: decimal;
             li {
                 list-style: decimal;
             }
         }
         strong {
-            font-weight: 700;
+            font-weight: bold;
         }
         em {
             font-style: italic;
@@ -396,9 +397,9 @@
             text-decoration: line-through;
         }
         blockquote {
-            border-left: solid 2px #5e35b1;
+            border-left: solid space.$stds-spacing-2 #5e35b1;
             margin-left: 0;
-            padding-left: 5px;
+            padding-left: 0.5rem;
             color: #5e35b1;
             p {
                 color: #5e35b1;
@@ -486,5 +487,5 @@
 
 /* reply-txt 영향도 받는 fr-view E */
 .fr-view .module-editor:last-of-type {
-    margin: 20px 0 0 !important;
+    margin: space.$stds-spacing-20 0 0 !important;
 }

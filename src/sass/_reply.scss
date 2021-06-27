@@ -6,9 +6,9 @@
 .module-reply {
     position: relative;
     padding: space.$stds-spacing-20 0;
-    border-bottom: 0.1px solid color.$ui_divider_black_02;
+    border-bottom: 1px solid color.$ui_divider_black_02;
     &:first-of-type {
-        border-top: 0.1px solid color.$ui_divider_black_02;
+        border-top: 1px solid color.$ui_divider_black_02;
     }
     .reply-prev-btn {
         font-size: font.$stdsBody3;
@@ -184,7 +184,9 @@
             left: 1.6rem;
             background: color.$ui_divider_black_02;
         }
-
+        &:nth-child(1) {
+            margin-top: space.$stds-spacing-20;
+        }
     }
     .module-quote {
         padding: 1.6rem;
@@ -260,6 +262,9 @@
                 color: color.$ui_text_04;
             }
         }
+    }
+    .comments-wrapper {
+        margin-bottom: -2.1rem;
     }
 }
 

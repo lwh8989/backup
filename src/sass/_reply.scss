@@ -99,6 +99,9 @@
                 margin-top: 1.6rem;
                 .element-btn {
                     margin: 0 0.8rem 0.8rem 0;
+                    .btn-txt {
+                        font-weight: font.$stdsWeightNormal;
+                    }
                 }
             }
         }
@@ -165,6 +168,9 @@
                     color: color.$ui_text_04;
                 }
             }
+        }
+        &:nth-child(1) {
+            margin-top: space.$stds-spacing-24;
         }
     }
     &.comments-thread {

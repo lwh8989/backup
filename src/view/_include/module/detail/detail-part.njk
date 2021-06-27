@@ -136,12 +136,7 @@
             {{ reply.replyBaseHidden( text="신고에 의해 댓글이 숨겨졌습니다." ) }}
             {{ reply.replyBaseHidden( text="작성자에 의해 삭제된 댓글입니다." ) }}
             {{ reply.replyBase( userLeave="false", report="false", replyS="false" ) }}
-            {{ reply.replyBaseComments( userLive="false", replyPrev="false", option="false", replyS="false" ) }}
-            {{ reply.replyBaseComments( userLive="false", option="false", replyM="false" ) }}
-            {{ reply.replyBaseComments( userLive="false", option="false", replyL="false" ) }}
-            {{ reply.replyBaseCommentsHidden( text="신고에 의해 댓글이 숨겨졌습니다." ) }}
-            {{ reply.replyBaseCommentsHidden( text="작성자에 의해 삭제된 댓글입니다." ) }}
-            {{ reply.replyBaseComments( userLeave="false", report="false", replyS="false" ) }}
+            {{ reply.replyBaseComments( userLive="false", replyPrev="true", option="false", replyS="false" ) }}
         </div>
         <div class="reply-write">
             {{ writeUi.baseReplyWrite( dataText ) }}

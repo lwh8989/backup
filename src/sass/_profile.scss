@@ -14,15 +14,6 @@
             flex-direction: column;
             text-align: left;
             margin-right: 1.6rem;
-            .profile-nickname {
-                display: flex;
-                font-size: font.$stdsBody3;
-                font-weight: font.$stdsWeightBold;
-                color: color.$ui_text_04;
-                display: -webkit-box;
-                @include ellipsis($line: 1);
-                word-break: break-word;
-            }
         }
     }
     .profile-img {
@@ -40,10 +31,8 @@
         margin-right: 1.6rem;
         .profile-nickname {
             display: flex;
-            font-size: font.$stdsBody3;
-            font-weight: font.$stdsWeightBold;
+            @include stdsBody3($weight: bold);
             color: color.$ui_text_02;
-            display: -webkit-box;
             @include ellipsis($line: 1);
             word-break: break-word;
         }
@@ -53,11 +42,10 @@
         }
     }
     .profile-mark {
-        font-size: font.$stdsBody3;
-        font-weight: font.$stdsWeightBold;
+        @include stdsBody3($weight: bold);
         color: color.$ui_text_02;
         margin-right: 0.4rem;
-        vertical-align: top;
+        vertical-align: middle;
         &.gm {
             color: color.$system_info;
         }
@@ -68,16 +56,16 @@
             color: color.$system_info;
         }
         &.writer {
-            font-size: 1.1rem !important;
+            @include caption2();
             color: color.$orange500;
-            border: 0.1rem solid color.$orange500;
+            border: 1px solid color.$orange500;
             border-radius: 1rem;
             padding: 0 0.8rem;
         }
     }
     .time {
         display: inline-flex;
-        font-size: font.$stdsCaption1;
+        @include caption1();
         color: color.$ui_text_04;
     }
     .info-option {

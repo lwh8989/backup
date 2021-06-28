@@ -347,6 +347,7 @@
                     list-style: none !important;
                     li {
                         list-style: none !important;
+                        padding-bottom: space.$stds-spacing-4 !important;
                     }
                 }
                 ol {
@@ -356,6 +357,7 @@
                     list-style: none !important;
                     li {
                         list-style: none !important;
+                        padding-bottom: space.$stds-spacing-4 !important;
                     }
                 }
                 &.editor-survey {
@@ -373,6 +375,7 @@
             li {
                 list-style: disc;
                 word-break: break-all;
+                padding-bottom: space.$stds-spacing-4;
             }
         }
         ol {
@@ -382,6 +385,7 @@
             list-style-type: decimal;
             li {
                 list-style: decimal;
+                padding-bottom: space.$stds-spacing-4;
             }
         }
         strong {

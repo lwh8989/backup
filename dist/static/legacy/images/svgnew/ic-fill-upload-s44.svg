@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <filter id="prefix__a" width="112.5%" height="112.5%" x="-6.2%" y="-3.8%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".5" result="shadowSpreadOuter1"/>
+            <feOffset dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation=".5"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+        </filter>
+        <circle id="prefix__b" cx="20" cy="20" r="20"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(2 1)">
+        <use fill="#000" filter="url(#prefix__a)" xlink:href="#prefix__b"/>
+        <use fill="#FFF" stroke="#F3F3F3" xlink:href="#prefix__b"/>
+        <g stroke="#666" stroke-linecap="round">
+            <g>
+                <g stroke-linejoin="round">
+                    <path d="M9.98 5.458L5.06.538.141 5.458M5.06 12.285L5.06.842" transform="translate(10 10) translate(3.333 2.5) translate(1.622 2.5)"/>
+                </g>
+                <path d="M0.417 0.457L12.881 0.457" transform="translate(10 10) translate(3.333 2.5)"/>
+            </g>
+        </g>
+    </g>
+</svg>

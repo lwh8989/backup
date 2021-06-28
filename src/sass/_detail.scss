@@ -4,10 +4,11 @@
 
 .module-detail {
     position: relative;
-    padding: 4rem 5.6rem;
+    padding: space.$stds-spacing-40 space.$stds-spacing-56;
     background: color.$white;
     .detail-header {
         border-bottom: 1px solid color.$ui_divider_black_02;
+        /* title-btn = 시스템 단위가 적용 되어있지않음 */
         .title-btn {
             display: flex;
             align-items: center;
@@ -20,16 +21,19 @@
             }
         }
         .title-location {
-            font-size: font.$stdsBody2;
-            color: color.$ui_text_03;
+            @include stdsBody2($weight: normal);
+            color: color.$ui_text_brand;
             margin-bottom: space.$stds-spacing-12;
+            span {
+                color: color.$ui_text_03;
+            }
             .midd-dot {
+                color: color.$ui_text_03;
                 padding: 0 space.$stds-spacing-8;
             }
         }
         .title {
-            font-size: font.$stdsTitle3;
-            font-weight: font.$stdsWeightBold;
+            @include stdsTitle3();
             color: color.$ui_text_01;
             margin-bottom: space.$stds-spacing-40;
             flex: 1;
@@ -42,34 +46,43 @@
             display: flex;
             .info {
                 flex: 1;
+                margin-bottom: space.$stds-spacing-24;
                 .nick {
                     .profile-link {
                         .profile-img {
-                            width: 4rem;
-                            height: 4rem;
+                            width: space.$stds-spacing-40;
+                            height: space.$stds-spacing-40;
                         }
                     }
                 }
             }
             .info-btn {
                 display: flex;
-                align-items: center;
-                i {
-                    font-size: 2rem;
-                    color: color.$ui_icon_05_enabled;
+                align-items: baseline;
+                button {
+                    i {
+                        font-size: 2rem;
+                        color: color.$ui_icon_05_enabled;
+                    }
                     &:hover {
-                        color: color.$ui_icon_05_hover;
+                        i {
+                            color: color.$ui_icon_05_hover;
+                        }
                     }
                     &:focus,
                     &:focus-within {
-                        color: color.$ui_icon_05_focused;
+                        i {
+                            color: color.$ui_icon_05_focused;
+                        }
                     }
                     &.active {
-                        color: color.$ui_icon_05_focused;
+                        i {
+                            color: color.$ui_icon_05_focused;
+                        }
                     }
                 }
                 .element-dropdown {
-                    margin-left: 1.2rem;
+                    margin-left: space.$stds-spacing-12;
                     .element-dropdown-layer {
                         right: 0;
                     }
@@ -80,8 +93,7 @@
     .detail-contents {
         padding: space.$stds-spacing-40 0 space.$stds-spacing-48;
         .sub-tit {
-            font-size: font.$stdsTitle5;
-            font-weight: font.$stdsWeightBold;
+            @include stdsTitle5();
             color: color.$ui_text_01;
             padding-bottom: space.$stds-spacing-32;
         }
@@ -95,6 +107,7 @@
                 margin: 0 space.$stds-spacing-8 space.$stds-spacing-8 0;
                 .btn-txt {
                     line-height: 2rem;
+                    font-weight: normal;
                 }
             }
         }
@@ -103,9 +116,22 @@
             font-size: 0;
             margin-top: space.$stds-spacing-64;
             .element-btn {
-                margin-left: 8px;
+                margin-left: space.$stds-spacing-8;
                 &:first-of-type {
                     margin-left: 0;
+                }
+                &:active,
+                &:focus,
+                &:focus-within {
+                    .ic-community-like-line {
+                        color: color.$ui_icon_01_focused;
+                    }
+                    .ic-community-thumbs-up-line {
+                        color: color.$tint_red400;
+                    }
+                    .ic-community-thumbs-down-line {
+                        color: color.$tint_blue500;
+                    }
                 }
             }
         }
@@ -124,28 +150,27 @@
             align-items: center;
             flex-direction: row;
             flex-wrap: nowrap;
-            padding-bottom: 1.6rem;
+            padding-bottom: space.$stds-spacing-16;
             .container {
                 display: flex;
                 strong {
-                    font-size: font.$stdsTitle5;
-                    font-weight: font.$stdsWeightBold;
+                    @include stdsTitle5();
                     color: color.$ui_text_01;
                 }
                 button {
-                    .ic-navigation-alarm-disabled-line {
+                    i {
                         font-size: 2rem;
                         color: color.$ui_icon_05_enabled;
                         margin: 0.3rem 0 0 space.$stds-spacing-8;
                     }
                     &:hover {
-                        .ic-navigation-alarm-disabled-line {
+                        i {
                             color: color.$ui_icon_01_hover;
                         }
                     }
                     &:focus,
                     &:focus-within {
-                        .ic-navigation-alarm-disabled-line {
+                        i {
                             color: color.$ui_icon_01_focused;
                         }
                     }
@@ -174,22 +199,22 @@
 /* Desktop (max-width: 768px) */
 @media (max-width: 768px) {
     .module-detail {
-        padding: 2.4rem 1.6rem;
+        padding: space.$stds-spacing-24 space.$stds-spacing-16;
         .detail-header {
             .title-btn {
-                font-size: font.$stdsBody3;
+                @include stdsBody3();
                 margin-bottom: space.$stds-spacing-8;
                 i {}
             }
             .title-location {
-                font-size: font.$stdsBody3;
+                @include stdsBody3();
                 margin-bottom: space.$stds-spacing-8;
                 .midd-dot {
                     padding: 0 space.$stds-spacing-4;
                 }
             }
             .title {
-                font-size: font.$stdsTitle4;
+                @include stdsTitle4();
                 margin-bottom: space.$stds-spacing-28;
                 strong {}
             }
@@ -198,8 +223,8 @@
                     .nick {
                         .profile-link {
                             .profile-img {
-                                width: 4rem;
-                                height: 4rem;
+                                width: space.$stds-spacing-40;
+                                height: space.$stds-spacing-40;
                             }
                         }
                     }
@@ -238,10 +263,10 @@
         }
         .detail-footer {
             .header {
-                padding-bottom: 1.2rem;
+                padding-bottom: space.$stds-spacing-12;
                 .container {
                     strong {
-                        font-size: font.$stdsTitle6;
+                        @include stdsTitle6();
                     }
                     button {
                         .ic-navigation-alarm-disabled-line {

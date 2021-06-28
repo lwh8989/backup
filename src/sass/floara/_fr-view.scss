@@ -40,9 +40,9 @@
     }
 
     ul {
-        padding-left: 3.2rem;
-        margin-top: 1.6rem;
-        margin-bottom: 1.6rem;
+        padding-left: space.$stds-spacing-32;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
         list-style: inherit;
 
         li {
@@ -51,9 +51,9 @@
     }
 
     ol {
-        padding-left: 3.2rem;
-        margin-top: 1.6rem;
-        margin-bottom: 1.6rem;
+        padding-left: space.$stds-spacing-32;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
 
         li {
             list-style: decimal;
@@ -61,26 +61,26 @@
     }
 
     strong {
-        margin-top: 1.6rem;
-        margin-bottom: 1.6rem;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
         font-weight: font.$stdsWeightBold;
     }
 
     em {
-        margin-top: 1.6rem;
-        margin-bottom: 1.6rem;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
         font-style: italic;
     }
 
     u {
-        margin-top: 1.6rem;
-        margin-bottom: 1.6rem;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
         text-decoration: underline;
     }
 
     s {
-        margin-top: 1.6rem;
-        margin-bottom: 1.6rem;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
         text-decoration: line-through;
     }
 
@@ -105,6 +105,7 @@
     img {
         width: 100%;
         vertical-align: bottom !important;
+        margin: space.$stds-spacing-4 0;
     }
 
     span[style~='font-size:'] a {
@@ -132,7 +133,7 @@
     }
 
     .module-editor {
-        margin: 20px 0 !important;
+        margin: space.$stds-spacing-20 0 !important;
     }
 
     .fr-video {
@@ -155,9 +156,9 @@
 /* Emoji S */
 .emoji-wrap {
     display: inline-block;
-    margin: 4px 0;
-    width: 100px !important;
-    height: 100px !important;
+    margin: space.$stds-spacing-4 0;
+    width: 10rem !important;
+    height: 10rem !important;
     img {
         max-width: 100%;
         height: auto;
@@ -165,18 +166,18 @@
 }
 .emoji__img {
     display: inline-block;
-    margin: 4px 0;
-    width: 100px;
-    height: 100px;
+    margin: space.$stds-spacing-4 0;
+    width: 10rem;
+    height: 10rem;
 }
 /* Emoji E */
 
 /* image S */
 .img-wrap {
     display: inline-block;
-    margin: 4px 0;
-    max-width: 250px;
-    max-height: 375px;
+    margin: space.$stds-spacing-4 0;
+    max-width: 25rem;
+    max-height: 37.5rem;
     overflow: hidden;
     vertical-align: top;
     img {
@@ -199,7 +200,7 @@
         left: 0;
         width: 100% !important;
         height: 100% !important;
-        padding: 4px 0;
+        padding: space.$stds-spacing-4 0;
     }
     // .fr-view {
     //     .fr-video {
@@ -209,132 +210,128 @@
 }
 /* video E */
 
-/* write-form 영향도 받는 fr-view S */
-.write-form {
-    .fr-wrapper {
-        &.show-placeholder {
-            box-shadow: none !important;
-            /* border: 1px solid #dbdbdb !important; */
-            border-radius: 0 !important;
-            .fr-element {
-                /* border: 1px solid #dbdbdb !important; */
-                padding: 16px;
-            }
-        }
-    }
-    .fr-toolbar {
-        &.fr-ltr {
-            &.fr-desktop {
-                &.fr-top {
-                    &.fr-basic {
-                        padding: 0 !important;
-                        border-radius: 0 !important;
-                        box-shadow: none !important;
-                        border-top: 1px solid #dbdbdb !important;
-                        border-left: 1px solid #dbdbdb !important;
-                        border-right: 1px solid #dbdbdb !important;
-                    }
-                    // fr-basic 둘 중에 뭐가 나오는게 맞을까?
-                    // &.fr-basic {
-                    //     border-top: 0 !important;
-                    //     border-left: 0 !important;
-                    //     border-right: 0 !important;
-                    //     border-bottom: 1px solid #ddd;
-                    // }
-                }
-            }
-        }
-    }
-    .fr-box {
-        border: 1px solid #ddd !important;
-        .fr-wrapper {
-            box-shadow: none !important;
-            border: 0 !important;
-        }
-    }
-    .fr-element {
-        &.fr-view {
-            & > p {
-                word-break: break-all;
-                word-break: break-word;
-                word-wrap: break-word;
-            }
-        }
-    }
-    .fr-view {
-        .module-editor {
-            margin: 20px 0 !important;
-            ul {
-                padding-left: 0;
-                margin-top: 0;
-                margin-bottom: 0;
-                list-style: none;
-                li {
-                    list-style: none;
-                }
-            }
-            ol {
-                padding-left: 0;
-                margin-top: 0;
-                margin-bottom: 0;
-                list-style-type: none;
-                li {
-                    list-style: none;
-                }
-            }
-        }
-        ul {
-            padding-left: 32px;
-            margin-top: 16px;
-            margin-bottom: 16px;
-            list-style: disc;
-            li {
-                list-style: disc;
-            }
-        }
-        ol {
-            padding-left: 32px;
-            margin-top: 16px;
-            margin-bottom: 16px;
-            list-style-type: decimal;
-            li {
-                list-style: decimal;
-            }
-        }
-        strong {
-            font-weight: 700;
-        }
-        em {
-            font-style: italic;
-        }
-        u {
-            text-decoration: underline;
-        }
-        s {
-            text-decoration: line-through;
-        }
-        blockquote {
-            border-left: solid 2px #5e35b1;
-            margin-left: 0;
-            padding-left: 5px;
-            color: #5e35b1;
-        }
-        hr {
-            clear: both;
-            user-select: none;
-            -o-user-select: none;
-            -moz-user-select: none;
-            -khtml-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            page-break-after: always;
+/* 글쓰기 애디터 디자인 초기화 fr-view S */
+.fr-wrapper {
+    &.show-placeholder {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        .fr-element {
+            padding: space.$stds-spacing-16;
         }
     }
 }
-/* write-form 영향도 받는 fr-view E */
+.fr-toolbar {
+    &.fr-ltr {
+        &.fr-desktop {
+            &.fr-top {
+                &.fr-basic {
+                    padding: 0 !important;
+                    border-radius: 0 !important;
+                    box-shadow: none !important;
+                    border-top: 1px solid #dbdbdb !important;
+                    border-left: 1px solid #dbdbdb !important;
+                    border-right: 1px solid #dbdbdb !important;
+                }
+                // fr-basic 둘 중에 뭐가 나오는게 맞을까?
+                // &.fr-basic {
+                //     border-top: 0 !important;
+                //     border-left: 0 !important;
+                //     border-right: 0 !important;
+                //     border-bottom: 1px solid #ddd;
+                // }
+            }
+        }
+    }
+}
+.fr-box {
+    border: 1px solid #ddd !important;
+    .fr-wrapper {
+        box-shadow: none !important;
+        border: 0 !important;
+    }
+}
+.fr-element {
+    &.fr-view {
+        & > p {
+            word-break: break-all;
+            word-break: break-word;
+            word-wrap: break-word;
+        }
+    }
+}
+.fr-view {
+    .module-editor {
+        margin: space.$stds-spacing-20 0 !important;
+        ul {
+            padding-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            list-style: none;
+            li {
+                list-style: none;
+            }
+        }
+        ol {
+            padding-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            list-style-type: none;
+            li {
+                list-style: none;
+            }
+        }
+    }
+    ul {
+        padding-left: space.$stds-spacing-32;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
+        list-style: disc;
+        li {
+            list-style: disc;
+        }
+    }
+    ol {
+        padding-left: space.$stds-spacing-32;
+        margin-top: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-16;
+        list-style-type: decimal;
+        li {
+            list-style: decimal;
+        }
+    }
+    strong {
+        font-weight: bold;
+    }
+    em {
+        font-style: italic;
+    }
+    u {
+        text-decoration: underline;
+    }
+    s {
+        text-decoration: line-through;
+    }
+    blockquote {
+        border-left: solid space.$stds-spacing-2 #5e35b1;
+        margin-left: 0;
+        padding-left: 0.5rem;
+        color: #5e35b1;
+    }
+    hr {
+        clear: both;
+        user-select: none;
+        -o-user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        page-break-after: always;
+    }
+}
+/* 글쓰기 애디터 디자인 초기화 fr-view E */
 
-/* detail-content 영향도 받는 fr-view S */
-.detail-content {
+/* detail-contents 영향도 받는 fr-view S */
+.detail-contents {
     .fr-element {
         &.fr-view {
             & > p {
@@ -350,6 +347,7 @@
                     list-style: none !important;
                     li {
                         list-style: none !important;
+                        padding-bottom: space.$stds-spacing-4 !important;
                     }
                 }
                 ol {
@@ -359,36 +357,39 @@
                     list-style: none !important;
                     li {
                         list-style: none !important;
+                        padding-bottom: space.$stds-spacing-4 !important;
                     }
                 }
                 &.editor-survey {
-                    width: 480px;
+                    width: 48rem;
                 }
             }
         }
     }
     .fr-view {
         ul {
-            padding-left: 32px;
-            margin-top: 16px;
-            margin-bottom: 16px;
+            padding-left: space.$stds-spacing-32;
+            margin-top: space.$stds-spacing-16;
+            margin-bottom: space.$stds-spacing-16;
             list-style: disc;
             li {
                 list-style: disc;
                 word-break: break-all;
+                padding-bottom: space.$stds-spacing-4;
             }
         }
         ol {
-            padding-left: 32px;
-            margin-top: 16px;
-            margin-bottom: 16px;
+            padding-left: space.$stds-spacing-32;
+            margin-top: space.$stds-spacing-16;
+            margin-bottom: space.$stds-spacing-16;
             list-style-type: decimal;
             li {
                 list-style: decimal;
+                padding-bottom: space.$stds-spacing-4;
             }
         }
         strong {
-            font-weight: 700;
+            font-weight: bold;
         }
         em {
             font-style: italic;
@@ -400,9 +401,9 @@
             text-decoration: line-through;
         }
         blockquote {
-            border-left: solid 2px #5e35b1;
+            border-left: solid space.$stds-spacing-2 #5e35b1;
             margin-left: 0;
-            padding-left: 5px;
+            padding-left: 0.5rem;
             color: #5e35b1;
             p {
                 color: #5e35b1;
@@ -490,5 +491,5 @@
 
 /* reply-txt 영향도 받는 fr-view E */
 .fr-view .module-editor:last-of-type {
-    margin: 20px 0 0 !important;
+    margin: space.$stds-spacing-20 0 0 !important;
 }

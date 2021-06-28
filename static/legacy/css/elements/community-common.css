@@ -554,6 +554,7 @@
   /* padding: 24px 24px; */
   border: solid 1px #ddd;
   margin: 8px 0;
+  background: #fff;
 }
 .editor-myindie .legacy-module-editor-container {
   position: relative;

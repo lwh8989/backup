@@ -4,7 +4,7 @@
 
 .module-detail {
     position: relative;
-    padding: 4rem 5.6rem;
+    padding: space.$stds-spacing-40 space.$stds-spacing-56;
     background: color.$white;
     .detail-header {
         border-bottom: 1px solid color.$ui_divider_black_02;
@@ -22,9 +22,13 @@
         }
         .title-location {
             @include stdsBody2($weight: normal);
-            color: color.$ui_text_03;
+            color: color.$ui_text_brand;
             margin-bottom: space.$stds-spacing-12;
+            span {
+                color: color.$ui_text_03;
+            }
             .midd-dot {
+                color: color.$ui_text_03;
                 padding: 0 space.$stds-spacing-8;
             }
         }
@@ -55,18 +59,26 @@
             .info-btn {
                 display: flex;
                 align-items: baseline;
-                i {
-                    font-size: 2rem; 
-                    color: color.$ui_icon_05_enabled;
+                button {
+                    i {
+                        font-size: 2rem;
+                        color: color.$ui_icon_05_enabled;
+                    }
                     &:hover {
-                        color: color.$ui_icon_05_hover;
+                        i {
+                            color: color.$ui_icon_05_hover;
+                        }
                     }
                     &:focus,
                     &:focus-within {
-                        color: color.$ui_icon_05_focused;
+                        i {
+                            color: color.$ui_icon_05_focused;
+                        }
                     }
                     &.active {
-                        color: color.$ui_icon_05_focused;
+                        i {
+                            color: color.$ui_icon_05_focused;
+                        }
                     }
                 }
                 .element-dropdown {
@@ -95,6 +107,7 @@
                 margin: 0 space.$stds-spacing-8 space.$stds-spacing-8 0;
                 .btn-txt {
                     line-height: 2rem;
+                    font-weight: normal;
                 }
             }
         }
@@ -106,6 +119,19 @@
                 margin-left: space.$stds-spacing-8;
                 &:first-of-type {
                     margin-left: 0;
+                }
+                &:active,
+                &:focus,
+                &:focus-within {
+                    .ic-community-like-line {
+                        color: color.$ui_icon_01_focused;
+                    }
+                    .ic-community-thumbs-up-line {
+                        color: color.$tint_red400;
+                    }
+                    .ic-community-thumbs-down-line {
+                        color: color.$tint_blue500;
+                    }
                 }
             }
         }
@@ -132,19 +158,19 @@
                     color: color.$ui_text_01;
                 }
                 button {
-                    .ic-navigation-alarm-disabled-line {
+                    i {
                         font-size: 2rem;
                         color: color.$ui_icon_05_enabled;
                         margin: 0.3rem 0 0 space.$stds-spacing-8;
                     }
                     &:hover {
-                        .ic-navigation-alarm-disabled-line {
+                        i {
                             color: color.$ui_icon_01_hover;
                         }
                     }
                     &:focus,
                     &:focus-within {
-                        .ic-navigation-alarm-disabled-line {
+                        i {
                             color: color.$ui_icon_01_focused;
                         }
                     }

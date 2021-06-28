@@ -13,7 +13,7 @@
             flex-wrap: wrap;
             flex-direction: column;
             text-align: left;
-            margin-right: 1.6rem;
+            margin-right: space.$stds-spacing-16;
         }
     }
     .profile-img {
@@ -28,7 +28,7 @@
         flex-wrap: wrap;
         flex-direction: column;
         text-align: left;
-        margin-right: 1.6rem;
+        margin-right: space.$stds-spacing-16;
         .profile-nickname {
             display: flex;
             @include stdsBody3($weight: bold);
@@ -44,7 +44,7 @@
     .profile-mark {
         @include stdsBody3($weight: bold);
         color: color.$ui_text_02;
-        margin-right: 0.4rem;
+        margin-right: space.$stds-spacing-4;
         vertical-align: middle;
         &.gm {
             color: color.$system_info;
@@ -60,7 +60,7 @@
             color: color.$orange500;
             border: 1px solid color.$orange500;
             border-radius: 1rem;
-            padding: 0 0.8rem;
+            padding: 0 space.$stds-spacing-8;
         }
     }
     .time {

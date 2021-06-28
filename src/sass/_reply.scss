@@ -46,8 +46,16 @@
                 i {
                     font-size: 2rem;
                     color: color.$ui_icon_05_enabled;
-                    &:hover {
-                        color: color.$ui_icon_05_hover;                        
+                }
+                &:hover {
+                    i {
+                        color: color.$ui_icon_05_hover;
+                    }
+                }
+                &:active,
+                &:focus {
+                    i {
+                        color: color.$ui_icon_05_focused;
                     }
                 }
             }
@@ -359,11 +367,6 @@
             .footer-left {
                 display: flex;
                 flex: 1;
-                // .element-btn {
-                //     &.with-icon {
-                //         display: none;
-                //     }
-                // }
             }
             .footer-right {
                 display: flex;
@@ -489,6 +492,7 @@
             .quote-contents {
                 .section-hashtag {
                     margin-top: 1.6rem;
+                    font-size: 0;
                     .element-btn {
                         max-width: 44%;
                         margin: 0 0.8rem 0.8rem 0;

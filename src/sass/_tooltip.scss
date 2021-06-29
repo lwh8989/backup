@@ -12,9 +12,7 @@
         padding: space.$stds-spacing-8;
         border-radius: radius.$radius-XS;
         background-color: color.$gray600;
-        font-size: font.$stdsChips1;
-        font-weight: font.$stdsWeightBold;
-
+        @include chips1();
         &.white {
             color: color.$white;
         }

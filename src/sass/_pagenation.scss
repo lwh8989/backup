@@ -195,7 +195,7 @@ $ui-button-pagination-hover : #fc6020;
 }
 .pagination-bullet .bullet-list{
     display: inline-block;
-    background-color: #cacaca;    
+    background-color: #cacaca;
 }
 .pagination-bullet.size-m .bullet-list{
     width: 1rem;
@@ -221,3 +221,17 @@ $ui-button-pagination-hover : #fc6020;
     @include text-hidden;
 }
 
+@media (max-width: 768px) {
+    .pagination {
+        a:nth-child(n+6) {
+            display: none;
+        }
+        button:nth-child(n+6) {
+            display: none;
+        }
+        .stove-icon.ic-control-double-arrow-left-line,
+        .stove-icon.ic-control-double-arrow-right-line {
+            display: none;
+        }
+    }
+}

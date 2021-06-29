@@ -15,7 +15,7 @@
         color: color.$ui_text_03;
         margin-bottom: 2rem;
         i {
-            margin-left: 0.4rem;
+            margin-left: space.$stds-spacing-4;
             color: color.$ui_icon_01_enabled;
         }
     }
@@ -26,9 +26,9 @@
         .module-profile {
             flex: 1;
             .profile-img {
-                width: 4rem;
-                height: 4rem;
-                margin-right: 1.2rem;
+                width: space.$stds-spacing-40;
+                height: space.$stds-spacing-40;
+                margin-right: space.$stds-spacing-12;
             }
             .profile-contents {
                 .profile-nickname {
@@ -60,21 +60,21 @@
                 }
             }
             .ic-community-requotation-fill {
-                font-size: 16px;
+                font-size: 1.6rem;
                 color: color.$ui_icon_05_enabled;
-                margin: 0.2rem 0.4rem 0 0;
+                margin: space.$stds-spacing-2 space.$stds-spacing-4 0 0;
             }
             .ic-communication-translate-fill {
-                margin-right: 1.6rem;
+                margin-right: space.$stds-spacing-16;
             }
             .ic-object-reply {
                 font-size: 1.3rem;
             }
             .profile-img {
                 display: flex;
-                width: 2rem;
-                height: 2rem;
-                margin-right: 1.2rem;
+                width: space.$stds-spacing-20;
+                height: space.$stds-spacing-20;
+                margin-right: space.$stds-spacing-12;
                 img {
                     width: 100%;
                 }
@@ -101,9 +101,9 @@
                 font-size: 1.4rem;
             }
             .section-hashtag {
-                margin-top: 1.6rem;
+                margin-top: space.$stds-spacing-16;
                 .element-btn {
-                    margin: 0 0.8rem 0.8rem 0;
+                    margin: 0 space.$stds-spacing-8 space.$stds-spacing-8 0;
                     .btn-txt {
                         font-weight: font.$stdsWeightNormal;
                     }
@@ -142,13 +142,13 @@
         }
     }
     .reply-btn {
-        margin-top: 2rem;
+        margin-top: space.$stds-spacing-20;
         .element-btn {
             display: inline-flex;
             width: 100%;
             .stove-icon {
-                width: 1.6rem;
-                height: 1.6rem;
+                width: space.$stds-spacing-16;
+                height: space.$stds-spacing-16;
                 font-size: 1.6rem;
                 &::before {
                     font-size: 1.6rem;
@@ -157,8 +157,8 @@
         }
     }
     &.comments-base {
-        padding-left: 5.2rem;
-        padding-right: 2.4rem;
+        padding-left: space.$stds-spacing-52;
+        padding-right: space.$stds-spacing-24;
         background-color: color.$gray25;
         &.reply-hidden {
             .reply-header {
@@ -166,7 +166,7 @@
                 i {
                     font-size: 24px;
                     color: color.$ui_icon_05_enabled;
-                    margin-right: 1.2rem;
+                    margin-right: space.$stds-spacing-12;
                 }
                 p {
                     font-size: font.$stdsBody1;
@@ -179,14 +179,14 @@
         }
     }
     &.comments-thread {
-        padding-left: 3.2rem;
+        padding-left: space.$stds-spacing-32;
         &::after {
             content: '';
             width: 0.1rem;
             position: absolute;
-            top: 2rem;
-            bottom: 2rem;
-            left: 1.6rem;
+            top: space.$stds-spacing-20;
+            bottom: space.$stds-spacing-20;
+            left: space.$stds-spacing-16;
             background: color.$ui_divider_black_02;
         }
         &:nth-child(1) {
@@ -194,16 +194,16 @@
         }
     }
     .module-quote {
-        padding: 1.6rem;
-        margin-bottom: 1.2rem;
+        padding: space.$stds-spacing-16;
+        margin-bottom: space.$stds-spacing-12;
         &.quote-purple {
             background-color: color.$tint_dazzlingblue50;
-            border-left: 3px solid color.$tint_dazzlingblue500;
+            border-left: 0.3rem solid color.$tint_dazzlingblue500;
             box-sizing: border-box;
         }
         &.quote-blue {
             background-color: color.$tint_blue50;
-            border-left: 3px solid color.$tint_blue400;
+            border-left: 0.3rem solid color.$tint_blue400;
             box-sizing: border-box;
         }
         &.quote-close {
@@ -226,12 +226,12 @@
         }
         .quote-header {
             display: flex;
-            margin-bottom: 1.2rem;
+            margin-bottom: space.$stds-spacing-12;
             .module-profile {
                 flex: 1;
                 .profile-img {
-                    width: 2.4rem;
-                    height: 2.4rem;
+                    width: space.$stds-spacing-24;
+                    height: space.$stds-spacing-24;
                 }
                 .profile-contents {
                     justify-content: center;
@@ -245,9 +245,9 @@
         }
         .quote-contents {
             .section-hashtag {
-                margin-top: 1.6rem;
+                margin-top: space.$stds-spacing-16;
                 .element-btn {
-                    margin: 0 0.8rem 0.8rem 0;
+                    margin: 0 space.$stds-spacing-8 space.$stds-spacing-8 0;
                 }
             }
         }
@@ -260,7 +260,7 @@
             i {
                 font-size: 24px;
                 color: color.$ui_icon_05_enabled;
-                margin-right: 1.2rem;
+                margin-right: space.$stds-spacing-12;
             }
             p {
                 font-size: font.$stdsBody1;
@@ -278,9 +278,9 @@
     .module-reply {
         position: relative;
         padding: space.$stds-spacing-20 0;
-        border-bottom: 0.1px solid color.$ui_divider_black_02;
+        border-bottom: 1px solid color.$ui_divider_black_02;
         &:first-of-type {
-            border-top: 0.1px solid color.$ui_divider_black_02;
+            border-top: 1px solid color.$ui_divider_black_02;
         }
         .reply-header {
             display: flex;
@@ -288,8 +288,8 @@
             .module-profile {
                 flex: 1;
                 .profile-img {
-                    width: 3.6rem;
-                    height: 3.6rem;
+                    width: space.$stds-spacing-36;
+                    height: space.$stds-spacing-36;
                 }
                 .profile-contents {
                     line-height: 1.8rem;
@@ -312,7 +312,7 @@
                         font-size: 2rem;
                         color: color.$ui_icon_05_enabled;
                         &:hover {
-                            color: color.$ui_icon_05_hover;                        
+                            color: color.$ui_icon_05_hover;
                         }
                     }
                 }
@@ -321,9 +321,9 @@
                 }
                 .profile-img {
                     display: flex;
-                    width: 2rem;
-                    height: 2rem;
-                    margin-right: 1.2rem;
+                    width: space.$stds-spacing-20;
+                    height: space.$stds-spacing-20;
+                    margin-right: space.$stds-spacing-12;
                     img {
                         width: 100%;
                     }
@@ -343,10 +343,10 @@
                     font-size: 1.4rem;
                 }
                 .section-hashtag {
-                    margin-top: 1.6rem;
+                    margin-top: space.$stds-spacing-16;
                     .element-btn {
                         max-width: 44%;
-                        margin: 0 0.8rem 0.8rem 0;
+                        margin: 0 space.$stds-spacing-8 space.$stds-spacing-8 0;
                         .btn-txt {
                             @include ellipsis($line: 1);
                             display: block;
@@ -391,13 +391,13 @@
             }
         }
         .reply-btn {
-            margin-top: 2rem;
+            margin-top: space.$stds-spacing-20;
             .element-btn {
                 display: inline-flex;
                 width: 100%;
                 .stove-icon {
-                    width: 1.6rem;
-                    height: 1.6rem;
+                    width: space.$stds-spacing-16;
+                    height: space.$stds-spacing-16;
                     font-size: 1.6rem;
                     &::before {
                         font-size: 1.6rem;
@@ -406,19 +406,17 @@
             }
         }
         &.comments-base {
-            padding-left: 1.6rem;
-            padding-right: 1.6rem;
+            padding-left: space.$stds-spacing-16;
+            padding-right: space.$stds-spacing-16;
             background-color: color.$gray25;
             &.reply-hidden {
                 .reply-header {
                     margin-bottom: 0;
-
                     i {
                         font-size: 24px;
                         color: color.$ui_icon_05_enabled;
                         margin-right: 1.2rem;
                     }
-
                     p {
                         font-size: font.$stdsBody1;
                         color: color.$ui_text_04;
@@ -427,29 +425,28 @@
             }
         }
         &.comments-thread {
-            padding-left: 3.2rem;
+            padding-left: space.$stds-spacing-32;
             &::after {
                 content: '';
                 width: 0.1rem;
                 position: absolute;
-                top: 2rem;
-                bottom: 2rem;
-                left: 1.6rem;
+                top: space.$stds-spacing-20;
+                bottom: space.$stds-spacing-20;
+                left: space.$stds-spacing-16;
                 background: color.$ui_divider_black_02;
             }
-
         }
         .module-quote {
-            padding: 1.6rem;
-            margin-bottom: 1.2rem;
+            padding: space.$stds-spacing-16;
+            margin-bottom: space.$stds-spacing-12;
             &.quote-purple {
                 background-color: color.$tint_dazzlingblue50;
-                border-left: 3px solid color.$tint_dazzlingblue500;
+                border-left: 0.3rem solid color.$tint_dazzlingblue500;
                 box-sizing: border-box;
             }
             &.quote-blue {
                 background-color: color.$tint_blue50;
-                border-left: 3px solid color.$tint_blue400;
+                border-left: 0.3rem solid color.$tint_blue400;
                 box-sizing: border-box;
             }
             &.quote-close {

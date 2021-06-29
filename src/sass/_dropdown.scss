@@ -10,13 +10,11 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
 .element-dropdown {
     position: relative;
     display: inline-block;
-
     &.active .element-select-button,
     .element-select-button:hover,
     .element-select-button:focus {
         color: color.$ui_text_02;
     }
-
     &.active {
         .element-select-icon {
             transform: rotate(-180deg);
@@ -38,7 +36,6 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     height: 100%;
     color: color.$ui_text_03;
     line-height: 0;
-
     &.box-type {
         @include mixin.flexBetweenCenter;
         padding: $dropdown-default-space;
@@ -48,7 +45,6 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
 .element-dropdown-layer {
     display: none;
     padding-top: space.$stds-spacing-8;
-
     .element-dropdown-layer-inner {
         padding: space.$stds-spacing-8 0;
         overflow: hidden;
@@ -58,11 +54,9 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         border-radius: radius.$radius-S;
         box-shadow: 0 4px 10px color.$ui_shadow_02;
     }
-
     &.absolute {
         position: absolute;
         z-index: z-index.$zindex-dropdown;
-
         &.top {
             top: 100%;
         }
@@ -74,7 +68,6 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
             right: 0;
         }
     }
-
     @at-root .box-type + & {
         width: 100%;
     }
@@ -86,13 +79,11 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
     padding: $dropdown-default-space;
     color: color.$ui_text_03;
     white-space: nowrap;
-
     &:hover,
     &:focus {
         background-color: color.$interactive_03_hover;
         color: color.$ui_text_02;
     }
-
     &.selected {
         font-weight: font.$stdsWeightBold;
         color: color.$ui_text_brand;

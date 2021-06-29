@@ -1,4 +1,6 @@
 @import "./mixin/mixin";
+@import "./fonts/stds-font-mixin";
+@import "./font";
 
 /* width = wNN */
 .w100 {
@@ -30,7 +32,7 @@ $elementHeight: (4, 16, 20, 24, 28, 32, 36, 40, 44, 48, 56);
             .element-dropdown-button,
             &.element-input,
             .element-input {
-                font-size: 1.3rem;
+                @include stdsBody4($weight: bold);
             }
 
             .element-dropdown-button {
@@ -51,18 +53,15 @@ $elementHeight: (4, 16, 20, 24, 28, 32, 36, 40, 44, 48, 56);
             .element-input-wrap {
                 padding-left: $stds-spacing-12;
             }
-
             .element-select-button,
             .element-dropdown-button,
             &.element-input,
             .element-input {
-                font-size: 1.5rem;
+                @include stdsBody2($weight: bold);
             }
-
             .element-dropdown-button {
                 height: $stds-spacing-40;
             }
-
             &.box-type {
                 button {
                     font-size: 2rem;

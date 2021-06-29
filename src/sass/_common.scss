@@ -32,7 +32,7 @@ $elementHeight: (4, 16, 20, 24, 28, 32, 36, 40, 44, 48, 56);
             .element-dropdown-button,
             &.element-input,
             .element-input {
-                @include stdsBody4($weight: bold);
+                @include stdsBody4($weight: normal);
             }
 
             .element-dropdown-button {
@@ -57,7 +57,7 @@ $elementHeight: (4, 16, 20, 24, 28, 32, 36, 40, 44, 48, 56);
             .element-dropdown-button,
             &.element-input,
             .element-input {
-                @include stdsBody2($weight: bold);
+                @include stdsBody2($weight: normal);
             }
             .element-dropdown-button {
                 height: $stds-spacing-40;

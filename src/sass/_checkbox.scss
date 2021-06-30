@@ -32,8 +32,8 @@ $stds-checkbox-size-L: 2.4rem;
         }
     }
     input[type='checkbox'] {
-        -webkit-appearance: none;
-        appearance: none;
+        // -webkit-appearance: checkbox;
+        // appearance: checkbox;
     }
     input[type='checkbox']:after {
         content: "";

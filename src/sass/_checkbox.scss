@@ -31,8 +31,12 @@ $stds-checkbox-size-L: 2.4rem;
             cursor: pointer;
         }
     }
+    input[type='checkbox'] {
+        -webkit-appearance: none;
+        appearance: none;
+    }
     input[type='checkbox']:after {
-        content: "";    
+        content: "";
         position: absolute;
         top: 0.1rem;
         right: 0.1rem;

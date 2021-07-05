@@ -392,7 +392,7 @@
 }
 /* desktop2XL 1920 */
 @include desktop2XL {
-    .footer .footer-container {
+    .footer .footer-container { 
         padding: 0 $stds-spacing-52;
     }
 }

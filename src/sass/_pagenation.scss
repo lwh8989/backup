@@ -223,15 +223,18 @@
 
 @media (max-width: 768px) {
     .pagination {
-        a:nth-child(n+6) {
+        .pagination-num {
+            max-width: 256px;
+            a:nth-child(n+6) {
+                display: none;
+            }
+            button:nth-child(n+6) {
+                display: none;
+            }            
+        }
+        .stove-icon.ic-control-double-arrow-left-line,
+        .stove-icon.ic-control-double-arrow-right-line {
             display: none;
         }
-        button:nth-child(n+6) {
-            display: none;
-        }
-        // .stove-icon.ic-control-double-arrow-left-line,
-        // .stove-icon.ic-control-double-arrow-right-line {
-        //     display: none;
-        // }
     }
 }

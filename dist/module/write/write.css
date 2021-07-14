@@ -550,10 +550,10 @@
   color: #ff5000;
 }
 .legacy-element-btn.btn-white-line:hover .legacy-element-icon.ic-plus-s16-cfff {
-  background: url(/static/legacy/images/svgnew/ic-plus-s16-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-plus-s16-active.svg) no-repeat;
 }
 .legacy-element-btn.btn-white-line:hover .legacy-element-icon.ic-check-s16-cfff {
-  background: url(/static/legacy/images/svgnew/ic-check-s16-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-check-s16-active.svg) no-repeat;
 }
 
 .legacy-element-btn.btn-orange-line {
@@ -603,10 +603,10 @@
   color: #fff;
 }
 .legacy-element-btn.btn-white-bg:hover .legacy-element-icon.ic-write-orange-24 {
-  background: url(/static/legacy/images/svg/ic-write-white-24.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-write-white-24.svg) no-repeat;
 }
 .legacy-element-btn.btn-white-bg:hover .legacy-element-icon.ic-write-s24-active {
-  background: url(/static/legacy/images/svgnew/ic-write-s24-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-write-s24-cfff.svg) no-repeat;
 }
 .legacy-element-btn.btn-gray-transparent {
   background: none;
@@ -711,7 +711,7 @@
 }
 
 .search-wrap .legacy-element-btn.btn-select:after {
-  background: url(/static/legacy/images/svgnew/ic-fill-direction-down-s16-cfff.svg);
+  background: url(static/legacy/images/svgnew/ic-fill-direction-down-s16-cfff.svg);
 }
 .legacy-element-select.select-base.selected .legacy-element-btn.btn-select:after {
   transform: rotate(180deg);
@@ -724,11 +724,11 @@
   right: 10px;
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-fill-direction-down-s16-c666.svg);
+  background: url(static/legacy/images/svgnew/ic-fill-direction-down-s16-c666.svg);
   background-size: cover;
 }
 .legacy-element-btn.btn-select:disabled:after {
-  background: url(/static/legacy/images/svg/ic-select-arrow-disabled.svg);
+  background: url(static/legacy/images/svg/ic-select-arrow-disabled.svg);
   background-size: cover;
 }
 .legacy-element-btn.btn-select .btn-txt {
@@ -823,7 +823,7 @@
   color: #666;
 }
 .legacy-element-btn.text-btn16:hover .btn-txt .legacy-element-icon.ic-direction-down-s16-c999 {
-  background: url(/static/legacy/images/svgnew/ic-direction-down-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-down-s16-c666.svg) no-repeat;
 }
 
 /* animation iconmove */
@@ -900,7 +900,7 @@
   width: 24px;
   height: 24px;
   display: block;
-  background: url(/static/legacy/images/svgnew/ic-game-start.svg) 24px 24px;
+  background: url(static/legacy/images/svgnew/ic-game-start.svg) 24px 24px;
   background-color: pink;
   background-size: cover;
   position: absolute;
@@ -945,7 +945,7 @@
 }
 .ani-iconunderline .legacy-element-btn:hover .legacy-element-icon.ic-fill-pencil-s20-cff5000 {
   /* box-shadow: 0px 1px 6px 2px rgba(255, 80, 0, 0.35); */
-  background: url(/static/legacy/images/svgnew/ic-fill-pencil-s20-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-pencil-s20-cfff.svg) no-repeat;
 }
 .ani-iconunderline .legacy-element-btn:hover .legacy-element-icon {
   -webkit-transition-duration: 0.3s;
@@ -1032,7 +1032,7 @@
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 .ani-iconmove.bounce.is-ani .legacy-element-icon {
-  background: url(/static/legacy/images/svg/ic-sympathy-like.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-sympathy-like.svg) no-repeat;
   background-size: cover;
 
   -webkit-animation-name: bounce;
@@ -1427,7 +1427,7 @@
   width: 444px;
   height: 164px;
   display: block;
-  background: url(/static/legacy/images/bg-gradation-1x164.png) bottom repeat-x;
+  background: url(static/legacy/images/bg-gradation-1x164.png) bottom repeat-x;
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -1567,7 +1567,7 @@
   width: 100%;
   height: 98px;
   display: block;
-  background: url(/static/legacy/images/bg-gradation-1x98.png) bottom repeat-x;
+  background: url(static/legacy/images/bg-gradation-1x98.png) bottom repeat-x;
   position: absolute;
   /*  bottom: 0;*/
   left: 0;
@@ -2705,27 +2705,27 @@
   margin: 6px;
 }
 .legacy-module-slider.emoji .swiper-nav-container .swiper-button-prev:after {
-  background: url(/static/legacy/images/emoji/icon-arrow-left.svg) no-repeat center;
+  background: url(static/legacy/images/emoji/icon-arrow-left.svg) no-repeat center;
 }
 .legacy-module-slider.emoji .swiper-nav-container .swiper-button-next:after {
-  background: url(/static/legacy/images/emoji/icon-arrow-right.svg) no-repeat center;
+  background: url(static/legacy/images/emoji/icon-arrow-right.svg) no-repeat center;
 }
 .legacy-module-slider.emoji .swiper-nav-container .swiper-button-prev:hover:after {
-  background: url(/static/legacy/images/emoji/icon-arrow-left-hover.svg);
+  background: url(static/legacy/images/emoji/icon-arrow-left-hover.svg);
 }
 .legacy-module-slider.emoji .swiper-nav-container .swiper-button-next:hover:after {
-  background: url(/static/legacy/images/emoji/icon-arrow-right-hover.svg);
+  background: url(static/legacy/images/emoji/icon-arrow-right-hover.svg);
 }
 .legacy-module-slider.emoji .swiper-nav-container .swiper-button-disabled:after {
   opacity: 0.35;
 }
 .legacy-module-slider.emoji .slider-next:hover:before {
   content: '';
-  background-image: url(/static/legacy/images/emoji/icon-arrow-right-hover.svg);
+  background-image: url(static/legacy/images/emoji/icon-arrow-right-hover.svg);
 }
 .legacy-module-slider.emoji .slider-action.disable .slider-next:before {
   content: '';
-  background-image: url(/static/legacy/images/emoji/icon-arrow-right-disable.svg);
+  background-image: url(static/legacy/images/emoji/icon-arrow-right-disable.svg);
 }
 .legacy-module-slider.emoji .swiper-nav-container .swiper-slide {
   padding: 3px 2px;
@@ -3147,7 +3147,7 @@
 #stoveCalendar header .prev:after {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-direction-left-circle-s24-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-left-circle-s24-c999.svg) no-repeat;
   border: 0;
   margin: 0;
 }
@@ -3159,7 +3159,7 @@
 #stoveCalendar header .next:after {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-direction-right-circle-s24-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-right-circle-s24-c999.svg) no-repeat;
   border: 0;
   margin: 0;
 }
@@ -3405,7 +3405,7 @@
 .vdp-datepicker__calendar header .prev:after {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-direction-left-circle-s24-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-left-circle-s24-c999.svg) no-repeat;
   border: 0;
   margin: 0;
 }
@@ -3417,7 +3417,7 @@
 .vdp-datepicker__calendar header .next:after {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-direction-right-circle-s24-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-right-circle-s24-c999.svg) no-repeat;
   border: 0;
   margin: 0;
 }
@@ -3521,7 +3521,7 @@
   width: 14px;
   height: 14px;
   display: block;
-  background: url(/static/legacy/images/svg/ic-check-orange.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-check-orange.svg) no-repeat;
   position: absolute;
   top: 50%;
   left: 8px;
@@ -3553,7 +3553,7 @@
   margin-right: 0;
 }
 .legacy-module-dropdown.status.right li.active .legacy-element-btn .legacy-element-icon {
-  background: url(/static/legacy/images/svg/ic-check-orange.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-check-orange.svg) no-repeat;
 }
 .legacy-module-dropdown.status.right li.active::before {
   content: none;
@@ -3798,7 +3798,7 @@
   right: 8px;
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-calendar.svg);
+  background: url(static/legacy/images/svg/ic-calendar.svg);
   background-size: cover;
 }
 .legacy-element-select.select-base.select-calendar .legacy-element-input {
@@ -3851,20 +3851,20 @@
   left: 2px;
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-checkbox.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-checkbox .checkbox-input:checked ~ label:before {
-  background: url(/static/legacy/images/svg/ic-checkbox-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-checkbox .checkbox-input:checked:disabled ~ label:before {
-  background: url(/static/legacy/images/svg/ic-checkbox-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox-active.svg) no-repeat;
   background-size: cover;
   cursor: no-drop;
 }
 .legacy-element-checkbox .checkbox-input:disabled ~ label:before {
-  background: url(/static/legacy/images/svg/ic-checkbox-disabled.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox-disabled.svg) no-repeat;
   background-size: cover;
   cursor: no-drop;
 }
@@ -3944,22 +3944,22 @@
   left: 2px;
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-checkbox-round.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox-round.svg) no-repeat;
   background-size: cover;
   border-radius: 8px;
   overflow: hidden;
 }
 .legacy-element-checkbox-round .checkbox-input-round:checked ~ label:before {
-  background: url(/static/legacy/images/svg/ic-checkbox-round-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox-round-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-checkbox-round .checkbox-input-round:checked:disabled ~ label:before {
-  background: url(/static/legacy/images/svg/ic-checkbox-round-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox-round-active.svg) no-repeat;
   background-size: cover;
   cursor: no-drop;
 }
 .legacy-element-checkbox-round .checkbox-input-round:disabled ~ label:before {
-  background: url(/static/legacy/images/svg/ic-checkbox-round-disabled.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox-round-disabled.svg) no-repeat;
   background-size: cover;
   cursor: no-drop;
 }
@@ -4169,17 +4169,17 @@
   left: 2px;
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-checkbox-round.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox-round.svg) no-repeat;
   background-size: cover;
   border-radius: 8px;
   overflow: hidden;
 }
 .legacy-element-radio .radio-input:checked ~ label:before {
-  background: url(/static/legacy/images/svg/ic-radio-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-radio-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-radio .radio-input:disabled ~ label:before {
-  background: url(/static/legacy/images/svg/ic-radio-disabled.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-radio-disabled.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-radio .radio-input ~ label.blind {
@@ -4434,7 +4434,7 @@
   top: calc(50% - 10px);
 }
 .legacy-element-check.circle input ~ .checkmark {
-  background: url(/static/legacy/images/svgnew/ic-radio-check-s20-cccc.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-radio-check-s20-cccc.svg) no-repeat;
   border: none;
 }
 
@@ -4573,7 +4573,7 @@
   border: 1px solid #d0d0d0;
 }
 .legacy-element-check input:checked ~ .checkmark {
-  background: url(/static/legacy/images/svgnew/ic-radio-check-s20-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-radio-check-s20-active.svg) no-repeat;
   border: none;
 }
 .legacy-element-check input:disabled ~ .checkmark {
@@ -5094,123 +5094,123 @@
 .legacy-element-icon.ic-check-round.active {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-check-round-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-check-round-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-checkbox {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-checkbox.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-checkbox.active {
-  background: url(/static/legacy/images/svg/ic-checkbox-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-checkbox.disabled {
-  background: url(/static/legacy/images/svg/ic-checkbox-disabled.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox-disabled.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-checkbox-round {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-checkbox-round.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox-round.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-checkbox-round.active {
-  background: url(/static/legacy/images/svg/ic-checkbox-round-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox-round-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-checkbox-round.disabled {
-  background: url(/static/legacy/images/svg/ic-checkbox-round-disabled.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox-round-disabled.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-radio {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-radio.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-radio.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-radio.active {
-  background: url(/static/legacy/images/svg/ic-radio-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-radio-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-radio.disabled {
-  background: url(/static/legacy/images/svg/ic-checkbox-disabled.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-checkbox-disabled.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-mark-official {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-mark-official.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-mark-official.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-mark-cm {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-mark-cm.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-mark-cm.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-pick {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-pick.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-pick.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-new {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-new.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-new.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-view {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-view.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-view.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-reply {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-reply-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-reply-s16-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-arrow-down {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-direction-down-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-down-s16-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-close-round {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-close-round.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-close-round.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-close-round-dark {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-close-round-dark.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-close-round-dark.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-write-base-wh {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-write-base-wh.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-write-base-wh.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-close-white-16 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-close-white-16.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-close-white-16.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-short-cut-16 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-short-cut-16.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-short-cut-16.svg) no-repeat;
   background-size: cover;
 }
 
@@ -5218,186 +5218,186 @@
 .legacy-element-icon.ic-search {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-search.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-search.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-search-dark {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-search-dark.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-search-dark.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-search-white {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-search-white.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-search-white.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-arrow-prev {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-arrow-prev.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-arrow-prev.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-arrow-next {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-arrow-next.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-arrow-next.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-arrow-next-sm {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-arrow-next-sm.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-arrow-next-sm.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-arrow-down-white {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-direction-down-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-down-s16-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-arrow-up-white {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-arrow-up-white.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-arrow-up-white.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-type-list {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-type-list.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-type-list.svg) no-repeat;
   background-size: cover;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
 }
 .legacy-element-icon.ic-type-list:hover {
-  background: url(/static/legacy/images/svg/ic-type-list-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-type-list-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-type-list.active {
-  background: url(/static/legacy/images/svg/ic-type-list-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-type-list-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-type-webzine {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-type-webzine.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-type-webzine.svg) no-repeat;
   background-size: cover;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
 }
 .legacy-element-icon.ic-type-webzine:hover {
-  background: url(/static/legacy/images/svg/ic-type-webzine-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-type-webzine-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-type-webzine.active {
-  background: url(/static/legacy/images/svg/ic-type-webzine-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-type-webzine-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-type-card {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-type-card.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-type-card.svg) no-repeat;
   background-size: cover;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
 }
 .legacy-element-icon.ic-type-card:hover {
-  background: url(/static/legacy/images/svg/ic-type-card-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-type-card-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-type-card.active {
-  background: url(/static/legacy/images/svg/ic-type-card-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-type-card-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-type-thread {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-type-thread.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-type-thread.svg) no-repeat;
   background-size: cover;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
 }
 .legacy-element-icon.ic-type-thread:hover {
-  background: url(/static/legacy/images/svg/ic-type-thread-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-type-thread-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-type-thread.active {
-  background: url(/static/legacy/images/svg/ic-type-thread-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-type-thread-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-music {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-music.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-music.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-video {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-video.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-video.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-image {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-image.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-image.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-vote {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-vote.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-vote.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-file {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-file.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-file.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-emoji {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-emoji.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-emoji.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-emoji.active {
-  background: url(/static/legacy/images/svg/ic-emoji-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-emoji-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-cam {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-cam.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-cam.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-heart {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-heart.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-heart.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-heart.active {
-  background: url(/static/legacy/images/svgnew/ic-heart-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-heart-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-reply-em {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-reply-em.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-reply-em.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-download-wh {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-download-wh.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-download-wh.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-btn:disabled .ic-download-wh {
-  background: url(/static/legacy/images/svg/ic-download-disabled.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-download-disabled.svg) no-repeat;
   background-size: cover;
 }
 
@@ -5405,37 +5405,37 @@
 .legacy-element-icon.ic-video-round {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-video-round.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-video-round.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-music-round {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-music-round.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-music-round.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-vote-round {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-vote-round.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-vote-round.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-lock-round {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-lock-round.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-lock-round.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-pick-round {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-pick-round.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-pick-round.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-pagination-first {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-pagination-first.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-pagination-first.svg) no-repeat;
   background-size: cover;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
@@ -5443,7 +5443,7 @@
 .legacy-element-icon.ic-pagination-prev {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-pagination-prev.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-pagination-prev.svg) no-repeat;
   background-size: cover;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
@@ -5451,7 +5451,7 @@
 .legacy-element-icon.ic-pagination-next {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-pagination-next.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-pagination-next.svg) no-repeat;
   background-size: cover;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
@@ -5459,31 +5459,31 @@
 .legacy-element-icon.ic-pagination-last {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-pagination-last.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-pagination-last.svg) no-repeat;
   background-size: cover;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
 }
 .legacy-element-icon.ic-pagination-prev:hover {
-  background: url(/static/legacy/images/svg/ic-pagination-prev-hover.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-pagination-prev-hover.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-pagination-next:hover {
-  background: url(/static/legacy/images/svg/ic-pagination-next-hover.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-pagination-next-hover.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-pagination-first:hover {
-  background: url(/static/legacy/images/svg/ic-pagination-first-hover.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-pagination-first-hover.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-pagination-last:hover {
-  background: url(/static/legacy/images/svg/ic-pagination-last-hover.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-pagination-last-hover.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-close-wh {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-close-wh.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-close-wh.svg) no-repeat;
   background-size: cover;
 }
 
@@ -5491,30 +5491,30 @@
 .legacy-element-icon.ic-alarm-round {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-alarm-round.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-alarm-round.svg) no-repeat;
   background-size: cover;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
 }
 .legacy-element-icon.ic-alarm-round:hover {
-  background: url(/static/legacy/images/svg/ic-alarm-round-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-alarm-round-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-alarm-round-off,
 .legacy-element-icon.ic-alarm-round.off {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-alarm-round-off.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-alarm-round-off.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-alarm-round-on {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-alarm-round-on.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-alarm-round-on.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-alarm-round-on:hover {
-  background: url(/static/legacy/images/svg/ic-alarm-round-on-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-alarm-round-on-active.svg) no-repeat;
   background-size: cover;
 }
 
@@ -5522,27 +5522,27 @@
 .legacy-element-icon.ic-prev-round {
   width: 32px;
   height: 32px;
-  background: url(/static/legacy/images/svg/ic-prev-round.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-prev-round.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-next-round {
   width: 32px;
   height: 32px;
-  background: url(/static/legacy/images/svg/ic-next-round.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-next-round.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-prev-round-hover,
 .legacy-element-icon.ic-prev-round:hover {
   width: 32px;
   height: 32px;
-  background: url(/static/legacy/images/svg/ic-prev-round-hover.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-prev-round-hover.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-next-round-hover,
 .legacy-element-icon.ic-next-round:hover {
   width: 32px;
   height: 32px;
-  background: url(/static/legacy/images/svg/ic-next-round-hover.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-next-round-hover.svg) no-repeat;
   background-size: cover;
 }
 
@@ -5550,55 +5550,55 @@
 .legacy-element-icon.ic-close-square {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-close-square.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-close-square.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-select {
   width: 12px;
   height: 12px;
-  background: url(/static/legacy/images/svg/ic-select.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-select.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-calendar {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-calendar.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-calendar.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-attach {
   width: 36px;
   height: 36px;
-  background: url(/static/legacy/images/svg/ic-attach.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-attach.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-survey {
   width: 48px;
   height: 48px;
-  background: url(/static/legacy/images/svg/ic-survey.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-survey.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-facebook {
   width: 48px;
   height: 48px;
-  background: url(/static/legacy/images/svg/ic-facebook.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-facebook.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-twitter {
   width: 48px;
   height: 48px;
-  background: url(/static/legacy/images/svg/ic-twitter.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-twitter.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-plus-active {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-plus-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-plus-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-prev-square {
   width: 28px;
   height: 28px;
-  background: url(/static/legacy/images/svg/ic-prev-square.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-prev-square.svg) no-repeat;
   background-size: cover;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
@@ -5606,7 +5606,7 @@
 .legacy-element-icon.ic-next-square {
   width: 28px;
   height: 28px;
-  background: url(/static/legacy/images/svg/ic-next-square.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-next-square.svg) no-repeat;
   background-size: cover;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
@@ -5618,160 +5618,160 @@
 .legacy-element-icon.ic-note {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/note-line.svg) no-repeat;
+  background: url(static/legacy/images/svg/note-line.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-ranking-bronze {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-ranking-bronze.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-ranking-bronze.svg) no-repeat;
 }
 .legacy-element-icon.ic-ranking-silver {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-ranking-silver.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-ranking-silver.svg) no-repeat;
 }
 .legacy-element-icon.ic-ranking-gold {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-ranking-gold.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-ranking-gold.svg) no-repeat;
 }
 .legacy-element-icon.ic-ranking-platinum {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-ranking-platinum.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-ranking-platinum.svg) no-repeat;
 }
 .legacy-element-icon.ic-ranking-master {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-ranking-master.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-ranking-master.svg) no-repeat;
 }
 .legacy-element-icon.ic-close-dialog {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-close-dialog.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-close-dialog.svg) no-repeat;
 }
 .legacy-element-icon.ic-close-dialog {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-close-dialog.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-close-dialog.svg) no-repeat;
 }
 .legacy-element-icon.ic-caution {
   width: 36px;
   height: 36px;
-  background: url(/static/legacy/images/svgnew/ic-caution-circle-s24-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-caution-circle-s24-c333.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-download {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-download.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-download.svg) no-repeat;
 }
 .legacy-element-icon.ic-download-disabled {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-download-disabled.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-download-disabled.svg) no-repeat;
 }
 .legacy-element-icon.ic-download-install {
   width: 18px;
   height: 18px;
-  background: url(/static/legacy/images/svg/ic-download-install.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-download-install.svg) no-repeat;
 }
 .legacy-element-icon.ic-like-line {
   width: 28px;
   height: 28px;
-  background: url(/static/legacy/images/svg/ic-like-line.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-like-line.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-like-line-active {
   width: 28px;
   height: 28px;
-  background: url(/static/legacy/images/svg/ic-like-line-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-like-line-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-share-line {
   width: 28px;
   height: 28px;
-  background: url(/static/legacy/images/svg/ic-share-line.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-share-line.svg) no-repeat;
 }
 .legacy-element-icon.ic-like-line-sm {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-heart-s16-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-heart-s16-active.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-more {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-option-horizontal-s24.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-option-horizontal-s24.svg) no-repeat;
 }
 .legacy-element-icon.ic-re-reply {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-re-reply.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-re-reply.svg) no-repeat;
 }
 .legacy-element-icon.ic-write-emoji {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-attach-emoji-s24-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-attach-emoji-s24-c333.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-write-image {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-attach-image-s24-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-attach-image-s24-c333.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-write-video {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-attach-video-s24-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-attach-video-s24-c333.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-write-sortable-handle {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-write-sortable-handle.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-write-sortable-handle.svg) no-repeat;
   vertical-align: middle;
 }
 .legacy-element-icon.ic-plus {
   width: 10px;
   height: 10px;
-  background: url(/static/legacy/images/svg/icon-plus.svg) no-repeat;
+  background: url(static/legacy/images/svg/icon-plus.svg) no-repeat;
 }
 .legacy-element-icon.ic-question {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-question.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-question.svg) no-repeat;
   vertical-align: middle;
 }
 .legacy-element-icon.ic-character {
   width: 392px;
   height: 202px;
-  background: url(/static/legacy/images/ic-character.png) no-repeat;
+  background: url(static/legacy/images/ic-character.png) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-character2 {
   width: 248px;
   height: 167px;
-  background: url(/static/legacy/images/ic-character2.png) no-repeat;
+  background: url(static/legacy/images/ic-character2.png) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-loading-false {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-loading-false.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-loading-false.svg) no-repeat;
   vertical-align: middle;
 }
 .legacy-element-icon.ic-loading-ok {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-loading-ok.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-loading-ok.svg) no-repeat;
   vertical-align: middle;
 }
 
@@ -5793,7 +5793,7 @@
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-loading-false.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-loading-false.svg) no-repeat;
 }
 .legacy-element-icon.ic-loading:after {
   content: ' ';
@@ -5807,7 +5807,7 @@
   animation: spinner-rotate 0.7s linear infinite;
   -webkit-animation: spinner-rotate 0.7s linear infinite;
   -ms-animation: spinner-rotate 0.7s linear infinite;
-  background: url(/static/legacy/images/svg/ic-loading.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-loading.svg) no-repeat;
 }
 @keyframes spinner-rotate {
   to {
@@ -5826,7 +5826,7 @@
 .legacy-element-icon.ic-more-tag {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-more-tag.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-more-tag.svg) no-repeat;
 }
 .legacy-element-icon.ic-more-tag.active {
   transform: rotate(180deg);
@@ -5834,12 +5834,12 @@
 .legacy-element-icon.ic-close-bl {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-close-bl.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-close-bl.svg) no-repeat;
 }
 .legacy-element-icon.ic-page-up {
   width: 44px;
   height: 44px;
-  background: url(/static/legacy/images/svgnew/ic-fill-upload-s44.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-upload-s44.svg) no-repeat;
 
   background-size: cover;
 }
@@ -5847,53 +5847,53 @@
 .legacy-element-icon.ic-order-checkout {
   width: 16px;
   height: 17px;
-  background: url(/static/legacy/images/svg/ic-order-checkout.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-order-checkout.svg) no-repeat;
 }
 .legacy-element-icon.ic-music-play {
   width: 56px;
   height: 56px;
-  background: url(/static/legacy/images/svg/ic-music-play.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-music-play.svg) no-repeat;
 }
 .legacy-element-icon.ic-music-pause {
   width: 56px;
   height: 56px;
-  background: url(/static/legacy/images/svg/ic-music-pause.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-music-pause.svg) no-repeat;
 }
 .legacy-element-icon.ic-thumb-close {
   width: 12px;
   height: 12px;
-  background: url(/static/legacy/images/svg/ic-thumb-close.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-thumb-close.svg) no-repeat;
 }
 .legacy-element-icon.ic-list-close {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-list-close.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-list-close.svg) no-repeat;
 }
 .legacy-element-icon.ic-list-reserve {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-list-reserve.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-list-reserve.svg) no-repeat;
 }
 .legacy-element-icon.ic-list-transient {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-list-transient.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-list-transient.svg) no-repeat;
 }
 .legacy-element-icon.ic-game-start {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-game-start.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-game-start.svg) no-repeat;
 }
 .legacy-element-icon.ic-app-googleplay {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/png/ic-app-googleplay.png) no-repeat 0 0;
+  background: url(static/legacy/images/png/ic-app-googleplay.png) no-repeat 0 0;
   background-size: 24px auto;
 }
 .legacy-element-icon.ic-app-appstore {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/png/ic-app-appstore.png) no-repeat 0 0;
+  background: url(static/legacy/images/png/ic-app-appstore.png) no-repeat 0 0;
   background-size: 24px auto;
 }
 
@@ -5901,74 +5901,74 @@
 .legacy-element-icon.ic-top {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svg/ic-top.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-top.svg) no-repeat;
 }
 
 /* profile */
 .legacy-element-icon.ic-profile-default {
   width: 270px;
   height: 270px;
-  background: url(/static/legacy/images/profile/profile-default01.png) no-repeat;
+  background: url(static/legacy/images/profile/profile-default01.png) no-repeat;
 }
 .legacy-element-icon.ic-profile-default-01 {
   width: 270px;
   height: 270px;
-  background: url(/static/legacy/images/profile/profile-default02.png) no-repeat;
+  background: url(static/legacy/images/profile/profile-default02.png) no-repeat;
 }
 .legacy-element-icon.ic-profile-default-02 {
   width: 270px;
   height: 270px;
-  background: url(/static/legacy/images/profile/profile-default03.png) no-repeat;
+  background: url(static/legacy/images/profile/profile-default03.png) no-repeat;
 }
 .legacy-element-icon.ic-profile-default-03 {
   width: 270px;
   height: 270px;
-  background: url(/static/legacy/images/profile/profile-default04.png) no-repeat;
+  background: url(static/legacy/images/profile/profile-default04.png) no-repeat;
 }
 .legacy-element-icon.ic-profile-default-04 {
   width: 270px;
   height: 270px;
-  background: url(/static/legacy/images/profile/profile-default05.png) no-repeat;
+  background: url(static/legacy/images/profile/profile-default05.png) no-repeat;
 }
 .legacy-element-icon.ic-profile-default-05 {
   width: 270px;
   height: 270px;
-  background: url(/static/legacy/images/profile/profile-default06.png) no-repeat;
+  background: url(static/legacy/images/profile/profile-default06.png) no-repeat;
 }
 
 /* madia-view */
 .legacy-element-icon.ic-view-close {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svg/ic-view-close.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-view-close.svg) no-repeat;
 }
 .legacy-element-icon.ic-view-close-active,
 .legacy-element-icon.ic-view-close:hover {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svg/ic-view-close-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-view-close-active.svg) no-repeat;
 }
 .legacy-element-icon.ic-view-prev {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svg/ic-view-prev.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-view-prev.svg) no-repeat;
 }
 .legacy-element-icon.ic-view-prev-active,
 .legacy-element-icon.ic-view-prev:hover {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svg/ic-view-prev-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-view-prev-active.svg) no-repeat;
 }
 .legacy-element-icon.ic-view-next {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svg/ic-view-next.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-view-next.svg) no-repeat;
 }
 .legacy-element-icon.ic-view-next-active,
 .legacy-element-icon.ic-view-next:hover {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svg/ic-view-next-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-view-next-active.svg) no-repeat;
 }
 
 /* Slider */
@@ -5977,13 +5977,13 @@
 .legacy-element-icon.ic-stove-round {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svg/ic-stove-round.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-stove-round.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-stove-text {
   width: 120px;
   height: 28px;
-  background: url(/static/legacy/images/svg/ic-stove-text.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-stove-text.svg) no-repeat;
   background-size: cover;
 }
 
@@ -5991,25 +5991,25 @@
 .legacy-element-icon.ic-loading-12x12-white {
   width: 12px;
   height: 12px;
-  background: url(/static/legacy/images/gif/ic-loading-12x12-white.gif) no-repeat;
+  background: url(static/legacy/images/gif/ic-loading-12x12-white.gif) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-loading-22x22-white {
   width: 22px;
   height: 22px;
-  background: url(/static/legacy/images/gif/ic-loading-22x22-white.gif) no-repeat;
+  background: url(static/legacy/images/gif/ic-loading-22x22-white.gif) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-loading-29x29-white {
   width: 29px;
   height: 29px;
-  background: url(/static/legacy/images/gif/ic-loading-29x29-white.gif) no-repeat;
+  background: url(static/legacy/images/gif/ic-loading-29x29-white.gif) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-loading-32x32-white {
   width: 32px;
   height: 32px;
-  background: url(/static/legacy/images/gif/ic-loading-32x32-white.gif) no-repeat;
+  background: url(static/legacy/images/gif/ic-loading-32x32-white.gif) no-repeat;
   background-size: cover;
 }
 
@@ -6018,150 +6018,150 @@
 .legacy-element-icon.ic-close-12 {
   width: 12px;
   height: 12px;
-  background: url(/static/legacy/images/svg/ic-close-12.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-close-12.svg) no-repeat;
 }
 .legacy-element-icon.ic-close-widget {
   width: 12px;
   height: 12px;
-  background: url(/static/legacy/images/svg/ic-close-widget.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-close-widget.svg) no-repeat;
 }
 
 /* size 14 */
 .legacy-element-icon.ic-check-orange {
   width: 14px;
   height: 14px;
-  background: url(/static/legacy/images/svg/ic-check-orange.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-check-orange.svg) no-repeat;
 }
 .legacy-element-icon.ic-check-gray {
   width: 14px;
   height: 14px;
-  background: url(/static/legacy/images/svg/ic-check-gray.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-check-gray.svg) no-repeat;
 }
 .legacy-element-icon.ic-plus-gray-14 {
   width: 14px;
   height: 14px;
-  background: url(/static/legacy/images/svg/ic-plus-gray-14.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-plus-gray-14.svg) no-repeat;
 }
 
 /* size 16 */
 .legacy-element-icon.ic-global {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-global.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-global.svg) no-repeat;
 }
 .legacy-element-icon.ic-global.active {
-  background: url(/static/legacy/images/svg/ic-global-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-global-active.svg) no-repeat;
 }
 .legacy-element-icon.ic-lock {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-lock.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-lock.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-lock:hover {
-  background: url(/static/legacy/images/svg/ic-lock-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-lock-active.svg) no-repeat;
 }
 .legacy-element-icon.ic-user {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-user.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-user.svg) no-repeat;
 }
 .legacy-element-icon.ic-user:hover {
-  background: url(/static/legacy/images/svg/ic-user-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-user-active.svg) no-repeat;
 }
 .legacy-element-icon.ic-arrow-down-16 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-arrow-down-16.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-arrow-down-16.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-arrow-down-16:hover {
-  background: url(/static/legacy/images/svg/ic-arrow-down-16-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-arrow-down-16-active.svg) no-repeat;
 }
 
 .legacy-element-icon.ic-global:hover {
-  background: url(/static/legacy/images/svg/ic-global-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-global-active.svg) no-repeat;
 }
 .legacy-element-icon.ic-lock.active {
-  background: url(/static/legacy/images/svg/ic-lock-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-lock-active.svg) no-repeat;
 }
 .legacy-element-icon.ic-user.active {
-  background: url(/static/legacy/images/svg/ic-user-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-user-active.svg) no-repeat;
 }
 .legacy-element-icon.ic-arrow-down-16.active {
-  background: url(/static/legacy/images/svg/ic-arrow-down-16-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-arrow-down-16-active.svg) no-repeat;
 }
 
 .legacy-element-icon.ic-global-strong {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-global-strong.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-global-strong.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-lock-strong {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-lock-strong.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-lock-strong.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-user-strong {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-user-strong.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-user-strong.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-arrow-down-16-strong {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-arrow-down-16-strong.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-arrow-down-16-strong.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-check-white-16 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-check-white-16.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-check-white-16.svg) no-repeat;
 }
 .legacy-element-icon.ic-check-orange-16 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-check-orange-16.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-check-orange-16.svg) no-repeat;
 }
 .legacy-element-icon.ic-plus-white-16 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-plus-white-16.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-plus-white-16.svg) no-repeat;
 }
 .legacy-element-icon.ic-plus-orange-16 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-plus-orange-16.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-plus-orange-16.svg) no-repeat;
 }
 .legacy-element-icon.ic-triangle-down {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-triangle-down.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-triangle-down.svg) no-repeat;
 }
 .legacy-element-icon.ic-new {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-new.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-new.svg) no-repeat;
 }
 .legacy-element-icon.ic-arrow-right-16 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-arrow-right-16.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-arrow-right-16.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-arrow-up-16 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-arrow-up-16.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-arrow-up-16.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-arrow-right-orange-16 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-arrow-right-orange-16.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-arrow-right-orange-16.svg) no-repeat;
   background-size: cover;
 }
 
@@ -6169,29 +6169,29 @@
 .legacy-element-icon.ic-toonspoon {
   width: 18px;
   height: 18px;
-  background: url(/static/legacy/images/svg/ic-toonspoon.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-toonspoon.svg) no-repeat;
 }
 
 /* size 20 */
 .legacy-element-icon.ic-slider-left {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-slider-left.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-slider-left.svg) no-repeat;
 }
 .legacy-element-icon.ic-slider-right {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-slider-right.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-slider-right.svg) no-repeat;
 }
 .legacy-element-icon.ic-refresh {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-refresh.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-refresh.svg) no-repeat;
 }
 .legacy-element-icon.ic-write-white-20 {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-write-white-20.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-write-white-20.svg) no-repeat;
   fill: #ff5000;
 }
 
@@ -6199,68 +6199,68 @@
 .legacy-element-icon.ic-sympathy-like {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-sympathy-like.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-sympathy-like.svg) no-repeat;
 }
 .legacy-element-icon.ic-sympathy-reply {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-sympathy-reply.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-sympathy-reply.svg) no-repeat;
 }
 .legacy-element-icon.ic-setting-24 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-setting-24.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-setting-24.svg) no-repeat;
 }
 .legacy-element-icon.ic-write-white-24 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-write-white-24.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-write-white-24.svg) no-repeat;
 }
 .legacy-element-icon.ic-write-orange-24 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-write-orange-24.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-write-orange-24.svg) no-repeat;
 }
 .legacy-element-icon.ic-more-24 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-more-24.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-more-24.svg) no-repeat;
 }
 .legacy-element-icon.ic-more-24:hover {
-  background: url(/static/legacy/images/svg/ic-more-24-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-more-24-active.svg) no-repeat;
 }
 .legacy-element-icon.ic-more-24.active {
-  background: url(/static/legacy/images/svg/ic-more-24-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-more-24-active.svg) no-repeat;
 }
 .legacy-element-icon.ic-close-24 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-close-24.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-close-24.svg) no-repeat;
 }
 .legacy-element-icon.ic-close-24:hover {
-  background: url(/static/legacy/images/svg/ic-close-24-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-close-24-active.svg) no-repeat;
 }
 .legacy-element-icon.ic-close-24.active {
-  background: url(/static/legacy/images/svg/ic-close-24-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-close-24-active.svg) no-repeat;
 }
 
 /* size-28 */
 .legacy-element-icon.ic-photo-28 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svg/ic-photo-28.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-photo-28.svg) no-repeat;
   background-size: cover;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
 }
 .legacy-element-icon.ic-photo-28:hover {
-  background: url(/static/legacy/images/svg/ic-photo-28-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-photo-28-active.svg) no-repeat;
   background-size: cover;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
 }
 .legacy-element-icon.ic-photo-28.active {
-  background: url(/static/legacy/images/svg/ic-photo-28-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-photo-28-active.svg) no-repeat;
   background-size: cover;
 }
 
@@ -6268,90 +6268,90 @@
 .legacy-element-icon.ic-title-user-sm {
   width: 30px;
   height: 30px;
-  background: url(/static/legacy/images/svg/ic-title-user-sm.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-title-user-sm.svg) no-repeat;
 }
 .legacy-element-icon.ic-title-community-sm {
   width: 30px;
   height: 30px;
-  background: url(/static/legacy/images/svg/ic-title-community-sm.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-title-community-sm.svg) no-repeat;
 }
 
 /* size 40 */
 .legacy-element-icon.ic-news-like {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svg/ic-news-like.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-news-like.svg) no-repeat;
 }
 .legacy-element-icon.ic-news-reply {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svg/ic-news-reply.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-news-reply.svg) no-repeat;
 }
 .legacy-element-icon.ic-news-share {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svg/ic-news-share.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-news-share.svg) no-repeat;
 }
 
 /* image type */
 .legacy-element-icon.ic-activity-like {
   width: 28px;
   height: 32px;
-  background: url(/static/legacy/images/svg/ic-activity-like.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-activity-like.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-activity-reply {
   width: 28px;
   height: 32px;
-  background: url(/static/legacy/images/svg/ic-activity-reply.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-activity-reply.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-activity-write {
   width: 28px;
   height: 32px;
-  background: url(/static/legacy/images/svg/ic-activity-write.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-activity-write.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-closed {
   width: 140px;
   height: 133px;
-  background: url(/static/legacy/images/svg/ic-closed.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-closed.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-no-fllow {
   width: 156px;
   height: 123px;
-  background: url(/static/legacy/images/svg/ic-no-fllow.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-no-fllow.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-no-write {
   width: 124px;
   height: 98px;
-  background: url(/static/legacy/images/svg/ic-no-write.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-no-write.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-no-community {
   width: 156px;
   height: 123px;
-  background: url(/static/legacy/images/svg/ic-no-community.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-no-community.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-title-list {
   width: 74px;
   height: 38px;
-  background: url(/static/legacy/images/svg/ic-title-list.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-title-list.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-title-user {
   width: 75px;
   height: 39px;
-  background: url(/static/legacy/images/svg/ic-title-user.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-title-user.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-title-community {
   width: 75px;
   height: 39px;
-  background: url(/static/legacy/images/svg/ic-title-community.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-title-community.svg) no-repeat;
   background-size: cover;
 }
 /* Mytimeline E */
@@ -6361,14 +6361,14 @@
 .legacy-element-icon.ic-close-s12-c999 {
   width: 12px;
   height: 12px;
-  background: url(/static/legacy/images/svgnew/ic-close-s12-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-close-s12-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-close-s12-c666 {
   width: 12px;
   height: 12px;
-  background: url(/static/legacy/images/svgnew/ic-close-s12-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-close-s12-c666.svg) no-repeat;
 
   background-size: cover;
 }
@@ -6377,35 +6377,35 @@
 .legacy-element-icon.ic-check-s14-c666 {
   width: 14px;
   height: 14px;
-  background: url(/static/legacy/images/svgnew/ic-check-s14-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-check-s14-c666.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-plus-s14-c666 {
   width: 14px;
   height: 14px;
-  background: url(/static/legacy/images/svgnew/ic-plus-s14-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-plus-s14-c666.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-check-s14-active {
   width: 14px;
   height: 14px;
-  background: url(/static/legacy/images/svgnew/ic-check-s14-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-check-s14-active.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-direction-right-s14-c666 {
   width: 14px;
   height: 14px;
-  background: url(/static/legacy/images/svgnew/ic-direction-right-s14-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-right-s14-c666.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-shortcut-square-s14-c999 {
   width: 14px;
   height: 14px;
-  background: url(/static/legacy/images/svgnew/ic-shortcut-square-s14-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-shortcut-square-s14-c999.svg) no-repeat;
   background-size: cover;
 }
 
@@ -6413,243 +6413,243 @@
 .legacy-element-icon.ic-check-s16-cfff {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-check-s16-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-check-s16-cfff.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-close-s16-cfff {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-close-s16-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-close-s16-cfff.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-direction-right-s16-active {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-direction-right-s16-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-right-s16-active.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-check-s16-active {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-check-s16-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-check-s16-active.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-direction-down-s16-c666 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-direction-down-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-down-s16-c666.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-direction-up-s16-c999 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-direction-up-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-up-s16-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-direction-down-s16-c999 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-direction-down-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-down-s16-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-direction-down-s16-cccc {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-direction-down-s16-cccc.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-down-s16-cccc.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-globe-circle-s16-cccc {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-fill-globe-circle-s16-cccc.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-globe-circle-s16-cccc.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-user-s16-cccc {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-fill-user-s16-cccc.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-user-s16-cccc.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-plus-s16-active {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-plus-s16-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-plus-s16-active.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-plus-s16-cfff {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-plus-s16-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-plus-s16-cfff.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-lock-default-s16-cccc {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-lock-default-s16-cccc.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-lock-default-s16-cccc.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-globe-circle-s16-c999 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-fill-globe-circle-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-globe-circle-s16-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-user-s16-c999 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-fill-user-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-user-s16-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-lock-default-s16-c999 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-lock-default-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-lock-default-s16-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-globe-circle-s16-c666 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-fill-globe-circle-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-globe-circle-s16-c666.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-user-s16-c666 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-fill-user-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-user-s16-c666.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-lock-default-s16-c666 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-lock-default-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-lock-default-s16-c666.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-direction-down-s16-c666 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-direction-down-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-down-s16-c666.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-badge-cm-s16 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-badge-cm-s16.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-badge-cm-s16.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-badge-gm-s16 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-badge-gm-s16.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-badge-gm-s16.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-badge-official-s16 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-badge-official-s16.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-badge-official-s16.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-clock-circle-s16-c999 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-clock-circle-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-clock-circle-s16-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-direction-down-s16-c666 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-fill-direction-down-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-direction-down-s16-c666.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-heart-s16-active {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-heart-s16-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-heart-s16-active.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-heart-s16-c999 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-heart-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-heart-s16-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-view-s16-c999 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-view-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-view-s16-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-write-s16-c999 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-write-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-write-s16-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-reply-s16-c999 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-reply-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-reply-s16-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-badge-new-s16 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-badge-new-s16.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-badge-new-s16.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-shortcut-square-s16-cddd {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-shortcut-square-s16-cddd.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-shortcut-square-s16-cddd.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-calender-s16-c333 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-calender-s16-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-calender-s16-c333.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-heart-s16-cff5000 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-heart-s16-cff5000.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-heart-s16-cff5000.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-reply-s16-c5e3df5 {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svgnew/ic-reply-s16-c5e3df5.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-reply-s16-c5e3df5.svg) no-repeat;
   background-size: cover;
 }
 
@@ -6657,125 +6657,125 @@
 .legacy-element-icon.ic-direction-left-s20-c666 {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-direction-left-s20-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-left-s20-c666.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-direction-left-s20-cddd {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-direction-left-s20-cddd.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-left-s20-cddd.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-direction-left-s20-cddd:hover {
-  background: url(/static/legacy/images/svgnew/ic-direction-left-s20-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-left-s20-c666.svg) no-repeat;
 }
 .legacy-element-icon.ic-direction-right-s20-c666 {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-direction-right-s20-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-right-s20-c666.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-direction-right-s20-cddd {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-direction-right-s20-cddd.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-right-s20-cddd.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-direction-right-s20-cddd:hover {
-  background: url(/static/legacy/images/svgnew/ic-direction-right-s20-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-right-s20-c666.svg) no-repeat;
 }
 .legacy-element-icon.ic-fill-pencil-s20-cfff {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-fill-pencil-s20-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-pencil-s20-cfff.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-pencil-s20-cff5000 {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-fill-pencil-s20-cff5000.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-pencil-s20-cff5000.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-close-s20-c333 {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-close-s20-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-close-s20-c333.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-refresh-s20-c666 {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-refresh-s20-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-refresh-s20-c666.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-attach-image-s20-c333 {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-attach-image-s20-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-attach-image-s20-c333.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-attach-image-s20-c333:hover {
-  background: url(/static/legacy/images/svgnew/ic-attach-image-s20-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-attach-image-s20-active.svg) no-repeat;
 }
 .legacy-element-icon.ic-arrow-left-s20-c666 {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-arrow-left-s20-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-arrow-left-s20-c666.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-set-s20-c999 {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-set-s20-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-set-s20-c999.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-set-s20-cfff {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-set-s20-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-set-s20-cfff.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-close-s20-c999 {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-close-s20-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-close-s20-c999.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-help-circle-s20-cfff {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-help-circle-s20-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-help-circle-s20-cfff.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-help-circle-s20-cfff-active {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-help-circle-s20-cfff-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-help-circle-s20-cfff-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-option-vertical-s20-caaa {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-fill-option-vertical-s20-caaa.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-option-vertical-s20-caaa.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-radio-check-s20-cccc {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-radio-check-s20-cccc.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-radio-check-s20-cccc.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-radio-check-s20-active {
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svgnew/ic-radio-check-s20-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-radio-check-s20-active.svg) no-repeat;
   background-size: cover;
 }
 
@@ -6783,19 +6783,19 @@
 .legacy-element-icon.ic-bell-s22-caaa {
   width: 22px;
   height: 22px;
-  background: url(/static/legacy/images/svgnew/ic-bell-s22-caaa.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-bell-s22-caaa.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-bell-s22-diabled {
   width: 22px;
   height: 22px;
-  background: url(/static/legacy/images/svgnew/ic-bell-s22-diabled.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-bell-s22-diabled.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-bell-s22-active {
   width: 22px;
   height: 22px;
-  background: url(/static/legacy/images/svgnew/ic-bell-s22-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-bell-s22-active.svg) no-repeat;
   background-size: cover;
 }
 
@@ -6803,281 +6803,281 @@
 .legacy-element-icon.ic-direction-left-circle-s24-c999 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-direction-left-circle-s24-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-left-circle-s24-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-direction-left-circle-s24-c999:hover {
-  background: url(/static/legacy/images/svgnew/ic-direction-left-circle-s24-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-left-circle-s24-c333.svg) no-repeat;
 }
 .legacy-element-icon.ic-direction-right-circle-s24-c999 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-direction-right-circle-s24-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-right-circle-s24-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-direction-right-circle-s24-c999:hover {
-  background: url(/static/legacy/images/svgnew/ic-direction-right-circle-s24-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-right-circle-s24-c333.svg) no-repeat;
 }
 .legacy-element-icon.ic-prev-circle-s24-c999 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-prev-circle-s24-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-prev-circle-s24-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-prev-circle-s24-c999:hover {
-  background: url(/static/legacy/images/svgnew/ic-prev-circle-s24-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-prev-circle-s24-c333.svg) no-repeat;
 }
 .legacy-element-icon.ic-next-circle-s24-c999 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-next-circle-s24-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-next-circle-s24-c999.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-next-circle-s24-c999:hover {
-  background: url(/static/legacy/images/svgnew/ic-next-circle-s24-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-next-circle-s24-c333.svg) no-repeat;
 }
 .legacy-element-icon.ic-set-s24-cfff {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-set-s24-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-set-s24-cfff.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-write-s24-active {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-write-s24-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-write-s24-active.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-close-s24-c333 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-close-s24-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-close-s24-c333.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-close-s24-c333:hover {
-  background: url(/static/legacy/images/svgnew/ic-close-s24-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-close-s24-active.svg) no-repeat;
 }
 .legacy-element-icon.ic-write-s24-cfff {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-write-s24-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-write-s24-cfff.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-close-s24-active {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-close-s24-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-close-s24-active.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-heart-s24 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-heart-s24.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-heart-s24.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-reply-s24 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-reply-s24.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-reply-s24.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-play-circle-s24 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-play-circle-s24.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-play-circle-s24.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-option-horizontal-s24 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-option-horizontal-s24.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-option-horizontal-s24.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-option-horizontal-s24-cccc {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-option-horizontal-s24-cccc.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-option-horizontal-s24-cccc.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-option-horizontal-s24-cccc:hover,
 .legacy-element-icon.ic-fill-option-horizontal-s24-cccc:focus,
 .legacy-element-icon.ic-fill-option-horizontal-s24-cccc:active {
-  background: url(/static/legacy/images/svgnew/ic-fill-option-horizontal-s24-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-option-horizontal-s24-c999.svg) no-repeat;
 }
 .legacy-element-icon.ic-fill-option-horizontal-s24-c999 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-option-horizontal-s24-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-option-horizontal-s24-c999.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-option-horizontal-s24-c999:hover,
 .legacy-element-icon.ic-fill-option-horizontal-s24-c999:focus,
 .legacy-element-icon.ic-fill-option-horizontal-s24-c999:active {
-  background: url(/static/legacy/images/svgnew/ic-fill-option-horizontal-s24-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-option-horizontal-s24-c666.svg) no-repeat;
 }
 .legacy-element-icon.ic-music-round {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-music-circle-s24.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-music-circle-s24.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-vote-round {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-survey-circle-s24.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-survey-circle-s24.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-lock-round {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-rock-default-circle-s24.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-rock-default-circle-s24.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-play-round {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-play-circle-s24.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-play-circle-s24.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-attach-emoji-s24-c333 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-attach-emoji-s24-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-attach-emoji-s24-c333.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-attach-image-s24-c333 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-attach-image-s24-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-attach-image-s24-c333.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-attach-video-s24-c333 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-attach-video-s24-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-attach-video-s24-c333.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-caution-circle-s24-c333 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-caution-circle-s24-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-caution-circle-s24-c333.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-img-loading-s24 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/png/ic-img-loading-s24.png) no-repeat;
+  background: url(static/legacy/images/png/ic-img-loading-s24.png) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-option-horizonta-s24-c999 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-option-horizonta-s24-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-option-horizonta-s24-c999.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-option-horizonta-s24-c666 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-option-horizonta-s24-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-option-horizonta-s24-c666.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-img-loading-s24 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/png/ic-img-loading-s24.png) no-repeat;
+  background: url(static/legacy/images/png/ic-img-loading-s24.png) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-search-s24-cfff {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-search-s24-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-search-s24-cfff.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-search-s24-c9093a5 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-search-s24-c9093a5.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-search-s24-c9093a5.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-search-s24 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-search-s24-c9093a5.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-search-s24-c9093a5.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-menu-s24-cfff {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-menu-s24-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-menu-s24-cfff.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-fill-menu-s24-cff5000 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-fill-menu-s24-cff5000.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-menu-s24-cff5000.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-lang-s24-cfff {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-lang-s24-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-lang-s24-cfff.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-lang-s24-cff5000 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-lang-s24-cff5000.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-lang-s24-cff5000.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-bell-s24-cfff {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-bell-s24-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-bell-s24-cfff.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-bell-s24-cff5000 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-bell-s24-cff5000.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-bell-s24-cff5000.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-basket-s24-cfff {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-basket-s24-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-basket-s24-cfff.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-basket-s24-cff5000 {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-basket-s24-cff5000.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-basket-s24-cff5000.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-menu-s24-cfff {
   width: 24px;
   height: 24px;
-  background: url(/static/legacy/images/svgnew/ic-menu-s24-cfff.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-menu-s24-cfff.svg) no-repeat;
   background-size: cover;
 }
 
@@ -7085,24 +7085,24 @@
 .legacy-element-icon.ic-attach-image-s28-c333 {
   width: 28px;
   height: 28px;
-  background: url(/static/legacy/images/svgnew/ic-attach-image-s28-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-attach-image-s28-c333.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-attach-image-s28-c333:hover {
-  background: url(/static/legacy/images/svgnew/ic-attach-image-s28-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-attach-image-s28-active.svg) no-repeat;
 }
 .legacy-element-icon.ic-heart-s28-active {
   width: 28px;
   height: 28px;
-  background: url(/static/legacy/images/svgnew/ic-heart-s28-active.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-heart-s28-active.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-share-s28-c333 {
   width: 28px;
   height: 28px;
-  background: url(/static/legacy/images/svgnew/ic-share-s28-c333.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-share-s28-c333.svg) no-repeat;
 
   background-size: cover;
 }
@@ -7111,21 +7111,21 @@
 .legacy-element-icon.ic-board-like-s32 {
   width: 32px;
   height: 32px;
-  background: url(/static/legacy/images/svgnew/ic-board-like-s32.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-board-like-s32.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-board-reply-s32 {
   width: 32px;
   height: 32px;
-  background: url(/static/legacy/images/svgnew/ic-board-reply-s32.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-board-reply-s32.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-board-write-s32 {
   width: 32px;
   height: 32px;
-  background: url(/static/legacy/images/svgnew/ic-board-write-s32.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-board-write-s32.svg) no-repeat;
 
   background-size: cover;
 }
@@ -7134,7 +7134,7 @@
 .legacy-element-icon.ic-float-top-s40 {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svgnew/ic-float-top-s40.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-float-top-s40.svg) no-repeat;
   background-size: cover;
 }
 
@@ -7142,7 +7142,7 @@
 .legacy-element-icon.ic-fill-upload-s44 {
   width: 44px;
   height: 44px;
-  background: url(/static/legacy/images/svgnew/ic-fill-upload-s44.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-upload-s44.svg) no-repeat;
 
   background-size: cover;
 }
@@ -7151,128 +7151,128 @@
 .legacy-element-icon.ic-img-user {
   width: 30px;
   height: 30px;
-  background: url(/static/legacy/images/svgnew/ic-img-user.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-user.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-img-null-write {
   width: 124px;
   height: 98px;
-  background: url(/static/legacy/images/svgnew/ic-img-null-write.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-null-write.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-img-board-deco {
   width: 74px;
   height: 38px;
-  background: url(/static/legacy/images/svgnew/ic-img-board-deco.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-board-deco.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-img-user-deco {
   width: 76px;
   height: 40px;
-  background: url(/static/legacy/images/svgnew/ic-img-user-deco.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-user-deco.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-img-community-deco {
   width: 77px;
   height: 40px;
-  background: url(/static/legacy/images/svgnew/ic-img-community-deco.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-community-deco.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-img-null-lock {
   width: 140px;
   height: 140px;
-  background: url(/static/legacy/images/svgnew/ic-img-null-lock.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-null-lock.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-img-null-user {
   width: 156px;
   height: 123px;
-  background: url(/static/legacy/images/svgnew/ic-img-null-user.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-null-user.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-img-null-list {
   width: 156px;
   height: 123px;
-  background: url(/static/legacy/images/svgnew/ic-img-null-list.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-null-list.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-img-null-caution {
   width: 150px;
   height: 115px;
-  background: url(/static/legacy/images/svgnew/ic-img-null-caution.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-null-caution.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-img-like {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svgnew/ic-img-like.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-like.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-img-reply {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svgnew/ic-img-reply.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-reply.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-img-share {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svgnew/ic-img-share.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-share.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-img-toon {
   width: 18px;
   height: 18px;
-  background: url(/static/legacy/images/svgnew/ic-img-toon.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-toon.svg) no-repeat;
 
   background-size: cover;
 }
 .legacy-element-icon.ic-img-like-s50 {
   width: 50px;
   height: 50px;
-  background: url(/static/legacy/images/svgnew/ic-img-like-s50.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-like-s50.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-img-dislike-s50 {
   width: 50px;
   height: 50px;
-  background: url(/static/legacy/images/svgnew/ic-img-dislike-s50.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-dislike-s50.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-img-no-subscribe {
   width: 130px;
   height: 130px;
-  background: url(/static/legacy/images/svgnew/ic-img-no-subscribe.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-no-subscribe.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-img-no-post {
   width: 130px;
   height: 130px;
-  background: url(/static/legacy/images/svgnew/ic-img-no-post.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-no-post.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-img-no-game {
   width: 130px;
   height: 130px;
-  background: url(/static/legacy/images/svgnew/ic-img-no-game.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-no-game.svg) no-repeat;
   background-size: cover;
 }
 .legacy-element-icon.ic-img-no-pages {
   width: 130px;
   height: 130px;
-  background: url(/static/legacy/images/svgnew/ic-img-no-pages.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-img-no-pages.svg) no-repeat;
   background-size: cover;
 }
 /* icon new E */
@@ -7792,28 +7792,28 @@
   right: 0;
 }
 .legacy-module-list.list-webzine .subject-category .category-dropdown.active button .ic-direction-down-s16-cccc {
-  background: url(/static/legacy/images/svgnew/ic-direction-down-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-down-s16-c999.svg) no-repeat;
 }
 .legacy-module-list.list-webzine .subject-category .category-dropdown.active .ic-fill-globe-circle-s16-cccc {
-  background: url(/static/legacy/images/svgnew/ic-fill-globe-circle-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-globe-circle-s16-c999.svg) no-repeat;
 }
 .legacy-module-list.list-webzine .subject-category .category-dropdown.active .ic-fill-user-s16-cccc {
-  background: url(/static/legacy/images/svgnew/ic-fill-user-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-user-s16-c999.svg) no-repeat;
 }
 .legacy-module-list.list-webzine .subject-category .category-dropdown.active .ic-lock-default-s16-cccc {
-  background: url(/static/legacy/images/svgnew/ic-lock-default-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-lock-default-s16-c999.svg) no-repeat;
 }
 .legacy-module-list.list-webzine .subject-category .category-dropdown button:hover .ic-direction-down-s16-cccc {
-  background: url(/static/legacy/images/svgnew/ic-direction-down-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-down-s16-c999.svg) no-repeat;
 }
 .legacy-module-list.list-webzine .subject-category .category-dropdown:hover .ic-fill-globe-circle-s16-cccc {
-  background: url(/static/legacy/images/svgnew/ic-fill-globe-circle-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-globe-circle-s16-c999.svg) no-repeat;
 }
 .legacy-module-list.list-webzine .subject-category .category-dropdown:hover .ic-fill-user-s16-cccc {
-  background: url(/static/legacy/images/svgnew/ic-fill-user-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-user-s16-c999.svg) no-repeat;
 }
 .legacy-module-list.list-webzine .subject-category .category-dropdown:hover .ic-lock-default-s16-cccc {
-  background: url(/static/legacy/images/svgnew/ic-lock-default-s16-c999.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-lock-default-s16-c999.svg) no-repeat;
 }
 .legacy-module-list.list-webzine .group-subject .subject-txt {
   font-size: 16px;
@@ -8570,12 +8570,12 @@
 .legacy-element-skeleton.skeleton-small::after {
   width: 40px;
   height: 40px;
-  background: url(/static/legacy/images/svg/ic-stove-round.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-stove-round.svg) no-repeat;
 }
 .legacy-element-skeleton.skeleton-large::after {
   width: 120px;
   height: 28px;
-  background: url(/static/legacy/images/svg/ic-stove-text.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-stove-text.svg) no-repeat;
 }
 /* mynews */
 
@@ -8717,7 +8717,7 @@
 .legacy-module-list.list-slider .group .group-subject .legacy-module-board-info .board-info-section.active .legacy-element-icon.ic-heart {
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-heart-active.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-heart-active.svg) no-repeat;
   background-size: cover;
 }
 .legacy-module-list.list-slider .list-item .group .group-image {
@@ -9123,10 +9123,10 @@
   margin: 2px 0 0 0;
 }
 .calendar-legacy-pagination .legacy-element-icon.ic-direction-left-s20-c666:hover {
-  background: url(/static/legacy/images/svgnew/ic-direction-left-s20-cddd.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-left-s20-cddd.svg) no-repeat;
 }
 .calendar-legacy-pagination .legacy-element-icon.ic-direction-right-s20-c666:hover {
-  background: url(/static/legacy/images/svgnew/ic-direction-right-s20-cddd.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-right-s20-cddd.svg) no-repeat;
 }
 
 /* module-profile */
@@ -10228,7 +10228,7 @@
   margin: 3px;
 }
 .detail-header .board-info-tool button .legacy-element-icon.ic-fill-option-horizonta-s24-c999:hover {
-  background: url(/static/legacy/images/svgnew/ic-fill-option-horizonta-s24-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-option-horizonta-s24-c666.svg) no-repeat;
 }
 .detail-header .detail-category {
   margin-bottom: 6px;
@@ -10258,29 +10258,29 @@
   right: 0;
 }
 .category-dropdown.active button .ic-direction-down-s16-c999 {
-  background: url(/static/legacy/images/svgnew/ic-direction-down-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-down-s16-c666.svg) no-repeat;
 }
 .category-dropdown.active .ic-fill-globe-circle-s16-c999 {
-  background: url(/static/legacy/images/svgnew/ic-fill-globe-circle-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-globe-circle-s16-c666.svg) no-repeat;
 }
 .category-dropdown.active .ic-fill-user-s16-c999 {
-  background: url(/static/legacy/images/svgnew/ic-fill-user-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-user-s16-c666.svg) no-repeat;
 }
 .category-dropdown.active .ic-lock-default-s16-c999 {
-  background: url(/static/legacy/images/svgnew/ic-lock-default-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-lock-default-s16-c666.svg) no-repeat;
 }
 
 .category-dropdown button:hover .ic-direction-down-s16-c999 {
-  background: url(/static/legacy/images/svgnew/ic-direction-down-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-direction-down-s16-c666.svg) no-repeat;
 }
 .category-dropdown:hover .ic-fill-globe-circle-s16-c999 {
-  background: url(/static/legacy/images/svgnew/ic-fill-globe-circle-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-globe-circle-s16-c666.svg) no-repeat;
 }
 .category-dropdown:hover .ic-fill-user-s16-c999 {
-  background: url(/static/legacy/images/svgnew/ic-fill-user-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-fill-user-s16-c666.svg) no-repeat;
 }
 .category-dropdown:hover .ic-lock-default-s16-c999 {
-  background: url(/static/legacy/images/svgnew/ic-lock-default-s16-c666.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-lock-default-s16-c666.svg) no-repeat;
 }
 
 .detail-header .detail-tit {
@@ -11205,7 +11205,7 @@
   display: none;
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-check.svg);
+  background: url(static/legacy/images/svg/ic-check.svg);
   vertical-align: sub;
   margin-right: 4px;
 }
@@ -11805,7 +11805,7 @@
   left: 0;
   width: 80px;
   height: 80px;
-  background: url(/static/legacy/images/svg/ic-camera.svg) no-repeat 35px 25px rgba(0, 0, 0, 0.2);
+  background: url(static/legacy/images/svg/ic-camera.svg) no-repeat 35px 25px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   z-index: 1;
 }
@@ -12577,7 +12577,7 @@
   right: -33px;
   width: 28px;
   height: 28px;
-  background: url(/static/legacy/images/svg/ic-photo.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-photo.svg) no-repeat;
   background-size: cover;
 }
 .slide-range-container:after {
@@ -12587,7 +12587,7 @@
   left: -25px;
   width: 20px;
   height: 20px;
-  background: url(/static/legacy/images/svg/ic-photo.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-photo.svg) no-repeat;
   background-size: cover;
 }
 /* join */
@@ -13978,7 +13978,7 @@
   left: 8px;
   width: 16px;
   height: 16px;
-  background: url(/static/legacy/images/svg/ic-re-reply.svg) no-repeat;
+  background: url(static/legacy/images/svg/ic-re-reply.svg) no-repeat;
   opacity: 0.7;
 }
 .legacy-module-vote .create-vote-item .submit-vote-cell-link .input-wrap {
@@ -14554,7 +14554,7 @@
   width: 16px;
   height: 16px;
   display: block;
-  background: url(/static/legacy/images/svgnew/ic-badge-new-s16.svg) no-repeat;
+  background: url(static/legacy/images/svgnew/ic-badge-new-s16.svg) no-repeat;
   position: absolute;
   top: 50%;
   right: 12px;

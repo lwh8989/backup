@@ -4,6 +4,7 @@
 {% import "_include/form/button.njk" as btn %}
 {% import "_include/form/checkbox.njk" as checkbox %}
 {% import "_include/module/write/attach.njk" as attach %}
+{% import "_include/module/profile/profile.njk" as profile %}
 
 <!-- Emoji -->
 {% macro baseEmoji() %}
@@ -719,5 +720,53 @@
 {% macro baseReplyWriteNone( ) %}
 <div class="module-write-ui reply-write write-none">
     <p>댓글을 작성하시려면 <a href="">로그인</a> 해주세요.</p>
+</div>
+{% endmacro %}
+
+<!-- Timeline Meta UI -->
+{% macro TimelineMeta( contents, contentsNone, imageWrap, imageNone ) %}
+<div class="module-write-ui timeline-meta">
+    {% if contents %}
+        <div class="container">
+            {% if imageWrap %}
+            <div class="image">
+                <div class="inner">
+                    <img src="https://dummyimage.com/240x180/0099ff/fff" alt="card image">
+                </div>
+            </div>
+            {% elif imageNone %}
+            <div class="image">
+                <div class="inner">
+                    <img src="https://dummyimage.com/240x180/999999/fff" alt="card image">
+                </div>
+            </div>
+            {% endif %}
+            <div class="contents">
+                <p class="title-location">
+                    <span>%CP페이지명%</span>
+                    <i class="midd-dot">·</i>
+                    <span>%게시판명%</span>
+                </p>
+                <p class="title">동물의 숲 공포영화 ‘돈 피크’</p>
+                <div class="detail-contents">
+                    <div class="fr-view">
+                        부제목 입력란이 이곳에 노출됩니다. 암콜이랑 황보 나왔네요 암콜은 셋팅도 빡셀텐데.. 언제 키우게 될련지 아 그리고 친추 해주실 수 있는 분들은 닉 적어주시면 걸겠습니다! 다음 신캐역시 게임운영팀에서 잘 만들어주시길 기대합니다!
+                    </div>
+                </div>
+                {{ profile.profileHorizontalMin() }}
+            </div>
+        </div>
+    {% elif contentsNone %}
+        <div class="container none">
+            <div class="image">
+                <div class="inner">
+                    <img src="https://dummyimage.com/240x180/999/fff" alt="card image">
+                </div>
+            </div>
+            <div class="contents none">
+                <p class="detail-contents none">게시물이 삭제되었거나 접근할 수 없는 상태입니다.</p>
+            </div>
+        </div>
+    {% endif %}
 </div>
 {% endmacro %}

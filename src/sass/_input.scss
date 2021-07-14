@@ -237,6 +237,10 @@ $dropdown-default-space: 0 space.$stds-spacing-16;
         input {
             cursor: pointer;
         }
+        .element-input-wrap {
+            background: red;
+            padding-left: space.$stds-spacing-8;
+        }
     }
     .ic-community-calendar-line {
         margin-top: 1px;

@@ -425,7 +425,77 @@
             }
         }
     }
-    /* 플로라에디터 Header 초기화 확인하기 */
+    &.timeline-meta {
+        .container {
+            display: flex;
+            justify-content: stretch;
+            align-items: flex-start;
+            flex-direction: inherit;
+            flex-wrap: nowrap;
+            background-color: $ui_form_line_enabled;
+            border: 1px solid $ui_border_contents;
+            box-sizing: border-box;
+            .image {
+                position: relative;
+                display: flex;
+                flex: 1;
+                max-width: 24.2rem;
+                min-width: 24.2rem;
+                overflow: hidden;
+                .inner {
+                    @include ratio($ratio-4-3);
+                }
+            }
+            .contents {
+                padding: $stds-spacing-24;
+                .title-location {
+                    @include stdsBody3($weight: normal);
+                    color: $ui_text_04;
+                    margin-bottom: $stds-spacing-8;
+                }
+                .title {
+                    @include stdsTitle7();
+                    color: $ui_text_01;
+                    margin-bottom: $stds-spacing-4;
+                }
+                .detail-contents {
+                    margin-bottom: $stds-spacing-12;
+                    div {
+                        @include stdsBody3($weight: normal);
+                        @include ellipsis($w: 100%, $line: 2);
+                        color: $ui_text_02;
+                    }
+                    &.none {
+                        @include stdsTitle7();
+                        color: $ui_text_04;
+                        margin: 0;
+                    }
+                }
+                .module-profile {
+                    .profile-img {
+                        width: $stds-spacing-20;
+                        height: $stds-spacing-20;
+                    }
+                    .profile-mark {
+                        font-weight: $stdsWeightNormal;
+                        line-height: inherit;
+                        height: $stds-spacing-20;
+                    }
+                    .profile-contents {
+                        line-height: inherit;
+                        height: $stds-spacing-20;
+                        .profile-nickname {
+                            @include stdsBody3($weight: normal);
+                            color: $ui_text_04;
+                        }
+                    }
+                }
+            }
+            &.none {
+                align-items: center;
+            }
+        }
+    }
 }
 
 /* Desktop (max-width: 768px) */
@@ -453,6 +523,37 @@
                         &:last-of-type {
                             border-right: 0;
                         }
+                    }
+                }
+            }
+        }
+        &.timeline-meta {
+            .container {
+                flex-direction: column-reverse;
+                .image {
+                    max-width: 100%;
+                    min-width: 100%;
+                }
+                .contents {
+                    padding: $stds-spacing-24 $stds-spacing-24 $stds-spacing-16;
+                }
+                &.none {
+                    flex-direction: inherit;
+                    align-items: center;
+                    .image {
+                        position: relative;
+                        display: flex;
+                        flex: 1;
+                        max-width: 24.2rem;
+                        min-width: 13.2rem;
+                        overflow: hidden;
+                        background: red;
+                        .inner {
+                            @include ratio($ratio-4-3);
+                        }
+                    }
+                    .contents {
+                        padding: 0 $stds-spacing-24;
                     }
                 }
             }

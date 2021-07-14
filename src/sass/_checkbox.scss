@@ -1,3 +1,4 @@
+@use "./fonts/stds-font-mixin";
 @use "./radius";
 @use "./color";
 @use "./font";
@@ -30,8 +31,12 @@ $stds-checkbox-size-L: 2.4rem;
             cursor: pointer;
         }
     }
+    input[type='checkbox'] {
+        // -webkit-appearance: checkbox;
+        // appearance: checkbox;
+    }
     input[type='checkbox']:after {
-        content: "";    
+        content: "";
         position: absolute;
         top: 0.1rem;
         right: 0.1rem;
@@ -42,7 +47,7 @@ $stds-checkbox-size-L: 2.4rem;
         color: color.$ui_icon_white_enabled;
     }
     input[type='checkbox']:checked:after {
-        content: "\e9f7";    
+        content: "\e9f7";
         position: absolute;
         top: 0.1rem;
         right: 0.1rem;
@@ -123,9 +128,8 @@ $stds-checkbox-size-L: 2.4rem;
         }
         &.checkbox-text {
             label {
-                font-size: 1.3rem;
+                @include stdsBody4($weight: normal);
                 margin-left: space.$stds-spacing-8;
-                line-height: 1.6rem;
             }
         }
         input[type='checkbox']:after {
@@ -153,9 +157,8 @@ $stds-checkbox-size-L: 2.4rem;
         }
         &.checkbox-text {
             label {
-                font-size: 1.5rem;
+                @include stdsBody2($weight: normal);
                 margin-left: space.$stds-spacing-12;
-                line-height: 2rem;
             }
         }
         input[type='checkbox']:after {
@@ -183,9 +186,8 @@ $stds-checkbox-size-L: 2.4rem;
         }
         &.checkbox-text {
             label {
-                font-size: 1.6rem;
+                @include stdsBody1($weight: normal);
                 margin-left: space.$stds-spacing-12;
-                line-height: 2.4rem;
             }
         }
         input[type='checkbox']:after {

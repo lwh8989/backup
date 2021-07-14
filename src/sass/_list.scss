@@ -101,7 +101,7 @@
         @include ellipsis($line: 2);
         margin-bottom: $stds-spacing-16;
         color: $ui_text_03;
-        font-size: $stdsBody2;
+        font-size: font.$stdsBody2;
 
         a {
             color: inherit;
@@ -793,7 +793,7 @@
 
             .list-txt {
                 margin-bottom: $stds-spacing-12;
-                font-size: $stdsBody2;
+                font-size: font.$stdsBody2;
             }
 
             &.list-type-horizontal {
@@ -803,7 +803,7 @@
 
                 .list-txt {
                     margin-bottom: $stds-spacing-6;
-                    font-size: $stdsBody2;
+                    font-size: font.$stdsBody2;
                 }
 
                 .list-info {

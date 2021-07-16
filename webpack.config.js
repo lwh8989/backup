@@ -71,9 +71,6 @@ module.exports = async function () {
       view: entryFiles.map((entry) => path.resolve(__dirname, entry)),
       ...guides,
     },
-    output: {
-      publicPath: '/'
-    },
     devServer: {
       port: 9009,
       hot: true,

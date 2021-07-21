@@ -465,11 +465,6 @@
                         @include ellipsis($w: 100%, $line: 2);
                         color: $ui_text_02;
                     }
-                    &.none {
-                        @include stdsTitle7();
-                        color: $ui_text_04;
-                        margin: 0;
-                    }
                 }
                 .module-profile {
                     .profile-img {
@@ -493,6 +488,27 @@
             }
             &.none {
                 align-items: center;
+                .image {
+                    background-color: $ui_bg_base_gray50;
+                    border-right: 1px solid $ui_border_thumbnail;
+                }
+                .contents {
+                    @include stdsTitle7();
+                    color: $ui_text_04;
+                    margin: 0;
+                }
+            }
+            .ic-limit-color-160 {
+                display: block;
+                width: 16rem;
+                height: 16rem;
+                margin: 0 auto;
+                background-image: url(~/static/icon/icon/exception/ic-limit-color-160.svg);
+                background-size: cover;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }

@@ -18,8 +18,9 @@
     }
     .profile-img {
         display: flex;
-        width: 4rem;
-        height: 4rem;
+        width: space.$stds-spacing-40;
+        height: space.$stds-spacing-40;
+        border-radius: space.$stds-spacing-20;
         margin-right: space.$stds-spacing-8;
     }
     .profile-contents {
@@ -69,6 +70,7 @@
         color: color.$ui_text_04;
     }
     .info-option {
+        
         display: flex;
         .midd-dot {
             vertical-align: top;

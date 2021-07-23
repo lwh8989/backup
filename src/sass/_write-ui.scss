@@ -261,7 +261,7 @@
             min-height: 12rem;
             font-size: font.$stdsBody3;
             color: color.$ui_text_02;
-            padding: space.$stds-spacing-12 space.$stds-spacing-16;
+            padding: 0;
             outline: none;
             background-color: color.$ui_button_05_enabled;
             border: 0.1rem solid color.$ui_button_05_enabled_border;
@@ -277,6 +277,9 @@
             }
             &:hover {
                 border: 0.1rem solid color.$ui_button_05_hover_border;
+            }
+            .fr-box {
+                border: 0 !important;
             }
         }
         .write-setting-area {

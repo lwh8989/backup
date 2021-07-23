@@ -38,10 +38,9 @@ $stds-checkbox-size-L: 2.4rem;
     input[type='checkbox']:after {
         content: "";
         position: absolute;
-        top: 0.1rem;
-        right: 0.1rem;
-        bottom: 0.1rem;
-        left: 0.1rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: block;
         font-family: 'StoveFontIcon' !important;
         color: color.$ui_icon_white_enabled;
@@ -49,10 +48,9 @@ $stds-checkbox-size-L: 2.4rem;
     input[type='checkbox']:checked:after {
         content: "\e9f7";
         position: absolute;
-        top: 0.1rem;
-        right: 0.1rem;
-        bottom: 0.1rem;
-        left: 0.1rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: block;
         font-family: 'StoveFontIcon' !important;
         color: color.$ui_icon_white_enabled;

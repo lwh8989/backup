@@ -43,6 +43,9 @@
                 &:hover {
                     color: color.$ui_icon_03_focused;
                 }
+                &::after {
+                    content: none;
+                }
             }
             .swiper-button-prev {
                 left: 0;

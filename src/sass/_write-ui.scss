@@ -563,7 +563,6 @@
                         max-width: 24.2rem;
                         min-width: 13.2rem;
                         overflow: hidden;
-                        background: red;
                         .inner {
                             @include ratio($ratio-4-3);
                         }
@@ -571,6 +570,10 @@
                     .contents {
                         padding: 0 $stds-spacing-24;
                     }
+                }
+                .ic-limit-color-160 {
+                    width: 50%;
+                    height: 50%;
                 }
             }
         }

@@ -228,17 +228,11 @@
                     padding: 0 !important;
                     border-radius: 0 !important;
                     box-shadow: none !important;
-                    border-top: 1px solid #dbdbdb !important;
-                    border-left: 1px solid #dbdbdb !important;
-                    border-right: 1px solid #dbdbdb !important;
+                    border-top: 0 !important;
+                    border-left: 0 !important;
+                    border-right: 0 !important;
+                    border-bottom: 1px solid #ddd;
                 }
-                // fr-basic 둘 중에 뭐가 나오는게 맞을까?
-                // &.fr-basic {
-                //     border-top: 0 !important;
-                //     border-left: 0 !important;
-                //     border-right: 0 !important;
-                //     border-bottom: 1px solid #ddd;
-                // }
             }
         }
     }

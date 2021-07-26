@@ -6,7 +6,7 @@
         margin-top: $stds-spacing-16;
         .element-dropdown {
             display: inline-flex;
-            width: 24rem;            
+            width: 24rem;
             margin-left: $stds-spacing-12;
             &:first-of-type {
                 margin-left: 0;
@@ -21,7 +21,7 @@
         margin-top: $stds-spacing-12;
         // 글쓰기 영역
         .write-edit-area {
-            height: 42rem;
+            min-height: 42rem;
         }
         .write-contents-area {
             min-height: 5.2rem;
@@ -94,7 +94,8 @@
                         &:first-of-type {
                             margin-top: 0;
                         }
-                        .element-checkbox {
+                        .element-checkbox,
+                        .element-radio {
                             margin: $stds-spacing-6 $stds-spacing-24 $stds-spacing-6 0;
                         }
                         .element-input-icon.calendar {
@@ -210,7 +211,8 @@
                             &:first-of-type {
                                 margin-top: 0;
                             }
-                            .element-checkbox {
+                            .element-checkbox,
+                            .element-radio {
                                 margin: $stds-spacing-6 $stds-spacing-24 $stds-spacing-6 0;
                                 display: inline-flex;
                                 flex-wrap: wrap;

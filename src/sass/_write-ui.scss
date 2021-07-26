@@ -43,6 +43,9 @@
                 &:hover {
                     color: color.$ui_icon_03_focused;
                 }
+                &::after {
+                    content: none;
+                }
             }
             .swiper-button-prev {
                 left: 0;
@@ -261,7 +264,7 @@
             min-height: 12rem;
             font-size: font.$stdsBody3;
             color: color.$ui_text_02;
-            padding: space.$stds-spacing-12 space.$stds-spacing-16;
+            padding: 0;
             outline: none;
             background-color: color.$ui_button_05_enabled;
             border: 0.1rem solid color.$ui_button_05_enabled_border;
@@ -277,6 +280,9 @@
             }
             &:hover {
                 border: 0.1rem solid color.$ui_button_05_hover_border;
+            }
+            .fr-box {
+                border: 0 !important;
             }
         }
         .write-setting-area {
@@ -465,11 +471,6 @@
                         @include ellipsis($w: 100%, $line: 2);
                         color: $ui_text_02;
                     }
-                    &.none {
-                        @include stdsTitle7();
-                        color: $ui_text_04;
-                        margin: 0;
-                    }
                 }
                 .module-profile {
                     .profile-img {
@@ -493,6 +494,27 @@
             }
             &.none {
                 align-items: center;
+                .image {
+                    background-color: $ui_bg_base_gray50;
+                    border-right: 1px solid $ui_border_thumbnail;
+                }
+                .contents {
+                    @include stdsTitle7();
+                    color: $ui_text_04;
+                    margin: 0;
+                }
+            }
+            .ic-limit-color-160 {
+                display: block;
+                width: 16rem;
+                height: 16rem;
+                margin: 0 auto;
+                background-image: url(~/static/icon/icon/exception/ic-limit-color-160.svg);
+                background-size: cover;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }
@@ -547,7 +569,6 @@
                         max-width: 24.2rem;
                         min-width: 13.2rem;
                         overflow: hidden;
-                        background: red;
                         .inner {
                             @include ratio($ratio-4-3);
                         }
@@ -555,6 +576,10 @@
                     .contents {
                         padding: 0 $stds-spacing-24;
                     }
+                }
+                .ic-limit-color-160 {
+                    width: 50%;
+                    height: 50%;
                 }
             }
         }

@@ -668,7 +668,8 @@
 <!-- Reply Write -->
 {% macro baseReplyWrite( dataText ) %}
 <div class="module-write-ui reply-write">
-    <div class="reply-write-edit" contenteditable="true" data-text="{{ dataText }}"></div>
+    <!-- [D] Style 값은 제거하고 적용해주세요. -->
+    <div class="reply-write-edit" contenteditable="true" data-text="{{ dataText }}" style="padding: 16px;"></div>
     <!-- [D] 글쓰기 이미지 설정 영역 -->
     <div class="write-setting-area">
         <!-- 대표이미지 등록  -->
@@ -760,11 +761,12 @@
         <div class="container none">
             <div class="image">
                 <div class="inner">
-                    <img src="https://dummyimage.com/240x180/999/fff" alt="card image">
+                    <i class="ic-limit-color-160"></i>
+                    {# <img src="https://dummyimage.com/240x180/999/fff" alt="card image"> #}
                 </div>
             </div>
-            <div class="contents none">
-                <p class="detail-contents none">게시물이 삭제되었거나 접근할 수 없는 상태입니다.</p>
+            <div class="contents">
+                <p class="detail-contents">게시물이 삭제되었거나 접근할 수 없는 상태입니다.</p>
             </div>
         </div>
     {% endif %}

@@ -181,14 +181,6 @@
   /* border: 1px solid #dbdbdb !important; */
   padding: 16px;
 }
-.write-form .fr-toolbar.fr-ltr.fr-desktop.fr-top.fr-basic {
-  padding: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  border-top: 1px solid #dbdbdb !important;
-  border-left: 1px solid #dbdbdb !important;
-  border-right: 1px solid #dbdbdb !important;
-}
 .write-form .fr-box {
   border: 1px solid #ddd !important;
 }

@@ -3,14 +3,14 @@
 @import "./elements/btn.css";
 @import "./elements/card.css";
 @import "./elements/community-common.css";
-@import "./elements/datepicker-custom.css";
-@import "./elements/datepicker.css";
+/* @import "./elements/datepicker-custom.css"; */
+/* @import "./elements/datepicker.css"; */
 /* 신규 UI 적용
 
 */
 @import "./elements/dropdown.css";
 @import "./elements/form.css";
-@import "./elements/fr-view.css";
+/* @import "./elements/fr-view.css"; */
 @import "./elements/icon.css";
 /* @import "./elements/input.css"; */
 @import "./elements/list.css";

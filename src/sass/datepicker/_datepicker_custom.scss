@@ -1,0 +1,268 @@
+@use "./../color";
+@use "./../space";
+
+// datepicker
+.vdp-datepicker {
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 0;
+    padding-right: 0;
+    .vdp-datepicker__calendar-button {
+        position: absolute;
+        top: 50%;
+        right: 1.6rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-top: -.8rem;
+        padding-top: 1.6rem;
+        // background: url(~/assets/images/icons/ic-calendar.svg) no-repeat center center;
+        background-size: 100% auto;
+        overflow: hidden;
+    }
+    .vdp-datepicker__calendar {
+        top: 4.4rem;
+        left: 0;
+        width: 31.6rem;
+        background-color: color.$ui_bg_base_white;
+        border: .1rem solid color.$ui_border_contents;
+        border-radius: 0.4rem;
+        box-sizing: initial;
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 1.7rem 0;
+            line-height: 1.5;
+
+            .prev,
+            .next,
+            .day__month_btn,
+            .month__year_btn {
+                float: none;
+                width: auto;
+                height: 3rem;
+                background-color: transparent !important;
+            }
+
+            .prev+span,
+            .day__month_btn,
+            .month__year_btn {
+                width: auto;
+                padding: 0 1.6rem;
+                color: color.$ui_text_01;
+                font-size: 2rem;
+                font-weight: bold;
+                letter-spacing: -0.05rem;
+            }
+
+            .prev,
+            .next {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+
+            .prev::after,
+            .next::after {
+                width: 2.4rem;
+                height: 2.4rem;
+                margin: 0;
+                border: 0 none !important;
+                background-color: transparent;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 100% auto;
+            }
+
+            .prev::after {
+                // background-image: url(~/assets/images/icons/ic-calendar-prev.svg);
+            }
+
+            .prev.disabled::after {
+                // background-image: url(~/assets/images/icons/ic-calendar-prev-disabled.svg);
+            }
+
+            .next::after {
+                // background-image: url(~/assets/images/icons/ic-calendar-next.svg);
+            }
+
+            .next.disabled::after {
+                //background-image: url(~/assets/images/icons/ic-calendar-next-disabled.svg);
+            }
+
+            //.prev:not(.disabled):hover,
+            //.next:not(.disabled):hover,
+            //.up:not(.disabled):hover {
+            //    background: transparent !important;
+            //}
+        }
+
+        header+div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-bottom: .8rem;
+        }
+
+        .cell.day-header {
+            height: 2.8rem;
+            margin-bottom: .8rem;
+            background-color: color.$ui_bg_base_gray50;
+            color: #8b8f9c;
+            font-size: 1.3rem;
+            line-height: 2.1538;
+
+            &:hover {
+                background-color: #1f2128;
+            }
+        }
+
+        .cell.day {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            position: relative;
+            cursor: pointer;
+            color: color.$ui_text_02;
+            height: 3.6rem;
+            font-size: 1.3rem;
+
+            &.blank {
+                cursor: auto;
+            }
+
+            &:not(.blank):hover {
+                border-color: transparent !important;
+                font-weight: bold;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 50%;
+                height: calc(100% - 0.4rem);
+                transform: translateY(-50%);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 0;
+                height: 0;
+                border-radius: 3.2rem;
+                background-color: rgba(255, 255, 255, .05);
+                transition: all 0.3s;
+                transform: translate(-50%, -50%);
+            }
+
+            &:not(.blank):hover::after {
+                width: 3.2rem;
+                height: 3.2rem;
+                background:color.$interactive_03_hover;
+            }
+
+            &.sun {
+                color: #fc6020;
+            }
+
+            &.disabled {
+                color: #656976;
+                pointer-events: none;
+            }
+
+            &.selected {
+                background-color: transparent;
+                color: color.$ui_text_white_01;
+                font-weight: bold;
+
+                &::after {
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    background-color: color.$interactive_01_enabled !important;
+                    z-index: -1;
+                }
+            }
+        }
+
+        .cell.month,
+        .cell.year {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 7.7rem;
+            height: 7.2rem;
+            color: color.$ui_text_02;
+            font-size: 1.3rem;
+            cursor: pointer;
+
+            &.blank {
+                cursor: auto;
+            }
+
+            &:not(.blank):hover {
+                border-color: transparent !important;
+                font-weight: bold;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 50%;
+                height: calc(100% - 0.4rem);
+                transform: translateY(-50%);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 0;
+                height: 0;
+                background-color: rgba(0, 0, 0, 0.05);
+                transition: all 0.3s;
+                transform: translate(-50%, -50%);
+            }
+
+            &:not(.blank):hover::after {
+                width: 7.7rem;
+                height: 4.8rem;
+                background-color: color.$interactive_03_hover;
+            }
+
+            &.sun {
+                color: #fc6020;
+            }
+
+            &.selected {
+                background-color: transparent;
+                color: #fff;
+                font-weight: bold;
+
+                &::after {
+                    width: 7.7rem;
+                    height: 4.8rem;
+                    background-color: color.$interactive_01_enabled;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}

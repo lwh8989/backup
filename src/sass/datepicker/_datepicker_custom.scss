@@ -78,27 +78,37 @@
                 background-size: 100% auto;
             }
 
-            .prev::after {
-                // background-image: url(~/assets/images/icons/ic-calendar-prev.svg);
+            .prev {
+                .ic-control-arrow-left-line {
+                    display: block;
+                    font-size: 24px;
+                    color: color.$ui_icon_02_enabled;
+                    text-indent: initial;
+                }
             }
 
             .prev.disabled::after {
                 // background-image: url(~/assets/images/icons/ic-calendar-prev-disabled.svg);
             }
 
-            .next::after {
-                // background-image: url(~/assets/images/icons/ic-calendar-next.svg);
+            .next {
+                .ic-control-arrow-right-line {
+                    display: block;
+                    font-size: 24px;
+                    color: color.$ui_icon_02_enabled;
+                    text-indent: initial;
+                }
             }
 
             .next.disabled::after {
                 //background-image: url(~/assets/images/icons/ic-calendar-next-disabled.svg);
             }
 
-            //.prev:not(.disabled):hover,
-            //.next:not(.disabled):hover,
-            //.up:not(.disabled):hover {
-            //    background: transparent !important;
-            //}
+            .prev:not(.disabled):hover,
+            .next:not(.disabled):hover,
+            .up:not(.disabled):hover {
+               background: transparent !important;
+            }
         }
 
         header+div {
@@ -119,7 +129,7 @@
             line-height: 2.1538;
 
             &:hover {
-                background-color: #1f2128;
+                background-color: color.$ui_bg_base_gray50;
             }
         }
 
@@ -183,6 +193,18 @@
             }
 
             &.selected {
+                background-color: transparent;
+                color: color.$ui_text_white_01;
+                font-weight: bold;
+
+                &::after {
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    background-color: color.$interactive_01_enabled !important;
+                    z-index: -1;
+                }
+            }
+            &.today {
                 background-color: transparent;
                 color: color.$ui_text_white_01;
                 font-weight: bold;
@@ -263,6 +285,10 @@
                     z-index: -1;
                 }
             }
+        }
+
+        .cell.highlighted {
+            background: color.$interactive_01_highlight;
         }
     }
 }

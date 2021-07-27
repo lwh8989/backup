@@ -1391,7 +1391,7 @@
 
                             <div class="guide-desc-wrap">
                                 <div class="guide-desc">H 48 - 일력</div>
-                                <div class="guide-desc">H 48 - 월력</div>
+                                <div class="guide-desc">H 48 - 기간 설정</div>
                             </div>
 
                             <div class="guide-state-wrap">
@@ -1404,7 +1404,7 @@
                                             addClass="box-type box-reverse calendar", 
                                             active="active", 
                                             place="input placeholder", 
-                                            txt="2021-04-24", 
+                                            txt="2021-04-24 ~ 2021-04-24", 
                                             icon={first: "ic-community-calendar-line"}, 
                                             calendar="true", 
                                             dayMode="true"
@@ -1419,10 +1419,10 @@
                                             addClass="box-type box-reverse calendar", 
                                             active="active", 
                                             place="input placeholder", 
-                                            txt="2021-04-24", 
+                                            txt="2021-04-24 ~ 2021-04-24", 
                                             icon={first: "ic-community-calendar-line"}, 
                                             calendar="true", 
-                                            monthMode="true"
+                                            periodMode="true"
                                             ) 
                                         }}
                                     </div>
@@ -1430,6 +1430,7 @@
                             </div>
 
                             <div class="guide-desc-wrap" style="margin-top: 350px;">
+                                <div class="guide-desc">H 48 - 월력</div>
                                 <div class="guide-desc">H 48 - 연력</div>
                             </div>
 
@@ -1443,7 +1444,22 @@
                                             addClass="box-type box-reverse calendar", 
                                             active="active", 
                                             place="input placeholder", 
-                                            txt="2021-04-24", 
+                                            txt="2021-04-24 ~ 2021-04-24", 
+                                            icon={first: "ic-community-calendar-line"}, 
+                                            calendar="true", 
+                                            monthMode="true"
+                                            ) 
+                                        }}
+                                    </div>
+
+                                    <div>
+                                        {{ input.icon(
+                                            height="h48",
+                                            type="text", 
+                                            addClass="box-type box-reverse calendar", 
+                                            active="active", 
+                                            place="input placeholder", 
+                                            txt="2021-04-24 ~ 2021-04-24", 
                                             icon={first: "ic-community-calendar-line"}, 
                                             calendar="true", 
                                             yearMode="true"

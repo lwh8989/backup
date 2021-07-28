@@ -193,65 +193,6 @@
             margin-top: space.$stds-spacing-20;
         }
     }
-    .module-quote {
-        padding: space.$stds-spacing-16;
-        margin-bottom: space.$stds-spacing-12;
-        &.quote-purple {
-            background-color: color.$tint_dazzlingblue50;
-            border-left: 0.3rem solid color.$tint_dazzlingblue500;
-            box-sizing: border-box;
-        }
-        &.quote-blue {
-            background-color: color.$tint_blue50;
-            border-left: 0.3rem solid color.$tint_blue400;
-            box-sizing: border-box;
-        }
-        &.quote-close {
-            .fr-view {
-                p {
-                    @include ellipsis($line: 1);
-                    word-break: break-word;
-                }
-            }
-        }
-        &.quote-open {
-            .quote-header {
-                button {
-                    i {
-                        font-size: 16px;
-                        transform: rotate(180deg);
-                    }
-                }
-            }
-        }
-        .quote-header {
-            display: flex;
-            margin-bottom: space.$stds-spacing-12;
-            .module-profile {
-                flex: 1;
-                .profile-img {
-                    width: space.$stds-spacing-24;
-                    height: space.$stds-spacing-24;
-                }
-                .profile-contents {
-                    justify-content: center;
-                }
-            }
-            button {
-                i {
-                    font-size: 16px;
-                }
-            }
-        }
-        .quote-contents {
-            .section-hashtag {
-                margin-top: space.$stds-spacing-16;
-                .element-btn {
-                    margin: 0 space.$stds-spacing-8 space.$stds-spacing-8 0;
-                }
-            }
-        }
-    }
     .reply-write {
         margin: space.$stds-spacing-16 0 0 space.$stds-spacing-52;
     }

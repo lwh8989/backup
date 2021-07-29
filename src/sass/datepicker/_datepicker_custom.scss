@@ -31,6 +31,7 @@
         border: .1rem solid color.$ui_border_contents;
         border-radius: 0.4rem;
         box-sizing: initial;
+        font-size: 0;
         header {
             display: flex;
             justify-content: center;
@@ -145,7 +146,7 @@
                 height: 2.8rem;
                 margin-bottom: .8rem;
                 background-color: color.$ui_bg_base_gray50;
-                color: #8b8f9c;
+                color: color.$ui_text_03;
                 font-size: 1.3rem;
                 line-height: 2.1538;
 
@@ -235,6 +236,20 @@
                         background-color: color.$interactive_01_enabled !important;
                         z-index: -1;
                     }
+                }
+            }
+            &.month {
+                &:nth-child(2),
+                &:nth-child(6),
+                &:nth-child(10) {
+                    margin-left: 4px;
+                }
+            }
+            &.year {
+                &:nth-child(2),
+                &:nth-child(6),
+                &:nth-child(10) {
+                    margin-left: 4px;
                 }
             }
             &.month,

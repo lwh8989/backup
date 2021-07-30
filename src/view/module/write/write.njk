@@ -31,8 +31,11 @@
     <p class="desc">Emoji</p>
     {{ writeUi.baseEmoji() }}
     <hr />
-    <p class="desc">Attached File</p>
-    {{ writeUi.baseAttachedFile() }}
+    <p class="desc">Attached File Write</p>
+    {{ writeUi.baseAttachedFile( write="true" ) }}
+    <hr />
+    <p class="desc">Attached File Detail</p>
+    {{ writeUi.baseAttachedFile( detail="true" ) }}
 
 </div>
 

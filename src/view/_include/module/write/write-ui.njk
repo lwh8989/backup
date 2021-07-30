@@ -620,48 +620,55 @@
 {% endmacro %}
 
 <!-- Attached File -->
-{% macro baseAttachedFile() %}
-<div class="module-write-ui attached-file write">
-  <div class="attached-file-header">
-    <p class="attach-file-title">
-        <i class="ic-community-attach-file-line"></i>
-        첨부 된 파일<strong>NN</strong>개
-    </p>
-    <p class="attach-file-size">
-      <span class="counter">119KB</span>
-      <span class="total">1024MB</span>
-    </p>
-  </div>
-  <div class="attached-file-contents">
-    <ul>
-      <li>
-        <p class="file-name">페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html</p>
-        <span class="file-info">
-          <span class="file-size">200KB</span>
-          <button type="button" class="file-btn"><i class="ic-control-close-line"></i></button>
-          <button type="button" class="file-btn"><i class="ic-object-download-line"></i></button>
-        </span>
-      </li>
-      <li>
-        <span class="file-name">KakaoTalk_Photo_2021-03-23-11-22-22.png</span>
-        <span class="file-info">
-          <span class="file-size">200KB</span>
-          <button type="button" class="file-btn"><i class="ic-control-close-line"></i></button>
-        </span>
-      </li>
-      <li>
-        <span class="file-name">스크린샷 2021-03-23 오전 10.48.28.jpg</span>
-        <span class="file-info">
-          <span class="file-size">200KB</span>
-          <button type="button" class="file-btn"><i class="ic-control-close-line"></i></button>
-        </span>
-      </li>
-    </ul>
-  </div>
-  <div class="attached-file-footer">
-    <p class="size">최대 100MB까지 첨부할 수 있습니다. (한 파일당 최대 50MB)</p>
-    <button type="button" class="delete">전체삭제<i class="ic-control-close-line"></i></button>
-  </div>
+{% macro baseAttachedFile( write, detail ) %}
+<div class="module-write-ui attached-file">
+    <div class="attached-file-header">
+        <p class="attach-file-title">
+            <i class="ic-community-attach-file-line"></i>
+            첨부 된 파일<strong>NN</strong>개
+        </p>
+        {% if write %}
+            <p class="attach-file-size">
+                <span class="counter">119KB</span>
+                <span class="total">1024MB</span>
+            </p>
+        {% elif detail %}
+            <!-- [D] active 추가하면 아이콘 변경됩니다. -->
+            <button class="attach-file-btn">
+                <i class="ic-community-oppose-fill"></i>
+            </button>
+        {% endif %}
+    </div>
+    <div class="attached-file-contents">
+        <ul>
+            <li>
+                <p class="file-name">페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html페어리 테일 페어리 테일 페어리 테일 페어리 테일.html</p>
+                <span class="file-info">
+                    <span class="file-size">200KB</span>
+                    <button type="button" class="file-btn"><i class="ic-control-close-line"></i></button>
+                    <button type="button" class="file-btn"><i class="ic-object-download-line"></i></button>
+                </span>
+            </li>
+            <li>
+                <span class="file-name">KakaoTalk_Photo_2021-03-23-11-22-22.png</span>
+                <span class="file-info">
+                    <span class="file-size">200KB</span>
+                    <button type="button" class="file-btn"><i class="ic-control-close-line"></i></button>
+                </span>
+            </li>
+            <li>
+                <span class="file-name">스크린샷 2021-03-23 오전 10.48.28.jpg</span>
+                <span class="file-info">
+                    <span class="file-size">200KB</span>
+                    <button type="button" class="file-btn"><i class="ic-control-close-line"></i></button>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class="attached-file-footer">
+        <p class="size">최대 100MB까지 첨부할 수 있습니다. (한 파일당 최대 50MB)</p>
+        <button type="button" class="delete">전체삭제<i class="ic-control-close-line"></i></button>
+    </div>
 </div>
 {% endmacro %}
 

@@ -193,6 +193,27 @@
                     }
                 }
             }
+            .attach-file-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .ic-community-oppose-fill {
+                    font-size: font.$stdsBody4;
+                    color: color.$ui_icon_03_enabled;
+                    &:hover {
+                        color: color.$ui_icon_03_hover;
+                    }
+                    &:focus,
+                    &:visited {
+                        color: color.$ui_icon_03_focused;
+                    }
+                }
+                &.active {
+                    .ic-community-oppose-fill {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
         }
         .attached-file-contents {
             position: relative;

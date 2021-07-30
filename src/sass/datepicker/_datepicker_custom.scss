@@ -19,7 +19,6 @@
         height: 1.6rem;
         margin-top: -.8rem;
         padding-top: 1.6rem;
-        // background: url(~/assets/images/icons/ic-calendar.svg) no-repeat center center;
         background-size: 100% auto;
         overflow: hidden;
     }
@@ -86,10 +85,12 @@
                     color: color.$ui_icon_02_enabled;
                     text-indent: initial;
                 }
-            }
-
-            .prev.disabled::after {
-                // background-image: url(~/assets/images/icons/ic-calendar-prev-disabled.svg);
+                &.disabled {
+                    .ic-control-arrow-left-line {
+                        color: color.$ui_icon_02_disabled;
+                    }
+                    ::after {}
+                }
             }
 
             .next {
@@ -99,10 +100,12 @@
                     color: color.$ui_icon_02_enabled;
                     text-indent: initial;
                 }
-            }
-
-            .next.disabled::after {
-                //background-image: url(~/assets/images/icons/ic-calendar-next-disabled.svg);
+                &.disabled {
+                    .ic-control-arrow-right-line {
+                        color: color.$ui_icon_02_disabled;
+                    }
+                    ::after {}
+                }
             }
 
             .prev:not(.disabled):hover,

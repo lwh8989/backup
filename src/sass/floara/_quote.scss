@@ -49,6 +49,9 @@
             .profile-img {
                 width: space.$stds-spacing-24;
                 height: space.$stds-spacing-24;
+                img {
+                    margin: 0;
+                }
             }
 
             .profile-contents {
@@ -115,6 +118,9 @@
                 .profile-img {
                     width: 2.4rem;
                     height: 2.4rem;
+                    img {
+                        margin: 0;
+                    }
                 }
                 .profile-contents {
                     justify-content: center;

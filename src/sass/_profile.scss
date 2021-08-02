@@ -20,8 +20,9 @@
         display: flex;
         width: space.$stds-spacing-40;
         height: space.$stds-spacing-40;
-        border-radius: space.$stds-spacing-20;
+        border-radius: 50%;
         margin-right: space.$stds-spacing-8;
+        overflow: hidden;
     }
     .profile-contents {
         display: flex;

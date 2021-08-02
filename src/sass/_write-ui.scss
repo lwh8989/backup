@@ -46,6 +46,12 @@
                 &::after {
                     content: none;
                 }
+                i {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
             }
             .swiper-button-prev {
                 left: 0;

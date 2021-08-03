@@ -12164,6 +12164,26 @@
   width: 664px;
   height: auto;
 }
+.legacy-module-dialog-flex.dialog-subscribe {
+  padding-bottom: 20px;
+}
+.legacy-module-dialog-flex.dialog-subscribe .legacy-dialog-contents {
+  padding: 0 24px;
+}
+.legacy-module-dialog-flex.dialog-subscribe .legacy-dialog-footer {
+  position: relative;
+  padding: 16px 0 0;
+}
+.legacy-module-dialog-flex.dialog-subscribe .legacy-dialog-footer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  display: block;
+  height: 1px;
+  background: #ddd;
+}
 .legacy-module-dialog-flex .legacy-module-dialog.type-variable {
   height: auto;
 }

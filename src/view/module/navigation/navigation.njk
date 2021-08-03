@@ -73,18 +73,33 @@
             itemActive1="is-active",
             iconRight1="ic-navigation-search-line",
             iconRight2="ic-community-write-line",
-            iconRight3="ic-navigation-option-horizontal-fill"
+            iconRight3="ic-navigation-option-horizontal-fill",
+            height="h24"
             ) 
         }}
     </div>
 
-    <p class="desc">상세보기 Case</p>
+    <p class="desc">상세보기 - 닉네임활동 Case</p>
     <div class="layout-navigation is-active">
         {{ navigation.detailStyle(
             iconLeft1="ic-navigation-menu-line", 
             menudepth1="%텍스트%", 
             itemActive1="is-active",
             iconRight1="ic-community-share-line"
+            ) 
+        }}
+    </div>
+
+    <p class="desc">상세보기 - 공유버튼영역 Case</p>
+    <!-- [D] is-fixed-bottom 추가하면 하단 고정이 됩니다. -->
+    <!-- [D] ex) layout-navigation is-fixed-bottom -->
+    <div class="layout-navigation is-active">
+        {{ navigation.detailShare(
+            leftText1="목록", 
+            iconRight1="ic-community-reply-line", 
+            rightText1="999", 
+            iconRight2="ic-community-like-line", 
+            rightText2="999"
             ) 
         }}
     </div>

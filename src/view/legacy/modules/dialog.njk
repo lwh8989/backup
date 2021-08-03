@@ -111,7 +111,7 @@
     <style>
         .scroll {
             position: relative;
-            max-height: 632px;
+            max-height: 570px;
         }
         .ps--active-x > .ps__rail-x,
         .ps--active-y > .ps__rail-y {
@@ -135,7 +135,7 @@
     </script>
 
     {% if isDimmed %}
-        <div class="legacy-module-dialog-flex {{ dialogSize }}">
+        <div class="legacy-module-dialog-flex dialog-subscribe {{ dialogSize }}">
             <div class="legacy-dialog-header">
                 {{ title.base(h3=titTxt) }}
                 {{ btn.onlyIcon(iconClass="ic-close-s20-c333",txt="닫기") }}
@@ -287,10 +287,10 @@
                 {% elseif isPrivacy %}
                     <article class="article-privacy">
                         <p class="item-notice">
-                    마이인디를 방문한 유저에게 작성한 글을<br/>
-                    공개할 지 설정해주세요.<br/>
-                    공개 범위 설정 후 작성한 글부터 적용됩니다.
-                </p>
+                            마이인디를 방문한 유저에게 작성한 글을<br/>
+                            공개할 지 설정해주세요.<br/>
+                            공개 범위 설정 후 작성한 글부터 적용됩니다.
+                        </p>
                         <ul class="item-list">
                             <li>
                                 <label class="tit-txt">인디 타임라인에서 작성한 글</label>
@@ -420,7 +420,7 @@
             </div>
             {% if noFooter %}
             {% else %}
-                <div class="legacy-dialog-footer">
+                <div class="legacy-dialog-footer ">
                     {% if twoBtn %}
                         <div class="item-center">
                             {{ btn.base(sizeClass=btnSize,typeClass="btn-gray-line",txt=btnTxt1) }}

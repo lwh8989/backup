@@ -5316,11 +5316,33 @@
                 <div class="guide-row">
                     <div>
                         <h3>구독설정</h3>
-                        {{ dialog.default(isDimmed=true,noFooter=true,isFeed=true,titTxt="인디피드 구독 설정",dialogSize="legacy-dialog-size-md") }}
+                        {{ dialog.default (
+                            isDimmed=true,
+                            noFooter=false,
+                            twoBtn=true,
+                            btnSize="size-32",
+                            btnTxt1="취소",
+                            btnTxt2="적용",
+                            isFeed=true,
+                            titTxt="인디피드 구독 설정",
+                            dialogSize="legacy-dialog-size-md"
+                            ) 
+                        }}
                     </div>
                     <div>
                         <h3>구독설정 ( S/XS 대응: 310px )</h3>
-                        {{ dialog.default(isDimmed=true,noFooter=true,isFeed=true,titTxt="인디피드 구독 설정",dialogSize="legacy-dialog-size-mobile") }}
+                        {{ dialog.default (
+                            isDimmed=true,
+                            noFooter=false,
+                            twoBtn=true,
+                            btnSize="size-32",
+                            btnTxt1="취소",
+                            btnTxt2="적용",
+                            isFeed=true,
+                            titTxt="인디피드 구독 설정",
+                            dialogSize="legacy-dialog-size-mobile"
+                            ) 
+                        }}
                     </div>
                 </div>
             </div>
@@ -5330,11 +5352,35 @@
                 <div class="guide-row">
                     <div>
                         <h3>구독설정 - empty</h3>
-                        {{ dialog.default(isDimmed=true,noFooter=true,isFeed=true,isEmpty=true,titTxt="인디피드 구독 설정",dialogSize="legacy-dialog-size-md") }}
+                        {{ dialog.default (
+                            isDimmed=true,
+                            noFooter=false,
+                            twoBtn=true,
+                            btnSize="size-32",
+                            btnTxt1="취소",
+                            btnTxt2="적용",
+                            isFeed=true,
+                            isEmpty=true,
+                            titTxt="인디피드 구독 설정",
+                            dialogSize="legacy-dialog-size-md"
+                            ) 
+                        }}
                     </div>
                     <div>
                         <h3>구독설정 - empty ( S/XS 대응: 310px )</h3>
-                        {{ dialog.default(isDimmed=true,noFooter=true,isFeed=true,isEmpty=true,titTxt="인디피드 구독 설정",dialogSize="legacy-dialog-size-mobile") }}
+                        {{ dialog.default (
+                            isDimmed=true,
+                            noFooter=false,
+                            twoBtn=true,
+                            btnSize="size-32",
+                            btnTxt1="취소",
+                            btnTxt2="적용",
+                            isFeed=true,
+                            isEmpty=true,
+                            titTxt="인디피드 구독 설정",
+                            dialogSize="legacy-dialog-size-mobile"
+                            ) 
+                        }}
                     </div>
                 </div>
             </div>

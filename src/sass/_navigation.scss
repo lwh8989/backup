@@ -1,10 +1,11 @@
 @import "./helpers/z-index";
 @import "./mixin/responsive";
 @import "./responsive";
-@import "./font";
+@import "./fonts/stds-font-mixin";
 @import "./color";
 @import "./space";
 @import "./mixin/mixin";
+@import "./helpers/z-index";
 
 .layout-navigation {
     display: none;
@@ -14,6 +15,14 @@
     background: $white;
     &.is-active {
         display: block;
+    }
+    &.is-fixed-bottom {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: $zindex-fixed;
     }
 }
 
@@ -47,6 +56,26 @@
         width: 100%;
         z-index: $zindex-fixed;
     }
+    &.section-share {
+        padding: $stds-spacing-12 $stds-spacing-32;
+        .container {
+            .nav-text-btn {
+                &.align-left {
+                    margin-right: 2.4rem;
+                }
+                &.align-right {
+                    margin-left: 2.4rem;
+                    &:active,
+                    &:focus,
+                    &:focus-within {
+                        i {
+                            color: $ui_icon_01_focused;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .container {
         display: flex;
         max-width: 100%;
@@ -78,6 +107,18 @@
             &.is-active {
                 color: $ui_text_brand;
                 font-weight: $stdsWeightBold;
+            }
+            i {
+                font-size: 2rem;
+                vertical-align: middle;
+            }
+            .text-btn-s1 {
+                @include stdsBody2();
+                vertical-align: text-top;
+            }
+            .text-btn-s2 {
+                @include caption1();
+                vertical-align: baseline;
             }
         }
         .contents {
@@ -116,6 +157,15 @@
                 }
                 .ic-control-arrow-right-line {
                     color: #cacaca;
+                }
+            }
+        }
+        .element-dropdown {
+            margin-left: 2rem;
+            .element-select-button {
+                i {
+                    font-size: 2.4rem;
+                    color: $ui_icon_01_enabled;
                 }
             }
         }

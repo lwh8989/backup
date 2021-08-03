@@ -52,7 +52,7 @@
 {% endmacro %}
 
 <!-- 리스트 Case -->
-{% macro listStyle( state, iconLeft1, menudepth1, itemActive1, iconRight1, iconRight2, iconRight3 ) %}
+{% macro listStyle( state, iconLeft1, menudepth1, itemActive1, iconRight1, iconRight2, iconRight3, height ) %}
 <div class="mobule-navigation">
     <div class="container">
         <button class="nav-btn align-left">
@@ -67,9 +67,22 @@
         <button class="nav-btn align-right">
             <i class="{{ iconRight2 }}"></i>
         </button>
-        <button class="nav-btn align-right">
-            <i class="{{ iconRight3 }}"></i>
-        </button>
+        <!-- [D] active 추가하면 메뉴가 나옵니다.  -->
+        <div class="element-dropdown {{ height }}">
+            <button class="element-select-button " type="button">
+                <i class="ic-navigation-option-horizontal-fill"></i>
+            </button>
+            <div class="element-dropdown-layer absolute top right">
+                <div class="element-dropdown-layer-inner">
+                    <select hidden="">
+                        <option value="1">상세보기 메뉴</option>
+                        <option value="2">상세보기 메뉴</option>
+                    </select>
+                    <button class="element-dropdown-button selected" type="button">상세보기 메뉴</button>
+                    <button class="element-dropdown-button" type="button">상세보기 메뉴</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endmacro %}

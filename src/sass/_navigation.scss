@@ -1,7 +1,7 @@
 @import "./helpers/z-index";
 @import "./mixin/responsive";
 @import "./responsive";
-@import "./font";
+@import "./fonts/stds-font-mixin";
 @import "./color";
 @import "./space";
 @import "./mixin/mixin";
@@ -47,6 +47,19 @@
         width: 100%;
         z-index: $zindex-fixed;
     }
+    &.section-share {
+        padding: $stds-spacing-12 $stds-spacing-32;
+        .container {
+            .nav-text-btn {
+                &.align-left {
+                    margin-right: 2.4rem;
+                }
+                &.align-right {
+                    margin-left: 2.4rem;
+                }
+            }
+        }
+    }
     .container {
         display: flex;
         max-width: 100%;
@@ -78,6 +91,17 @@
             &.is-active {
                 color: $ui_text_brand;
                 font-weight: $stdsWeightBold;
+            }
+            i {
+                font-size: 2rem;
+            }
+            .text-btn-s1 {
+                @include stdsBody2();
+                vertical-align: text-top;
+            }
+            .text-btn-s2 {
+                @include caption1();
+                vertical-align: text-top;
             }
         }
         .contents {

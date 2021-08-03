@@ -248,9 +248,10 @@
                     }
                     .file-info {
                         display: flex;
+                        align-items: center
                     }
                     .file-size {
-                        font-size: font.$stdsBody4;
+                        @include stdsBody4();
                         color: color.$ui_text_03;
                         margin-right: space.$stds-spacing-8;
                     }

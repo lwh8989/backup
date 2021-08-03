@@ -5,6 +5,7 @@
 @import "./color";
 @import "./space";
 @import "./mixin/mixin";
+@import "./helpers/z-index";
 
 .layout-navigation {
     display: none;
@@ -14,6 +15,14 @@
     background: $white;
     &.is-active {
         display: block;
+    }
+    &.is-fixed-bottom {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: $zindex-fixed;
     }
 }
 
@@ -56,6 +65,13 @@
                 }
                 &.align-right {
                     margin-left: 2.4rem;
+                    &:active,
+                    &:focus,
+                    &:focus-within {
+                        i {
+                            color: $ui_icon_01_focused;
+                        }
+                    }
                 }
             }
         }
@@ -94,6 +110,7 @@
             }
             i {
                 font-size: 2rem;
+                vertical-align: middle;
             }
             .text-btn-s1 {
                 @include stdsBody2();
@@ -101,7 +118,7 @@
             }
             .text-btn-s2 {
                 @include caption1();
-                vertical-align: text-top;
+                vertical-align: baseline;
             }
         }
         .contents {
